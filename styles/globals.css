@@ -323,7 +323,8 @@ main > section ~ .section:not(.section--dark) {
  * so tone changes never appear as a hard horizontal cut.
  */
 .blend-from-dark,
-.blend-from-light {
+.blend-from-light,
+.blend-from-deep {
   padding-top: calc(var(--section-y) + var(--sp-10));
 }
 .blend-from-dark {
@@ -331,6 +332,9 @@ main > section ~ .section:not(.section--dark) {
 }
 .blend-from-light {
   background-image: linear-gradient(to bottom, var(--surface-stone), var(--bg) var(--blend));
+}
+.blend-from-deep {
+  background-image: linear-gradient(to bottom, var(--surface-ivory-deep), var(--bg) var(--blend));
 }
 
 /* ---------- Motion ---------- */

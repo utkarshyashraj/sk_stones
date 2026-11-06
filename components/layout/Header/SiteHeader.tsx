@@ -44,6 +44,12 @@ export function SiteHeader({ nav }: { nav: NavData }) {
   if (mobileOpen && !mobileSeen) setMobileSeen(true);
   const navRef = useRef<HTMLElement>(null);
   const closeTimer = useRef<number | undefined>(undefined);
+  const hoverOpenedAt = useRef(0);
+  // A click that lands right after a hover-open must not immediately close the menu again.
+  const toggleMenu = (id: Exclude<MenuId, null>) => {
+    if (open === id && Date.now() - hoverOpenedAt.current < 700) return;
+    setOpen(open === id ? null : id);
+  };
   const { count } = useShortlist();
 
   const serviceHrefs = nav.services.map((s) => s.href);
@@ -93,6 +99,7 @@ export function SiteHeader({ nav }: { nav: NavData }) {
     onPointerEnter: (e: React.PointerEvent) => {
       if (e.pointerType !== 'mouse') return;
       window.clearTimeout(closeTimer.current);
+      if (open !== id) hoverOpenedAt.current = Date.now();
       setOpen(id);
     },
     onPointerLeave: (e: React.PointerEvent) => {
@@ -136,7 +143,7 @@ export function SiteHeader({ nav }: { nav: NavData }) {
                   className={`${styles.navLink} ${servicesActive ? styles.activeParent : ''}`}
                   aria-expanded={open === 'services'}
                   aria-controls="nav-panel-services"
-                  onClick={() => setOpen(open === 'services' ? null : 'services')}
+                  onClick={() => toggleMenu('services')}
                 >
                   Services <Icon name="chevron-down" size={16} className={styles.chev} />
                 </button>
@@ -163,7 +170,7 @@ export function SiteHeader({ nav }: { nav: NavData }) {
                   className={`${styles.navLink} ${productsActive ? styles.activeParent : ''}`}
                   aria-expanded={open === 'products'}
                   aria-controls="nav-panel-products"
-                  onClick={() => setOpen(open === 'products' ? null : 'products')}
+                  onClick={() => toggleMenu('products')}
                 >
                   Products <Icon name="chevron-down" size={16} className={styles.chev} />
                 </button>

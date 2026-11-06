@@ -1,7 +1,7 @@
 .grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--sp-10) var(--sp-6);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-8) var(--sp-4);
   list-style: none;
   padding: 0;
 }
@@ -47,5 +47,13 @@
 @media (min-width: 1024px) {
   .grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 639px) {
+  .label {
+    font-size: var(--fs-lg);
+  }
+  .recommended {
+    font-size: var(--fs-xs);
   }
 }

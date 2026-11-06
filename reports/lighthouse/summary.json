@@ -1,55 +1,19 @@
 {
   "base": "http://localhost:4321",
-  "ranAt": "2026-11-06T20:27:03.433Z",
+  "ranAt": "2026-11-06T20:53:13.758Z",
   "runs": 1,
   "medians": [
     {
       "page": "/",
       "formFactor": "mobile",
       "runs": 1,
-      "performance": 84,
+      "performance": 87,
       "accessibility": 100,
       "best-practices": 100,
       "seo": 100
     },
     {
       "page": "/",
-      "formFactor": "desktop",
-      "runs": 1,
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100
-    },
-    {
-      "page": "/kota-stones",
-      "formFactor": "mobile",
-      "runs": 1,
-      "performance": 85,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100
-    },
-    {
-      "page": "/kota-stones",
-      "formFactor": "desktop",
-      "runs": 1,
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100
-    },
-    {
-      "page": "/contact",
-      "formFactor": "mobile",
-      "runs": 1,
-      "performance": 96,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100
-    },
-    {
-      "page": "/contact",
       "formFactor": "desktop",
       "runs": 1,
       "performance": 100,
@@ -63,13 +27,13 @@
       "run": 1,
       "page": "/",
       "formFactor": "mobile",
-      "performance": 84,
+      "performance": 87,
       "accessibility": 100,
       "best-practices": 100,
       "seo": 100,
-      "LCP": "3.8 s",
+      "LCP": "3.3 s",
       "CLS": "0",
-      "TBT": "250 ms",
+      "TBT": "260 ms",
       "FCP": "0.9 s",
       "failing": [
         "largest-contentful-paint",
@@ -92,97 +56,11 @@
       "seo": 100,
       "LCP": "0.8 s",
       "CLS": "0",
-      "TBT": "20 ms",
+      "TBT": "0 ms",
       "FCP": "0.2 s",
       "failing": [
         "unused-javascript",
         "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 1,
-      "page": "/kota-stones",
-      "formFactor": "mobile",
-      "performance": 85,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "3.6 s",
-      "CLS": "0",
-      "TBT": "270 ms",
-      "FCP": "0.9 s",
-      "failing": [
-        "largest-contentful-paint",
-        "total-blocking-time",
-        "max-potential-fid",
-        "label-content-name-mismatch",
-        "unused-javascript",
-        "cache-insight",
-        "forced-reflow-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 1,
-      "page": "/kota-stones",
-      "formFactor": "desktop",
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.8 s",
-      "CLS": "0",
-      "TBT": "10 ms",
-      "FCP": "0.3 s",
-      "failing": [
-        "label-content-name-mismatch",
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 1,
-      "page": "/contact",
-      "formFactor": "mobile",
-      "performance": 96,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.9 s",
-      "CLS": "0",
-      "TBT": "230 ms",
-      "FCP": "0.9 s",
-      "failing": [
-        "total-blocking-time",
-        "max-potential-fid",
-        "unused-javascript",
-        "cache-insight",
-        "forced-reflow-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 1,
-      "page": "/contact",
-      "formFactor": "desktop",
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.2 s",
-      "CLS": "0.005",
-      "TBT": "10 ms",
-      "FCP": "0.2 s",
-      "failing": [
-        "unused-javascript",
-        "cache-insight",
-        "font-display-insight",
-        "forced-reflow-insight",
         "image-delivery-insight",
         "legacy-javascript-insight"
       ]

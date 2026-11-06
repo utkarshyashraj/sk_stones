@@ -164,7 +164,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== Dark zone: projects + testimonials ===== */}
-      <section className="section blend-from-light" aria-labelledby="projects-title">
+      <section className="section blend-from-deep" aria-labelledby="projects-title">
         <div className="container">
           <SectionHeader
             id="projects-title"
