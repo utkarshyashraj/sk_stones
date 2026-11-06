@@ -1,0 +1,12 @@
+legacy/
+out/
+.next/
+.cache/
+node_modules/
+public/
+content/raw/
+content/generated/
+reports/
+playwright-report/
+test-results/
+package-lock.json

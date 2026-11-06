@@ -1,0 +1,115 @@
+.approachHead {
+  margin-top: var(--sp-16);
+}
+.pillars {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-5);
+  list-style: none;
+  padding: 0;
+}
+.pillar {
+  padding: var(--sp-6);
+  border: 1px solid var(--c-border-dark);
+  border-top: 3px solid var(--c-gold);
+  border-radius: var(--radius);
+  background: var(--c-ink-850);
+}
+.pillar h3 {
+  font-size: var(--fs-lg);
+}
+.pillar > p {
+  margin-top: var(--sp-3);
+  color: var(--c-text-muted-dark);
+  font-size: var(--fs-sm);
+}
+.pillar ul {
+  display: grid;
+  gap: var(--sp-2);
+  margin-top: var(--sp-4);
+  list-style: none;
+  padding: 0;
+  font-size: var(--fs-sm);
+}
+.pillar li {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+.pillar li svg {
+  flex: none;
+  color: var(--c-gold);
+}
+.faqGrid {
+  display: grid;
+  gap: var(--sp-8);
+}
+.otherServices {
+  margin-top: var(--sp-8);
+}
+.otherServices > p {
+  font-weight: 600;
+  color: var(--c-text);
+  font-size: var(--fs-sm);
+}
+.otherServices ul {
+  display: grid;
+  gap: var(--sp-2);
+  margin-top: var(--sp-3);
+  list-style: none;
+  padding: 0;
+}
+.facts {
+  margin-top: var(--sp-8);
+  max-width: 56rem;
+}
+.caseBody {
+  display: grid;
+  gap: var(--sp-10);
+  align-items: start;
+}
+.caseText {
+  display: grid;
+  gap: var(--sp-8);
+}
+.caseText h2 {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--sp-3);
+}
+.caseText p {
+  color: var(--c-text-muted);
+}
+.caseText p + p {
+  margin-top: var(--sp-3);
+}
+.scope {
+  display: grid;
+  gap: var(--sp-2);
+  list-style: none;
+  padding: 0;
+}
+.scope li {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-weight: 500;
+}
+.scope svg {
+  color: var(--c-gold-ink);
+}
+@media (min-width: 900px) {
+  .pillars {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .faqGrid {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: var(--sp-16);
+    align-items: start;
+  }
+  .caseBody {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--sp-16);
+  }
+}

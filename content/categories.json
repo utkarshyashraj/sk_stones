@@ -1,0 +1,618 @@
+{
+  "$comment": "Curated catalog taxonomy. Hero/overview copy is taken from the legacy page named in legacySource; cardDescription comes from the legacy products hub. applications/origin are only set where the legacy copy states them (see 'sourceNote').",
+  "applicationVocabulary": [
+    "Flooring",
+    "Wall Cladding",
+    "Countertops & Kitchens",
+    "Bathrooms",
+    "Paving & Pathways",
+    "Landscaping",
+    "Facades & Elevations",
+    "Roofing & Terraces",
+    "Decorative & Art",
+    "Walls & Partitions"
+  ],
+  "categories": [
+    {
+      "slug": "marbles",
+      "name": "Marbles",
+      "parent": null,
+      "kind": "hub",
+      "legacySource": "marbles",
+      "title": "Marbles in Bengaluru | Indian & Imported Marble | S K Stones India",
+      "description": "Browse Indian and imported marbles at S K Stones India, Bengaluru: rainforest, travertine, onyx and statuario varieties for flooring, walls and counters.",
+      "hero": {
+        "eyebrow": "Marble Collection",
+        "heading": "Indian & Imported Marbles",
+        "description": "Premium marble stones offering elegance, durability, and timeless appeal, suitable for flooring, walls, counters, and luxury interior applications."
+      },
+      "cardDescription": "Premium marble stones offering elegance, durability, and timeless appeal, suitable for flooring, walls, counters, and luxury interior applications.",
+      "cardImageUrl": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/BLACK-STRIPE-1.jpg",
+      "applications": ["Flooring", "Wall Cladding", "Countertops & Kitchens"],
+      "sourceNote": "Products hub card: 'suitable for flooring, walls, counters'"
+    },
+    {
+      "slug": "indian-marbles",
+      "name": "Indian Marbles",
+      "parent": "marbles",
+      "kind": "collection",
+      "legacySource": "indian-marbles",
+      "title": "Indian Marbles | Leather & Polished Finish | S K Stones India",
+      "description": "Indian marble varieties including Udaipur Green, Rainforest, Katni and Jaisalmer Yellow, in leather and polished finishes. Supplied and installed in Bengaluru.",
+      "hero": {
+        "eyebrow": "Marbles",
+        "heading": "Exquisite Indian Marble",
+        "description": "Indian leather finish marble is processed to create a soft, textured surface that enhances natural patterns, reduces glare, and provides a refined tactile feel — making it ideal for premium residential and commercial applications."
+      },
+      "origin": "India",
+      "applications": ["Flooring", "Wall Cladding", "Countertops & Kitchens"],
+      "sourceNote": "Origin from category name; applications inherited from Marbles hub copy"
+    },
+    {
+      "slug": "imported-marbles",
+      "name": "Imported Marbles",
+      "parent": "marbles",
+      "kind": "collection",
+      "legacySource": "imported-marbles",
+      "title": "Imported Marbles | Travertine, Onyx & Italian | S K Stones India",
+      "description": "Luxury imported marbles with golden shades, travertine, onyx and polished finishes for statement flooring and premium interiors, from S K Stones India.",
+      "hero": {
+        "eyebrow": "Marbles",
+        "heading": "World-Class Marble Collection",
+        "description": "Imported marble features warm tones, refined veining, and rich color depth — delivering a luxurious visual presence suited for premium interiors, statement flooring, and elegant architectural applications."
+      },
+      "origin": "Imported",
+      "applications": ["Flooring", "Wall Cladding", "Countertops & Kitchens"],
+      "sourceNote": "Origin from category name; hero copy mentions statement flooring"
+    },
+    {
+      "slug": "granites",
+      "name": "Granites",
+      "parent": null,
+      "kind": "hub",
+      "legacySource": null,
+      "title": "Granites in Bengaluru | Indian & Imported Granite | S K Stones India",
+      "description": "Indian and imported granites from S K Stones India: hard-wearing slabs for flooring, countertops, exteriors and heavy-traffic areas across Bengaluru.",
+      "hero": {
+        "eyebrow": "Granite Collection",
+        "heading": "Indian & Imported Granites",
+        "description": "Hard wearing granite stones known for strength, weather resistance, and versatility, ideal for flooring, countertops, exteriors, and heavy traffic areas."
+      },
+      "cardDescription": "Hard wearing granite stones known for strength, weather resistance, and versatility, ideal for flooring, countertops, exteriors, and heavy traffic areas.",
+      "cardImageUrl": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/YELLOW-FOSSIL-LEATHERED-1.jpg",
+      "applications": ["Flooring", "Countertops & Kitchens", "Facades & Elevations"],
+      "sourceNote": "Products hub card: 'ideal for flooring, countertops, exteriors'"
+    },
+    {
+      "slug": "indian-granites",
+      "name": "Indian Granites",
+      "parent": "granites",
+      "kind": "collection",
+      "legacySource": "granites",
+      "title": "Indian Granites | Flooring & Countertop Slabs | S K Stones India",
+      "description": "Hard-wearing Indian granite slabs for flooring, countertops and commercial spaces, in polished, leather and flamed finishes. Supply and installation in Bengaluru.",
+      "hero": {
+        "eyebrow": "Granites",
+        "heading": "Exquisite Indian Granites",
+        "description": "Our experienced stone specialists source granite slabs selected for density, grain structure, color stability, and thickness consistency. Each slab is carefully curated, evaluated, and supplied under controlled material quality parameters."
+      },
+      "origin": "India",
+      "applications": ["Flooring", "Countertops & Kitchens", "Facades & Elevations"],
+      "sourceNote": "Legacy meta: 'for flooring, countertops and commercial spaces'. Formerly the /granites page."
+    },
+    {
+      "slug": "imported-granites",
+      "name": "Imported Granites",
+      "parent": "granites",
+      "kind": "collection",
+      "legacySource": "imported-granites",
+      "title": "Imported Granites & Quartzites | S K Stones India",
+      "description": "Imported granite and quartzite varieties for premium projects: dense, durable slabs for heavy-use interiors, supplied by S K Stones India, Bengaluru.",
+      "hero": {
+        "eyebrow": "Granites",
+        "heading": "World-Class Granites Collection",
+        "description": "Imported granites are processed to deliver high structural strength, dense composition, and consistent surface performance — making them ideal for heavy-use interiors that demand durability and long-term functional reliability."
+      },
+      "origin": "Imported",
+      "applications": ["Flooring", "Countertops & Kitchens"],
+      "sourceNote": "Origin from category name; granite hub copy"
+    },
+    {
+      "slug": "stone-art",
+      "name": "Stone Art",
+      "parent": null,
+      "kind": "hub",
+      "legacySource": "stone-art",
+      "title": "Stone Art | CNC, Inlay, Murals & Feature Walls | S K Stones India",
+      "description": "Custom stone art from S K Stones India: CNC carving, marble and brass inlay, mother-of-pearl work, murals, monuments and sculpted feature walls.",
+      "hero": {
+        "eyebrow": "Stone Art",
+        "heading": "Custom Stone Art Installation",
+        "description": "Stone art pieces are crafted to create visual focal points using natural stone forms, textures, and detailing that add character, depth, and artistic expression to interior and exterior architectural spaces."
+      },
+      "cardDescription": "Artistic stone creations crafted for murals, fountains, water features, and decorative installations enhancing visual identity and architectural storytelling.",
+      "cardImageUrl": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/WhatsApp-Image-2025-11-27-at-11.46.41_24d000c0-1.jpg",
+      "applications": ["Decorative & Art"],
+      "sourceNote": "Products hub card"
+    },
+    {
+      "slug": "cnc-stone-work",
+      "name": "CNC Stone & Inlay Work",
+      "parent": "stone-art",
+      "kind": "collection",
+      "legacySource": "cnc-stone-work",
+      "title": "CNC Stone Work & Inlay Work | S K Stones India",
+      "description": "CNC-carved stone patterns, jaali designs and marble, brass and slate inlay work, handcrafted by S K Stones India artisans for interiors and exteriors.",
+      "hero": {
+        "eyebrow": "Stone Art",
+        "heading": "CNC Stone Work & Inlay",
+        "description": "Stone art pieces are crafted to create visual focal points using natural stone forms, textures, and detailing that add character, depth, and artistic expression to interior and exterior architectural spaces."
+      },
+      "applications": ["Decorative & Art"],
+      "sourceNote": "Stone art copy"
+    },
+    {
+      "slug": "mop-inlay-work",
+      "name": "Mother-of-Pearl (MOP) Work",
+      "parent": "stone-art",
+      "kind": "collection",
+      "legacySource": "mop-inlay-work",
+      "title": "Mother-of-Pearl (MOP) Inlay Work | S K Stones India",
+      "description": "Mother-of-pearl inlay in stone, embedded by skilled craftsmen for a luminous, lasting finish: floor medallions, panels and decorative pieces.",
+      "hero": {
+        "eyebrow": "Stone Art",
+        "heading": "Mother-of-Pearl Inlay",
+        "description": "Crafted with exquisite Mother-of-Pearl inlay, each piece reflects timeless artistry. The natural iridescence of the shell creates a luminous play of light and color. Meticulously embedded by skilled craftsmen for a refined, lasting finish."
+      },
+      "applications": ["Decorative & Art"],
+      "sourceNote": "Stone art copy"
+    },
+    {
+      "slug": "murals-monuments",
+      "name": "Murals & Monuments",
+      "parent": "stone-art",
+      "kind": "collection",
+      "legacySource": "murals-monuments",
+      "title": "Stone Murals & Monuments | S K Stones India",
+      "description": "Stone murals, monuments, hand-carved wall art and gold lipi on stone, crafted with intricate detailing by S K Stones India artisans.",
+      "hero": {
+        "eyebrow": "Stone Art",
+        "heading": "Murals & Monuments",
+        "description": "Stone murals and monuments are crafted to create visual masterpieces using natural stone and intricate detailing that add character."
+      },
+      "applications": ["Decorative & Art"],
+      "sourceNote": "Stone art copy"
+    },
+    {
+      "slug": "feature-wall",
+      "name": "Feature Walls",
+      "parent": "stone-art",
+      "kind": "collection",
+      "legacySource": "feature-wall",
+      "title": "Stone Feature Walls | Petal, Leaf & Wave Patterns | S K Stones India",
+      "description": "Sculpted stone feature walls in petal, leaf, flower and wave patterns that add depth and architectural expression to interior and exterior spaces.",
+      "hero": {
+        "eyebrow": "Stone Art",
+        "heading": "Feature Walls",
+        "description": "Feature walls are crafted to create striking visuals using natural stone forms, textures, and refined detailing. These artistic compositions add character, depth, and architectural expression to interior and exterior spaces."
+      },
+      "applications": ["Decorative & Art", "Wall Cladding"],
+      "sourceNote": "Feature wall copy"
+    },
+    {
+      "slug": "natural-stones",
+      "name": "Natural Stones",
+      "parent": null,
+      "kind": "hub",
+      "legacySource": "natural-stones",
+      "title": "Natural Stones | Cobbles, Kota, Pebbles & Sandstone | S K Stones India",
+      "description": "Natural stones from S K Stones India: cobble stones, Kota and limestones, pebbles and sandstones for flooring, landscaping, paving and cladding.",
+      "hero": {
+        "eyebrow": "Natural Stones",
+        "heading": "Authentic Natural Stones",
+        "description": "Natural stones retain their original geological character, offering unique textures, colour variations and organic surface patterns that bring depth, warmth and timeless appeal to architectural and interior spaces."
+      },
+      "cardDescription": "Naturally sourced stones delivering organic textures, durability, and character, widely used for flooring, landscaping, cladding, and architectural detailing.",
+      "cardImageUrl": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/IMG_20180224_135417-scaled.jpg",
+      "applications": ["Flooring", "Landscaping", "Wall Cladding", "Paving & Pathways"],
+      "sourceNote": "Products hub card"
+    },
+    {
+      "slug": "cobble-stones",
+      "name": "Cobble Stones",
+      "parent": "natural-stones",
+      "kind": "collection",
+      "legacySource": "cobble-stones",
+      "title": "Cobble Stones for Driveways & Pathways | S K Stones India",
+      "description": "Granite and basalt cobble stones in black, grey and mixed shades for pathways, driveways, courtyards and landscapes. Supplied by S K Stones India, Bengaluru.",
+      "hero": {
+        "eyebrow": "Natural Stones",
+        "heading": "Authentic Natural Cobble Stones",
+        "description": "Cobble stones offer rugged texture, natural strength, and timeless visual appeal — making them ideal for pathways, driveways, landscapes, courtyards, and outdoor architectural surfaces that require strength, durability and character."
+      },
+      "cardDescription": "Durable cobble stones designed for pathways, driveways, and landscaping applications, offering natural grip, strength, and timeless outdoor aesthetics.",
+      "cardImageUrl": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/760368_ac9dfc1eff6c4d51b9507de348c5e3c4mv2.avif",
+      "applications": ["Paving & Pathways", "Landscaping"],
+      "sourceNote": "Hero copy: pathways, driveways, landscapes, courtyards"
+    },
+    {
+      "slug": "kota-stones",
+      "name": "Kota & Limestones",
+      "parent": "natural-stones",
+      "kind": "collection",
+      "legacySource": "kota-stones",
+      "title": "Kota Stone & Limestones | Tandur, Shabad, Kadpa | S K Stones India",
+      "description": "Kota stone and limestones including Tandur Blue, Shabad Yellow and Kadpa Black, in polished and leather finishes for pathways, courtyards and flooring.",
+      "hero": {
+        "eyebrow": "Natural Stones",
+        "heading": "Kota Stone & Natural Limestones",
+        "description": "Limestones offer a variety of finishes and colours with natural elegance, making them ideal for pathways, courtyards, restaurants and other architectural spaces that require an earthy feel and timeless beauty."
+      },
+      "applications": ["Paving & Pathways", "Flooring"],
+      "sourceNote": "Hero copy: pathways, courtyards; overview: high-performance flooring. Naming unified (nav said 'Lime Stones', page said 'Kota Stones')."
+    },
+    {
+      "slug": "pebbles",
+      "name": "Pebbles",
+      "parent": "natural-stones",
+      "kind": "collection",
+      "legacySource": "pebbles",
+      "title": "Natural Pebbles for Landscaping | S K Stones India",
+      "description": "Smooth natural pebbles for landscaping, garden pathways, decorative surfaces and water features, graded and supplied by S K Stones India.",
+      "hero": {
+        "eyebrow": "Natural Stones",
+        "heading": "Authentic Earth Pebbles",
+        "description": "Pebbles offer a naturally smooth texture, excellent durability, and organic visual appeal — making them ideal for landscaping, garden pathways, decorative surfaces, water features, and outdoor spaces that require both strength and aesthetic charm."
+      },
+      "applications": ["Landscaping", "Paving & Pathways", "Decorative & Art"],
+      "sourceNote": "Hero copy"
+    },
+    {
+      "slug": "sand-stones",
+      "name": "Sandstones",
+      "parent": "natural-stones",
+      "kind": "collection",
+      "legacySource": "sand-stones",
+      "title": "Indian Sandstones | Cladding, Paving & Flooring | S K Stones India",
+      "description": "Indian sandstones in warm, earthy tones for wall cladding, paving, flooring and landscaping, sourced for density and grain consistency by S K Stones India.",
+      "hero": {
+        "eyebrow": "Natural Stones",
+        "heading": "Indian Sandstones, Timeless Beauty",
+        "description": "Sandstone combines natural texture, durability, and warm earthy tones, making it a versatile choice for wall cladding, paving, flooring, landscaping, and architectural applications where both strength and timeless aesthetics are essential."
+      },
+      "origin": "India",
+      "applications": ["Wall Cladding", "Paving & Pathways", "Flooring", "Landscaping"],
+      "sourceNote": "Legacy h1 'Indian Sandstones'; hero copy lists applications"
+    },
+    {
+      "slug": "engineered-surfaces",
+      "name": "Engineered Surfaces",
+      "parent": null,
+      "kind": "hub",
+      "legacySource": "engineered-surfaces",
+      "title": "Engineered Surfaces | Quartz & Acrylic | S K Stones India",
+      "description": "Quartz and acrylic engineered surfaces with uniform appearance and consistent quality, for countertops, kitchens and commercial interiors.",
+      "hero": {
+        "eyebrow": "Engineered Surfaces",
+        "heading": "Precision Engineered Surfaces",
+        "description": "Engineered surfaces are manufactured to deliver uniform appearance, controlled performance and consistent quality, combining natural aggregates with advanced processing for modern architectural and interior applications."
+      },
+      "cardDescription": "Manufactured stone surfaces combining strength, consistency, and design flexibility, suitable for countertops, commercial interiors, and modern architectural applications.",
+      "applications": ["Countertops & Kitchens"],
+      "sourceNote": "Products hub card: 'suitable for countertops, commercial interiors'"
+    },
+    {
+      "slug": "acrylic-surfaces",
+      "name": "Acrylic Surfaces",
+      "parent": "engineered-surfaces",
+      "kind": "collection",
+      "legacySource": "acrylic-surfaces",
+      "title": "Acrylic Solid Surfaces for Kitchens & Interiors | S K Stones India",
+      "description": "Modern acrylic engineered surfaces for kitchens and interiors, with uniform colour, finish consistency and predictable performance.",
+      "hero": {
+        "eyebrow": "Engineered Surfaces",
+        "heading": "Precision Acrylic Surfaces",
+        "description": "Acrylic surfaces are manufactured to deliver a uniform appearance, controlled performance, and consistent quality — combining high-grade resins with advanced processing technologies for modern architectural and interior applications."
+      },
+      "applications": ["Countertops & Kitchens"],
+      "sourceNote": "Legacy meta: 'for kitchens and interiors'"
+    },
+    {
+      "slug": "quartz-surfaces",
+      "name": "Quartz Surfaces",
+      "parent": "engineered-surfaces",
+      "kind": "collection",
+      "legacySource": "quatrz-surfaces",
+      "legacySlugs": ["quatrz-surfaces"],
+      "title": "Quartz Surfaces & Slabs | Stain-Resistant Countertops | S K Stones India",
+      "description": "Luxury quartz slabs in a wide range of colours and finishes: stain-resistant, hygienic and durable for residential and high-traffic spaces.",
+      "hero": {
+        "eyebrow": "Engineered Surfaces",
+        "heading": "Luxury Quartz Collection",
+        "description": "Available in a wide range of colors, textures, and finishes, quartz slabs combine the timeless beauty of natural stone with superior strength and consistency. Their stain-resistant and hygienic properties make them a perfect choice for both residential and high-traffic environments."
+      },
+      "applications": ["Countertops & Kitchens"],
+      "sourceNote": "Engineered surfaces hub card. URL corrected from /quatrz-surfaces (301 redirect)."
+    },
+    {
+      "slug": "wall-claddings",
+      "name": "Wall Claddings",
+      "parent": null,
+      "kind": "collection",
+      "legacySource": "wall-claddings",
+      "title": "Stone Wall Cladding | Interior & Exterior | S K Stones India",
+      "description": "Natural stone wall cladding for interior and exterior walls: ledgestone, split-face, river rock and more, in 44 styles from S K Stones India.",
+      "hero": {
+        "eyebrow": "Wall Claddings",
+        "heading": "Stone Cladding Collection",
+        "description": "Wall claddings enhance vertical surfaces by adding texture, depth, and material character while offering refined visual definition across residential, commercial, and architectural environments."
+      },
+      "cardDescription": "Stone cladding solutions providing texture, protection, and visual depth for interior and exterior walls across residential and commercial projects.",
+      "cardImageUrl": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/760368_f44f5180aee14bd398fb18176eb0aae3mv2.avif",
+      "applications": ["Wall Cladding", "Facades & Elevations"],
+      "sourceNote": "Overview: interior and exterior architectural surfaces"
+    },
+    {
+      "slug": "tiles",
+      "name": "Tiles",
+      "parent": null,
+      "kind": "hub",
+      "legacySource": "tiles",
+      "title": "Tiles in Bengaluru | Vitrified & Stone-Look Collections | S K Stones India",
+      "description": "Seven tile collections — Brillo, Elezzo, Endless, Ittaca, Milagro, Stone and Subway — for floors, walls and high-traffic spaces, at S K Stones India.",
+      "hero": {
+        "eyebrow": "Tiles",
+        "heading": "Authentic Tile Surfaces",
+        "description": "Tiles offer versatile surface solutions combining durability, design flexibility and easy maintenance, making them suitable for floors, walls and functional spaces across residential, commercial and high-traffic environments."
+      },
+      "cardDescription": "Vitrified and stone tile collections for flooring and walls, combining durability, design flexibility and easy maintenance.",
+      "cardImageUrl": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/VENETO-BEIGE_compressed.webp",
+      "applications": ["Flooring", "Wall Cladding"],
+      "sourceNote": "Hero copy: floors, walls"
+    },
+    {
+      "slug": "brillo-collection",
+      "name": "Brillo Collection",
+      "parent": "tiles",
+      "kind": "collection",
+      "legacySource": "brillo-collection",
+      "title": "Brillo Tile Collection | S K Stones India",
+      "description": "The Brillo tile collection: durable, low-maintenance surfaces with contemporary design for floors, walls and high-usage interiors.",
+      "hero": {
+        "eyebrow": "Tiles",
+        "heading": "Brillo Collection",
+        "description": "The Brillo Collection offers refined surface solutions that combine durability, contemporary design expression, and low maintenance performance — making it ideal for floors, walls, and high-usage interior environments across residential and commercial spaces."
+      },
+      "applications": ["Flooring", "Wall Cladding"],
+      "sourceNote": "Hero copy"
+    },
+    {
+      "slug": "elezzo-collection",
+      "name": "Elezzo Collection",
+      "parent": "tiles",
+      "kind": "collection",
+      "legacySource": "elezzo-collection",
+      "title": "Elezzo Tile Collection | S K Stones India",
+      "description": "The Elezzo tile collection: refined, easy-maintenance surfaces for floors, walls and high-traffic residential and commercial spaces.",
+      "hero": {
+        "eyebrow": "Tiles",
+        "heading": "Elezzo Collection",
+        "description": "The Elezzo Collection presents refined surface solutions that combine durability, contemporary aesthetics, and easy maintenance — making it suitable for floors, walls, and functional spaces across residential, commercial, and high-traffic environments."
+      },
+      "applications": ["Flooring", "Wall Cladding"],
+      "sourceNote": "Hero copy"
+    },
+    {
+      "slug": "endless-collection",
+      "name": "Endless Collection",
+      "parent": "tiles",
+      "kind": "collection",
+      "legacySource": "endless-collection",
+      "title": "Endless Tile Collection | S K Stones India",
+      "description": "The Endless tile collection: 25 versatile designs for floors, walls and high-traffic interiors across homes and commercial spaces.",
+      "hero": {
+        "eyebrow": "Tiles",
+        "heading": "Endless Tile Collection",
+        "description": "The Endless Tile Collection presents versatile surface solutions that combine durability, contemporary design flexibility, and easy maintenance — making it ideal for floors, walls, and high-traffic interior spaces across residential and commercial environments."
+      },
+      "applications": ["Flooring", "Wall Cladding"],
+      "sourceNote": "Hero copy"
+    },
+    {
+      "slug": "ittaca-collection",
+      "name": "Ittaca Collection",
+      "parent": "tiles",
+      "kind": "collection",
+      "legacySource": "ittaca-collection",
+      "title": "Ittaca Tile Collection | S K Stones India",
+      "description": "The Ittaca tile collection: 28 durable, easy-care designs for floors, walls and functional spaces in residential and commercial projects.",
+      "hero": {
+        "eyebrow": "Tiles",
+        "heading": "Ittaca Collection",
+        "description": "The Ittaca Collection delivers versatile surface solutions that combine durability, refined design expression and easy maintenance — making it ideal for floors, walls, and functional spaces across residential, commercial, and high-traffic environments."
+      },
+      "applications": ["Flooring", "Wall Cladding"],
+      "sourceNote": "Hero copy"
+    },
+    {
+      "slug": "milagro-collection",
+      "name": "Milagro Collection",
+      "parent": "tiles",
+      "kind": "collection",
+      "legacySource": "milagro-collection",
+      "title": "Milagro Tile Collection | S K Stones India",
+      "description": "The Milagro tile collection: contemporary, slip-aware tiles for floors, walls and interior or exterior surfaces in high-traffic spaces.",
+      "hero": {
+        "eyebrow": "Tiles",
+        "heading": "Milagro Collection",
+        "description": "The Milagro Collection delivers refined surface solutions that combine durability, contemporary design expression, and easy maintenance — making it ideal for floors, walls, and functional spaces across residential, commercial, and high-traffic environments."
+      },
+      "applications": ["Flooring", "Wall Cladding"],
+      "sourceNote": "Hero copy"
+    },
+    {
+      "slug": "stone-collection",
+      "name": "Stone Collection",
+      "parent": "tiles",
+      "kind": "collection",
+      "legacySource": "stone-collection",
+      "title": "Stone-Look Tile Collection | S K Stones India",
+      "description": "The Stone tile collection: natural-character tiles for floors, walls and interior or exterior surfaces across homes and commercial sites.",
+      "hero": {
+        "eyebrow": "Tiles",
+        "heading": "Stone Collection",
+        "description": "The Stone Collection delivers versatile surface solutions that combine durability, natural character, and refined design flexibility — making it ideal for floors, walls, and functional spaces across residential, commercial, and high-traffic environments."
+      },
+      "applications": ["Flooring", "Wall Cladding"],
+      "sourceNote": "Hero copy"
+    },
+    {
+      "slug": "subway-tiles",
+      "name": "Subway Tiles",
+      "parent": "tiles",
+      "kind": "collection",
+      "legacySource": "subway-tiles",
+      "title": "Subway Tiles for Kitchens & Bathrooms | S K Stones India",
+      "description": "Classic subway tiles with clean lines and easy maintenance for walls, feature areas, kitchens and bathrooms, from S K Stones India.",
+      "hero": {
+        "eyebrow": "Tiles",
+        "heading": "Subway Tiles Collection",
+        "description": "The Subway Tiles Collection delivers timeless surface solutions that combine durability, clean design lines, and easy maintenance — making it ideal for walls, feature areas, kitchens, bathrooms, and functional spaces across residential and commercial environments."
+      },
+      "applications": ["Wall Cladding", "Countertops & Kitchens", "Bathrooms"],
+      "sourceNote": "Hero copy: walls, kitchens, bathrooms"
+    },
+    {
+      "slug": "clay-products",
+      "name": "Clay Products",
+      "parent": null,
+      "kind": "hub",
+      "legacySource": "clay-products",
+      "title": "Clay Products | Jaali, Bricks & Roofing Tiles | S K Stones India",
+      "description": "Traditional clay products for elevation, roofing and architectural detailing: clay jaali, wire-cut and elevation bricks, roofing and roof flooring tiles.",
+      "hero": {
+        "eyebrow": "Clay Products",
+        "heading": "Traditional Clay Products",
+        "description": "Traditional clay products for elevation, roofing and architectural detailing."
+      },
+      "cardDescription": "Traditional clay products for elevation, roofing and architectural detailing.",
+      "applications": ["Facades & Elevations", "Roofing & Terraces"],
+      "sourceNote": "Legacy meta"
+    },
+    {
+      "slug": "clay-jally",
+      "name": "Clay Jally",
+      "parent": "clay-products",
+      "kind": "collection",
+      "legacySource": "clay-jally",
+      "title": "Clay Jally (Jaali) Panels | S K Stones India",
+      "description": "Clay jally panels offering ventilation, filtered light, privacy and decorative patterns for interior and exterior walls.",
+      "hero": {
+        "eyebrow": "Clay Products",
+        "heading": "Clay Jally Panels",
+        "description": "Clay Jally panels combine traditional craftsmanship with architectural functionality — offering ventilation, filtered light, privacy, and decorative patterning for both interior and exterior applications."
+      },
+      "applications": ["Facades & Elevations", "Decorative & Art"],
+      "sourceNote": "Hero copy"
+    },
+    {
+      "slug": "wire-cut-bricks",
+      "name": "Wire Cut Bricks",
+      "parent": "clay-products",
+      "kind": "collection",
+      "legacySource": "wire-cut-bricks",
+      "title": "Wire Cut Bricks for Facades | S K Stones India",
+      "description": "Precision wire cut bricks with clean linear lines for architectural facades, partitions and ventilated walls, supplied by S K Stones India.",
+      "hero": {
+        "eyebrow": "Clay Products",
+        "heading": "Wire Cut Bricks",
+        "description": "Wire cut bricks deliver clean linear aesthetics, dimensional precision, and consistent surface texture — making them ideal for architectural facades, partitions, ventilated walls, and contemporary design applications."
+      },
+      "applications": ["Facades & Elevations", "Walls & Partitions"],
+      "sourceNote": "Hero copy"
+    },
+    {
+      "slug": "elevation-clay-bricks",
+      "name": "Elevation Clay Bricks",
+      "parent": "clay-products",
+      "kind": "collection",
+      "legacySource": "elevation-clay-bricks",
+      "title": "Elevation Clay Bricks | Facade Bricks | S K Stones India",
+      "description": "Elevation clay bricks combining texture and structural integrity for durable facade surfaces on residential and commercial buildings.",
+      "hero": {
+        "eyebrow": "Clay Products",
+        "heading": "Elevation Clay Bricks",
+        "description": "Elevation clay bricks combine texture, structural integrity, and visual rhythm — creating durable facade surfaces that enhance architectural character across residential and commercial environments."
+      },
+      "applications": ["Facades & Elevations"],
+      "sourceNote": "Hero copy"
+    },
+    {
+      "slug": "roofing-tiles-clay",
+      "name": "Clay Roofing Tiles",
+      "parent": "clay-products",
+      "kind": "collection",
+      "legacySource": "roofing-tiles-clay",
+      "title": "Clay Roofing Tiles | S K Stones India",
+      "description": "Weather-resistant clay roofing tiles that improve shelter and thermal performance while adding architectural character to homes and commercial buildings.",
+      "hero": {
+        "eyebrow": "Clay Products",
+        "heading": "Clay Roofing Tiles",
+        "description": "Roofing tiles combine durability, weather resistance, and visual rhythm — creating protective roof surfaces that enhance shelter, thermal performance, and architectural character across residential and commercial buildings."
+      },
+      "applications": ["Roofing & Terraces"],
+      "sourceNote": "Hero copy"
+    },
+    {
+      "slug": "roof-flooring-tiles",
+      "name": "Roof Flooring Tiles",
+      "parent": "clay-products",
+      "kind": "collection",
+      "legacySource": "roof-flooring-tiles",
+      "title": "Roof Flooring Tiles for Terraces | S K Stones India",
+      "description": "Durable, weather-resistant roof flooring tiles for terraces, open roofs and balconies, with slip resistance and consistent colour.",
+      "hero": {
+        "eyebrow": "Clay Products",
+        "heading": "Roof Flooring Tiles",
+        "description": "Roof flooring tiles offer durable, weather-resistant surface solutions designed for terraces, open roofs, balconies, and exposed horizontal spaces — combining strength, slip resistance, and architectural consistency."
+      },
+      "applications": ["Roofing & Terraces", "Flooring"],
+      "sourceNote": "Hero copy"
+    },
+    {
+      "slug": "concrete-blocks",
+      "name": "Concrete Blocks",
+      "parent": null,
+      "kind": "enquiry",
+      "legacySource": "concrete-blocks",
+      "title": "Concrete Block Systems | S K Stones India",
+      "description": "High-strength concrete blocks for walls, partitions, boundaries and landscape use, offering uniformity and load-bearing capacity. Enquire with S K Stones India.",
+      "hero": {
+        "eyebrow": "Concrete Blocks",
+        "heading": "Concrete Block Systems",
+        "description": "Concrete blocks provide structural stability, load-bearing strength and design flexibility, making them suitable for walls, partitions, boundaries and architectural construction across residential, commercial and industrial projects."
+      },
+      "cardDescription": "High strength concrete blocks suitable for structural and landscape use, offering uniformity, load bearing capacity, and long term durability.",
+      "applications": ["Walls & Partitions", "Landscaping"],
+      "sourceNote": "Products hub card. Legacy page listed 0 products; no product photography exists."
+    }
+  ],
+  "retiredLegacyPages": [
+    {
+      "slug": "imported-marble-polished",
+      "redirectTo": "imported-marbles",
+      "reason": "Unlinked legacy page with 0 products"
+    },
+    {
+      "slug": "indian-marble-polished-slabs",
+      "redirectTo": "indian-marbles",
+      "reason": "Unlinked legacy page with 0 products"
+    },
+    {
+      "slug": "indian-marble-unpolished",
+      "redirectTo": "indian-marbles",
+      "reason": "Unlinked legacy page with 0 products"
+    },
+    { "slug": "quatrz-surfaces", "redirectTo": "quartz-surfaces", "reason": "Typo in legacy URL" }
+  ]
+}

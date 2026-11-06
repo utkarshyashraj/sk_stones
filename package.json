@@ -1,0 +1,44 @@
+{
+  "name": "skstones-site",
+  "version": "2.0.0",
+  "private": true,
+  "description": "S K Stones India website — Next.js (App Router, static export) for Netlify",
+  "engines": {
+    "node": ">=20.9"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && node scripts/postbuild.mjs",
+    "start": "node scripts/serve-out.mjs",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "verify:routes": "node scripts/verify-build.mjs",
+    "check": "npm run typecheck && npm run lint && npm run test && npm run build && npm run verify:routes",
+    "catalog:extract": "node scripts/extract-legacy.mjs",
+    "catalog:download": "node scripts/download-legacy-images.mjs",
+    "catalog:build": "node scripts/build-catalog.mjs",
+    "images:optimize": "node scripts/optimize-images.mjs"
+  },
+  "dependencies": {
+    "next": "16.4.5",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0",
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "10.14.0",
+    "eslint-config-next": "16.4.5",
+    "ffmpeg-static": "5.3.0",
+    "prettier": "3.9.10",
+    "sharp": "0.35.5",
+    "typescript": "6.0.3",
+    "vitest": "5.1.0"
+  }
+}

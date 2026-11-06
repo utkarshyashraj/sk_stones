@@ -1,0 +1,104 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-5);
+  list-style: none;
+  padding: 0;
+}
+.grid > li {
+  display: flex;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  background: var(--c-white);
+  color: var(--c-text);
+  text-decoration: none;
+  transition:
+    box-shadow var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+}
+.card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+.media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--c-stone-200);
+}
+.media img {
+  transition: transform 500ms var(--ease);
+}
+.card:hover .media img {
+  transform: scale(1.05);
+}
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--c-text-muted);
+  background: linear-gradient(135deg, var(--c-stone-100), var(--c-stone-300));
+}
+.count {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(11, 11, 11, 0.8);
+  color: var(--c-white);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--sp-2);
+  padding: var(--sp-5);
+}
+.name {
+  font-family: var(--font-serif);
+  font-size: var(--fs-xl);
+  font-weight: 600;
+}
+.desc {
+  color: var(--c-text-muted);
+  font-size: var(--fs-sm);
+}
+.more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: var(--sp-2);
+  color: var(--c-gold-ink);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+.compact .body {
+  padding: var(--sp-4);
+}
+.compact .name {
+  font-size: var(--fs-lg);
+}
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .compact {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

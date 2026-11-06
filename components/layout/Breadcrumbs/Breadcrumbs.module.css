@@ -1,0 +1,43 @@
+.crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 4px;
+  list-style: none;
+  padding: 0;
+  font-size: var(--fs-xs);
+}
+.crumbs li {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+}
+.crumbs a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  color: var(--c-text-muted-dark);
+  text-decoration: none;
+}
+.crumbs a:hover {
+  color: var(--c-gold);
+  text-decoration: underline;
+}
+.crumbs [aria-current='page'] {
+  color: var(--c-gold);
+  font-weight: 600;
+}
+.sep {
+  color: var(--c-text-muted-dark);
+  opacity: 0.7;
+  flex: none;
+}
+.light a,
+.light .sep {
+  color: var(--c-text-muted);
+}
+.light a:hover,
+.light [aria-current='page'] {
+  color: var(--c-gold-ink);
+}

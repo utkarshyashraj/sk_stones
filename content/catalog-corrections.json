@@ -1,0 +1,114 @@
+{
+  "$comment": "Every change applied to legacy catalog data, with evidence. Matching is by a substring of the image filename (stable) — never by position, because the legacy positions were shifted.",
+  "relabel": {
+    "kota-stones": {
+      "evidence": "Legacy labels were rotated one position against their images. Descriptive filenames (SHABAD-YELLOW-LEATHER, KOTA-MIRROR-POLISHED, KOTA-HONEY-POLISHED) each carried the label of the previous slot; visual review of the PictureNN images confirmed the same one-step rotation (e.g. the black slab Picture33 now 'Kadpa Black Mirror Polished', the green slab Picture39 now 'Kota Green Leather').",
+      "byImage": {
+        "SHABAD-YELLOW-LEATHER": "Shabad Yellow Leather",
+        "KOTA-MIRROR-POLISHED": "Kota Mirror Polished",
+        "KOTA-HONEY-POLISHED": "Kota Honey Polished",
+        "IMG_20260107_144255": "Kota Natural Finish",
+        "Picture32": "Kota Honeydew Leathered",
+        "Picture33": "Kadpa Black Mirror Polished",
+        "Picture34": "Kota Honeydew Polished",
+        "Picture35": "Tandur Blue Semi Polished",
+        "Picture36": "Tandur Blue Mirror Polished",
+        "Picture37": "Tandur Grey Leathered",
+        "Picture38": "Kota Stone Mirror Polished",
+        "Picture39": "Kota Green Leather"
+      },
+      "notProducts": {
+        "Picture29": "Lifestyle photo of a limestone-paved courtyard (not a single product). Used as the category card image."
+      },
+      "addWithoutImage": [
+        {
+          "name": "Kadpa Black Leather",
+          "reason": "Label existed in legacy list (as 'Kadpa Black Leathere') but its photo was never uploaded; the slot showed the courtyard photo. Needs a product photo from the business."
+        }
+      ]
+    },
+    "feature-wall": {
+      "evidence": "Labels for the first four slots were rotated one position. Filenames PATALS-PATTERN, LEAF-PATTERN-WALL-ART and FLAWOR-EMBOSSED-WALL each carried the next slot's label; visual review shows Picture23 is the wave-relief wall and Picture18 is a feather/leaf panel installation with no specific legacy label.",
+      "byImage": {
+        "PATALS-PATTERN": "Petals Pattern",
+        "LEAF-PATTERN-WALL-ART": "Leaf Pattern Wall Art",
+        "FLAWOR-EMBOSSED-WALL": "Flower Embossed Wall",
+        "Picture23": "Wave Pattern Wall",
+        "Picture18": "Feature Wall",
+        "Picture17": "Feature Wall",
+        "Picture19": "Feature Wall"
+      }
+    }
+  },
+  "nameFixes": {
+    "$comment": "Case-insensitive whole-word regex -> replacement on product names; unambiguous typos only. (Repeated whitespace is collapsed separately.)",
+    "\\bLeathere\\b": "Leather",
+    "\\bFlawor\\b": "Flower",
+    "\\bSiver\\b": "Silver"
+  },
+  "imageRecovered": {
+    "$comment": "Legacy URLs that returned HTTP 404 on the staging host; the unedited WordPress original was recovered (see content/raw/image-manifest.json 'recoveredFrom').",
+    "files": [
+      "Sadarhalli_compressed-scaled-e1769924203658.webp",
+      "silver-travertine_compressed-scaled-e1769922611907.webp",
+      "IMG_20251202_141633_compressed-scaled-e1769761703722.webp"
+    ]
+  },
+  "needsBusinessVerification": [
+    {
+      "category": "indian-marbles",
+      "items": ["Green Marble", "Black Stripe", "Asian Grey"],
+      "issue": "Filenames (indian-white-onyx, indian-statuario, GREEN) do not match labels; 'Asian Grey' shows a clearly green stone. Possibly shifted; left unchanged pending confirmation."
+    },
+    {
+      "category": "roof-flooring-tiles",
+      "items": ["Cappuccino Flooring Tiles"],
+      "issue": "Image filename is BURGUNDY-1.jpg."
+    },
+    {
+      "category": "acrylic-surfaces",
+      "items": ["Roosevelt Gray Quartz", "River Gold Quartz", "Blue Quartzite Quartz"],
+      "issue": "Items on the Acrylic page are named '... Quartz'; confirm whether they are acrylic or quartz products."
+    },
+    {
+      "category": "sand-stones",
+      "items": [
+        "Jaisalmer Yellow Marble Polished",
+        "Jaisalmer Marble Unpolished",
+        "Ita Gold Marble Unpolished",
+        "Flower Gold Marble Leathered"
+      ],
+      "issue": "Marbles listed under Sandstones."
+    },
+    {
+      "category": "mop-inlay-work",
+      "items": ["Sand Stones Art"],
+      "issue": "Item labelled as sandstone art inside the Mother-of-Pearl collection."
+    },
+    {
+      "category": "murals-monuments",
+      "items": ["MOP Inlay Work"],
+      "issue": "MOP item inside Murals & Monuments."
+    },
+    {
+      "category": "cnc-stone-work",
+      "items": ["Design in Slate Stone Tile 1X1"],
+      "issue": "Image filename is SAND-STONES-ART; stone-art hub labelled it 'Sand Stones Art'."
+    },
+    {
+      "category": "imported-marbles",
+      "items": ["Satvario", "Silver Portro", "Botochino Classic"],
+      "issue": "Possible misspellings (Statuario? Portoro? Botticino?) — not changed without confirmation."
+    },
+    {
+      "category": "concrete-blocks",
+      "items": [],
+      "issue": "No products or photos exist; page is enquiry-only."
+    },
+    {
+      "category": "pebbles",
+      "items": [],
+      "issue": "18 pebble photos existed only on the Natural Stones hub, all labelled 'PEBBLES'. Individual variety names are unknown."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+.cache/
+coverage/
+playwright-report/
+test-results/
+reports/lighthouse/*.html
+*.tsbuildinfo
+next-env.d.ts
+.env*
+!.env.example
+.DS_Store
+Thumbs.db
