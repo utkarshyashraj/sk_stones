@@ -108,18 +108,29 @@
 .stepTitle:focus {
   outline: none;
 }
+/* Field rows: each field spans 4 subgrid tracks (label | control | hint | error), so labels and
+   controls in the same row share one top edge and a hint under one field never shifts its neighbour. */
 .grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--sp-4);
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: 20px;
+  /* 24px between field rows comes from each field's padding, so empty hint/error tracks add nothing. */
+  row-gap: 0;
+  align-items: start;
 }
 .field {
   display: grid;
-  gap: 6px;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+  row-gap: 0;
+  align-content: start;
   min-width: 0;
+  padding-bottom: 24px;
 }
 .field > label {
-  font-size: var(--fs-sm);
+  align-self: end;
+  margin-bottom: 8px;
+  font-size: 14px;
   font-weight: 600;
 }
 .req {
@@ -133,25 +144,34 @@
 .field select,
 .field textarea {
   width: 100%;
-  min-height: 48px;
-  padding: 0.65rem 0.9rem;
-  border: 1.5px solid var(--line-strong);
-  border-radius: var(--radius-sm);
+  height: 52px;
+  padding: 0 16px;
+  border: 1px solid rgba(244, 239, 230, 0.16);
+  border-radius: 4px;
   background: var(--surface);
+  color: var(--text);
   font-size: var(--fs-base);
   transition:
     border-color var(--dur) var(--ease),
     box-shadow var(--dur) var(--ease);
 }
 .field textarea {
+  height: auto;
+  min-height: 132px;
+  padding: 14px 16px;
   resize: vertical;
+}
+/* AA on the field background (#9a9287 on #24201c ≈ 5.2:1). */
+.field ::placeholder {
+  color: var(--text-3);
+  opacity: 1;
 }
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(134, 102, 17, 0.2);
+  border-color: var(--cta-bg);
+  box-shadow: 0 0 0 3px rgba(201, 164, 106, 0.45);
 }
 .field [aria-invalid='true'] {
   border-color: var(--danger);
@@ -162,10 +182,12 @@
   gap: var(--sp-2);
 }
 .hint {
-  font-size: var(--fs-xs);
+  margin-top: 8px;
+  font-size: 12px;
   color: var(--text-2);
 }
 .error {
+  margin-top: 8px;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -173,12 +195,13 @@
   font-weight: 600;
   color: var(--danger);
 }
+/* Button (52px, same as inputs) and the text-link skip are vertically centred. */
 .actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: var(--sp-3);
-  margin-top: var(--sp-5);
+  margin-top: var(--sp-2);
 }
 .skip {
   min-height: 44px;
@@ -205,7 +228,7 @@
   font-size: var(--fs-xs);
   color: var(--text-2);
 }
-@media (min-width: 640px) {
+@media (min-width: 900px) {
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

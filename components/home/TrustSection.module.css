@@ -6,34 +6,30 @@
 }
 .media {
   margin: 0;
-  /* Room for the frame's 16px offset so it never overflows the column. */
-  padding-right: 16px;
+  min-width: 0;
 }
-/* The video wrapper owns the offset gold frame: it hugs the video exactly, never the caption. */
+/* Wrapper fits the video exactly: even 10px padding on all four sides, nothing extends beyond it. */
 .frame {
-  position: relative;
-  isolation: isolate;
+  padding: 10px;
+  border: 1px solid rgba(201, 164, 106, 0.4);
+  border-radius: 6px;
+  background: rgba(20, 17, 15, 0.6);
 }
-.frame::before {
-  content: '';
-  position: absolute;
-  inset: 16px -16px -16px 16px;
-  z-index: -1;
-  border: 1px solid rgba(201, 164, 106, 0.45);
-  border-radius: var(--radius-lg);
-}
-.frame > * {
+.frame > div {
   border: 0;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
+  border-radius: 3px;
+  box-shadow: none;
 }
 .frame video {
+  display: block;
+  width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  border-radius: 3px;
 }
-/* 16px below the frame's offset edge (the frame extends 16px under the video). */
+/* Same left edge as the wrapper. */
 .caption {
-  margin-top: calc(16px + 16px);
+  margin-top: 16px;
   color: var(--text-3);
   font-size: 14px;
   line-height: 1.6;

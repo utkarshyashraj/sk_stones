@@ -1,10 +1,8 @@
+/* Same solid surface as the scrolled header; never transparent over the marble. */
 .footer {
-  border-top: 1px solid var(--line);
-  background-image: linear-gradient(
-    to bottom,
-    rgb(var(--veil-rgb) / 0.45) 0,
-    rgb(var(--veil-rgb) / 0.9) var(--blend)
-  );
+  position: relative;
+  border-top: 1px solid rgba(201, 164, 106, 0.25);
+  background: var(--surface-chrome);
   color: var(--text-2);
   font-size: var(--fs-sm);
 }
@@ -17,10 +15,11 @@
   gap: var(--sp-4) var(--sp-8);
 }
 .top {
-  padding-block: var(--sp-8) var(--sp-6);
+  padding-block: 64px var(--sp-8);
 }
+/* Row 2 sits under a hairline. */
 .bottom {
-  padding-block: var(--sp-5) var(--sp-6);
+  padding-block: var(--sp-6) var(--sp-8);
   border-top: 1px solid var(--line);
 }
 .nav {
@@ -65,12 +64,20 @@
   display: inline-flex;
   align-items: center;
   min-height: 32px;
+  white-space: nowrap;
 }
 .copy {
   color: var(--text-3);
   font-size: var(--fs-xs);
 }
-@media (max-width: 640px) {
+/* Mobile: everything stacks, left-aligned. */
+@media (max-width: 767px) {
+  .top,
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
   .contact {
     flex-direction: column;
     align-items: flex-start;

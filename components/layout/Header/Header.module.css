@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   z-index: var(--z-header);
-  background: var(--bg);
+  background: var(--surface-chrome);
   color: var(--text);
   border-bottom: 1px solid var(--panel-border);
 }

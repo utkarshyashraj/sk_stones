@@ -62,7 +62,7 @@ export default function ContactPage() {
                   <a href={`mailto:${site.email}`}>{site.email}</a>
                 </div>
               </li>
-              <li>
+              <li className={styles.wide}>
                 <div>
                   <h2>Showroom hours</h2>
                   <p>{site.hours.label}</p>

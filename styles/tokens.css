@@ -16,6 +16,7 @@
 
   /* Base + veil + panels */
   --base: #100e0c;
+  --surface-chrome: #100e0c; /* header (scrolled) and footer: one solid surface */
   --veil-rgb: 16 14 12;
   --panel-bg: rgba(20, 17, 15, 0.72);
   --panel-border: rgba(201, 164, 106, 0.18);

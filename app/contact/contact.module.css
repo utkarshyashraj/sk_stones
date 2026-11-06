@@ -1,6 +1,6 @@
 .layout {
   display: grid;
-  gap: var(--sp-10);
+  gap: var(--head-gap);
   align-items: start;
 }
 .formCol {
@@ -9,13 +9,14 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0 var(--sp-8);
+  gap: 0;
   list-style: none;
   padding: 0;
   border-top: 1px solid var(--line);
 }
+/* Column spacing via padding so every divider runs unbroken across the row. */
 .cards li {
-  padding: var(--sp-4) 0;
+  padding: var(--sp-4) var(--sp-6) var(--sp-4) 0;
   border-bottom: 1px solid var(--line);
 }
 .cards h2 {
@@ -26,10 +27,18 @@
   text-transform: uppercase;
   color: var(--text-2);
 }
+/* Identical value style in every block; only the email may break (long address), never the hours. */
 .cards a:not(:global(.link-arrow)),
 .cards p {
+  display: block;
+  margin-top: var(--sp-2);
   font-weight: 600;
+}
+.cards a[href^='mailto:'] {
   overflow-wrap: anywhere;
+}
+.cards :global(.link-arrow) {
+  margin-top: var(--sp-3);
 }
 .cards a:not(:global(.link-arrow)) {
   text-decoration: none;
@@ -38,11 +47,13 @@
   color: var(--accent);
   text-decoration: underline;
 }
+/* Full width, same radius as the form panel. */
 .map {
-  margin-top: var(--sp-4);
+  width: 100%;
+  margin-top: var(--gap-sm);
   overflow: hidden;
   aspect-ratio: 4 / 3;
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg);
   border: 1px solid var(--line);
   background: var(--surface-2);
 }
@@ -59,7 +70,7 @@
     grid-column: 1 / -1;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
   .layout {
     grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
   }
