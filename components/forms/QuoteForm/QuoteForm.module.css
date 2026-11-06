@@ -2,9 +2,11 @@
   display: grid;
   gap: var(--sp-5);
   padding: var(--sp-6);
-  border: 1px solid var(--line);
+  border: 1px solid var(--panel-border);
   border-radius: var(--radius-lg);
-  background: var(--surface);
+  background: var(--panel-bg);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   box-shadow: var(--shadow-sm);
 }
 .title {

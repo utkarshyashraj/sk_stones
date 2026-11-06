@@ -65,8 +65,11 @@
   flex-direction: column;
   gap: var(--sp-6);
   padding: var(--sp-8);
-  border: 1px solid var(--line);
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
   border-radius: var(--radius-lg);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   scroll-snap-align: start;
 }
 .quote {

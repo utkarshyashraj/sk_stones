@@ -46,7 +46,7 @@ export default function ProductsPage() {
           </>
         }
       />
-      <section className="section tone-light" aria-labelledby="cats-title">
+      <section className="section veil-text" aria-labelledby="cats-title">
         <div className="container">
           <div className="section-head">
             <h2 id="cats-title">Shop by category</h2>

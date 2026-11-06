@@ -19,7 +19,7 @@ interface Props {
 
 export function PageHero({ crumbs, eyebrow, title, lead, actions, background, aside, children }: Props) {
   return (
-    <section className={styles.hero}>
+    <section className={`${styles.hero} veil veil-hero zone-hero`}>
       {background ? (
         <div className={styles.bg} aria-hidden="true">
           <Picture image={background} alt="" sizes="100vw" priority fill />

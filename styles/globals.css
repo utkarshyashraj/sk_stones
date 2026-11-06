@@ -26,7 +26,6 @@ body {
   font-size: var(--fs-base);
   line-height: var(--lh-body);
   color: var(--text);
-  background-color: var(--bg);
   overflow-x: clip;
   padding-bottom: var(--bottom-nav-h);
   -webkit-font-smoothing: antialiased;
@@ -110,13 +109,6 @@ h4 {
 }
 .section {
   padding-block: var(--section-y);
-}
-/* Solid graphite bands; no textures behind content. */
-.section--tint {
-  background: var(--bg-raised);
-}
-.section--dark {
-  background: var(--bg);
 }
 .section-head {
   max-width: 46rem;
@@ -318,25 +310,6 @@ main > section ~ .section:not(.section--dark) {
   contain-intrinsic-size: auto 900px;
 }
 
-/* ---------- Zone transitions (dark ↔ light) ----------
- * Applied to the FIRST section of a zone: a soft blend from the previous zone's surface into this one,
- * so tone changes never appear as a hard horizontal cut.
- */
-.blend-from-dark,
-.blend-from-light,
-.blend-from-deep {
-  padding-top: calc(var(--section-y) + var(--sp-10));
-}
-.blend-from-dark {
-  background-image: linear-gradient(to bottom, var(--surface-dark), var(--bg) var(--blend));
-}
-.blend-from-light {
-  background-image: linear-gradient(to bottom, var(--surface-stone), var(--bg) var(--blend));
-}
-.blend-from-deep {
-  background-image: linear-gradient(to bottom, var(--surface-ivory-deep), var(--bg) var(--blend));
-}
-
 /* ---------- Motion ---------- */
 /* Slow zoom for imagery on hover (1.04 over 1.2s). */
 .zoom-media img {
@@ -366,4 +339,62 @@ a:focus-visible > .zoom-media img {
     opacity: 1;
     transform: none;
   }
+}
+
+/* ---------- Site-wide marble ----------
+ * One fixed layer for the whole page (rendered in app/layout.tsx with next/image fill + object-fit: cover).
+ * No background-attachment: fixed (broken on iOS); no per-section copies of the image; no parallax.
+ */
+.marble-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ---------- Veils ----------
+ * Every section darkens the marble with #100E0C at --veil opacity. The first 120px blends from the previous
+ * section's veil (set automatically by the sibling rules below), so levels never meet at a hard edge.
+ */
+.section,
+.veil {
+  --veil: 0.75;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(var(--veil-rgb) / var(--veil-from, var(--veil))) 0,
+    rgb(var(--veil-rgb) / var(--veil)) var(--blend)
+  );
+}
+.veil-hero {
+  --veil: 0.45;
+}
+.veil-mid {
+  --veil: 0.75;
+}
+.veil-text {
+  --veil: 0.9;
+}
+:is(.section, .veil).veil-hero + :is(.section, .veil) {
+  --veil-from: 0.45;
+}
+:is(.section, .veil):not(.veil-hero, .veil-text) + :is(.section, .veil) {
+  --veil-from: 0.75;
+}
+:is(.section, .veil).veil-text + :is(.section, .veil) {
+  --veil-from: 0.9;
+}
+/* Hero/CTA zones (0.45 veil): only colours verified against the busiest marble at that level. */
+.zone-hero {
+  --text-2: var(--text);
+  --text-3: var(--text);
+  --accent: var(--accent-hero);
+}
+
+/* ---------- Panels for text-heavy blocks (testimonials, FAQ items, forms) ---------- */
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-lg);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
 }

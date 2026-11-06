@@ -1,13 +1,13 @@
-.list {
-  display: grid;
-  border-top: 1px solid var(--line);
-  interpolate-size: allow-keywords; /* enables height: auto transitions where supported */
-}
 .item {
-  border-bottom: 1px solid var(--line);
+  padding: 0 var(--sp-5);
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-lg);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
 }
 .item[open] {
-  border-bottom-color: var(--line-strong);
+  border-color: rgba(201, 164, 106, 0.32);
 }
 /* Smooth open/close (progressive enhancement: instant in browsers without ::details-content). */
 @media (prefers-reduced-motion: no-preference) {
@@ -49,6 +49,12 @@
 }
 .a {
   max-width: var(--measure);
-  padding: 0 var(--sp-10) var(--sp-6) 0;
+  padding: 0 var(--sp-6) var(--sp-5) 0;
   color: var(--text-2);
+}
+
+.list {
+  display: grid;
+  gap: var(--sp-3);
+  interpolate-size: allow-keywords;
 }

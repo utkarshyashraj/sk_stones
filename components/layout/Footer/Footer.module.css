@@ -1,6 +1,10 @@
 .footer {
   border-top: 1px solid var(--line);
-  background: var(--bg);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(var(--veil-rgb) / 0.45) 0,
+    rgb(var(--veil-rgb) / 0.9) var(--blend)
+  );
   color: var(--text-2);
   font-size: var(--fs-sm);
 }

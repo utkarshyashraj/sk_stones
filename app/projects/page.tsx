@@ -51,7 +51,7 @@ export default function ProjectsPage() {
           />
         </div>
       </section>
-      <section className="section tone-light" aria-labelledby="gallery-title">
+      <section className="section veil-mid" aria-labelledby="gallery-title">
         <div className="container">
           <div className="section-head">
             <h2 id="gallery-title">See the craft</h2>

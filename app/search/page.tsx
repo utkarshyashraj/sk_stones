@@ -34,7 +34,7 @@ export default function SearchPage() {
           </p>
         }
       />
-      <section className="section tone-light">
+      <section className="section veil-mid">
         <div className="container">
           <ProductGrid
             facets={['category', 'collection', 'colour', 'finish', 'application', 'origin']}

@@ -34,7 +34,7 @@ export default function ContactPage() {
           </p>
         }
       />
-      <section className="section tone-light" aria-label="Contact details and quote form">
+      <section className="section veil-text" aria-label="Contact details and quote form">
         <div className={`container ${styles.layout}`}>
           <div className={styles.info}>
             <ul className={styles.cards}>

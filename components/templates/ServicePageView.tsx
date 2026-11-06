@@ -53,7 +53,7 @@ export function ServicePageView({ slug }: { slug: string }) {
           </>
         }
       />
-      <section className="section tone-light" aria-labelledby="approach-title">
+      <section className="section veil-text" aria-labelledby="approach-title">
         <div className="container">
           <Stats items={s.stats} />
           <div className={`section-head ${styles.approachHead}`}>
@@ -88,7 +88,7 @@ export function ServicePageView({ slug }: { slug: string }) {
         </div>
       </section>
       {related.length ? (
-        <section className="section tone-light" aria-labelledby="materials-title">
+        <section className="section veil-mid" aria-labelledby="materials-title">
           <div className="container">
             <div className="section-head">
               <h2 id="materials-title">Popular stones for {s.name.toLowerCase()}</h2>

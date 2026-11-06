@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import { Picture } from '@/components/ui/Picture';
-import type { ImageRef } from '@/lib/types';
 import styles from './HomeHero.module.css';
 
 interface Props {
@@ -9,17 +7,13 @@ interface Props {
   subhead: string;
   primary: { label: string; href: string };
   secondary: { label: string; href: string };
-  slab: { image: ImageRef; name: string };
   trust: { value: string; label: string }[];
 }
 
-/** Full-viewport hero over the company's own slab photograph (preloaded, AVIF/WebP). */
-export function HomeHero({ heading, headingAccent, subhead, primary, secondary, slab, trust }: Props) {
+/** Full-viewport hero over the site-wide marble (0.45 veil — the stone is clearly visible). */
+export function HomeHero({ heading, headingAccent, subhead, primary, secondary, trust }: Props) {
   return (
-    <section className={styles.hero} aria-labelledby="hero-title">
-      <div className={styles.media} aria-hidden="true">
-        <Picture image={slab.image} alt="" sizes="100vw" priority fill />
-      </div>
+    <section className={`${styles.hero} veil veil-hero zone-hero`} aria-labelledby="hero-title">
       <div className={`container ${styles.inner}`}>
         <h1 id="hero-title" className={styles.title}>
           {heading} <span className="accent">{headingAccent}</span>
@@ -41,7 +35,7 @@ export function HomeHero({ heading, headingAccent, subhead, primary, secondary, 
           ))}
         </ul>
       </div>
-      <p className={styles.credit}>{slab.name} marble</p>
+      <p className={styles.credit}>Nero Portoro marble</p>
     </section>
   );
 }

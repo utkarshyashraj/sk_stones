@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Playfair_Display, Poppins } from 'next/font/google';
+import Image from 'next/image';
+import marble from '@/content/generated/marble.json';
 import { Footer } from '@/components/layout/Footer/Footer';
 import { Header } from '@/components/layout/Header/Header';
 import { GlobalOverlays } from '@/components/layout/GlobalOverlays';
@@ -40,6 +42,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-IN" className={`${playfair.variable} ${poppins.variable}`}>
       <body>
+        {/* One fixed marble layer for the whole site (sections only veil it). No parallax: static by design. */}
+        <div className="marble-layer" aria-hidden="true">
+          <Image
+            src={marble.src}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            placeholder="blur"
+            blurDataURL={marble.blurDataURL}
+            style={{ objectFit: 'cover' }}
+          />
+        </div>
         <a href="#main" className="skip-link">
           Skip to main content
         </a>

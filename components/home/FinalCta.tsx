@@ -1,17 +1,12 @@
 import Link from 'next/link';
 import { Icon } from '@/components/ui/Icon';
-import { Picture } from '@/components/ui/Picture';
 import { whatsappHref } from '@/lib/site';
-import type { ImageRef } from '@/lib/types';
 import styles from './FinalCta.module.css';
 
-/** Full-bleed slab photograph with a dark overlay and the two enquiry actions. */
-export function FinalCta({ title, text, slab }: { title: string; text: string; slab: ImageRef }) {
+/** Closing call to action over the marble (0.45 veil). */
+export function FinalCta({ title, text }: { title: string; text: string }) {
   return (
-    <section className={styles.cta} aria-labelledby="final-cta-title">
-      <div className={styles.media} aria-hidden="true">
-        <Picture image={slab} alt="" sizes="100vw" fill />
-      </div>
+    <section className={`${styles.cta} veil veil-hero zone-hero`} aria-labelledby="final-cta-title">
       <div className={`container ${styles.inner} reveal`}>
         <h2 id="final-cta-title" className={styles.title}>
           {title}

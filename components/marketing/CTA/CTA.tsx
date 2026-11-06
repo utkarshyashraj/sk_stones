@@ -21,7 +21,7 @@ export function CTA({
   whatsappMessage,
 }: Props) {
   return (
-    <section className={styles.cta} aria-labelledby="cta-heading">
+    <section className={`${styles.cta} veil veil-hero zone-hero`} aria-labelledby="cta-heading">
       <div className={`container ${styles.inner}`}>
         <div>
           <h2 id="cta-heading" className={styles.heading}>

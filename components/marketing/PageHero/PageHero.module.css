@@ -2,8 +2,6 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: var(--bg);
-  border-bottom: 1px solid var(--line);
   color: var(--text);
 }
 .bg {

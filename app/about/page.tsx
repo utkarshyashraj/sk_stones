@@ -40,7 +40,7 @@ export default function AboutPage() {
       </PageHero>
 
       {/* Company story: editorial split — purpose, figures, sectors */}
-      <section className="section tone-light" aria-labelledby="purpose-title">
+      <section className="section veil-text" aria-labelledby="purpose-title">
         <div className={`container ${styles.split}`}>
           <div className={styles.media}>
             <Picture
@@ -112,7 +112,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="section tone-light" aria-labelledby="team-title">
+      <section className="section veil-text" aria-labelledby="team-title">
         <div className="container">
           <div className="section-head">
             <h2 id="team-title">Our expert team</h2>

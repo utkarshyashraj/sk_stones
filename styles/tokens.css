@@ -1,28 +1,28 @@
 /*
- * S K Stones design tokens — "quiet luxury, stone-first".
+ * S K Stones design tokens — one continuous dark marble surface.
  *
- * Three surfaces, used by zone (never flipped section-by-section):
- *   --surface-dark #14110F  hero, navigation, immersive image zones, footer
- *   --surface-stone #F4EFE6 reading-heavy zones (about, applications, finishes, showroom, FAQ)
- *   --surface-ivory-deep #EAE3D6 subtle alternation inside light zones (process)
- * Components read role tokens (--bg, --text, --accent…); .tone-light / .tone-deep re-scope them.
+ * The whole site sits on a single fixed marble layer (the company's Nero Portoro slab, see
+ * scripts/make-marble.mjs). Sections never set their own background: they set a VEIL — #100E0C at
+ * --veil opacity — blended over 120px between levels. Text-heavy blocks sit on .panel surfaces.
  *
- * Contrast (WCAG 2.2):
- *   dark  #14110F: --text 16.6:1 · --text-2 8.7:1 · --text-3 6.1:1 · --accent 6.0:1
- *   stone #F4EFE6: --text 15.4:1 · --text-2 7.0:1 · --text-3 5.0:1 · --accent 5.4:1
- *   deep  #EAE3D6: --text 14.0:1 · --text-2 6.3:1 · --text-3 4.6:1 · --accent 4.9:1
- *   CTA: #14110F on #B08D57 6.0:1
+ * Contrast is measured against the busiest (99.9th-percentile brightest) marble pixel WITH the veil
+ * applied — content/generated/marble.json:
+ *   veil 0.90: --text 15.5 · --text-2 8.2 · --text-3 5.7 · --accent 5.7
+ *   veil 0.75: --text 12.5 · --text-2 6.6 · --text-3 4.6 · --accent 4.6
+ *   veil 0.45 (hero/CTA): --text 7.5 · --accent-hero 4.6 (other colours are not used in hero zones)
  */
 :root {
   color-scheme: dark;
 
-  /* Surface palette (constants) */
-  --surface-dark: #14110f;
-  --surface-stone: #f4efe6;
-  --surface-ivory-deep: #eae3d6;
+  /* Base + veil + panels */
+  --base: #100e0c;
+  --veil-rgb: 16 14 12;
+  --panel-bg: rgba(20, 17, 15, 0.72);
+  --panel-border: rgba(201, 164, 106, 0.18);
+  --accent-hero: #d9bc8c; /* lighter champagne for gold type over the 0.45 veil */
 
   /* Role tokens — dark (default) */
-  --bg: var(--surface-dark);
+  --bg: var(--base);
   --bg-raised: #1b1815;
   --surface: #24201c;
   --surface-2: #2d2924;
@@ -99,33 +99,6 @@
   --z-header: 50;
   --z-overlay: 80;
   --z-dialog: 100;
-}
-
-/* Light zone: warm stone ivory */
-.tone-light,
-.tone-deep {
-  color-scheme: light;
-  --bg: var(--surface-stone);
-  --bg-raised: var(--surface-ivory-deep);
-  --surface: #fbf8f2;
-  --surface-2: #e3dbcc;
-  --text: #1c1814;
-  --text-2: #574f45;
-  --text-3: #6b6257;
-  --accent: #7a5b2c; /* darker gold for text on light surfaces */
-  --accent-hover: #654a22;
-  --accent-2: #b08d57;
-  --accent-tint: rgba(122, 91, 44, 0.08);
-  --line: #d8cfbf;
-  --line-strong: #c3b8a5;
-  --danger: #b42318;
-  background-color: var(--bg);
-  color: var(--text);
-}
-/* Subtle alternation inside a light zone */
-.tone-deep {
-  --bg: var(--surface-ivory-deep);
-  --bg-raised: var(--surface-stone);
 }
 
 @media (max-width: 1023px) {

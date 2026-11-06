@@ -1,19 +1,91 @@
 {
   "base": "http://localhost:4321",
-  "ranAt": "2026-11-06T20:53:13.758Z",
+  "ranAt": "2026-11-06T21:14:50.647Z",
   "runs": 1,
   "medians": [
     {
       "page": "/",
       "formFactor": "mobile",
       "runs": 1,
-      "performance": 87,
+      "performance": 94,
       "accessibility": 100,
       "best-practices": 100,
       "seo": 100
     },
     {
       "page": "/",
+      "formFactor": "desktop",
+      "runs": 1,
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "page": "/about",
+      "formFactor": "mobile",
+      "runs": 1,
+      "performance": 97,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "page": "/about",
+      "formFactor": "desktop",
+      "runs": 1,
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "page": "/kota-stones",
+      "formFactor": "mobile",
+      "runs": 1,
+      "performance": 85,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "page": "/kota-stones",
+      "formFactor": "desktop",
+      "runs": 1,
+      "performance": 99,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "page": "/contact",
+      "formFactor": "mobile",
+      "runs": 1,
+      "performance": 95,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "page": "/contact",
+      "formFactor": "desktop",
+      "runs": 1,
+      "performance": 99,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "page": "/installations",
+      "formFactor": "mobile",
+      "runs": 1,
+      "performance": 89,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "page": "/installations",
       "formFactor": "desktop",
       "runs": 1,
       "performance": 100,
@@ -27,19 +99,17 @@
       "run": 1,
       "page": "/",
       "formFactor": "mobile",
-      "performance": 87,
+      "performance": 94,
       "accessibility": 100,
       "best-practices": 100,
       "seo": 100,
-      "LCP": "3.3 s",
+      "LCP": "0.9 s",
       "CLS": "0",
-      "TBT": "260 ms",
+      "TBT": "300 ms",
       "FCP": "0.9 s",
       "failing": [
-        "largest-contentful-paint",
         "total-blocking-time",
         "max-potential-fid",
-        "interactive",
         "unused-javascript",
         "cache-insight",
         "image-delivery-insight",
@@ -54,7 +124,170 @@
       "accessibility": 100,
       "best-practices": 100,
       "seo": 100,
+      "LCP": "0.3 s",
+      "CLS": "0",
+      "TBT": "20 ms",
+      "FCP": "0.3 s",
+      "failing": [
+        "unused-javascript",
+        "cache-insight",
+        "image-delivery-insight",
+        "legacy-javascript-insight"
+      ]
+    },
+    {
+      "run": 1,
+      "page": "/about",
+      "formFactor": "mobile",
+      "performance": 97,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100,
+      "LCP": "0.9 s",
+      "CLS": "0",
+      "TBT": "190 ms",
+      "FCP": "0.9 s",
+      "failing": [
+        "max-potential-fid",
+        "unused-javascript",
+        "cache-insight",
+        "legacy-javascript-insight"
+      ]
+    },
+    {
+      "run": 1,
+      "page": "/about",
+      "formFactor": "desktop",
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100,
       "LCP": "0.8 s",
+      "CLS": "0",
+      "TBT": "20 ms",
+      "FCP": "0.2 s",
+      "failing": [
+        "unused-javascript",
+        "cache-insight",
+        "image-delivery-insight",
+        "legacy-javascript-insight"
+      ]
+    },
+    {
+      "run": 1,
+      "page": "/kota-stones",
+      "formFactor": "mobile",
+      "performance": 85,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100,
+      "LCP": "4.0 s",
+      "CLS": "0",
+      "TBT": "190 ms",
+      "FCP": "0.8 s",
+      "failing": [
+        "largest-contentful-paint",
+        "max-potential-fid",
+        "interactive",
+        "label-content-name-mismatch",
+        "unused-javascript",
+        "cache-insight",
+        "image-delivery-insight",
+        "legacy-javascript-insight"
+      ]
+    },
+    {
+      "run": 1,
+      "page": "/kota-stones",
+      "formFactor": "desktop",
+      "performance": 99,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100,
+      "LCP": "0.9 s",
+      "CLS": "0",
+      "TBT": "20 ms",
+      "FCP": "0.3 s",
+      "failing": [
+        "label-content-name-mismatch",
+        "unused-javascript",
+        "cache-insight",
+        "forced-reflow-insight",
+        "image-delivery-insight",
+        "legacy-javascript-insight"
+      ]
+    },
+    {
+      "run": 1,
+      "page": "/contact",
+      "formFactor": "mobile",
+      "performance": 95,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100,
+      "LCP": "0.9 s",
+      "CLS": "0",
+      "TBT": "270 ms",
+      "FCP": "0.9 s",
+      "failing": [
+        "total-blocking-time",
+        "max-potential-fid",
+        "interactive",
+        "unused-javascript",
+        "bf-cache",
+        "cache-insight",
+        "forced-reflow-insight",
+        "legacy-javascript-insight"
+      ]
+    },
+    {
+      "run": 1,
+      "page": "/contact",
+      "formFactor": "desktop",
+      "performance": 99,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100,
+      "LCP": "0.7 s",
+      "CLS": "0.004",
+      "TBT": "0 ms",
+      "FCP": "0.7 s",
+      "failing": [
+        "unused-javascript",
+        "cache-insight",
+        "image-delivery-insight",
+        "legacy-javascript-insight"
+      ]
+    },
+    {
+      "run": 1,
+      "page": "/installations",
+      "formFactor": "mobile",
+      "performance": 89,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100,
+      "LCP": "3.4 s",
+      "CLS": "0",
+      "TBT": "190 ms",
+      "FCP": "0.9 s",
+      "failing": [
+        "largest-contentful-paint",
+        "max-potential-fid",
+        "unused-javascript",
+        "cache-insight",
+        "legacy-javascript-insight"
+      ]
+    },
+    {
+      "run": 1,
+      "page": "/installations",
+      "formFactor": "desktop",
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100,
+      "LCP": "0.7 s",
       "CLS": "0",
       "TBT": "0 ms",
       "FCP": "0.2 s",

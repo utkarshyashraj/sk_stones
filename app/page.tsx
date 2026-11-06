@@ -44,8 +44,6 @@ const descriptor = (text?: string) => text?.split(/,|—/)[0]?.trim();
 
 export default function HomePage() {
   const trust = companyStats.filter((s) => !s.value.includes('/')); // 12+ · 200+ · 50+ (the unsourced 4.9/5 is omitted)
-  const heroSlab = product(homeHero.slabProductId);
-  const ctaSlab = product(copy.finalCta.slabProductId);
 
   const collections = topLevelCategories().map((c) => ({
     href: `/${c.slug}`,
@@ -105,10 +103,9 @@ export default function HomePage() {
         subhead={homeHero.subhead}
         primary={homeHero.primary}
         secondary={homeHero.secondary}
-        slab={{ image: heroSlab.img, name: heroSlab.name }}
         trust={trust}
       />
-      <section className="section" aria-labelledby="collections-title">
+      <section className="section veil-mid" aria-labelledby="collections-title">
         <div className="container">
           <SectionHeader
             id="collections-title"
@@ -126,7 +123,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== Light zone: trust, applications, process ===== */}
-      <section className="section tone-light blend-from-dark" aria-labelledby="trust-title">
+      <section className="section veil-text" aria-labelledby="trust-title">
         <TrustSection
           eyebrow={copy.trust.eyebrow}
           heading={home.about.heading}
@@ -137,7 +134,7 @@ export default function HomePage() {
           stats={trust}
         />
       </section>
-      <section className="section tone-light" aria-labelledby="applications-title">
+      <section className="section veil-mid" aria-labelledby="applications-title">
         <div className="container">
           <SectionHeader
             id="applications-title"
@@ -148,7 +145,7 @@ export default function HomePage() {
           <ApplicationsGrid items={appTiles} />
         </div>
       </section>
-      <section className="section tone-deep" aria-labelledby="process-title">
+      <section className="section veil-text" aria-labelledby="process-title">
         <div className="container">
           <SectionHeader
             id="process-title"
@@ -164,7 +161,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== Dark zone: projects + testimonials ===== */}
-      <section className="section blend-from-deep" aria-labelledby="projects-title">
+      <section className="section veil-mid" aria-labelledby="projects-title">
         <div className="container">
           <SectionHeader
             id="projects-title"
@@ -184,7 +181,7 @@ export default function HomePage() {
           <ProjectsGallery projects={projects} strip={strip} />
         </div>
       </section>
-      <section className="section" aria-labelledby="testimonials-title">
+      <section className="section veil-mid" aria-labelledby="testimonials-title">
         <div className="container">
           <SectionHeader
             id="testimonials-title"
@@ -196,7 +193,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== Light zone: finishes, showroom, FAQ ===== */}
-      <section className="section tone-light blend-from-dark" aria-labelledby="finishes-title">
+      <section className="section veil-mid" aria-labelledby="finishes-title">
         <div className="container">
           <SectionHeader
             id="finishes-title"
@@ -207,19 +204,19 @@ export default function HomePage() {
           <FinishesRow items={finishSwatches} />
         </div>
       </section>
-      <section id="showroom" className="section tone-light" aria-labelledby="showroom-title">
+      <section id="showroom" className="section veil-text" aria-labelledby="showroom-title">
         <ShowroomVisit
           eyebrow={copy.showroom.eyebrow}
           title={copy.showroom.title}
           titleAccent={copy.showroom.titleAccent}
         />
       </section>
-      <section className="section tone-light" aria-labelledby="faq-title">
+      <section className="section veil-text" aria-labelledby="faq-title">
         <HomeFaq eyebrow={copy.faq.eyebrow} title={copy.faq.title} aside={copy.faq.aside} items={home.faqs} />
       </section>
 
       {/* ===== Dark zone: final CTA (+ footer) ===== */}
-      <FinalCta title={copy.finalCta.title} text={copy.finalCta.text} slab={ctaSlab.img} />
+      <FinalCta title={copy.finalCta.title} text={copy.finalCta.text} />
     </>
   );
 }

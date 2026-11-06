@@ -95,7 +95,8 @@ for (const name of htmlFiles) {
     const attrs = m[1];
     const src = (attrs.match(/\ssrc="([^"]+)"/) || [])[1];
     if (!/\salt="/.test(attrs)) warn(`${route}: <img> without alt (${src})`);
-    if (!/\swidth="\d+"/.test(attrs) || !/\sheight="\d+"/.test(attrs))
+    const fill = /\sdata-nimg="fill"/.test(attrs); // next/image fill: sized by its positioned container
+    if (!fill && (!/\swidth="\d+"/.test(attrs) || !/\sheight="\d+"/.test(attrs)))
       warn(`${route}: <img> without width/height (${src})`);
     if (src && !src.startsWith('http') && !fileFor(src)) warn(`${route}: missing image ${src}`);
   }

@@ -146,7 +146,7 @@ export default async function CategoryPage({ params }: Params) {
       ) : null}
 
       {products.length ? (
-        <section id="products" className="section tone-light" aria-labelledby="grid-title">
+        <section id="products" className="section veil-mid" aria-labelledby="grid-title">
           <div className="container">
             <div className="section-head">
               <h2 id="grid-title">
@@ -166,7 +166,7 @@ export default async function CategoryPage({ params }: Params) {
           </div>
         </section>
       ) : c.kind === 'enquiry' ? (
-        <section className="section tone-light" aria-labelledby="enquire-title">
+        <section className="section veil-text" aria-labelledby="enquire-title">
           <div className={`container ${styles.enquiry}`}>
             <h2 id="enquire-title">Tell us what you need</h2>
             <p>

@@ -5,8 +5,6 @@
  */
 
 export const homeHero = {
-  /** Full-bleed slab: the company's own Nero Portoro photograph (catalogue image). */
-  slabProductId: 'imported-marbles-nero-portoro',
   subhead: 'Marble, granite & natural stone — supplied, fabricated and installed. Koramangala, Bengaluru.',
   primary: { label: 'Explore the collection', href: '/products' },
   secondary: { label: 'Visit the showroom', href: '#showroom' },
@@ -48,7 +46,6 @@ export const sectionCopy = {
   finalCta: {
     title: 'Find the stone for your project',
     text: 'Share your space, stone preference and quantities — we reply within 24 hours with guidance and a tailored quote.',
-    slabProductId: 'imported-marbles-spider-black',
   },
 };
 

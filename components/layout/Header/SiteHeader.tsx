@@ -114,9 +114,7 @@ export function SiteHeader({ nav }: { nav: NavData }) {
 
   return (
     <>
-      <header
-        className={`${styles.header} ${pathname === '/' && !scrolled && !open ? styles.transparent : ''} on-dark`}
-      >
+      <header className={`${styles.header} ${!scrolled && !open ? styles.transparent : ''} on-dark`}>
         <div className={`container ${styles.bar}`}>
           <BrandLockup />
 
