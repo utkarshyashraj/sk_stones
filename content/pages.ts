@@ -110,50 +110,6 @@ export const home = {
       },
     ],
   },
-  services: [
-    {
-      title: 'Landscaping',
-      text: 'Beautiful stone landscaping designs enhancing outdoor spaces with strength, texture, and natural elegance.',
-      href: '/landscaping',
-      image: 'landscaping-service',
-    },
-    {
-      title: 'Wall Art',
-      text: 'Handcrafted stone-art masterpieces designed to deliver distinctive style and timeless beauty.',
-      href: '/stone-art-installations',
-      image: 'service-wall-art',
-    },
-    {
-      title: 'Stone Art',
-      text: 'Stone art pieces create striking focal points using natural stone textures and artistic expression for interior and exterior spaces.',
-      href: '/stone-art-installations',
-      image: 'service-stone-art',
-    },
-    {
-      title: 'Installations',
-      text: 'Premium stone installations crafted with precision, durability, elegance, and long-lasting visual impact.',
-      href: '/installations',
-      image: 'service-installations',
-    },
-    {
-      title: 'Floorings',
-      text: 'Precision stone flooring for homes, offices, and commercial spaces — uniform levels, seamless joints, and flawless polished finishes.',
-      href: '/flooring-executions',
-      image: 'service-floorings',
-    },
-    {
-      title: 'Elevations',
-      text: 'Grand stone elevations and façade cladding that elevate architectural presence with texture, depth, and lasting curb appeal.',
-      href: '/wall-claddings',
-      image: 'service-elevations',
-    },
-    {
-      title: 'Roofings',
-      text: 'Durable stone roofing and terrace solutions combining weather resistance, structural strength, and refined natural beauty.',
-      href: '/installations',
-      image: 'service-roofings',
-    },
-  ],
   faqs: [
     {
       q: 'What is the difference between marble and granite?',
@@ -214,20 +170,6 @@ export const about = {
     {
       title: 'Innovating through precision',
       text: 'Advanced cutting technologies and engineering processes for detailed stonework. Our state-of-the-art machinery ensures perfect cuts every time.',
-    },
-  ],
-  why: [
-    {
-      title: 'Trusted expertise',
-      text: 'Our experienced specialists guide every stage, ensuring accuracy and flawless execution in every project we undertake.',
-    },
-    {
-      title: 'Premium materials',
-      text: 'We source high-quality stones from verified global quarries, ensuring authenticity and superior quality in every slab.',
-    },
-    {
-      title: 'Superior craftsmanship',
-      text: 'Modern technology combined with refined techniques for exceptional results that stand the test of time.',
     },
   ],
   founder: {

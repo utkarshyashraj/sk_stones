@@ -45,7 +45,7 @@ export function CaseStudyView({ slug }: { slug: string }) {
           <Stats items={c.facts} />
         </div>
       </PageHero>
-      <section className="section" aria-label="Case study details">
+      <section className="section tone-light" aria-label="Case study details">
         <div className={`container ${styles.caseBody}`}>
           <div className={styles.caseText}>
             {c.sections.map((s) => (

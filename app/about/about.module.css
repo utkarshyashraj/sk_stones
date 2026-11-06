@@ -15,22 +15,12 @@
   color: var(--accent);
 }
 .sectors {
-  margin-top: var(--sp-10);
-  text-align: center;
-}
-.sectors ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--sp-3);
+  gap: var(--sp-1) var(--sp-5);
   margin-top: var(--sp-2);
   list-style: none;
   padding: 0;
-}
-.sectors li {
-  padding: var(--sp-2) var(--sp-5);
-  border: 1px solid rgba(198, 168, 117, 0.4);
-  border-radius: var(--radius-pill);
   font-family: var(--font-serif);
   font-size: var(--fs-md);
 }
@@ -62,36 +52,23 @@
 }
 .purpose li {
   display: grid;
-  grid-template-columns: 3.5rem 1fr;
+  grid-template-columns: 3rem 1fr;
   gap: var(--sp-3);
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--line);
 }
 .num {
   font-family: var(--font-serif);
-  font-size: var(--fs-xl);
+  font-size: var(--fs-lg);
   color: var(--accent);
-}
-.purpose p,
-.why p {
-  margin-top: var(--sp-2);
-  color: var(--text-2);
-}
-.why {
-  display: grid;
-  gap: var(--sp-5);
-  list-style: none;
-  padding: 0;
-}
-.why li {
-  padding-top: var(--sp-5);
-  border-top: 1px solid var(--accent-2);
 }
 .role {
   margin-top: var(--sp-2);
   color: var(--accent);
-  font-weight: 600;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.04em;
 }
 .founderText {
-  margin-top: var(--sp-5);
   color: var(--text-2);
 }
 .team {
@@ -121,9 +98,6 @@
   color: var(--text-2);
 }
 @media (min-width: 900px) {
-  .why {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 @media (min-width: 1024px) {
   .split {
@@ -137,4 +111,50 @@
   .team {
     grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
   }
+}
+
+.figures {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--sp-4);
+  margin: var(--sp-10) 0 var(--sp-8);
+  padding-block: var(--sp-5);
+  border-block: 1px solid var(--line);
+}
+
+.figures div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2px;
+}
+
+.figures dd {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--fs-2xl);
+  color: var(--accent);
+}
+
+.figures dt {
+  color: var(--text-2);
+  font-size: var(--fs-xs);
+}
+
+.sectorsLabel {
+  color: var(--text-3);
+  font-size: var(--fs-sm);
+}
+
+.founderBody {
+  max-width: 40rem;
+}
+
+.pull {
+  margin: var(--sp-8) 0 var(--sp-6);
+  padding-left: var(--sp-6);
+  border-left: 1px solid var(--accent);
+  font-family: var(--font-serif);
+  font-size: var(--fs-xl);
+  line-height: 1.45;
+  color: var(--text);
 }

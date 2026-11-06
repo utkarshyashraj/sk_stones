@@ -35,15 +35,10 @@
   --danger: #f08a7e;
   --whatsapp: #0f7a39;
 
-  /* Natural stone photography used once, in the homepage hero (scripts/make-textures.mjs). */
-  --stone-hero: image-set(
-    url('/images/textures/nero-portoro-slab-1920.avif') type('image/avif'),
-    url('/images/textures/nero-portoro-slab-1920.webp') type('image/webp')
-  );
-  --stone-hero-sm: image-set(
-    url('/images/textures/nero-portoro-slab-960.avif') type('image/avif'),
-    url('/images/textures/nero-portoro-slab-960.webp') type('image/webp')
-  );
+  /* Primary CTA is the brand champagne with graphite text on both tones (7.9:1 / 7.2:1). */
+  --cta-bg: #c6a875;
+  --cta-bg-hover: #d4ba8a;
+  --cta-text: #151514;
 
   /* Typography */
   --font-serif: var(--font-playfair), 'Playfair Display', Georgia, 'Times New Roman', serif;
@@ -95,6 +90,31 @@
   --z-header: 50;
   --z-overlay: 80;
   --z-dialog: 100;
+}
+
+/*
+ * Warm ivory tone for reading- and browsing-heavy sections (product discovery, company story, founder,
+ * testimonials, enquiry). Scoped: every component inside re-reads the same token names.
+ * Contrast on --bg #F4F0E8: --text 15.2:1 · --text-2 7.1:1 · --text-3 5.3:1 · --accent 5.3:1.
+ */
+.tone-light {
+  color-scheme: light;
+  --bg: #f4f0e8;
+  --bg-raised: #ece6da;
+  --surface: #fbf8f2;
+  --surface-2: #e4ddcf;
+  --text: #1e1c19;
+  --text-2: #57524a;
+  --text-3: #6b655b;
+  --accent: #7e602c;
+  --accent-hover: #6a5023;
+  --accent-2: #a98c5f;
+  --accent-tint: rgba(126, 96, 44, 0.08);
+  --line: #d9d1c2;
+  --line-strong: #c4baa8;
+  --danger: #b42318;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 @media (max-width: 1023px) {

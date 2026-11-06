@@ -1,20 +1,23 @@
 import Link from 'next/link';
-import { preload } from 'react-dom';
-import { CaseStudies } from '@/components/marketing/CaseStudies/CaseStudies';
 import { Collections } from '@/components/marketing/Collections/Collections';
 import { CTA } from '@/components/marketing/CTA/CTA';
 import { FAQ } from '@/components/marketing/FAQ/FAQ';
 import { Process } from '@/components/marketing/Process/Process';
-import { Services } from '@/components/marketing/Services/Services';
-import { Stats } from '@/components/marketing/Stats/Stats';
 import { Testimonials } from '@/components/marketing/Testimonials/Testimonials';
 import { VideoFeature } from '@/components/marketing/VideoFeature/VideoFeature';
-import { Icon } from '@/components/ui/Icon';
-import { caseStudies, companyStats, featuredReview, home, process, testimonials } from '@/content/pages';
-import { imageOrNull, topLevelCategories } from '@/lib/catalog';
-import { getSiteImage } from '@/lib/images';
+import { Picture } from '@/components/ui/Picture';
+import {
+  caseStudies,
+  companyStats,
+  featuredReview,
+  home,
+  process,
+  services,
+  testimonials,
+} from '@/content/pages';
+import { allProducts, categoryNames, imageOrNull, topLevelCategories } from '@/lib/catalog';
+import { getImage, getSiteImage } from '@/lib/images';
 import { buildMetadata } from '@/lib/seo';
-import { site } from '@/lib/site';
 import styles from './home.module.css';
 
 export const metadata = buildMetadata({
@@ -22,58 +25,103 @@ export const metadata = buildMetadata({
   description:
     'Granite, marble and natural stone supplier in Bengaluru since 2014. 460+ stones, fabrication and installation for homes, hotels and commercial projects. Get a free quote.',
   path: '/',
-  image: getSiteImage('about-showroom'),
+  image: getSiteImage('project-ritz-carlton'),
 });
 
+/** Editorial selection of real catalogue stones (photographed at high resolution) for the homepage. */
+const HERO_STONES = [
+  'imported-marbles-nero-portoro',
+  'indian-marbles-rainforest-gold',
+  'imported-marbles-travertine-golden',
+  'imported-granites-patagonia-green',
+];
+const FEATURED_STONES = [
+  'imported-marbles-spider-black',
+  'imported-marbles-honey-onyx',
+  'imported-marbles-crema-marfil',
+  'imported-granites-roma-imperiale',
+  'indian-marbles-rainforest-gold',
+  'quartz-surfaces-calacatta-venezia',
+  'sand-stones-yellow-fossil-leathered',
+  'imported-marbles-nero-portoro',
+];
+
+function stone(id: string) {
+  const p = allProducts().find((x) => x.id === id);
+  if (!p?.image) throw new Error(`Featured stone ${id} missing`);
+  return { ...p, img: getImage(p.image), href: `/${p.collection}#product=${p.id}` };
+}
+
+/** Service pages + the cladding/elevation category, de-duplicated (the old tiles pointed 7 cards at 5 places). */
+const SERVICE_LINKS = [
+  ...services.map((s) => ({ name: s.name, href: `/${s.slug}`, text: s.lead })),
+  {
+    name: 'Elevations & Wall Cladding',
+    href: '/wall-claddings',
+    text: 'Grand stone elevations and façade cladding that elevate architectural presence with texture, depth, and lasting curb appeal.',
+  },
+];
+
 export default function HomePage() {
-  // Hero backdrop is a CSS background (discovered late) — fetch it immediately.
-  preload('/images/textures/nero-portoro-slab-960.avif', {
-    as: 'image',
-    type: 'image/avif',
-    imageSrcSet:
-      '/images/textures/nero-portoro-slab-960.avif 960w, /images/textures/nero-portoro-slab-1920.avif 1920w',
-    imageSizes: '100vw',
-    fetchPriority: 'high',
-  });
   const categories = topLevelCategories();
+  const names = categoryNames();
+  const heroStones = HERO_STONES.map(stone);
+  const featured = FEATURED_STONES.map(stone);
+  const [leadCase, ...otherCases] = caseStudies;
+  const figures = companyStats.filter((s) => !s.value.includes('/'));
+
   return (
     <>
-      {/* 1. Hero */}
-      <section className={`${styles.hero} stone-hero`} aria-labelledby="hero-title">
-        <div className={`container ${styles.heroInner}`}>
-          <h1 id="hero-title" className={styles.heroTitle}>
-            {home.hero.heading} <span className="accent">{home.hero.headingAccent}</span>
-          </h1>
-          <p className={styles.heroLead}>{home.hero.lead}</p>
-          <div className={styles.heroActions}>
-            <Link href="/contact#quote" className="btn btn--primary">
-              Get a Quote
-            </Link>
-            <Link href="/products" className="btn btn--outline">
-              Browse Stones
-            </Link>
+      {/* 1. Hero — who we are, what we offer, one clear next step */}
+      <section className={styles.hero} aria-labelledby="hero-title">
+        <div className={`container ${styles.heroGrid}`}>
+          <div className={styles.heroText}>
+            <h1 id="hero-title" className={styles.heroTitle}>
+              {home.hero.heading} <span className="accent">{home.hero.headingAccent}</span>
+            </h1>
+            <p className={styles.heroLead}>
+              Granite, marble and natural stone — sourced, fabricated and installed for homes, hotels and
+              commercial projects across India.
+            </p>
+            <div className={styles.heroActions}>
+              <Link href="/contact#quote" className="btn btn--primary">
+                Request a quote
+              </Link>
+              <Link href="/products" className="btn btn--outline">
+                Explore 460+ stones
+              </Link>
+            </div>
+            <p className={styles.heroFacts}>Since 2014 · Showroom in Koramangala, Bengaluru</p>
           </div>
-          <div className={styles.heroStats}>
-            <Stats items={companyStats} />
-          </div>
+          <ul className={styles.mosaic} aria-label="Stones from our collection">
+            {heroStones.map((s, i) => (
+              <li key={s.id} className={styles[`tile${i}`]}>
+                <Link href={s.href} className={styles.tileLink}>
+                  <Picture
+                    image={s.img}
+                    alt={`${s.name} — ${names[s.collection]}`}
+                    sizes="(min-width: 1024px) 26vw, 50vw"
+                    priority={i === 0}
+                    fill
+                  />
+                  <span className={styles.tileName}>{s.name}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
-      {/* 2. Featured collections */}
-      <section className="section" aria-labelledby="collections-title">
+      {/* 2. Product discovery */}
+      <section className="section tone-light" aria-labelledby="categories-title">
         <div className="container">
           <div className={styles.headRow}>
             <div className="section-head">
-              <h2 id="collections-title">
-                460+ stones, <span className="accent">one showroom</span>
-              </h2>
-              <p>
-                Granites, marbles, natural stones, quartz, claddings, tiles and handcrafted stone art —
-                sourced for quality, durability and design versatility.
-              </p>
+              <h2 id="categories-title">Browse by category</h2>
+              <p>Nine categories, from marbles and granites to cladding, tiles and handcrafted stone art.</p>
             </div>
             <Link href="/products" className="link-arrow">
-              View all products
+              All products
             </Link>
           </div>
           <Collections
@@ -88,102 +136,164 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. About */}
-      <section className="section" aria-labelledby="about-title">
-        <div className={`container ${styles.about}`}>
-          <div className={styles.aboutMedia}>
-            <VideoFeature title={home.about.video.title} />
-            <div className={styles.videoNote}>
-              <h3>{home.about.video.title}</h3>
-              <p>{home.about.video.text}</p>
+      {/* 3. Featured stones */}
+      <section className="section" aria-labelledby="featured-title">
+        <div className="container">
+          <div className={styles.headRow}>
+            <div className="section-head">
+              <h2 id="featured-title">
+                Featured <span className="accent">stones</span>
+              </h2>
+              <p>A few of the slabs architects ask for most — tap any stone for a closer look.</p>
             </div>
-          </div>
-          <div>
-            <h2 id="about-title">
-              {home.about.heading} <span className="accent">{home.about.headingAccent}</span>
-            </h2>
-            <p className={styles.aboutText}>{home.about.text}</p>
-            <ul className={styles.pillars}>
-              {home.about.pillars.map((p) => (
-                <li key={p.title}>
-                  <div>
-                    <h3>{p.title}</h3>
-                    <p>{p.text}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            <Link href="/about" className="link-arrow">
-              More about S K Stones India
+            <Link href="/search" className="link-arrow">
+              Search the full catalogue
             </Link>
           </div>
+          <ul className={styles.featured}>
+            {featured.map((s) => (
+              <li key={s.id}>
+                <Link href={s.href} className={styles.stoneCard}>
+                  <span className={styles.stoneMedia}>
+                    <Picture image={s.img} alt="" sizes="(min-width: 1024px) 23vw, 46vw" fill />
+                  </span>
+                  <span className={styles.stoneName}>{s.name}</span>
+                  <span className={styles.stoneMeta}>{names[s.collection]}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
-      {/* 4. Services & process */}
-      <section className="section section--tint" aria-labelledby="services-title">
-        <div className="container">
-          <div className="section-head">
-            <h2 id="services-title">
-              Supply, fabrication <span className="accent">&amp; installation</span>
+      {/* 4. Why choose us */}
+      <section className="section tone-light" aria-labelledby="why-title">
+        <div className={`container ${styles.why}`}>
+          <div className={styles.whyIntro}>
+            <h2 id="why-title" className="rule">
+              Why architects &amp; builders choose us
             </h2>
             <p>
-              From floors and façades to landscapes and bespoke stone art — one team from selection to
-              handover.
+              Our stone expertise, sourcing strength, and design-driven approach help homeowners, architects,
+              and builders achieve flawless results.
             </p>
           </div>
-          <Services items={home.services.map((s) => ({ ...s, image: getSiteImage(s.image) }))} />
-          <div className={styles.processHead}>
-            <h3 className={styles.processTitle}>From vision to masterpiece</h3>
-          </div>
+          <ol className={styles.pillars}>
+            {home.about.pillars.map((p, i) => (
+              <li key={p.title}>
+                <span className={styles.pillarNum} aria-hidden="true">
+                  0{i + 1}
+                </span>
+                <h3>{p.title}</h3>
+                <p>{p.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+        <div className={`container ${styles.processWrap}`}>
+          <h3 className={styles.processTitle}>How we work</h3>
           <Process steps={process} />
         </div>
       </section>
 
-      {/* 5. Projects */}
-      <section className="section section--tint" aria-labelledby="projects-title">
+      {/* 5. Projects & services */}
+      <section className="section" aria-labelledby="projects-title">
         <div className="container">
           <div className={styles.headRow}>
             <div className="section-head">
-              <h2 id="projects-title">
-                Trusted for hotels, villas <span className="accent">&amp; infrastructure</span>
-              </h2>
+              <h2 id="projects-title">Projects &amp; applications</h2>
+              <p>
+                Hotels, villas, airports and hospitals — supplied, fabricated and installed by our own teams.
+              </p>
             </div>
             <Link href="/projects" className="link-arrow">
-              See all projects
+              All projects
             </Link>
           </div>
-          <div className={`${styles.caseWrap} on-dark`}>
-            <CaseStudies
-              items={caseStudies.map((c) => ({
-                href: `/${c.slug}`,
-                sector: c.sector,
-                title: c.cardTitle,
-                text: c.cardText,
-                image: getSiteImage(c.images[0]!.key),
-              }))}
-            />
+          <div className={styles.projects}>
+            <Link href={`/${leadCase!.slug}`} className={`${styles.project} ${styles.projectLead}`}>
+              <span className={styles.projectMedia}>
+                <Picture
+                  image={getSiteImage(leadCase!.images[0]!.key)}
+                  alt=""
+                  sizes="(min-width: 1024px) 60vw, 100vw"
+                  fill
+                />
+              </span>
+              <span className={styles.projectSector}>{leadCase!.sector}</span>
+              <span className={styles.projectTitle}>{leadCase!.cardTitle}</span>
+              <span className={styles.projectText}>{leadCase!.cardText}</span>
+            </Link>
+            {otherCases.map((c) => (
+              <Link key={c.slug} href={`/${c.slug}`} className={styles.project}>
+                <span className={styles.projectMedia}>
+                  <Picture
+                    image={getSiteImage(c.images[0]!.key)}
+                    alt=""
+                    sizes="(min-width: 1024px) 30vw, 100vw"
+                    fill
+                  />
+                </span>
+                <span className={styles.projectSector}>{c.sector}</span>
+                <span className={styles.projectTitle}>{c.cardTitle}</span>
+              </Link>
+            ))}
+          </div>
+          <div className={styles.servicesBlock}>
+            <h3 className={styles.servicesTitle}>Services</h3>
+            <ul className={styles.services}>
+              {SERVICE_LINKS.map((s) => (
+                <li key={s.href}>
+                  <Link href={s.href}>
+                    <span className={styles.serviceName}>{s.name}</span>
+                    <span className={styles.serviceText}>{s.text}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* 6. Testimonials */}
+      {/* 6. Company story & credibility */}
+      <section className="section tone-light" aria-labelledby="story-title">
+        <div className={`container ${styles.story}`}>
+          <div className={styles.storyMedia}>
+            <VideoFeature title={home.about.video.title} />
+            <p className={styles.storyCaption}>{home.about.video.text}</p>
+          </div>
+          <div>
+            <h2 id="story-title" className="rule">
+              {home.about.heading} <span className="accent">{home.about.headingAccent}</span>
+            </h2>
+            <p className={styles.storyText}>{home.about.text}</p>
+            <dl className={styles.figures}>
+              {figures.map((f) => (
+                <div key={f.label}>
+                  <dt>{f.label}</dt>
+                  <dd>{f.value}</dd>
+                </div>
+              ))}
+            </dl>
+            <Link href="/about" className="link-arrow">
+              Our story &amp; team
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Testimonials */}
       <section className="section" aria-labelledby="reviews-title">
         <div className="container">
-          <div className={styles.headRow}>
-            <div className="section-head">
-              <h2 id="reviews-title">What architects and homeowners say</h2>
-            </div>
-            <a href={site.reviewsUrl} className="link-arrow" target="_blank" rel="noopener noreferrer">
-              Read more reviews on Google <Icon name="external" />
-            </a>
+          <div className="section-head">
+            <h2 id="reviews-title">What our clients say</h2>
           </div>
           <Testimonials items={testimonials} featured={featuredReview} />
         </div>
       </section>
 
-      {/* 7. FAQ + CTA */}
-      <section className="section" aria-labelledby="faq-title">
+      {/* 8. FAQ */}
+      <section className="section tone-light" aria-labelledby="faq-title">
         <div className={`container ${styles.faq}`}>
           <div className="section-head">
             <h2 id="faq-title">Frequently asked questions</h2>
@@ -191,9 +301,11 @@ export default function HomePage() {
           <FAQ items={home.faqs} />
         </div>
       </section>
+
+      {/* 9. Enquiry */}
       <CTA
-        heading="Transform your space with premium stone craftsmanship"
-        text="Premium natural stones for homes, offices & commercial spaces. Trusted by architects and builders across India."
+        heading="Planning a project? Let's talk stone."
+        text="Share your space, stone preference and quantities — our team replies within 24 hours with guidance and a tailored quote."
       />
     </>
   );

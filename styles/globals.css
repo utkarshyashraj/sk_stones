@@ -118,34 +118,6 @@ h4 {
 .section--dark {
   background: var(--bg);
 }
-/* The one place marble appears as a backdrop: the homepage hero (real Nero Portoro slab photo). */
-.stone-hero {
-  position: relative;
-  isolation: isolate;
-  background-color: var(--bg);
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(21, 21, 20, 0.96) 0%,
-      rgba(21, 21, 20, 0.86) 45%,
-      rgba(21, 21, 20, 0.35) 100%
-    ),
-    var(--stone-hero-sm);
-  background-size: cover;
-  background-position: center;
-}
-@media (min-width: 961px) {
-  .stone-hero {
-    background-image:
-      linear-gradient(
-        90deg,
-        rgba(21, 21, 20, 0.97) 0%,
-        rgba(21, 21, 20, 0.85) 42%,
-        rgba(21, 21, 20, 0.2) 100%
-      ),
-      var(--stone-hero);
-  }
-}
 .section-head {
   max-width: 46rem;
   margin-bottom: var(--sp-10);
@@ -248,11 +220,11 @@ h4 {
   flex: none;
 }
 .btn--primary {
-  background: var(--accent);
-  color: var(--bg);
+  background: var(--cta-bg);
+  color: var(--cta-text);
 }
 .btn--primary:hover {
-  background: var(--accent-hover);
+  background: var(--cta-bg-hover);
 }
 .btn--outline {
   border-color: var(--line-strong);

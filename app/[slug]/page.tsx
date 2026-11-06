@@ -103,7 +103,7 @@ export default async function CategoryPage({ params }: Params) {
       </PageHero>
 
       {children.length ? (
-        <section className="section" aria-labelledby="sub-title">
+        <section className="section section--tint" aria-labelledby="sub-title">
           <div className="container">
             <div className="section-head">
               <h2 id="sub-title">Browse by collection</h2>
@@ -146,7 +146,7 @@ export default async function CategoryPage({ params }: Params) {
       ) : null}
 
       {products.length ? (
-        <section id="products" className="section" aria-labelledby="grid-title">
+        <section id="products" className="section tone-light" aria-labelledby="grid-title">
           <div className="container">
             <div className="section-head">
               <h2 id="grid-title">
@@ -166,7 +166,7 @@ export default async function CategoryPage({ params }: Params) {
           </div>
         </section>
       ) : c.kind === 'enquiry' ? (
-        <section className="section" aria-labelledby="enquire-title">
+        <section className="section tone-light" aria-labelledby="enquire-title">
           <div className={`container ${styles.enquiry}`}>
             <h2 id="enquire-title">Tell us what you need</h2>
             <p>
@@ -194,7 +194,7 @@ export default async function CategoryPage({ params }: Params) {
       ) : null}
 
       {siblings.length ? (
-        <section className="section section--tint" aria-labelledby="related-title">
+        <section className="section" aria-labelledby="related-title">
           <div className="container">
             <div className="section-head">
               <h2 id="related-title">Related collections</h2>

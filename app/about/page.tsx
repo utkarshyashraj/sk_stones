@@ -1,7 +1,5 @@
-import Link from 'next/link';
 import { CTA } from '@/components/marketing/CTA/CTA';
 import { PageHero } from '@/components/marketing/PageHero/PageHero';
-import { Stats } from '@/components/marketing/Stats/Stats';
 import { Picture } from '@/components/ui/Picture';
 import { about, companyStats } from '@/content/pages';
 import { getSiteImage } from '@/lib/images';
@@ -17,6 +15,8 @@ export const metadata = buildMetadata({
 });
 
 export default function AboutPage() {
+  const [quote, ...story] = about.founder.paragraphs;
+  const figures = companyStats.filter((s) => !s.value.includes('/'));
   return (
     <>
       <PageHero
@@ -31,11 +31,6 @@ export default function AboutPage() {
         }
         lead={<p>{about.hero.lead}</p>}
         aside={{ image: getSiteImage('about-showroom'), alt: 'Marble flooring in a modern interior' }}
-        actions={
-          <Link href="/contact" className="btn btn--primary">
-            Contact us
-          </Link>
-        }
       >
         <ul className={`dash-list ${styles.points}`}>
           {about.hero.points.map((p) => (
@@ -44,21 +39,8 @@ export default function AboutPage() {
         </ul>
       </PageHero>
 
-      <section className="section section--dark" aria-label="Company at a glance">
-        <div className="container">
-          <Stats items={companyStats} />
-          <div className={styles.sectors}>
-            <p className="eyebrow">Trusted by architects, builders &amp; developers</p>
-            <ul>
-              {about.sectors.map((s) => (
-                <li key={s}>{s}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="section" aria-labelledby="purpose-title">
+      {/* Company story: editorial split — purpose, figures, sectors */}
+      <section className="section tone-light" aria-labelledby="purpose-title">
         <div className={`container ${styles.split}`}>
           <div className={styles.media}>
             <Picture
@@ -69,12 +51,14 @@ export default function AboutPage() {
             />
           </div>
           <div>
-            <h2 id="purpose-title">Building purpose through continuous growth</h2>
+            <h2 id="purpose-title" className="rule">
+              Building purpose through continuous growth
+            </h2>
             <ol className={styles.purpose}>
               {about.purpose.map((p, i) => (
                 <li key={p.title}>
                   <span className={styles.num} aria-hidden="true">
-                    /0{i + 1}
+                    0{i + 1}
                   </span>
                   <div>
                     <h3>{p.title}</h3>
@@ -83,30 +67,25 @@ export default function AboutPage() {
                 </li>
               ))}
             </ol>
+            <dl className={styles.figures}>
+              {figures.map((f) => (
+                <div key={f.label}>
+                  <dt>{f.label}</dt>
+                  <dd>{f.value}</dd>
+                </div>
+              ))}
+            </dl>
+            <p className={styles.sectorsLabel}>Trusted by architects, builders &amp; developers across</p>
+            <ul className={styles.sectors}>
+              {about.sectors.map((s) => (
+                <li key={s}>{s}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      <section className="section section--tint" aria-labelledby="why-title">
-        <div className="container">
-          <div className="section-head section-head--center">
-            <h2 id="why-title">Why choose S K Stones India?</h2>
-            <p>
-              Committed to quality, precision, and client satisfaction. Our expertise spans across
-              residential, commercial, and architectural projects.
-            </p>
-          </div>
-          <ul className={styles.why}>
-            {about.why.map((w) => (
-              <li key={w.title}>
-                <h3>{w.title}</h3>
-                <p>{w.text}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
+      {/* Founder: dedicated profile */}
       <section className="section" aria-labelledby="founder-title">
         <div className={`container ${styles.founder}`}>
           <div className={styles.founderMedia}>
@@ -117,11 +96,14 @@ export default function AboutPage() {
               imgClassName={styles.img}
             />
           </div>
-          <div>
+          <div className={styles.founderBody}>
             <h2 id="founder-title">{about.founder.name}</h2>
             <p className={styles.role}>{about.founder.role}</p>
+            <blockquote className={styles.pull}>
+              <p>{quote}</p>
+            </blockquote>
             <div className={`prose ${styles.founderText}`}>
-              {about.founder.paragraphs.map((p) => (
+              {story.map((p) => (
                 <p key={p}>{p}</p>
               ))}
             </div>
@@ -129,7 +111,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section section--tint" aria-labelledby="team-title">
+      {/* Team */}
+      <section className="section tone-light" aria-labelledby="team-title">
         <div className="container">
           <div className="section-head">
             <h2 id="team-title">Our expert team</h2>
