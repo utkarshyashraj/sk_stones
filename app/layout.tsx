@@ -10,14 +10,14 @@ import '@/styles/globals.css';
 // Self-hosted at build time by next/font (no render-blocking request to Google Fonts).
 const playfair = Playfair_Display({
   subsets: ['latin'],
-  weight: ['500', '600', '700'],
+  weight: ['600'],
   style: ['normal', 'italic'],
   display: 'swap',
   variable: '--font-playfair',
 });
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '500', '600'],
   display: 'swap',
   variable: '--font-poppins',
 });

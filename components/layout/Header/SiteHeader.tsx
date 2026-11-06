@@ -8,16 +8,27 @@ import { setShortlistOpen, useShortlist } from '@/components/shortlist/shortlist
 import { openSearch } from '@/components/catalog/ProductSearch/search-store';
 import type { NavData } from '@/lib/nav';
 import { site, telHref, whatsappHref } from '@/lib/site';
-import { BottomNav, MobileNavigation } from '../MobileNavigation/MobileNavigation';
+import dynamic from 'next/dynamic';
+import { BottomNav } from '../MobileNavigation/MobileNavigation';
 import { BrandLockup } from './BrandLockup';
 import styles from './Header.module.css';
 
 type MenuId = 'services' | 'products' | null;
 
+// The drawer (full nav tree) is code-split and mounted on first open.
+const MobileNavigation = dynamic(
+  () => import('../MobileNavigation/MobileNavigation').then((m) => m.MobileNavigation),
+  {
+    ssr: false,
+  },
+);
+
 export function SiteHeader({ nav }: { nav: NavData }) {
   const pathname = usePathname() || '/';
   const [open, setOpen] = useState<MenuId>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileSeen, setMobileSeen] = useState(false);
+  if (mobileOpen && !mobileSeen) setMobileSeen(true);
   const navRef = useRef<HTMLElement>(null);
   const closeTimer = useRef<number | undefined>(undefined);
   const { count } = useShortlist();
@@ -241,12 +252,14 @@ export function SiteHeader({ nav }: { nav: NavData }) {
           </div>
         </div>
       </header>
-      <MobileNavigation
-        nav={nav}
-        isActive={isActive}
-        open={mobileOpen}
-        onClose={() => setMobileOpen(false)}
-      />
+      {mobileSeen ? (
+        <MobileNavigation
+          nav={nav}
+          isActive={isActive}
+          open={mobileOpen}
+          onClose={() => setMobileOpen(false)}
+        />
+      ) : null}
       <BottomNav isActive={isActive} productsActive={productsActive} />
     </>
   );

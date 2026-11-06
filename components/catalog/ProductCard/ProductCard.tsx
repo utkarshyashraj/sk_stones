@@ -45,6 +45,7 @@ function ProductCardImpl({ product: p, collectionName, showCollection, onQuickVi
             alt=""
             sizes="(min-width: 1280px) 280px, (min-width: 1024px) 23vw, (min-width: 640px) 31vw, 46vw"
             priority={priority}
+            preloadHint={false}
             fill
           />
         ) : (

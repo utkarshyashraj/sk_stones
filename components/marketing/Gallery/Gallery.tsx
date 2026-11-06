@@ -61,6 +61,7 @@ export function Gallery({ images, label }: { images: { image: ImageRef; alt: str
               alt={current.alt}
               sizes="100vw"
               priority
+              preloadHint={false}
               imgClassName={styles.full}
             />
             <figcaption className={styles.caption}>

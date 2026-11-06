@@ -4,6 +4,7 @@
 import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
+import zlib from 'node:zlib';
 
 const ROOT = path.resolve(import.meta.dirname, '..', 'out');
 const PORT = Number(process.argv[2]) || 4321;
@@ -24,6 +25,7 @@ const TYPES = {
   '.woff2': 'font/woff2',
 };
 
+const compressed = new Map();
 const redirects = new Map();
 const redirectsFile = path.join(ROOT, '_redirects');
 if (fs.existsSync(redirectsFile)) {
@@ -71,6 +73,31 @@ http
         'Content-Length': end - start + 1,
       });
       return fs.createReadStream(file, { start, end }).pipe(res);
+    }
+    // Compress text like Netlify does (brotli preferred, then gzip).
+    const enc = String(req.headers['accept-encoding'] ?? '');
+    if (/^(text|application\/(javascript|json|xml))|svg/.test(type)) {
+      const coding = enc.includes('br') ? 'br' : enc.includes('gzip') ? 'gzip' : null;
+      if (coding) {
+        // Compress each file once and keep it in memory (the export is immutable while serving).
+        const key = `${coding}:${file}:${fs.statSync(file).mtimeMs}`; // invalidated by rebuilds
+        let body = compressed.get(key);
+        if (!body) {
+          const raw = fs.readFileSync(file);
+          body =
+            coding === 'br'
+              ? zlib.brotliCompressSync(raw, { params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 9 } })
+              : zlib.gzipSync(raw, { level: 9 });
+          compressed.set(key, body);
+        }
+        res.writeHead(200, {
+          'Content-Type': type,
+          'Content-Encoding': coding,
+          'Content-Length': body.length,
+          Vary: 'Accept-Encoding',
+        });
+        return res.end(body);
+      }
     }
     res.writeHead(200, { 'Content-Type': type, 'Content-Length': size, 'Accept-Ranges': 'bytes' });
     fs.createReadStream(file).pipe(res);

@@ -120,6 +120,7 @@ function Detail({ product: p, names }: { product: ClientProduct; names: Record<s
             alt={`${p.name} — ${collectionName}`}
             sizes="(min-width: 1024px) 60vw, 100vw"
             priority
+            preloadHint={false}
             imgClassName={styles.img}
           />
         ) : (

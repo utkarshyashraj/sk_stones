@@ -64,7 +64,7 @@ export function localBusinessLd() {
     telephone: site.phone.e164,
     email: site.email,
     image: absoluteUrl(DEFAULT_OG.url),
-    logo: absoluteUrl('/images/site/shree-logo-204.webp'),
+    logo: absoluteUrl('/images/site/sk-mark-transparent-480.webp'),
     foundingDate: String(site.foundedYear),
     address: {
       '@type': 'PostalAddress',

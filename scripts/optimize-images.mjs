@@ -12,12 +12,15 @@ const ROOT = path.resolve(import.meta.dirname, '..');
 const OUT = path.join(ROOT, 'public', 'images');
 const META_FILE = path.join(ROOT, 'content', 'generated', 'images.json');
 const force = process.argv.includes('--force');
+const forceKind = (process.argv.find((a) => a.startsWith('--force-kind=')) ?? '').split('=')[1] ?? null;
+// Per-image overrides (e.g. the header logo is shown ~50px tall: ship a tiny file).
+const WIDTH_OVERRIDES = { 'site/shree-logo': [60] };
 const jobs = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/generated/image-jobs.json'), 'utf8'));
 const prev = !force && fs.existsSync(META_FILE) ? JSON.parse(fs.readFileSync(META_FILE, 'utf8')) : {};
 
 const PROFILES = {
   catalog: { widths: [400, 800, 1200], webp: 74, avif: null },
-  site: { widths: [640, 1280, 1920], webp: 74, avif: 52 },
+  site: { widths: [480, 800, 1200, 1920], webp: 74, avif: 52 },
 };
 
 sharp.concurrency(2);
@@ -31,7 +34,7 @@ async function run(job) {
   const src = path.join(ROOT, job.source);
   const outBase = path.join(OUT, job.key);
   fs.mkdirSync(path.dirname(outBase), { recursive: true });
-  const old = prev[job.key];
+  const old = forceKind === job.kind ? undefined : prev[job.key];
   if (
     old &&
     old.widths.every(
@@ -47,8 +50,8 @@ async function run(job) {
   const oriented = (info.orientation ?? 1) >= 5;
   const width = oriented ? info.height : info.width;
   const height = oriented ? info.width : info.height;
-  let widths = profile.widths.filter((w) => w < width);
-  if (!widths.length || widths[widths.length - 1] < width)
+  let widths = (WIDTH_OVERRIDES[job.key] ?? profile.widths).filter((w) => w < width);
+  if (!WIDTH_OVERRIDES[job.key] && (!widths.length || widths[widths.length - 1] < width))
     widths.push(Math.min(width, profile.widths[profile.widths.length - 1]));
   widths = [...new Set(widths)].sort((a, b) => a - b);
   const { dominant } = await sharp(src, { failOn: 'none' }).resize(32).stats();

@@ -306,3 +306,12 @@ h4 {
     scroll-behavior: auto !important;
   }
 }
+
+/* ---------- Rendering performance ---------- */
+/* Below-the-fold light sections skip layout/paint until they approach the viewport.
+   (Dark sections are excluded so automated contrast checks can resolve their background.) */
+main > .section ~ .section:not(.section--dark),
+main > section ~ .section:not(.section--dark) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}

@@ -6,7 +6,7 @@ import { replaceUrl, useHash, useSearchString } from '@/components/ui/useLocatio
 import { Icon } from '@/components/ui/Icon';
 import { CatalogFilters } from '@/components/catalog/CatalogFilters/CatalogFilters';
 import { ProductCard } from '@/components/catalog/ProductCard/ProductCard';
-import { ProductLightbox } from '@/components/catalog/ProductLightbox/ProductLightbox';
+import dynamic from 'next/dynamic';
 import { loadCatalogIndex } from '@/components/catalog/ProductSearch/catalog-index';
 import {
   activeFilterCount,
@@ -38,6 +38,14 @@ interface Props {
   /** Number of cards whose images load eagerly (above the fold). */
   eager?: number;
 }
+
+// Code-split: the lightbox loads when a product is first opened.
+const ProductLightbox = dynamic(
+  () => import('@/components/catalog/ProductLightbox/ProductLightbox').then((m) => m.ProductLightbox),
+  {
+    ssr: false,
+  },
+);
 
 const COLOUR_ORDER = [
   'White',
@@ -118,6 +126,9 @@ export function ProductGrid({
   const inFiltered = openId ? filtered.findIndex((p) => p.id === openId) : -1;
   const lightboxList = openId && inFiltered < 0 ? all : filtered;
   const lightbox = openId ? (inFiltered >= 0 ? inFiltered : all.findIndex((p) => p.id === openId)) : -1;
+  // Mount (and download) the lightbox on first open, then keep it mounted so closing runs the dialog's close logic.
+  const [lightboxSeen, setLightboxSeen] = useState(false);
+  if (lightbox >= 0 && !lightboxSeen) setLightboxSeen(true);
 
   const openAt = useCallback(
     (i: number) => {
@@ -297,13 +308,15 @@ export function ProductGrid({
         </div>
       </div>
 
-      <ProductLightbox
-        products={lightboxList}
-        index={lightbox >= 0 ? lightbox : null}
-        names={names}
-        onClose={closeLightbox}
-        onNavigate={openAt}
-      />
+      {lightboxSeen ? (
+        <ProductLightbox
+          products={lightboxList}
+          index={lightbox >= 0 ? lightbox : null}
+          names={names}
+          onClose={closeLightbox}
+          onNavigate={openAt}
+        />
+      ) : null}
     </div>
   );
 }
