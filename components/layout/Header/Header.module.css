@@ -6,6 +6,15 @@
   color: var(--text);
   border-bottom: 1px solid var(--line);
 }
+.header {
+  transition:
+    background-color 300ms var(--ease),
+    border-color 300ms var(--ease);
+}
+.transparent {
+  background-color: transparent;
+  border-bottom-color: transparent;
+}
 .bar {
   display: flex;
   align-items: center;

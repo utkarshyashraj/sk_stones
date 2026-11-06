@@ -1,0 +1,65 @@
+.timeline {
+  position: relative;
+  display: grid;
+  gap: var(--sp-10);
+  list-style: none;
+  padding: 0 0 0 var(--sp-8);
+}
+/* connecting line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 5px;
+  width: 1px;
+  background: var(--accent-2);
+}
+.step {
+  position: relative;
+}
+.marker {
+  position: absolute;
+  top: 6px;
+  left: calc(-1 * var(--sp-8));
+  width: 11px;
+  height: 11px;
+  border: 1px solid var(--accent-2);
+  border-radius: 50%;
+  background: var(--bg);
+}
+.num {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: var(--fs-2xl);
+  line-height: 1;
+  color: var(--accent);
+}
+.title {
+  margin-top: var(--sp-4);
+  font-size: var(--fs-xl);
+}
+.text {
+  max-width: 32ch;
+  margin-top: var(--sp-2);
+  color: var(--text-2);
+}
+@media (min-width: 900px) {
+  .timeline {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--sp-8);
+    padding: var(--sp-8) 0 0;
+  }
+  .timeline::before {
+    top: 5px;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 1px;
+  }
+  .marker {
+    top: calc(-1 * var(--sp-8));
+    left: 0;
+  }
+}

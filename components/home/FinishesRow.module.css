@@ -1,0 +1,42 @@
+.row {
+  display: grid;
+  gap: var(--sp-10) var(--sp-6);
+  list-style: none;
+  padding: 0;
+}
+.swatch {
+  display: grid;
+  gap: var(--sp-2);
+  color: var(--text);
+  text-decoration: none;
+}
+.media {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 2;
+  margin-bottom: var(--sp-3);
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--surface-2);
+}
+.name {
+  font-family: var(--font-serif);
+  font-size: var(--fs-xl);
+}
+.swatch:hover .name {
+  color: var(--accent);
+}
+.text {
+  max-width: 40ch;
+  color: var(--text-2);
+}
+.stone {
+  color: var(--text-3);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.04em;
+}
+@media (min-width: 900px) {
+  .row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

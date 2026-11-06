@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { setShortlistOpen, useShortlist } from '@/components/shortlist/shortlist-store';
 import { openSearch } from '@/components/catalog/ProductSearch/search-store';
@@ -15,6 +15,18 @@ import styles from './Header.module.css';
 
 type MenuId = 'services' | 'products' | null;
 
+const subscribeScroll = (cb: () => void) => {
+  window.addEventListener('scroll', cb, { passive: true });
+  return () => window.removeEventListener('scroll', cb);
+};
+/** true once the page has scrolled a little (server: false, so the homepage header starts transparent). */
+const useScrolled = () =>
+  useSyncExternalStore(
+    subscribeScroll,
+    () => window.scrollY > 24,
+    () => false,
+  );
+
 // The drawer (full nav tree) is code-split and mounted on first open.
 const MobileNavigation = dynamic(
   () => import('../MobileNavigation/MobileNavigation').then((m) => m.MobileNavigation),
@@ -25,6 +37,7 @@ const MobileNavigation = dynamic(
 
 export function SiteHeader({ nav }: { nav: NavData }) {
   const pathname = usePathname() || '/';
+  const scrolled = useScrolled();
   const [open, setOpen] = useState<MenuId>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSeen, setMobileSeen] = useState(false);
@@ -94,7 +107,9 @@ export function SiteHeader({ nav }: { nav: NavData }) {
 
   return (
     <>
-      <header className={`${styles.header} on-dark`}>
+      <header
+        className={`${styles.header} ${pathname === '/' && !scrolled && !open ? styles.transparent : ''} on-dark`}
+      >
         <div className={`container ${styles.bar}`}>
           <BrandLockup />
 

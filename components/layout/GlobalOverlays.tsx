@@ -2,6 +2,9 @@
 
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
+import { Icon } from '@/components/ui/Icon';
+import { whatsappHref } from '@/lib/site';
+import styles from './GlobalOverlays.module.css';
 import { useSearchOpen } from '@/components/catalog/ProductSearch/search-store';
 import { useShortlistOpen } from '@/components/shortlist/shortlist-store';
 
@@ -31,6 +34,15 @@ export function GlobalOverlays() {
     <>
       {seen.search ? <SearchDialog /> : null}
       {seen.shortlist ? <ShortlistDrawer /> : null}
+      <a
+        className={styles.whatsapp}
+        href={whatsappHref('Hi S K Stones India, I have an enquiry.')}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp (opens in a new tab)"
+      >
+        <Icon name="whatsapp" size={26} />
+      </a>
     </>
   );
 }
