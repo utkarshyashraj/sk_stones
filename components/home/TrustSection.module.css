@@ -1,34 +1,46 @@
+/* Two columns from 900px: one figure (video + caption) | eyebrow → heading → text → divider → stats → link. */
 .grid {
   display: grid;
-  gap: var(--sp-16);
+  gap: var(--head-gap);
   align-items: center;
 }
 .media {
-  position: relative;
   margin: 0;
-  padding: 0 var(--sp-6) var(--sp-6) 0;
+  /* Room for the frame's 16px offset so it never overflows the column. */
+  padding-right: 16px;
 }
-/* Offset gold frame behind the video */
-.media::before {
-  content: '';
-  position: absolute;
-  inset: var(--sp-6) 0 0 var(--sp-6);
-  border: 1px solid var(--accent-2);
-  border-radius: var(--radius-lg);
-}
+/* The video wrapper owns the offset gold frame: it hugs the video exactly, never the caption. */
 .frame {
   position: relative;
+  isolation: isolate;
+}
+.frame::before {
+  content: '';
+  position: absolute;
+  inset: 16px -16px -16px 16px;
+  z-index: -1;
+  border: 1px solid rgba(201, 164, 106, 0.45);
+  border-radius: var(--radius-lg);
 }
 .frame > * {
   border: 0;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
 }
+.frame video {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+/* 16px below the frame's offset edge (the frame extends 16px under the video). */
 .caption {
-  margin-top: var(--sp-8);
-  max-width: 52ch;
+  margin-top: calc(16px + 16px);
   color: var(--text-3);
-  font-size: var(--fs-sm);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.text {
+  min-width: 0;
+  container-type: inline-size;
 }
 .rule {
   display: block;
@@ -50,66 +62,67 @@
 .stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--sp-6);
-  margin: var(--sp-10) 0;
-  padding-top: var(--sp-6);
+  gap: var(--gap-md);
+  margin: var(--gap-md) 0;
+  padding-top: var(--gap-md);
   border-top: 1px solid var(--line);
 }
 .stats div {
   display: flex;
   flex-direction: column-reverse;
-  gap: var(--sp-1);
+  justify-content: flex-end;
+  gap: var(--sp-2);
+  min-width: 0;
 }
 .stats dd {
   margin: 0;
 }
 .value {
+  display: block;
   font-family: var(--font-serif);
-  font-size: var(--fs-stat);
+  /* 48–56px on desktop; scales with the column so numbers never collide. */
+  font-size: clamp(32px, 11cqi, 56px);
   line-height: 1;
   color: var(--accent);
   font-variant-numeric: lining-nums tabular-nums;
+  white-space: nowrap;
 }
 .stats dt {
   color: var(--text-2);
-  font-size: var(--fs-sm);
+  font-size: 13px;
+  line-height: 1.4;
 }
-/* Text link with arrow + underline draw */
+/* Text CTA: gold + arrow + permanent 40% underline. */
 .cta {
   display: inline-flex;
   align-items: center;
   gap: var(--sp-3);
-  padding-bottom: var(--sp-1);
-  color: var(--text);
+  padding-bottom: 2px;
+  color: var(--accent);
   font-weight: 500;
   letter-spacing: 0.04em;
   text-decoration: none;
-  background: linear-gradient(var(--accent), var(--accent)) left bottom / 0% 1px no-repeat;
-  border-bottom: 1px solid var(--line-strong);
-  transition: background-size 500ms var(--ease-out);
+  border-bottom: 1px solid rgb(176 141 87 / 0.4);
+  transition: border-color var(--dur) var(--ease);
 }
 .cta:hover,
 .cta:focus-visible {
-  background-size: 100% 1px;
+  border-bottom-color: var(--accent);
 }
 .arrow {
-  color: var(--accent);
   transition: transform 300ms var(--ease-out);
 }
 .cta:hover .arrow {
   transform: translateX(4px);
 }
-@media (max-width: 480px) {
-  .stats {
-    gap: var(--sp-3);
-  }
-  .value {
-    font-size: clamp(2.5rem, 12vw, 3.5rem);
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 64px;
   }
 }
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-    gap: var(--sp-20);
+@media (max-width: 899px) {
+  .stats {
+    gap: var(--gap-sm);
   }
 }

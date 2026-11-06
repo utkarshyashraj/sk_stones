@@ -9,14 +9,17 @@ export interface ApplicationTile {
   image: ImageRef | null;
   /** Collections whose catalogue data lists this application. */
   recommended: string[];
+  /** Stones in the catalogue listing this application (what the linked results page shows). */
+  count: number;
 }
 
+/** One bordered panel per application: image → title → description → "Suited stones" chips. */
 export function ApplicationsGrid({ items }: { items: ApplicationTile[] }) {
   return (
     <ul className={styles.grid}>
       {items.map((a) => (
-        <li key={a.label} className="reveal">
-          <Link href={a.href} className={styles.tile}>
+        <li key={a.label} className={`${styles.item} reveal`}>
+          <Link href={a.href} className={styles.card}>
             <span className={`${styles.media} zoom-media`}>
               {a.image ? (
                 <Picture
@@ -28,9 +31,22 @@ export function ApplicationsGrid({ items }: { items: ApplicationTile[] }) {
               ) : null}
             </span>
             <span className={styles.label}>{a.label}</span>
+            <span className={styles.desc}>
+              {a.count} stones in our catalogue are suited to this space.{' '}
+              <span className={styles.more} aria-hidden="true">
+                View stones →
+              </span>
+            </span>
             {a.recommended.length ? (
-              <span className={styles.recommended}>
-                <span className={styles.recLabel}>Suited stones</span> {a.recommended.join(' · ')}
+              <span className={styles.suited}>
+                <span className={styles.suitedLabel}>Suited stones</span>
+                <span className={styles.chips}>
+                  {a.recommended.map((r) => (
+                    <span key={r} className={styles.chip}>
+                      {r}
+                    </span>
+                  ))}
+                </span>
               </span>
             ) : null}
           </Link>

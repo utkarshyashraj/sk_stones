@@ -3,8 +3,8 @@
   flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
-  gap: var(--sp-6) var(--sp-10);
-  margin-bottom: clamp(var(--sp-10), 5vw, var(--sp-16));
+  gap: var(--gap-sm) var(--sp-10);
+  margin-bottom: var(--head-gap);
 }
 .head {
   max-width: 44rem;

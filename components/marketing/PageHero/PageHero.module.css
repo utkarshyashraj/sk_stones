@@ -70,3 +70,8 @@
     gap: var(--sp-12);
   }
 }
+
+/* Followed by a section: that section's padding is the only gap (one token, never two). */
+.hero:has(+ :is(:global(.section), :global(.veil))) .inner {
+  padding-bottom: 0;
+}

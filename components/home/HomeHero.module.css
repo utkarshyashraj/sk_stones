@@ -1,5 +1,6 @@
 .inner {
-  padding-block: var(--sp-16) clamp(var(--sp-12), 6vw, var(--sp-20));
+  /* 32px keeps the trust row off the fold; the next section gives the same 32px back (one token total). */
+  padding-block: var(--sp-16) var(--gap-md);
 }
 .title {
   max-width: 13ch;
@@ -25,7 +26,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--sp-2) var(--sp-8);
-  margin-top: clamp(var(--sp-10), 6vw, var(--sp-16));
+  margin-top: var(--head-gap);
   padding-top: var(--sp-5);
   border-top: 1px solid rgba(245, 241, 233, 0.16);
   list-style: none;
@@ -37,18 +38,7 @@
   font-size: var(--fs-lg);
   color: var(--accent);
 }
-.credit {
-  position: absolute;
-  right: var(--gutter);
-  bottom: var(--sp-5);
-  color: var(--text-3);
-  font-size: var(--fs-xs);
-  letter-spacing: 0.08em;
-}
 @media (max-width: 640px) {
-  .credit {
-    display: none;
-  }
   .actions :global(.btn) {
     flex: 1 1 100%;
   }
@@ -61,4 +51,8 @@
   min-height: calc(100svh - var(--header-h));
   overflow: hidden;
   color: var(--text);
+}
+
+.hero + :global(.section) {
+  padding-top: calc(var(--section-y) - var(--gap-md));
 }

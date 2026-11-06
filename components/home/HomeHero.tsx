@@ -35,7 +35,6 @@ export function HomeHero({ heading, headingAccent, subhead, primary, secondary, 
           ))}
         </ul>
       </div>
-      <p className={styles.credit}>Nero Portoro marble</p>
     </section>
   );
 }

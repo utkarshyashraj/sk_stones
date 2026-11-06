@@ -13,7 +13,7 @@ interface Props {
   stats: { value: string; label: string }[];
 }
 
-/** "Built on trust": large video in an offset gold frame, big animated stats, a proper text CTA. */
+/** "Who we are": one figure (video in an offset gold frame + caption), then text, stats and a text CTA. */
 export function TrustSection({
   eyebrow,
   heading,

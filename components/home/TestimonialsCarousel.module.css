@@ -1,6 +1,6 @@
 .wrap {
   display: grid;
-  gap: var(--sp-16);
+  gap: var(--head-gap);
 }
 .featured {
   position: relative;

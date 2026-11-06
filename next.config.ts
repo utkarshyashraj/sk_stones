@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   trailingSlash: false,
   reactStrictMode: true,
   poweredByHeader: false,
+  devIndicators: false,
   experimental: {
     // ~12 KB of CSS per page: inlining removes render-blocking stylesheet requests (better FCP/LCP).
     inlineCss: true,

@@ -58,8 +58,8 @@ h3,
 h4 {
   overflow-wrap: break-word;
 }
-ul[class],
-ol[class] {
+/* Zero specificity so a component class (e.g. .timeline) can set its own list padding. */
+:where(ul[class], ol[class]) {
   list-style: none;
   padding: 0;
 }
@@ -109,6 +109,11 @@ h4 {
 }
 .section {
   padding-block: var(--section-y);
+  scroll-margin-top: var(--header-h);
+}
+/* Adjacent sections share ONE padding: the gap between their content is exactly --section-y. */
+main > :is(.section, .veil):has(+ :is(.section, .veil)) {
+  padding-bottom: 0;
 }
 .section-head {
   max-width: 46rem;
@@ -212,32 +217,36 @@ h4 {
 }
 .btn--primary {
   background: var(--cta-bg);
+  border-color: var(--cta-bg);
   color: var(--cta-text);
 }
 .btn--primary:hover {
   background: var(--cta-bg-hover);
+  border-color: var(--cta-bg-hover);
 }
 .btn--outline {
-  border-color: var(--line-strong);
-  background: transparent;
+  border-color: var(--btn2-border);
+  background: var(--btn2-bg);
   color: var(--text);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
 }
 .btn--outline:hover {
-  border-color: var(--text);
-  background: var(--text);
-  color: var(--bg);
+  border-color: var(--cta-bg);
 }
 /* WhatsApp: neutral outline; only the glyph carries the brand colour. */
 .btn--whatsapp {
-  border-color: var(--line-strong);
-  background: transparent;
+  border-color: var(--btn2-border);
+  background: var(--btn2-bg);
   color: var(--text);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
 }
 .btn--whatsapp svg {
   color: #3fbf6f;
 }
 .btn--whatsapp:hover {
-  border-color: #3fbf6f;
+  border-color: var(--cta-bg);
 }
 .btn--sm {
   min-height: 40px;
@@ -256,11 +265,13 @@ h4 {
   display: inline-flex;
   align-items: center;
   gap: var(--sp-2);
+  padding-bottom: 2px;
   font-weight: 500;
   font-size: var(--fs-sm);
   color: var(--accent);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid rgb(176 141 87 / 0.4);
+  transition: border-color var(--dur) var(--ease);
 }
 .link-arrow:hover {
   border-bottom-color: var(--accent);
@@ -302,13 +313,7 @@ h4 {
 }
 
 /* ---------- Rendering performance ---------- */
-/* Below-the-fold light sections skip layout/paint until they approach the viewport.
-   (Dark sections are excluded so automated contrast checks can resolve their background.) */
-main > .section ~ .section:not(.section--dark),
-main > section ~ .section:not(.section--dark) {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 900px;
-}
+/* (No content-visibility on sections: its paint containment clipped overflowing titles/numbers.) */
 
 /* ---------- Motion ---------- */
 /* Slow zoom for imagery on hover (1.04 over 1.2s). */
@@ -397,4 +402,14 @@ a:focus-visible > .zoom-media img {
   border-radius: var(--radius-lg);
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
+}
+
+/* Primary link CTAs carry an arrow that nudges 4px on hover (decorative: hidden from AT). */
+a.btn--primary:not(:has(svg))::after {
+  content: '→';
+  content: '→' / '';
+  transition: transform var(--dur) var(--ease);
+}
+a.btn--primary:not(:has(svg)):hover::after {
+  transform: translateX(4px);
 }

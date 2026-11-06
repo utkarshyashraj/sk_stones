@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  gap: var(--sp-10);
+  gap: var(--head-gap);
   align-items: start;
 }
 .rule {
@@ -28,7 +28,7 @@
 @media (min-width: 1024px) {
   .grid {
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-    gap: var(--sp-20);
+    gap: 64px;
   }
   .panel {
     position: sticky;

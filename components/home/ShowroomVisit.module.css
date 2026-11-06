@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  gap: var(--sp-12);
+  gap: var(--head-gap);
   align-items: center;
 }
 .map {
@@ -71,6 +71,6 @@
 @media (min-width: 1024px) {
   .grid {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: var(--sp-20);
+    gap: 64px;
   }
 }

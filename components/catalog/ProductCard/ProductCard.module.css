@@ -30,17 +30,11 @@
   border-radius: var(--radius-sm);
   background: rgba(16, 16, 15, 0.75);
   color: var(--text);
-  opacity: 0;
-  transition: opacity var(--dur) var(--ease);
+  transition: background var(--dur) var(--ease);
 }
 .media:hover .quick,
 .media:focus-visible .quick {
-  opacity: 1;
-}
-@media (hover: none) {
-  .quick {
-    opacity: 1;
-  }
+  background: rgba(16, 16, 15, 0.92);
 }
 .noPhoto {
   position: absolute;

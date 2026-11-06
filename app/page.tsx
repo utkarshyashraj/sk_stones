@@ -55,6 +55,7 @@ export default function HomePage() {
 
   // Recommended collections per application come from catalogue data (top-level first, else collections).
   const cats = allCategories();
+  const products = allProducts();
   const appTiles = applications.map((a) => {
     const top = cats.filter((c) => !c.parent && c.applications.includes(a.application) && c.productCount > 0);
     const rec = (
@@ -65,6 +66,8 @@ export default function HomePage() {
       href: `/search?${new URLSearchParams({ application: a.application }).toString()}`,
       image: imageOrNull(a.image),
       recommended: rec.slice(0, 4),
+      // Same filter the tile links to (product-level applications), so the number matches the results page.
+      count: products.filter((p) => p.applications.includes(a.application)).length,
     };
   });
 

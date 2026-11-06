@@ -4,7 +4,7 @@
   grid-auto-columns: 82%;
   gap: var(--sp-4);
   margin-inline: calc(-1 * var(--gutter));
-  padding: 0 var(--gutter) var(--sp-4);
+  padding: 0 var(--gutter);
   list-style: none;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -78,22 +78,11 @@
 }
 .view {
   color: var(--accent);
-  opacity: 0;
-  transform: translateX(-6px);
-  transition:
-    opacity 400ms var(--ease-out),
-    transform 400ms var(--ease-out);
+  transition: transform 400ms var(--ease-out);
 }
 .card:hover .view,
 .card:focus-visible .view {
-  opacity: 1;
-  transform: none;
-}
-@media (hover: none) {
-  .view {
-    opacity: 1;
-    transform: none;
-  }
+  transform: translateX(4px);
 }
 @media (min-width: 1024px) {
   .grid {

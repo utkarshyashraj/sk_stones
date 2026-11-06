@@ -40,8 +40,10 @@
   --whatsapp: #0f7a39;
 
   /* Primary CTA: solid gold, dark text — identical on every surface */
-  --cta-bg: #b08d57;
-  --cta-bg-hover: #c29f6a;
+  --cta-bg: #c9a46a;
+  --cta-bg-hover: #d6b67f;
+  --btn2-bg: rgba(20, 17, 15, 0.55);
+  --btn2-border: rgba(244, 239, 230, 0.45);
   --cta-text: #14110f;
 
   /* Typography */
@@ -75,7 +77,11 @@
   --sp-12: 3rem;
   --sp-16: 4rem;
   --sp-20: 5rem;
-  --section-y: clamp(5rem, 10vw, 10rem); /* 80–160px */
+  /* Vertical rhythm: use ONLY these. */
+  --section-y: clamp(72px, 8vw, 112px); /* section padding-block */
+  --head-gap: 48px; /* section header → content */
+  --gap-sm: 24px; /* between items in a group */
+  --gap-md: 32px;
   --gutter: clamp(1rem, 0.5rem + 2vw, 2rem);
   --container: 1200px;
   --blend: 120px; /* dark ↔ light transition height */

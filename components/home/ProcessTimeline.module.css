@@ -1,7 +1,7 @@
 .timeline {
   position: relative;
   display: grid;
-  gap: var(--sp-10);
+  gap: var(--gap-md);
   list-style: none;
   padding: 0 0 0 var(--sp-8);
 }
@@ -31,12 +31,13 @@
 .num {
   display: block;
   font-family: var(--font-serif);
-  font-size: var(--fs-2xl);
+  font-size: 40px;
   line-height: 1;
   color: var(--accent);
 }
 .title {
   margin-top: var(--sp-4);
+  line-height: 1.3;
   font-size: var(--fs-xl);
 }
 .text {
@@ -47,7 +48,7 @@
 @media (min-width: 900px) {
   .timeline {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: var(--sp-8);
+    gap: var(--gap-md);
     padding: var(--sp-8) 0 0;
   }
   .timeline::before {
