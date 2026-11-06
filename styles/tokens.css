@@ -1,60 +1,67 @@
 /*
- * S K Stones design tokens — matte graphite luxury showroom.
- * Solid graphite surfaces; champagne is the single accent; natural stone photography is the visual focus.
+ * S K Stones design tokens — "quiet luxury, stone-first".
  *
- * Contrast (WCAG 2.2, on --bg #151514): --text 16.4:1 · --text-2 8.6:1 · --accent 7.9:1 · --text-3 5.6:1
- * On --surface #242320:                  --text 14.0:1 · --text-2 7.3:1 · --accent 6.7:1 · --text-3 4.8:1
- * --bg text on --accent (buttons) 7.9:1.
+ * Three surfaces, used by zone (never flipped section-by-section):
+ *   --surface-dark #14110F  hero, navigation, immersive image zones, footer
+ *   --surface-stone #F4EFE6 reading-heavy zones (about, applications, finishes, showroom, FAQ)
+ *   --surface-ivory-deep #EAE3D6 subtle alternation inside light zones (process)
+ * Components read role tokens (--bg, --text, --accent…); .tone-light / .tone-deep re-scope them.
+ *
+ * Contrast (WCAG 2.2):
+ *   dark  #14110F: --text 16.6:1 · --text-2 8.7:1 · --text-3 6.1:1 · --accent 6.0:1
+ *   stone #F4EFE6: --text 15.4:1 · --text-2 7.0:1 · --text-3 5.0:1 · --accent 5.4:1
+ *   deep  #EAE3D6: --text 14.0:1 · --text-2 6.3:1 · --text-3 4.6:1 · --accent 4.9:1
+ *   CTA: #14110F on #B08D57 6.0:1
  */
 :root {
   color-scheme: dark;
 
-  /* Surfaces */
-  --bg: #151514;
-  --bg-raised: #1c1b19;
-  --surface: #242320;
-  --surface-2: #2d2b28;
+  /* Surface palette (constants) */
+  --surface-dark: #14110f;
+  --surface-stone: #f4efe6;
+  --surface-ivory-deep: #eae3d6;
 
-  /* Typography */
+  /* Role tokens — dark (default) */
+  --bg: var(--surface-dark);
+  --bg-raised: #1b1815;
+  --surface: #24201c;
+  --surface-2: #2d2924;
   --text: #f5f1e9;
-  --text-2: #b5b0a7;
-  --text-3: #979187; /* metadata only; AA on every surface */
-
-  /* Champagne accent */
-  --accent: #c6a875;
-  --accent-hover: #d4ba8a;
-  --accent-2: #a98c5f;
-  --accent-tint: rgba(198, 168, 117, 0.1);
-
-  /* Lines */
-  --line: #35332e;
-  --line-strong: #4a4740;
-
-  /* Functional */
+  --text-2: #b8b1a6;
+  --text-3: #9a9287;
+  --accent: #b08d57;
+  --accent-hover: #c29f6a;
+  --accent-2: #8f7246;
+  --accent-tint: rgba(176, 141, 87, 0.1);
+  --line: #3a332b;
+  --line-strong: #4c443a;
   --white: #ffffff;
   --danger: #f08a7e;
   --whatsapp: #0f7a39;
 
-  /* Primary CTA is the brand champagne with graphite text on both tones (7.9:1 / 7.2:1). */
-  --cta-bg: #c6a875;
-  --cta-bg-hover: #d4ba8a;
-  --cta-text: #151514;
+  /* Primary CTA: solid gold, dark text — identical on every surface */
+  --cta-bg: #b08d57;
+  --cta-bg-hover: #c29f6a;
+  --cta-text: #14110f;
 
   /* Typography */
   --font-serif: var(--font-playfair), 'Playfair Display', Georgia, 'Times New Roman', serif;
   --font-sans: var(--font-poppins), 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --fs-eyebrow: 0.75rem; /* 12px, uppercase, 0.2em tracking */
   --fs-xs: 0.8125rem;
   --fs-sm: 0.875rem;
-  --fs-base: 1rem;
-  --fs-md: 1.125rem;
+  --fs-base: clamp(1rem, 0.95rem + 0.2vw, 1.0625rem); /* 16–17px body */
+  --fs-md: clamp(1.0625rem, 1rem + 0.25vw, 1.125rem); /* 17–18px intro */
   --fs-lg: 1.25rem;
-  --fs-xl: clamp(1.375rem, 1.1rem + 0.9vw, 1.625rem);
-  --fs-2xl: clamp(1.625rem, 1.25rem + 1.5vw, 2.25rem);
-  --fs-3xl: clamp(2rem, 1.4rem + 2.4vw, 3rem);
-  --fs-4xl: clamp(2.375rem, 1.5rem + 3.6vw, 4rem);
-  --lh-tight: 1.12;
+  --fs-xl: clamp(1.5rem, 1.35rem + 0.4vw, 1.75rem); /* h3 24–28px */
+  --fs-2xl: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem);
+  --fs-3xl: clamp(2.5rem, 2rem + 1.6vw, 3.5rem); /* h2 40–56px */
+  --fs-4xl: clamp(3rem, 1.8rem + 4.2vw, 5.5rem); /* display 48–88px */
+  --fs-stat: clamp(3.5rem, 2.8rem + 2vw, 4.5rem); /* 56–72px */
+  --lh-tight: 1.08;
   --lh-snug: 1.3;
   --lh-body: 1.7;
+  --measure: 65ch;
 
   /* Spacing (4px base) */
   --sp-1: 0.25rem;
@@ -68,53 +75,57 @@
   --sp-12: 3rem;
   --sp-16: 4rem;
   --sp-20: 5rem;
-  --section-y: clamp(3.5rem, 2.5rem + 4vw, 6rem);
+  --section-y: clamp(5rem, 10vw, 10rem); /* 80–160px */
   --gutter: clamp(1rem, 0.5rem + 2vw, 2rem);
-  --container: 1240px;
+  --container: 1200px;
+  --blend: 120px; /* dark ↔ light transition height */
 
-  /* Shape & depth (understated: hairlines over shadows) */
-  --radius-sm: 4px;
-  --radius: 6px;
-  --radius-lg: 10px;
+  /* Shape: stone is crisp */
+  --radius-sm: 2px;
+  --radius: 3px;
+  --radius-lg: 4px;
   --radius-pill: 999px;
-  --shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
-  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.55);
+  --shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.5);
 
   /* Motion */
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --dur: 200ms;
 
   /* Layout */
-  --header-h: 72px;
+  --header-h: 76px;
   --bottom-nav-h: 0px;
   --z-header: 50;
   --z-overlay: 80;
   --z-dialog: 100;
 }
 
-/*
- * Warm ivory tone for reading- and browsing-heavy sections (product discovery, company story, founder,
- * testimonials, enquiry). Scoped: every component inside re-reads the same token names.
- * Contrast on --bg #F4F0E8: --text 15.2:1 · --text-2 7.1:1 · --text-3 5.3:1 · --accent 5.3:1.
- */
-.tone-light {
+/* Light zone: warm stone ivory */
+.tone-light,
+.tone-deep {
   color-scheme: light;
-  --bg: #f4f0e8;
-  --bg-raised: #ece6da;
+  --bg: var(--surface-stone);
+  --bg-raised: var(--surface-ivory-deep);
   --surface: #fbf8f2;
-  --surface-2: #e4ddcf;
-  --text: #1e1c19;
-  --text-2: #57524a;
-  --text-3: #6b655b;
-  --accent: #7e602c;
-  --accent-hover: #6a5023;
-  --accent-2: #a98c5f;
-  --accent-tint: rgba(126, 96, 44, 0.08);
-  --line: #d9d1c2;
-  --line-strong: #c4baa8;
+  --surface-2: #e3dbcc;
+  --text: #1c1814;
+  --text-2: #574f45;
+  --text-3: #6b6257;
+  --accent: #7a5b2c; /* darker gold for text on light surfaces */
+  --accent-hover: #654a22;
+  --accent-2: #b08d57;
+  --accent-tint: rgba(122, 91, 44, 0.08);
+  --line: #d8cfbf;
+  --line-strong: #c3b8a5;
   --danger: #b42318;
   background-color: var(--bg);
   color: var(--text);
+}
+/* Subtle alternation inside a light zone */
+.tone-deep {
+  --bg: var(--surface-ivory-deep);
+  --bg-raised: var(--surface-stone);
 }
 
 @media (max-width: 1023px) {

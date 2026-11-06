@@ -104,7 +104,7 @@ h4 {
 /* ---------- Layout utilities ---------- */
 .container {
   width: 100%;
-  max-width: var(--container);
+  max-width: calc(var(--container) + 2 * var(--gutter));
   margin-inline: auto;
   padding-inline: var(--gutter);
 }
@@ -146,10 +146,9 @@ h4 {
 }
 .eyebrow {
   display: inline-block;
-  margin-bottom: var(--sp-3);
-  font-size: var(--fs-xs);
+  font-size: var(--fs-eyebrow);
   font-weight: 500;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent);
 }
@@ -198,13 +197,13 @@ h4 {
   align-items: center;
   justify-content: center;
   gap: var(--sp-2);
-  min-height: 48px;
-  padding: 0.7rem 1.5rem;
+  min-height: 52px;
+  padding: 0.75rem 1.75rem;
   border: 1px solid transparent;
   border-radius: var(--radius-sm);
   font-size: var(--fs-sm);
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   line-height: 1.2;
   text-decoration: none;
   white-space: nowrap;
@@ -232,8 +231,9 @@ h4 {
   color: var(--text);
 }
 .btn--outline:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--text);
+  background: var(--text);
+  color: var(--bg);
 }
 /* WhatsApp: neutral outline; only the glyph carries the brand colour. */
 .btn--whatsapp {
@@ -316,4 +316,50 @@ main > .section ~ .section:not(.section--dark),
 main > section ~ .section:not(.section--dark) {
   content-visibility: auto;
   contain-intrinsic-size: auto 900px;
+}
+
+/* ---------- Zone transitions (dark ↔ light) ----------
+ * Applied to the FIRST section of a zone: a soft blend from the previous zone's surface into this one,
+ * so tone changes never appear as a hard horizontal cut.
+ */
+.blend-from-dark,
+.blend-from-light {
+  padding-top: calc(var(--section-y) + var(--sp-10));
+}
+.blend-from-dark {
+  background-image: linear-gradient(to bottom, var(--surface-dark), var(--bg) var(--blend));
+}
+.blend-from-light {
+  background-image: linear-gradient(to bottom, var(--surface-stone), var(--bg) var(--blend));
+}
+
+/* ---------- Motion ---------- */
+/* Slow zoom for imagery on hover (1.04 over 1.2s). */
+.zoom-media img {
+  transition: transform 1.2s var(--ease-out);
+}
+.zoom-media:hover img,
+a:hover > .zoom-media img,
+a:focus-visible > .zoom-media img {
+  transform: scale(1.04);
+}
+/* Subtle fade-up on scroll (CSS scroll-driven; no JavaScript). Older browsers simply show content. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
+}
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
