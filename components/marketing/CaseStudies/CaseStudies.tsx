@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Icon } from '@/components/ui/Icon';
 import { Picture } from '@/components/ui/Picture';
 import type { ImageRef } from '@/lib/types';
 import styles from './CaseStudies.module.css';
@@ -25,9 +24,6 @@ export function CaseStudies({ items }: { items: CaseStudyCardData[] }) {
               <p className={styles.sector}>{c.sector}</p>
               <h3 className={styles.title}>{c.title}</h3>
               <p className={styles.text}>{c.text}</p>
-              <span className={styles.more} aria-hidden="true">
-                Read case study <Icon name="arrow-right" size={16} />
-              </span>
             </div>
           </Link>
         </li>

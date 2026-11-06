@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Icon } from '@/components/ui/Icon';
-import { telHref, whatsappHref } from '@/lib/site';
+import { whatsappHref } from '@/lib/site';
 import styles from './CTA.module.css';
 
 interface Props {
@@ -10,15 +10,18 @@ interface Props {
   whatsappMessage?: string;
 }
 
-/** Closing enquiry band used across pages: quote form, call and WhatsApp. */
+/**
+ * Closing enquiry band: one primary action + WhatsApp (a different channel with a page-specific message).
+ * The phone number is already in the header and bottom navigation, so it is not repeated here.
+ */
 export function CTA({
   heading,
   text,
-  primary = { label: 'Get a free quote', href: '/contact#quote' },
+  primary = { label: 'Request a quote', href: '/contact#quote' },
   whatsappMessage,
 }: Props) {
   return (
-    <section className={`${styles.cta} on-dark`} aria-labelledby="cta-heading">
+    <section className={styles.cta} aria-labelledby="cta-heading">
       <div className={`container ${styles.inner}`}>
         <div>
           <h2 id="cta-heading" className={styles.heading}>
@@ -28,11 +31,8 @@ export function CTA({
         </div>
         <div className={styles.actions}>
           <Link href={primary.href} className="btn btn--primary">
-            {primary.label} <Icon name="arrow-right" />
+            {primary.label}
           </Link>
-          <a href={telHref} className="btn btn--outline">
-            <Icon name="phone" /> Call now
-          </a>
           <a
             href={whatsappHref(whatsappMessage ?? 'Hi S K Stones India, I would like a quote.')}
             className="btn btn--whatsapp"

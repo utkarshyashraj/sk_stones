@@ -19,14 +19,14 @@
   padding: 0 var(--sp-2);
   border: 0;
   background: none;
-  color: var(--c-gold-ink);
+  color: var(--accent);
   font-size: var(--fs-sm);
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 .clear:disabled {
-  color: var(--c-text-muted);
+  color: var(--text-2);
   text-decoration: none;
   cursor: default;
   opacity: 0.7;
@@ -35,7 +35,7 @@
   min-width: 0;
   padding: var(--sp-4) 0 0;
   border: 0;
-  border-top: 1px solid var(--c-border);
+  border-top: 1px solid var(--line);
 }
 .legend {
   float: left;
@@ -62,7 +62,7 @@
   height: 18px;
   margin: 0;
   transform: translateY(-50%);
-  accent-color: var(--c-gold-ink);
+  accent-color: var(--accent);
   cursor: pointer;
 }
 .option {
@@ -77,14 +77,14 @@
   cursor: pointer;
 }
 .option:hover {
-  background: var(--c-stone-100);
+  background: var(--bg-raised);
 }
 .checkbox:checked + .option {
   font-weight: 600;
 }
 .count {
   min-width: 2ch;
-  color: var(--c-text-muted);
+  color: var(--text-2);
   font-size: var(--fs-xs);
   text-align: right;
   font-variant-numeric: tabular-nums;
@@ -95,7 +95,7 @@
   padding: 0 var(--sp-2);
   border: 0;
   background: none;
-  color: var(--c-gold-ink);
+  color: var(--accent);
   font-size: var(--fs-sm);
   font-weight: 600;
 }

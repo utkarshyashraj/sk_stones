@@ -22,7 +22,6 @@ export default function ContactPage() {
           { name: 'Home', href: '/' },
           { name: 'Contact Us', href: '/contact' },
         ]}
-        eyebrow="Contact"
         title={
           <>
             Get in <span className="accent">touch</span>
@@ -40,14 +39,12 @@ export default function ContactPage() {
           <div className={styles.info}>
             <ul className={styles.cards}>
               <li>
-                <Icon name="phone" />
                 <div>
                   <h2>Phone</h2>
                   <a href={telHref}>{site.phone.display}</a>
                 </div>
               </li>
               <li>
-                <Icon name="whatsapp" />
                 <div>
                   <h2>WhatsApp</h2>
                   <a
@@ -59,22 +56,19 @@ export default function ContactPage() {
                   </a>
                 </div>
               </li>
-              <li>
-                <Icon name="mail" />
+              <li className={styles.wide}>
                 <div>
                   <h2>Email</h2>
                   <a href={`mailto:${site.email}`}>{site.email}</a>
                 </div>
               </li>
               <li>
-                <Icon name="clock" />
                 <div>
                   <h2>Showroom hours</h2>
                   <p>{site.hours.label}</p>
                 </div>
               </li>
               <li className={styles.wide}>
-                <Icon name="pin" />
                 <div>
                   <h2>Showroom address</h2>
                   <p>{fullAddress}</p>

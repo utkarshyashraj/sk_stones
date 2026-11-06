@@ -9,18 +9,15 @@
   padding: 0;
 }
 .pillar {
-  padding: var(--sp-6);
-  border: 1px solid var(--c-border-dark);
-  border-top: 3px solid var(--c-gold);
-  border-radius: var(--radius);
-  background: var(--c-ink-850);
+  padding-top: var(--sp-5);
+  border-top: 1px solid var(--accent-2);
 }
 .pillar h3 {
   font-size: var(--fs-lg);
 }
 .pillar > p {
   margin-top: var(--sp-3);
-  color: var(--c-text-muted-dark);
+  color: var(--text-2);
   font-size: var(--fs-sm);
 }
 .pillar ul {
@@ -38,7 +35,7 @@
 }
 .pillar li svg {
   flex: none;
-  color: var(--c-gold);
+  color: var(--accent);
 }
 .faqGrid {
   display: grid;
@@ -49,7 +46,7 @@
 }
 .otherServices > p {
   font-weight: 600;
-  color: var(--c-text);
+  color: var(--text);
   font-size: var(--fs-sm);
 }
 .otherServices ul {
@@ -77,7 +74,7 @@
   margin-bottom: var(--sp-3);
 }
 .caseText p {
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 .caseText p + p {
   margin-top: var(--sp-3);
@@ -95,7 +92,7 @@
   font-weight: 500;
 }
 .scope svg {
-  color: var(--c-gold-ink);
+  color: var(--accent);
 }
 @media (min-width: 900px) {
   .pillars {

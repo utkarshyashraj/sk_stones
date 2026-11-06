@@ -2,26 +2,7 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: var(--c-ink-950);
-  color: var(--c-text-dark);
-}
-.heroBg {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-}
-.heroBg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(11, 11, 11, 0.94) 0%,
-      rgba(11, 11, 11, 0.78) 45%,
-      rgba(11, 11, 11, 0.35) 100%
-    ),
-    linear-gradient(0deg, rgba(11, 11, 11, 0.9) 0%, transparent 35%);
+  color: var(--text);
 }
 .heroInner {
   padding-block: clamp(4rem, 3rem + 6vw, 8rem) var(--sp-10);
@@ -36,7 +17,7 @@
 .heroLead {
   max-width: 38rem;
   margin-top: var(--sp-6);
-  color: #e1dbcf;
+  color: var(--text-2);
   font-size: var(--fs-md);
 }
 .heroActions {
@@ -74,12 +55,12 @@
 }
 .videoNote p:last-child {
   margin-top: var(--sp-2);
-  color: var(--c-text-muted);
+  color: var(--text-2);
   font-size: var(--fs-sm);
 }
 .aboutText {
   margin-top: var(--sp-5);
-  color: var(--c-text-muted);
+  color: var(--text-2);
   font-size: var(--fs-md);
 }
 .pillars {
@@ -90,17 +71,8 @@
   padding: 0;
 }
 .pillars li {
-  display: grid;
-  grid-template-columns: 32px 1fr;
-  gap: var(--sp-3);
-}
-.pillarIcon {
-  width: 32px;
-  height: 32px;
-  padding: 6px;
-  border-radius: var(--radius-pill);
-  background: var(--c-gold-tint);
-  color: var(--c-gold-ink);
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--line);
 }
 .pillars h3 {
   font-family: var(--font-sans);
@@ -109,7 +81,7 @@
 }
 .pillars p {
   margin-top: 2px;
-  color: var(--c-text-muted);
+  color: var(--text-2);
   font-size: var(--fs-sm);
 }
 .processHead {
@@ -119,7 +91,7 @@
   font-size: var(--fs-2xl);
 }
 .caseWrap {
-  color: var(--c-text-dark);
+  color: var(--text);
 }
 .faq {
   display: grid;
@@ -141,4 +113,9 @@
     gap: var(--sp-16);
     align-items: start;
   }
+}
+
+.hero {
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
 }

@@ -1,40 +1,49 @@
 /*
- * S K Stones design tokens.
- * Contrast (WCAG 2.2): gold #C9A227 on --c-ink-950 = 8.1:1 · --c-gold-ink #866611 on --c-stone-50 = 5.0:1
- * --c-ink-900 text on --c-gold = 7.7:1 · --c-text-muted-dark on --c-ink-950 = 9.3:1 · --c-text-muted on --c-stone-50 = 7.1:1
- * Never put --c-gold text on light backgrounds (2.4:1) — use --c-gold-ink.
+ * S K Stones design tokens — matte graphite luxury showroom.
+ * Solid graphite surfaces; champagne is the single accent; natural stone photography is the visual focus.
+ *
+ * Contrast (WCAG 2.2, on --bg #151514): --text 16.4:1 · --text-2 8.6:1 · --accent 7.9:1 · --text-3 5.6:1
+ * On --surface #242320:                  --text 14.0:1 · --text-2 7.3:1 · --accent 6.7:1 · --text-3 4.8:1
+ * --bg text on --accent (buttons) 7.9:1.
  */
 :root {
-  /* Brand */
-  --c-gold: #c9a227;
-  --c-gold-bright: #e0b83a;
-  --c-gold-deep: #9b7b1e;
-  --c-gold-ink: #866611;
-  --c-gold-tint: rgba(201, 162, 39, 0.12);
+  color-scheme: dark;
 
-  /* Neutrals */
-  --c-ink-950: #0b0b0b;
-  --c-ink-900: #111111;
-  --c-ink-850: #171614;
-  --c-ink-800: #1f1d1a;
-  --c-ink-700: #2c2a26;
-  --c-stone-50: #faf7f1;
-  --c-stone-100: #f3eee4;
-  --c-stone-200: #e7e0d2;
-  --c-stone-300: #d6cdbb;
-  --c-white: #ffffff;
+  /* Surfaces */
+  --bg: #151514;
+  --bg-raised: #1c1b19;
+  --surface: #242320;
+  --surface-2: #2d2b28;
 
-  --c-text: #1b1a17;
-  --c-text-muted: #57534b;
-  --c-text-dark: #f5f1e8;
-  --c-text-muted-dark: #b8b2a7;
-  --c-border: #e2dacb;
-  --c-border-dark: rgba(255, 255, 255, 0.12);
-  --c-danger: #b42318;
-  --c-danger-dark: #ff8a80;
-  --c-success: #1e7a46;
-  --c-whatsapp: #1fae55;
-  --c-whatsapp-ink: #0f7a39;
+  /* Typography */
+  --text: #f5f1e9;
+  --text-2: #b5b0a7;
+  --text-3: #979187; /* metadata only; AA on every surface */
+
+  /* Champagne accent */
+  --accent: #c6a875;
+  --accent-hover: #d4ba8a;
+  --accent-2: #a98c5f;
+  --accent-tint: rgba(198, 168, 117, 0.1);
+
+  /* Lines */
+  --line: #35332e;
+  --line-strong: #4a4740;
+
+  /* Functional */
+  --white: #ffffff;
+  --danger: #f08a7e;
+  --whatsapp: #0f7a39;
+
+  /* Natural stone photography used once, in the homepage hero (scripts/make-textures.mjs). */
+  --stone-hero: image-set(
+    url('/images/textures/nero-portoro-slab-1920.avif') type('image/avif'),
+    url('/images/textures/nero-portoro-slab-1920.webp') type('image/webp')
+  );
+  --stone-hero-sm: image-set(
+    url('/images/textures/nero-portoro-slab-960.avif') type('image/avif'),
+    url('/images/textures/nero-portoro-slab-960.webp') type('image/webp')
+  );
 
   /* Typography */
   --font-serif: var(--font-playfair), 'Playfair Display', Georgia, 'Times New Roman', serif;
@@ -48,9 +57,9 @@
   --fs-2xl: clamp(1.625rem, 1.25rem + 1.5vw, 2.25rem);
   --fs-3xl: clamp(2rem, 1.4rem + 2.4vw, 3rem);
   --fs-4xl: clamp(2.375rem, 1.5rem + 3.6vw, 4rem);
-  --lh-tight: 1.15;
+  --lh-tight: 1.12;
   --lh-snug: 1.3;
-  --lh-body: 1.65;
+  --lh-body: 1.7;
 
   /* Spacing (4px base) */
   --sp-1: 0.25rem;
@@ -68,14 +77,13 @@
   --gutter: clamp(1rem, 0.5rem + 2vw, 2rem);
   --container: 1240px;
 
-  /* Shape & depth */
-  --radius-sm: 6px;
-  --radius: 10px;
-  --radius-lg: 16px;
+  /* Shape & depth (understated: hairlines over shadows) */
+  --radius-sm: 4px;
+  --radius: 6px;
+  --radius-lg: 10px;
   --radius-pill: 999px;
-  --shadow-sm: 0 1px 2px rgba(17, 17, 17, 0.06), 0 2px 8px rgba(17, 17, 17, 0.05);
-  --shadow: 0 10px 30px rgba(17, 17, 17, 0.1);
-  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.35);
+  --shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.55);
 
   /* Motion */
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);

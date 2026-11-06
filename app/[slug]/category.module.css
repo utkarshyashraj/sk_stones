@@ -8,13 +8,13 @@
 }
 .apps li {
   padding: 4px 12px;
-  border: 1px solid rgba(201, 162, 39, 0.45);
+  border: 1px solid rgba(198, 168, 117, 0.45);
   border-radius: var(--radius-pill);
-  color: var(--c-text-dark);
+  color: var(--text);
   font-size: var(--fs-xs);
 }
 .count {
-  color: var(--c-text-muted);
+  color: var(--text-2);
   font-family: var(--font-sans);
   font-size: 0.6em;
   font-weight: 400;
@@ -35,7 +35,7 @@
 }
 .overviewText {
   margin-top: var(--sp-5);
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 .bullets {
   display: grid;
@@ -52,7 +52,7 @@
 }
 .bullets svg {
   flex: none;
-  color: var(--c-gold-ink);
+  color: var(--accent);
 }
 .enquiry {
   max-width: 44rem;
@@ -60,7 +60,7 @@
 }
 .enquiry p {
   margin-top: var(--sp-4);
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 .enquiryActions {
   display: flex;

@@ -9,26 +9,14 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--sp-3);
+  gap: 0 var(--sp-8);
   list-style: none;
   padding: 0;
+  border-top: 1px solid var(--line);
 }
 .cards li {
-  display: grid;
-  grid-template-columns: 40px 1fr;
-  gap: var(--sp-3);
-  padding: var(--sp-4);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius);
-  background: var(--c-white);
-}
-.cards li > svg {
-  width: 40px;
-  height: 40px;
-  padding: 9px;
-  border-radius: var(--radius-pill);
-  background: var(--c-gold-tint);
-  color: var(--c-gold-ink);
+  padding: var(--sp-4) 0;
+  border-bottom: 1px solid var(--line);
 }
 .cards h2 {
   font-family: var(--font-sans);
@@ -36,7 +24,7 @@
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 .cards a:not(:global(.link-arrow)),
 .cards p {
@@ -47,7 +35,7 @@
   text-decoration: none;
 }
 .cards a:not(:global(.link-arrow)):hover {
-  color: var(--c-gold-ink);
+  color: var(--accent);
   text-decoration: underline;
 }
 .map {
@@ -55,8 +43,8 @@
   overflow: hidden;
   aspect-ratio: 4 / 3;
   border-radius: var(--radius);
-  border: 1px solid var(--c-border);
-  background: var(--c-stone-200);
+  border: 1px solid var(--line);
+  background: var(--surface-2);
 }
 .map iframe {
   width: 100%;

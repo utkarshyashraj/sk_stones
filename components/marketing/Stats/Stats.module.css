@@ -3,9 +3,9 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1px;
   overflow: hidden;
-  border: 1px solid rgba(201, 162, 39, 0.3);
+  border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  background: rgba(201, 162, 39, 0.3);
+  background: var(--line);
 }
 .stat {
   display: flex;
@@ -13,7 +13,7 @@
   justify-content: center;
   gap: 2px;
   padding: var(--sp-5) var(--sp-4);
-  background: rgba(17, 17, 17, 0.92);
+  background: var(--bg);
   text-align: center;
 }
 .value {
@@ -21,27 +21,26 @@
   font-family: var(--font-serif);
   font-size: var(--fs-2xl);
   font-weight: 600;
-  color: var(--c-gold);
+  color: var(--accent);
   line-height: 1.1;
 }
 .label {
-  color: var(--c-text-muted-dark);
+  color: var(--text-2);
   font-size: var(--fs-xs);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 .light {
-  border-color: var(--c-border);
-  background: var(--c-border);
+  border-color: var(--line);
+  background: var(--line);
 }
 .light .stat {
-  background: var(--c-white);
+  background: var(--surface);
 }
 .light .value {
-  color: var(--c-gold-ink);
+  color: var(--accent);
 }
 .light .label {
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 @media (min-width: 768px) {
   .stats {

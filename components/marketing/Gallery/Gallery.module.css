@@ -17,7 +17,7 @@
   border: 0;
   overflow: hidden;
   border-radius: var(--radius);
-  background: var(--c-stone-200);
+  background: var(--surface-2);
   cursor: zoom-in;
 }
 .item:first-child .thumb {
@@ -38,8 +38,8 @@
   width: 36px;
   height: 36px;
   border-radius: var(--radius-pill);
-  background: rgba(11, 11, 11, 0.7);
-  color: var(--c-white);
+  background: rgba(16, 16, 15, 0.7);
+  color: var(--white);
 }
 .dialog {
   width: 100vw;
@@ -50,7 +50,7 @@
   padding: 0;
   border: 0;
   background: rgba(8, 8, 8, 0.97);
-  color: var(--c-white);
+  color: var(--white);
 }
 .dialog::backdrop {
   background: rgba(0, 0, 0, 0.9);
@@ -77,7 +77,7 @@
   justify-content: center;
   gap: var(--sp-4);
   font-size: var(--fs-sm);
-  color: var(--c-text-muted-dark);
+  color: var(--text-2);
 }
 .counter {
   font-variant-numeric: tabular-nums;
@@ -91,7 +91,7 @@
   border: 0;
   border-radius: var(--radius-pill);
   background: rgba(255, 255, 255, 0.12);
-  color: var(--c-white);
+  color: var(--white);
 }
 .ctrl:hover {
   background: rgba(255, 255, 255, 0.24);

@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { CTA } from '@/components/marketing/CTA/CTA';
 import { PageHero } from '@/components/marketing/PageHero/PageHero';
 import { Stats } from '@/components/marketing/Stats/Stats';
-import { Icon } from '@/components/ui/Icon';
 import { Picture } from '@/components/ui/Picture';
 import { about, companyStats } from '@/content/pages';
 import { getSiteImage } from '@/lib/images';
@@ -25,7 +24,6 @@ export default function AboutPage() {
           { name: 'Home', href: '/' },
           { name: 'About Us', href: '/about' },
         ]}
-        eyebrow="About S K Stones India"
         title={
           <>
             {about.hero.heading} <span className="accent">{about.hero.headingAccent}</span>
@@ -35,15 +33,13 @@ export default function AboutPage() {
         aside={{ image: getSiteImage('about-showroom'), alt: 'Marble flooring in a modern interior' }}
         actions={
           <Link href="/contact" className="btn btn--primary">
-            Contact us <Icon name="arrow-right" />
+            Contact us
           </Link>
         }
       >
-        <ul className={styles.points}>
+        <ul className={`dash-list ${styles.points}`}>
           {about.hero.points.map((p) => (
-            <li key={p}>
-              <Icon name="check" size={16} /> {p}
-            </li>
+            <li key={p}>{p}</li>
           ))}
         </ul>
       </PageHero>
@@ -73,7 +69,6 @@ export default function AboutPage() {
             />
           </div>
           <div>
-            <p className="eyebrow">Our purpose</p>
             <h2 id="purpose-title">Building purpose through continuous growth</h2>
             <ol className={styles.purpose}>
               {about.purpose.map((p, i) => (
@@ -95,7 +90,6 @@ export default function AboutPage() {
       <section className="section section--tint" aria-labelledby="why-title">
         <div className="container">
           <div className="section-head section-head--center">
-            <p className="eyebrow">Why choose us</p>
             <h2 id="why-title">Why choose S K Stones India?</h2>
             <p>
               Committed to quality, precision, and client satisfaction. Our expertise spans across
@@ -124,7 +118,6 @@ export default function AboutPage() {
             />
           </div>
           <div>
-            <p className="eyebrow">From the founder</p>
             <h2 id="founder-title">{about.founder.name}</h2>
             <p className={styles.role}>{about.founder.role}</p>
             <div className={`prose ${styles.founderText}`}>
@@ -139,7 +132,6 @@ export default function AboutPage() {
       <section className="section section--tint" aria-labelledby="team-title">
         <div className="container">
           <div className="section-head">
-            <p className="eyebrow">Our people</p>
             <h2 id="team-title">Our expert team</h2>
             <p>
               Our skilled designers, engineers, and craftsmen work together to deliver precise stone

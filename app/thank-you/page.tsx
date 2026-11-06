@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Icon } from '@/components/ui/Icon';
 import { buildMetadata } from '@/lib/seo';
-import { telHref, whatsappHref } from '@/lib/site';
+import { whatsappHref } from '@/lib/site';
 import { ClearShortlistOnArrival } from './ClearShortlistOnArrival';
 import styles from './thank-you.module.css';
 
@@ -33,9 +33,6 @@ export default function ThankYouPage() {
           <Link href="/products" className="btn btn--outline">
             Explore stones
           </Link>
-          <a href={telHref} className="btn btn--primary">
-            <Icon name="phone" /> Call now
-          </a>
           <a
             href={whatsappHref('Hi S K Stones India, I just sent a quote request.')}
             className="btn btn--whatsapp"

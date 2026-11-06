@@ -4,22 +4,16 @@
 }
 .featured {
   position: relative;
-  padding: var(--sp-8);
-  border-radius: var(--radius-lg);
-  background:
-    radial-gradient(500px 200px at 0% 0%, rgba(201, 162, 39, 0.2), transparent 70%), var(--c-ink-900);
-  color: var(--c-text-dark);
-}
-.quoteIcon {
-  color: var(--c-gold);
+  padding: var(--sp-2) 0 var(--sp-2) var(--sp-6);
+  border-left: 1px solid var(--accent);
+  color: var(--text);
 }
 .featuredHeading {
-  margin-top: var(--sp-4);
   font-size: var(--fs-xs);
-  font-weight: 600;
-  letter-spacing: 0.16em;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--c-gold);
+  color: var(--accent);
 }
 .featuredQuote {
   margin-top: var(--sp-3);
@@ -29,7 +23,7 @@
 }
 .featuredName {
   margin-top: var(--sp-5);
-  color: var(--c-text-muted-dark);
+  color: var(--text-2);
   font-weight: 500;
 }
 .grid {
@@ -45,25 +39,18 @@
 .card {
   display: flex;
   flex-direction: column;
-  gap: var(--sp-3);
+  gap: var(--sp-4);
   flex: 1;
-  padding: var(--sp-6);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-lg);
-  background: var(--c-white);
-}
-.stars {
-  display: flex;
-  gap: 2px;
-  color: var(--c-gold-ink);
+  padding-top: var(--sp-5);
+  border-top: 1px solid var(--line);
 }
 .quote {
-  color: var(--c-text);
+  color: var(--text);
 }
 .name {
   margin-top: auto;
   font-weight: 600;
-  color: var(--c-text-muted);
+  color: var(--text-2);
   font-size: var(--fs-sm);
 }
 @media (min-width: 720px) {

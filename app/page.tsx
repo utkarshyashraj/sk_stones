@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { preload } from 'react-dom';
 import { CaseStudies } from '@/components/marketing/CaseStudies/CaseStudies';
 import { Collections } from '@/components/marketing/Collections/Collections';
 import { CTA } from '@/components/marketing/CTA/CTA';
@@ -9,7 +10,6 @@ import { Stats } from '@/components/marketing/Stats/Stats';
 import { Testimonials } from '@/components/marketing/Testimonials/Testimonials';
 import { VideoFeature } from '@/components/marketing/VideoFeature/VideoFeature';
 import { Icon } from '@/components/ui/Icon';
-import { Picture } from '@/components/ui/Picture';
 import { caseStudies, companyStats, featuredReview, home, process, testimonials } from '@/content/pages';
 import { imageOrNull, topLevelCategories } from '@/lib/catalog';
 import { getSiteImage } from '@/lib/images';
@@ -26,23 +26,28 @@ export const metadata = buildMetadata({
 });
 
 export default function HomePage() {
+  // Hero backdrop is a CSS background (discovered late) — fetch it immediately.
+  preload('/images/textures/nero-portoro-slab-960.avif', {
+    as: 'image',
+    type: 'image/avif',
+    imageSrcSet:
+      '/images/textures/nero-portoro-slab-960.avif 960w, /images/textures/nero-portoro-slab-1920.avif 1920w',
+    imageSizes: '100vw',
+    fetchPriority: 'high',
+  });
   const categories = topLevelCategories();
   return (
     <>
       {/* 1. Hero */}
-      <section className={`${styles.hero} on-dark`} aria-labelledby="hero-title">
-        <div className={styles.heroBg} aria-hidden="true">
-          <Picture image={getSiteImage('about-showroom')} alt="" sizes="100vw" priority fill />
-        </div>
+      <section className={`${styles.hero} stone-hero`} aria-labelledby="hero-title">
         <div className={`container ${styles.heroInner}`}>
-          <p className="eyebrow">{home.hero.eyebrow}</p>
           <h1 id="hero-title" className={styles.heroTitle}>
             {home.hero.heading} <span className="accent">{home.hero.headingAccent}</span>
           </h1>
           <p className={styles.heroLead}>{home.hero.lead}</p>
           <div className={styles.heroActions}>
             <Link href="/contact#quote" className="btn btn--primary">
-              Get a Quote <Icon name="arrow-right" />
+              Get a Quote
             </Link>
             <Link href="/products" className="btn btn--outline">
               Browse Stones
@@ -59,7 +64,6 @@ export default function HomePage() {
         <div className="container">
           <div className={styles.headRow}>
             <div className="section-head">
-              <p className="eyebrow">Our collections</p>
               <h2 id="collections-title">
                 460+ stones, <span className="accent">one showroom</span>
               </h2>
@@ -69,14 +73,14 @@ export default function HomePage() {
               </p>
             </div>
             <Link href="/products" className="link-arrow">
-              View all products <Icon name="arrow-right" />
+              View all products
             </Link>
           </div>
           <Collections
+            dense
             items={categories.map((c) => ({
               href: `/${c.slug}`,
               name: c.name,
-              description: c.cardDescription,
               count: c.productCount,
               image: imageOrNull(c.cardImage),
             }))}
@@ -85,18 +89,16 @@ export default function HomePage() {
       </section>
 
       {/* 3. About */}
-      <section className="section section--tint" aria-labelledby="about-title">
+      <section className="section" aria-labelledby="about-title">
         <div className={`container ${styles.about}`}>
           <div className={styles.aboutMedia}>
             <VideoFeature title={home.about.video.title} />
             <div className={styles.videoNote}>
-              <p className="eyebrow">{home.about.video.label}</p>
               <h3>{home.about.video.title}</h3>
               <p>{home.about.video.text}</p>
             </div>
           </div>
           <div>
-            <p className="eyebrow">{home.about.eyebrow}</p>
             <h2 id="about-title">
               {home.about.heading} <span className="accent">{home.about.headingAccent}</span>
             </h2>
@@ -104,7 +106,6 @@ export default function HomePage() {
             <ul className={styles.pillars}>
               {home.about.pillars.map((p) => (
                 <li key={p.title}>
-                  <Icon name="check" className={styles.pillarIcon} />
                   <div>
                     <h3>{p.title}</h3>
                     <p>{p.text}</p>
@@ -113,17 +114,16 @@ export default function HomePage() {
               ))}
             </ul>
             <Link href="/about" className="link-arrow">
-              More about S K Stones India <Icon name="arrow-right" />
+              More about S K Stones India
             </Link>
           </div>
         </div>
       </section>
 
       {/* 4. Services & process */}
-      <section className="section section--dark" aria-labelledby="services-title">
+      <section className="section section--tint" aria-labelledby="services-title">
         <div className="container">
           <div className="section-head">
-            <p className="eyebrow">What we do</p>
             <h2 id="services-title">
               Supply, fabrication <span className="accent">&amp; installation</span>
             </h2>
@@ -141,17 +141,16 @@ export default function HomePage() {
       </section>
 
       {/* 5. Projects */}
-      <section className="section" aria-labelledby="projects-title">
+      <section className="section section--tint" aria-labelledby="projects-title">
         <div className="container">
           <div className={styles.headRow}>
             <div className="section-head">
-              <p className="eyebrow">Projects &amp; portfolio</p>
               <h2 id="projects-title">
                 Trusted for hotels, villas <span className="accent">&amp; infrastructure</span>
               </h2>
             </div>
             <Link href="/projects" className="link-arrow">
-              See all projects <Icon name="arrow-right" />
+              See all projects
             </Link>
           </div>
           <div className={`${styles.caseWrap} on-dark`}>
@@ -169,11 +168,10 @@ export default function HomePage() {
       </section>
 
       {/* 6. Testimonials */}
-      <section className="section section--tint" aria-labelledby="reviews-title">
+      <section className="section" aria-labelledby="reviews-title">
         <div className="container">
           <div className={styles.headRow}>
             <div className="section-head">
-              <p className="eyebrow">Client reviews</p>
               <h2 id="reviews-title">What architects and homeowners say</h2>
             </div>
             <a href={site.reviewsUrl} className="link-arrow" target="_blank" rel="noopener noreferrer">
@@ -188,15 +186,7 @@ export default function HomePage() {
       <section className="section" aria-labelledby="faq-title">
         <div className={`container ${styles.faq}`}>
           <div className="section-head">
-            <p className="eyebrow">Got questions?</p>
             <h2 id="faq-title">Frequently asked questions</h2>
-            <p>
-              Still have questions? Call {site.phone.display} or message us on WhatsApp — we&apos;re happy to
-              help.
-            </p>
-            <Link href="/contact" className="btn btn--outline">
-              Contact us
-            </Link>
           </div>
           <FAQ items={home.faqs} />
         </div>

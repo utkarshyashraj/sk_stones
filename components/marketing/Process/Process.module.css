@@ -8,16 +8,14 @@
 }
 .step {
   position: relative;
-  padding: var(--sp-5);
-  border-top: 2px solid var(--c-gold);
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 0 0 var(--radius) var(--radius);
+  padding: var(--sp-5) 0 0;
+  border-top: 1px solid var(--line-strong);
 }
 .num {
   font-family: var(--font-serif);
   font-size: var(--fs-2xl);
   font-weight: 600;
-  color: var(--c-gold);
+  color: var(--accent);
 }
 .title {
   margin-top: var(--sp-2);
@@ -25,7 +23,7 @@
 }
 .text {
   margin-top: var(--sp-2);
-  color: var(--c-text-muted-dark);
+  color: var(--text-2);
   font-size: var(--fs-sm);
 }
 @media (min-width: 640px) {

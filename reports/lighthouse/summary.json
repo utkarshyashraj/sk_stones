@@ -1,13 +1,13 @@
 {
   "base": "http://localhost:4321",
-  "ranAt": "2026-11-06T17:39:58.777Z",
-  "runs": 3,
+  "ranAt": "2026-11-06T20:27:03.433Z",
+  "runs": 1,
   "medians": [
     {
       "page": "/",
       "formFactor": "mobile",
-      "runs": 3,
-      "performance": 87,
+      "runs": 1,
+      "performance": 84,
       "accessibility": 100,
       "best-practices": 100,
       "seo": 100
@@ -15,8 +15,8 @@
     {
       "page": "/",
       "formFactor": "desktop",
-      "runs": 3,
-      "performance": 99,
+      "runs": 1,
+      "performance": 100,
       "accessibility": 100,
       "best-practices": 100,
       "seo": 100
@@ -24,8 +24,8 @@
     {
       "page": "/kota-stones",
       "formFactor": "mobile",
-      "runs": 3,
-      "performance": 99,
+      "runs": 1,
+      "performance": 85,
       "accessibility": 100,
       "best-practices": 100,
       "seo": 100
@@ -33,43 +33,7 @@
     {
       "page": "/kota-stones",
       "formFactor": "desktop",
-      "runs": 3,
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100
-    },
-    {
-      "page": "/tiles",
-      "formFactor": "mobile",
-      "runs": 3,
-      "performance": 83,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100
-    },
-    {
-      "page": "/tiles",
-      "formFactor": "desktop",
-      "runs": 3,
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100
-    },
-    {
-      "page": "/products",
-      "formFactor": "mobile",
-      "runs": 3,
-      "performance": 99,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100
-    },
-    {
-      "page": "/products",
-      "formFactor": "desktop",
-      "runs": 3,
+      "runs": 1,
       "performance": 100,
       "accessibility": 100,
       "best-practices": 100,
@@ -78,7 +42,7 @@
     {
       "page": "/contact",
       "formFactor": "mobile",
-      "runs": 3,
+      "runs": 1,
       "performance": 96,
       "accessibility": 100,
       "best-practices": 100,
@@ -87,25 +51,7 @@
     {
       "page": "/contact",
       "formFactor": "desktop",
-      "runs": 3,
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100
-    },
-    {
-      "page": "/installations",
-      "formFactor": "mobile",
-      "runs": 3,
-      "performance": 90,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100
-    },
-    {
-      "page": "/installations",
-      "formFactor": "desktop",
-      "runs": 3,
+      "runs": 1,
       "performance": 100,
       "accessibility": 100,
       "best-practices": 100,
@@ -117,16 +63,17 @@
       "run": 1,
       "page": "/",
       "formFactor": "mobile",
-      "performance": 87,
+      "performance": 84,
       "accessibility": 100,
       "best-practices": 100,
       "seo": 100,
-      "LCP": "4.0 s",
+      "LCP": "3.8 s",
       "CLS": "0",
-      "TBT": "70 ms",
+      "TBT": "250 ms",
       "FCP": "0.9 s",
       "failing": [
         "largest-contentful-paint",
+        "total-blocking-time",
         "max-potential-fid",
         "interactive",
         "unused-javascript",
@@ -139,56 +86,15 @@
       "run": 1,
       "page": "/",
       "formFactor": "desktop",
-      "performance": 99,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.8 s",
-      "CLS": "0",
-      "TBT": "0 ms",
-      "FCP": "0.2 s",
-      "failing": [
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 1,
-      "page": "/kota-stones",
-      "formFactor": "mobile",
-      "performance": 99,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.8 s",
-      "CLS": "0",
-      "TBT": "130 ms",
-      "FCP": "0.8 s",
-      "failing": [
-        "max-potential-fid",
-        "label-content-name-mismatch",
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 1,
-      "page": "/kota-stones",
-      "formFactor": "desktop",
       "performance": 100,
       "accessibility": 100,
       "best-practices": 100,
       "seo": 100,
-      "LCP": "0.7 s",
+      "LCP": "0.8 s",
       "CLS": "0",
-      "TBT": "0 ms",
+      "TBT": "20 ms",
       "FCP": "0.2 s",
       "failing": [
-        "label-content-name-mismatch",
         "unused-javascript",
         "cache-insight",
         "image-delivery-insight",
@@ -197,29 +103,31 @@
     },
     {
       "run": 1,
-      "page": "/tiles",
+      "page": "/kota-stones",
       "formFactor": "mobile",
-      "performance": 89,
+      "performance": 85,
       "accessibility": 100,
       "best-practices": 100,
       "seo": 100,
       "LCP": "3.6 s",
       "CLS": "0",
-      "TBT": "130 ms",
-      "FCP": "0.8 s",
+      "TBT": "270 ms",
+      "FCP": "0.9 s",
       "failing": [
         "largest-contentful-paint",
+        "total-blocking-time",
         "max-potential-fid",
-        "interactive",
+        "label-content-name-mismatch",
         "unused-javascript",
         "cache-insight",
+        "forced-reflow-insight",
         "image-delivery-insight",
         "legacy-javascript-insight"
       ]
     },
     {
       "run": 1,
-      "page": "/tiles",
+      "page": "/kota-stones",
       "formFactor": "desktop",
       "performance": 100,
       "accessibility": 100,
@@ -227,52 +135,13 @@
       "seo": 100,
       "LCP": "0.8 s",
       "CLS": "0",
-      "TBT": "0 ms",
+      "TBT": "10 ms",
       "FCP": "0.3 s",
       "failing": [
+        "label-content-name-mismatch",
         "unused-javascript",
         "cache-insight",
         "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 1,
-      "page": "/products",
-      "formFactor": "mobile",
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.9 s",
-      "CLS": "0",
-      "TBT": "90 ms",
-      "FCP": "0.9 s",
-      "failing": [
-        "max-potential-fid",
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 1,
-      "page": "/products",
-      "formFactor": "desktop",
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.7 s",
-      "CLS": "0",
-      "TBT": "0 ms",
-      "FCP": "0.2 s",
-      "failing": [
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "lcp-discovery-insight",
         "legacy-javascript-insight"
       ]
     },
@@ -280,18 +149,20 @@
       "run": 1,
       "page": "/contact",
       "formFactor": "mobile",
-      "performance": 99,
+      "performance": 96,
       "accessibility": 100,
       "best-practices": 100,
       "seo": 100,
-      "LCP": "0.8 s",
+      "LCP": "0.9 s",
       "CLS": "0",
-      "TBT": "140 ms",
-      "FCP": "0.8 s",
+      "TBT": "230 ms",
+      "FCP": "0.9 s",
       "failing": [
+        "total-blocking-time",
         "max-potential-fid",
         "unused-javascript",
         "cache-insight",
+        "forced-reflow-insight",
         "legacy-javascript-insight"
       ]
     },
@@ -304,540 +175,15 @@
       "best-practices": 100,
       "seo": 100,
       "LCP": "0.2 s",
-      "CLS": "0.004",
-      "TBT": "0 ms",
-      "FCP": "0.2 s",
-      "failing": [
-        "unused-javascript",
-        "cache-insight",
-        "font-display-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 1,
-      "page": "/installations",
-      "formFactor": "mobile",
-      "performance": 87,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "3.5 s",
-      "CLS": "0",
-      "TBT": "220 ms",
-      "FCP": "0.8 s",
-      "failing": [
-        "largest-contentful-paint",
-        "total-blocking-time",
-        "max-potential-fid",
-        "unused-javascript",
-        "cache-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 1,
-      "page": "/installations",
-      "formFactor": "desktop",
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.7 s",
-      "CLS": "0",
-      "TBT": "0 ms",
-      "FCP": "0.2 s",
-      "failing": [
-        "unused-javascript",
-        "cache-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 2,
-      "page": "/",
-      "formFactor": "mobile",
-      "performance": 88,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "3.9 s",
-      "CLS": "0",
-      "TBT": "90 ms",
-      "FCP": "0.9 s",
-      "failing": [
-        "largest-contentful-paint",
-        "max-potential-fid",
-        "interactive",
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 2,
-      "page": "/",
-      "formFactor": "desktop",
-      "performance": 99,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.8 s",
-      "CLS": "0",
-      "TBT": "0 ms",
-      "FCP": "0.2 s",
-      "failing": [
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 2,
-      "page": "/kota-stones",
-      "formFactor": "mobile",
-      "performance": 99,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.8 s",
-      "CLS": "0",
-      "TBT": "140 ms",
-      "FCP": "0.8 s",
-      "failing": [
-        "max-potential-fid",
-        "label-content-name-mismatch",
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 2,
-      "page": "/kota-stones",
-      "formFactor": "desktop",
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.8 s",
-      "CLS": "0",
-      "TBT": "0 ms",
-      "FCP": "0.3 s",
-      "failing": [
-        "label-content-name-mismatch",
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 2,
-      "page": "/tiles",
-      "formFactor": "mobile",
-      "performance": 83,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "3.7 s",
-      "CLS": "0",
-      "TBT": "310 ms",
-      "FCP": "0.9 s",
-      "failing": [
-        "largest-contentful-paint",
-        "total-blocking-time",
-        "max-potential-fid",
-        "interactive",
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 2,
-      "page": "/tiles",
-      "formFactor": "desktop",
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.8 s",
-      "CLS": "0",
-      "TBT": "0 ms",
-      "FCP": "0.3 s",
-      "failing": [
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 2,
-      "page": "/products",
-      "formFactor": "mobile",
-      "performance": 99,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.9 s",
-      "CLS": "0",
-      "TBT": "120 ms",
-      "FCP": "0.9 s",
-      "failing": [
-        "max-potential-fid",
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 2,
-      "page": "/products",
-      "formFactor": "desktop",
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.7 s",
-      "CLS": "0",
+      "CLS": "0.005",
       "TBT": "10 ms",
       "FCP": "0.2 s",
       "failing": [
         "unused-javascript",
         "cache-insight",
-        "image-delivery-insight",
-        "lcp-discovery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 2,
-      "page": "/contact",
-      "formFactor": "mobile",
-      "performance": 94,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.9 s",
-      "CLS": "0",
-      "TBT": "290 ms",
-      "FCP": "0.9 s",
-      "failing": [
-        "total-blocking-time",
-        "max-potential-fid",
-        "unused-javascript",
-        "cache-insight",
+        "font-display-insight",
         "forced-reflow-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 2,
-      "page": "/contact",
-      "formFactor": "desktop",
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.2 s",
-      "CLS": "0.004",
-      "TBT": "0 ms",
-      "FCP": "0.2 s",
-      "failing": [
-        "unused-javascript",
-        "cache-insight",
-        "font-display-insight",
         "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 2,
-      "page": "/installations",
-      "formFactor": "mobile",
-      "performance": 90,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "3.5 s",
-      "CLS": "0",
-      "TBT": "110 ms",
-      "FCP": "0.8 s",
-      "failing": [
-        "largest-contentful-paint",
-        "unused-javascript",
-        "cache-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 2,
-      "page": "/installations",
-      "formFactor": "desktop",
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.7 s",
-      "CLS": "0",
-      "TBT": "0 ms",
-      "FCP": "0.2 s",
-      "failing": [
-        "unused-javascript",
-        "cache-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 3,
-      "page": "/",
-      "formFactor": "mobile",
-      "performance": 87,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "4.0 s",
-      "CLS": "0",
-      "TBT": "120 ms",
-      "FCP": "0.9 s",
-      "failing": [
-        "largest-contentful-paint",
-        "max-potential-fid",
-        "interactive",
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 3,
-      "page": "/",
-      "formFactor": "desktop",
-      "performance": 99,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.8 s",
-      "CLS": "0",
-      "TBT": "0 ms",
-      "FCP": "0.2 s",
-      "failing": [
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 3,
-      "page": "/kota-stones",
-      "formFactor": "mobile",
-      "performance": 98,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.9 s",
-      "CLS": "0",
-      "TBT": "160 ms",
-      "FCP": "0.9 s",
-      "failing": [
-        "max-potential-fid",
-        "label-content-name-mismatch",
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 3,
-      "page": "/kota-stones",
-      "formFactor": "desktop",
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.8 s",
-      "CLS": "0",
-      "TBT": "10 ms",
-      "FCP": "0.3 s",
-      "failing": [
-        "label-content-name-mismatch",
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 3,
-      "page": "/tiles",
-      "formFactor": "mobile",
-      "performance": 78,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "3.9 s",
-      "CLS": "0",
-      "TBT": "410 ms",
-      "FCP": "0.9 s",
-      "failing": [
-        "largest-contentful-paint",
-        "total-blocking-time",
-        "max-potential-fid",
-        "interactive",
-        "mainthread-work-breakdown",
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 3,
-      "page": "/tiles",
-      "formFactor": "desktop",
-      "performance": 99,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.8 s",
-      "CLS": "0",
-      "TBT": "0 ms",
-      "FCP": "0.3 s",
-      "failing": [
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 3,
-      "page": "/products",
-      "formFactor": "mobile",
-      "performance": 96,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.9 s",
-      "CLS": "0",
-      "TBT": "240 ms",
-      "FCP": "0.9 s",
-      "failing": [
-        "total-blocking-time",
-        "max-potential-fid",
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 3,
-      "page": "/products",
-      "formFactor": "desktop",
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.7 s",
-      "CLS": "0",
-      "TBT": "40 ms",
-      "FCP": "0.2 s",
-      "failing": [
-        "unused-javascript",
-        "cache-insight",
-        "image-delivery-insight",
-        "lcp-discovery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 3,
-      "page": "/contact",
-      "formFactor": "mobile",
-      "performance": 96,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.8 s",
-      "CLS": "0",
-      "TBT": "210 ms",
-      "FCP": "0.8 s",
-      "failing": [
-        "total-blocking-time",
-        "max-potential-fid",
-        "unused-javascript",
-        "cache-insight",
-        "forced-reflow-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 3,
-      "page": "/contact",
-      "formFactor": "desktop",
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.3 s",
-      "CLS": "0.004",
-      "TBT": "0 ms",
-      "FCP": "0.3 s",
-      "failing": [
-        "unused-javascript",
-        "cache-insight",
-        "font-display-insight",
-        "image-delivery-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 3,
-      "page": "/installations",
-      "formFactor": "mobile",
-      "performance": 93,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "2.9 s",
-      "CLS": "0",
-      "TBT": "180 ms",
-      "FCP": "0.9 s",
-      "failing": [
-        "largest-contentful-paint",
-        "max-potential-fid",
-        "unused-javascript",
-        "cache-insight",
-        "legacy-javascript-insight"
-      ]
-    },
-    {
-      "run": 3,
-      "page": "/installations",
-      "formFactor": "desktop",
-      "performance": 100,
-      "accessibility": 100,
-      "best-practices": 100,
-      "seo": 100,
-      "LCP": "0.7 s",
-      "CLS": "0",
-      "TBT": "10 ms",
-      "FCP": "0.2 s",
-      "failing": [
-        "unused-javascript",
-        "cache-insight",
         "legacy-javascript-insight"
       ]
     }

@@ -24,7 +24,6 @@ export default function ProductsPage() {
           { name: 'Home', href: '/' },
           { name: 'Products', href: '/products' },
         ]}
-        eyebrow="Our collection"
         title={
           <>
             Our <span className="accent">products</span>

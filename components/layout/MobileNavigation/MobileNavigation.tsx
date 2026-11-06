@@ -6,7 +6,7 @@ import { useModalDialog } from '@/components/ui/useModalDialog';
 import { setShortlistOpen, useShortlist } from '@/components/shortlist/shortlist-store';
 import { openSearch } from '@/components/catalog/ProductSearch/search-store';
 import type { NavData } from '@/lib/nav';
-import { site, telHref, whatsappHref } from '@/lib/site';
+import { telHref, whatsappHref } from '@/lib/site';
 import styles from './MobileNavigation.module.css';
 
 interface Props {
@@ -121,9 +121,6 @@ export function MobileNavigation({ nav, isActive, open, onClose }: Props) {
       </nav>
 
       <div className={styles.ctas}>
-        <a className="btn btn--primary btn--block" href={telHref}>
-          <Icon name="phone" /> Call {site.phone.display}
-        </a>
         <a
           className="btn btn--whatsapp btn--block"
           href={whatsappHref('Hi S K Stones India, I have an enquiry.')}

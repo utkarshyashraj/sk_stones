@@ -320,7 +320,7 @@ export function QuoteForm() {
         {enhanced ? (
           <div className={styles.actions}>
             <button type="button" className="btn btn--primary" onClick={next}>
-              Continue <Icon name="arrow-right" />
+              Continue
             </button>
             <button
               type="submit"
@@ -481,11 +481,11 @@ export function QuoteForm() {
         <div className={styles.actions}>
           {enhanced ? (
             <button type="button" className="btn btn--outline" onClick={() => setStep(1)}>
-              <Icon name="chevron-left" /> Back
+              Back
             </button>
           ) : null}
           <button type="submit" className="btn btn--primary" disabled={submitting} aria-disabled={submitting}>
-            <Icon name="send" /> {submitting ? 'Sending…' : 'Get my custom quote'}
+            {submitting ? 'Sending…' : 'Get my custom quote'}
           </button>
         </div>
       </fieldset>

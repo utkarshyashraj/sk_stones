@@ -22,7 +22,6 @@ export default function ProjectsPage() {
           { name: 'Home', href: '/' },
           { name: 'Projects', href: '/projects' },
         ]}
-        eyebrow="Portfolio"
         title={
           <>
             Our <span className="accent">projects</span>
@@ -39,7 +38,6 @@ export default function ProjectsPage() {
       <section className="section section--dark" aria-labelledby="cases-title">
         <div className="container">
           <div className="section-head">
-            <p className="eyebrow">Featured case studies</p>
             <h2 id="cases-title">How we deliver at scale</h2>
           </div>
           <CaseStudies
@@ -56,7 +54,6 @@ export default function ProjectsPage() {
       <section className="section" aria-labelledby="gallery-title">
         <div className="container">
           <div className="section-head">
-            <p className="eyebrow">Full project gallery</p>
             <h2 id="gallery-title">See the craft</h2>
           </div>
           <Gallery

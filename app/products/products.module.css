@@ -7,13 +7,13 @@
   font-size: var(--fs-lg);
   padding-bottom: var(--sp-2);
   margin-bottom: var(--sp-2);
-  border-bottom: 2px solid var(--c-gold);
+  border-bottom: 2px solid var(--accent);
 }
 .group h3 a {
   text-decoration: none;
 }
 .group h3 a:hover {
-  color: var(--c-gold-ink);
+  color: var(--accent);
 }
 .group ul {
   list-style: none;
@@ -22,17 +22,17 @@
 .group li a {
   display: inline-block;
   padding: 0.3rem 0;
-  color: var(--c-text);
+  color: var(--text);
   font-size: var(--fs-sm);
   text-decoration: none;
 }
 .group li a:hover {
-  color: var(--c-gold-ink);
+  color: var(--accent);
   text-decoration: underline;
 }
 .group li span,
 .single {
-  color: var(--c-text-muted);
+  color: var(--text-2);
   font-size: var(--fs-sm);
 }
 @media (min-width: 640px) {

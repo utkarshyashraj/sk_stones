@@ -74,7 +74,6 @@ export default async function CategoryPage({ params }: Params) {
     <>
       <PageHero
         crumbs={categoryCrumbs(c.slug)}
-        eyebrow={c.name}
         title={c.hero.heading}
         lead={<p>{c.hero.description}</p>}
         aside={heroImage ? { image: heroImage, alt: `${c.name} — S K Stones India` } : null}
@@ -83,7 +82,6 @@ export default async function CategoryPage({ params }: Params) {
             {products.length ? (
               <a href="#products" className="btn btn--primary">
                 Explore {products.length} {products.length === 1 ? 'variety' : 'varieties'}{' '}
-                <Icon name="arrow-right" />
               </a>
             ) : null}
             <Link
@@ -108,7 +106,6 @@ export default async function CategoryPage({ params }: Params) {
         <section className="section" aria-labelledby="sub-title">
           <div className="container">
             <div className="section-head">
-              <p className="eyebrow">{c.name}</p>
               <h2 id="sub-title">Browse by collection</h2>
             </div>
             <Collections items={collectionCards(children)} compact={children.length > 3} />
@@ -130,7 +127,6 @@ export default async function CategoryPage({ params }: Params) {
               </div>
             ) : null}
             <div>
-              <p className="eyebrow">Product overview</p>
               <h2 id="overview-title">How we select {c.name.toLowerCase()}</h2>
               <div className={`prose ${styles.overviewText}`}>
                 {c.overview.paragraphs.map((p) => (
@@ -138,11 +134,9 @@ export default async function CategoryPage({ params }: Params) {
                 ))}
               </div>
               {c.overview.bullets.length ? (
-                <ul className={styles.bullets}>
+                <ul className={`dash-list ${styles.bullets}`}>
                   {c.overview.bullets.map((b) => (
-                    <li key={b}>
-                      <Icon name="check" size={16} /> {b}
-                    </li>
+                    <li key={b}>{b}</li>
                   ))}
                 </ul>
               ) : null}
@@ -184,7 +178,7 @@ export default async function CategoryPage({ params }: Params) {
                 href={`/contact?${new URLSearchParams({ name: c.name }).toString()}#quote`}
                 className="btn btn--primary"
               >
-                Request a quote <Icon name="arrow-right" />
+                Request a quote
               </Link>
               <a
                 className="btn btn--whatsapp"
@@ -203,7 +197,6 @@ export default async function CategoryPage({ params }: Params) {
         <section className="section section--tint" aria-labelledby="related-title">
           <div className="container">
             <div className="section-head">
-              <p className="eyebrow">More in {parent?.name}</p>
               <h2 id="related-title">Related collections</h2>
             </div>
             <Collections items={collectionCards(siblings)} compact />

@@ -2,9 +2,9 @@
   position: sticky;
   top: 0;
   z-index: var(--z-header);
-  background: var(--c-ink-950);
-  color: var(--c-text-dark);
-  border-bottom: 1px solid rgba(201, 162, 39, 0.18);
+  background: var(--bg);
+  color: var(--text);
+  border-bottom: 1px solid var(--line);
 }
 .bar {
   display: flex;
@@ -19,7 +19,7 @@
   align-items: center;
   gap: var(--sp-3);
   flex: none;
-  color: var(--c-text-dark);
+  color: var(--text);
   text-decoration: none;
 }
 .brandMark {
@@ -39,11 +39,11 @@
   white-space: nowrap;
 }
 .brandGold {
-  color: var(--c-gold);
+  color: var(--accent);
 }
 .brandFormerly {
   font-size: 0.6875rem;
-  color: var(--c-text-muted-dark);
+  color: var(--text-2);
   letter-spacing: 0.02em;
   white-space: nowrap;
 }
@@ -74,7 +74,7 @@
   padding: 0.6rem 0.8rem;
   border: 0;
   background: none;
-  color: var(--c-text-dark);
+  color: var(--text);
   font-size: var(--fs-sm);
   font-weight: 500;
   text-decoration: none;
@@ -89,7 +89,7 @@
   right: 0.8rem;
   bottom: 0.25rem;
   height: 2px;
-  background: var(--c-gold);
+  background: var(--accent);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--dur) var(--ease);
@@ -98,7 +98,7 @@
 .navLink[aria-expanded='true'],
 .navLink[aria-current='page'],
 .activeParent {
-  color: var(--c-gold);
+  color: var(--accent);
 }
 .navLink:hover::after,
 .navLink[aria-current='page']::after,
@@ -118,11 +118,11 @@
 .mega {
   position: absolute;
   top: calc(100% + 10px);
-  background: var(--c-white);
-  color: var(--c-text);
+  background: var(--surface);
+  color: var(--text);
   border-radius: var(--radius);
   box-shadow: var(--shadow-lg);
-  border-top: 3px solid var(--c-gold);
+  border: 1px solid var(--line);
 }
 .dropdown {
   left: 0;
@@ -151,20 +151,20 @@
   display: block;
   padding: 0.55rem 0.75rem;
   border-radius: var(--radius-sm);
-  color: var(--c-text);
+  color: var(--text);
   font-size: var(--fs-sm);
   text-decoration: none;
 }
 .dropdownLink:hover,
 .megaChild:hover,
 .megaParent:hover {
-  background: var(--c-stone-100);
-  color: var(--c-gold-ink);
+  background: var(--bg-raised);
+  color: var(--accent);
 }
 .dropdownLink[aria-current='page'],
 .megaChild[aria-current='page'],
 .megaParent[aria-current='page'] {
-  color: var(--c-gold-ink);
+  color: var(--accent);
   font-weight: 600;
 }
 .mega {
@@ -180,12 +180,13 @@
   gap: var(--sp-4);
   padding-bottom: var(--sp-4);
   margin-bottom: var(--sp-4);
-  border-bottom: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--line);
 }
 .megaTitle {
   font-family: var(--font-serif);
   font-size: var(--fs-lg);
   font-weight: 600;
+  color: var(--text);
 }
 .megaGrid {
   display: grid;
@@ -206,7 +207,7 @@
 }
 .megaChild {
   padding-block: 0.35rem;
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 
 /* ---------- Actions ---------- */
@@ -225,14 +226,14 @@
   border: 0;
   border-radius: var(--radius-pill);
   background: transparent;
-  color: var(--c-text-dark);
+  color: var(--text);
   transition:
     background-color var(--dur) var(--ease),
     color var(--dur) var(--ease);
 }
 .iconBtn:hover {
   background: rgba(255, 255, 255, 0.08);
-  color: var(--c-gold);
+  color: var(--accent);
 }
 .whatsapp:hover {
   color: #3ddc84;
@@ -245,8 +246,8 @@
   height: 18px;
   padding: 0 5px;
   border-radius: var(--radius-pill);
-  background: var(--c-gold);
-  color: var(--c-ink-900);
+  background: var(--accent);
+  color: var(--bg);
   font-size: 0.6875rem;
   font-weight: 600;
   line-height: 18px;

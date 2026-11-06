@@ -3,8 +3,8 @@
   overflow: hidden;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(201, 162, 39, 0.35);
-  background: var(--c-ink-900);
+  border: 1px solid rgba(198, 168, 117, 0.35);
+  background: var(--bg);
   box-shadow: var(--shadow-lg);
 }
 .video {
@@ -21,8 +21,8 @@
   justify-content: center;
   gap: var(--sp-3);
   border: 0;
-  background: linear-gradient(180deg, rgba(11, 11, 11, 0.1), rgba(11, 11, 11, 0.55));
-  color: var(--c-white);
+  background: linear-gradient(180deg, rgba(16, 16, 15, 0.1), rgba(16, 16, 15, 0.55));
+  color: var(--white);
   font-size: var(--fs-sm);
   font-weight: 600;
 }
@@ -33,9 +33,9 @@
   height: 64px;
   padding-left: 4px;
   border-radius: var(--radius-pill);
-  background: var(--c-gold);
-  color: var(--c-ink-900);
-  box-shadow: 0 0 0 10px rgba(201, 162, 39, 0.25);
+  background: var(--accent);
+  color: var(--bg);
+  box-shadow: 0 0 0 10px rgba(198, 168, 117, 0.25);
   transition: transform var(--dur) var(--ease);
 }
 .play:hover .playIcon {

@@ -2,9 +2,9 @@
   display: grid;
   gap: var(--sp-5);
   padding: var(--sp-6);
-  border: 1px solid var(--c-border);
+  border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  background: var(--c-white);
+  background: var(--surface);
   box-shadow: var(--shadow-sm);
 }
 .title {
@@ -12,7 +12,7 @@
 }
 .sub {
   margin-top: var(--sp-1);
-  color: var(--c-text-muted);
+  color: var(--text-2);
   font-size: var(--fs-sm);
 }
 .progress {
@@ -23,7 +23,7 @@
   list-style: none;
   padding: 0;
   font-size: var(--fs-sm);
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 .progress li {
   display: inline-flex;
@@ -45,24 +45,24 @@
   font-size: var(--fs-xs);
 }
 .progress .done {
-  color: var(--c-text);
+  color: var(--text);
   font-weight: 600;
 }
 .progress .done span {
-  border-color: var(--c-gold-ink);
-  background: var(--c-gold-ink);
-  color: var(--c-white);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--white);
 }
 .summary {
   padding: var(--sp-4);
-  border: 1.5px solid var(--c-danger);
+  border: 1.5px solid var(--danger);
   border-radius: var(--radius);
-  background: #fdf1f0;
-  color: var(--c-danger);
+  background: rgba(240, 138, 126, 0.08);
+  color: var(--danger);
   font-size: var(--fs-sm);
 }
 .summary:focus {
-  outline: 3px solid var(--c-danger);
+  outline: 3px solid var(--danger);
   outline-offset: 2px;
 }
 .summary p {
@@ -99,7 +99,7 @@
 }
 .stepTitle span {
   display: block;
-  color: var(--c-text-muted);
+  color: var(--text-2);
   font-size: var(--fs-sm);
   font-weight: 400;
 }
@@ -121,10 +121,10 @@
   font-weight: 600;
 }
 .req {
-  color: var(--c-danger);
+  color: var(--danger);
 }
 .opt {
-  color: var(--c-text-muted);
+  color: var(--text-2);
   font-weight: 400;
 }
 .field input,
@@ -133,9 +133,9 @@
   width: 100%;
   min-height: 48px;
   padding: 0.65rem 0.9rem;
-  border: 1.5px solid var(--c-stone-300);
+  border: 1.5px solid var(--line-strong);
   border-radius: var(--radius-sm);
-  background: var(--c-white);
+  background: var(--surface);
   font-size: var(--fs-base);
   transition:
     border-color var(--dur) var(--ease),
@@ -148,11 +148,11 @@
 .field select:focus,
 .field textarea:focus {
   outline: none;
-  border-color: var(--c-gold-ink);
+  border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(134, 102, 17, 0.2);
 }
 .field [aria-invalid='true'] {
-  border-color: var(--c-danger);
+  border-color: var(--danger);
 }
 .unitRow {
   display: grid;
@@ -161,7 +161,7 @@
 }
 .hint {
   font-size: var(--fs-xs);
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 .error {
   display: flex;
@@ -169,7 +169,7 @@
   gap: 4px;
   font-size: var(--fs-xs);
   font-weight: 600;
-  color: var(--c-danger);
+  color: var(--danger);
 }
 .actions {
   display: flex;
@@ -183,7 +183,7 @@
   padding: 0 var(--sp-2);
   border: 0;
   background: none;
-  color: var(--c-gold-ink);
+  color: var(--accent);
   font-size: var(--fs-sm);
   font-weight: 600;
   text-decoration: underline;
@@ -195,13 +195,13 @@
   align-items: center;
   gap: var(--sp-3);
   padding-top: var(--sp-4);
-  border-top: 1px solid var(--c-border);
+  border-top: 1px solid var(--line);
   font-size: var(--fs-sm);
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 .privacy {
   font-size: var(--fs-xs);
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 @media (min-width: 640px) {
   .grid {

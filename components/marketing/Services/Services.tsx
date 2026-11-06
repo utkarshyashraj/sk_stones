@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Icon } from '@/components/ui/Icon';
 import { Picture } from '@/components/ui/Picture';
 import type { ImageRef } from '@/lib/types';
 import styles from './Services.module.css';
@@ -27,9 +26,6 @@ export function Services({ items }: { items: ServiceCardData[] }) {
             <div className={styles.body}>
               <h3 className={styles.title}>{s.title}</h3>
               <span className={styles.text}>{s.text}</span>
-              <span className={styles.more} aria-hidden="true">
-                Learn more <Icon name="arrow-right" size={16} />
-              </span>
             </div>
           </Link>
         </li>

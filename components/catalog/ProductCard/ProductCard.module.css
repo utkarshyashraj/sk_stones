@@ -3,15 +3,15 @@
   flex-direction: column;
   min-width: 0;
   overflow: hidden;
-  border: 1px solid var(--c-border);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: var(--c-white);
+  background: var(--surface);
   transition:
     box-shadow var(--dur) var(--ease),
     transform var(--dur) var(--ease);
 }
 .card:hover {
-  box-shadow: var(--shadow);
+  color: var(--text);
 }
 .media {
   position: relative;
@@ -21,7 +21,8 @@
   padding: 0;
   border: 0;
   overflow: hidden;
-  background: var(--c-stone-200);
+  border-radius: var(--radius);
+  background: var(--surface-2);
   cursor: zoom-in;
 }
 .media img {
@@ -34,35 +35,23 @@
   position: absolute;
   right: 10px;
   bottom: 10px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 10px;
-  border-radius: var(--radius-pill);
-  background: rgba(11, 11, 11, 0.78);
-  color: var(--c-white);
-  font-size: var(--fs-xs);
-  font-weight: 500;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: rgba(16, 16, 15, 0.75);
+  color: var(--text);
   opacity: 0;
-  transform: translateY(4px);
-  transition:
-    opacity var(--dur) var(--ease),
-    transform var(--dur) var(--ease);
+  transition: opacity var(--dur) var(--ease);
 }
 .media:hover .quick,
 .media:focus-visible .quick {
   opacity: 1;
-  transform: none;
 }
 @media (hover: none) {
   .quick {
     opacity: 1;
-    transform: none;
-    padding: 6px;
-  }
-  .quick {
-    font-size: 0;
-    gap: 0;
   }
 }
 .noPhoto {
@@ -72,16 +61,16 @@
   place-content: center;
   justify-items: center;
   gap: var(--sp-2);
-  color: var(--c-text-muted);
+  color: var(--text-2);
   font-size: var(--fs-xs);
-  background: repeating-linear-gradient(135deg, var(--c-stone-100) 0 12px, var(--c-stone-200) 12px 24px);
+  background: var(--surface-2);
 }
 .body {
   display: flex;
   flex-direction: column;
   flex: 1;
   gap: var(--sp-2);
-  padding: var(--sp-3) var(--sp-4) var(--sp-4);
+  padding: var(--sp-3) 0 0;
 }
 .name {
   font-family: var(--font-sans);
@@ -92,21 +81,7 @@
 .collection {
   margin-top: -4px;
   font-size: var(--fs-xs);
-  color: var(--c-text-muted);
-}
-.attrs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  list-style: none;
-  padding: 0;
-}
-.attrs li {
-  padding: 2px 8px;
-  border-radius: var(--radius-pill);
-  background: var(--c-stone-100);
-  color: var(--c-text-muted);
-  font-size: 0.75rem;
+  color: var(--text-2);
 }
 .actions {
   display: flex;
@@ -124,20 +99,20 @@
   width: 40px;
   height: 40px;
   flex: none;
-  border: 1.5px solid var(--c-border);
-  border-radius: var(--radius-pill);
-  background: var(--c-white);
-  color: var(--c-text-muted);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-2);
   transition: all var(--dur) var(--ease);
 }
 .save:hover {
-  border-color: var(--c-gold-ink);
-  color: var(--c-gold-ink);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 .save[aria-pressed='true'] {
-  border-color: var(--c-gold-ink);
-  background: var(--c-gold-ink);
-  color: var(--c-white);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--bg);
 }
 @media (max-width: 480px) {
   .body {
@@ -146,4 +121,10 @@
   .name {
     font-size: var(--fs-sm);
   }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }

@@ -15,16 +15,16 @@
   gap: var(--sp-2);
   min-width: 0;
   padding: 0 var(--sp-4);
-  border: 1.5px solid var(--c-border);
+  border: 1.5px solid var(--line);
   border-radius: var(--radius-pill);
-  background: var(--c-white);
+  background: var(--surface);
 }
 .searchBox:focus-within {
-  border-color: var(--c-gold-ink);
+  border-color: var(--accent);
 }
 .searchIcon {
   flex: none;
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 .searchBox input {
   flex: 1;
@@ -41,14 +41,14 @@
   font-size: var(--fs-sm);
 }
 .sort label {
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 .sort select {
   min-height: 46px;
   padding: 0 var(--sp-8) 0 var(--sp-3);
-  border: 1.5px solid var(--c-border);
+  border: 1.5px solid var(--line);
   border-radius: var(--radius-pill);
-  background: var(--c-white)
+  background: var(--surface)
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2357534b' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")
     no-repeat right 12px center;
   appearance: none;
@@ -67,9 +67,9 @@
 }
 .sidebar {
   padding: var(--sp-5);
-  border: 1px solid var(--c-border);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: var(--c-white);
+  background: var(--bg-raised);
 }
 .results {
   min-width: 0;
@@ -83,10 +83,10 @@
 }
 .count {
   font-size: var(--fs-sm);
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 .count strong {
-  color: var(--c-text);
+  color: var(--text);
 }
 .chips {
   display: flex;
@@ -101,21 +101,21 @@
   gap: 6px;
   min-height: 32px;
   padding: 0 10px 0 12px;
-  border: 1px solid var(--c-gold-ink);
+  border: 1px solid var(--accent);
   border-radius: var(--radius-pill);
-  background: var(--c-gold-tint);
-  color: var(--c-text);
+  background: var(--accent-tint);
+  color: var(--text);
   font-size: var(--fs-xs);
   font-weight: 500;
 }
 .chip:hover {
-  background: var(--c-white);
+  background: var(--surface);
 }
 .clearChips {
   min-height: 32px;
   border: 0;
   background: none;
-  color: var(--c-gold-ink);
+  color: var(--accent);
   font-size: var(--fs-xs);
   font-weight: 600;
   text-decoration: underline;
@@ -138,13 +138,13 @@
   justify-items: center;
   gap: var(--sp-3);
   padding: var(--sp-12) var(--sp-6);
-  border: 1px dashed var(--c-stone-300);
+  border: 1px dashed var(--line-strong);
   border-radius: var(--radius);
   text-align: center;
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 .empty h3 {
-  color: var(--c-text);
+  color: var(--text);
 }
 .empty p {
   max-width: 48ch;
@@ -163,6 +163,12 @@
   }
 }
 @media (min-width: 1024px) {
+  .sidebar,
+  .sidebar[data-open='false'] {
+    padding: 0;
+    border: 0;
+    background: none;
+  }
   .layout {
     grid-template-columns: 260px minmax(0, 1fr);
   }

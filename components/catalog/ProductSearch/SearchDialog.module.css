@@ -5,12 +5,12 @@
   padding: 0;
   border: 0;
   border-radius: var(--radius-lg);
-  background: var(--c-white);
-  color: var(--c-text);
+  background: var(--surface);
+  color: var(--text);
   box-shadow: var(--shadow-lg);
 }
 .dialog::backdrop {
-  background: rgba(11, 11, 11, 0.7);
+  background: rgba(16, 16, 15, 0.7);
 }
 .inner {
   padding: var(--sp-5) var(--sp-6) var(--sp-6);
@@ -34,21 +34,21 @@
   background: transparent;
 }
 .close:hover {
-  background: var(--c-stone-100);
+  background: var(--bg-raised);
 }
 .form {
   display: flex;
   align-items: center;
   gap: var(--sp-2);
   padding: 4px 4px 4px var(--sp-4);
-  border: 1.5px solid var(--c-border);
+  border: 1.5px solid var(--line);
   border-radius: var(--radius-pill);
 }
 .form:focus-within {
-  border-color: var(--c-gold-ink);
+  border-color: var(--accent);
 }
 .formIcon {
-  color: var(--c-text-muted);
+  color: var(--text-2);
   flex: none;
 }
 .form input {
@@ -63,7 +63,7 @@
 .hint {
   margin: var(--sp-3) 0 var(--sp-4);
   font-size: var(--fs-sm);
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 .results {
   list-style: none;
@@ -81,7 +81,7 @@
 }
 .result:hover,
 .result:focus-visible {
-  background: var(--c-stone-100);
+  background: var(--bg-raised);
 }
 .result img,
 .noThumb {
@@ -94,8 +94,8 @@
 .noThumb {
   display: grid;
   place-items: center;
-  background: var(--c-stone-200);
-  color: var(--c-text-muted);
+  background: var(--surface-2);
+  color: var(--text-2);
 }
 .rName {
   display: block;
@@ -104,7 +104,7 @@
 .rMeta {
   display: block;
   font-size: var(--fs-sm);
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 .popularTitle {
   margin-bottom: var(--sp-3);
@@ -112,7 +112,7 @@
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 .popular ul {
   display: flex;
@@ -126,14 +126,14 @@
   align-items: center;
   min-height: 40px;
   padding: 0 var(--sp-4);
-  border: 1px solid var(--c-border);
+  border: 1px solid var(--line);
   border-radius: var(--radius-pill);
   font-size: var(--fs-sm);
   text-decoration: none;
 }
 .chip:hover {
-  border-color: var(--c-gold-ink);
-  color: var(--c-gold-ink);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 @media (max-width: 640px) {
   .dialog {

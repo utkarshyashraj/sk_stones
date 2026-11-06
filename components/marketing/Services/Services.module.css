@@ -8,7 +8,7 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
-  scrollbar-color: var(--c-gold) transparent;
+  scrollbar-color: var(--accent) transparent;
 }
 .item {
   scroll-snap-align: start;
@@ -22,7 +22,7 @@
   min-height: 380px;
   overflow: hidden;
   border-radius: var(--radius-lg);
-  color: var(--c-white);
+  color: var(--white);
   text-decoration: none;
 }
 .card img {
@@ -35,7 +35,7 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(180deg, rgba(11, 11, 11, 0.05) 20%, rgba(11, 11, 11, 0.9) 100%);
+  background: linear-gradient(180deg, rgba(16, 16, 15, 0.05) 20%, rgba(16, 16, 15, 0.9) 100%);
 }
 .body {
   position: relative;
@@ -50,17 +50,8 @@
   font-size: var(--fs-xl);
 }
 .text {
-  color: #e8e2d6;
+  color: var(--text-2);
   font-size: var(--fs-sm);
-}
-.more {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: var(--sp-2);
-  color: var(--c-gold);
-  font-size: var(--fs-sm);
-  font-weight: 600;
 }
 @media (min-width: 640px) {
   .grid {

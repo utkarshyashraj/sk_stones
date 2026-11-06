@@ -1,11 +1,7 @@
 .cta {
-  position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(800px 300px at 10% 0%, rgba(201, 162, 39, 0.22), transparent 60%),
-    radial-gradient(700px 300px at 100% 100%, rgba(201, 162, 39, 0.14), transparent 60%), var(--c-ink-900);
-  color: var(--c-text-dark);
-  border-top: 1px solid rgba(201, 162, 39, 0.25);
+  color: var(--text);
+  border-top: 1px solid var(--line);
 }
 .inner {
   display: grid;
@@ -19,7 +15,7 @@
 .text {
   margin-top: var(--sp-3);
   max-width: 52ch;
-  color: var(--c-text-muted-dark);
+  color: var(--text-2);
 }
 .actions {
   display: flex;
@@ -34,4 +30,10 @@
   .actions {
     justify-content: flex-end;
   }
+}
+
+.cta {
+  background: var(--bg-raised);
+  color: var(--text);
+  border-top: 1px solid var(--line);
 }

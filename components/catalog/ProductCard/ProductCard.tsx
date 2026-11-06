@@ -28,7 +28,6 @@ interface Props {
 function ProductCardImpl({ product: p, collectionName, showCollection, onQuickView, priority }: Props) {
   const { has, toggle } = useShortlist();
   const saved = has(p.id);
-  const attrs = [p.finish, ...p.colours.slice(0, 2), p.origin].filter(Boolean) as string[];
 
   return (
     <article className={styles.card}>
@@ -49,29 +48,22 @@ function ProductCardImpl({ product: p, collectionName, showCollection, onQuickVi
             fill
           />
         ) : (
-          <span className={styles.noPhoto}>
+          <span className={styles.noPhoto} aria-hidden="true">
             <Icon name="image" size={28} />
             <span>Photo on request</span>
           </span>
         )}
         <span className={styles.quick} aria-hidden="true">
-          <Icon name="expand" size={16} /> Quick view
+          <Icon name="expand" size={16} />
         </span>
       </button>
       <div className={styles.body}>
         <h3 className={styles.name}>{p.name}</h3>
         {showCollection ? <p className={styles.collection}>{collectionName}</p> : null}
-        {attrs.length ? (
-          <ul className={styles.attrs} aria-label="Attributes">
-            {attrs.map((a) => (
-              <li key={a}>{a}</li>
-            ))}
-          </ul>
-        ) : null}
         <div className={styles.actions}>
           <Link
             href={enquireHref(p, collectionName)}
-            className={`btn btn--primary btn--sm ${styles.enquire}`}
+            className={`btn btn--outline btn--sm ${styles.enquire}`}
             prefetch={false}
           >
             Enquire<span className="visually-hidden"> about {p.name}</span>

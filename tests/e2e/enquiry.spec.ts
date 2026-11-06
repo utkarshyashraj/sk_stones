@@ -92,7 +92,7 @@ test.describe('enquiry flow', () => {
   test('WhatsApp and phone CTAs use the business number', async ({ page }) => {
     await page.goto('/');
     const wa = page.locator('a[href^="https://wa.me/"]');
-    expect(await wa.count()).toBeGreaterThan(2);
+    expect(await wa.count()).toBeGreaterThanOrEqual(2);
     for (const href of await wa.evaluateAll((els) => els.map((e) => e.getAttribute('href'))))
       expect(href).toMatch(/^https:\/\/wa\.me\/917022630994/);
     await expect(page.locator('a[href="tel:+917022630994"]').first()).toBeAttached();

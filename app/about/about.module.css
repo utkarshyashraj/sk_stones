@@ -9,10 +9,10 @@
   display: flex;
   align-items: center;
   gap: var(--sp-2);
-  color: var(--c-text-dark);
+  color: var(--text);
 }
 .points svg {
-  color: var(--c-gold);
+  color: var(--accent);
 }
 .sectors {
   margin-top: var(--sp-10);
@@ -29,7 +29,7 @@
 }
 .sectors li {
   padding: var(--sp-2) var(--sp-5);
-  border: 1px solid rgba(201, 162, 39, 0.4);
+  border: 1px solid rgba(198, 168, 117, 0.4);
   border-radius: var(--radius-pill);
   font-family: var(--font-serif);
   font-size: var(--fs-md);
@@ -68,12 +68,12 @@
 .num {
   font-family: var(--font-serif);
   font-size: var(--fs-xl);
-  color: var(--c-gold-ink);
+  color: var(--accent);
 }
 .purpose p,
 .why p {
   margin-top: var(--sp-2);
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 .why {
   display: grid;
@@ -82,20 +82,17 @@
   padding: 0;
 }
 .why li {
-  padding: var(--sp-6);
-  border-radius: var(--radius-lg);
-  background: var(--c-white);
-  border: 1px solid var(--c-border);
-  border-top: 3px solid var(--c-gold);
+  padding-top: var(--sp-5);
+  border-top: 1px solid var(--accent-2);
 }
 .role {
   margin-top: var(--sp-2);
-  color: var(--c-gold-ink);
+  color: var(--accent);
   font-weight: 600;
 }
 .founderText {
   margin-top: var(--sp-5);
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 .team {
   display: grid;
@@ -108,7 +105,7 @@
 }
 .teamNote {
   font-size: var(--fs-sm);
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 .teamList {
   display: grid;
@@ -121,7 +118,7 @@
 }
 .teamList li span {
   font-size: var(--fs-sm);
-  color: var(--c-text-muted);
+  color: var(--text-2);
 }
 @media (min-width: 900px) {
   .why {

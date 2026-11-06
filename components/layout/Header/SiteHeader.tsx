@@ -236,7 +236,7 @@ export function SiteHeader({ nav }: { nav: NavData }) {
             >
               <Icon name="whatsapp" />
             </a>
-            <a className={`btn btn--primary btn--sm ${styles.phone}`} href={telHref}>
+            <a className={`btn btn--outline btn--sm ${styles.phone}`} href={telHref}>
               <Icon name="phone" /> {site.phone.display}
             </a>
             <button

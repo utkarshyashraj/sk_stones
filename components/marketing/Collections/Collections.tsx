@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Icon } from '@/components/ui/Icon';
 import { Picture } from '@/components/ui/Picture';
 import type { ImageRef } from '@/lib/types';
 import styles from './Collections.module.css';
@@ -17,14 +16,17 @@ export function Collections({
   items,
   headingLevel = 3,
   compact,
+  dense,
 }: {
   items: CollectionCardData[];
   headingLevel?: 2 | 3;
   compact?: boolean;
+  /** Two-up on phones (for name-only cards without descriptions). */
+  dense?: boolean;
 }) {
   const H = headingLevel === 2 ? 'h2' : 'h3';
   return (
-    <ul className={`${styles.grid} ${compact ? styles.compact : ''}`}>
+    <ul className={`${styles.grid} ${compact ? styles.compact : ''} ${dense ? styles.dense : ''}`}>
       {items.map((c) => (
         <li key={c.href}>
           <Link href={c.href} className={styles.card}>
@@ -37,20 +39,15 @@ export function Collections({
                   fill
                 />
               ) : (
-                <span className={styles.placeholder} aria-hidden="true">
-                  <Icon name="grid" size={30} />
-                </span>
+                <span className={styles.placeholder} aria-hidden="true" />
               )}
-              <span className={styles.count}>
-                {c.count > 0 ? `${c.count} ${c.count === 1 ? 'variety' : 'varieties'}` : 'Enquire for range'}
-              </span>
             </div>
             <div className={styles.body}>
               <H className={styles.name}>{c.name}</H>
+              <p className={styles.count}>
+                {c.count > 0 ? `${c.count} ${c.count === 1 ? 'variety' : 'varieties'}` : 'Supplied to order'}
+              </p>
               {c.description ? <p className={styles.desc}>{c.description}</p> : null}
-              <span className={styles.more} aria-hidden="true">
-                Explore <Icon name="arrow-right" size={16} />
-              </span>
             </div>
           </Link>
         </li>

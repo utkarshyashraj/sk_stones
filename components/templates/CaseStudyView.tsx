@@ -1,10 +1,8 @@
-import Link from 'next/link';
 import { CaseStudies } from '@/components/marketing/CaseStudies/CaseStudies';
 import { CTA } from '@/components/marketing/CTA/CTA';
 import { Gallery } from '@/components/marketing/Gallery/Gallery';
 import { PageHero } from '@/components/marketing/PageHero/PageHero';
 import { Stats } from '@/components/marketing/Stats/Stats';
-import { Icon } from '@/components/ui/Icon';
 import { caseStudies, type CaseStudy } from '@/content/pages';
 import { getSiteImage } from '@/lib/images';
 import { buildMetadata } from '@/lib/seo';
@@ -38,7 +36,7 @@ export function CaseStudyView({ slug }: { slug: string }) {
           { name: 'Projects', href: '/projects' },
           { name: c.cardTitle, href: `/${c.slug}` },
         ]}
-        eyebrow={`Case study · ${c.sector}`}
+        eyebrow={c.sector}
         title={c.heading}
         lead={<p>{c.lead}</p>}
         background={getSiteImage(c.images[0]!.key)}
@@ -57,19 +55,14 @@ export function CaseStudyView({ slug }: { slug: string }) {
                   <p key={p}>{p}</p>
                 ))}
                 {s.list ? (
-                  <ul className={styles.scope}>
+                  <ul className={`dash-list ${styles.scope}`}>
                     {s.list.map((l) => (
-                      <li key={l}>
-                        <Icon name="check" size={16} /> {l}
-                      </li>
+                      <li key={l}>{l}</li>
                     ))}
                   </ul>
                 ) : null}
               </section>
             ))}
-            <Link href="/projects" className="link-arrow">
-              <Icon name="chevron-left" /> All projects
-            </Link>
           </div>
           <div>
             <Gallery

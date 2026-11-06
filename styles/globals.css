@@ -10,6 +10,7 @@
   margin: 0;
 }
 html {
+  background-color: var(--bg);
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   scroll-padding-top: calc(var(--header-h) + 16px);
@@ -24,8 +25,8 @@ body {
   font-family: var(--font-sans);
   font-size: var(--fs-base);
   line-height: var(--lh-body);
-  color: var(--c-text);
-  background: var(--c-stone-50);
+  color: var(--text);
+  background-color: var(--bg);
   overflow-x: clip;
   padding-bottom: var(--bottom-nav-h);
   -webkit-font-smoothing: antialiased;
@@ -95,13 +96,9 @@ h4 {
 
 /* ---------- Focus ---------- */
 :focus-visible {
-  outline: 3px solid var(--c-gold-ink);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
-  border-radius: 4px;
-}
-.on-dark :focus-visible,
-.on-dark:focus-visible {
-  outline-color: var(--c-gold-bright);
+  border-radius: 2px;
 }
 
 /* ---------- Layout utilities ---------- */
@@ -114,12 +111,40 @@ h4 {
 .section {
   padding-block: var(--section-y);
 }
+/* Solid graphite bands; no textures behind content. */
 .section--tint {
-  background: var(--c-stone-100);
+  background: var(--bg-raised);
 }
 .section--dark {
-  background: var(--c-ink-950);
-  color: var(--c-text-dark);
+  background: var(--bg);
+}
+/* The one place marble appears as a backdrop: the homepage hero (real Nero Portoro slab photo). */
+.stone-hero {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(21, 21, 20, 0.96) 0%,
+      rgba(21, 21, 20, 0.86) 45%,
+      rgba(21, 21, 20, 0.35) 100%
+    ),
+    var(--stone-hero-sm);
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 961px) {
+  .stone-hero {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(21, 21, 20, 0.97) 0%,
+        rgba(21, 21, 20, 0.85) 42%,
+        rgba(21, 21, 20, 0.2) 100%
+      ),
+      var(--stone-hero);
+  }
 }
 .section-head {
   max-width: 46rem;
@@ -131,33 +156,34 @@ h4 {
 }
 .section-head p {
   margin-top: var(--sp-4);
-  color: var(--c-text-muted);
+  color: var(--text-2);
   font-size: var(--fs-md);
 }
-.section--dark .section-head p {
-  color: var(--c-text-muted-dark);
+/* Small champagne rule above section headings — replaces repeated uppercase eyebrow labels. */
+.section-head h2::before,
+.rule::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  margin-bottom: var(--sp-5);
+  background: var(--accent);
+}
+.section-head--center h2::before {
+  margin-inline: auto;
 }
 .eyebrow {
   display: inline-block;
   margin-bottom: var(--sp-3);
-  font-family: var(--font-sans);
   font-size: var(--fs-xs);
-  font-weight: 600;
-  letter-spacing: 0.16em;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--c-gold-ink);
-}
-.section--dark .eyebrow,
-.on-dark .eyebrow {
-  color: var(--c-gold);
+  color: var(--accent);
 }
 .accent {
-  color: var(--c-gold-ink);
+  color: var(--accent);
   font-style: italic;
-}
-.section--dark .accent,
-.on-dark .accent {
-  color: var(--c-gold);
 }
 .visually-hidden {
   position: absolute !important; /* utility: must win over component layout */
@@ -173,6 +199,26 @@ h4 {
 .prose p + p {
   margin-top: var(--sp-4);
 }
+/* Simple champagne-dash list (replaces checkmark icons). */
+.dash-list {
+  display: grid;
+  gap: var(--sp-2);
+  list-style: none;
+  padding: 0;
+}
+.dash-list li {
+  position: relative;
+  padding-left: var(--sp-6);
+}
+.dash-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.85em;
+  width: 12px;
+  height: 1px;
+  background: var(--accent);
+}
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -181,12 +227,12 @@ h4 {
   justify-content: center;
   gap: var(--sp-2);
   min-height: 48px;
-  padding: 0.7rem 1.4rem;
-  border: 1.5px solid transparent;
-  border-radius: var(--radius-pill);
+  padding: 0.7rem 1.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
   font-size: var(--fs-sm);
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   line-height: 1.2;
   text-decoration: none;
   white-space: nowrap;
@@ -194,52 +240,40 @@ h4 {
   transition:
     background-color var(--dur) var(--ease),
     border-color var(--dur) var(--ease),
-    color var(--dur) var(--ease),
-    transform var(--dur) var(--ease),
-    box-shadow var(--dur) var(--ease);
+    color var(--dur) var(--ease);
 }
 .btn svg {
   width: 18px;
   height: 18px;
   flex: none;
 }
-.btn:active {
-  transform: translateY(1px);
-}
 .btn--primary {
-  background: var(--c-gold);
-  color: var(--c-ink-900);
+  background: var(--accent);
+  color: var(--bg);
 }
 .btn--primary:hover {
-  background: var(--c-gold-bright);
-  box-shadow: 0 8px 24px rgba(201, 162, 39, 0.3);
+  background: var(--accent-hover);
 }
 .btn--outline {
-  border-color: currentColor;
+  border-color: var(--line-strong);
   background: transparent;
-  color: var(--c-text);
+  color: var(--text);
 }
 .btn--outline:hover {
-  background: var(--c-ink-900);
-  border-color: var(--c-ink-900);
-  color: var(--c-white);
+  border-color: var(--accent);
+  color: var(--accent);
 }
-.on-dark .btn--outline,
-.section--dark .btn--outline {
-  color: var(--c-text-dark);
-}
-.on-dark .btn--outline:hover,
-.section--dark .btn--outline:hover {
-  background: var(--c-white);
-  border-color: var(--c-white);
-  color: var(--c-ink-900);
-}
+/* WhatsApp: neutral outline; only the glyph carries the brand colour. */
 .btn--whatsapp {
-  background: var(--c-whatsapp-ink);
-  color: var(--c-white);
+  border-color: var(--line-strong);
+  background: transparent;
+  color: var(--text);
+}
+.btn--whatsapp svg {
+  color: #3fbf6f;
 }
 .btn--whatsapp:hover {
-  background: #0c6a31;
+  border-color: #3fbf6f;
 }
 .btn--sm {
   min-height: 40px;
@@ -258,22 +292,18 @@ h4 {
   display: inline-flex;
   align-items: center;
   gap: var(--sp-2);
-  font-weight: 600;
+  font-weight: 500;
   font-size: var(--fs-sm);
-  color: var(--c-gold-ink);
+  color: var(--accent);
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.link-arrow:hover {
+  border-bottom-color: var(--accent);
 }
 .link-arrow svg {
-  width: 16px;
-  height: 16px;
-  transition: transform var(--dur) var(--ease);
-}
-.link-arrow:hover svg {
-  transform: translateX(3px);
-}
-.on-dark .link-arrow,
-.section--dark .link-arrow {
-  color: var(--c-gold);
+  width: 14px;
+  height: 14px;
 }
 
 /* ---------- Skip link ---------- */
@@ -284,8 +314,8 @@ h4 {
   z-index: calc(var(--z-dialog) + 1);
   padding: 0.75rem 1rem;
   border-radius: var(--radius-sm);
-  background: var(--c-gold);
-  color: var(--c-ink-900);
+  background: var(--accent);
+  color: var(--bg);
   font-weight: 600;
   text-decoration: none;
   transform: translateY(-160%);
