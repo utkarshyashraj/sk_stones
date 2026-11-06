@@ -4,8 +4,8 @@ Date: 6 November 2026 · Branch: `main` · Scope: legacy static site → Next.js
 
 **Outcome.** The site is fully migrated to a pre-rendered Next.js build: 51 pages (47 indexable), 460 products in
 35 categories, every legacy image self-hosted. Type check, lint, formatting, 32 unit tests, the build verifier and
-50 end-to-end tests all pass. Desktop Lighthouse is 99–100 in every category; accessibility, best practices and SEO
-score 100 on mobile as well, and mobile performance medians are listed in section 4. Nothing has been deployed to
+50 end-to-end tests all pass. Desktop Lighthouse is 99–100 in every category; on mobile, accessibility, best practices and SEO are 100 on
+every page and performance medians range 83–99 (two pages below the 90 target — section 4). Nothing has been deployed to
 production.
 
 Status legend: **FIXED AND VERIFIED** (evidence below) · **IMPLEMENTED, NOT YET VERIFIED** · **BLOCKED** (needs
@@ -67,15 +67,15 @@ external access or business input) · **NOT FIXED**.
 
 ### Design system, code quality, tooling
 
-| #   | Issue                                                                                                             | Status                                                          | Evidence / notes                                                                                                                                                                                                    |
-| --- | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 31  | ≈10,100 lines of CSS + ≈3,600 inline; 1,710 `!important`                                                          | FIXED AND VERIFIED                                              | Rebuilt: `styles/tokens.css` (colour, type scale, spacing, radius, motion) + CSS Modules — 3,609 lines total; 5 `!important` (screen-reader utility and the reduced-motion override only). Legacy CSS not migrated. |
-| 32  | Font Awesome (full library) for ~15 icons                                                                         | FIXED AND VERIFIED                                              | Inline SVG `Icon` component; no Font Awesome request on any page.                                                                                                                                                   |
-| 33  | Dead JS selectors / duplicate listeners (`script.js`)                                                             | FIXED AND VERIFIED                                              | Legacy JS is not shipped. New interactive code is typed React with lint rules for hooks.                                                                                                                            |
-| 34  | Typos: Quatrz (94×), "Leathere", "Flawor", "Siver"                                                                | FIXED AND VERIFIED                                              | Corrected in data and URL (with 301). Possible misspellings _Satvario, Silver Portro, Botochino_ left as-is pending confirmation.                                                                                   |
-| 35  | Netlify marketing comment in every `<head>`                                                                       | FIXED AND VERIFIED                                              | Not present in any output file.                                                                                                                                                                                     |
-| 36  | No version control, lint, types, tests, CI                                                                        | FIXED AND VERIFIED (local) · IMPLEMENTED, NOT YET VERIFIED (CI) | Git (4 commits), ESLint (flat config), TypeScript strict, Prettier, Vitest, Playwright, build verifier. GitHub Actions workflow is written but not yet run (no remote repository configured).                       |
-| 37  | Windows-only Next.js export bug (segment prefetch files written into sub-folders → 404s during client navigation) | FIXED AND VERIFIED                                              | `postbuild` flattens them; no-op on Linux/Netlify.                                                                                                                                                                  |
+| #   | Issue                                                                                                             | Status                                                          | Evidence / notes                                                                                                                                                                                                            |
+| --- | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 31  | ≈10,100 lines of CSS + ≈3,600 inline; 1,710 `!important`                                                          | FIXED AND VERIFIED                                              | Rebuilt: `styles/tokens.css` (colour, type scale, spacing, radius, motion) + CSS Modules — 3,609 lines total; 5 `!important` (screen-reader utility and the reduced-motion override only). Legacy CSS not migrated.         |
+| 32  | Font Awesome (full library) for ~15 icons                                                                         | FIXED AND VERIFIED                                              | Inline SVG `Icon` component; no Font Awesome request on any page.                                                                                                                                                           |
+| 33  | Dead JS selectors / duplicate listeners (`script.js`)                                                             | FIXED AND VERIFIED                                              | Legacy JS is not shipped. New interactive code is typed React with lint rules for hooks.                                                                                                                                    |
+| 34  | Typos: Quatrz (94×), "Leathere", "Flawor", "Siver"                                                                | FIXED AND VERIFIED                                              | Corrected in data and URL (with 301). Possible misspellings _Satvario, Silver Portro, Botochino_ left as-is pending confirmation.                                                                                           |
+| 35  | Netlify marketing comment in every `<head>`                                                                       | FIXED AND VERIFIED                                              | Not present in any output file.                                                                                                                                                                                             |
+| 36  | No version control, lint, types, tests, CI                                                                        | FIXED AND VERIFIED (local) · IMPLEMENTED, NOT YET VERIFIED (CI) | Git (commit history from the legacy baseline), ESLint (flat config), TypeScript strict, Prettier, Vitest, Playwright, build verifier. GitHub Actions workflow is written but not yet run (no remote repository configured). |
+| 37  | Windows-only Next.js export bug (segment prefetch files written into sub-folders → 404s during client navigation) | FIXED AND VERIFIED                                              | `postbuild` flattens them; no-op on Linux/Netlify.                                                                                                                                                                          |
 
 ### SEO
 
@@ -119,7 +119,19 @@ first use.
 
 ## 4. Lighthouse (local production preview, Edge, Lighthouse 13.6)
 
-LIGHTHOUSE_TABLE
+| Page                   | Mobile P / A / BP / SEO  | Desktop P / A / BP / SEO | Mobile perf runs |
+| ---------------------- | ------------------------ | ------------------------ | ---------------- |
+| Home (`/`)             | **87** / 100 / 100 / 100 | 99 / 100 / 100 / 100     | 87, 88, 87       |
+| `/kota-stones`         | 99 / 100 / 100 / 100     | 100 / 100 / 100 / 100    | 99, 99, 98       |
+| `/tiles` (93 products) | **83** / 100 / 100 / 100 | 100 / 100 / 100 / 100    | 89, 83, 78       |
+| `/products`            | 99 / 100 / 100 / 100     | 100 / 100 / 100 / 100    | 100, 99, 96      |
+| `/contact`             | 96 / 100 / 100 / 100     | 100 / 100 / 100 / 100    | 99, 94, 96       |
+| `/installations`       | 90 / 100 / 100 / 100     | 100 / 100 / 100 / 100    | 87, 90, 93       |
+
+**Targets:** Accessibility ≥ 95, Best Practices ≥ 95 and SEO ≥ 95 are met on every page and form factor.
+Performance ≥ 90 is met on all desktop runs and on 4 of 6 pages on mobile. **Not met: mobile homepage (87)
+and mobile Tiles (83).** Remaining cost is JavaScript hydration (total blocking time) and, on the homepage,
+LCP of the full-bleed hero photo on simulated slow 4G (≈3.4 s). See section 7.
 
 Measured against `npm start` (static `out/` with Brotli, like Netlify) on a developer laptop. Mobile uses
 Lighthouse's simulated slow-4G + 4× CPU throttling, so single runs vary by ±5 points; medians of 3 runs are
