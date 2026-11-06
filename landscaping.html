@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=d4772256-9b0c-4023-884d-54bad2f890df
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://skstonesindia.com/landscaping.html">
+    <meta property="og:title" content="Stone Landscaping | S K Stones India">
+    <meta property="og:description" content="Stone landscaping services — pathways, garden features and outdoor stone design by S K Stones India, Bengaluru.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skstonesindia.com/landscaping.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Landscaping | S K Stones India - Precision Landscape Execution</title>
+    <meta name="description" content="Expert landscaping services with precision planning, drainage efficiency, and quality control across residential and commercial outdoor projects.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/mega-menu.css">
+    <link rel="stylesheet" href="css/mobile-nav.css"><style>
+        :root {
+            --gold: #c9a227;
+            --gold-light: #d4af37;
+            --dark: #0a0a0a;
+            --dark-light: #1a1a1a;
+            --white: #ffffff;
+            --gray: #888;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; color: var(--white); overflow-x: hidden; }
+        
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; /* layout controlled by marble-showroom.css */ }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .logo-img { height: 50px; }
+        .desktop-nav { display: flex; align-items: center; gap: 4px; }
+        .desktop-nav a { color: #1a1a1a; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.3s; }
+        .desktop-nav a:hover, .desktop-nav a.active { color: var(--gold); }
+        .nav-item { position: relative; }
+        /* legacy nav-item hover removed — use .nav-dropdown */
+        .dropdown { position: relative; background: transparent; min-width: 0; padding: 0; border-radius: 0; opacity: 1; visibility: visible; transform: none; box-shadow: none; }
+        .dropdown a { display: block; padding: 10px 20px; font-size: 13px; }
+        .dropdown a:hover { background: rgba(201,162,39,0.1); color: var(--gold); }
+        .header-cta { background: var(--gold); color: var(--dark); padding: 12px 25px; border-radius: 30px; font-weight: 600; text-decoration: none; transition: all 0.3s; }
+        .header-cta:hover { background: var(--gold-light); transform: scale(1.05); }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+        .hamburger span { width: 25px; height: 2px; background: var(--white); transition: 0.3s; }
+        
+        /* Hero Section - Matching Old Website */
+        .hero.service-hero { min-height: auto; display: block; padding: 0; position: relative; background: transparent; }
+        .hero.service-hero::before { display: none; }
+        .hero-content { position: relative; z-index: 2; width: 100%; max-width: 1200px; }
+        .hero-left { }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.85rem, 3.4vw, 2.85rem); margin-bottom: 16px; line-height: 1.18; }
+        .hero h1 span { color: var(--gold); }
+        .hero-arrow { font-size: 3rem; color: var(--white); margin-top: 20px; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(15px); } }
+        .hero-right { }
+        .hero-right p { font-size: 1rem; color: rgba(255,255,255,0.85); line-height: 1.9; }
+        @media (max-width: 968px) { 
+            .hero-content { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+        }
+        
+        .stats { padding: 60px 50px; background: rgba(26,26,26,0.8); }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto; text-align: center; }
+        .stat-item { 
+            padding: 30px 20px; 
+            border-radius: 15px; 
+            background: rgba(255,255,255,0.03); 
+            border: 1px solid rgba(212,175,55,0.2);
+            transition: all 0.4s ease;
+        }
+        .stat-item:hover { 
+            transform: translateY(-10px); 
+            border-color: var(--gold);
+            box-shadow: 0 20px 50px rgba(212,175,55,0.15);
+        }
+        .stat-item h3 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 3rem; 
+            color: var(--gold); 
+            text-shadow: 0 0 30px rgba(212,175,55,0.3);
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { text-shadow: 0 0 30px rgba(212,175,55,0.3); }
+            50% { text-shadow: 0 0 50px rgba(212,175,55,0.5), 0 0 80px rgba(212,175,55,0.2); }
+        }
+        .stat-item h3 span { color: var(--gold-light); }
+        .stat-item p { color: var(--gray); margin-top: 10px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; }
+        
+        .section { padding: 100px 50px; }
+        .section-dark { background: rgba(10,10,10,0.9); }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 20px; }
+        .section-header h2 span { color: var(--gold); }
+        .section-header p { color: var(--gray); max-width: 700px; margin: 0 auto; line-height: 1.8; }
+        
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        .feature-card { background: rgba(26,26,26,0.8); padding: 40px; border-radius: 20px; border: 1px solid rgba(201,162,39,0.2); transition: all 0.3s; }
+        .feature-card:hover { transform: translateY(-10px); border-color: var(--gold); box-shadow: 0 20px 40px rgba(201,162,39,0.1); }
+        .feature-card h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; }
+        .feature-card h3 span { color: var(--gold); }
+        .feature-card p { color: var(--gray); line-height: 1.8; }
+        .feature-card ul { list-style: none; margin-top: 15px; }
+        .feature-card ul li { color: var(--gray); padding: 8px 0; padding-left: 25px; position: relative; }
+        .feature-card ul li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); }
+        
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin-top: 40px; }
+        .gallery-item { border-radius: 15px; overflow: hidden; height: 350px; border: 2px solid rgba(255,255,255,0.1); transition: all 0.4s ease; }
+        .gallery-item:hover { border-color: var(--gold); transform: translateY(-8px); box-shadow: 0 20px 50px rgba(201,162,39,0.2); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .gallery-item:hover img { transform: scale(1.1); }
+        
+        .faq-section { padding: 100px 50px; background: rgba(26,26,26,0.8); }
+        .faq-item { background: rgba(10,10,10,0.8); border-radius: 15px; margin-bottom: 15px; overflow: hidden; border: 1px solid rgba(201,162,39,0.2); }
+        .faq-question { padding: 25px 30px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s; }
+        .faq-question:hover { background: rgba(201,162,39,0.1); }
+        .faq-question h4 { font-size: 1rem; font-weight: 500; }
+        .faq-question i { color: var(--gold); transition: transform 0.3s; }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+        .faq-answer { padding: 0 30px; max-height: 0; overflow: hidden; transition: all 0.3s; }
+        .faq-item.active .faq-answer { padding: 0 30px 25px; max-height: 500px; }
+        .faq-answer p { color: var(--gray); line-height: 1.8; }
+        
+        /* CTA Section — see css/cta-section.css */
+        
+        .footer { background: transparent; padding: 40px 40px 0; }
+        .footer-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) repeat(auto-fit, minmax(160px, 1fr)); gap: 20px 36px; max-width: 1200px; margin: 0 auto; padding-bottom: 22px; border-bottom: 1px solid rgba(0,0,0,0.08); align-items: start; }
+        .footer-col h4 { color: var(--gold); margin: 0 0 10px; font-size: 1.05rem; }
+        .footer-col p, .footer-col a { color: #3a3a3a; font-size: 0.875rem; line-height: 1.55; text-decoration: none; display: block; transition: color 0.3s; }
+        .footer-col a:hover { color: var(--gold); }
+        .footer-bottom { text-align: center; padding: 12px 0 16px; margin-top: 0; border-top: none; color: #6b6b6b; font-size: 0.8rem; }
+        
+        .floating-btns { position: fixed; bottom: 30px; z-index: 999; display: flex; flex-direction: column; gap: 15px; }
+        .floating-btns.left { left: 30px; }
+        .floating-btns.right { right: 30px; }
+        .float-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--white); text-decoration: none; transition: all 0.3s; box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
+        .float-btn.phone { background: linear-gradient(135deg, var(--gold), var(--gold-light)); }
+        .float-btn.whatsapp { background: #25D366; }
+        .float-btn:hover { transform: scale(1.1); }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gold);
+            color: var(--dark);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+        }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(201,162,39,0.4); }
+        
+        @media (max-width: 968px) {
+            .header { padding: 12px 16px; }
+            .desktop-nav { display: none; }
+            .hamburger { display: none !important; }
+            .hero, .section, .faq-section, .cta-section { padding-left: 20px; padding-right: 20px; }
+            .stats { padding: 40px 20px; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr; }
+            .footer { padding: 28px 16px 0; }
+            .footer-grid { grid-template-columns: 1fr; gap: 16px; padding-bottom: 16px; }
+        }
+        
+        .mobile-nav { position: fixed; top: 0; right: -100%; width: 80%; max-width: 400px; height: 100vh; background: var(--dark); z-index: 1001; padding: 80px 30px; transition: right 0.3s; }
+        .mobile-nav.active { right: 0; }
+        .mobile-nav a { display: block; color: var(--white); text-decoration: none; padding: 15px 0; font-size: 18px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .mobile-nav a:hover { color: var(--gold); }
+        .close-nav { position: absolute; top: 20px; right: 20px; font-size: 30px; color: var(--white); cursor: pointer; }
+        .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; opacity: 0; visibility: hidden; transition: all 0.3s; }
+        .overlay.active { opacity: 1; visibility: visible; }
+    </style>
+    <link rel="stylesheet" href="css/marble-showroom.css">
+
+</head>
+<body class="showroom-theme">
+    <header class="header">
+        <a aria-label='S K Stones India' class='brand-lockup' href='/'>
+            <img class="brand-mark" src="images/shree-logo.png" alt="" width="40" height="80" decoding="async">
+            <span class="brand-text">
+                <span class="brand-name">S K <span class="brand-stones">Stones</span> India</span>
+                <span class="brand-formerly">(formerly Shree Stones &amp; Services)</span>
+            </span>
+        </a>
+        <nav class="desktop-nav">
+            <a href='/'>Home</a>
+            <a href='/about'>About Us</a>
+            <div class="nav-dropdown">
+                <span class="nav-link">Services <i class="fas fa-chevron-down"></i></span>
+                <div class="dropdown-menu">
+                    <a href='/installations'>Installations</a>
+                    <a href='/landscaping'>Landscaping</a>
+                    <a href='/flooring-executions'>Flooring Executions</a>
+                    <a href='/stone-art-installations'>Stone Art Installations</a>
+                </div>
+            </div>
+            <div class="nav-dropdown mega-dropdown">
+                <span class="nav-link">Products <i class="fas fa-chevron-down"></i></span>
+                <div class="dropdown-menu mega-menu">
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Marbles <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/indian-marbles'>Indian Marbles</a>
+                            <a href='/imported-marbles'>Imported Marbles</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Granites <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/granites'>Indian Granites</a>
+                            <a href='/imported-granites'>Imported Granites</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Stone-Art <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/cnc-stone-work'>CNC Stone Work &amp; INLAY Work</a>
+                            <a href='/mop-inlay-work'>MOP Work</a>
+                            <a href='/murals-monuments'>Murals &amp; Monuments</a>
+                            <a href='/feature-wall'>Feature Walls</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Natural Stones <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/cobble-stones'>Cobble Stones</a>
+                            <a href='/kota-stones'>Lime Stones</a>
+                            <a href='/pebbles'>Pebbles</a>
+                            <a href='/sand-stones'>Sand Stones</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Engineered Surfaces <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/acrylic-surfaces'>Acrylic Surfaces</a>
+                            <a href='/quatrz-surfaces'>Quatrz Surfaces</a>
+                        </div>
+                    </div>
+                    <a href='/wall-claddings'>Wall Claddings</a>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Tiles <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/brillo-collection'>Brillo Collection</a>
+                            <a href='/elezzo-collection'>Elezzo Collection</a>
+                            <a href='/endless-collection'>Endless Collection</a>
+                            <a href='/ittaca-collection'>Ittaca Collection</a>
+                            <a href='/milagro-collection'>Milagro Collection</a>
+                            <a href='/stone-collection'>Stone Collection</a>
+                            <a href='/subway-tiles'>Subway Tiles</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Clay Products <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/clay-jally'>Clay Jally</a>
+                            <a href='/wire-cut-bricks'>Wire Cut Bricks</a>
+                            <a href='/elevation-clay-bricks'>Elevation Clay Bricks</a>
+                            <a href='/roofing-tiles-clay'>Roofing Tiles</a>
+                            <a href='/roof-flooring-tiles'>Roof Flooring Tiles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href='/projects'>Our Projects</a>
+            <a href='/contact'>Contact Us</a>
+        </nav>
+        <a href="tel:+917022630994" class="header-cta"><i class="fas fa-phone"></i> Call Us Now</a>
+        <a class='header-contact-mobile' href='/contact'>Contact Us</a>
+        <div class="hamburger" id="menuToggle"><span></span><span></span><span></span></div>
+    </header>
+    
+    <div class="overlay" id="overlay"></div>
+    <nav class="mobile-nav" id="mobileNav" data-full-nav="true">
+        <span class="close-nav" id="closeNav">&times;</span>
+        <a href='/'>Home</a>
+        <a href='/about'>About Us</a>
+        <a href='/installations'>Installations</a>
+        <a href='/landscaping'>Landscaping</a>
+        <a href='/flooring-executions'>Flooring Executions</a>
+        <a href='/stone-art-installations'>Stone Art Installations</a>
+        <a href='/products'>Products</a>
+        <a href='/projects'>Our Projects</a>
+        <a href='/contact'>Contact Us</a>
+    </nav>
+    <section class="hero service-hero">
+        <div class="service-hero-top">
+            <div class="service-hero-layout">
+                <div class="service-hero-inner">
+<h1 class="service-hero-title">
+                <span class="tone-gold">PRECISION-DRIVEN</span>
+                <span class="tone-light">LANDSCAPE</span>
+                <span class="tone-gold">EXECUTION</span>
+                <span class="tone-light">EXPERTISE</span>
+                </h1>
+                <div class="service-hero-side">
+                    <p class="service-hero-lead">We deliver carefully planned landscaping execution ensuring balance, durability, drainage efficiency, material harmony, and precise on-site coordination across residential, commercial, and outdoor environments.</p>
+                    <div class="hero-actions service-hero-actions">
+                        <a class='btn btn-primary' href='/contact'>Get a Quote</a>
+                        <a href="tel:+917022630994" class="btn btn-outline-light"><i class="fas fa-phone"></i> Call Now</a>
+                    </div>
+                </div>
+                </div>
+                <div class="service-hero-photo">
+                    <img src="images/landscaping-1.png" alt="Precision landscape stone execution" loading="eager">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3><span class="counter" data-target="15">0</span><span>+</span></h3>
+                <p>Years of Experience</p>
+            </div>
+            <div class="stat-item">
+                <h3><span class="counter" data-target="500">0</span><span>+</span></h3>
+                <p>Landscape Projects</p>
+            </div>
+            <div class="stat-item">
+                <h3><span class="counter" data-target="30">0</span><span>+</span></h3>
+                <p>Expert Team Members</p>
+            </div>
+            <div class="stat-item">
+                <h3><span class="counter" data-target="99">0</span><span>%</span></h3>
+                <p>Client Satisfaction</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>BUILT WITH <span>LANDSCAPE PLANNING</span> AND SITE PRECISION</h2>
+                <p>With structured outdoor execution expertise, our landscaping services focus on accuracy, coordination, material control, and disciplined on-ground management.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>SKILLED EXECUTION <span>TEAM</span></h3>
+                    <p>Experienced landscape supervisors and technicians ensure proper grading, plant placement, surface finishing, safety compliance, and consistent execution across every stage of landscaping.</p>
+                    <ul>
+                        <li>Proper grading</li>
+                        <li>Plant placement</li>
+                        <li>Surface finishing</li>
+                        <li>Safety compliance</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h3>ON-SITE <span>COORDINATION</span></h3>
+                    <p>Planned coordination between plants, materials, manpower, tools, and schedules ensures seamless landscaping execution without delays or quality compromises.</p>
+                    <ul>
+                        <li>Resource planning</li>
+                        <li>Timeline management</li>
+                        <li>Quality checkpoints</li>
+                        <li>Workflow continuity</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h3>QUALITY <span>STANDARDS</span></h3>
+                    <p>Every landscaping project is evaluated through defined checkpoints focusing on drainage alignment, surface leveling accuracy, material durability, and finish precision.</p>
+                    <ul>
+                        <li>Drainage alignment</li>
+                        <li>Surface leveling accuracy</li>
+                        <li>Material durability</li>
+                        <li>Finish precision</li>
+                        <li>Long-term outdoor performance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span>Landscaping</span> Work</h2>
+                <p>Showcasing precision landscape projects across residential and commercial outdoor spaces.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/landscaping-1.png" alt="Modern Courtyard Stone Paving">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/landscaping-2.png" alt="Terraced Garden with Stone Steps">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/landscaping-3.png" alt="Decorative Stone Border Edging">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/landscaping-4.png" alt="Natural Pebble Garden Design">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked <span>Questions</span></h2>
+                <p>Get clarity on our landscaping process, timelines, site preparation requirements, quality checks, and execution standards.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What preparation is required before landscaping begins?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Before installation, we assess site levels, substrate strength, drawings, measurements, access routes, material readiness, moisture conditions, and safety requirements, ensuring the area is fully prepared for execution.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How do you ensure accuracy during landscaping execution?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Accuracy is ensured through calibrated tools, detailed drawings, skilled supervision, continuous alignment checks, controlled cutting, trial placements, and systematic verification at each stage.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What factors affect landscaping timelines?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Timelines depend on design complexity, material availability, site readiness, weather conditions, coordination with other trades, access limitations, and approval cycles.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How is quality checked during and after landscaping?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Quality is checked through stage-wise inspections, alignment verification, finish evaluation, joint consistency reviews, load and durability checks, documentation records, and final walkthroughs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you handle on-site challenges during execution?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our team manages on-site challenges by adjusting execution methods, coordinating resources, resolving technical issues promptly, and maintaining workflow continuity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section reveal">
+        <div class="cta-content">
+            <h2>Let's Start Your <span>Landscaping</span> Project Today</h2>
+            <p>Premium landscaping services for homes, offices & commercial outdoor spaces.</p>
+            <div class="cta-actions">
+                <a class='btn btn-primary' href='/contact'>Contact Us Now</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a aria-label='S K Stones India' class='brand-lockup brand-lockup-footer' href='/'>
+            <img class="brand-mark" src="images/shree-logo.png" alt="" width="40" height="80" decoding="async">
+            <span class="brand-text">
+                        <span class="brand-name">S K <span class="brand-stones">Stones</span> India</span>
+                        <span class="brand-formerly">(formerly Shree Stones &amp; Services)</span>
+                    </span>
+                </a>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href='/'>Home</a>
+                <a href='/about'>About Us</a>
+                <a href='/products'>Products</a>
+                <a href='/contact'>Contact Us</a>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href='/installations'>Installations</a>
+                <a href='/landscaping'>Landscaping</a>
+                <a href='/flooring-executions'>Flooring Executions</a>
+                <a href='/stone-art-installations'>Stone Art</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-phone" style="color: var(--gold); margin-right: 10px;"></i> +91 70226 30994</p>
+                <p><i class="fas fa-envelope" style="color: var(--gold); margin-right: 10px;"></i> info@skstonesindia.com</p>
+                <p><i class="fas fa-map-marker-alt" style="color: var(--gold); margin-right: 10px;"></i> Koramangala, Bengaluru</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 S K Stones India PVT, LTD. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+    
+    <script>
+        const hamburger = document.getElementById('menuToggle') || document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+        const closeNav = document.getElementById('closeNav');
+        const overlay = document.getElementById('overlay');
+        
+        hamburger && hamburger.addEventListener('click', () => {
+            mobileNav.classList.add('active');
+            overlay.classList.add('active');
+        });
+        
+        closeNav.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+        
+        overlay.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+        
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const animateCounter = (counter) => {
+            const target = parseFloat(counter.getAttribute('data-target'));
+            const suffix = counter.getAttribute('data-suffix') || '';
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    counter.textContent = Math.floor(current) + suffix;
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target + suffix;
+                }
+            };
+            updateCounter();
+        };
+
+        const observerOptions = { threshold: 0.5 };
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    animateCounter(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        counters.forEach(counter => counterObserver.observe(counter));
+
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+            window.addEventListener('scroll', () => {
+                backToTop.classList.toggle('visible', window.scrollY > 500);
+            });
+            backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+    </script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/mega-menu.js"></script>
+    <script src="js/cta-reveal.js" defer></script>
+</body>
+</html>

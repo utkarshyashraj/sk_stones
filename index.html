@@ -1,0 +1,2039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=d4772256-9b0c-4023-884d-54bad2f890df
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S K Stones India | Premium Natural Stones & Granite</title>
+    <meta name="description" content="S K Stones India — premium granite, marble & natural stone supplier in Bengaluru since 2014. Supply, fabrication & installation for homes, hotels & commercial projects.">
+    <meta name="keywords" content="marble supplier Bangalore, granite Bengaluru, stone cladding, flooring installation, S K Stones India">
+    <link rel="canonical" href="https://skstonesindia.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="S K Stones India | Premium Natural Stones & Granite">
+    <meta property="og:description" content="Premium natural stones for homes, offices & commercial spaces. Trusted by architects and builders across India.">
+    <meta property="og:image" content="https://skstonesindia.com/images/project-luxury-lobby.png">
+    <meta property="og:url" content="https://skstonesindia.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preload" as="image" href="images/marble-bg-mobile.jpg" type="image/jpeg" media="(max-width: 768px)">
+    <link rel="preload" as="image" href="images/marble-bg-light-2x.png" type="image/png" media="(min-width: 769px)">
+    <link rel="preload" as="video" href="images/home-page-video-mobile.mp4" type="video/mp4" media="(max-width: 1024px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/site-extras.css">
+    <link rel="stylesheet" href="css/mega-menu.css">
+    <link rel="stylesheet" href="css/mobile-nav.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --gold: #C9A227; --gold-dark: #9b7b1e; --dark: #0a0a0a; --white: #ffffff; }
+        html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
+        body { font-family: 'Poppins', sans-serif; color: var(--white); overflow-x: hidden; max-width: 100vw; }
+        img { max-width: 100%; height: auto; }
+        
+        @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes glow { 0%, 100% { box-shadow: 0 0 20px rgba(201,162,39,0.3); } 50% { box-shadow: 0 0 40px rgba(201,162,39,0.6); } }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @keyframes heroFadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes heroKenBurns { from { transform: scale(1.05); } to { transform: scale(1.12); } }
+        @keyframes heroShine { 0% { left: -100%; } 100% { left: 200%; } }
+        @keyframes revealUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes goldShimmer {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+        @keyframes ctaTextIn {
+            from { opacity: 0; transform: translateY(24px); letter-spacing: 6px; }
+            to { opacity: 1; transform: translateY(0); letter-spacing: 1px; }
+        }
+        @keyframes ctaUnderlineGrow {
+            from { width: 0; opacity: 0; }
+            to { width: 160px; opacity: 1; }
+        }
+        @keyframes ctaGlow {
+            0%, 100% { text-shadow: 0 0 20px rgba(201,162,39,0.2); }
+            50% { text-shadow: 0 0 40px rgba(201,162,39,0.45), 0 0 60px rgba(201,162,39,0.15); }
+        }
+        
+        /* Header */
+        .header { 
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000; 
+            padding: 0 50px; display: grid;
+            grid-template-columns: 240px 1fr 240px;
+            align-items: center; 
+            background: transparent; backdrop-filter: blur(0); height: 80px;
+            border-bottom: 1px solid transparent;
+            transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+        .header > a:first-child { grid-column: 1; justify-self: start; }
+        .header .desktop-nav { grid-column: 2; justify-self: center; }
+        .header .header-cta { grid-column: 3; justify-self: end; }
+        .header .header-contact-mobile,
+        .header .hamburger { grid-column: 3; justify-self: end; }
+        .header.scrolled {
+            background: rgba(10,10,10,0.96);
+            backdrop-filter: blur(12px);
+            border-bottom-color: rgba(201,162,39,0.15);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+        }
+        .logo-img { height: 60px; }
+        .desktop-nav { display: flex; align-items: center; gap: 10px; }
+        .desktop-nav > a, .nav-dropdown > .nav-link { 
+            color: var(--white); text-decoration: none; padding: 10px 18px; font-size: 0.9rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+        .desktop-nav > a::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.35s ease, left 0.35s ease;
+        }
+        .desktop-nav > a:hover::after,
+        .desktop-nav > a.active::after { width: 55%; left: 22.5%; }
+        .desktop-nav > a:hover, .desktop-nav > a.active { color: var(--gold); }
+        .desktop-nav > a[href="contact.html"] {
+            background: linear-gradient(135deg, var(--gold) 0%, #e6b800 100%);
+            color: var(--dark) !important;
+            border-radius: 50px;
+            font-weight: 600;
+            padding: 10px 22px !important;
+        }
+        .desktop-nav > a[href="contact.html"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201,162,39,0.35);
+        }
+        .desktop-nav > a[href="contact.html"]::after { display: none; }
+        .nav-dropdown { position: relative; }
+        .nav-dropdown > .nav-link { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+        .nav-dropdown > .nav-link i { font-size: 0.7rem; transition: transform 0.3s; }
+        .nav-dropdown:hover > .nav-link i { transform: rotate(180deg); }
+        .dropdown-menu { 
+            position: absolute; top: 100%; left: 0; background: var(--white); 
+            min-width: 200px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            opacity: 0; visibility: hidden; transform: translateY(10px);
+            transition: all 0.3s; padding: 10px 0;
+        }
+        .nav-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-menu a { 
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 12px 20px; color: var(--dark); text-decoration: none; font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        .dropdown-menu a:hover { background: #f5f5f5; color: var(--gold); padding-left: 25px; }
+        .header-cta { 
+            background: var(--gold); color: var(--dark); padding: 12px 25px; border-radius: 50px;
+            text-decoration: none; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;
+            transition: all 0.3s;
+        }
+        .header-cta:hover { background: #e6b800; transform: translateY(-2px); }
+        .header-contact-mobile {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 0 16px;
+            height: 36px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, var(--gold) 0%, #e6b800 100%);
+            color: var(--dark);
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-left: auto;
+            margin-right: 0;
+            box-sizing: border-box;
+            line-height: 1;
+        }
+        .hamburger { display: none; flex-direction: column; gap: 6px; cursor: pointer; padding: 10px; }
+        .hamburger span { width: 28px; height: 2px; background: var(--white); }
+        
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 24px 90px;
+            overflow: hidden;
+            background: var(--dark);
+        }
+        .hero-bg { position: absolute; inset: 0; z-index: 0; }
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 1.8s ease;
+            z-index: 1;
+        }
+        .hero-slide.active { opacity: 1; z-index: 2; }
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.75) saturate(1.05);
+            transform: scale(1.05);
+        }
+        .hero-slide.active img { animation: heroKenBurns 7s ease-out forwards; }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+            background:
+                radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,162,39,0.08) 0%, transparent 55%),
+                linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.82) 100%);
+        }
+        .hero-grain {
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+            opacity: 0.035;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+        .hero-corner {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border: 1px solid rgba(201,162,39,0.35);
+            z-index: 5;
+            pointer-events: none;
+        }
+        .hero-corner-tl { top: 96px; left: 36px; border-right: none; border-bottom: none; }
+        .hero-corner-br { bottom: 36px; left: 36px; border-left: none; border-top: none; }
+        .hero-content {
+            position: relative;
+            z-index: 4;
+            max-width: 920px;
+            padding: 48px 40px 40px;
+            border-radius: 24px;
+            background: rgba(0,0,0,0.25);
+            border: 1px solid rgba(201,162,39,0.18);
+            backdrop-filter: blur(6px);
+            box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+        }
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 28px;
+            animation: heroFadeUp 0.9s ease 0.15s both;
+        }
+        .hero-phone { 
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--white);
+            background: rgba(201,162,39,0.15);
+            border: 1px solid rgba(201,162,39,0.6);
+            padding: 11px 22px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.35s ease;
+        }
+        .hero-phone:hover {
+            background: var(--gold);
+            color: var(--dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(201,162,39,0.35);
+        }
+        .hero-phone i { color: var(--gold); transition: color 0.3s; }
+        .hero-phone:hover i { color: var(--dark); }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(201,162,39,0.35);
+            padding: 11px 22px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            background: rgba(201,162,39,0.08);
+            color: rgba(255,255,255,0.9);
+        }
+        .hero-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(201,162,39,0.8);
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 5.5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 22px;
+            text-transform: uppercase;
+            line-height: 1.15;
+            letter-spacing: 2px;
+            animation: heroFadeUp 0.9s ease 0.35s both;
+        }
+        .hero h1 span {
+            color: var(--gold);
+            display: block;
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-top: 6px;
+            text-shadow: 0 0 40px rgba(201,162,39,0.25);
+        }
+        .hero-subtitle {
+            font-size: clamp(0.95rem, 2vw, 1.12rem);
+            margin-bottom: 36px;
+            opacity: 0.92;
+            line-height: 1.85;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: heroFadeUp 0.9s ease 0.55s both;
+        }
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            animation: heroFadeUp 0.9s ease 0.75s both;
+        }
+        .btn {
+            position: relative;
+            overflow: hidden;
+            padding: 16px 42px;
+            border: 2px solid var(--gold);
+            border-radius: 50px;
+            background: transparent;
+            color: var(--white);
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            transition: all 0.35s ease;
+        }
+        .btn:hover {
+            background: var(--gold);
+            color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(201,162,39,0.3);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold) 0%, #e6b800 100%);
+            color: var(--dark);
+            border-color: var(--gold);
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #e6b800 0%, var(--gold) 100%);
+            color: var(--dark);
+        }
+        .btn-light {
+            background: rgba(255,255,255,0.96);
+            color: var(--dark);
+            border-color: rgba(255,255,255,0.96);
+        }
+        .btn-light:hover {
+            background: #fff;
+            color: var(--dark);
+            border-color: #fff;
+        }
+        .hero-stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px 48px;
+            margin-top: 38px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(201,162,39,0.2);
+            animation: heroFadeUp 0.9s ease 0.95s both;
+        }
+        .hero-stat { text-align: center; }
+        .hero-stat-num {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.85rem;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1.2;
+        }
+        .hero-stat-label {
+            display: block;
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.75;
+            margin-top: 4px;
+        }
+        .hero-dots {
+            position: absolute;
+            bottom: 36px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 5;
+        }
+        .hero-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.4);
+            background: transparent;
+            cursor: pointer;
+            padding: 0;
+            transition: all 0.35s ease;
+        }
+        .hero-dot.active {
+            background: var(--gold);
+            border-color: var(--gold);
+            transform: scale(1.2);
+            box-shadow: 0 0 12px rgba(201,162,39,0.6);
+        }
+        .scroll-indicator {
+            position: absolute;
+            bottom: 36px;
+            right: 40px;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            animation: float 2.5s ease-in-out infinite;
+            opacity: 0.7;
+            text-decoration: none;
+            color: inherit;
+            transition: opacity 0.3s ease;
+        }
+        .scroll-indicator:hover { opacity: 1; }
+        .scroll-indicator span {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255,255,255,0.6);
+        }
+        .scroll-indicator i { font-size: 1.1rem; color: var(--gold); }
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* Shared section label */
+        .section-label {
+            display: inline-block;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--gold);
+            margin-bottom: 14px;
+            position: relative;
+            padding-left: 42px;
+        }
+        .section-label::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 30px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        /* Process section */
+        .process-section {
+            padding: 100px 20px 110px;
+            background: linear-gradient(180deg, var(--dark) 0%, #111 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .process-section::before {
+            display: none;
+            content: none;
+        }
+        .process-section .section-header {
+            margin-bottom: 56px;
+        }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+            max-width: 1180px;
+            margin: 0 auto;
+            position: relative;
+            padding-top: 12px;
+        }
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 58px;
+            left: 11%;
+            right: 11%;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(201,162,39,0.12), rgba(201,162,39,0.5), rgba(201,162,39,0.12));
+            z-index: 0;
+        }
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 28px 18px 26px;
+            border-radius: 18px;
+            border: 1px solid rgba(201,162,39,0.28);
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+        }
+        .process-step:hover {
+            transform: translateY(-8px);
+            border-color: rgba(201,162,39,0.55);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.1), 0 0 0 1px rgba(201,162,39,0.12);
+        }
+        .process-step-num {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(201,162,39,0.16), rgba(255,255,255,0.9));
+            border: 2px solid rgba(201,162,39,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--gold);
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 8px 20px rgba(201,162,39,0.12);
+        }
+        .process-step:hover .process-step-num {
+            background: var(--gold);
+            color: var(--dark);
+            transform: scale(1.08);
+            box-shadow: 0 0 28px rgba(201,162,39,0.4);
+        }
+        .process-step h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+        .process-step:hover h3 {
+            color: #8a6d12;
+        }
+        .process-step p {
+            font-size: 0.88rem;
+            opacity: 0.78;
+            line-height: 1.7;
+        }
+        
+        /* Marquee */
+        .marquee { background: var(--gold); padding: 18px 0; overflow: hidden; }
+        .marquee-content { display: flex; animation: marquee 25s linear infinite; white-space: nowrap; }
+        .marquee-content span { color: var(--dark); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 3px; padding: 0 40px; }
+        
+        /* About Section - SK Logo Watermark Style */
+        .about-section { padding: 100px 20px; position: relative; overflow: hidden; }
+        .about-container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1200px; margin: 0 auto; align-items: start; }
+        .about-logo-area { position: relative; width: 100%; height: auto; display: flex; flex-direction: column; }
+        .about-content { align-self: start; }
+        .about-content .section-label { padding-left: 0; margin-bottom: 18px; }
+        .about-content .section-label::before { display: none; }
+        .sk-logo-img { max-width: 100%; max-height: 450px; object-fit: contain; mix-blend-mode: lighten; }
+        .about-content h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 30px; text-transform: uppercase; line-height: 1.3; }
+        .about-content h2 span { color: var(--gold); }
+        .about-content p { font-size: 1rem; line-height: 1.9; opacity: 0.85; margin-bottom: 20px; }
+        .about-list { list-style: none; margin-top: 30px; }
+        .about-list li { display: flex; align-items: center; gap: 15px; font-size: 1rem; margin-bottom: 15px; }
+        .about-list li i { color: var(--gold); font-size: 1.1rem; }
+        .about-video-frame {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 18px;
+            border: 3px solid var(--gold);
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.45), 0 0 30px rgba(201,162,39,0.12);
+            background: #0a0a0a;
+        }
+        .about-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            display: block;
+        }
+        .about-video-note {
+            margin-top: 28px;
+            padding: 26px 26px 24px;
+            border-radius: 14px;
+            border: 1px solid rgba(201,162,39,0.28);
+            background: linear-gradient(155deg, rgba(201,162,39,0.1) 0%, rgba(10,10,10,0.85) 55%);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+        }
+        .about-video-note-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin-bottom: 14px;
+        }
+        .about-video-note-label i { font-size: 0.75rem; }
+        .about-video-note h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #fff;
+            margin: 0 0 14px;
+            line-height: 1.35;
+        }
+        .about-video-note p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.82);
+            margin: 0;
+        }
+        
+        /* Services Slider Section */
+        .services-slider-section { padding: 100px 20px; }
+        .services-slider-container { max-width: 1300px; margin: 0 auto; position: relative; overflow: hidden; }
+        .services-slider-header { text-align: center; margin-bottom: 50px; }
+        .services-slider-header h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 20px; }
+        .services-slider-header h2 span { color: var(--gold); }
+        .services-slider-header .underline { width: 100px; height: 3px; background: var(--gold); margin: 0 auto; }
+        .services-wrap {
+            position: relative;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 56px;
+        }
+        .services-wrap::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 56px;
+            width: 100px;
+            height: 100%;
+            background: linear-gradient(to left, rgba(255,255,255,0.92) 10%, transparent);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .services-slider {
+            display: flex;
+            align-items: stretch;
+            gap: 25px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding: 4px 4px 20px;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .services-slider::-webkit-scrollbar { display: none; }
+        .service-slide {
+            min-width: 300px;
+            max-width: 300px;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+            background: rgba(26,26,26,0.6);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s;
+            border: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-direction: column;
+            align-self: stretch;
+        }
+        .service-slide:hover { transform: translateY(-10px); border-color: var(--gold); box-shadow: 0 20px 50px rgba(201,162,39,0.15); }
+        .service-slide-image { height: 350px; overflow: hidden; position: relative; background: rgba(26,26,26,0.8); flex-shrink: 0; }
+        .service-slide-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.5s; }
+        .service-slide:hover .service-slide-image img { transform: scale(1.1); }
+        .service-slide-content { padding: 30px; display: flex; flex-direction: column; flex: 1 1 auto; }
+        .service-slide-content h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 2px; }
+        .service-slide-content h3::after { content: ''; display: block; width: 50px; height: 3px; background: var(--gold); margin-top: 12px; }
+        .service-slide-content p { color: rgba(255,255,255,0.65); line-height: 1.8; font-size: 0.95rem; margin-top: 15px; flex: 1 1 auto; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; min-height: calc(1.8em * 4); }
+        .service-slide-actions { margin-top: auto; }
+        .slider-nav { display: flex; justify-content: center; gap: 15px; margin-top: 40px; }
+        .slider-nav button { width: 50px; height: 50px; border: 2px solid rgba(255,255,255,0.3); background: transparent; color: var(--white); font-size: 1.2rem; cursor: pointer; border-radius: 8px; transition: all 0.3s; }
+        .slider-nav button:hover { background: var(--gold); border-color: var(--gold); color: var(--dark); }
+        @media (max-width: 1200px) { 
+            .services-wrap { padding: 0 44px; }
+            .services-wrap::after { right: 44px; width: 60px; }
+            .service-slide { min-width: 280px; max-width: 280px; }
+        }
+        @media (max-width: 600px) { 
+            .service-slide { min-width: 260px; max-width: 260px; }
+            .service-slide-image { height: 280px; }
+        }
+        
+        /* Trust Section - Built on Trust */
+        .trust-section { 
+            padding: 100px 20px; 
+            position: relative;
+        }
+        .trust-container { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; }
+        .trust-section h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; text-align: center; margin-bottom: 60px; text-transform: uppercase; }
+        .trust-section h2 span { color: var(--gold); }
+        .trust-grid { display: grid; grid-template-columns: 300px 1fr 1fr; gap: 40px; align-items: center; }
+        .trust-image { border-radius: 15px; overflow: hidden; border: 3px solid var(--gold); }
+        .trust-image img { width: 100%; height: 350px; object-fit: cover; }
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .stat-item { 
+            text-align: center; 
+            padding: 25px 15px; 
+            border-radius: 15px; 
+            background: rgba(255,255,255,0.03); 
+            border: 1px solid rgba(212,175,55,0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        .stat-item:hover::before { left: 100%; }
+        .stat-item:hover { 
+            transform: translateY(-8px); 
+            border-color: var(--gold);
+            box-shadow: 0 15px 40px rgba(212,175,55,0.15);
+        }
+        .stat-number { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 3.5rem; 
+            font-weight: 700; 
+            color: var(--gold); 
+            text-shadow: 0 0 30px rgba(212,175,55,0.3);
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { text-shadow: 0 0 30px rgba(212,175,55,0.3); }
+            50% { text-shadow: 0 0 50px rgba(212,175,55,0.5), 0 0 80px rgba(212,175,55,0.2); }
+        }
+        .stat-number sup { font-size: 1.5rem; }
+        .stat-label { font-size: 0.9rem; opacity: 0.8; margin-top: 10px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem; }
+        .trust-text h3 { color: var(--gold); font-size: 1.1rem; margin-bottom: 20px; letter-spacing: 2px; }
+        .trust-text p { font-size: 1rem; line-height: 1.9; opacity: 0.9; margin-bottom: 0; }
+        .trust-author {
+            margin-top: 28px;
+            padding-top: 22px;
+            border-top: 1px solid rgba(201,162,39,0.28);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .trust-author-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid rgba(201,162,39,0.45);
+            background: rgba(201,162,39,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .trust-author-icon i { color: var(--gold); font-size: 1rem; }
+        .trust-author-label {
+            display: block;
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 4px;
+        }
+        .trust-author-name {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--gold);
+            line-height: 1.3;
+        }
+        .trust-author-meta {
+            display: block;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.72);
+            margin-top: 3px;
+            letter-spacing: 0.3px;
+        }
+        
+        /* Shared Section Header */
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header .section-label {
+            display: inline-block;
+            padding: 0 52px;
+            margin-bottom: 16px;
+        }
+        .section-header .section-label::before {
+            width: 40px;
+            left: 0;
+        }
+        .section-header .section-label::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+        }
+        .services-slider-header .section-label {
+            display: inline-block;
+            padding: 0 52px;
+            margin-bottom: 16px;
+        }
+        .services-slider-header .section-label::before { width: 40px; left: 0; }
+        .services-slider-header .section-label::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+        }
+        .section-header h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 20px; }
+        .section-header h2 span { color: var(--gold); }
+        .section-header .underline { width: 100px; height: 3px; background: var(--gold); margin: 0 auto; position: relative; }
+        .section-header .underline::before { content: ''; position: absolute; width: 60%; height: 100%; background: var(--gold); top: 8px; left: 20%; border-radius: 2px; }
+        
+        /* Why Choose Section */
+        .why-section { 
+            padding: 100px 20px; 
+            position: relative;
+        }
+        .why-container { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; }
+        .why-section .section-header h2 { font-size: 2.2rem; }
+        .why-section .section-header p { opacity: 0.8; max-width: 800px; margin: 20px auto 0; line-height: 1.8; }
+        .why-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 50px; }
+        .why-card { 
+            background: var(--white); 
+            border-radius: 20px; 
+            overflow: hidden; 
+            display: grid; 
+            grid-template-columns: 200px 1fr; 
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .why-card:hover { 
+            transform: translateY(-10px) scale(1.02); 
+            box-shadow: 0 25px 60px rgba(212,175,55,0.25);
+        }
+        .why-card-image { height: 100%; overflow: hidden; }
+        .why-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .why-card:hover .why-card-image img { transform: scale(1.1); }
+        .why-card-content { padding: 30px; color: var(--dark); }
+        .why-card-content h3 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 1.4rem; 
+            margin-bottom: 15px; 
+            transition: color 0.3s;
+        }
+        .why-card:hover .why-card-content h3 { color: var(--gold-dark); }
+        .why-card-content p { font-size: 0.9rem; line-height: 1.7; opacity: 0.8; }
+        
+        /* CTA Section — see css/cta-section.css */
+        
+        /* Gallery Section */
+        .gallery-section { padding: 100px 20px; }
+        .gallery-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        .gallery-item { 
+            border-radius: 15px; 
+            overflow: hidden; 
+            height: 280px; 
+            position: relative;
+            border: 2px solid transparent;
+            transition: all 0.4s ease;
+        }
+        .gallery-item:hover { 
+            border-color: var(--gold); 
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(212,175,55,0.2);
+        }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .gallery-item:hover img { transform: scale(1.1); }
+        
+        /* Testimonials */
+        .testimonials-section { padding: 100px 20px; }
+        .testimonial-wrap {
+            position: relative;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 56px;
+        }
+        .testimonial-wrap::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 56px;
+            width: 100px;
+            height: 100%;
+            background: linear-gradient(to left, rgba(255,255,255,0.92) 10%, transparent);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .testimonial-slider {
+            display: flex;
+            gap: 25px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding: 20px 4px 28px;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .testimonial-slider::-webkit-scrollbar { display: none; }
+        .testimonial-card {
+            min-width: 380px;
+            max-width: 380px;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+            background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(201,162,39,0.2);
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+        .testimonial-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+        .testimonial-card .quote-icon { font-size: 2.5rem; color: var(--gold); opacity: 0.3; margin-bottom: 20px; }
+        .testimonial-card p { font-size: 1.05rem; line-height: 1.8; font-style: italic; opacity: 0.9; margin-bottom: 25px; }
+        .testimonial-card h4 { color: var(--gold); font-size: 1.1rem; }
+        .testimonial-scroll-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: 1px solid rgba(201,162,39,0.45);
+            background: rgba(10,10,10,0.85);
+            color: var(--gold);
+            cursor: pointer;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .testimonial-scroll-btn:hover {
+            background: var(--gold);
+            color: var(--dark);
+            box-shadow: 0 6px 20px rgba(201,162,39,0.3);
+        }
+        .testimonial-scroll-btn.left { left: 0; }
+        .testimonial-scroll-btn.right { right: 0; }
+        .testimonial-scroll-btn:disabled {
+            opacity: 0.25;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        /* Footer */
+        .footer { padding: 40px 20px 0; background: transparent; }
+        .footer-content { display: grid; grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(160px, 1fr)); gap: 20px 36px; max-width: 1200px; margin: 0 auto; padding-bottom: 22px; border-bottom: 1px solid rgba(0,0,0,0.08); align-items: start; }
+        .footer-logo { height: 44px; margin-bottom: 0; }
+        .footer h4 { font-size: 1.05rem; margin: 0 0 10px; color: var(--gold); }
+        .footer ul { list-style: none; }
+        .footer li { margin-bottom: 5px; }
+        .footer a { color: #3a3a3a; text-decoration: none; opacity: 1; font-size: 0.875rem; transition: all 0.3s; }
+        .footer a:hover { color: var(--gold); }
+        .social-links { display: flex; gap: 8px; margin-top: 10px; }
+        .social-links a { width: 38px; height: 38px; border: 1px solid rgba(180,180,180,0.35); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.94); color: #2f2f2f; box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
+        .social-links a:hover { background: var(--gold); border-color: var(--gold); color: var(--dark); }
+        .footer-bottom { text-align: center; padding: 12px 0 16px; border-top: none; font-size: 0.8rem; color: #6b6b6b; opacity: 1; }
+        
+        /* Floating CTAs removed — contact is in the footer */
+        .floating-btn { display: none !important; }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 16px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--gold);
+            color: var(--dark);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+        }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(201,162,39,0.4); }
+        
+        /* Mobile Nav — see css/mobile-nav.css */
+        
+        /* Mobile swipe rows */
+        .mobile-swipe-hint {
+            display: none;
+            text-align: center;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(201,162,39,0.75);
+            margin: -8px 0 18px;
+        }
+        .mobile-swipe-hint i {
+            margin-left: 6px;
+            animation: swipeHint 1.4s ease-in-out infinite;
+        }
+        .hero-content .mobile-swipe-hint {
+            margin: 20px 0 2px;
+            font-size: 0.65rem;
+        }
+        @keyframes swipeHint {
+            0%, 100% { transform: translateX(0); opacity: 0.7; }
+            50% { transform: translateX(5px); opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .desktop-nav, .header-cta { display: none; }
+            .header-contact-mobile { display: inline-flex; }
+            .hamburger { display: none !important; }
+            .header {
+                display: flex;
+                justify-content: space-between;
+                grid-template-columns: none;
+            }
+            .header > a:first-child,
+            .header .header-contact-mobile { grid-column: auto; justify-self: auto; }
+            .header { padding: 12px 16px; height: auto; min-height: 64px; }
+            .logo-img { height: 48px; }
+            .hero { padding: 80px 16px 72px; min-height: auto; }
+            .hero-content { padding: 28px 20px 24px; border-radius: 18px; }
+            .hero-stats { gap: 24px 32px; }
+            .hero-stat-num { font-size: 1.5rem; }
+            .scroll-indicator { right: 20px; bottom: 28px; }
+            .hero-dots { bottom: 20px; }
+            .hero-corner { display: none; }
+            .about-container, .trust-grid { grid-template-columns: 1fr; }
+            .sk-logo-img { max-height: 350px; }
+            .about-logo-area { height: auto; min-height: 0; align-self: auto; }
+            .about-video-frame { aspect-ratio: 16 / 9; height: auto; min-height: 0; }
+            .process-steps { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+            .process-steps::before { display: none; }
+            .why-cards { grid-template-columns: 1fr; }
+            .why-card { grid-template-columns: 1fr; }
+            .why-card-image { height: 200px; }
+            body {
+                background-attachment: scroll;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            .trust-section, .why-section { background-attachment: scroll; }
+            .hero-slide img { transform: none; animation: none !important; }
+            .hero-slide.active img { animation: none !important; }
+        }
+        @media (max-width: 768px) {
+            .mobile-swipe-hint { display: block; }
+            .about-section, .services-slider-section, .trust-section,
+            .why-section, .gallery-section, .testimonials-section, .process-section {
+                padding: 56px 16px;
+            }
+            .footer { padding: 24px 14px 0; }
+            .footer-content { grid-template-columns: 1fr 1fr; gap: 12px 14px; padding-bottom: 12px; border-bottom: none; }
+            .footer-content > :first-child { grid-column: 1 / -1; }
+            .footer-content > :nth-child(2) { grid-column: 1; }
+            .footer-content > :nth-child(3) { grid-column: 2; }
+            .footer-content > .social-links { grid-column: 1 / -1; justify-content: center; margin-top: 4px; gap: 8px; }
+            .footer h4 { margin-bottom: 6px; font-size: 0.95rem; }
+            .footer li { margin-bottom: 3px; }
+            .footer a { font-size: 0.8rem; }
+            .social-links a { width: 40px; height: 40px; }
+            .footer-bottom { padding: 8px 14px 12px; font-size: 0.72rem; border-top: 1px solid rgba(0,0,0,0.08); }
+            .section-header { margin-bottom: 36px; }
+            .process-section .section-header { margin-bottom: 44px; }
+            .process-section { padding: 72px 16px 80px; }
+            .process-steps { gap: 18px; padding-top: 4px; }
+            .section-header h2, .services-slider-header h2, .trust-section h2,
+            .why-section .section-header h2 { font-size: 1.65rem; }
+            .about-content h2 { font-size: 1.75rem; }
+            .about-section { padding: 56px 16px; }
+            .about-video-note { margin-top: 20px; padding: 22px 20px 20px; }
+            .about-video-note h3 { font-size: 1.2rem; }
+            .about-video-note p { font-size: 0.9rem; }
+            .hero { padding: 72px 12px 64px; }
+            .hero-content { padding: 24px 16px 20px; margin: 0; width: 100%; max-width: 100%; }
+            .hero-badges { gap: 10px; margin-bottom: 20px; }
+            .hero-badge { font-size: 0.65rem; padding: 9px 16px; letter-spacing: 1.5px; }
+            .hero-phone { font-size: 0.85rem; padding: 9px 16px; }
+            .hero-subtitle { font-size: 0.9rem; margin-bottom: 24px; line-height: 1.7; }
+            .hero-badges,
+            .hero-content h1,
+            .hero-subtitle,
+            .hero-buttons,
+            .hero-stats {
+                animation: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+                position: relative;
+                z-index: 2;
+            }
+            .hero-buttons .btn {
+                width: 100%;
+                text-align: center;
+                padding: 15px 24px;
+                font-size: 0.78rem;
+                letter-spacing: 1.5px;
+            }
+            .hero-buttons .btn:not(.btn-primary) {
+                background: rgba(255, 255, 255, 0.08);
+                border-color: var(--gold);
+                color: #fff;
+            }
+            .hero-stats {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                gap: 0;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                margin: 28px -16px 0;
+                padding: 24px 16px 4px;
+                border-top: 1px solid rgba(201,162,39,0.2);
+            }
+            .hero-stats::-webkit-scrollbar { display: none; }
+            .hero-stat {
+                flex: 0 0 auto;
+                min-width: 130px;
+                scroll-snap-align: start;
+                padding-right: 20px;
+            }
+            .hero-stat-num { font-size: 1.35rem; }
+            .hero-stat-label { font-size: 0.62rem; letter-spacing: 1.5px; }
+            .hero-dots { bottom: 16px; }
+            .process-steps {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                gap: 16px;
+                padding: 0 0 12px;
+                margin: 0 -16px;
+                padding-left: 16px;
+                padding-right: 16px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .process-steps::-webkit-scrollbar { display: none; }
+            .process-step {
+                flex: 0 0 78%;
+                max-width: 280px;
+                scroll-snap-align: start;
+                background: rgba(255,255,255,0.03);
+                border: 1px solid rgba(201,162,39,0.15);
+                border-radius: 16px;
+                padding: 24px 16px;
+            }
+            .process-step-num { width: 56px; height: 56px; font-size: 1.15rem; margin-bottom: 14px; }
+            .process-step h3 { font-size: 1rem; }
+            .process-step p { font-size: 0.85rem; }
+            .stats-grid {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                gap: 14px;
+                padding: 0 0 12px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .stats-grid::-webkit-scrollbar { display: none; }
+            .stat-item {
+                flex: 0 0 72%;
+                max-width: 220px;
+                scroll-snap-align: start;
+                padding: 20px 12px;
+            }
+            .stat-number { font-size: 2.2rem; }
+            .trust-section h2 { margin-bottom: 36px; }
+            .trust-image img { height: 260px; }
+            .why-cards {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                gap: 16px;
+                margin: 32px -16px 0;
+                padding: 0 16px 12px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .why-cards::-webkit-scrollbar { display: none; }
+            .why-card {
+                flex: 0 0 85%;
+                max-width: 320px;
+                scroll-snap-align: start;
+                display: block;
+            }
+            .why-card-image { height: 180px; }
+            .why-card-content { padding: 22px; }
+            .why-card-content h3 { font-size: 1.05rem; }
+            .why-card-content p { font-size: 0.85rem; }
+            .gallery-grid {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                gap: 14px;
+                margin: 0 -16px;
+                padding: 0 16px 12px;
+                max-width: none;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .gallery-grid::-webkit-scrollbar { display: none; }
+            .gallery-item {
+                flex: 0 0 78%;
+                max-width: 300px;
+                height: 220px;
+                scroll-snap-align: start;
+            }
+            .services-wrap, .testimonial-wrap { padding: 0 8px; }
+            .services-wrap::after, .testimonial-wrap::after { display: none; }
+            .testimonial-scroll-btn { display: none; }
+            .services-slider, .testimonial-slider {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+            .service-slide { min-width: 78vw; max-width: 78vw; }
+            .service-slide-image { height: 240px; }
+            .service-slide-content { padding: 22px; }
+            .testimonial-card { min-width: 85vw; max-width: 85vw; padding: 28px 24px; }
+            .marquee { padding: 14px 0; }
+            .marquee-content span { font-size: 0.78rem; padding: 0 24px; letter-spacing: 2px; }
+        }
+        @media (max-width: 480px) {
+            .hero h1 { letter-spacing: 1px; font-size: clamp(1.65rem, 7vw, 2.2rem); }
+            .hero-badge { letter-spacing: 1.2px; font-size: 0.62rem; }
+            .logo-img { height: 44px; }
+            .sk-logo-img { max-height: 220px; }
+            .stat-number { font-size: 2rem; }
+            .scroll-indicator { display: none; }
+        }
+    </style>
+    <link rel="stylesheet" href="css/marble-showroom.css">
+    <script src="js/cta-reveal.js" defer></script>
+</head>
+<body class="showroom-theme">
+    <header class="header">
+        <a aria-label='S K Stones India' class='brand-lockup' href='/'>
+            <img class="brand-mark" src="images/shree-logo.png" alt="" width="40" height="80" decoding="async">
+            <span class="brand-text">
+                <span class="brand-name">S K <span class="brand-stones">Stones</span> India</span>
+                <span class="brand-formerly">(formerly Shree Stones &amp; Services)</span>
+            </span>
+        </a>
+        <nav class="desktop-nav">
+            <a class='active' href='/'>Home</a>
+            <a href='/about'>About Us</a>
+            <div class="nav-dropdown">
+                <span class="nav-link">Services <i class="fas fa-chevron-down"></i></span>
+                <div class="dropdown-menu">
+                    <a href='/installations'>Installations</a>
+                    <a href='/landscaping'>Landscaping</a>
+                    <a href='/flooring-executions'>Flooring Executions</a>
+                    <a href='/stone-art-installations'>Stone Art Installations</a>
+                </div>
+            </div>
+                        <div class="nav-dropdown mega-dropdown">
+                <span class="nav-link">Products <i class="fas fa-chevron-down"></i></span>
+                <div class="dropdown-menu mega-menu">
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Marbles <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/indian-marbles'>Indian Marbles</a>
+                            <a href='/imported-marbles'>Imported Marbles</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Granites <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/granites'>Indian Granites</a>
+                            <a href='/imported-granites'>Imported Granites</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Stone-Art <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/cnc-stone-work'>CNC Stone Work &amp; INLAY Work</a>
+                            <a href='/mop-inlay-work'>MOP Work</a>
+                            <a href='/murals-monuments'>Murals &amp; Monuments</a>
+                            <a href='/feature-wall'>Feature Walls</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Natural Stones <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/cobble-stones'>Cobble Stones</a>
+                            <a href='/kota-stones'>Lime Stones</a>
+                            <a href='/pebbles'>Pebbles</a>
+                            <a href='/sand-stones'>Sand Stones</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Engineered Surfaces <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/acrylic-surfaces'>Acrylic Surfaces</a>
+                            <a href='/quatrz-surfaces'>Quatrz Surfaces</a>
+                        </div>
+                    </div>
+                    <div class="mega-item">
+                        <a href='/wall-claddings'>Wall Claddings</a>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Tiles <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/brillo-collection'>Brillo Collection</a>
+                            <a href='/elezzo-collection'>Elezzo Collection</a>
+                            <a href='/endless-collection'>Endless Collection</a>
+                            <a href='/ittaca-collection'>Ittaca Collection</a>
+                            <a href='/milagro-collection'>Milagro Collection</a>
+                            <a href='/stone-collection'>Stone Collection</a>
+                            <a href='/subway-tiles'>Subway Tiles</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Clay Products <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/clay-jally'>Clay Jally</a>
+                            <a href='/wire-cut-bricks'>Wire Cut Bricks</a>
+                            <a href='/elevation-clay-bricks'>Elevation Clay Bricks</a>
+                            <a href='/roofing-tiles-clay'>Roofing Tiles</a>
+                            <a href='/roof-flooring-tiles'>Roof Flooring Tiles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href='/projects'>Our Projects</a>
+            <a href='/contact'>Contact Us</a>
+        </nav>
+        <a href="tel:+917022630994" class="header-cta"><i class="fas fa-phone"></i> Call Us Now</a>
+        <a class='header-contact-mobile' href='/contact'>Contact Us</a>
+        <div class="hamburger" id="menuToggle"><span></span><span></span><span></span></div>
+    </header>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+    <nav class="mobile-nav" id="mobileNav" data-full-nav="true"></nav>
+
+    <!-- PREVIOUS HERO (restore if needed): cinematic "Elegance In Every Stone" panel
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-slide active"><img src="images/project-luxury-lobby.png" alt="Luxury Lobby"></div>
+            <div class="hero-slide"><img src="images/project-ritz-carlton.png" alt="Ritz Carlton"></div>
+            <div class="hero-slide"><img src="images/project-airport-departures.png" alt="Airport Departures"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-grain"></div>
+        <div class="hero-corner hero-corner-tl"></div>
+        <div class="hero-corner hero-corner-br"></div>
+        <div class="hero-content">
+            <div class="hero-badges">
+                <a href="tel:+917022630994" class="hero-phone"><i class="fas fa-phone"></i> +91 70226 30994</a>
+                <div class="hero-badge">Crafting Timeless Spaces for 12+ Years</div>
+            </div>
+            <h1>Elegance In <span>Every Stone</span></h1>
+            <p class="hero-subtitle">Where Exceptional Stones Create Extraordinary Spaces. Trusted by Architects, Builders &amp; Interior Designers Across India.</p>
+            <div class="hero-buttons">
+                <a href="products.html" class="btn btn-primary">Explore Collection</a>
+                <a href="contact.html" class="btn">Get Quote</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-num">12+</span>
+                    <span class="hero-stat-label">Years of Excellence</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">200+</span>
+                    <span class="hero-stat-label">Projects Delivered</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">50+</span>
+                    <span class="hero-stat-label">Trusted Partners</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-dots" id="heroDots" aria-label="Hero slideshow navigation">
+            <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+            <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+            <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll to content">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+    -->
+
+    <section class="sk-manifesto sk-manifesto-hero" id="manifesto" aria-label="S K Stones identity">
+        <div class="sk-manifesto-inner">
+            <div class="sk-manifesto-panel sk-manifesto-logo">
+                <img src="images/sk-mark-transparent.png" alt="S K Stones India marble monogram">
+                <p class="manifesto-trust-pill">Trusted by Architects, Builders &amp; Developers</p>
+            </div>
+            <div class="sk-manifesto-panel sk-manifesto-copy">
+                <p class="manifesto-eyebrow">S K Stones India</p>
+                <h1>
+                    <span class="manifesto-line">We Don't Just <span class="gold gold-shimmer">Supply.</span></span>
+                    <span class="manifesto-line">We Shape</span>
+                    <span class="manifesto-line"><span class="gold gold-shimmer">Experiences.</span></span>
+                </h1>
+                <p class="manifesto-lead">Where exceptional stones create extraordinary spaces.</p>
+                <div class="manifesto-actions">
+                    <a class='btn btn-primary' href='/products'>Explore Collection</a>
+                    <a class='btn manifesto-btn-ghost' href='/contact'>Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee">
+        <div class="marquee-content">
+            <span>Premium Granites & Marbles</span><span>★</span>
+            <span>Architectural Masterpieces</span><span>★</span>
+            <span>Hotels & Luxury Homes</span><span>★</span>
+            <span>Custom Stone Art</span><span>★</span>
+            <span>Premium Granites & Marbles</span><span>★</span>
+            <span>Architectural Masterpieces</span><span>★</span>
+        </div>
+    </div>
+
+    <!-- We Don't Just Supply Section with SK Watermark -->
+    <section class="about-section reveal" id="about">
+        <div class="about-container">
+            <div class="about-logo-area">
+                <div class="about-video-frame">
+                    <video
+                        class="about-video"
+                        id="aboutVideo"
+                        muted
+                        loop
+                        playsinline
+                        webkit-playsinline
+                        preload="auto"
+                        poster="images/project-luxury-lobby.png">
+                        <source id="aboutVideoSource" src="images/home-page-video-mobile.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="about-video-note">
+                    <span class="about-video-note-label"><i class="fas fa-film"></i> Behind the Stone</span>
+                    <h3>From Quarry to Finish</h3>
+                    <p>This video takes you through how we source, cut, and prepare every slab — the same precision and care that goes into every residential and commercial project we deliver.</p>
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="section-label">Who We Are</span>
+                <h2>Built On <span>Trust.</span> Proven By <span>Results.</span></h2>
+                <p>From selecting the perfect stone to flawless installation, we bring craftsmanship, consistency, and reliability to every project.</p>
+                <ul class="about-list">
+                    <li><i class="fas fa-check"></i> 12+ Years in Quality Stone Solutions</li>
+                    <li><i class="fas fa-check"></i> 100+ Completed Residential & Commercial Projects</li>
+                    <li><i class="fas fa-check"></i> Unmatched Quality. Unmatched Finishing.</li>
+                    <li><i class="fas fa-check"></i> Built on Trust. Proven by Results.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Slider Section -->
+    <section class="services-slider-section reveal">
+        <div class="services-slider-container">
+            <div class="services-slider-header">
+                <span class="section-label">What We Do</span>
+                <h2>Our <span>Services</span></h2>
+                <div class="underline"></div>
+            </div>
+            <p class="mobile-swipe-hint">Swipe services <i class="fas fa-arrow-right"></i></p>
+            <div class="services-wrap">
+                <button type="button" class="testimonial-scroll-btn left" id="servicesScrollLeft" aria-label="Scroll services left">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="services-slider" id="servicesSlider">
+                <a class='service-slide' href='/landscaping'>
+                    <div class="service-slide-image">
+                        <img src="images/landscaping-service.jpg" alt="Landscaping">
+                    </div>
+                    <div class="service-slide-content">
+                        <h3>Landscaping</h3>
+                        <p>Beautiful stone landscaping designs enhancing outdoor spaces with strength, texture, and natural elegance.</p>
+                        <div class="service-slide-actions">
+                            <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
+                            <span class="wa-link" onclick="event.preventDefault();event.stopPropagation();window.open('https://wa.me/917022630994?text=Hi%2C%20I%27m%20interested%20in%20Landscaping%20services.','_blank')"><i class="fab fa-whatsapp"></i> Quote</span>
+                        </div>
+                    </div>
+                </a>
+                <a class='service-slide' href='/stone-art-installations'>
+                    <div class="service-slide-image">
+                        <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/modern-styled-small-entryway-1-683x1024.webp" alt="Wall Art">
+                    </div>
+                    <div class="service-slide-content">
+                        <h3>Wall-Art</h3>
+                        <p>Handcrafted stone-art masterpieces designed to deliver distinctive style and timeless beauty.</p>
+                        <div class="service-slide-actions">
+                            <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
+                            <span class="wa-link" onclick="event.preventDefault();event.stopPropagation();window.open('https://wa.me/917022630994?text=Hi%2C%20I%27m%20interested%20in%20Wall-Art%20stone%20services.','_blank')"><i class="fab fa-whatsapp"></i> Quote</span>
+                        </div>
+                    </div>
+                </a>
+                <a class='service-slide' href='/stone-art-installations'>
+                    <div class="service-slide-image">
+                        <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/11/stone-art.avif" alt="Stone Art">
+                    </div>
+                    <div class="service-slide-content">
+                        <h3>Stone-Art</h3>
+                        <p>Stone art pieces create striking focal points using natural stone textures and artistic expression for interior and exterior spaces.</p>
+                        <div class="service-slide-actions">
+                            <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
+                            <span class="wa-link" onclick="event.preventDefault();event.stopPropagation();window.open('https://wa.me/917022630994?text=Hi%2C%20I%27m%20interested%20in%20Stone-Art%20installations.','_blank')"><i class="fab fa-whatsapp"></i> Quote</span>
+                        </div>
+                    </div>
+                </a>
+                <a class='service-slide' href='/installations'>
+                    <div class="service-slide-image">
+                        <img src="images/service-installations.png" alt="Installations">
+                    </div>
+                    <div class="service-slide-content">
+                        <h3>Installations</h3>
+                        <p>Premium stone installations crafted with precision, durability, elegance, and long-lasting visual impact.</p>
+                        <div class="service-slide-actions">
+                            <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
+                            <span class="wa-link" onclick="event.preventDefault();event.stopPropagation();window.open('https://wa.me/917022630994?text=Hi%2C%20I%27m%20interested%20in%20Stone%20Installation%20services.','_blank')"><i class="fab fa-whatsapp"></i> Quote</span>
+                        </div>
+                    </div>
+                </a>
+                <a class='service-slide' href='/flooring-executions'>
+                    <div class="service-slide-image">
+                        <img src="images/service-floorings.png" alt="Floorings">
+                    </div>
+                    <div class="service-slide-content">
+                        <h3>Floorings</h3>
+                        <p>Precision stone flooring for homes, offices, and commercial spaces — uniform levels, seamless joints, and flawless polished finishes.</p>
+                        <div class="service-slide-actions">
+                            <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
+                            <span class="wa-link" onclick="event.preventDefault();event.stopPropagation();window.open('https://wa.me/917022630994?text=Hi%2C%20I%27m%20interested%20in%20Stone%20Flooring%20services.','_blank')"><i class="fab fa-whatsapp"></i> Quote</span>
+                        </div>
+                    </div>
+                </a>
+                <a class='service-slide' href='/wall-claddings'>
+                    <div class="service-slide-image">
+                        <img src="images/service-elevations.png" alt="Elevations">
+                    </div>
+                    <div class="service-slide-content">
+                        <h3>Elevations</h3>
+                        <p>Grand stone elevations and façade cladding that elevate architectural presence with texture, depth, and lasting curb appeal.</p>
+                        <div class="service-slide-actions">
+                            <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
+                            <span class="wa-link" onclick="event.preventDefault();event.stopPropagation();window.open('https://wa.me/917022630994?text=Hi%2C%20I%27m%20interested%20in%20Stone%20Elevation%20%2F%20Cladding.','_blank')"><i class="fab fa-whatsapp"></i> Quote</span>
+                        </div>
+                    </div>
+                </a>
+                <a class='service-slide' href='/installations'>
+                    <div class="service-slide-image">
+                        <img src="images/service-roofings.png" alt="Roofings">
+                    </div>
+                    <div class="service-slide-content">
+                        <h3>Roofings</h3>
+                        <p>Durable stone roofing and terrace solutions combining weather resistance, structural strength, and refined natural beauty.</p>
+                        <div class="service-slide-actions">
+                            <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
+                            <span class="wa-link" onclick="event.preventDefault();event.stopPropagation();window.open('https://wa.me/917022630994?text=Hi%2C%20I%27m%20interested%20in%20Stone%20Roofing%20solutions.','_blank')"><i class="fab fa-whatsapp"></i> Quote</span>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                <button type="button" class="testimonial-scroll-btn right" id="servicesScrollRight" aria-label="Scroll services right">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section reveal">
+        <div class="section-header">
+            <span class="section-label">Our Process</span>
+            <h2>From Vision to <span>Masterpiece</span></h2>
+            <div class="underline"></div>
+        </div>
+        <p class="mobile-swipe-hint">Swipe our process <i class="fas fa-arrow-right"></i></p>
+        <div class="process-steps">
+            <div class="process-step" style="--step-delay: 0.05s">
+                <div class="process-step-num">01</div>
+                <h3>Consult</h3>
+                <p>Understand your space, style, and budget with expert stone guidance.</p>
+            </div>
+            <div class="process-step" style="--step-delay: 0.15s">
+                <div class="process-step-num">02</div>
+                <h3>Select</h3>
+                <p>Choose from our wide range of Stone products.</p>
+            </div>
+            <div class="process-step" style="--step-delay: 0.25s">
+                <div class="process-step-num">03</div>
+                <h3>Fabricate</h3>
+                <p>Precision cutting and finishing with advanced fabrication technology.</p>
+            </div>
+            <div class="process-step" style="--step-delay: 0.35s">
+                <div class="process-step-num">04</div>
+                <h3>Install</h3>
+                <p>Flawless on-site installation delivered on time, every time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Built on Trust Section -->
+    <section class="trust-section reveal">
+        <div class="trust-container">
+            <h2>Built on <span>Trust.</span> Proven by <span>Results.</span></h2>
+            <div class="trust-grid">
+                <div class="trust-image">
+                    <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/stone-interior-eXiUxS-v-1.webp" alt="Interior">
+                </div>
+                <p class="mobile-swipe-hint">Swipe results <i class="fas fa-arrow-right"></i></p>
+                <div class="stats-grid">
+                    <div class="stat-item"><div class="stat-number"><span class="counter" data-target="200">0</span><sup>+</sup></div><div class="stat-label">Projects Delivered</div></div>
+                    <div class="stat-item"><div class="stat-number"><span class="counter" data-target="99">0</span><sup>%</sup></div><div class="stat-label">Quality Assurance</div></div>
+                    <div class="stat-item"><div class="stat-number"><span class="counter" data-target="50">0</span><sup>+</sup></div><div class="stat-label">Trusted Partners</div></div>
+                    <div class="stat-item"><div class="stat-number"><span class="counter" data-target="4.9" data-decimal="true">0</span><sup>+</sup></div><div class="stat-label">Client Satisfaction</div></div>
+                </div>
+                <div class="trust-text">
+                    <h3>EXCELLENCE . EXPERTISE . TRUST</h3>
+                    <p>Working with S K Stones India (formerly Shree Stones & Services) was seamless from start to finish. Their craftsmanship, precision, and commitment to quality truly exceeded expectations. Every detail reflected expertise, making our project stand out beautifully.</p>
+                    <div class="trust-author">
+                        <div class="trust-author-icon" aria-hidden="true"><i class="fas fa-quote-right"></i></div>
+                        <div>
+                            <span class="trust-author-label">Review by</span>
+                            <span class="trust-author-name">DFA Architects</span>
+                            <span class="trust-author-meta">Bangalore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-section reveal">
+        <div class="why-container">
+            <div class="section-header">
+                <h2>Why <span>Architects</span> & <span>Builders</span> Choose S K Stones India?</h2>
+                <p>Our stone expertise, sourcing strength, and design-driven approach help homeowners, architects, and builders achieve flawless results. Every project gets premium materials, expert guidance, and unmatched craftsmanship from start to finish.</p>
+            </div>
+            <p class="mobile-swipe-hint">Swipe to compare <i class="fas fa-arrow-right"></i></p>
+            <div class="why-cards">
+                <div class="why-card">
+                    <div class="why-card-image">
+                        <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/11/YELLOW-FOSSIL-LEATHERED.jpg" alt="Premium Material">
+                    </div>
+                    <div class="why-card-content">
+                        <h3>Premium-Grade Material Only</h3>
+                        <p>Every stone we supply goes through strict quality checks to ensure unmatched strength, durability, and beauty. We never compromise or take shortcuts — only top-tier stones that meet our standards are approved.</p>
+                    </div>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-image">
+                        <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/stone-2.webp" alt="Expert">
+                    </div>
+                    <div class="why-card-content">
+                        <h3>Expert Recommendations</h3>
+                        <p>Our specialists guide you toward the ideal stone for every space. We consider usage, design style, maintenance needs, and budget to recommend the perfect material.</p>
+                    </div>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-image">
+                        <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/img-23.webp" alt="Installation">
+                    </div>
+                    <div class="why-card-content">
+                        <h3>Precision Installation</h3>
+                        <p>Our trained team delivers perfectly aligned stonework with seamless joints, crack-free installation, accurate leveling, and skilled craftsmanship that lasts.</p>
+                    </div>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-image">
+                        <img src="images/stone-wall-art.png" alt="Custom">
+                    </div>
+                    <div class="why-card-content">
+                        <h3>100% Custom Solutions</h3>
+                        <p>We create fully customized stone concepts tailored to your vision — custom stone-art, unique patterns and textures, handcrafted detailing for every project.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-section" id="gallery">
+        <div class="section-header">
+            <h2>See the <span>Craft</span></h2>
+            <div class="underline"></div>
+        </div>
+        <p class="mobile-swipe-hint">Swipe gallery <i class="fas fa-arrow-right"></i></p>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="images/stone-wall-art.png" alt="Gallery"></div>
+            <div class="gallery-item"><img src="images/circular-stone-pattern.png" alt="Gallery"></div>
+            <div class="gallery-item"><img src="images/project-ritz-carlton.png" alt="Gallery"></div>
+            <div class="gallery-item"><img src="images/project-airport-departures.png" alt="Gallery"></div>
+            <div class="gallery-item"><img src="images/project-luxury-lobby.png" alt="Gallery"></div>
+            <div class="gallery-item"><img src="images/project-aster-hospital.png" alt="Gallery"></div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section reveal" id="faq">
+        <div class="faq-container">
+            <div class="section-header">
+                <span class="section-label">Got Questions?</span>
+                <h2>Frequently Asked <span>Questions</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">What is the difference between marble and granite?<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Marble offers elegant veining and a luxurious feel — ideal for living areas, bathrooms, and feature walls. Granite is harder, more scratch-resistant, and better suited for kitchens, high-traffic floors, and outdoor areas. Our team helps you choose based on usage, maintenance, and design goals.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">Do you supply only, or supply and install?<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>We offer both. You can purchase stone slabs from our showroom, or opt for end-to-end supply, fabrication, and on-site installation through our expert execution teams.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">How long does a typical project take?<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Timelines depend on project size and stone type. Residential flooring typically takes 2–6 weeks; commercial and elevation projects may take 1–5 months. We provide a clear schedule after site assessment and stone selection.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">Do you work outside Bengaluru?<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Yes. While our showroom is in Koramangala, Bengaluru, we supply and execute projects across Karnataka and pan-India for architects, builders, and commercial clients.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">Can I visit your showroom to see stones in person?<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Absolutely. Visit us at 627-628, 15th Main, 80 Feet Road, 5th Cross Rd, 4th Block, Bengaluru, Karnataka 560034. Walk in during business hours or call +91 70226 30994 to schedule a guided consultation with our stone experts.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">How do I get a quote for my project?<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Fill out our contact form with stone type, dimensions, and site location — or WhatsApp us directly. Our team responds within 24 hours with guidance and a tailored quote.</p></div>
+                </div>
+            </div>
+            <div class="faq-cta">
+                <p>Still have questions? We're happy to help.</p>
+                <a class='btn btn-primary' href='/contact'>Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section reveal">
+        <div class="cta-content">
+            <h2 class="cta-title">
+                <span class="cta-line cta-line-1">Transform Your Space With</span>
+                <span class="cta-line cta-line-2">Premium <span class="cta-gold">Stone Craftsmanship</span></span>
+            </h2>
+            <div class="cta-underline"></div>
+            <p class="cta-desc">Premium natural stones for homes, offices &amp; commercial spaces. Trusted by architects and builders across India.</p>
+            <div class="cta-actions">
+                <a class='btn btn-primary' href='/contact'>Get Started Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="section-header">
+            <h2>Client <span>Reviews</span></h2>
+            <div class="underline"></div>
+            <a href="https://www.google.com/search?q=S+K+Stones+India+Bengaluru+reviews" target="_blank" rel="noopener" class="reviews-google-link">
+                <i class="fab fa-google"></i> Read More Reviews on Google
+            </a>
+        </div>
+        <p class="mobile-swipe-hint">Swipe reviews <i class="fas fa-arrow-right"></i></p>
+        <div class="testimonial-wrap">
+            <button type="button" class="testimonial-scroll-btn left" id="testScrollLeft" aria-label="Scroll reviews left">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="testimonial-slider" id="testimonialSlider">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"We recently completed our villa in Bengaluru and sourced granite from SK Stones India. The team guided us in choosing the right material — quality, finishing, and delivery were outstanding."</p>
+                    <h4>Raghavendra M.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"Their collection is extensive, and the team patiently explained the differences between various stones. The quality exceeded our expectations and transformed the look of our home."</p>
+                    <h4>Ar. Viswapriya</h4>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"The material was exactly as shown during selection, and the quality was consistent across all slabs. Excellent communication throughout — highly recommended."</p>
+                    <h4>Ar. Zabi Ahmed</h4>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"Their team understood my requirements and suggested options that perfectly matched my design vision. The craftsmanship and finish of the stone are exceptional."</p>
+                    <h4>Shristi S.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"SK Stones India delivered exactly what they promised. Excellent quality with beautiful natural patterns, competitive pricing, and timely delivery. A pleasure to work with."</p>
+                    <h4>Harikishor</h4>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"Their team demonstrated strong product knowledge and helped us select materials that met both our design and budget requirements. We look forward to working with them again."</p>
+                    <h4>Srinivasa Rao M.</h4>
+                </div>
+            </div>
+            <button type="button" class="testimonial-scroll-btn right" id="testScrollRight" aria-label="Scroll reviews right">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <a aria-label='S K Stones India' class='brand-lockup brand-lockup-footer' href='/'>
+            <img class="brand-mark" src="images/shree-logo.png" alt="" width="40" height="80" decoding="async">
+            <span class="brand-text">
+                        <span class="brand-name">S K <span class="brand-stones">Stones</span> India</span>
+                        <span class="brand-formerly">(formerly Shree Stones &amp; Services)</span>
+                    </span>
+                </a>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href='/'>Home</a></li>
+                    <li><a href='/about'>About Us</a></li>
+                    <li><a href='/products'>Products</a></li>
+                    <li><a href='/contact'>Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+917022630994"><i class="fas fa-phone"></i> +91 70226 30994</a></li>
+                    <li><a href="mailto:info@skstonesindia.com"><i class="fas fa-envelope"></i> info@skstonesindia.com</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> Koramangala, Bengaluru</li>
+                </ul>
+            </div>
+            <div class="social-links">
+                    <a href="https://www.linkedin.com/in/shree-kumar-gandhi-8699533a6/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/917022630994" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:info@skstonesindia.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+        </div>
+        <div class="footer-bottom">© 2026 S K Stones India Pvt. Ltd. All Rights Reserved.</div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const heroDots = document.querySelectorAll('.hero-dot');
+        const header = document.querySelector('.header');
+
+        const setHeroSlide = (index) => {
+            currentSlide = index;
+            slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+            heroDots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+            const img = slides[index].querySelector('img');
+            if (img) {
+                img.style.animation = 'none';
+                void img.offsetHeight;
+                img.style.animation = '';
+            }
+        };
+
+        setInterval(() => setHeroSlide((currentSlide + 1) % slides.length), 6000);
+        heroDots.forEach(dot => {
+            dot.addEventListener('click', () => setHeroSlide(parseInt(dot.dataset.slide, 10)));
+        });
+
+        const aboutVideo = document.getElementById('aboutVideo');
+        const aboutVideoSource = document.getElementById('aboutVideoSource');
+        if (aboutVideo && aboutVideoSource) {
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReducedMotion) {
+                aboutVideo.remove();
+            } else {
+                // Desktop can use full quality; phones use the compressed file (already set)
+                const useFull = window.matchMedia('(min-width: 1025px)').matches
+                    && !(navigator.connection && (navigator.connection.saveData || /2g/i.test(navigator.connection.effectiveType || '')));
+                if (useFull) {
+                    aboutVideoSource.src = 'images/home-page-video.mp4';
+                    aboutVideo.load();
+                }
+
+                const playAboutVideo = () => {
+                    const playPromise = aboutVideo.play();
+                    if (playPromise && typeof playPromise.catch === 'function') {
+                        playPromise.catch(() => {});
+                    }
+                };
+
+                // Warm the buffer early so playback starts instantly when visible
+                if (aboutVideo.readyState < 2) {
+                    aboutVideo.load();
+                }
+
+                new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            playAboutVideo();
+                            obs.disconnect();
+                        }
+                    });
+                }, { threshold: 0.15, rootMargin: '120px 0px' }).observe(aboutVideo);
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            if (header) header.classList.toggle('scrolled', window.scrollY > 60);
+        });
+        if (header) header.classList.toggle('scrolled', window.scrollY > 60);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 }).observe(el);
+        });
+
+        // Looping horizontal scroll carousels
+        const setupLoopSlider = (slider, leftBtn, rightBtn, itemSelector, gap) => {
+            if (!slider) return;
+
+            const getStep = () => {
+                const item = slider.querySelector(itemSelector);
+                return item ? item.offsetWidth + gap : 325;
+            };
+
+            const getMaxScroll = () => Math.max(0, slider.scrollWidth - slider.clientWidth);
+
+            const scrollLoop = (direction) => {
+                const maxScroll = getMaxScroll();
+                const atStart = slider.scrollLeft <= 2;
+                const atEnd = slider.scrollLeft >= maxScroll - 2;
+
+                if (direction === 1 && atEnd) {
+                    slider.scrollTo({ left: 0, behavior: 'smooth' });
+                    return;
+                }
+                if (direction === -1 && atStart) {
+                    slider.scrollTo({ left: maxScroll, behavior: 'smooth' });
+                    return;
+                }
+                slider.scrollBy({ left: direction * getStep(), behavior: 'smooth' });
+            };
+
+            leftBtn?.addEventListener('click', () => scrollLoop(-1));
+            rightBtn?.addEventListener('click', () => scrollLoop(1));
+            if (leftBtn) leftBtn.disabled = false;
+            if (rightBtn) rightBtn.disabled = false;
+        };
+
+        setupLoopSlider(
+            document.getElementById('testimonialSlider'),
+            document.getElementById('testScrollLeft'),
+            document.getElementById('testScrollRight'),
+            '.testimonial-card',
+            25
+        );
+
+        setupLoopSlider(
+            document.getElementById('servicesSlider'),
+            document.getElementById('servicesScrollLeft'),
+            document.getElementById('servicesScrollRight'),
+            '.service-slide',
+            25
+        );
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const animateCounter = (counter) => {
+            const target = parseFloat(counter.getAttribute('data-target'));
+            const isDecimal = counter.getAttribute('data-decimal') === 'true';
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    counter.textContent = isDecimal ? current.toFixed(1) : Math.floor(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = isDecimal ? target.toFixed(1) : target;
+                }
+            };
+            updateCounter();
+        };
+
+        // Intersection Observer for counter animation
+        const observerOptions = { threshold: 0.5, rootMargin: '0px' };
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    animateCounter(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        counters.forEach(counter => counterObserver.observe(counter));
+
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+            window.addEventListener('scroll', () => {
+                backToTop.classList.toggle('visible', window.scrollY > 500);
+            });
+            backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+    </script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/faq-accordion.js"></script>
+    <script src="js/seo-schema.js"></script>
+    <script src="js/mega-menu.js"></script>
+</body>
+</html>

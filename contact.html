@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=d4772256-9b0c-4023-884d-54bad2f890df
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | S K Stones India - Get In Touch</title>
+    <meta name="description" content="Contact S K Stones India for premium stone solutions. Visit our showroom in Koramangala, Bengaluru or call us at +91 70226 30994.">
+    <link rel="canonical" href="https://skstonesindia.com/contact.html">
+    <meta property="og:title" content="Contact S K Stones India">
+    <meta property="og:description" content="Get a custom stone quote. Showroom in Koramangala, Bengaluru. Call +91 70226 30994.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skstonesindia.com/contact.html">
+    <link rel="preload" as="image" href="images/marble-bg-mobile.jpg" type="image/jpeg" media="(max-width: 768px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/mega-menu.css">
+    <link rel="stylesheet" href="css/mobile-nav.css">
+    <link rel="stylesheet" href="css/site-extras.css"><style>
+        :root {
+            --gold: #c9a227;
+            --gold-light: #d4af37;
+            --dark: #0a0a0a;
+            --white: #ffffff;
+            --gray: #888;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 15px 50px; display: flex; justify-content: space-between; align-items: center;
+            background: rgba(10,10,10,0.95); backdrop-filter: blur(10px);
+        }
+        .logo-img { height: 50px; }
+        .desktop-nav { display: flex; align-items: center; gap: 30px; }
+        .desktop-nav a { color: var(--white); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.3s; }
+        .desktop-nav a:hover, .desktop-nav a.active { color: var(--gold); }
+        .dropdown { position: relative; }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-menu {
+            position: absolute; top: 100%; left: 0; background: #1a1a1a; min-width: 200px;
+            padding: 10px 0; border-radius: 8px; opacity: 0; visibility: hidden;
+            transform: translateY(10px); transition: all 0.3s; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .dropdown-menu a { display: block; padding: 10px 20px; font-size: 13px; }
+        .dropdown-menu a:hover { background: rgba(201,162,39,0.1); color: var(--gold); }
+        .header-cta {
+            background: var(--gold); color: var(--dark); padding: 12px 25px; border-radius: 30px;
+            font-weight: 600; text-decoration: none; transition: all 0.3s;
+        }
+        .header-cta:hover { background: var(--gold-light); transform: scale(1.05); }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+        .hamburger span { width: 25px; height: 2px; background: var(--white); }
+
+        /* Contact Main */
+        .contact-section {
+            padding: 120px 50px 80px;
+            min-height: 100vh;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .contact-left h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        .contact-left h1 span { color: var(--gold); }
+        .contact-left > p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+            max-width: 520px;
+            margin-bottom: 32px;
+            opacity: 1;
+        }
+
+        .contact-info-row {
+            display: grid;
+            grid-template-columns: 1fr minmax(220px, 280px);
+            gap: 24px;
+            align-items: stretch;
+            margin-bottom: 28px;
+        }
+        .contact-blocks { display: flex; flex-direction: column; gap: 14px; }
+        .contact-block {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 14px 16px;
+            border-radius: 12px;
+        }
+        .contact-icon {
+            width: 46px; height: 46px; background: var(--gold); border-radius: 8px;
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+        }
+        .contact-icon i { color: var(--dark); font-size: 17px; }
+        .contact-block h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+        }
+        .contact-block p,
+        .contact-block a {
+            color: #3a3a3a !important;
+            font-size: 0.88rem;
+            line-height: 1.55;
+            text-decoration: none;
+            display: block;
+            word-break: break-word;
+        }
+        .contact-block a:hover { color: var(--gold) !important; }
+
+        .contact-map {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(201,162,39,0.35);
+            min-height: 100%;
+            height: auto;
+            align-self: stretch;
+        }
+        .contact-map iframe { width: 100%; height: 100%; min-height: 240px; border: 0; display: block; }
+
+        .follow-us { margin-top: 8px; }
+        .follow-us p {
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            color: #3a3a3a;
+            opacity: 1;
+        }
+        .social-row { display: flex; gap: 12px; }
+        .social-btn {
+            width: 42px; height: 42px; border-radius: 8px; display: flex;
+            align-items: center; justify-content: center; text-decoration: none;
+            font-size: 18px; transition: transform 0.3s;
+        }
+        .social-btn:hover { transform: scale(1.08); }
+        .social-btn.whatsapp { background: #25D366; color: var(--white); }
+        .social-btn.linkedin { background: #0A66C2; color: var(--white); }
+        .social-btn.email { background: var(--gold); color: var(--dark); }
+
+        /* Form */
+        .contact-form-box {
+            background: rgba(255,255,255,0.92);
+            border: 1px solid rgba(201,162,39,0.35);
+            border-radius: 20px;
+            padding: 32px 32px 36px;
+        }
+        .contact-form-box h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            margin-bottom: 24px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .form-row { display: grid; gap: 16px; margin-bottom: 16px; }
+        .form-row.two-col { grid-template-columns: 1fr 1fr; }
+        .form-row.measure-row { grid-template-columns: 1fr auto 1fr auto; gap: 12px; align-items: end; }
+
+        .form-group label,
+        .measure-label {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-bottom: 7px;
+            color: #2a2a2a !important;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid rgba(0,0,0,0.14);
+            border-radius: 8px;
+            background: #fff;
+            color: #1a1a1a;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            outline: none;
+            transition: box-shadow 0.3s, border-color 0.3s;
+        }
+        .form-group input::placeholder { color: #8a8a8a; }
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(201,162,39,0.25);
+        }
+        .form-group select { cursor: pointer; appearance: auto; }
+        .form-group.unit select { min-width: 72px; padding: 13px 8px; }
+
+        .submit-btn {
+            width: 100%;
+            margin-top: 8px;
+            padding: 15px;
+            background: var(--gold);
+            color: var(--dark);
+            border: none;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: capitalize;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .submit-btn:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(201,162,39,0.35); }
+
+        /* Footer */
+        .footer { background: transparent; padding: 40px 40px 0; border-top: 1px solid rgba(201,162,39,0.28); }
+        .footer-grid {
+            display: grid; grid-template-columns: minmax(0, 1.35fr) repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px 36px; max-width: 1200px; margin: 0 auto; padding-bottom: 22px; border-bottom: 1px solid rgba(0,0,0,0.08); align-items: start;
+        }
+        .footer-col h4 { color: var(--gold); margin: 0 0 10px; font-size: 1.05rem; }
+        .footer-col p, .footer-col a { color: #3a3a3a; font-size: 0.875rem; line-height: 1.55; text-decoration: none; display: block; }
+        .footer-col a:hover { color: var(--gold); }
+        .footer-bottom { text-align: center; padding: 12px 0 16px; margin-top: 0; border-top: none; color: #6b6b6b; font-size: 0.8rem; }
+
+        .floating-btns { position: fixed; bottom: 30px; z-index: 999; }
+        .floating-btns.left { left: 30px; }
+        .floating-btns.right { right: 30px; }
+        .float-btn {
+            width: 56px; height: 56px; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; font-size: 22px;
+            color: var(--white); text-decoration: none; transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        .float-btn.phone { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--dark); }
+        .float-btn.whatsapp { background: #25D366; }
+        .float-btn:hover { transform: scale(1.1); }
+
+        .back-to-top {
+            position: fixed; bottom: 100px; right: 30px; width: 48px; height: 48px;
+            border-radius: 50%; background: var(--gold); color: var(--dark); border: none;
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+            font-size: 1rem; opacity: 0; visibility: hidden; transition: all 0.3s; z-index: 999;
+        }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { transform: translateY(-4px); }
+
+        .mobile-nav { position: fixed; top: 0; right: -100%; width: 80%; max-width: 400px; height: 100vh; background: var(--dark); z-index: 1001; padding: 80px 30px; transition: right 0.3s; }
+        .mobile-nav.active { right: 0; }
+        .mobile-nav a { display: block; color: var(--white); text-decoration: none; padding: 15px 0; font-size: 18px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .mobile-nav a:hover { color: var(--gold); }
+        .close-nav { position: absolute; top: 20px; right: 20px; font-size: 30px; color: var(--white); cursor: pointer; }
+        .nav-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; opacity: 0; visibility: hidden; transition: all 0.3s; }
+        .nav-overlay.active { opacity: 1; visibility: visible; }
+
+        @media (max-width: 1100px) {
+            .contact-grid { grid-template-columns: 1fr; gap: 28px; max-width: 100%; }
+            .contact-info-row { grid-template-columns: 1fr; }
+            .contact-map { height: 240px; min-height: 240px; }
+            .contact-map iframe { min-height: 240px; }
+        }
+        @media (max-width: 768px) {
+            .header { padding: 12px 16px; }
+            .desktop-nav, .header-cta { display: none; }
+            .hamburger { display: none !important; }
+            .contact-section { padding: 96px 16px 110px; }
+            .contact-left,
+            .contact-form-box,
+            .contact-grid,
+            .contact-info-row { max-width: 100%; width: 100%; box-sizing: border-box; }
+            .contact-left h1 { font-size: 2rem; margin-bottom: 14px; }
+            .contact-left > p { font-size: 0.88rem; line-height: 1.65; margin-bottom: 22px; }
+            .contact-blocks { gap: 10px; }
+            .contact-block { padding: 12px 12px; gap: 12px; max-width: 100%; }
+            .contact-icon { width: 42px; height: 42px; }
+            .contact-block h4 { font-size: 0.88rem; }
+            .contact-block p,
+            .contact-block a { font-size: 0.82rem; overflow-wrap: anywhere; word-break: break-word; }
+            .contact-map { height: 180px; min-height: 180px; width: 100%; }
+            .contact-map iframe { min-height: 180px; width: 100%; }
+
+            /* Compact form — phone */
+            .contact-form-box {
+                padding: 16px 14px 18px;
+                border-radius: 14px;
+            }
+            .contact-form-box h2 {
+                font-size: 1.2rem;
+                margin-bottom: 12px;
+            }
+            .form-row {
+                gap: 8px;
+                margin-bottom: 8px;
+            }
+            .form-row.two-col {
+                grid-template-columns: 1fr 1fr;
+            }
+            .form-row.measure-row {
+                grid-template-columns: 1fr 64px;
+                gap: 8px;
+                align-items: end;
+            }
+            .form-group label,
+            .measure-label {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border: 0;
+            }
+            .form-group {
+                position: relative;
+            }
+            .form-group input,
+            .form-group select {
+                padding: 10px 11px;
+                font-size: 0.84rem;
+                border-radius: 7px;
+                min-height: 42px;
+            }
+            .form-group.unit select {
+                width: 100%;
+                min-width: 0;
+                padding: 10px 6px;
+            }
+            .submit-btn {
+                margin-top: 4px;
+                padding: 12px;
+                font-size: 0.92rem;
+                border-radius: 7px;
+            }
+            .floating-btns { display: none; }
+        }
+    </style>
+    <link rel="stylesheet" href="css/marble-showroom.css">
+
+</head>
+<body class="showroom-theme">
+    <header class="header">
+        <a aria-label='S K Stones India' class='brand-lockup' href='/'>
+            <img class="brand-mark" src="images/shree-logo.png" alt="" width="40" height="80" decoding="async">
+            <span class="brand-text">
+                <span class="brand-name">S K <span class="brand-stones">Stones</span> India</span>
+                <span class="brand-formerly">(formerly Shree Stones &amp; Services)</span>
+            </span>
+        </a>
+        <nav class="desktop-nav">
+            <a href='/'>Home</a>
+            <a href='/about'>About Us</a>
+            <div class="nav-dropdown">
+                <span class="nav-link">Services <i class="fas fa-chevron-down"></i></span>
+                <div class="dropdown-menu">
+                    <a href='/installations'>Installations</a>
+                    <a href='/landscaping'>Landscaping</a>
+                    <a href='/flooring-executions'>Flooring Executions</a>
+                    <a href='/stone-art-installations'>Stone Art Installations</a>
+                </div>
+            </div>
+            <div class="nav-dropdown mega-dropdown">
+                <span class="nav-link">Products <i class="fas fa-chevron-down"></i></span>
+                <div class="dropdown-menu mega-menu">
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Marbles <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/indian-marbles'>Indian Marbles</a>
+                            <a href='/imported-marbles'>Imported Marbles</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Granites <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/granites'>Indian Granites</a>
+                            <a href='/imported-granites'>Imported Granites</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Stone-Art <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/cnc-stone-work'>CNC Stone Work &amp; INLAY Work</a>
+                            <a href='/mop-inlay-work'>MOP Work</a>
+                            <a href='/murals-monuments'>Murals &amp; Monuments</a>
+                            <a href='/feature-wall'>Feature Walls</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Natural Stones <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/cobble-stones'>Cobble Stones</a>
+                            <a href='/kota-stones'>Lime Stones</a>
+                            <a href='/pebbles'>Pebbles</a>
+                            <a href='/sand-stones'>Sand Stones</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Engineered Surfaces <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/acrylic-surfaces'>Acrylic Surfaces</a>
+                            <a href='/quatrz-surfaces'>Quatrz Surfaces</a>
+                        </div>
+                    </div>
+                    <a href='/wall-claddings'>Wall Claddings</a>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Tiles <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/brillo-collection'>Brillo Collection</a>
+                            <a href='/elezzo-collection'>Elezzo Collection</a>
+                            <a href='/endless-collection'>Endless Collection</a>
+                            <a href='/ittaca-collection'>Ittaca Collection</a>
+                            <a href='/milagro-collection'>Milagro Collection</a>
+                            <a href='/stone-collection'>Stone Collection</a>
+                            <a href='/subway-tiles'>Subway Tiles</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Clay Products <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/clay-jally'>Clay Jally</a>
+                            <a href='/wire-cut-bricks'>Wire Cut Bricks</a>
+                            <a href='/elevation-clay-bricks'>Elevation Clay Bricks</a>
+                            <a href='/roofing-tiles-clay'>Roofing Tiles</a>
+                            <a href='/roof-flooring-tiles'>Roof Flooring Tiles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href='/projects'>Our Projects</a>
+            <a class='active' href='/contact'>Contact Us</a>
+        </nav>
+        <a href="tel:+917022630994" class="header-cta"><i class="fas fa-phone"></i> Call Us Now</a>
+        <a class='header-contact-mobile' href='/contact'>Contact Us</a>
+        <div class="hamburger" id="menuToggle">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+    <nav class="mobile-nav" id="mobileNav" data-full-nav="true"></nav>
+
+    <section class="contact-section">
+        <div class="contact-grid">
+            <!-- Left: Info -->
+            <div class="contact-left">
+                <h1>Get In<br><span>Touch</span></h1>
+                <p>Reach out for project discussions, product enquiries, or site consultations. Our team is available to assist you with timely and professional responses.</p>
+
+                <div class="contact-info-row">
+                    <div class="contact-blocks">
+                        <div class="contact-block">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+917022630994">+91 70226 30994</a>
+                            </div>
+                        </div>
+                        <div class="contact-block">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:info@skstonesindia.com">info@skstonesindia.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-block">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Address</h4>
+                                <p>627-628, 15th Main, 80 Feet Road, 5th Cross Rd, 4th Block, Bengaluru, Karnataka 560034</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-map">
+                        <iframe
+                            src="https://www.google.com/maps?cid=6923478744549710589&hl=en&z=17&output=embed"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="S K Stones India Pvt Ltd — 627-628, 15th Main, 80 Feet Road, 5th Cross Rd, 4th Block, Bengaluru"></iframe>
+                    </div>
+                </div>
+
+                <div class="follow-us">
+                    <p>Follow us:</p>
+                    <div class="social-row">
+                        <a href="https://www.linkedin.com/in/shree-kumar-gandhi-8699533a6/" class="social-btn linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/917022630994" class="social-btn whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:info@skstonesindia.com" class="social-btn email" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <p class="map-link-wrap" style="margin-top:14px;">
+                        <a href="https://www.google.com/maps/place/S+K+STONES+INDIA+PVT+LTD/@12.9350616,77.6283894,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae150ee079f97f:0x6015233c6ada5afd!8m2!3d12.9350616!4d77.6283894!16s%2Fg%2F11y4103plf" target="_blank" rel="noopener noreferrer" style="color:#c9a227;font-size:0.85rem;font-weight:600;text-decoration:none;">Open in Google Maps →</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: Form -->
+            <div class="contact-form-box">
+                <h2>Get in touch</h2>
+                <div class="form-success-banner" id="formSuccessBanner">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Thank you! Your quote request was sent successfully. We'll respond within 24 hours.</span>
+                </div>
+                <form id="contactForm" action="https://formsubmit.co/info@skstonesindia.com" method="POST">
+                    <input type="hidden" name="_subject" value="Custom Quote Request - S K Stones India">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_next" id="formNextUrl" value="">
+                    <div class="form-row two-col">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="stoneType">Stone Type Interested</label>
+                            <select id="stoneType" name="stoneType" required>
+                                <option value="" disabled selected>Stone Type Interested</option>
+                                <option value="granites">Granites</option>
+                                <option value="marbles">Marbles</option>
+                                <option value="natural-stones">Natural Stones</option>
+                                <option value="engineered-surfaces">Engineered Surfaces</option>
+                                <option value="wall-claddings">Wall Claddings</option>
+                                <option value="tiles">Tiles</option>
+                                <option value="stone-art">Stone Art</option>
+                                <option value="landscaping">Landscaping</option>
+                                <option value="installations">Installations</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="siteLocation">Site Location And Address</label>
+                            <input type="text" id="siteLocation" name="siteLocation" placeholder="Site Location And Address">
+                        </div>
+                    </div>
+
+                    <div class="form-row two-col">
+                        <div class="form-group">
+                            <label for="quantity">Quantity</label>
+                            <input type="text" id="quantity" name="quantity" placeholder="Quantity">
+                        </div>
+                        <div class="form-group">
+                            <label for="colour">Colour</label>
+                            <input type="text" id="colour" name="colour" placeholder="Colour">
+                        </div>
+                    </div>
+
+                    <div class="form-row measure-row">
+                        <div class="form-group">
+                            <label class="measure-label" for="thickness">Thickness</label>
+                            <input type="text" id="thickness" name="thickness" placeholder="Thickness">
+                        </div>
+                        <div class="form-group unit">
+                            <label class="measure-label" for="thicknessUnit">&nbsp;</label>
+                            <select id="thicknessUnit" name="thicknessUnit">
+                                <option value="mm" selected>MM</option>
+                                <option value="cm">CM</option>
+                                <option value="inch">IN</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="measure-label" for="size">Size</label>
+                            <input type="text" id="size" name="size" placeholder="Size">
+                        </div>
+                        <div class="form-group unit">
+                            <label class="measure-label" for="sizeUnit">&nbsp;</label>
+                            <select id="sizeUnit" name="sizeUnit">
+                                <option value="mm" selected>MM</option>
+                                <option value="cm">CM</option>
+                                <option value="inch">IN</option>
+                                <option value="sqft">SQ FT</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="budget">Project Size / Budget (optional)</label>
+                            <input type="text" id="budget" name="budget" placeholder="Project Size / Budget (optional)">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Get My Custom Quote</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+        <div class="faq-container">
+            <div class="section-header">
+                <h2 style="font-family:'Playfair Display',serif;font-size:2rem;text-transform:uppercase;margin-bottom:12px;">Quick <span style="color:var(--gold);">Answers</span></h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">How quickly will I receive a quote?<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>We typically respond within 24 hours on business days. For urgent projects, call or WhatsApp us directly at +91 70226 30994.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">What details should I include in my enquiry?<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Stone type, approximate quantity or area (sq. ft.), site location, thickness/size requirements, and whether you need supply only or full installation.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">Can I schedule a showroom visit?<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Yes — walk in during business hours or mention your preferred date in the form. Our Koramangala showroom has live stone samples across granites, marbles, and claddings.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a aria-label='S K Stones India' class='brand-lockup brand-lockup-footer' href='/'>
+            <img class="brand-mark" src="images/shree-logo.png" alt="" width="40" height="80" decoding="async">
+            <span class="brand-text">
+                        <span class="brand-name">S K <span class="brand-stones">Stones</span> India</span>
+                        <span class="brand-formerly">(formerly Shree Stones &amp; Services)</span>
+                    </span>
+                </a>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href='/'>Home</a>
+                <a href='/about'>About Us</a>
+                <a href='/products'>Products</a>
+                <a href='/projects'>Our Projects</a>
+                <a href='/contact'>Contact Us</a>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href='/installations'>Installations</a>
+                <a href='/landscaping'>Landscaping</a>
+                <a href='/flooring-executions'>Flooring Executions</a>
+                <a href='/stone-art-installations'>Stone Art</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-phone" style="color: var(--gold); margin-right: 8px;"></i> +91 70226 30994</p>
+                <p><i class="fas fa-envelope" style="color: var(--gold); margin-right: 8px;"></i> info@skstonesindia.com</p>
+                <p><i class="fas fa-map-marker-alt" style="color: var(--gold); margin-right: 8px;"></i> Koramangala, Bengaluru</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 S K Stones India PVT, LTD. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script>
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 500);
+        });
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        const formNext = document.getElementById('formNextUrl');
+        if (formNext) {
+            formNext.value = window.location.origin + window.location.pathname.replace(/[^/]+$/, '') + 'thank-you.html';
+        }
+
+        if (new URLSearchParams(window.location.search).get('submitted') === '1') {
+            document.getElementById('formSuccessBanner')?.classList.add('visible');
+        }
+    </script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/faq-accordion.js"></script>
+    <script src="js/seo-schema.js"></script>
+    <script src="js/mega-menu.js"></script>
+</body>
+</html>

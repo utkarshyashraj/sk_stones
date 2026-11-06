@@ -1,0 +1,263 @@
+/* Products mega-menu — luxury white marble glassmorphism */
+.header,
+.navbar,
+.nav-links,
+.dropdown,
+.mega-dropdown,
+.mega-item {
+    overflow: visible;
+}
+
+.mega-dropdown { position: relative; }
+
+.mega-dropdown > .dropdown-menu,
+.mega-dropdown > .mega-menu,
+.nav-dropdown.mega-dropdown > .dropdown-menu {
+    left: 0 !important;
+    right: auto;
+}
+
+/* ── Shared menu panel styling ── */
+.dropdown-menu,
+.mega-menu,
+.mega-submenu,
+.desktop-nav .dropdown-menu,
+.header .dropdown-menu,
+.navbar .dropdown-menu {
+    background: rgba(255, 255, 255, 0.96) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(180, 180, 180, 0.35) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+    padding: 10px 0 !important;
+    transition: opacity 0.28s ease, visibility 0.28s ease, transform 0.28s ease !important;
+}
+
+.dropdown-menu a,
+.mega-menu a,
+.mega-submenu a {
+    color: #2f2f2f !important;
+    transition: background 0.22s ease, color 0.22s ease, padding 0.22s ease !important;
+}
+
+.dropdown-menu a:hover,
+.mega-menu a:hover,
+.mega-submenu a:hover,
+.mega-item > a:hover {
+    background: rgba(240, 238, 235, 0.95) !important;
+    color: #1a1a1a !important;
+}
+
+.mega-menu {
+    min-width: 250px !important;
+    overflow: visible !important;
+}
+
+.mega-menu a::after {
+    display: none !important;
+    content: none !important;
+}
+
+.mega-item {
+    position: relative;
+}
+
+.mega-item > a {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 22px !important;
+    white-space: nowrap;
+}
+
+.mega-item > a .sub-arrow {
+    font-size: 0.65rem;
+    opacity: 0.55;
+    color: #6a6a6a !important;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.mega-item.has-sub > a,
+.mega-item.has-sub > a.mega-parent {
+    cursor: default;
+    user-select: none;
+}
+
+.mega-item.has-sub:hover > a .sub-arrow {
+    opacity: 1;
+    transform: translateX(3px);
+    color: #1a1a1a !important;
+}
+
+/* Flyout submenu — same marble glass (NOT dark) */
+.mega-submenu {
+    position: absolute;
+    left: calc(100% - 4px);
+    right: auto;
+    top: 0;
+    min-width: 230px;
+    max-width: min(280px, calc(100vw - 24px));
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-8px);
+    z-index: 1001;
+}
+
+.mega-item.has-sub:hover > .mega-submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.mega-submenu a {
+    display: block;
+    padding: 11px 22px;
+    font-size: 0.88rem;
+}
+
+.mega-submenu a:hover {
+    padding-left: 28px;
+}
+
+/* Active / hover parent item — gold accent */
+.mega-item.has-sub:hover > a,
+.nav-dropdown:hover > .nav-link {
+    background: rgba(201, 162, 39, 0.14) !important;
+    color: #1a1a1a !important;
+}
+
+.mega-item.has-sub:hover > a .sub-arrow {
+    color: #9b7b1e !important;
+}
+
+/* Services / Products dropdown open on hover */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown > .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 0.86rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.nav-dropdown > .nav-link i {
+    font-size: 0.7rem;
+    transition: transform 0.3s;
+}
+
+.nav-dropdown:hover > .nav-link i {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown > .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(10px);
+    z-index: 1200;
+    pointer-events: none;
+}
+
+.nav-dropdown:hover > .dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    pointer-events: auto;
+}
+
+/* Services dropdown (non-mega) */
+.desktop-nav .dropdown-menu a {
+    display: block;
+    padding: 12px 22px !important;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+    .mega-submenu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none !important;
+        border: none !important;
+        padding-left: 16px;
+        display: none;
+        background: transparent !important;
+    }
+
+    .mega-item.has-sub.open > .mega-submenu {
+        display: block;
+    }
+
+    .mega-submenu a {
+        color: #4a4a4a !important;
+    }
+}
+
+@media (min-width: 1025px) {
+    .header {
+        display: grid !important;
+        grid-template-columns: 240px 1fr 240px !important;
+        align-items: center !important;
+        justify-content: unset !important;
+    }
+
+    .header > a:first-child {
+        grid-column: 1;
+        justify-self: start;
+    }
+
+    .header .desktop-nav {
+        grid-column: 2;
+        justify-self: center;
+    }
+
+    .header .header-cta {
+        grid-column: 3;
+        justify-self: end;
+    }
+
+    .header .desktop-nav > a[href="contact.html"],
+    .header .desktop-nav > a[href$="contact.html"] {
+        background: linear-gradient(135deg, #c9a227 0%, #e6b800 100%);
+        color: #1a1a1a !important;
+        border-radius: 50px;
+        font-weight: 600;
+        padding: 10px 22px !important;
+    }
+
+    .header .desktop-nav > a[href="contact.html"]::after,
+    .header .desktop-nav > a[href$="contact.html"]::after {
+        display: none !important;
+    }
+
+    .header .header-contact-mobile,
+    .header .hamburger {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        display: flex !important;
+        justify-content: space-between !important;
+        grid-template-columns: none !important;
+    }
+
+    .navbar {
+        display: flex !important;
+        justify-content: space-between !important;
+        grid-template-columns: none !important;
+    }
+}

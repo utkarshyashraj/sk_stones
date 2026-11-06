@@ -1,0 +1,341 @@
+/* ============================================================
+   CTA Section — Premium Marble Showroom
+   ============================================================ */
+
+@keyframes ctaFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ctaTextIn {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+        letter-spacing: 6px;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 1px;
+    }
+}
+
+@keyframes ctaUnderlineGrow {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 160px;
+        opacity: 1;
+    }
+}
+
+@keyframes ctaGoldShimmer {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+@keyframes ctaGlow {
+    0%, 100% { filter: drop-shadow(0 0 12px rgba(201, 162, 39, 0.15)); }
+    50% { filter: drop-shadow(0 0 22px rgba(201, 162, 39, 0.35)); }
+}
+
+/* ── Section shell ── */
+.cta-section {
+    position: relative;
+    padding: 100px 24px;
+    text-align: center;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* ── White content card ── */
+.cta-section .cta-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 60px 64px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(201, 162, 39, 0.32);
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.07);
+    transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.cta-section .cta-content:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 56px rgba(0, 0, 0, 0.1);
+    border-color: rgba(201, 162, 39, 0.48);
+}
+
+/* ── Typography ── */
+.cta-section h2,
+.cta-section .cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 600;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.25;
+    margin: 0 0 24px;
+    text-shadow: none;
+}
+
+.cta-section .cta-line {
+    display: block;
+    color: #1a1a1a;
+}
+
+.cta-section .cta-gold,
+.cta-section .highlight,
+.cta-section h2 > span:not(.cta-line) {
+    color: #c9a227;
+}
+
+.cta-section .cta-title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.cta-section.reveal .cta-line {
+    opacity: 0;
+}
+
+.cta-section.reveal .cta-desc {
+    opacity: 0;
+}
+
+.cta-section .cta-gold {
+    background: linear-gradient(90deg, #9b7b1e, #c9a227, #f0e6c8, #c9a227, #9b7b1e);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    animation: ctaGoldShimmer 3.5s linear infinite, ctaGlow 3s ease-in-out infinite;
+}
+
+.cta-section .cta-underline {
+    height: 3px;
+    width: 0;
+    margin: 8px auto 32px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, transparent, #c9a227, #f0e6c8, #c9a227, transparent);
+    background-size: 200% 100%;
+    opacity: 0;
+}
+
+.cta-section p,
+.cta-section .cta-desc {
+    color: #3a3a3a;
+    font-size: clamp(1rem, 1.8vw, 1.12rem);
+    line-height: 1.85;
+    max-width: 720px;
+    margin: 0 auto 40px;
+    opacity: 1;
+}
+
+/* ── Button group — generous spacing ── */
+.cta-actions,
+.cta-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.cta-section .btn,
+.cta-section .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transition: transform 300ms ease, box-shadow 300ms ease, background 300ms ease, color 300ms ease, border-color 300ms ease;
+}
+
+.cta-section .btn-primary,
+.cta-section .cta-btn {
+    background: linear-gradient(135deg, #c9a227 0%, #d4af37 100%);
+    color: #2f2f2f;
+    border: 2px solid #c9a227;
+    box-shadow: 0 4px 18px rgba(201, 162, 39, 0.28);
+}
+
+.cta-section .btn-primary:hover,
+.cta-section .cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px rgba(201, 162, 39, 0.38);
+    background: linear-gradient(135deg, #d4af37 0%, #e6c04a 100%);
+    color: #2f2f2f;
+}
+
+.cta-section .btn:not(.btn-primary) {
+    background: transparent;
+    color: #2f2f2f;
+    border: 2px solid #2f2f2f;
+    box-shadow: none;
+}
+
+.cta-section .btn:not(.btn-primary):hover {
+    background: #2f2f2f;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Viewport fade-in ── */
+.cta-section.reveal {
+    opacity: 1;
+    transform: none;
+}
+
+.cta-section.reveal .cta-content {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s ease, box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.cta-section.reveal.visible .cta-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cta-section.reveal.visible .cta-line-1 {
+    animation: ctaTextIn 0.85s ease 0.15s both;
+}
+
+.cta-section.reveal.visible .cta-line-2 {
+    animation: ctaTextIn 0.85s ease 0.4s both;
+}
+
+.cta-section.reveal.visible .cta-underline {
+    animation: ctaUnderlineGrow 1s ease 0.65s forwards, ctaGoldShimmer 2.5s linear 1.65s infinite;
+}
+
+.cta-section.reveal.visible .cta-desc {
+    animation: ctaFadeUp 0.8s ease 0.85s both;
+}
+
+.cta-section.reveal.visible .cta-actions {
+    animation: ctaFadeUp 0.8s ease 1.05s both;
+}
+
+.cta-section.reveal.visible .cta-content > .btn,
+.cta-section.reveal.visible .cta-content > .cta-btn,
+.cta-section.reveal.visible .cta-content > a.btn-primary {
+    animation: ctaFadeUp 0.8s ease 1.05s both;
+}
+
+/* Simple fade for pages without staggered title */
+.cta-section.reveal.visible .cta-content > h2:not(.cta-title) {
+    animation: ctaFadeUp 0.7s ease 0.12s both;
+}
+
+.cta-section.reveal.visible .cta-content > p {
+    animation: ctaFadeUp 0.7s ease 0.28s both;
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+    .cta-section {
+        padding: 88px 20px;
+    }
+
+    .cta-section .cta-content {
+        padding: 48px 40px;
+        max-width: 100%;
+    }
+
+    .cta-section p,
+    .cta-section .cta-desc {
+        margin-bottom: 36px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cta-section {
+        padding: 72px 16px;
+    }
+
+    .cta-section .cta-content {
+        padding: 36px 24px;
+        border-radius: 18px;
+    }
+
+    .cta-section h2,
+    .cta-section .cta-title {
+        font-size: clamp(1.45rem, 6vw, 1.9rem);
+        margin-bottom: 18px;
+    }
+
+    .cta-section p,
+    .cta-section .cta-desc {
+        font-size: 0.95rem;
+        margin-bottom: 32px;
+        line-height: 1.8;
+    }
+
+    .cta-actions,
+    .cta-btns {
+        flex-direction: column;
+        gap: 14px;
+        width: 100%;
+    }
+
+    .cta-section .btn,
+    .cta-section .cta-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cta-section .cta-content,
+    .cta-section.reveal .cta-content,
+    .cta-section .cta-gold,
+    .cta-section .btn,
+    .cta-section .cta-btn {
+        transition: none;
+        animation: none !important;
+    }
+
+    .cta-section.reveal .cta-content {
+        opacity: 1;
+        transform: none;
+    }
+
+    .cta-section .cta-line,
+    .cta-section .cta-desc,
+    .cta-section .cta-underline {
+        opacity: 1 !important;
+        transform: none !important;
+        width: 160px;
+    }
+}

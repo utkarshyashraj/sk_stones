@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=d4772256-9b0c-4023-884d-54bad2f890df
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About S K Stones India — premium stone experts in Bengaluru since 2014. Meet our team, values, and craftsmanship behind 200+ projects.">
+    <link rel="canonical" href="https://skstonesindia.com/about.html">
+    <meta property="og:title" content="About Us | S K Stones India">
+    <meta property="og:description" content="About S K Stones India — premium stone experts in Bengaluru since 2014. Meet our team, values, and craftsmanship behind 200+ projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skstonesindia.com/about.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>About Us | S K Stones India</title>
+    <link rel="preload" as="image" href="images/marble-bg-mobile.jpg" type="image/jpeg" media="(max-width: 768px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/mega-menu.css">
+    <link rel="stylesheet" href="css/mobile-nav.css">
+    <link rel="stylesheet" href="css/site-extras.css"><style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --gold: #C9A227; --dark: #0a0a0a; --white: #ffffff; }
+        html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
+        body { font-family: 'Poppins', sans-serif; color: var(--white); overflow-x: hidden; max-width: 100%; }
+        img { max-width: 100%; height: auto; }
+        
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        
+        /* Header */
+        .header { 
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000; 
+            padding: 0 50px; display: flex; justify-content: space-between; align-items: center; 
+            background: rgba(10,10,10,0.95); backdrop-filter: blur(10px); height: 80px;
+        }
+        .logo-img { height: 60px; }
+        .desktop-nav { display: flex; align-items: center; gap: 10px; }
+        .desktop-nav > a, .nav-dropdown > .nav-link { color: var(--white); text-decoration: none; padding: 10px 18px; font-size: 0.9rem; transition: color 0.3s; }
+        .desktop-nav > a:hover, .desktop-nav > a.active { color: var(--gold); }
+        .nav-dropdown { position: relative; }
+        .nav-dropdown > .nav-link { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+        .nav-dropdown > .nav-link i { font-size: 0.7rem; transition: transform 0.3s; }
+        .nav-dropdown:hover > .nav-link i { transform: rotate(180deg); }
+        .dropdown-menu { position: absolute; top: 100%; left: 0; background: var(--white); min-width: 200px; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s; padding: 10px 0; }
+        .nav-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-menu a { display: block; padding: 12px 20px; color: var(--dark); text-decoration: none; font-size: 0.9rem; transition: all 0.3s; }
+        .dropdown-menu a:hover { background: #f5f5f5; color: var(--gold); }
+        .header-cta { background: var(--gold); color: var(--dark); padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; transition: all 0.3s; }
+        .header-cta:hover { background: #e6b800; }
+        .header-contact-mobile { display: none; }
+        .hamburger { display: none; flex-direction: column; gap: 6px; cursor: pointer; padding: 10px; }
+        .hamburger span { width: 28px; height: 2px; background: var(--white); }
+        
+        /* About Hero Section */
+        .about-hero { padding: 100px 50px 60px; background: var(--dark); }
+        .about-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1400px; margin: 0 auto; align-items: start; width: 100%; }
+        .about-hero-grid > *, .about-intro-grid > *, .about-hero-content, .about-intro-text { min-width: 0; max-width: 100%; }
+        .about-hero-content { align-self: start; }
+        .about-hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; text-transform: uppercase; line-height: 1.2; margin: 0 0 32px; overflow-wrap: break-word; word-wrap: break-word; }
+        .about-hero-content h1 span { color: var(--gold); }
+        .about-intro-grid { display: grid; grid-template-columns: 280px 1fr; gap: 30px; align-items: stretch; }
+        .about-small-image { position: relative; overflow: hidden; border-radius: 15px; border: 3px solid var(--gold); display: flex; flex-direction: column; min-height: 100%; }
+        .about-small-image img { width: 100%; flex: 1; min-height: 300px; object-fit: cover; object-position: center 42%; display: block; border: none; border-radius: 0; }
+        .about-small-badge { position: absolute; bottom: 0; left: 0; right: 0; width: 100%; background: var(--gold); color: var(--dark); padding: 14px 12px; border-radius: 0; font-size: 0.82rem; font-weight: 600; text-align: center; line-height: 1.45; }
+        .about-intro-text p { font-size: 1rem; line-height: 1.9; opacity: 0.9; margin-bottom: 20px; }
+        .about-intro-text ul { list-style: none; margin: 25px 0; }
+        .about-intro-text li { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; font-size: 0.95rem; }
+        .about-intro-text li i { color: var(--gold); }
+        .btn { padding: 15px 40px; border: 2px solid var(--gold); background: transparent; color: var(--white); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; display: inline-block; transition: all 0.3s; border-radius: 50px; }
+        .btn:hover { background: var(--gold); color: var(--dark); }
+        .about-hero-image { position: relative; border-radius: 20px; overflow: hidden; height: 100%; max-height: 580px; }
+        .about-hero-image img { width: 100%; height: 580px; object-fit: cover; object-position: center 30%; border-radius: 20px; display: block; }
+        .years-badge { position: absolute; bottom: 30px; right: 30px; background: rgba(10,10,10,0.9); padding: 25px 30px; border-radius: 15px; text-align: center; border: 1px solid rgba(201,162,39,0.3); }
+        .years-badge .number { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--gold); font-weight: 700; }
+        .years-badge .number sup { font-size: 1.5rem; }
+        .years-badge .label { font-size: 0.85rem; opacity: 0.8; }
+        
+        /* Marquee */
+        .marquee { background: var(--gold); padding: 18px 0; overflow: hidden; }
+        .marquee-content { display: flex; animation: marquee 25s linear infinite; white-space: nowrap; }
+        .marquee-content span { color: var(--dark); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 3px; padding: 0 40px; }
+        
+        /* Building Purpose Section */
+        .purpose-section { padding: 100px 50px; background: var(--dark); }
+        .purpose-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 60px;
+            row-gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: start;
+        }
+        .purpose-image {
+            grid-column: 1;
+            grid-row: 1;
+            align-self: stretch;
+            border-radius: 20px;
+            overflow: hidden;
+            min-height: 0;
+            display: flex;
+        }
+        .purpose-image img {
+            width: 100%;
+            height: 100%;
+            min-height: 0;
+            flex: 1;
+            object-fit: cover;
+            object-position: center 35%;
+            display: block;
+        }
+        .purpose-feature-content {
+            grid-column: 2;
+            grid-row: 1;
+            min-height: 0;
+        }
+        .purpose-feature-content h2 { font-family: 'Playfair Display', serif; font-size: 2.8rem; text-transform: uppercase; line-height: 1.2; margin-bottom: 50px; }
+        .purpose-feature-content h2 span { color: var(--gold); }
+        .purpose-cards { display: grid; gap: 30px; }
+        .purpose-card { display: grid; grid-template-columns: 80px 1fr; gap: 20px; align-items: start; }
+        .purpose-card-number { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 15px; }
+        .purpose-card-number i { color: var(--gold); font-size: 1.5rem; }
+        .purpose-card-content h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 10px; }
+        .purpose-card-content p { font-size: 0.9rem; line-height: 1.8; opacity: 0.8; }
+        
+        /* Why Choose Section */
+        .why-section { padding: 100px 50px; background: var(--dark); }
+        .why-container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 20px; }
+        .section-header h2 span { color: var(--gold); }
+        .section-header p { opacity: 0.8; max-width: 700px; margin: 0 auto; line-height: 1.8; }
+        .why-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .why-card { background: linear-gradient(135deg, #1a1a1a, #0d0d0d); border-radius: 20px; padding: 40px 30px; text-align: center; border: 1px solid rgba(201,162,39,0.2); transition: all 0.3s; }
+        .why-card:hover { border-color: var(--gold); transform: translateY(-10px); }
+        .why-card-icon { width: 80px; height: 80px; background: rgba(201,162,39,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; }
+        .why-card-icon i { font-size: 2rem; color: var(--gold); }
+        .why-card h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 15px; }
+        .why-card p { font-size: 0.9rem; line-height: 1.8; opacity: 0.8; }
+        
+        /* Founder Section */
+        .founder-section { padding: 100px 50px; background: linear-gradient(180deg, #111 0%, var(--dark) 100%); }
+        .founder-grid {
+            display: grid;
+            grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+            gap: 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        .founder-image {
+            position: relative;
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 3px solid var(--gold);
+            align-self: center;
+            background: #f3f1ee;
+        }
+        .founder-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            display: block;
+            border-radius: 0;
+            border: none;
+        }
+        .founder-content { padding-top: 0; }
+        .founder-content h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 10px; }
+        .founder-content .designation { color: var(--gold); font-size: 1rem; margin-bottom: 25px; }
+        .founder-content p { font-size: 1rem; line-height: 1.9; opacity: 0.9; margin-bottom: 20px; }
+        
+        /* Team Section */
+        .team-section {
+            padding: 100px 50px;
+            background: linear-gradient(180deg, var(--dark) 0%, #111 50%, var(--dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .team-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -120px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(201,162,39,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .team-layout {
+            display: grid;
+            grid-template-columns: 480px 1fr;
+            gap: 50px;
+            max-width: 1180px;
+            margin: 0 auto;
+            align-items: stretch;
+        }
+        .team-order-note {
+            max-width: 1180px;
+            margin: -20px auto 32px;
+            padding: 12px 20px;
+            border: 1px solid rgba(201,162,39,0.28);
+            border-radius: 50px;
+            background: rgba(201,162,39,0.08);
+            color: rgba(255,255,255,0.88);
+            font-size: 0.82rem;
+            letter-spacing: 0.5px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .team-order-note i { color: var(--gold); font-size: 0.8rem; }
+        .team-order-note strong { color: var(--gold); font-weight: 600; }
+        .team-photo-caption {
+            margin-top: 14px;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-align: center;
+            color: #3a3a3a;
+        }
+        .team-photo-caption span { color: var(--gold); font-weight: 600; }
+        .team-photo {
+            position: relative;
+            opacity: 1;
+            transform: none;
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            display: flex;
+            min-height: 100%;
+        }
+        .team-photo-panel { width: 100%; }
+        .team-photo.visible { opacity: 1; transform: none; }
+        @media (min-width: 1025px) {
+            .team-photo:not(.visible) {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            .team-photo.visible {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .team-photo-frame {
+            width: 100%;
+            min-height: 560px;
+            border-radius: 16px;
+            border: 2px solid var(--gold);
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(0,0,0,0.45), 0 0 24px rgba(201,162,39,0.12);
+            transition: box-shadow 0.5s ease;
+        }
+        .team-photo:hover .team-photo-frame {
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 36px rgba(201,162,39,0.22);
+        }
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            min-height: 560px;
+            display: block;
+            object-fit: cover;
+            object-position: center 40%;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            transition: transform 0.6s ease;
+        }
+        @media (min-width: 1025px) {
+            .team-photo-frame { min-height: 540px; }
+            .team-photo img {
+                min-height: 540px;
+                object-position: 54% 40%;
+            }
+        }
+        .team-photo:hover img {
+            transform: scale(1.06);
+        }
+        .team-photo::after {
+            display: none;
+        }
+        .team-right { display: flex; flex-direction: column; gap: 24px; }
+        .team-founder {
+            position: relative;
+            padding: 28px 32px 28px 80px;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(201,162,39,0.35);
+            border-radius: 16px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+        }
+        .team-founder.visible { opacity: 1; transform: translateX(0); }
+        .team-founder:hover {
+            border-color: var(--gold);
+            box-shadow: 0 12px 40px rgba(201,162,39,0.15);
+        }
+        .team-founder .team-num {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: rgba(201,162,39,0.25);
+            line-height: 1;
+            transition: color 0.4s ease;
+        }
+        .team-founder:hover .team-num { color: rgba(201,162,39,0.45); }
+        .team-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--gold);
+            color: var(--dark);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 50px;
+            margin-bottom: 12px;
+        }
+        .team-badge i { font-size: 0.65rem; }
+        .team-founder h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #1a1a1a;
+        }
+        .team-founder p {
+            font-size: 0.85rem;
+            color: #3a3a3a;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        .team-grid .team-founder {
+            grid-column: 1 / -1;
+        }
+        .team-card {
+            position: relative;
+            padding: 22px 20px 22px 58px;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(201,162,39,0.28);
+            border-radius: 14px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+        }
+        .team-card.visible { opacity: 1; transform: translateY(0); }
+        .team-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3px;
+            height: 0;
+            background: linear-gradient(180deg, var(--gold), rgba(201,162,39,0.3));
+            transition: height 0.4s ease;
+        }
+        .team-card.visible::before { height: 100%; }
+        .team-card:hover {
+            border-color: rgba(201,162,39,0.4);
+            background: rgba(201,162,39,0.06);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+            transform: translateY(-4px);
+        }
+        .team-card .team-num {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: rgba(201,162,39,0.2);
+            line-height: 1;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .team-card:hover .team-num {
+            color: rgba(201,162,39,0.5);
+            transform: translateY(-50%) scale(1.1);
+        }
+        .team-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #1a1a1a;
+            transition: color 0.3s ease;
+        }
+        .team-card:hover h4 { color: var(--gold); }
+        .team-card p {
+            font-size: 0.72rem;
+            color: #3a3a3a;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            line-height: 1.5;
+            transition: color 0.3s ease;
+        }
+        .team-card:hover p { color: rgba(201,162,39,0.95); }
+        
+        /* CTA Section — see css/cta-section.css */
+        
+        /* Footer */
+        .footer { padding: 40px 40px 0; background: transparent; }
+        .footer-content { display: grid; grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(160px, 1fr)); gap: 20px 36px; max-width: 1200px; margin: 0 auto; padding-bottom: 22px; border-bottom: 1px solid rgba(0,0,0,0.08); align-items: start; }
+        .footer-logo { height: 44px; margin-bottom: 0; }
+        .footer h4 { font-size: 1.05rem; margin: 0 0 10px; color: var(--gold); }
+        .footer ul { list-style: none; }
+        .footer li { margin-bottom: 5px; }
+        .footer a { color: #3a3a3a; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; }
+        .footer a:hover { color: var(--gold); }
+        .social-links { display: flex; gap: 8px; margin-top: 10px; }
+        .social-links a { width: 38px; height: 38px; border: 1px solid rgba(180,180,180,0.35); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.94); color: #2f2f2f; box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
+        .social-links a:hover { background: var(--gold); border-color: var(--gold); color: var(--dark); }
+        .footer-bottom { text-align: center; padding: 12px 0 16px; border-top: none; font-size: 0.8rem; color: #6b6b6b; }
+        
+        /* Floating */
+        .floating-btn { display: none !important; }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gold);
+            color: var(--dark);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+        }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(201,162,39,0.4); }
+        
+        /* Mobile Nav */
+        .mobile-nav { position: fixed; top: 0; right: -100%; width: 80%; max-width: 350px; height: 100vh; background: #111; z-index: 1001; padding: 100px 40px; transition: right 0.4s; }
+        .mobile-nav.active { right: 0; }
+        .mobile-nav a { display: block; color: var(--white); text-decoration: none; padding: 18px 0; font-size: 1.2rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .nav-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; display: none; }
+        .nav-overlay.active { display: block; }
+        .close-nav { position: absolute; top: 30px; right: 30px; font-size: 2rem; color: var(--white); cursor: pointer; }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .desktop-nav, .header-cta { display: none; }
+            .header-contact-mobile { display: inline-flex; }
+            .hamburger { display: none !important; }
+            .header { width: 100%; max-width: 100vw; padding: 12px 16px; height: auto; gap: 8px; overflow: hidden; }
+            .logo-img { height: 48px; max-width: 130px; width: auto; object-fit: contain; }
+            .about-hero { padding: 90px 16px 50px; overflow: hidden; }
+            .about-hero-grid, .founder-grid { grid-template-columns: 1fr; gap: 32px; }
+            .purpose-grid { grid-template-columns: 1fr; row-gap: 32px; }
+            .purpose-image { grid-column: 1; grid-row: auto; align-self: auto; max-height: 360px; }
+            .purpose-image img { height: 100%; max-height: 360px; }
+            .purpose-feature-content { grid-column: 1; grid-row: auto; }
+            .about-hero-content h1 { font-size: 2.1rem; margin-bottom: 24px; }
+            .about-hero-image { max-height: 420px; width: 100%; }
+            .about-hero-image img { height: 420px; object-position: center 25%; }
+            .about-intro-grid { grid-template-columns: 1fr; gap: 24px; }
+            .about-small-image img { min-height: 250px; object-position: center 42%; }
+            .purpose-section, .why-section, .founder-section, .team-section { padding: 44px 16px; }
+            .footer { padding: 24px 14px 0; }
+            .footer-content { grid-template-columns: 1fr 1fr; gap: 12px 14px; padding-bottom: 12px; border-bottom: none; }
+            .footer-content > :first-child { grid-column: 1 / -1; }
+            .footer-content > .social-links { grid-column: 1 / -1; justify-content: center; margin-top: 4px; }
+            .why-cards {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                gap: 14px;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                margin: 0 -16px;
+                padding: 4px 16px 12px;
+            }
+            .why-cards::-webkit-scrollbar { display: none; }
+            .why-card {
+                flex: 0 0 min(82vw, 300px);
+                scroll-snap-align: start;
+                min-width: min(82vw, 300px);
+            }
+            .purpose-image { max-height: 220px; }
+            .purpose-image img { max-height: 220px; }
+            .purpose-feature-content {
+                max-width: 100%;
+                min-width: 0;
+                overflow-x: hidden;
+            }
+            .purpose-feature-content h2 { margin-bottom: 16px; font-size: 1.55rem; }
+            .purpose-cards {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                gap: 14px;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                margin: 0;
+                padding: 4px 4px 12px;
+                width: 100%;
+                max-width: 100%;
+                min-width: 0;
+            }
+            .purpose-cards::-webkit-scrollbar { display: none; }
+            .purpose-card {
+                flex: 0 0 min(86vw, 320px);
+                min-width: min(86vw, 320px);
+                scroll-snap-align: start;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                grid-template-columns: none;
+                padding: 18px 16px;
+                box-sizing: border-box;
+            }
+            .purpose-card-content p {
+                font-size: 0.86rem;
+                line-height: 1.55;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            .team-layout { grid-template-columns: 1fr; gap: 20px; max-width: 100%; min-width: 0; }
+            .team-order-note { margin: 0 auto 12px; font-size: 0.72rem; padding: 8px 12px; }
+            .team-photo { max-width: 100%; margin: 0 auto; opacity: 1 !important; transform: none !important; }
+            .team-photo-frame { min-height: 260px; height: 280px; }
+            .team-photo img {
+                min-height: 260px;
+                height: 280px;
+                max-height: 320px;
+                object-position: center 35%;
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
+            .team-right { gap: 0; max-width: 100%; min-width: 0; }
+            .team-grid {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                overflow: visible;
+                gap: 8px;
+                scroll-snap-type: none;
+                margin: 0;
+                padding: 0;
+                grid-template-columns: none;
+                width: 100%;
+                max-width: 100%;
+            }
+            .team-grid .team-founder,
+            .team-card {
+                flex: none;
+                width: 100%;
+                min-width: 0;
+                margin: 0;
+                padding: 12px 14px 12px 48px;
+                box-sizing: border-box;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+            .team-founder h4,
+            .team-card h4 { font-size: 0.98rem; margin-bottom: 2px; }
+            .team-founder p,
+            .team-card p { font-size: 0.72rem; line-height: 1.3; }
+            .team-founder .team-num,
+            .team-card .team-num { font-size: 1.4rem; left: 12px; }
+            .team-badge { font-size: 0.62rem; padding: 3px 8px; margin-bottom: 4px; }
+            .purpose-feature-content h2, .section-header h2 { font-size: 1.55rem; }
+            .why-section .section-header p {
+                font-size: 0.88rem;
+                line-height: 1.55;
+                margin-bottom: 8px;
+            }
+            .founder-content p { font-size: 0.9rem; line-height: 1.65; margin-bottom: 12px; }
+            .founder-image img { max-height: 360px; object-fit: cover; width: 100%; }
+        }
+        @media (max-width: 480px) {
+            .about-hero { padding: 84px 14px 40px; }
+            .about-hero-content h1 { font-size: 1.75rem; line-height: 1.3; }
+            .about-hero-image, .about-hero-image img { max-height: 320px; height: 320px; }
+            .years-badge { bottom: 14px; right: 14px; padding: 14px 16px; }
+            .years-badge .number { font-size: 2rem; }
+            .years-badge .label { font-size: 0.75rem; }
+            .purpose-content h2, .section-header h2, .cta-section h2 { font-size: 1.45rem; }
+            .team-photo-frame, .team-photo img { min-height: 240px; height: 260px; max-height: 280px; }
+            .purpose-image, .purpose-image img { max-height: 180px; }
+        }
+    </style>
+    <link rel="stylesheet" href="css/marble-showroom.css">
+
+</head>
+<body class="showroom-theme">
+    <header class="header">
+        <a aria-label='S K Stones India' class='brand-lockup' href='/'>
+            <img class="brand-mark" src="images/shree-logo.png" alt="" width="40" height="80" decoding="async">
+            <span class="brand-text">
+                <span class="brand-name">S K <span class="brand-stones">Stones</span> India</span>
+                <span class="brand-formerly">(formerly Shree Stones &amp; Services)</span>
+            </span>
+        </a>
+        <nav class="desktop-nav">
+            <a href='/'>Home</a>
+            <a class='active' href='/about'>About Us</a>
+            <div class="nav-dropdown">
+                <span class="nav-link">Services <i class="fas fa-chevron-down"></i></span>
+                <div class="dropdown-menu">
+                    <a href='/installations'>Installations</a>
+                    <a href='/landscaping'>Landscaping</a>
+                    <a href='/flooring-executions'>Flooring Executions</a>
+                    <a href='/stone-art-installations'>Stone Art Installations</a>
+                </div>
+            </div>
+                        <div class="nav-dropdown mega-dropdown">
+                <span class="nav-link">Products <i class="fas fa-chevron-down"></i></span>
+                <div class="dropdown-menu mega-menu">
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Marbles <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/indian-marbles'>Indian Marbles</a>
+                            <a href='/imported-marbles'>Imported Marbles</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Granites <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/granites'>Indian Granites</a>
+                            <a href='/imported-granites'>Imported Granites</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Stone-Art <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/cnc-stone-work'>CNC Stone Work &amp; INLAY Work</a>
+                            <a href='/mop-inlay-work'>MOP Work</a>
+                            <a href='/murals-monuments'>Murals &amp; Monuments</a>
+                            <a href='/feature-wall'>Feature Walls</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Natural Stones <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/cobble-stones'>Cobble Stones</a>
+                            <a href='/kota-stones'>Lime Stones</a>
+                            <a href='/pebbles'>Pebbles</a>
+                            <a href='/sand-stones'>Sand Stones</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Engineered Surfaces <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/acrylic-surfaces'>Acrylic Surfaces</a>
+                            <a href='/quatrz-surfaces'>Quatrz Surfaces</a>
+                        </div>
+                    </div>
+                    <a href='/wall-claddings'>Wall Claddings</a>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Tiles <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/brillo-collection'>Brillo Collection</a>
+                            <a href='/elezzo-collection'>Elezzo Collection</a>
+                            <a href='/endless-collection'>Endless Collection</a>
+                            <a href='/ittaca-collection'>Ittaca Collection</a>
+                            <a href='/milagro-collection'>Milagro Collection</a>
+                            <a href='/stone-collection'>Stone Collection</a>
+                            <a href='/subway-tiles'>Subway Tiles</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Clay Products <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/clay-jally'>Clay Jally</a>
+                            <a href='/wire-cut-bricks'>Wire Cut Bricks</a>
+                            <a href='/elevation-clay-bricks'>Elevation Clay Bricks</a>
+                            <a href='/roofing-tiles-clay'>Roofing Tiles</a>
+                            <a href='/roof-flooring-tiles'>Roof Flooring Tiles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href='/projects'>Our Projects</a>
+            <a href='/contact'>Contact Us</a>
+        </nav>
+        <a href="tel:+917022630994" class="header-cta"><i class="fas fa-phone"></i> Call Us Now</a>
+        <a class='header-contact-mobile' href='/contact'>Contact Us</a>
+        <div class="hamburger" id="menuToggle"><span></span><span></span><span></span></div>
+    </header>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+    <nav class="mobile-nav" id="mobileNav" data-full-nav="true"></nav>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="about-hero-grid">
+            <div class="about-hero-content">
+                <h1><span>Premium</span> Stones For Every <span>Vision.</span> Every <span>Space.</span></h1>
+                <div class="about-intro-grid">
+                    <div class="about-small-image">
+                        <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/fluid-salon-moderno-con-pavimento-marmol-blanco-y-negro.webp" alt="Showroom">
+                        <div class="about-small-badge">We have delivered 200+ successful stone projects.</div>
+                    </div>
+                    <div class="about-intro-text">
+                        <p>S K Stones India (formerly Shree Stones & Services) blends craftsmanship, innovation, and precision engineering to deliver refined stone solutions tailored for residential, commercial, hospitality, and architectural environments with unwavering quality.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Architectural stone solutions</li>
+                            <li><i class="fas fa-check"></i> Advanced fabrication technology</li>
+                            <li><i class="fas fa-check"></i> Authentic material sourcing</li>
+                            <li><i class="fas fa-check"></i> Client-centric delivery</li>
+                        </ul>
+                        <a class='btn' href='/contact'>Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="about-hero-image">
+                <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/STC.CNS-20210401-0183-F.webp" alt="Luxury Interior">
+                <div class="years-badge">
+                    <div class="number">12<sup>+</sup></div>
+                    <div class="label">Years of Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee-content">
+            <span>Architectural Masterpieces</span><span>★</span>
+            <span>Handpicked Granites</span><span>★</span>
+            <span>Signature Marbles</span><span>★</span>
+            <span>Premium Natural Stones</span><span>★</span>
+            <span>Crafted Excellence</span><span>★</span>
+            <span>Architectural Masterpieces</span><span>★</span>
+            <span>Handpicked Granites</span><span>★</span>
+            <span>Signature Marbles</span><span>★</span>
+        </div>
+    </div>
+
+    <section class="trusted-section reveal" aria-label="Trusted by">
+        <div class="trusted-inner">
+            <p class="trusted-label">Trusted By Architects, Builders &amp; Developers</p>
+            <p class="mobile-swipe-hint">Swipe to explore <i class="fas fa-arrow-right"></i></p>
+            <div class="trusted-logos">
+                <span class="trusted-badge"><i class="fas fa-hotel"></i> Luxury Hotels</span>
+                <span class="trusted-badge"><i class="fas fa-building"></i> Commercial Spaces</span>
+                <span class="trusted-badge"><i class="fas fa-home"></i> Premium Villas</span>
+                <span class="trusted-badge"><i class="fas fa-plane"></i> Airports &amp; Infrastructure</span>
+                <span class="trusted-badge"><i class="fas fa-hospital"></i> Healthcare</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Building Purpose Section -->
+    <section class="purpose-section">
+        <div class="purpose-grid">
+            <div class="purpose-image" id="purposeImage">
+                <img src="images/project-luxury-lobby.png" alt="Corporate Lobby">
+            </div>
+            <div class="purpose-feature-content" id="purposeContent">
+                <h2>Building <span>Purpose</span> Through Continuous <span>Growth</span></h2>
+                <p class="mobile-swipe-hint purpose-swipe-hint">Swipe cards <i class="fas fa-arrow-right"></i></p>
+                <div class="purpose-cards">
+                    <div class="purpose-card">
+                        <div class="purpose-card-number">/01 <i class="fas fa-lightbulb"></i></div>
+                        <div class="purpose-card-content">
+                            <h3>Crafting Lasting Excellence</h3>
+                            <p>We create refined stone solutions using precision, innovation, and exceptional craftsmanship, ensuring every project meets superior quality standards and long-term performance expectations.</p>
+                        </div>
+                    </div>
+                    <div class="purpose-card">
+                        <div class="purpose-card-number">/02 <i class="fas fa-gem"></i></div>
+                        <div class="purpose-card-content">
+                            <h3>Engineering Material Integrity</h3>
+                            <p>Our sourcing network ensures authentic stones for long-lasting installations. We partner with verified quarries globally to bring you the finest materials.</p>
+                        </div>
+                    </div>
+                    <div class="purpose-card">
+                        <div class="purpose-card-number">/03 <i class="fas fa-cogs"></i></div>
+                        <div class="purpose-card-content">
+                            <h3>Innovating Through Precision</h3>
+                            <p>Advanced cutting technologies and engineering processes for detailed stonework. Our state-of-the-art machinery ensures perfect cuts every time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-section">
+        <div class="why-container">
+            <div class="section-header">
+                <h2>Why Choose <span>S K Stones India?</span></h2>
+                <p>Committed to quality, precision, and client satisfaction. Our expertise spans across residential, commercial, and architectural projects.</p>
+            </div>
+            <p class="mobile-swipe-hint why-swipe-hint">Swipe reasons <i class="fas fa-arrow-right"></i></p>
+            <div class="why-cards">
+                <div class="why-card">
+                    <div class="why-card-icon"><i class="fas fa-award"></i></div>
+                    <h3>Trusted Expertise</h3>
+                    <p>Our experienced specialists guide every stage, ensuring accuracy and flawless execution in every project we undertake.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon"><i class="fas fa-gem"></i></div>
+                    <h3>Premium Materials</h3>
+                    <p>We source high-quality stones from verified global quarries, ensuring authenticity and superior quality in every slab.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Superior Craftsmanship</h3>
+                    <p>Modern technology combined with refined techniques for exceptional results that stand the test of time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder-section">
+        <div class="founder-grid">
+            <div class="founder-image" id="founderImage">
+                <img src="images/ceo-shree-kumar-gandhi.png" alt="Shree Kumar Gandhi">
+            </div>
+            <div class="founder-content" id="founderContent">
+                <h2>Shree Kumar Gandhi</h2>
+                <p class="designation">Founder & CEO, S K Stones India Pvt. Ltd.</p>
+                <p>Our journey began with a commitment to elevate the standards of stone craftsmanship, driven by a vision to blend technology, artistry, and precision for every client we serve.</p>
+                <p>From humble beginnings to large-scale architectural collaborations, our growth has been shaped by dedication, problem-solving, and the belief that exceptional results come from relentless learning and adaptation.</p>
+                <p>S K Stones India (formerly Shree Stones & Services) stands today as the outcome of years refining processes, empowering skilled artisans, and building a culture that values integrity, innovation, and client-focused solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section" id="team">
+        <div class="section-header">
+            <h2>Our Expert <span>Team</span></h2>
+            <p>Our skilled designers, engineers, and craftsmen work together to deliver precise stone solutions.</p>
+        </div>
+        <p class="team-order-note">
+            <i class="fas fa-arrows-left-right"></i>
+            Team members are listed <strong>from left to right</strong> as they appear in the group photo.
+        </p>
+        <div class="team-layout">
+            <div class="team-photo visible" id="teamPhoto">
+                <div class="team-photo-panel">
+                    <div class="team-photo-frame">
+                        <img src="images/team-photo.png?v=5" alt="S K Stones India Team" width="912" height="768" decoding="async" fetchpriority="high">
+                    </div>
+                    <p class="team-photo-caption"><span>Left to right</span> in photo</p>
+                </div>
+            </div>
+            <div class="team-right">
+                <div class="team-grid">
+                    <div class="team-founder" id="teamFounder" data-delay="0">
+                        <span class="team-num">01</span>
+                        <span class="team-badge"><i class="fas fa-crown"></i> Founder</span>
+                        <h4>Shree Kumar Gandhi</h4>
+                        <p>Founder &amp; CEO</p>
+                    </div>
+                    <div class="team-card" data-delay="120">
+                        <span class="team-num">02</span>
+                        <h4>Syed Jeelan</h4>
+                        <p>Project Management &amp; Operations</p>
+                    </div>
+                    <div class="team-card" data-delay="220">
+                        <span class="team-num">03</span>
+                        <h4>Shubhangi</h4>
+                        <p>AI Growth Engineer</p>
+                    </div>
+                    <div class="team-card" data-delay="320">
+                        <span class="team-num">04</span>
+                        <h4>Dilip Sain</h4>
+                        <p>Project Management &amp; Operations</p>
+                    </div>
+                    <div class="team-card" data-delay="420">
+                        <span class="team-num">05</span>
+                        <h4>Sarah</h4>
+                        <p>Account &amp; Operations</p>
+                    </div>
+                    <div class="team-card" data-delay="520">
+                        <span class="team-num">06</span>
+                        <h4>Soumen Ghosh</h4>
+                        <p>Project Management &amp; Operations</p>
+                    </div>
+                    <div class="team-card" data-delay="620">
+                        <span class="team-num">07</span>
+                        <h4>Sunit Mundhada</h4>
+                        <p>Project Management &amp; Operations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section reveal">
+        <div class="cta-content">
+            <h2>Transform Your Space With Premium <span class="cta-gold">Stone Craftsmanship</span></h2>
+            <p>Premium natural stones for homes, offices & commercial spaces. Trusted by architects and builders across India.</p>
+            <div class="cta-actions">
+                <a class='btn btn-primary' href='/contact'>Get Started Today</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <a aria-label='S K Stones India' class='brand-lockup brand-lockup-footer' href='/'>
+            <img class="brand-mark" src="images/shree-logo.png" alt="" width="40" height="80" decoding="async">
+            <span class="brand-text">
+                        <span class="brand-name">S K <span class="brand-stones">Stones</span> India</span>
+                        <span class="brand-formerly">(formerly Shree Stones &amp; Services)</span>
+                    </span>
+                </a>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href='/'>Home</a></li>
+                    <li><a href='/about'>About Us</a></li>
+                    <li><a href='/products'>Products</a></li>
+                    <li><a href='/contact'>Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+917022630994"><i class="fas fa-phone"></i> +91 70226 30994</a></li>
+                    <li><a href="mailto:info@skstonesindia.com"><i class="fas fa-envelope"></i> info@skstonesindia.com</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> Koramangala, Bengaluru</li>
+                </ul>
+            </div>
+            <div class="social-links">
+                    <a href="https://www.linkedin.com/in/shree-kumar-gandhi-8699533a6/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/917022630994" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:info@skstonesindia.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+        </div>
+        <div class="footer-bottom">© 2026 S K Stones India Pvt. Ltd. All Rights Reserved.</div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script>
+        const syncPurposeImageHeight = () => {
+            const content = document.getElementById('purposeContent');
+            const imageWrap = document.getElementById('purposeImage');
+            if (!content || !imageWrap) return;
+
+            if (window.innerWidth <= 1024) {
+                imageWrap.style.height = '';
+                return;
+            }
+
+            imageWrap.style.height = `${content.offsetHeight}px`;
+        };
+
+        const syncFounderImageHeight = () => {
+            const content = document.getElementById('founderContent');
+            const imageWrap = document.getElementById('founderImage');
+            if (!content || !imageWrap) return;
+
+            if (window.innerWidth <= 1024) {
+                imageWrap.style.height = '';
+                return;
+            }
+
+            // Match text height; image stays vertically centered via grid
+            const target = Math.max(280, Math.round(content.offsetHeight * 0.88));
+            imageWrap.style.height = `${target}px`;
+        };
+
+        syncPurposeImageHeight();
+        syncFounderImageHeight();
+        window.addEventListener('resize', () => {
+            syncPurposeImageHeight();
+            syncFounderImageHeight();
+        });
+        window.addEventListener('load', () => {
+            syncPurposeImageHeight();
+            syncFounderImageHeight();
+        });
+
+        // Team section animations — always show photo; animate cards when in view
+        const teamPhoto = document.getElementById('teamPhoto');
+        const teamFounder = document.getElementById('teamFounder');
+        const teamCards = document.querySelectorAll('.team-card');
+        if (teamPhoto) teamPhoto.classList.add('visible');
+
+        const teamObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const delay = parseInt(entry.target.dataset.delay || 0, 10);
+                    setTimeout(() => entry.target.classList.add('visible'), delay);
+                    teamObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+        if (teamFounder) teamObserver.observe(teamFounder);
+        teamCards.forEach(card => teamObserver.observe(card));
+
+        // Drag-to-scroll for mouse; phones use native touch swipe
+        const enableDragScroll = (selector) => {
+            document.querySelectorAll(selector).forEach((el) => {
+                let isDown = false;
+                let startX = 0;
+                let scrollLeft = 0;
+
+                el.addEventListener('pointerdown', (e) => {
+                    if (e.pointerType !== 'mouse' || e.button !== 0) return;
+                    isDown = true;
+                    startX = e.clientX;
+                    scrollLeft = el.scrollLeft;
+                    el.setPointerCapture(e.pointerId);
+                    el.classList.add('is-dragging');
+                });
+                el.addEventListener('pointerup', (e) => {
+                    if (!isDown) return;
+                    isDown = false;
+                    el.classList.remove('is-dragging');
+                    try { el.releasePointerCapture(e.pointerId); } catch (_) {}
+                });
+                el.addEventListener('pointercancel', () => {
+                    isDown = false;
+                    el.classList.remove('is-dragging');
+                });
+                el.addEventListener('pointermove', (e) => {
+                    if (!isDown || e.pointerType !== 'mouse') return;
+                    e.preventDefault();
+                    el.scrollLeft = scrollLeft - (e.clientX - startX) * 1.2;
+                });
+            });
+        };
+
+        enableDragScroll('.trusted-logos, .purpose-cards, .why-cards');
+
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+            window.addEventListener('scroll', () => {
+                backToTop.classList.toggle('visible', window.scrollY > 500);
+            });
+            backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+    </script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/mega-menu.js"></script>
+    <script src="js/cta-reveal.js" defer></script>
+</body>
+</html>

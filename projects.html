@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=d4772256-9b0c-4023-884d-54bad2f890df
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects | S K Stones India</title>
+    <meta name="description" content="Explore premium stone projects by S K Stones India — luxury hotels, villas, commercial lobbies, stone art and architectural cladding across India.">
+    <link rel="canonical" href="https://skstonesindia.com/projects.html">
+    <meta property="og:title" content="Our Projects | S K Stones India">
+    <meta property="og:description" content="Spaces transformed in stone — hospitality, residential, commercial and infrastructure projects.">
+    <meta property="og:image" content="https://skstonesindia.com/images/project-ritz-carlton.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/site-extras.css">
+    <link rel="stylesheet" href="css/mega-menu.css">
+    <link rel="stylesheet" href="css/mobile-nav.css"><style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --gold: #C9A227; --dark: #0a0a0a; --white: #ffffff; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--dark); color: var(--white); overflow-x: hidden; }
+        
+        /* Header */
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 20px 50px; display: flex; align-items: center; justify-content: space-between; background: rgba(10,10,10,0.95); backdrop-filter: blur(10px); }
+        .logo { display: flex; align-items: center; gap: 15px; text-decoration: none; }
+        .logo-img { height: 60px; }
+        .logo-text { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--white); }
+        .logo-text span { color: var(--gold); }
+        .logo-tagline { font-size: 0.82rem; opacity: 0.9; display: block; color: rgba(255,255,255,0.92); }
+        .desktop-nav { display: flex; align-items: center; gap: 35px; }
+        .desktop-nav a { color: var(--white); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.3s; position: relative; }
+        .desktop-nav a:hover, .desktop-nav a.active { color: var(--gold); }
+        .desktop-nav .dropdown { position: relative; }
+        .desktop-nav .dropdown-menu { position: absolute; top: 100%; left: 0; background: rgba(20,20,20,0.98); min-width: 200px; border-radius: 10px; padding: 15px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s; border: 1px solid rgba(201,162,39,0.2); }
+        .desktop-nav .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .desktop-nav .dropdown-menu a { display: block; padding: 10px 25px; font-size: 0.85rem; }
+        .header-cta { background: var(--gold); color: var(--dark); padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; transition: all 0.3s; }
+        .header-cta:hover { background: #e6b800; }
+        .hamburger { display: none; flex-direction: column; gap: 6px; cursor: pointer; padding: 10px; }
+        .hamburger span { width: 28px; height: 2px; background: var(--white); }
+        
+        /* Hero Section */
+        .hero { padding: 160px 50px 60px; text-align: center; background: transparent; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; text-transform: uppercase; margin-bottom: 20px; }
+        .hero h1 span { color: var(--gold); }
+        .hero p { font-size: 1.05rem; opacity: 0.9; max-width: 720px; margin: 0 auto; line-height: 1.8; }
+        .section-eyebrow {
+            display: block;
+            text-align: center;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold);
+            margin-bottom: 28px;
+            opacity: 0.85;
+        }
+        
+        /* Projects Gallery */
+        .projects-section { padding: 80px 50px 100px; background: rgba(10,10,10,0.95); }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .project-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 300px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.4s ease;
+        }
+        
+        .project-item:hover {
+            border-color: var(--gold);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(212,175,55,0.25);
+        }
+        
+        .project-item img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s ease;
+        }
+
+        .project-item.show-full {
+            background: #151515;
+        }
+
+        /* Cheetah stone art — full relief sculpture */
+        .project-item.show-full img {
+            object-position: center 45%;
+            transform-origin: center center;
+        }
+
+        .project-item.show-full:hover img {
+            transform: scale(1.05);
+        }
+        
+        .project-item:hover img {
+            transform: scale(1.15);
+        }
+        
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 25px;
+        }
+        
+        .project-item:hover .project-overlay {
+            opacity: 1;
+        }
+        
+        .project-overlay i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            font-size: 2.5rem;
+            color: var(--gold);
+            transition: transform 0.4s ease;
+        }
+        
+        .project-item:hover .project-overlay i {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+            animation: zoomIn 0.4s ease;
+        }
+        
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 2rem;
+            color: var(--white);
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .lightbox-close:hover {
+            color: var(--gold);
+        }
+        
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: var(--white);
+            cursor: pointer;
+            padding: 20px;
+            transition: color 0.3s;
+        }
+        
+        .lightbox-nav:hover {
+            color: var(--gold);
+        }
+        
+        .lightbox-prev { left: 20px; }
+        .lightbox-next { right: 20px; }
+        
+        /* CTA Section */
+        /* CTA Section — see css/cta-section.css */
+        
+        /* Footer */
+        .footer { padding: 40px 40px 0; background: transparent; }
+        .footer-content { display: grid; grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(160px, 1fr)); gap: 20px 36px; max-width: 1200px; margin: 0 auto; padding-bottom: 22px; border-bottom: 1px solid rgba(0,0,0,0.08); align-items: start; }
+        .footer-logo-text { font-family: 'Playfair Display', serif; font-size: 1.25rem; margin: 0 0 2px; color: #000; line-height: 1.2; }
+        .footer-logo-text span { color: var(--gold); }
+        .footer-tagline { font-size: 0.75rem; color: #000; display: block; margin: 0; }
+        .footer h4 { font-size: 1.05rem; margin: 0 0 10px; color: var(--gold); }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 5px; }
+        .footer-links a { color: #3a3a3a; text-decoration: none; font-size: 0.9rem; transition: all 0.3s; }
+        .footer-links a:hover { color: var(--gold); }
+        .footer-contact li { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; font-size: 0.9rem; color: #3a3a3a; }
+        .footer-contact i { color: var(--gold); margin-top: 4px; }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.08); font-size: 0.85rem; color: #6b6b6b; }
+        .social-links { display: flex; gap: 15px; margin-top: 25px; }
+        .social-links a { width: 45px; height: 45px; border-radius: 50%; border: 1px solid rgba(180,180,180,0.35); display: flex; align-items: center; justify-content: center; color: #2f2f2f; background: rgba(255,255,255,0.94); box-shadow: 0 4px 14px rgba(0,0,0,0.06); transition: all 0.3s; }
+        .social-links a:hover { background: var(--gold); border-color: var(--gold); color: var(--dark); }
+        
+        /* Mobile Navigation */
+        .mobile-nav { position: fixed; top: 0; right: -100%; width: 80%; max-width: 400px; height: 100vh; background: var(--dark); z-index: 2000; padding: 80px 40px; transition: right 0.4s; display: flex; flex-direction: column; gap: 25px; }
+        .mobile-nav.active { right: 0; }
+        .mobile-nav a { color: var(--white); text-decoration: none; font-size: 1.1rem; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .nav-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1500; opacity: 0; visibility: hidden; transition: all 0.3s; }
+        .nav-overlay.active { opacity: 1; visibility: visible; }
+        .close-nav { position: absolute; top: 30px; right: 30px; font-size: 2rem; color: var(--white); cursor: pointer; }
+        
+        /* Floating Buttons */
+        .floating-btn { position: fixed; bottom: 30px; z-index: 999; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(0,0,0,0.3); transition: transform 0.3s; }
+        .floating-btn:hover { transform: scale(1.1); }
+        .floating-btn.left { left: 30px; background: var(--gold); }
+        .floating-btn.right { right: 30px; background: #25D366; }
+        .floating-btn a { color: var(--white); font-size: 1.3rem; }
+        .floating-btn.left a { color: var(--dark); }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gold);
+            color: var(--dark);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+        }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(201,162,39,0.4); }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .desktop-nav, .header-cta { display: none; }
+            .hamburger { display: none !important; }
+            .header { padding: 12px 16px; }
+            .hero { padding: 150px 20px 80px; }
+            .hero h1 { font-size: 2.5rem; }
+            .projects-section { padding: 60px 20px; }
+            .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .project-item { height: 250px; }
+            .project-item.show-full { height: 300px; }
+            .footer { padding: 28px 16px 0; }
+            .footer-content { grid-template-columns: 1fr; gap: 16px; padding-bottom: 16px; }
+        }
+        
+        @media (max-width: 600px) {
+            .projects-grid { grid-template-columns: 1fr; }
+            .project-item { height: 280px; }
+            .project-item.show-full { height: 320px; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+    <link rel="stylesheet" href="css/marble-showroom.css">
+
+</head>
+<body class="showroom-theme page-projects">
+    <header class="header">
+        <a aria-label='S K Stones India' class='brand-lockup' href='/'>
+            <img class="brand-mark" src="images/shree-logo.png" alt="" width="40" height="80" decoding="async">
+            <span class="brand-text">
+                <span class="brand-name">S K <span class="brand-stones">Stones</span> India</span>
+                <span class="brand-formerly">(formerly Shree Stones &amp; Services)</span>
+            </span>
+        </a>
+        <nav class="desktop-nav">
+            <a href='/'>Home</a>
+            <a href='/about'>About Us</a>
+            <div class="nav-dropdown">
+                <span class="nav-link">Services <i class="fas fa-chevron-down"></i></span>
+                <div class="dropdown-menu">
+                    <a href='/installations'>Installations</a>
+                    <a href='/landscaping'>Landscaping</a>
+                    <a href='/flooring-executions'>Flooring Executions</a>
+                    <a href='/stone-art-installations'>Stone Art Installations</a>
+                </div>
+            </div>
+                            <div class="nav-dropdown mega-dropdown">
+                <span class="nav-link">Products <i class="fas fa-chevron-down"></i></span>
+                <div class="dropdown-menu mega-menu">
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Marbles <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/indian-marbles'>Indian Marbles</a>
+                            <a href='/imported-marbles'>Imported Marbles</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Granites <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/granites'>Indian Granites</a>
+                            <a href='/imported-granites'>Imported Granites</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Stone-Art <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/cnc-stone-work'>CNC Stone Work &amp; INLAY Work</a>
+                            <a href='/mop-inlay-work'>MOP Work</a>
+                            <a href='/murals-monuments'>Murals &amp; Monuments</a>
+                            <a href='/feature-wall'>Feature Walls</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Natural Stones <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/cobble-stones'>Cobble Stones</a>
+                            <a href='/kota-stones'>Lime Stones</a>
+                            <a href='/pebbles'>Pebbles</a>
+                            <a href='/sand-stones'>Sand Stones</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Engineered Surfaces <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/acrylic-surfaces'>Acrylic Surfaces</a>
+                            <a href='/quatrz-surfaces'>Quatrz Surfaces</a>
+                        </div>
+                    </div>
+                    <div class="mega-item"><a href='/wall-claddings'>Wall Claddings</a></div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Tiles <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/brillo-collection'>Brillo Collection</a>
+                            <a href='/elezzo-collection'>Elezzo Collection</a>
+                            <a href='/endless-collection'>Endless Collection</a>
+                            <a href='/ittaca-collection'>Ittaca Collection</a>
+                            <a href='/milagro-collection'>Milagro Collection</a>
+                            <a href='/stone-collection'>Stone Collection</a>
+                            <a href='/subway-tiles'>Subway Tiles</a>
+                        </div>
+                    </div>
+                    <div class="mega-item has-sub">
+                        <a href="#" class="mega-parent" role="button" aria-haspopup="true">Clay Products <i class="fas fa-chevron-right sub-arrow"></i></a>
+                        <div class="mega-submenu">
+                            <a href='/clay-jally'>Clay Jally</a>
+                            <a href='/wire-cut-bricks'>Wire Cut Bricks</a>
+                            <a href='/elevation-clay-bricks'>Elevation Clay Bricks</a>
+                            <a href='/roofing-tiles-clay'>Roofing Tiles</a>
+                            <a href='/roof-flooring-tiles'>Roof Flooring Tiles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class='active' href='/projects'>Our Projects</a>
+            <a href='/contact'>Contact Us</a>
+        </nav>
+        <a href="tel:+917022630994" class="header-cta"><i class="fas fa-phone"></i> Call Us Now</a>
+        <a class='header-contact-mobile' href='/contact'>Contact Us</a>
+        <div class="hamburger" id="menuToggle">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+    <nav class="mobile-nav" id="mobileNav" data-full-nav="true"></nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="glass-text-panel hero-copy">
+            <h1>Our <span>Projects</span></h1>
+            <p>Featured case studies and our full project gallery — premium natural stones for homes, offices &amp; commercial spaces. Trusted by architects and builders across India.</p>
+        </div>
+    </section>
+
+    <!-- Featured Case Studies -->
+    <section class="case-studies-section" style="padding-top: 40px;">
+        <span class="section-eyebrow">Featured Case Studies</span>
+        <div class="case-studies-grid">
+            <a class='case-study-card' href='/case-study-ritz-carlton'>
+                <img src="images/project-ritz-carlton.png" alt="Luxury hotel stone elevation">
+                <div class="case-study-card-body">
+                    <span class="case-study-tag">Hospitality</span>
+                    <h3>Luxury Hotel Stone Elevation</h3>
+                    <p>Grand façade cladding with premium natural stone — 12,000+ sq. ft. delivered in 4 months.</p>
+                    <span class="case-study-link">Read Case Study <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+            <a class='case-study-card' href='/case-study-luxury-villa'>
+                <img src="images/flooring-2.png" alt="Luxury villa marble flooring">
+                <div class="case-study-card-body">
+                    <span class="case-study-tag">Residential</span>
+                    <h3>Luxury Villa Marble Flooring</h3>
+                    <p>Book-matched Italian marble across 8,500 sq. ft. with mirror-polish finishing.</p>
+                    <span class="case-study-link">Read Case Study <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+            <a class='case-study-card' href='/case-study-airport'>
+                <img src="images/project-airport-departures.png" alt="Airport commercial stone flooring">
+                <div class="case-study-card-body">
+                    <span class="case-study-tag">Commercial</span>
+                    <h3>Airport &amp; Commercial Lobby</h3>
+                    <p>High-traffic stone flooring at scale — durable, uniform, and built for 24/7 operations.</p>
+                    <span class="case-study-link">Read Case Study <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Projects Gallery -->
+    <section class="projects-section">
+        <span class="section-eyebrow">Full Project Gallery</span>
+        <div class="projects-grid">
+            <div class="project-item" onclick="openLightbox(0)">
+                <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/1564natural-stone-wall-cladding-in-india-5.jpg" alt="Natural Stone Wall Cladding">
+                <div class="project-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="project-item" onclick="openLightbox(1)">
+                <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/Screenshot_20240123-122737.jpg" alt="Stone Project">
+                <div class="project-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="project-item show-full" onclick="openLightbox(2)">
+                <img src="images/cheetah-stone-art.png" alt="Cheetah Stone Art">
+                <div class="project-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="project-item" onclick="openLightbox(3)">
+                <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/empty-hall-scaled.webp" alt="Hall Interior">
+                <div class="project-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="project-item" onclick="openLightbox(4)">
+                <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/3d-rendering-modern-luxury-hotel-office-reception-lounge-hall-scaled.webp" alt="Luxury Hotel Reception">
+                <div class="project-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="project-item" onclick="openLightbox(5)">
+                <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-25-at-4.35.07-PM.jpeg" alt="Commercial Project">
+                <div class="project-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="project-item" onclick="openLightbox(6)">
+                <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-25-at-4.35.06-PM-2.jpeg" alt="Stone Installation">
+                <div class="project-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="project-item" onclick="openLightbox(7)">
+                <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-25-at-4.35.06-PM-1.jpeg" alt="Residential Project">
+                <div class="project-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="project-item" onclick="openLightbox(8)">
+                <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-25-at-4.35.06-PM.jpeg" alt="Architectural Stone Work">
+                <div class="project-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="project-item" onclick="openLightbox(9)">
+                <img src="images/project-aster-hospital.png" alt="Aster Hospital">
+                <div class="project-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></span>
+        <img src="" alt="Project" id="lightboxImg">
+        <span class="lightbox-nav lightbox-next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></span>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section reveal">
+        <div class="cta-content">
+            <h2>Ready to Start Your <span>Project?</span></h2>
+            <p>Let us help you transform your space with premium stone craftsmanship.</p>
+            <div class="cta-actions">
+                <a class='btn btn-primary' href='/contact'>Get Started Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-about">
+                <a aria-label='S K Stones India' class='brand-lockup brand-lockup-footer' href='/'>
+                    <img class="brand-mark" src="images/shree-logo.png" alt="" width="40" height="80" decoding="async">
+                    <span class="brand-text">
+                        <span class="brand-name">S K <span class="brand-stones">Stones</span> India</span>
+                        <span class="brand-formerly">(formerly Shree Stones &amp; Services)</span>
+                    </span>
+                </a>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href='/'>Home</a></li>
+                    <li><a href='/about'>About Us</a></li>
+                    <li><a href='/products'>Products</a></li>
+                    <li><a href='/projects'>Our Projects</a></li>
+                    <li><a href='/contact'>Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul class="footer-links footer-contact">
+                    <li><i class="fas fa-phone"></i> +91 70226 30994</li>
+                    <li><i class="fas fa-envelope"></i> info@skstonesindia.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Koramangala, Bengaluru</li>
+                </ul>
+            </div>
+            <div class="social-links">
+                    <a href="https://www.linkedin.com/in/shree-kumar-gandhi-8699533a6/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/917022630994" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:info@skstonesindia.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 S K Stones India. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script>
+        // Lightbox
+        const images = [
+            'https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/1564natural-stone-wall-cladding-in-india-5.jpg',
+            'https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/Screenshot_20240123-122737.jpg',
+            'images/cheetah-stone-art.png',
+            'https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/empty-hall-scaled.webp',
+            'https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/3d-rendering-modern-luxury-hotel-office-reception-lounge-hall-scaled.webp',
+            'https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-25-at-4.35.07-PM.jpeg',
+            'https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-25-at-4.35.06-PM-2.jpeg',
+            'https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-25-at-4.35.06-PM-1.jpeg',
+            'https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-25-at-4.35.06-PM.jpeg',
+            'images/project-aster-hospital.png'
+        ];
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            currentIndex = index;
+            document.getElementById('lightboxImg').src = images[index];
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox') closeLightbox();
+        });
+
+        function changeSlide(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            if (currentIndex >= images.length) currentIndex = 0;
+            document.getElementById('lightboxImg').src = images[currentIndex];
+        }
+
+        // Close lightbox on escape key
+        document.addEventListener('keydown', (e) => {
+            const lightbox = document.getElementById('lightbox');
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+            window.addEventListener('scroll', () => {
+                backToTop.classList.toggle('visible', window.scrollY > 500);
+            });
+            backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+    </script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/seo-schema.js"></script>
+    <script src="js/mega-menu.js"></script>
+    <script src="js/cta-reveal.js" defer></script>
+    <script src="js/projects-reveal.js" defer></script>
+</body>
+</html>
