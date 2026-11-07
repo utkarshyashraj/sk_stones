@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { withBase } from '@/lib/base-path';
 import styles from './Header.module.css';
 
 export function BrandLockup({ variant = 'header' }: { variant?: 'header' | 'footer' }) {
@@ -7,7 +8,7 @@ export function BrandLockup({ variant = 'header' }: { variant?: 'header' | 'foot
       {/* eslint-disable-next-line @next/next/no-img-element -- tiny pre-optimised logo */}
       <img
         className={styles.brandMark}
-        src="/images/site/shree-logo-60.webp"
+        src={withBase('/images/site/shree-logo-60.webp')}
         alt=""
         width={60}
         height={124}

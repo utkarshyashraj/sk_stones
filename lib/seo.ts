@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { imageUrl, pickWidth } from './image-url';
-import { absoluteUrl, site, SITE_URL } from './site';
+import { absoluteUrl, site, SITE_ORIGIN, SITE_URL } from './site';
 import type { Crumb, ImageRef } from './types';
 
 interface PageSeo {
@@ -12,12 +12,21 @@ interface PageSeo {
   type?: 'website' | 'article';
 }
 
-const DEFAULT_OG = { url: '/images/site/project-ritz-carlton-1024.webp', width: 1024, height: 672 };
+// Absolute URLs: a relative one would be resolved against the host root, dropping any base path.
+const DEFAULT_OG = {
+  url: absoluteUrl('/images/site/project-ritz-carlton-1024.webp'),
+  width: 1024,
+  height: 672,
+};
 
 export function ogImage(image?: ImageRef | null) {
   if (!image) return DEFAULT_OG;
   const w = pickWidth(image, 1200);
-  return { url: imageUrl(image.key, w), width: w, height: Math.round((image.h / image.w) * w) };
+  return {
+    url: `${SITE_ORIGIN}${imageUrl(image.key, w)}`,
+    width: w,
+    height: Math.round((image.h / image.w) * w),
+  };
 }
 
 export function buildMetadata({
@@ -63,7 +72,7 @@ export function localBusinessLd() {
     url: SITE_URL,
     telephone: site.phone.e164,
     email: site.email,
-    image: absoluteUrl(DEFAULT_OG.url),
+    image: DEFAULT_OG.url,
     logo: absoluteUrl('/images/site/sk-mark-transparent-480.webp'),
     foundingDate: String(site.foundedYear),
     address: {
@@ -125,7 +134,7 @@ export function itemListLd(name: string, path: string, items: { name: string; im
       '@type': 'ListItem',
       position: i + 1,
       name: it.name,
-      ...(it.image ? { image: absoluteUrl(imageUrl(it.image.key, pickWidth(it.image, 800))) } : {}),
+      ...(it.image ? { image: `${SITE_ORIGIN}${imageUrl(it.image.key, pickWidth(it.image, 800))}` } : {}),
     })),
   };
 }

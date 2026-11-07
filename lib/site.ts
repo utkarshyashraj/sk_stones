@@ -9,6 +9,8 @@
  * and the form's thank-you redirect all point at the address the site is actually served from.
  */
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://skstonesindia.com').replace(/\/+$/, '');
+/** Scheme + host only (SITE_URL may carry a sub-path); for URLs that already include the base path. */
+export const SITE_ORIGIN = new URL(SITE_URL).origin;
 /** GitHub Pages build: folder-style URLs (/about/ -> about/index.html). Mirrors next.config.ts. */
 export const TRAILING_SLASH = process.env.NEXT_PUBLIC_TRAILING_SLASH === '1';
 

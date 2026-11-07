@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
   // GitHub Pages (NEXT_PUBLIC_TRAILING_SLASH=1): /kota-stones/ -> out/kota-stones/index.html, the layout
   // Pages serves reliably (a page file next to a same-named folder can resolve to the folder there).
   trailingSlash: process.env.NEXT_PUBLIC_TRAILING_SLASH === '1',
+  // GitHub Pages project site (utkarshyashraj.github.io/sk_stones): every route and asset under /sk_stones.
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   reactStrictMode: true,
   poweredByHeader: false,
   devIndicators: false,

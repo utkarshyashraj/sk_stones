@@ -59,17 +59,19 @@ for (const page of pages) {
 const PAGES = process.env.NEXT_PUBLIC_TRAILING_SLASH === '1';
 if (PAGES) {
   const SITE = (process.env.NEXT_PUBLIC_SITE_URL || 'https://skstonesindia.com').replace(/\/+$/, '');
+  const BASE = (process.env.NEXT_PUBLIC_BASE_PATH || '').replace(/\/+$/, ''); // SITE already includes it
   fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
   let stubs = 0;
   for (const [from, to] of rules) {
-    const target = to === '/' ? '/' : `${to}/`;
+    const page = to === '/' ? '/' : `${to}/`;
+    const target = `${BASE}${page}`;
     const file = from.endsWith('.html') ? path.join(OUT, from) : path.join(OUT, from, 'index.html');
     if (fs.existsSync(file)) continue; // a real page lives here
     fs.mkdirSync(path.dirname(file), { recursive: true });
     fs.writeFileSync(
       file,
       `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Moved</title>` +
-        `<meta name="robots" content="noindex"><link rel="canonical" href="${SITE}${target}">` +
+        `<meta name="robots" content="noindex"><link rel="canonical" href="${SITE}${page}">` +
         `<meta http-equiv="refresh" content="0; url=${target}">` +
         `<script>location.replace(${JSON.stringify(target)} + location.search + location.hash)</script>` +
         `</head><body><p>This page has moved: <a href="${target}">continue</a>.</p></body></html>

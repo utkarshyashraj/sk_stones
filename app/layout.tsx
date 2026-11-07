@@ -6,6 +6,7 @@ import { Footer } from '@/components/layout/Footer/Footer';
 import { Header } from '@/components/layout/Header/Header';
 import { GlobalOverlays } from '@/components/layout/GlobalOverlays';
 import { jsonLdScript, localBusinessLd } from '@/lib/seo';
+import { withBase } from '@/lib/base-path';
 import { site, SITE_URL } from '@/lib/site';
 import '@/styles/globals.css';
 
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
   applicationName: site.name,
   authors: [{ name: site.legalName }],
   formatDetection: { telephone: false },
-  icons: { icon: '/favicon.ico' },
+  icons: { icon: withBase('/favicon.ico') },
 };
 
 export const viewport: Viewport = {
@@ -45,7 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* One fixed marble layer for the whole site (sections only veil it). No parallax: static by design. */}
         <div className="marble-layer" aria-hidden="true">
           <Image
-            src={marble.src}
+            src={withBase(marble.src)}
             alt=""
             fill
             priority

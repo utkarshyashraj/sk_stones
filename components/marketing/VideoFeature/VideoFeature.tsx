@@ -2,12 +2,13 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
+import { withBase } from '@/lib/base-path';
 import styles from './VideoFeature.module.css';
 
 const SOURCES = {
-  desktop: '/media/quarry-to-finish-720.mp4', // 7.8 MB (was 60 MB)
-  mobile: '/media/quarry-to-finish-540.mp4', // 2.9 MB
-  poster: '/media/quarry-to-finish-poster.webp',
+  desktop: withBase('/media/quarry-to-finish-720.mp4'), // 7.8 MB (was 60 MB)
+  mobile: withBase('/media/quarry-to-finish-540.mp4'), // 2.9 MB
+  poster: withBase('/media/quarry-to-finish-poster.webp'),
 };
 
 /**

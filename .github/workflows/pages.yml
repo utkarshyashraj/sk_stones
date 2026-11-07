@@ -1,7 +1,7 @@
 # Builds the static site and publishes it to GitHub Pages on every push to main.
 # Pages build differences (vs Netlify): folder-style URLs, legacy-URL redirect pages, and the
-# canonical/sitemap origin set to the Pages address. To move to a custom domain later, change
-# NEXT_PUBLIC_SITE_URL below and set the domain in Settings → Pages.
+# canonical/sitemap origin set to the Pages address, everything served under /sk_stones (project site).
+# NEXT_PUBLIC_SITE_URL below, remove NEXT_PUBLIC_BASE_PATH, and set the domain in Settings → Pages.
 name: Deploy to GitHub Pages
 
 on:
@@ -22,7 +22,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_SITE_URL: https://utkarshyashraj.github.io
+      NEXT_PUBLIC_SITE_URL: https://utkarshyashraj.github.io/sk_stones
+      NEXT_PUBLIC_BASE_PATH: /sk_stones
       NEXT_PUBLIC_TRAILING_SLASH: '1'
       NEXT_TELEMETRY_DISABLED: '1'
     steps:

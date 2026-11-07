@@ -1,5 +1,6 @@
 'use client';
 
+import { withBase } from '@/lib/base-path';
 import type { ClientProduct } from '@/lib/types';
 
 export interface CatalogIndex {
@@ -13,7 +14,7 @@ let pending: Promise<CatalogIndex> | null = null;
 /** Loads the static product index (/data/catalog.json, generated at build time) once per session. */
 export function loadCatalogIndex(): Promise<CatalogIndex> {
   if (!pending) {
-    pending = fetch('/data/catalog.json')
+    pending = fetch(withBase('/data/catalog.json'))
       .then((r) => {
         if (!r.ok) throw new Error(`catalog index ${r.status}`);
         return r.json() as Promise<CatalogIndex>;
