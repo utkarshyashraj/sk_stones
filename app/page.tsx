@@ -84,7 +84,11 @@ export default function HomePage() {
       image: getSiteImage(c.images[0]!.key),
     };
   });
-  const strip = projectGallery.slice(0, 4).map((g) => ({ image: getSiteImage(g.key), alt: g.alt }));
+  // Homepage strip leaves out the cheetah art piece (still shown in the full /projects gallery).
+  const strip = projectGallery
+    .filter((g) => g.key !== 'cheetah-stone-art')
+    .slice(0, 4)
+    .map((g) => ({ image: getSiteImage(g.key), alt: g.alt }));
 
   const finishSwatches = finishes.map((f) => {
     const p = product(f.productId);
