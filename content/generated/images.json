@@ -6041,6 +6041,843 @@
   "avif": true,
   "color": "#080808"
  },
+ "site/ref-aai": {
+  "w": 320,
+  "h": 184,
+  "widths": [
+   320
+  ],
+  "avif": true,
+  "color": "#080808"
+ },
+ "site/ref-aai-1": {
+  "w": 1024,
+  "h": 682,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#b8a888"
+ },
+ "site/ref-aai-2": {
+  "w": 1024,
+  "h": 682,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#d8a878"
+ },
+ "site/ref-aai-3": {
+  "w": 1024,
+  "h": 682,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#887868"
+ },
+ "site/ref-aai-4": {
+  "w": 1024,
+  "h": 682,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#585858"
+ },
+ "site/ref-about-hero-banner": {
+  "w": 1024,
+  "h": 836,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#b8a888"
+ },
+ "site/ref-aig": {
+  "w": 414,
+  "h": 414,
+  "widths": [
+   414
+  ],
+  "avif": true,
+  "color": "#f8f8f8"
+ },
+ "site/ref-aig-1": {
+  "w": 1024,
+  "h": 768,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#d8c8c8"
+ },
+ "site/ref-aig-2": {
+  "w": 1024,
+  "h": 682,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#887868"
+ },
+ "site/ref-aig-3": {
+  "w": 1024,
+  "h": 682,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#383838"
+ },
+ "site/ref-aig-4": {
+  "w": 1024,
+  "h": 682,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#888888"
+ },
+ "site/ref-aster": {
+  "w": 320,
+  "h": 320,
+  "widths": [
+   320
+  ],
+  "avif": true,
+  "color": "#f8f8f8"
+ },
+ "site/ref-aster-1": {
+  "w": 768,
+  "h": 1024,
+  "widths": [
+   480,
+   768
+  ],
+  "avif": true,
+  "color": "#b8b8a8"
+ },
+ "site/ref-aster-2": {
+  "w": 768,
+  "h": 1024,
+  "widths": [
+   480,
+   768
+  ],
+  "avif": true,
+  "color": "#d8d8d8"
+ },
+ "site/ref-aster-3": {
+  "w": 1024,
+  "h": 614,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#c8b898"
+ },
+ "site/ref-aster-4": {
+  "w": 856,
+  "h": 1024,
+  "widths": [
+   480,
+   800,
+   856
+  ],
+  "avif": true,
+  "color": "#e8e8e8"
+ },
+ "site/ref-brigade": {
+  "w": 240,
+  "h": 320,
+  "widths": [
+   240
+  ],
+  "avif": true,
+  "color": "#185898"
+ },
+ "site/ref-cbse": {
+  "w": 183,
+  "h": 200,
+  "widths": [
+   183
+  ],
+  "avif": true,
+  "color": "#080808"
+ },
+ "site/ref-cbse-1": {
+  "w": 1024,
+  "h": 682,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#080808"
+ },
+ "site/ref-cbse-2": {
+  "w": 1024,
+  "h": 819,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#c8b8a8"
+ },
+ "site/ref-cbse-3": {
+  "w": 1024,
+  "h": 768,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#a89888"
+ },
+ "site/ref-cbse-4": {
+  "w": 1024,
+  "h": 768,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#686868"
+ },
+ "site/ref-ceo-shree-kumar-gandhi": {
+  "w": 675,
+  "h": 900,
+  "widths": [
+   480,
+   675
+  ],
+  "avif": true,
+  "color": "#281818"
+ },
+ "site/ref-circular-stone-pattern": {
+  "w": 1024,
+  "h": 588,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#e8c8a8"
+ },
+ "site/ref-craft-sculptures": {
+  "w": 720,
+  "h": 536,
+  "widths": [
+   480,
+   720
+  ],
+  "avif": true,
+  "color": "#d8e8e8"
+ },
+ "site/ref-craft-staircase-wall": {
+  "w": 768,
+  "h": 1024,
+  "widths": [
+   480,
+   768
+  ],
+  "avif": true,
+  "color": "#c8c8b8"
+ },
+ "site/ref-craft-stone-paving": {
+  "w": 1024,
+  "h": 652,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#f8f8f8"
+ },
+ "site/ref-elevations-1": {
+  "w": 1024,
+  "h": 682,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#181818"
+ },
+ "site/ref-elevations-2": {
+  "w": 1024,
+  "h": 682,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#987868"
+ },
+ "site/ref-elevations-3": {
+  "w": 1024,
+  "h": 819,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#c87848"
+ },
+ "site/ref-elevations-4": {
+  "w": 1024,
+  "h": 935,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#b85828"
+ },
+ "site/ref-elevations-5": {
+  "w": 1024,
+  "h": 819,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#887858"
+ },
+ "site/ref-elevations-6": {
+  "w": 1024,
+  "h": 819,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#080808"
+ },
+ "site/ref-flooring-1": {
+  "w": 1024,
+  "h": 819,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#c8b8a8"
+ },
+ "site/ref-flooring-2": {
+  "w": 1024,
+  "h": 819,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#484848"
+ },
+ "site/ref-flooring-3": {
+  "w": 1024,
+  "h": 819,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#a89888"
+ },
+ "site/ref-flooring-4": {
+  "w": 1024,
+  "h": 819,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#c8b8a8"
+ },
+ "site/ref-flooring-5": {
+  "w": 1024,
+  "h": 682,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#080808"
+ },
+ "site/ref-flooring-6": {
+  "w": 1024,
+  "h": 819,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#a89888"
+ },
+ "site/ref-img-23": {
+  "w": 736,
+  "h": 737,
+  "widths": [
+   480,
+   736
+  ],
+  "avif": true,
+  "color": "#c8d8c8"
+ },
+ "site/ref-indian-railways": {
+  "w": 360,
+  "h": 360,
+  "widths": [
+   360
+  ],
+  "avif": true,
+  "color": "#e80818"
+ },
+ "site/ref-indian-railways-1": {
+  "w": 1024,
+  "h": 867,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#888888"
+ },
+ "site/ref-indian-railways-2": {
+  "w": 1024,
+  "h": 768,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#a89888"
+ },
+ "site/ref-indian-railways-3": {
+  "w": 1024,
+  "h": 682,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#c8b8a8"
+ },
+ "site/ref-indian-railways-4": {
+  "w": 1024,
+  "h": 768,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#a8a8a8"
+ },
+ "site/ref-infosys": {
+  "w": 320,
+  "h": 136,
+  "widths": [
+   320
+  ],
+  "avif": true,
+  "color": "#080808"
+ },
+ "site/ref-infosys-1": {
+  "w": 1024,
+  "h": 683,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#483838"
+ },
+ "site/ref-infosys-2": {
+  "w": 750,
+  "h": 1000,
+  "widths": [
+   480,
+   750
+  ],
+  "avif": true,
+  "color": "#686858"
+ },
+ "site/ref-infosys-3": {
+  "w": 750,
+  "h": 1000,
+  "widths": [
+   480,
+   750
+  ],
+  "avif": true,
+  "color": "#888888"
+ },
+ "site/ref-infosys-4": {
+  "w": 1024,
+  "h": 576,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#98c8e8"
+ },
+ "site/ref-installation-1": {
+  "w": 1024,
+  "h": 443,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#181818"
+ },
+ "site/ref-installation-2": {
+  "w": 1024,
+  "h": 545,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#282828"
+ },
+ "site/ref-installation-3": {
+  "w": 1024,
+  "h": 755,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#181808"
+ },
+ "site/ref-installation-4": {
+  "w": 1024,
+  "h": 748,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#e8e8e8"
+ },
+ "site/ref-jw-marriott": {
+  "w": 320,
+  "h": 164,
+  "widths": [
+   320
+  ],
+  "avif": true,
+  "color": "#080808"
+ },
+ "site/ref-jw-marriott-1": {
+  "w": 900,
+  "h": 500,
+  "widths": [
+   480,
+   800,
+   900
+  ],
+  "avif": true,
+  "color": "#6888c8"
+ },
+ "site/ref-jw-marriott-2": {
+  "w": 640,
+  "h": 427,
+  "widths": [
+   480,
+   640
+  ],
+  "avif": true,
+  "color": "#687888"
+ },
+ "site/ref-jw-marriott-3": {
+  "w": 576,
+  "h": 1024,
+  "widths": [
+   480,
+   576
+  ],
+  "avif": true,
+  "color": "#a8a898"
+ },
+ "site/ref-jw-marriott-4": {
+  "w": 335,
+  "h": 597,
+  "widths": [
+   335
+  ],
+  "avif": true,
+  "color": "#b8c8d8"
+ },
+ "site/ref-landscaping-1": {
+  "w": 1024,
+  "h": 819,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#787878"
+ },
+ "site/ref-landscaping-2": {
+  "w": 1024,
+  "h": 819,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#080808"
+ },
+ "site/ref-landscaping-3": {
+  "w": 1024,
+  "h": 819,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#c8a888"
+ },
+ "site/ref-landscaping-4": {
+  "w": 1024,
+  "h": 819,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#080808"
+ },
+ "site/ref-landscaping-5": {
+  "w": 1024,
+  "h": 819,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#181808"
+ },
+ "site/ref-landscaping-service": {
+  "w": 1024,
+  "h": 768,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#989898"
+ },
+ "site/ref-modern-styled-small-entryway-1-683x1024": {
+  "w": 683,
+  "h": 1024,
+  "widths": [
+   480,
+   683
+  ],
+  "avif": true,
+  "color": "#988878"
+ },
+ "site/ref-project-airport-departures": {
+  "w": 1024,
+  "h": 768,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#a8a8a8"
+ },
+ "site/ref-project-luxury-lobby": {
+  "w": 771,
+  "h": 1024,
+  "widths": [
+   480,
+   771
+  ],
+  "avif": true,
+  "color": "#584838"
+ },
+ "site/ref-service-elevations": {
+  "w": 1024,
+  "h": 682,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#887868"
+ },
+ "site/ref-service-floorings": {
+  "w": 1024,
+  "h": 682,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#d8c8b8"
+ },
+ "site/ref-service-installations": {
+  "w": 1024,
+  "h": 682,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#b8b8a8"
+ },
+ "site/ref-service-roofings": {
+  "w": 610,
+  "h": 477,
+  "widths": [
+   480,
+   610
+  ],
+  "avif": true,
+  "color": "#f8f8f8"
+ },
+ "site/ref-shree-logo": {
+  "w": 204,
+  "h": 420,
+  "widths": [
+   80,
+   160
+  ],
+  "avif": true,
+  "color": "#080808"
+ },
+ "site/ref-stone-art-service": {
+  "w": 819,
+  "h": 1024,
+  "widths": [
+   480,
+   800,
+   819
+  ],
+  "avif": true,
+  "color": "#282828"
+ },
+ "site/ref-stone-interior-exiuxs-v-1": {
+  "w": 1024,
+  "h": 1024,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#180808"
+ },
+ "site/ref-stone-wall-art": {
+  "w": 609,
+  "h": 1024,
+  "widths": [
+   480,
+   609
+  ],
+  "avif": true,
+  "color": "#c8b898"
+ },
+ "site/ref-team-photo": {
+  "w": 1024,
+  "h": 720,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#984838"
+ },
+ "site/ref-why-expert-recommendations": {
+  "w": 1024,
+  "h": 683,
+  "widths": [
+   480,
+   800,
+   1024
+  ],
+  "avif": true,
+  "color": "#080808"
+ },
+ "site/ref-yellow-fossil-leathered": {
+  "w": 1600,
+  "h": 1200,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "avif": true,
+  "color": "#b89868"
+ },
  "site/service-elevations": {
   "w": 1024,
   "h": 682,

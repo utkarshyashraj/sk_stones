@@ -15,7 +15,7 @@ const META_FILE = path.join(ROOT, 'content', 'generated', 'images.json');
 const force = process.argv.includes('--force');
 const forceKind = (process.argv.find((a) => a.startsWith('--force-kind=')) ?? '').split('=')[1] ?? null;
 // Per-image overrides (e.g. the header logo is shown ~50px tall: ship a tiny file).
-const WIDTH_OVERRIDES = { 'site/shree-logo': [60] };
+const WIDTH_OVERRIDES = { 'site/shree-logo': [60], 'site/ref-shree-logo': [80, 160] };
 const jobs = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/generated/image-jobs.json'), 'utf8'));
 const prev = !force && fs.existsSync(META_FILE) ? JSON.parse(fs.readFileSync(META_FILE, 'utf8')) : {};
 

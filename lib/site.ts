@@ -52,6 +52,25 @@ export const site = {
     thankYouPath: '/thank-you',
   },
   areaServed: ['Bengaluru', 'Karnataka', 'India'],
+  /** Both locations exactly as the reference footer and contact page list them. */
+  offices: [
+    {
+      city: 'Bangalore',
+      address:
+        '627-628, 15th Main, 80 Feet Rd, 5th Cross, Koramangala 4th Block, Bengaluru, Karnataka 560034',
+      mapEmbed: 'https://www.google.com/maps?cid=6923478744549710589&hl=en&z=17&output=embed',
+      mapTitle: 'S K Stones India — Bangalore showroom',
+    },
+    {
+      city: 'Hyderabad',
+      address: 'ORR Service Rd, Vattinagulapally, Hyderabad, Telangana 500075',
+      mapEmbed: 'https://www.google.com/maps?q=17.4125612,78.2894052&hl=en&z=17&output=embed',
+      mapTitle: 'S K Stones India — Hyderabad location',
+    },
+  ],
+  /** "Read More Reviews on Google" (reference homepage). */
+  googleReviews: 'https://www.google.com/maps?cid=6923478744549710589',
+  copyright: '© 2026 S K Stones India Pvt. Ltd. All Rights Reserved.',
 } as const;
 
 export const fullAddress = `${site.address.street}, Bengaluru, Karnataka ${site.address.postalCode}`;

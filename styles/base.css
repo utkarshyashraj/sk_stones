@@ -1,0 +1,55 @@
+/*
+ * Document-level basics only. Page styles come from the reference site's own CSS, generated per page type
+ * into styles/ref/*.css and scoped to the page wrapper (scripts/build-ref-styles.mjs).
+ */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: #0a0a0a;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Inline-SVG Font Awesome stand-ins (components/ref/Fa.tsx) */
+i.fas,
+i.fab {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+.fa-svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  overflow: visible;
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  z-index: 100000;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #c9a227;
+  color: #0a0a0a;
+  font:
+    600 14px/1.2 var(--font-poppins),
+    sans-serif;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 12px;
+}

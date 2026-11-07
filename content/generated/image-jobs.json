@@ -3731,6 +3731,559 @@
   "recoveredFrom": null
  },
  {
+  "key": "site/ref-yellow-fossil-leathered",
+  "kind": "site",
+  "source": ".cache/legacy-src/yellow-fossil-leathered-87a886.jpg",
+  "url": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/11/YELLOW-FOSSIL-LEATHERED.jpg",
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-img-23",
+  "kind": "site",
+  "source": ".cache/legacy-src/img-23-1e1d6e.webp",
+  "url": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/img-23.webp",
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-modern-styled-small-entryway-1-683x1024",
+  "kind": "site",
+  "source": ".cache/legacy-src/modern-styled-small-entryway-1-683x1024-9edf0e.webp",
+  "url": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/modern-styled-small-entryway-1-683x1024.webp",
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-stone-interior-exiuxs-v-1",
+  "kind": "site",
+  "source": ".cache/legacy-src/stone-interior-exiuxs-v-1-01f1f1.webp",
+  "url": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/stone-interior-eXiUxS-v-1.webp",
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-about-hero-banner",
+  "kind": "site",
+  "source": "legacy/images/about-hero-banner.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-ceo-shree-kumar-gandhi",
+  "kind": "site",
+  "source": "legacy/images/ceo-shree-kumar-gandhi.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-circular-stone-pattern",
+  "kind": "site",
+  "source": "legacy/images/circular-stone-pattern.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-craft-sculptures",
+  "kind": "site",
+  "source": "legacy/images/craft-sculptures.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-craft-staircase-wall",
+  "kind": "site",
+  "source": "legacy/images/craft-staircase-wall.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-craft-stone-paving",
+  "kind": "site",
+  "source": "legacy/images/craft-stone-paving.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-elevations-1",
+  "kind": "site",
+  "source": "legacy/images/elevations-1.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-elevations-2",
+  "kind": "site",
+  "source": "legacy/images/elevations-2.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-elevations-3",
+  "kind": "site",
+  "source": "legacy/images/elevations-3.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-elevations-4",
+  "kind": "site",
+  "source": "legacy/images/elevations-4.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-elevations-5",
+  "kind": "site",
+  "source": "legacy/images/elevations-5.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-elevations-6",
+  "kind": "site",
+  "source": "legacy/images/elevations-6.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-flooring-1",
+  "kind": "site",
+  "source": "legacy/images/flooring-1.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-flooring-2",
+  "kind": "site",
+  "source": "legacy/images/flooring-2.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-flooring-3",
+  "kind": "site",
+  "source": "legacy/images/flooring-3.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-flooring-4",
+  "kind": "site",
+  "source": "legacy/images/flooring-4.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-flooring-5",
+  "kind": "site",
+  "source": "legacy/images/flooring-5.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-flooring-6",
+  "kind": "site",
+  "source": "legacy/images/flooring-6.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-installation-1",
+  "kind": "site",
+  "source": "legacy/images/installation-1.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-installation-2",
+  "kind": "site",
+  "source": "legacy/images/installation-2.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-installation-3",
+  "kind": "site",
+  "source": "legacy/images/installation-3.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-installation-4",
+  "kind": "site",
+  "source": "legacy/images/installation-4.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-landscaping-1",
+  "kind": "site",
+  "source": "legacy/images/landscaping-1.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-landscaping-2",
+  "kind": "site",
+  "source": "legacy/images/landscaping-2.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-landscaping-3",
+  "kind": "site",
+  "source": "legacy/images/landscaping-3.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-landscaping-4",
+  "kind": "site",
+  "source": "legacy/images/landscaping-4.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-landscaping-5",
+  "kind": "site",
+  "source": "legacy/images/landscaping-5.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-landscaping-service",
+  "kind": "site",
+  "source": "legacy/images/landscaping-service.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-project-airport-departures",
+  "kind": "site",
+  "source": "legacy/images/project-airport-departures.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-project-luxury-lobby",
+  "kind": "site",
+  "source": "legacy/images/project-luxury-lobby.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-aai-1",
+  "kind": "site",
+  "source": "legacy/images/projects/aai/aai-1.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-aai-2",
+  "kind": "site",
+  "source": "legacy/images/projects/aai/aai-2.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-aai-3",
+  "kind": "site",
+  "source": "legacy/images/projects/aai/aai-3.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-aai-4",
+  "kind": "site",
+  "source": "legacy/images/projects/aai/aai-4.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-aig-1",
+  "kind": "site",
+  "source": "legacy/images/projects/aig/aig-1.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-aig-2",
+  "kind": "site",
+  "source": "legacy/images/projects/aig/aig-2.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-aig-3",
+  "kind": "site",
+  "source": "legacy/images/projects/aig/aig-3.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-aig-4",
+  "kind": "site",
+  "source": "legacy/images/projects/aig/aig-4.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-aster-1",
+  "kind": "site",
+  "source": "legacy/images/projects/aster/aster-1.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-aster-2",
+  "kind": "site",
+  "source": "legacy/images/projects/aster/aster-2.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-aster-3",
+  "kind": "site",
+  "source": "legacy/images/projects/aster/aster-3.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-aster-4",
+  "kind": "site",
+  "source": "legacy/images/projects/aster/aster-4.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-cbse-1",
+  "kind": "site",
+  "source": "legacy/images/projects/cbse/cbse-1.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-cbse-2",
+  "kind": "site",
+  "source": "legacy/images/projects/cbse/cbse-2.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-cbse-3",
+  "kind": "site",
+  "source": "legacy/images/projects/cbse/cbse-3.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-cbse-4",
+  "kind": "site",
+  "source": "legacy/images/projects/cbse/cbse-4.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-indian-railways-1",
+  "kind": "site",
+  "source": "legacy/images/projects/indian-railways/indian-railways-1.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-indian-railways-2",
+  "kind": "site",
+  "source": "legacy/images/projects/indian-railways/indian-railways-2.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-indian-railways-3",
+  "kind": "site",
+  "source": "legacy/images/projects/indian-railways/indian-railways-3.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-indian-railways-4",
+  "kind": "site",
+  "source": "legacy/images/projects/indian-railways/indian-railways-4.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-infosys-1",
+  "kind": "site",
+  "source": "legacy/images/projects/infosys/infosys-1.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-infosys-2",
+  "kind": "site",
+  "source": "legacy/images/projects/infosys/infosys-2.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-infosys-3",
+  "kind": "site",
+  "source": "legacy/images/projects/infosys/infosys-3.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-infosys-4",
+  "kind": "site",
+  "source": "legacy/images/projects/infosys/infosys-4.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-jw-marriott-1",
+  "kind": "site",
+  "source": "legacy/images/projects/jw-marriott/jw-marriott-1.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-jw-marriott-2",
+  "kind": "site",
+  "source": "legacy/images/projects/jw-marriott/jw-marriott-2.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-jw-marriott-3",
+  "kind": "site",
+  "source": "legacy/images/projects/jw-marriott/jw-marriott-3.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-jw-marriott-4",
+  "kind": "site",
+  "source": "legacy/images/projects/jw-marriott/jw-marriott-4.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-service-elevations",
+  "kind": "site",
+  "source": "legacy/images/service-elevations.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-service-floorings",
+  "kind": "site",
+  "source": "legacy/images/service-floorings.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-service-installations",
+  "kind": "site",
+  "source": "legacy/images/service-installations.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-service-roofings",
+  "kind": "site",
+  "source": "legacy/images/service-roofings.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-shree-logo",
+  "kind": "site",
+  "source": "legacy/images/shree-logo.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-stone-art-service",
+  "kind": "site",
+  "source": "legacy/images/stone-art-service.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-stone-wall-art",
+  "kind": "site",
+  "source": "legacy/images/stone-wall-art.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-team-photo",
+  "kind": "site",
+  "source": "legacy/images/team-photo.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-aai",
+  "kind": "site",
+  "source": "legacy/images/trusted/aai.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-aig",
+  "kind": "site",
+  "source": "legacy/images/trusted/aig.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-aster",
+  "kind": "site",
+  "source": "legacy/images/trusted/aster.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-brigade",
+  "kind": "site",
+  "source": "legacy/images/trusted/brigade.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-cbse",
+  "kind": "site",
+  "source": "legacy/images/trusted/cbse.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-indian-railways",
+  "kind": "site",
+  "source": "legacy/images/trusted/indian-railways.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-infosys",
+  "kind": "site",
+  "source": "legacy/images/trusted/infosys.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-jw-marriott",
+  "kind": "site",
+  "source": "legacy/images/trusted/jw-marriott.png",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
+  "key": "site/ref-why-expert-recommendations",
+  "kind": "site",
+  "source": "legacy/images/why-expert-recommendations.jpg",
+  "url": null,
+  "recoveredFrom": null
+ },
+ {
   "key": "cards/marbles-1",
   "kind": "site",
   "source": ".cache/legacy-src/rainforest-gold-leather-finish-compressed-scaled-893118.webp",
