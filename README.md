@@ -1,9 +1,12 @@
 # S K Stones India — website
 
 Marketing site and stone catalogue for **S K Stones India** (formerly Shree Stones & Services), Bengaluru.
-Built with **Next.js 16 (App Router) + React 19 + TypeScript**, exported as **static HTML** and hosted on **Netlify**.
+Built with **Next.js 16 (App Router) + React 19 + TypeScript**, exported as **static HTML** (GitHub Pages; Netlify-ready).
 
-- 51 pre-rendered pages (47 indexable), 460 products in 35 categories, no runtime server.
+The design, copy and behaviour are a port of the approved reference site, **https://skstone.netlify.app/**, snapshotted
+into `legacy/`. Its own CSS is compiled into one scoped stylesheet per page type (`scripts/build-ref-styles.mjs`).
+
+- 46 pre-rendered pages (43 indexable), 444 products across 35 product pages, no runtime server.
 - Every page is plain HTML at build time (SEO-safe); React hydrates only the interactive parts.
 - All media is self-hosted and pre-optimised (WebP/AVIF, responsive `srcset`).
 
@@ -19,92 +22,71 @@ npm start          # preview out/ at http://localhost:4321 (pretty URLs, 301s, c
 
 ## Quality gates
 
-| Command                 | What it checks                                                                                                                            |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm run typecheck`     | TypeScript strict mode (`noUncheckedIndexedAccess` on)                                                                                    |
-| `npm run lint`          | ESLint (Next.js core-web-vitals + TypeScript rules, React hooks rules)                                                                    |
-| `npm run format:check`  | Prettier                                                                                                                                  |
-| `npm test`              | Vitest unit tests — search/filter logic, catalog integrity, label corrections, SEO metadata, sitemap, redirects                           |
-| `npm run build`         | Production static export (fails on type errors)                                                                                           |
-| `npm run verify:routes` | Crawls `out/`: sitemap ↔ pages, every internal link and image, unique titles/descriptions, canonical/OG, one `<h1>`, JSON-LD, redirects   |
-| `npm run test:e2e`      | Playwright: every route, navigation/mega menu/mobile menu, search, filters, lightbox, shortlist, quote form, redirects, 7 viewport widths |
-| `npm run lighthouse`    | Lighthouse mobile + desktop on key pages (needs `npm start` running and `CHROME_PATH`); `-- --runs=3` reports medians                     |
-| `npm run check`         | All of the above except Lighthouse                                                                                                        |
+| Command                 | What it checks                                                                                                                               |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `npm run typecheck`     | TypeScript strict mode (`noUncheckedIndexedAccess` on)                                                                                       |
+| `npm run lint`          | ESLint (Next.js core-web-vitals + TypeScript rules, React hooks rules)                                                                       |
+| `npm run format:check`  | Prettier                                                                                                                                     |
+| `npm test`              | Vitest unit tests — reference routes, redirects for retired/renamed URLs, catalogue integrity                                                |
+| `npm run build`         | Production static export (fails on type errors)                                                                                              |
+| `npm run verify:routes` | Crawls `out/`: sitemap ↔ pages, every internal link and image, unique titles/descriptions, canonical/OG, one `<h1>`, JSON-LD, redirects      |
+| `npm run test:e2e`      | Playwright: homepage sections/counters/FAQ/sliders, mega menu, mobile bar, lightbox + magnifier, contact form, SEO tags, redirects, 8 widths |
+| `npm run lighthouse`    | Lighthouse mobile + desktop on key pages (needs `npm start` running and `CHROME_PATH`); `-- --runs=3` reports medians                        |
+| `npm run check`         | All of the above except Lighthouse                                                                                                           |
 
 CI (`.github/workflows/ci.yml`) runs the same gates on every push and pull request.
 
 ## Project structure
 
 ```
-app/                     Routes (App Router). [slug]/ generates all 35 catalog pages from data.
-  layout.tsx             Root layout: fonts, header, footer, global overlays, LocalBusiness JSON-LD
-  page.tsx               Homepage (7 sections)
-  products/ search/      Products hub; full-catalogue search (noindex)
-  about/ contact/ projects/ thank-you/
-  installations/ landscaping/ flooring-executions/ stone-art-installations/   (ServicePageView)
-  case-study-*/          (CaseStudyView)
-  data/catalog.json/     Static product index used by client-side search
+app/                     Routes (App Router)
+  page.tsx               Homepage (reference sections, in order)
+  [slug]/                Every product, hub and collection page from one template (ProductPageTemplate)
+  products/ about/ projects/ contact/ thank-you/ not-found.tsx
+  landscaping/ flooring-executions/ stone-art-installations/ installations/   (ServicePageTemplate)
   sitemap.ts robots.ts   Generated at build time
-components/
-  layout/                Header (desktop nav + mega menu), MobileNavigation (drawer + bottom nav), Footer, Breadcrumbs
-  catalog/               ProductGrid (search/filters/sort), ProductCard, ProductLightbox, CatalogFilters, ProductSearch
-  marketing/             PageHero, Collections, Services, Process, Stats, Testimonials, FAQ, CTA, Gallery, CaseStudies, VideoFeature
-  forms/QuoteForm/       Two-step enquiry form
-  shortlist/             Shortlist store (localStorage) + drawer
-  templates/             Service and case-study page templates
-  ui/                    Icon (inline SVG), Picture (responsive images), modal/URL hooks
+components/ref/          RefShell (page frame), Header, Footer, MobileBottomNav, SectionHeading, ServiceCard,
+                         FAQAccordion, Lightbox (+ magnifier), ContactFormModal, templates, RefImg, Fa (icons)
 content/
-  categories.json        Curated taxonomy, SEO titles/descriptions, hero copy  ← edit
-  catalog-corrections.json  Label fixes with evidence; items needing business verification  ← edit
-  site-images.json       Non-catalog images used by pages  ← edit
-  pages.ts               Page copy (home, about, services, case studies, FAQs, testimonials)  ← edit
+  nav.ts                 Header menus and mobile sheets (reference labels)                ← edit
+  ref/                   Page copy from the reference (home, about, projects, services) + seo.json  ← edit
+  categories.json        Product pages: URL, grouping, which reference page they come from  ← edit
+  catalog-corrections.json  Verified product-name fixes (matched by image filename)        ← edit
+  site-images.json, ref-images.json  Page images (reference src -> optimised copy)
   generated/             catalog.json, image-jobs.json, images.json (GENERATED — do not edit)
-  raw/                   One-time extraction from the legacy site (provenance)
-lib/                     catalog, search, seo, routes, nav, site (business details), image helpers
-styles/                  tokens.css (design tokens), globals.css (base, buttons, utilities)
-public/images/           Optimised images: catalog/, categories/, site/
-public/media/            Homepage video (720p 7.8 MB, 540p 2.9 MB, poster)
-scripts/                 Catalog pipeline, image optimiser, postbuild, verifier, preview server, Lighthouse
-tests/unit, tests/e2e    Vitest and Playwright suites
-legacy/                  The previous static site, kept for reference (not deployed)
-docs/AUDIT-REPORT.md     Migration audit: issues, fixes, test evidence, open items
+lib/                     site (business details), ref-catalog, ref-seo, seo (JSON-LD), routes, image helpers
+styles/ref/              GENERATED page stylesheets (scripts/build-ref-styles.mjs); styles/base.css document basics
+public/images/, media/   Optimised images and the homepage video
+scripts/                 Reference snapshot + extraction, catalogue, styles, SEO, images, postbuild, verifier
+legacy/                  Snapshot of the approved reference site (HTML/CSS/JS/images; not deployed)
 ```
 
 ## Editing content
 
-**Business details** (phone, address, hours, form destination): `lib/site.ts`.
+**Business details** (phone, email, both offices, form destination): `lib/site.ts`.
 
-**Page copy**: `content/pages.ts`.
+**Page copy**: `content/ref/*.ts`; navigation: `content/nav.ts`; page titles/descriptions: `content/ref/seo.json`.
 
-**Products and categories** are generated. The pipeline is:
+**If the reference site changes**, re-run the pipeline:
 
 ```bash
-npm run catalog:extract     # legacy HTML -> content/raw/legacy-catalog.json   (one-time; already done)
-npm run catalog:download    # legacy images -> .cache/legacy-src               (one-time; already done)
-npm run catalog:build       # raw + categories.json + corrections -> content/generated/catalog.json
-npm run images:optimize     # .cache sources -> public/images (incremental)
+node scripts/snapshot-reference.mjs   # skstone.netlify.app -> legacy/
+npm run catalog:extract               # product pages -> content/raw/legacy-catalog.json
+node scripts/collect-ref-images.mjs   # page images -> content/ref-images.json + site-images.json
+node scripts/extract-ref-seo.mjs      # titles/descriptions/OG -> content/ref/seo.json
+node scripts/build-ref-styles.mjs     # reference CSS -> styles/ref/*.css
+npm run catalog:download && npm run catalog:build && npm run images:optimize
 ```
 
 To rename or re-label a product, add a rule to `content/catalog-corrections.json` (matched by image filename,
-never by position) and run `npm run catalog:build`. Category titles, descriptions, hero text and applications
-live in `content/categories.json`.
-
-> The original legacy image files are cached in `.cache/legacy-src/` (git-ignored, ~98 MB). The optimised
-> 1200 px WebP in `public/images/catalog/` is the archival copy in the repository. Keep a backup of `.cache/` if
-> you may need to re-optimise from the originals.
-
-**Adding a brand-new product** (not from the legacy site): add its image to `content/site-images.json`-style
-sources or extend `scripts/build-catalog.mjs` with a `content/products-extra.json` input. A headless CMS is the
-recommended long-term option (see the audit report).
+never by position) and run `npm run catalog:build`.
 
 ## Enquiries (forms)
 
-The quote form posts to **FormSubmit** (`https://formsubmit.co/info@skstonesindia.com`), the same relay the
-legacy site used, so submissions keep arriving in the same inbox. Spam protection: FormSubmit reCAPTCHA
-(`_captcha=true`), a honeypot field, and a minimum-time-to-submit check. No secrets are stored in the site.
-
-After a successful submit FormSubmit redirects to `/thank-you`. The first submission from a new domain may
-require clicking FormSubmit's activation email once.
+The contact page's "Open Form" buttons open the reference quote form, which posts to **FormSubmit**
+(`https://formsubmit.co/info@skstonesindia.com`) with a honeypot field and browser validation (name, phone,
+email and stone type are required), as on the reference. FormSubmit then redirects to `/thank-you`. The first
+submission from a new domain needs FormSubmit's activation email clicked once.
 
 ## Deployment (Netlify)
 
@@ -114,11 +96,12 @@ require clicking FormSubmit's activation email once.
 4. In **Domain management**, attach `skstonesindia.com` (and `www`), enable HTTPS.
 5. In Google Search Console, submit `https://skstonesindia.com/sitemap.xml`.
 
-`out/_redirects` (generated) permanently redirects every legacy `*.html` URL to its pretty URL, plus
-`/quatrz-surfaces → /quartz-surfaces` and three retired empty pages. `out/_headers` sets long-lived caching for
+`out/_redirects` (generated) permanently redirects every legacy `*.html` URL to its pretty URL, plus renamed or
+retired pages: `/quartz-surfaces → /quatrz-surfaces`, `/indian-granites → /granites`, `/case-study-* → /projects`,
+`/search → /products`. (The GitHub Pages build writes small redirect pages instead.) `out/_headers` sets long-lived caching for
 hashed assets and security headers.
 
-**Post-deploy checklist:** homepage, a catalog page with filters, product lightbox, shortlist → quote form,
+**Post-deploy checklist:** homepage, a product page and its lightbox, the contact form,
 a real test enquiry reaching `info@skstonesindia.com`, `/about.html` → `/about` (301), `/sitemap.xml`, and a
 Lighthouse run against the live URL.
 
