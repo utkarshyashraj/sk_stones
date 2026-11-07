@@ -22,7 +22,9 @@
     "catalog:download": "node scripts/download-legacy-images.mjs",
     "catalog:build": "node scripts/build-catalog.mjs",
     "images:optimize": "node scripts/optimize-images.mjs",
-    "lighthouse": "node scripts/lighthouse.mjs"
+    "lighthouse": "node scripts/lighthouse.mjs",
+    "attributes:template": "node scripts/export-stone-attributes-template.mjs",
+    "attributes:import": "node scripts/import-stone-attributes.mjs"
   },
   "dependencies": {
     "next": "16.4.5",

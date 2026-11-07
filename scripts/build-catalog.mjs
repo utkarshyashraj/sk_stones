@@ -6,6 +6,7 @@
 // Usage: node scripts/build-catalog.mjs
 import fs from 'node:fs';
 import path from 'node:path';
+import { attributeCoverage, mergeAttributes, validateRecord } from './lib/stone-attributes.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const read = (p) => JSON.parse(fs.readFileSync(path.join(ROOT, p), 'utf8'));
@@ -14,6 +15,8 @@ const manifest = read('content/raw/image-manifest.json').images;
 const { categories, applicationVocabulary, retiredLegacyPages } = read('content/categories.json');
 const corrections = read('content/catalog-corrections.json');
 const siteImages = read('content/site-images.json');
+const stoneAttributes = read('content/stone-attributes.json').stones ?? {};
+const projectList = read('content/ref/projects.json').map(({ id, name }) => ({ id, name }));
 
 const byUrl = new Map(manifest.map((m) => [m.url, m]));
 const legacyPage = (slug) => legacy.find((p) => p.slug === slug);
@@ -172,6 +175,7 @@ function pushProduct(cat, name, imageUrl, legacyName, legacyIndex, sourcePage) {
     subcategory: cat.parent ? cat.slug : null,
     collection: cat.slug,
     image: imageKey,
+    // Name/category values for now; business attributes are merged in once every id is known (below).
     colours: attrs.colours,
     finish: attrs.finish,
     applications: cat.applications ?? [],
@@ -227,6 +231,28 @@ for (const cat of ordered) {
     list.push(products.at(-1).id);
   }
 }
+
+// ---------- business-supplied attributes (content/stone-attributes.json) ----------
+const knownIds = new Set(products.map((p) => p.id));
+const confirmed = {};
+for (const [id, record] of Object.entries(stoneAttributes)) {
+  if (!knownIds.has(id)) {
+    fail(`stone-attributes.json: unknown stone id "${id}"`);
+    continue;
+  }
+  const { value, errors } = validateRecord(id, record, {
+    applications: applicationVocabulary,
+    projects: projectList,
+  });
+  errors.forEach((e) => fail(`stone-attributes.json: ${e}`));
+  confirmed[id] = value;
+}
+for (const p of products) {
+  const merged = mergeAttributes(p, confirmed[p.id]);
+  delete p.finish;
+  Object.assign(p, merged);
+}
+const coverage = attributeCoverage([...knownIds], confirmed);
 
 // ---------- category records for the app ----------
 const descendants = (slug) => {
@@ -357,6 +383,8 @@ const generated = {
   categories: outCategories,
   products,
   cardPages,
+  // Share of stones with business-confirmed values per field; features unlock at coverage.threshold.
+  attributeCoverage: coverage,
 };
 fs.mkdirSync(path.join(ROOT, 'content', 'generated'), { recursive: true });
 fs.writeFileSync(path.join(ROOT, 'content/generated/catalog.json'), JSON.stringify(generated, null, 1));

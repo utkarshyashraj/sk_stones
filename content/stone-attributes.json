@@ -1,0 +1,4 @@
+{
+  "$comment": "Stone attributes confirmed by the business, keyed by stone id (see docs/stone-attributes-README.md). Fill docs/stone-attributes-template.csv and run `node scripts/import-stone-attributes.mjs <file.csv>` instead of editing by hand. Values here override name-based guesses.",
+  "stones": {}
+}
