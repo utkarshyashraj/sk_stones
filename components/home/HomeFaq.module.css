@@ -14,17 +14,6 @@
   margin-top: var(--sp-4);
   font-size: var(--fs-3xl);
 }
-.aside {
-  margin-top: var(--sp-5);
-  color: var(--text-2);
-  font-size: var(--fs-md);
-}
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--sp-3);
-  margin-top: var(--sp-6);
-}
 @media (min-width: 1024px) {
   .grid {
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);

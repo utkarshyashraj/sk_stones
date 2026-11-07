@@ -41,7 +41,6 @@ export const sectionCopy = {
   faq: {
     eyebrow: 'FAQ',
     title: 'Frequently asked questions',
-    aside: "Can't find your answer? Talk to our team.",
   },
   finalCta: {
     title: 'Find the stone for your project',

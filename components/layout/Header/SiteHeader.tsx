@@ -37,6 +37,8 @@ const MobileNavigation = dynamic(
 
 export function SiteHeader({ nav }: { nav: NavData }) {
   const pathname = usePathname() || '/';
+  // Homepage keeps contact actions to a minimum: header Contact Us, floating WhatsApp, final CTA, footer.
+  const isHome = pathname === '/';
   const scrolled = useScrolled();
   const [open, setOpen] = useState<MenuId>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -247,18 +249,22 @@ export function SiteHeader({ nav }: { nav: NavData }) {
                 </span>
               ) : null}
             </button>
-            <a
-              className={`${styles.iconBtn} ${styles.whatsapp}`}
-              href={whatsappHref('Hi S K Stones India, I have an enquiry.')}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Chat on WhatsApp (opens in a new tab)"
-            >
-              <Icon name="whatsapp" />
-            </a>
-            <a className={`btn btn--outline btn--sm ${styles.phone}`} href={telHref}>
-              <Icon name="phone" /> {site.phone.display}
-            </a>
+            {isHome ? null : (
+              <>
+                <a
+                  className={`${styles.iconBtn} ${styles.whatsapp}`}
+                  href={whatsappHref('Hi S K Stones India, I have an enquiry.')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Chat on WhatsApp (opens in a new tab)"
+                >
+                  <Icon name="whatsapp" />
+                </a>
+                <a className={`btn btn--outline btn--sm ${styles.phone}`} href={telHref}>
+                  <Icon name="phone" /> {site.phone.display}
+                </a>
+              </>
+            )}
             <button
               type="button"
               className={`${styles.iconBtn} ${styles.menuBtn}`}
@@ -278,6 +284,7 @@ export function SiteHeader({ nav }: { nav: NavData }) {
           isActive={isActive}
           open={mobileOpen}
           onClose={() => setMobileOpen(false)}
+          showWhatsapp={!isHome}
         />
       ) : null}
       <BottomNav isActive={isActive} productsActive={productsActive} />

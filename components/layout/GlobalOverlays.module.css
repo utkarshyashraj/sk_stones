@@ -1,4 +1,5 @@
-/* Floating WhatsApp button — phones and tablets only (desktop has it in the header). */
+/* Floating WhatsApp button — phones and tablets only (desktop has it in the header), except on the
+   homepage, where it replaces the header icon at every width (.allWidths). */
 .whatsapp {
   position: fixed;
   right: 16px;
@@ -14,7 +15,11 @@
   box-shadow: var(--shadow);
 }
 @media (min-width: 1024px) {
-  .whatsapp {
+  .whatsapp:not(.allWidths) {
     display: none;
+  }
+  .allWidths {
+    right: 24px;
+    bottom: 24px;
   }
 }

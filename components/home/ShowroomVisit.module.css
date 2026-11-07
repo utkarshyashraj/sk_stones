@@ -35,7 +35,7 @@
 }
 .facts {
   display: grid;
-  margin: var(--sp-8) 0;
+  margin-top: var(--sp-8);
   border-top: 1px solid var(--line);
 }
 .facts div {
@@ -62,11 +62,6 @@
 .facts a:hover {
   color: var(--accent);
   text-decoration: underline;
-}
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--sp-3);
 }
 @media (min-width: 1024px) {
   .grid {

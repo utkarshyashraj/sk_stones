@@ -1,6 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { whatsappHref } from '@/lib/site';
@@ -26,6 +27,8 @@ const ShortlistDrawer = dynamic(
 export function GlobalOverlays() {
   const searchOpen = useSearchOpen();
   const shortlistOpen = useShortlistOpen();
+  // Homepage: the floating button is the one WhatsApp entry point at every width (no header icon there).
+  const isHome = (usePathname() || '/') === '/';
   const [seen, setSeen] = useState({ search: false, shortlist: false });
   if ((searchOpen && !seen.search) || (shortlistOpen && !seen.shortlist)) {
     setSeen({ search: seen.search || searchOpen, shortlist: seen.shortlist || shortlistOpen });
@@ -35,7 +38,7 @@ export function GlobalOverlays() {
       {seen.search ? <SearchDialog /> : null}
       {seen.shortlist ? <ShortlistDrawer /> : null}
       <a
-        className={styles.whatsapp}
+        className={isHome ? `${styles.whatsapp} ${styles.allWidths}` : styles.whatsapp}
         href={whatsappHref('Hi S K Stones India, I have an enquiry.')}
         target="_blank"
         rel="noopener noreferrer"

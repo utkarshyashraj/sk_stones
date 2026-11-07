@@ -219,7 +219,7 @@ export default function HomePage() {
         />
       </section>
       <section className="section veil-text" aria-labelledby="faq-title">
-        <HomeFaq eyebrow={copy.faq.eyebrow} title={copy.faq.title} aside={copy.faq.aside} items={home.faqs} />
+        <HomeFaq eyebrow={copy.faq.eyebrow} title={copy.faq.title} items={home.faqs} />
       </section>
 
       {/* ===== Dark zone: final CTA (+ footer) ===== */}

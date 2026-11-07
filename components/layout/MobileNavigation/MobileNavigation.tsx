@@ -14,9 +14,11 @@ interface Props {
   isActive: (href: string) => boolean;
   open: boolean;
   onClose: () => void;
+  /** Off on the homepage, where the floating WhatsApp button is the single WhatsApp entry point. */
+  showWhatsapp?: boolean;
 }
 
-export function MobileNavigation({ nav, isActive, open, onClose }: Props) {
+export function MobileNavigation({ nav, isActive, open, onClose, showWhatsapp = true }: Props) {
   const ref = useModalDialog(open, onClose);
   const current = (href: string) => (isActive(href) ? ('page' as const) : undefined);
 
@@ -120,16 +122,18 @@ export function MobileNavigation({ nav, isActive, open, onClose }: Props) {
         </ul>
       </nav>
 
-      <div className={styles.ctas}>
-        <a
-          className="btn btn--whatsapp btn--block"
-          href={whatsappHref('Hi S K Stones India, I have an enquiry.')}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icon name="whatsapp" /> WhatsApp us
-        </a>
-      </div>
+      {showWhatsapp ? (
+        <div className={styles.ctas}>
+          <a
+            className="btn btn--whatsapp btn--block"
+            href={whatsappHref('Hi S K Stones India, I have an enquiry.')}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon name="whatsapp" /> WhatsApp us
+          </a>
+        </div>
+      ) : null}
     </dialog>
   );
 }

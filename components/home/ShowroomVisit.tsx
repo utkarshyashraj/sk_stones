@@ -1,6 +1,4 @@
-import Link from 'next/link';
-import { Icon } from '@/components/ui/Icon';
-import { fullAddress, site, telHref, whatsappHref } from '@/lib/site';
+import { fullAddress, site } from '@/lib/site';
 import styles from './ShowroomVisit.module.css';
 
 /**
@@ -49,29 +47,7 @@ export function ShowroomVisit({
             <dt>Hours</dt>
             <dd>{site.hours.label}</dd>
           </div>
-          <div>
-            <dt>Phone</dt>
-            <dd>
-              <a href={telHref}>{site.phone.display}</a>
-            </dd>
-          </div>
         </dl>
-        <div className={styles.actions}>
-          <Link
-            href={`/contact?${new URLSearchParams({ name: 'Showroom visit' }).toString()}#quote`}
-            className="btn btn--primary"
-          >
-            Book a visit
-          </Link>
-          <a
-            href={whatsappHref('Hi S K Stones India, I would like to visit your showroom.')}
-            className="btn btn--whatsapp"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon name="whatsapp" /> WhatsApp
-          </a>
-        </div>
       </div>
     </div>
   );
