@@ -3,7 +3,14 @@
  * site (contact page, footer, LocalBusiness schema in js/seo-schema.js). Nothing is invented.
  * Items marked VERIFY are flagged in docs/AUDIT-REPORT.md for business confirmation.
  */
-export const SITE_URL = 'https://skstonesindia.com';
+/**
+ * Public origin of the deployed site. Defaults to the business domain; the GitHub Pages build sets
+ * NEXT_PUBLIC_SITE_URL (see .github/workflows/pages.yml) so canonicals, the sitemap, structured data
+ * and the form's thank-you redirect all point at the address the site is actually served from.
+ */
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://skstonesindia.com').replace(/\/+$/, '');
+/** GitHub Pages build: folder-style URLs (/about/ -> about/index.html). Mirrors next.config.ts. */
+export const TRAILING_SLASH = process.env.NEXT_PUBLIC_TRAILING_SLASH === '1';
 
 export const site = {
   name: 'S K Stones India',
@@ -53,4 +60,11 @@ export function whatsappHref(message?: string): string {
   return message ? `${base}?text=${encodeURIComponent(message)}` : base;
 }
 
-export const absoluteUrl = (path = '/') => `${SITE_URL}${path === '/' ? '/' : path}`;
+export function absoluteUrl(path = '/') {
+  if (path === '/') return `${SITE_URL}/`;
+  const i = path.search(/[?#]/);
+  const [p, rest] = i === -1 ? [path, ''] : [path.slice(0, i), path.slice(i)];
+  // Page paths get the trailing slash in folder-style builds; files (/sitemap.xml, images) never do.
+  const page = TRAILING_SLASH && !p.endsWith('/') && !/\.[a-z0-9]+$/i.test(p) ? `${p}/` : p;
+  return `${SITE_URL}${page}${rest}`;
+}

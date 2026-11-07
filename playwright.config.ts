@@ -1,6 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
 
-const PORT = 4321;
+const PORT = Number(process.env.E2E_PORT ?? 4321); // E2E_PORT: test another server (e.g. a GitHub Pages emulator)
 
 export default defineConfig({
   testDir: 'tests/e2e',

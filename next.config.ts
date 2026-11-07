@@ -3,8 +3,10 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   // Every route is pre-rendered to static HTML at build time (no Node server needed on Netlify).
   output: 'export',
-  // /kota-stones -> out/kota-stones.html (Netlify serves it at the pretty URL, matching the legacy site).
-  trailingSlash: false,
+  // Netlify: /kota-stones -> out/kota-stones.html (served at the pretty URL, matching the legacy site).
+  // GitHub Pages (NEXT_PUBLIC_TRAILING_SLASH=1): /kota-stones/ -> out/kota-stones/index.html, the layout
+  // Pages serves reliably (a page file next to a same-named folder can resolve to the folder there).
+  trailingSlash: process.env.NEXT_PUBLIC_TRAILING_SLASH === '1',
   reactStrictMode: true,
   poweredByHeader: false,
   devIndicators: false,
