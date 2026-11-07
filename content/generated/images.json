@@ -6239,15 +6239,16 @@
   "color": "#c8c8c8"
  },
  "site/team-photo": {
-  "w": 912,
-  "h": 768,
+  "w": 1824,
+  "h": 1536,
   "widths": [
    480,
    800,
-   912
+   1200,
+   1824
   ],
   "avif": true,
-  "color": "#883828"
+  "color": "#983828"
  },
  "site/why-expert": {
   "w": 738,

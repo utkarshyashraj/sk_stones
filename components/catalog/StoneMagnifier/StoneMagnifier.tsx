@@ -20,6 +20,11 @@ interface Props {
   zoom?: number;
   /** Lens diameter in px. Defaults to 180 for mouse/pen and 140 for touch. */
   lensSize?: number;
+  /**
+   * Fill the (positioned) parent: every photo gets the same frame, cover-cropped and centred, and
+   * the lens maths compensates for the crop. Omit to show the photo uncropped at its own ratio.
+   */
+  fill?: boolean;
   className?: string;
 }
 
@@ -47,8 +52,9 @@ function hintSeen() {
  * Touch: swipes scroll as usual; a ~300 ms press shows the lens above the finger; a tap opens the
  * fullscreen pinch-zoom viewer. The "Zoom image" button opens the same viewer for keyboard users.
  *
- * The box takes the image's own aspect ratio (no crop), so box coordinates map 1:1 onto the
- * image. Pointer moves touch only refs and the DOM (one rAF write per frame), never React state.
+ * Without `fill` the box takes the image's own aspect ratio (no crop). With `fill` the photo is
+ * cover-cropped and the lens maps through the rendered crop offset, so it still shows exactly the
+ * spot under the cursor. The fullscreen viewer always shows the whole photo. Pointer moves touch only refs and the DOM (one rAF write per frame), never React state.
  */
 export function StoneMagnifier({
   image,
@@ -57,6 +63,7 @@ export function StoneMagnifier({
   zoomSrc: zoomSrcProp,
   zoom = 2.5,
   lensSize,
+  fill,
   className,
 }: Props) {
   const zoomSrc = zoomSrcProp ?? zoomSrcOf(image);
@@ -81,9 +88,15 @@ export function StoneMagnifier({
     const L = lensPx.current;
     const z = zoomLevel.current;
     const p = point.current;
-    // The point being inspected, clamped to the image.
+    // The point being inspected, clamped to the visible box.
     const x = clamp(p.x - r.left, 0, r.width);
     const y = clamp(p.y - r.top, 0, r.height);
+    // Rendered photo under object-fit: cover (equals the box when there is no frame) and its offset.
+    const k = Math.max(r.width / image.w, r.height / image.h);
+    const rw = image.w * k;
+    const rh = image.h * k;
+    const ox = (r.width - rw) / 2;
+    const oy = (r.height - rh) / 2;
     // Lens centred on the cursor. For a finger it sits above it, or beside it when there is no room
     // above (short images on phones), so it is never covered. Always kept inside the image.
     const GAP = 24;
@@ -96,10 +109,10 @@ export function StoneMagnifier({
     const lx = clamp(cx, 0, Math.max(0, r.width - L));
     const ly = clamp(cy, 0, Math.max(0, r.height - L));
     lens.style.transform = `translate3d(${lx}px, ${ly}px, 0)`;
-    lens.style.backgroundSize = `${r.width * z}px ${r.height * z}px`;
+    lens.style.backgroundSize = `${rw * z}px ${rh * z}px`;
     // The inspected point always sits at the lens centre, wherever the lens itself is clamped to.
-    lens.style.backgroundPosition = `${L / 2 - x * z}px ${L / 2 - y * z}px`;
-  }, []);
+    lens.style.backgroundPosition = `${L / 2 - (x - ox) * z}px ${L / 2 - (y - oy) * z}px`;
+  }, [image.w, image.h]);
 
   const schedule = useCallback(
     (clientX: number, clientY: number, touch: boolean) => {
@@ -259,10 +272,12 @@ export function StoneMagnifier({
     if (mode.current === 'touch') hide();
   };
 
-  const style = { '--mag-ar': `${image.w} / ${image.h}`, '--mag-ratio': image.w / image.h } as CSSProperties;
+  const style = fill
+    ? undefined
+    : ({ '--mag-ar': `${image.w} / ${image.h}`, '--mag-ratio': image.w / image.h } as CSSProperties);
 
   return (
-    <div className={`${styles.root} ${className ?? ''}`} style={style}>
+    <div className={`${styles.root} ${fill ? styles.fill : ''} ${className ?? ''}`} style={style}>
       <div
         ref={boxRef}
         className={styles.box}

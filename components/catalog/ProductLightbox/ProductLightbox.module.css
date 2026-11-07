@@ -24,12 +24,17 @@
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 260px;
+  aspect-ratio: 4 / 3;
+  container-type: size;
   background: var(--bg);
   touch-action: pan-y;
 }
-.magnifier {
-  --mag-max-h: 60dvh;
+/* One 4:3 frame for every stone, as large as the panel allows: photos fill it (cover, centred), so
+   the picture never changes size between products. The whole photo is in the zoom viewer. */
+.frame {
+  position: relative;
+  width: min(100cqw, calc(100cqh * 4 / 3));
+  aspect-ratio: 4 / 3;
 }
 .noPhoto {
   display: grid;
@@ -125,20 +130,21 @@
   font-variant-numeric: tabular-nums;
 }
 @media (min-width: 1024px) {
+  /* Fixed height: the dialog (and so the photo panel) is the same size for every stone; long
+     spec lists scroll inside the info column instead of stretching it. */
   .layout {
     grid-template-columns: minmax(0, 1.55fr) minmax(320px, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    height: min(calc(100dvh - 32px), 760px);
     overflow: hidden;
   }
+  /* The frame sits above the prev/next pill (12px + 52px), never under it. */
   .media {
-    min-height: min(76dvh, 720px);
-  }
-  /* Leave room above and below for the prev/next pill so it never covers the stone. */
-  .magnifier {
-    --mag-max-h: calc(min(76dvh, 720px) - 128px);
+    aspect-ratio: auto;
+    padding: var(--sp-4) var(--sp-4) 76px;
   }
   .info {
     overflow-y: auto;
-    max-height: calc(100dvh - 32px);
     padding: var(--sp-10) var(--sp-8) calc(var(--sp-16) + var(--sp-6));
   }
   .nav {

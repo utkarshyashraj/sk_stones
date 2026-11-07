@@ -101,6 +101,14 @@ function SwipeCapture({ onSwipe }: { onSwipe: (d: number) => void }) {
   return null;
 }
 
+/** Every photo fills the same 4:3 frame; wider photos are cropped at the sides, so they render
+ * wider than the frame — ask for a correspondingly larger file so they stay sharp. */
+const FRAME = 4 / 3;
+function frameSizes(ratio: number) {
+  const over = Math.max(1, ratio / FRAME);
+  return `(min-width: 1024px) ${Math.round(50 * over)}vw, ${Math.round(100 * over)}vw`;
+}
+
 function Detail({ product: p, names }: { product: ClientProduct; names: Record<string, string> }) {
   const { has, toggle } = useShortlist();
   const saved = has(p.id);
@@ -121,12 +129,14 @@ function Detail({ product: p, names }: { product: ClientProduct; names: Record<s
     <div className={styles.layout}>
       <div className={styles.media} data-swipe>
         {p.img ? (
-          <StoneMagnifier
-            image={p.img}
-            alt={`${p.name}${p.finish ? `, ${p.finish} finish` : ''} — ${collectionName}`}
-            sizes="(min-width: 1024px) 60vw, 100vw"
-            className={styles.magnifier}
-          />
+          <div className={styles.frame}>
+            <StoneMagnifier
+              image={p.img}
+              alt={`${p.name}${p.finish ? `, ${p.finish} finish` : ''} — ${collectionName}`}
+              sizes={frameSizes(p.img.w / p.img.h)}
+              fill
+            />
+          </div>
         ) : (
           <div className={styles.noPhoto}>
             <Icon name="image" size={40} />
