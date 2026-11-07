@@ -8,7 +8,8 @@
    1200
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": 2400
  },
  "catalog/acrylic-surfaces-blue-quartzite-quartz": {
   "w": 2560,
@@ -19,7 +20,8 @@
    1200
   ],
   "avif": false,
-  "color": "#58b8b8"
+  "color": "#58b8b8",
+  "zoom": 2400
  },
  "catalog/acrylic-surfaces-empire-gray": {
   "w": 2560,
@@ -30,7 +32,8 @@
    1200
   ],
   "avif": false,
-  "color": "#788888"
+  "color": "#788888",
+  "zoom": 2400
  },
  "catalog/acrylic-surfaces-empire-gray-quartz": {
   "w": 2560,
@@ -41,7 +44,8 @@
    1200
   ],
   "avif": false,
-  "color": "#888878"
+  "color": "#888878",
+  "zoom": 2400
  },
  "catalog/acrylic-surfaces-green-exotica-quartz": {
   "w": 2560,
@@ -52,7 +56,8 @@
    1200
   ],
   "avif": false,
-  "color": "#68a898"
+  "color": "#68a898",
+  "zoom": 2400
  },
  "catalog/acrylic-surfaces-hamptons-beige": {
   "w": 2560,
@@ -63,7 +68,8 @@
    1200
   ],
   "avif": false,
-  "color": "#f8f8c8"
+  "color": "#f8f8c8",
+  "zoom": 2400
  },
  "catalog/acrylic-surfaces-marmo-bernini-gold-quartz": {
   "w": 2560,
@@ -74,7 +80,8 @@
    1200
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": 2400
  },
  "catalog/acrylic-surfaces-matisse-gold-quartz": {
   "w": 2560,
@@ -85,7 +92,8 @@
    1200
   ],
   "avif": false,
-  "color": "#181818"
+  "color": "#181818",
+  "zoom": 2400
  },
  "catalog/acrylic-surfaces-matisse-white-quartz": {
   "w": 2560,
@@ -96,7 +104,8 @@
    1200
   ],
   "avif": false,
-  "color": "#181818"
+  "color": "#181818",
+  "zoom": 2400
  },
  "catalog/acrylic-surfaces-navigli-brown-quartz": {
   "w": 2560,
@@ -107,7 +116,8 @@
    1200
   ],
   "avif": false,
-  "color": "#585848"
+  "color": "#585848",
+  "zoom": 2400
  },
  "catalog/acrylic-surfaces-navigli-gray-quartz": {
   "w": 2560,
@@ -118,7 +128,8 @@
    1200
   ],
   "avif": false,
-  "color": "#889888"
+  "color": "#889888",
+  "zoom": 2400
  },
  "catalog/acrylic-surfaces-platinum-satuario": {
   "w": 2560,
@@ -129,7 +140,8 @@
    1200
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": 2400
  },
  "catalog/acrylic-surfaces-raphael-primo-quartz": {
   "w": 2560,
@@ -140,7 +152,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b8c8c8"
+  "color": "#b8c8c8",
+  "zoom": 2400
  },
  "catalog/acrylic-surfaces-river-gold-quartz": {
   "w": 2560,
@@ -151,7 +164,8 @@
    1200
   ],
   "avif": false,
-  "color": "#e8e8f8"
+  "color": "#e8e8f8",
+  "zoom": 2400
  },
  "catalog/acrylic-surfaces-roosevelt-gray": {
   "w": 2560,
@@ -162,7 +176,8 @@
    1200
   ],
   "avif": false,
-  "color": "#585858"
+  "color": "#585858",
+  "zoom": 2400
  },
  "catalog/acrylic-surfaces-roosevelt-gray-quartz": {
   "w": 2560,
@@ -173,7 +188,8 @@
    1200
   ],
   "avif": false,
-  "color": "#989898"
+  "color": "#989898",
+  "zoom": 2400
  },
  "catalog/brillo-collection-amazonite": {
   "w": 924,
@@ -184,7 +200,8 @@
    924
   ],
   "avif": false,
-  "color": "#989898"
+  "color": "#989898",
+  "zoom": null
  },
  "catalog/brillo-collection-avorio-granite": {
   "w": 860,
@@ -195,7 +212,8 @@
    860
   ],
   "avif": false,
-  "color": "#b8a888"
+  "color": "#b8a888",
+  "zoom": null
  },
  "catalog/brillo-collection-french-gray": {
   "w": 927,
@@ -206,7 +224,8 @@
    927
   ],
   "avif": false,
-  "color": "#686868"
+  "color": "#686868",
+  "zoom": null
  },
  "catalog/brillo-collection-golden-statuario": {
   "w": 837,
@@ -217,7 +236,8 @@
    837
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/brillo-collection-primavera": {
   "w": 868,
@@ -228,7 +248,8 @@
    868
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": null
  },
  "catalog/brillo-collection-rosso-onyx": {
   "w": 1185,
@@ -239,7 +260,8 @@
    1185
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": null
  },
  "catalog/brillo-collection-sonata-grey": {
   "w": 904,
@@ -250,7 +272,8 @@
    904
   ],
   "avif": false,
-  "color": "#888888"
+  "color": "#888888",
+  "zoom": null
  },
  "catalog/brillo-collection-statuario-book-match": {
   "w": 945,
@@ -261,7 +284,8 @@
    945
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/brillo-collection-statuario-silk": {
   "w": 990,
@@ -272,7 +296,8 @@
    990
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/clay-jally-amber-clay-jally": {
   "w": 1600,
@@ -283,7 +308,8 @@
    1200
   ],
   "avif": false,
-  "color": "#181818"
+  "color": "#181818",
+  "zoom": 1600
  },
  "catalog/clay-jally-arrow-clay-jally": {
   "w": 1576,
@@ -294,7 +320,8 @@
    1200
   ],
   "avif": false,
-  "color": "#e8b898"
+  "color": "#e8b898",
+  "zoom": 1576
  },
  "catalog/clay-jally-camp-clay-jally": {
   "w": 1528,
@@ -305,7 +332,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b87858"
+  "color": "#b87858",
+  "zoom": 1528
  },
  "catalog/clay-jally-cross-clay-jally": {
   "w": 1600,
@@ -316,7 +344,8 @@
    1200
   ],
   "avif": false,
-  "color": "#c8a888"
+  "color": "#c8a888",
+  "zoom": 1600
  },
  "catalog/clay-jally-foray-clay-jally": {
   "w": 1600,
@@ -327,7 +356,8 @@
    1200
   ],
   "avif": false,
-  "color": "#c89878"
+  "color": "#c89878",
+  "zoom": 1600
  },
  "catalog/clay-jally-four-petal-clay-jally": {
   "w": 1600,
@@ -338,7 +368,8 @@
    1200
   ],
   "avif": false,
-  "color": "#d8a888"
+  "color": "#d8a888",
+  "zoom": 1600
  },
  "catalog/clay-jally-leaf-clay-jally": {
   "w": 1581,
@@ -349,7 +380,8 @@
    1200
   ],
   "avif": false,
-  "color": "#d8a888"
+  "color": "#d8a888",
+  "zoom": 1581
  },
  "catalog/clay-jally-lilly-clay-jally": {
   "w": 1599,
@@ -360,7 +392,8 @@
    1200
   ],
   "avif": false,
-  "color": "#383838"
+  "color": "#383838",
+  "zoom": 1599
  },
  "catalog/clay-jally-lotus-clay-jally": {
   "w": 1589,
@@ -371,7 +404,8 @@
    1200
   ],
   "avif": false,
-  "color": "#d8b898"
+  "color": "#d8b898",
+  "zoom": 1589
  },
  "catalog/clay-jally-opal-clay-jally": {
   "w": 1591,
@@ -382,7 +416,8 @@
    1200
   ],
   "avif": false,
-  "color": "#d8a888"
+  "color": "#d8a888",
+  "zoom": 1591
  },
  "catalog/clay-jally-ruby-clay-jally": {
   "w": 1517,
@@ -393,7 +428,8 @@
    1200
   ],
   "avif": false,
-  "color": "#c8a888"
+  "color": "#c8a888",
+  "zoom": 1517
  },
  "catalog/clay-jally-tarus-clay-jally": {
   "w": 1556,
@@ -404,7 +440,8 @@
    1200
   ],
   "avif": false,
-  "color": "#c8a888"
+  "color": "#c8a888",
+  "zoom": 1556
  },
  "catalog/clay-jally-tv-clay-jally": {
   "w": 1600,
@@ -415,7 +452,8 @@
    1200
   ],
   "avif": false,
-  "color": "#181818"
+  "color": "#181818",
+  "zoom": 1600
  },
  "catalog/clay-jally-zebra-clay-jally": {
   "w": 1584,
@@ -426,7 +464,8 @@
    1200
   ],
   "avif": false,
-  "color": "#e8c8a8"
+  "color": "#e8c8a8",
+  "zoom": 1584
  },
  "catalog/cnc-stone-work-brass-inlay": {
   "w": 1470,
@@ -437,7 +476,8 @@
    1200
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": 1470
  },
  "catalog/cnc-stone-work-brass-inlay-2": {
   "w": 1170,
@@ -448,7 +488,8 @@
    1170
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/cnc-stone-work-brass-inlay-in-indian-white-marble": {
   "w": 720,
@@ -458,7 +499,8 @@
    720
   ],
   "avif": false,
-  "color": "#989898"
+  "color": "#989898",
+  "zoom": null
  },
  "catalog/cnc-stone-work-cnc-with-inlay-work-on-slate-stone": {
   "w": 1092,
@@ -469,7 +511,8 @@
    1092
   ],
   "avif": false,
-  "color": "#a89888"
+  "color": "#a89888",
+  "zoom": null
  },
  "catalog/cnc-stone-work-cnc-work-done-on-black-slate-with-duco-paint": {
   "w": 959,
@@ -480,7 +523,8 @@
    959
   ],
   "avif": false,
-  "color": "#383838"
+  "color": "#383838",
+  "zoom": null
  },
  "catalog/cnc-stone-work-cnc-work-on-slate-stone": {
   "w": 912,
@@ -491,7 +535,8 @@
    912
   ],
   "avif": false,
-  "color": "#a89898"
+  "color": "#a89898",
+  "zoom": null
  },
  "catalog/cnc-stone-work-cnc-work-on-slate-stone-2": {
   "w": 1167,
@@ -502,7 +547,8 @@
    1167
   ],
   "avif": false,
-  "color": "#a8a8a8"
+  "color": "#a8a8a8",
+  "zoom": null
  },
  "catalog/cnc-stone-work-coin-pattern": {
   "w": 1919,
@@ -513,7 +559,8 @@
    1200
   ],
   "avif": false,
-  "color": "#583828"
+  "color": "#583828",
+  "zoom": 1919
  },
  "catalog/cnc-stone-work-coin-pattern-2": {
   "w": 1919,
@@ -524,7 +571,8 @@
    1200
   ],
   "avif": false,
-  "color": "#786858"
+  "color": "#786858",
+  "zoom": 1919
  },
  "catalog/cnc-stone-work-design-in-mint-sand-stone": {
   "w": 607,
@@ -534,7 +582,8 @@
    607
   ],
   "avif": false,
-  "color": "#a8a898"
+  "color": "#a8a898",
+  "zoom": null
  },
  "catalog/cnc-stone-work-design-in-slate-stone-tile-1x1": {
   "w": 1536,
@@ -545,7 +594,8 @@
    1200
   ],
   "avif": false,
-  "color": "#282828"
+  "color": "#282828",
+  "zoom": 1536
  },
  "catalog/cnc-stone-work-floor-medallions": {
   "w": 1425,
@@ -556,7 +606,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b8c8d8"
+  "color": "#b8c8d8",
+  "zoom": 1425
  },
  "catalog/cnc-stone-work-flower-pattern": {
   "w": 1920,
@@ -567,7 +618,8 @@
    1200
   ],
   "avif": false,
-  "color": "#785838"
+  "color": "#785838",
+  "zoom": 1920
  },
  "catalog/cnc-stone-work-inlay-work-marble-to-marble": {
   "w": 622,
@@ -577,7 +629,8 @@
    622
   ],
   "avif": false,
-  "color": "#989898"
+  "color": "#989898",
+  "zoom": null
  },
  "catalog/cnc-stone-work-jalli-design-in-sand-stone": {
   "w": 1600,
@@ -588,7 +641,8 @@
    1200
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": 1600
  },
  "catalog/cnc-stone-work-marble-inlay": {
   "w": 708,
@@ -598,7 +652,8 @@
    708
   ],
   "avif": false,
-  "color": "#181818"
+  "color": "#181818",
+  "zoom": null
  },
  "catalog/cnc-stone-work-marble-inlay-2": {
   "w": 720,
@@ -608,7 +663,8 @@
    720
   ],
   "avif": false,
-  "color": "#987848"
+  "color": "#987848",
+  "zoom": null
  },
  "catalog/cnc-stone-work-marble-inlay-3": {
   "w": 480,
@@ -618,7 +674,8 @@
    480
   ],
   "avif": false,
-  "color": "#c8c8c8"
+  "color": "#c8c8c8",
+  "zoom": null
  },
  "catalog/cnc-stone-work-marble-inlay-4": {
   "w": 592,
@@ -628,7 +685,8 @@
    592
   ],
   "avif": false,
-  "color": "#c8c8b8"
+  "color": "#c8c8b8",
+  "zoom": null
  },
  "catalog/cnc-stone-work-petal-leaves-in-mint-sand-stone": {
   "w": 792,
@@ -638,7 +696,8 @@
    792
   ],
   "avif": false,
-  "color": "#d8d8d8"
+  "color": "#d8d8d8",
+  "zoom": null
  },
  "catalog/cobble-stones-antique-grey-cobble": {
   "w": 2560,
@@ -649,7 +708,8 @@
    1200
   ],
   "avif": false,
-  "color": "#989898"
+  "color": "#989898",
+  "zoom": 2400
  },
  "catalog/cobble-stones-black-basalt-cobble": {
   "w": 2560,
@@ -660,7 +720,8 @@
    1200
   ],
   "avif": false,
-  "color": "#d8d8c8"
+  "color": "#d8d8c8",
+  "zoom": 2400
  },
  "catalog/cobble-stones-charcoal-grey-cobble": {
   "w": 2560,
@@ -671,7 +732,8 @@
    1200
   ],
   "avif": false,
-  "color": "#c8c8b8"
+  "color": "#c8c8b8",
+  "zoom": 2400
  },
  "catalog/cobble-stones-classic-black-cobble": {
   "w": 2560,
@@ -682,7 +744,8 @@
    1200
   ],
   "avif": false,
-  "color": "#181818"
+  "color": "#181818",
+  "zoom": 2400
  },
  "catalog/cobble-stones-dark-grey-tumbled-cobble": {
   "w": 1600,
@@ -693,7 +756,8 @@
    1200
   ],
   "avif": false,
-  "color": "#c8c8b8"
+  "color": "#c8c8b8",
+  "zoom": 1600
  },
  "catalog/cobble-stones-granite-mix-cobble": {
   "w": 1180,
@@ -704,7 +768,8 @@
    1180
   ],
   "avif": false,
-  "color": "#887868"
+  "color": "#887868",
+  "zoom": null
  },
  "catalog/cobble-stones-graphite-black-cobble": {
   "w": 1600,
@@ -715,7 +780,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b8b8b8"
+  "color": "#b8b8b8",
+  "zoom": 1600
  },
  "catalog/cobble-stones-jet-black-cobble": {
   "w": 2560,
@@ -726,7 +792,8 @@
    1200
   ],
   "avif": false,
-  "color": "#c8c8b8"
+  "color": "#c8c8b8",
+  "zoom": 2400
  },
  "catalog/cobble-stones-light-grey-cobble": {
   "w": 1180,
@@ -737,7 +804,8 @@
    1180
   ],
   "avif": false,
-  "color": "#887868"
+  "color": "#887868",
+  "zoom": null
  },
  "catalog/cobble-stones-mixed-grey-cobble": {
   "w": 1600,
@@ -748,7 +816,8 @@
    1200
   ],
   "avif": false,
-  "color": "#483838"
+  "color": "#483838",
+  "zoom": 1600
  },
  "catalog/cobble-stones-natural-grey-cobble": {
   "w": 2560,
@@ -759,7 +828,8 @@
    1200
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": 2400
  },
  "catalog/cobble-stones-onyx-black-cobble": {
   "w": 2560,
@@ -770,7 +840,8 @@
    1200
   ],
   "avif": false,
-  "color": "#685848"
+  "color": "#685848",
+  "zoom": 2400
  },
  "catalog/cobble-stones-river-grey-cobble": {
   "w": 2560,
@@ -781,7 +852,8 @@
    1200
   ],
   "avif": false,
-  "color": "#282828"
+  "color": "#282828",
+  "zoom": 2400
  },
  "catalog/cobble-stones-silver-grey-granite-cobble": {
   "w": 2560,
@@ -792,7 +864,8 @@
    1200
   ],
   "avif": false,
-  "color": "#c8c8b8"
+  "color": "#c8c8b8",
+  "zoom": 2400
  },
  "catalog/cobble-stones-smoke-grey-cobble": {
   "w": 1600,
@@ -803,7 +876,8 @@
    1200
   ],
   "avif": false,
-  "color": "#584838"
+  "color": "#584838",
+  "zoom": 1600
  },
  "catalog/cobble-stones-speckled-granite-cobble": {
   "w": 1180,
@@ -814,7 +888,8 @@
    1180
   ],
   "avif": false,
-  "color": "#887868"
+  "color": "#887868",
+  "zoom": null
  },
  "catalog/cobble-stones-white-granite-cobble": {
   "w": 2560,
@@ -825,7 +900,8 @@
    1200
   ],
   "avif": false,
-  "color": "#c8c8b8"
+  "color": "#c8c8b8",
+  "zoom": 2400
  },
  "catalog/elevation-clay-bricks-bbc-chocolate": {
   "w": 1365,
@@ -836,7 +912,8 @@
    1200
   ],
   "avif": false,
-  "color": "#988878"
+  "color": "#988878",
+  "zoom": 1365
  },
  "catalog/elevation-clay-bricks-eurocotto-antique": {
   "w": 1459,
@@ -847,7 +924,8 @@
    1200
   ],
   "avif": false,
-  "color": "#e8b898"
+  "color": "#e8b898",
+  "zoom": 1459
  },
  "catalog/elevation-clay-bricks-eurocotto-cappuccino": {
   "w": 1600,
@@ -858,7 +936,8 @@
    1200
   ],
   "avif": false,
-  "color": "#d8c8b8"
+  "color": "#d8c8b8",
+  "zoom": 1600
  },
  "catalog/elevation-clay-bricks-eurocotto-chocolate-wirecut": {
   "w": 1485,
@@ -869,7 +948,8 @@
    1200
   ],
   "avif": false,
-  "color": "#a89888"
+  "color": "#a89888",
+  "zoom": 1485
  },
  "catalog/elevation-clay-bricks-eurocotto-grey": {
   "w": 1477,
@@ -880,7 +960,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b8a898"
+  "color": "#b8a898",
+  "zoom": 1477
  },
  "catalog/elevation-clay-bricks-eurocotto-light-red-wirecut": {
   "w": 1599,
@@ -891,7 +972,8 @@
    1200
   ],
   "avif": false,
-  "color": "#d8a878"
+  "color": "#d8a878",
+  "zoom": 1599
  },
  "catalog/elezzo-collection-aiza-cinnamon": {
   "w": 828,
@@ -902,7 +984,8 @@
    828
   ],
   "avif": false,
-  "color": "#584838"
+  "color": "#584838",
+  "zoom": null
  },
  "catalog/elezzo-collection-glitter-white": {
   "w": 355,
@@ -911,7 +994,8 @@
    355
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/elezzo-collection-piatto-burly": {
   "w": 270,
@@ -920,7 +1004,8 @@
    270
   ],
   "avif": false,
-  "color": "#887868"
+  "color": "#887868",
+  "zoom": null
  },
  "catalog/elezzo-collection-platto-black": {
   "w": 316,
@@ -929,7 +1014,8 @@
    316
   ],
   "avif": false,
-  "color": "#383838"
+  "color": "#383838",
+  "zoom": null
  },
  "catalog/elezzo-collection-terrazzo-grey": {
   "w": 326,
@@ -938,7 +1024,8 @@
    326
   ],
   "avif": false,
-  "color": "#988888"
+  "color": "#988888",
+  "zoom": null
  },
  "catalog/elezzo-collection-terrazzo-white": {
   "w": 330,
@@ -947,7 +1034,8 @@
    330
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": null
  },
  "catalog/endless-collection-abria-beige": {
   "w": 494,
@@ -957,7 +1045,8 @@
    494
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/endless-collection-arenado-cream": {
   "w": 482,
@@ -967,7 +1056,8 @@
    482
   ],
   "avif": false,
-  "color": "#f8e8d8"
+  "color": "#f8e8d8",
+  "zoom": null
  },
  "catalog/endless-collection-aurelia-green": {
   "w": 530,
@@ -977,7 +1067,8 @@
    530
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/endless-collection-avira-white": {
   "w": 509,
@@ -987,7 +1078,8 @@
    509
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": null
  },
  "catalog/endless-collection-comoros-aqua": {
   "w": 528,
@@ -997,7 +1089,8 @@
    528
   ],
   "avif": false,
-  "color": "#b8c8c8"
+  "color": "#b8c8c8",
+  "zoom": null
  },
  "catalog/endless-collection-eternity-beige": {
   "w": 494,
@@ -1007,7 +1100,8 @@
    494
   ],
   "avif": false,
-  "color": "#e8e8d8"
+  "color": "#e8e8d8",
+  "zoom": null
  },
  "catalog/endless-collection-infinity-gold": {
   "w": 513,
@@ -1017,7 +1111,8 @@
    513
   ],
   "avif": false,
-  "color": "#f8e8d8"
+  "color": "#f8e8d8",
+  "zoom": null
  },
  "catalog/endless-collection-jaffiro-beige": {
   "w": 527,
@@ -1027,7 +1122,8 @@
    527
   ],
   "avif": false,
-  "color": "#d8d8c8"
+  "color": "#d8d8c8",
+  "zoom": null
  },
  "catalog/endless-collection-jaffiro-natural": {
   "w": 585,
@@ -1037,7 +1133,8 @@
    585
   ],
   "avif": false,
-  "color": "#988878"
+  "color": "#988878",
+  "zoom": null
  },
  "catalog/endless-collection-kama-ocean": {
   "w": 537,
@@ -1047,7 +1144,8 @@
    537
   ],
   "avif": false,
-  "color": "#e8f8f8"
+  "color": "#e8f8f8",
+  "zoom": null
  },
  "catalog/endless-collection-lemsa-light": {
   "w": 520,
@@ -1057,7 +1155,8 @@
    520
   ],
   "avif": false,
-  "color": "#d8d8d8"
+  "color": "#d8d8d8",
+  "zoom": null
  },
  "catalog/endless-collection-lizent-bianco": {
   "w": 609,
@@ -1067,7 +1166,8 @@
    609
   ],
   "avif": false,
-  "color": "#e8d8d8"
+  "color": "#e8d8d8",
+  "zoom": null
  },
  "catalog/endless-collection-lucia-natural": {
   "w": 610,
@@ -1077,7 +1177,8 @@
    610
   ],
   "avif": false,
-  "color": "#e8d8d8"
+  "color": "#e8d8d8",
+  "zoom": null
  },
  "catalog/endless-collection-naples-white": {
   "w": 549,
@@ -1087,7 +1188,8 @@
    549
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/endless-collection-nayar-peach": {
   "w": 643,
@@ -1097,7 +1199,8 @@
    643
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": null
  },
  "catalog/endless-collection-nuba-natural": {
   "w": 614,
@@ -1107,7 +1210,8 @@
    614
   ],
   "avif": false,
-  "color": "#e8d8c8"
+  "color": "#e8d8c8",
+  "zoom": null
  },
  "catalog/endless-collection-olga-brown": {
   "w": 444,
@@ -1117,7 +1221,8 @@
    444
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": null
  },
  "catalog/endless-collection-ritzy-bianco": {
   "w": 575,
@@ -1127,7 +1232,8 @@
    575
   ],
   "avif": false,
-  "color": "#d8d8d8"
+  "color": "#d8d8d8",
+  "zoom": null
  },
  "catalog/endless-collection-royal-armani-brown": {
   "w": 483,
@@ -1137,7 +1243,8 @@
    483
   ],
   "avif": false,
-  "color": "#c88868"
+  "color": "#c88868",
+  "zoom": null
  },
  "catalog/endless-collection-royal-armani-brown-light": {
   "w": 513,
@@ -1147,7 +1254,8 @@
    513
   ],
   "avif": false,
-  "color": "#f8e8d8"
+  "color": "#f8e8d8",
+  "zoom": null
  },
  "catalog/endless-collection-sheltar-beige": {
   "w": 485,
@@ -1157,7 +1265,8 @@
    485
   ],
   "avif": false,
-  "color": "#e8d8c8"
+  "color": "#e8d8c8",
+  "zoom": null
  },
  "catalog/endless-collection-sorrento-blue": {
   "w": 584,
@@ -1167,7 +1276,8 @@
    584
   ],
   "avif": false,
-  "color": "#8898a8"
+  "color": "#8898a8",
+  "zoom": null
  },
  "catalog/endless-collection-statuario-lasa": {
   "w": 634,
@@ -1177,7 +1287,8 @@
    634
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/endless-collection-unika-gold": {
   "w": 500,
@@ -1187,7 +1298,8 @@
    500
   ],
   "avif": false,
-  "color": "#f8f8e8"
+  "color": "#f8f8e8",
+  "zoom": null
  },
  "catalog/endless-collection-venzo-natural": {
   "w": 568,
@@ -1197,7 +1309,8 @@
    568
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/feature-wall-feature-wall": {
   "w": 602,
@@ -1207,7 +1320,8 @@
    602
   ],
   "avif": false,
-  "color": "#d8c8b8"
+  "color": "#d8c8b8",
+  "zoom": null
  },
  "catalog/feature-wall-feature-wall-2": {
   "w": 602,
@@ -1217,7 +1331,8 @@
    602
   ],
   "avif": false,
-  "color": "#d8c8b8"
+  "color": "#d8c8b8",
+  "zoom": null
  },
  "catalog/feature-wall-feature-wall-3": {
   "w": 602,
@@ -1227,7 +1342,8 @@
    602
   ],
   "avif": false,
-  "color": "#787888"
+  "color": "#787888",
+  "zoom": null
  },
  "catalog/feature-wall-flower-embossed-wall": {
   "w": 1600,
@@ -1238,7 +1354,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b8a888"
+  "color": "#b8a888",
+  "zoom": 1600
  },
  "catalog/feature-wall-leaf-pattern-wall-art": {
   "w": 809,
@@ -1249,7 +1366,8 @@
    809
   ],
   "avif": false,
-  "color": "#382818"
+  "color": "#382818",
+  "zoom": null
  },
  "catalog/feature-wall-petals-pattern": {
   "w": 1206,
@@ -1260,7 +1378,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787858"
+  "color": "#787858",
+  "zoom": 1206
  },
  "catalog/feature-wall-wave-pattern-wall": {
   "w": 602,
@@ -1270,7 +1389,8 @@
    602
   ],
   "avif": false,
-  "color": "#c8b8a8"
+  "color": "#c8b8a8",
+  "zoom": null
  },
  "catalog/imported-granites-cheema-pink": {
   "w": 602,
@@ -1280,7 +1400,8 @@
    602
   ],
   "avif": false,
-  "color": "#c8b8a8"
+  "color": "#c8b8a8",
+  "zoom": null
  },
  "catalog/imported-granites-cygnus-granite": {
   "w": 2560,
@@ -1291,7 +1412,8 @@
    1200
   ],
   "avif": false,
-  "color": "#484848"
+  "color": "#484848",
+  "zoom": 2400
  },
  "catalog/imported-granites-emerald-pearl": {
   "w": 2560,
@@ -1302,7 +1424,8 @@
    1200
   ],
   "avif": false,
-  "color": "#081818"
+  "color": "#081818",
+  "zoom": 2400
  },
  "catalog/imported-granites-imperial-white": {
   "w": 602,
@@ -1312,7 +1435,8 @@
    602
   ],
   "avif": false,
-  "color": "#d8d8d8"
+  "color": "#d8d8d8",
+  "zoom": null
  },
  "catalog/imported-granites-kashmir-white-granite": {
   "w": 500,
@@ -1322,7 +1446,8 @@
    500
   ],
   "avif": false,
-  "color": "#c8c8c8"
+  "color": "#c8c8c8",
+  "zoom": null
  },
  "catalog/imported-granites-louise-green": {
   "w": 2560,
@@ -1333,7 +1458,8 @@
    1200
   ],
   "avif": false,
-  "color": "#383828"
+  "color": "#383828",
+  "zoom": 2400
  },
  "catalog/imported-granites-ocean-blue": {
   "w": 2560,
@@ -1344,7 +1470,8 @@
    1200
   ],
   "avif": false,
-  "color": "#888888"
+  "color": "#888888",
+  "zoom": 2400
  },
  "catalog/imported-granites-patagonia-green": {
   "w": 2560,
@@ -1355,7 +1482,8 @@
    1200
   ],
   "avif": false,
-  "color": "#383838"
+  "color": "#383838",
+  "zoom": 2400
  },
  "catalog/imported-granites-polaris-gold-quartzite": {
   "w": 2560,
@@ -1366,7 +1494,8 @@
    1200
   ],
   "avif": false,
-  "color": "#887858"
+  "color": "#887858",
+  "zoom": 2400
  },
  "catalog/imported-granites-roma-imperiale": {
   "w": 2560,
@@ -1377,7 +1506,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b8b8b8"
+  "color": "#b8b8b8",
+  "zoom": 2400
  },
  "catalog/imported-granites-safari-blue": {
   "w": 602,
@@ -1387,7 +1517,8 @@
    602
   ],
   "avif": false,
-  "color": "#383848"
+  "color": "#383848",
+  "zoom": null
  },
  "catalog/imported-granites-sk-blue": {
   "w": 558,
@@ -1397,7 +1528,8 @@
    558
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/imported-marbles-botochino-classic": {
   "w": 2560,
@@ -1408,7 +1540,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787868"
+  "color": "#787868",
+  "zoom": 2400
  },
  "catalog/imported-marbles-bracia-aurora": {
   "w": 2560,
@@ -1419,7 +1552,8 @@
    1200
   ],
   "avif": false,
-  "color": "#786858"
+  "color": "#786858",
+  "zoom": 2400
  },
  "catalog/imported-marbles-bracia-blue": {
   "w": 2560,
@@ -1430,7 +1564,8 @@
    1200
   ],
   "avif": false,
-  "color": "#786858"
+  "color": "#786858",
+  "zoom": 2400
  },
  "catalog/imported-marbles-caravaggio": {
   "w": 2560,
@@ -1441,7 +1576,8 @@
    1200
   ],
   "avif": false,
-  "color": "#786868"
+  "color": "#786868",
+  "zoom": 2400
  },
  "catalog/imported-marbles-champagne-onyx": {
   "w": 2560,
@@ -1452,7 +1588,8 @@
    1200
   ],
   "avif": false,
-  "color": "#686858"
+  "color": "#686858",
+  "zoom": 2400
  },
  "catalog/imported-marbles-crema-marfil": {
   "w": 2560,
@@ -1463,7 +1600,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787868"
+  "color": "#787868",
+  "zoom": 2400
  },
  "catalog/imported-marbles-cuckoo-red-marble": {
   "w": 2560,
@@ -1474,7 +1612,8 @@
    1200
   ],
   "avif": false,
-  "color": "#585858"
+  "color": "#585858",
+  "zoom": 2400
  },
  "catalog/imported-marbles-d-martino-chips": {
   "w": 2560,
@@ -1485,7 +1624,8 @@
    1200
   ],
   "avif": false,
-  "color": "#786858"
+  "color": "#786858",
+  "zoom": 2400
  },
  "catalog/imported-marbles-dark-emperador": {
   "w": 2560,
@@ -1496,7 +1636,8 @@
    1200
   ],
   "avif": false,
-  "color": "#482818"
+  "color": "#482818",
+  "zoom": 2400
  },
  "catalog/imported-marbles-dyna": {
   "w": 2560,
@@ -1507,7 +1648,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787878"
+  "color": "#787878",
+  "zoom": 2400
  },
  "catalog/imported-marbles-dyna-abstract": {
   "w": 2560,
@@ -1518,7 +1660,8 @@
    1200
   ],
   "avif": false,
-  "color": "#888888"
+  "color": "#888888",
+  "zoom": 2400
  },
  "catalog/imported-marbles-dyna-book-match-pattern": {
   "w": 2560,
@@ -1529,7 +1672,8 @@
    1200
   ],
   "avif": false,
-  "color": "#a8a898"
+  "color": "#a8a898",
+  "zoom": 2400
  },
  "catalog/imported-marbles-furor-marbles": {
   "w": 2560,
@@ -1540,7 +1684,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787878"
+  "color": "#787878",
+  "zoom": 2400
  },
  "catalog/imported-marbles-gray-crema-marfil": {
   "w": 1787,
@@ -1551,7 +1696,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b8b8a8"
+  "color": "#b8b8a8",
+  "zoom": 1787
  },
  "catalog/imported-marbles-grey-milano": {
   "w": 2560,
@@ -1562,7 +1708,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787878"
+  "color": "#787878",
+  "zoom": 2400
  },
  "catalog/imported-marbles-grey-william": {
   "w": 2560,
@@ -1573,7 +1720,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787878"
+  "color": "#787878",
+  "zoom": 2400
  },
  "catalog/imported-marbles-honey-onyx": {
   "w": 2560,
@@ -1584,7 +1732,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787868"
+  "color": "#787868",
+  "zoom": 2400
  },
  "catalog/imported-marbles-irish-brown": {
   "w": 2560,
@@ -1595,7 +1744,8 @@
    1200
   ],
   "avif": false,
-  "color": "#686868"
+  "color": "#686868",
+  "zoom": 2400
  },
  "catalog/imported-marbles-light-emperador": {
   "w": 2560,
@@ -1606,7 +1756,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787868"
+  "color": "#787868",
+  "zoom": 2400
  },
  "catalog/imported-marbles-nero-portoro": {
   "w": 2560,
@@ -1617,7 +1768,8 @@
    1200
   ],
   "avif": false,
-  "color": "#585858"
+  "color": "#585858",
+  "zoom": 2400
  },
  "catalog/imported-marbles-red-cheign": {
   "w": 2560,
@@ -1628,7 +1780,8 @@
    1200
   ],
   "avif": false,
-  "color": "#784828"
+  "color": "#784828",
+  "zoom": 2400
  },
  "catalog/imported-marbles-red-lavante": {
   "w": 2560,
@@ -1639,7 +1792,8 @@
    1200
   ],
   "avif": false,
-  "color": "#784848"
+  "color": "#784848",
+  "zoom": 2400
  },
  "catalog/imported-marbles-rojo-alicante": {
   "w": 2560,
@@ -1650,7 +1804,8 @@
    1200
   ],
   "avif": false,
-  "color": "#885858"
+  "color": "#885858",
+  "zoom": 2400
  },
  "catalog/imported-marbles-roman-sylvia": {
   "w": 2560,
@@ -1661,7 +1816,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787858"
+  "color": "#787858",
+  "zoom": 2400
  },
  "catalog/imported-marbles-rosalia-marble": {
   "w": 2560,
@@ -1672,7 +1828,8 @@
    1200
   ],
   "avif": false,
-  "color": "#786858"
+  "color": "#786858",
+  "zoom": 2400
  },
  "catalog/imported-marbles-rosalio": {
   "w": 2560,
@@ -1683,7 +1840,8 @@
    1200
   ],
   "avif": false,
-  "color": "#786858"
+  "color": "#786858",
+  "zoom": 2400
  },
  "catalog/imported-marbles-satvario": {
   "w": 1600,
@@ -1694,7 +1852,8 @@
    1200
   ],
   "avif": false,
-  "color": "#a8a898"
+  "color": "#a8a898",
+  "zoom": 1600
  },
  "catalog/imported-marbles-sicilia-perlato": {
   "w": 2560,
@@ -1705,7 +1864,8 @@
    1200
   ],
   "avif": false,
-  "color": "#786848"
+  "color": "#786848",
+  "zoom": 2400
  },
  "catalog/imported-marbles-silver-martini": {
   "w": 2560,
@@ -1716,7 +1876,8 @@
    1200
   ],
   "avif": false,
-  "color": "#989898"
+  "color": "#989898",
+  "zoom": 2400
  },
  "catalog/imported-marbles-silver-portro": {
   "w": 2560,
@@ -1727,7 +1888,8 @@
    1200
   ],
   "avif": false,
-  "color": "#282828"
+  "color": "#282828",
+  "zoom": 2400
  },
  "catalog/imported-marbles-silver-travertine": {
   "w": 2560,
@@ -1738,7 +1900,8 @@
    1200
   ],
   "avif": false,
-  "color": "#989888"
+  "color": "#989888",
+  "zoom": 2400
  },
  "catalog/imported-marbles-spider-black": {
   "w": 2560,
@@ -1749,7 +1912,8 @@
    1200
   ],
   "avif": false,
-  "color": "#585858"
+  "color": "#585858",
+  "zoom": 2400
  },
  "catalog/imported-marbles-tiger-onyx-marble": {
   "w": 1040,
@@ -1760,7 +1924,8 @@
    1040
   ],
   "avif": false,
-  "color": "#d8e8e8"
+  "color": "#d8e8e8",
+  "zoom": null
  },
  "catalog/imported-marbles-travertine-beige": {
   "w": 2560,
@@ -1771,7 +1936,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787878"
+  "color": "#787878",
+  "zoom": 2400
  },
  "catalog/imported-marbles-travertine-brown": {
   "w": 2560,
@@ -1782,7 +1948,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787868"
+  "color": "#787868",
+  "zoom": 2400
  },
  "catalog/imported-marbles-travertine-golden": {
   "w": 2560,
@@ -1793,7 +1960,8 @@
    1200
   ],
   "avif": false,
-  "color": "#886848"
+  "color": "#886848",
+  "zoom": 2400
  },
  "catalog/imported-marbles-travertine-rainbow": {
   "w": 2560,
@@ -1804,7 +1972,8 @@
    1200
   ],
   "avif": false,
-  "color": "#888888"
+  "color": "#888888",
+  "zoom": 2400
  },
  "catalog/indian-granites-absolute-black": {
   "w": 408,
@@ -1814,7 +1983,8 @@
    408
   ],
   "avif": false,
-  "color": "#181818"
+  "color": "#181818",
+  "zoom": null
  },
  "catalog/indian-granites-absolute-black-2": {
   "w": 800,
@@ -1824,7 +1994,8 @@
    800
   ],
   "avif": false,
-  "color": "#080808"
+  "color": "#080808",
+  "zoom": null
  },
  "catalog/indian-granites-alaska-gold": {
   "w": 800,
@@ -1834,7 +2005,8 @@
    800
   ],
   "avif": false,
-  "color": "#a89878"
+  "color": "#a89878",
+  "zoom": null
  },
  "catalog/indian-granites-alaska-white": {
   "w": 800,
@@ -1844,7 +2016,8 @@
    800
   ],
   "avif": false,
-  "color": "#c8c8c8"
+  "color": "#c8c8c8",
+  "zoom": null
  },
  "catalog/indian-granites-alpine-white": {
   "w": 800,
@@ -1854,7 +2027,8 @@
    800
   ],
   "avif": false,
-  "color": "#b8b8b8"
+  "color": "#b8b8b8",
+  "zoom": null
  },
  "catalog/indian-granites-amba-white": {
   "w": 800,
@@ -1864,7 +2038,8 @@
    800
   ],
   "avif": false,
-  "color": "#b8b8b8"
+  "color": "#b8b8b8",
+  "zoom": null
  },
  "catalog/indian-granites-black-forest": {
   "w": 800,
@@ -1874,7 +2049,8 @@
    800
   ],
   "avif": false,
-  "color": "#181818"
+  "color": "#181818",
+  "zoom": null
  },
  "catalog/indian-granites-black-galaxy": {
   "w": 800,
@@ -1884,7 +2060,8 @@
    800
   ],
   "avif": false,
-  "color": "#181818"
+  "color": "#181818",
+  "zoom": null
  },
  "catalog/indian-granites-black-pearl": {
   "w": 800,
@@ -1894,7 +2071,8 @@
    800
   ],
   "avif": false,
-  "color": "#282828"
+  "color": "#282828",
+  "zoom": null
  },
  "catalog/indian-granites-blue-dunes": {
   "w": 800,
@@ -1904,7 +2082,8 @@
    800
   ],
   "avif": false,
-  "color": "#b8b8b8"
+  "color": "#b8b8b8",
+  "zoom": null
  },
  "catalog/indian-granites-blue-pearl": {
   "w": 454,
@@ -1914,7 +2093,8 @@
    454
   ],
   "avif": false,
-  "color": "#283848"
+  "color": "#283848",
+  "zoom": null
  },
  "catalog/indian-granites-caramel-brown": {
   "w": 1530,
@@ -1925,7 +2105,8 @@
    1200
   ],
   "avif": false,
-  "color": "#888888"
+  "color": "#888888",
+  "zoom": 1530
  },
  "catalog/indian-granites-cheema-pink": {
   "w": 1530,
@@ -1936,7 +2117,8 @@
    1200
   ],
   "avif": false,
-  "color": "#686868"
+  "color": "#686868",
+  "zoom": 1530
  },
  "catalog/indian-granites-chima-blue": {
   "w": 800,
@@ -1946,7 +2128,8 @@
    800
   ],
   "avif": false,
-  "color": "#a8b8b8"
+  "color": "#a8b8b8",
+  "zoom": null
  },
  "catalog/indian-granites-china-white": {
   "w": 800,
@@ -1956,7 +2139,8 @@
    800
   ],
   "avif": false,
-  "color": "#c8c8c8"
+  "color": "#c8c8c8",
+  "zoom": null
  },
  "catalog/indian-granites-coffee-brown": {
   "w": 800,
@@ -1966,7 +2150,8 @@
    800
   ],
   "avif": false,
-  "color": "#483838"
+  "color": "#483838",
+  "zoom": null
  },
  "catalog/indian-granites-colonial-white": {
   "w": 800,
@@ -1976,7 +2161,8 @@
    800
   ],
   "avif": false,
-  "color": "#c8c8c8"
+  "color": "#c8c8c8",
+  "zoom": null
  },
  "catalog/indian-granites-copper-silk": {
   "w": 795,
@@ -1986,7 +2172,8 @@
    795
   ],
   "avif": false,
-  "color": "#886858"
+  "color": "#886858",
+  "zoom": null
  },
  "catalog/indian-granites-cotton-white": {
   "w": 1600,
@@ -1997,7 +2184,8 @@
    1200
   ],
   "avif": false,
-  "color": "#a8a8a8"
+  "color": "#a8a8a8",
+  "zoom": 1600
  },
  "catalog/indian-granites-crystal-blue": {
   "w": 1137,
@@ -2008,7 +2196,8 @@
    1137
   ],
   "avif": false,
-  "color": "#484848"
+  "color": "#484848",
+  "zoom": null
  },
  "catalog/indian-granites-crystal-yellow": {
   "w": 800,
@@ -2018,7 +2207,8 @@
    800
   ],
   "avif": false,
-  "color": "#d8c8a8"
+  "color": "#d8c8a8",
+  "zoom": null
  },
  "catalog/indian-granites-dark-grey": {
   "w": 243,
@@ -2027,7 +2217,8 @@
    243
   ],
   "avif": false,
-  "color": "#383838"
+  "color": "#383838",
+  "zoom": null
  },
  "catalog/indian-granites-fish-gold": {
   "w": 465,
@@ -2037,7 +2228,8 @@
    465
   ],
   "avif": false,
-  "color": "#282818"
+  "color": "#282818",
+  "zoom": null
  },
  "catalog/indian-granites-french-cream": {
   "w": 1600,
@@ -2048,7 +2240,8 @@
    1200
   ],
   "avif": false,
-  "color": "#a8a8a8"
+  "color": "#a8a8a8",
+  "zoom": 1600
  },
  "catalog/indian-granites-french-white": {
   "w": 800,
@@ -2058,7 +2251,8 @@
    800
   ],
   "avif": false,
-  "color": "#b8b8b8"
+  "color": "#b8b8b8",
+  "zoom": null
  },
  "catalog/indian-granites-gem-red": {
   "w": 500,
@@ -2068,7 +2262,8 @@
    500
   ],
   "avif": false,
-  "color": "#985848"
+  "color": "#985848",
+  "zoom": null
  },
  "catalog/indian-granites-himalayan-blue-granite": {
   "w": 368,
@@ -2077,7 +2272,8 @@
    368
   ],
   "avif": false,
-  "color": "#787878"
+  "color": "#787878",
+  "zoom": null
  },
  "catalog/indian-granites-imperial-gold": {
   "w": 800,
@@ -2087,7 +2283,8 @@
    800
   ],
   "avif": false,
-  "color": "#d8b888"
+  "color": "#d8b888",
+  "zoom": null
  },
  "catalog/indian-granites-imperial-white": {
   "w": 800,
@@ -2097,7 +2294,8 @@
    800
   ],
   "avif": false,
-  "color": "#d8d8d8"
+  "color": "#d8d8d8",
+  "zoom": null
  },
  "catalog/indian-granites-ivory-fantasy": {
   "w": 2560,
@@ -2108,7 +2306,8 @@
    1200
   ],
   "avif": false,
-  "color": "#888888"
+  "color": "#888888",
+  "zoom": 2400
  },
  "catalog/indian-granites-jet-black": {
   "w": 800,
@@ -2118,7 +2317,8 @@
    800
   ],
   "avif": false,
-  "color": "#080808"
+  "color": "#080808",
+  "zoom": null
  },
  "catalog/indian-granites-jubilee-brown": {
   "w": 1585,
@@ -2129,7 +2329,8 @@
    1200
   ],
   "avif": false,
-  "color": "#988878"
+  "color": "#988878",
+  "zoom": 1585
  },
  "catalog/indian-granites-kashmere-white": {
   "w": 800,
@@ -2139,7 +2340,8 @@
    800
   ],
   "avif": false,
-  "color": "#d8d8d8"
+  "color": "#d8d8d8",
+  "zoom": null
  },
  "catalog/indian-granites-kashmir-white": {
   "w": 391,
@@ -2148,7 +2350,8 @@
    391
   ],
   "avif": false,
-  "color": "#a8a8a8"
+  "color": "#a8a8a8",
+  "zoom": null
  },
  "catalog/indian-granites-may-flower": {
   "w": 800,
@@ -2158,7 +2361,8 @@
    800
   ],
   "avif": false,
-  "color": "#d8d8d8"
+  "color": "#d8d8d8",
+  "zoom": null
  },
  "catalog/indian-granites-misty-white": {
   "w": 800,
@@ -2168,7 +2372,8 @@
    800
   ],
   "avif": false,
-  "color": "#a8a8a8"
+  "color": "#a8a8a8",
+  "zoom": null
  },
  "catalog/indian-granites-multi-red": {
   "w": 1200,
@@ -2179,7 +2384,8 @@
    1200
   ],
   "avif": false,
-  "color": "#c8b8a8"
+  "color": "#c8b8a8",
+  "zoom": null
  },
  "catalog/indian-granites-pearl-black": {
   "w": 699,
@@ -2189,7 +2395,8 @@
    699
   ],
   "avif": false,
-  "color": "#282828"
+  "color": "#282828",
+  "zoom": null
  },
  "catalog/indian-granites-prada-gold": {
   "w": 1024,
@@ -2200,7 +2407,8 @@
    1024
   ],
   "avif": false,
-  "color": "#d8b898"
+  "color": "#d8b898",
+  "zoom": null
  },
  "catalog/indian-granites-r-moon-white": {
   "w": 800,
@@ -2210,7 +2418,8 @@
    800
   ],
   "avif": false,
-  "color": "#a8a8a8"
+  "color": "#a8a8a8",
+  "zoom": null
  },
  "catalog/indian-granites-r-narlay-grey": {
   "w": 800,
@@ -2220,7 +2429,8 @@
    800
   ],
   "avif": false,
-  "color": "#a8a8a8"
+  "color": "#a8a8a8",
+  "zoom": null
  },
  "catalog/indian-granites-red-granite": {
   "w": 1600,
@@ -2231,7 +2441,8 @@
    1200
   ],
   "avif": false,
-  "color": "#884838"
+  "color": "#884838",
+  "zoom": 1600
  },
  "catalog/indian-granites-red-multicolor": {
   "w": 843,
@@ -2242,7 +2453,8 @@
    843
   ],
   "avif": false,
-  "color": "#483838"
+  "color": "#483838",
+  "zoom": null
  },
  "catalog/indian-granites-sadarhalli": {
   "w": 2560,
@@ -2253,7 +2465,8 @@
    1200
   ],
   "avif": false,
-  "color": "#888878"
+  "color": "#888878",
+  "zoom": 2400
  },
  "catalog/indian-granites-steel-gray-leather-polished": {
   "w": 2560,
@@ -2264,7 +2477,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787878"
+  "color": "#787878",
+  "zoom": 2400
  },
  "catalog/indian-granites-tan-brown": {
   "w": 880,
@@ -2275,7 +2489,8 @@
    880
   ],
   "avif": false,
-  "color": "#787868"
+  "color": "#787868",
+  "zoom": null
  },
  "catalog/indian-granites-tan-brown-polish": {
   "w": 1197,
@@ -2286,7 +2501,8 @@
    1197
   ],
   "avif": false,
-  "color": "#484848"
+  "color": "#484848",
+  "zoom": null
  },
  "catalog/indian-granites-tiger-skin": {
   "w": 843,
@@ -2297,7 +2513,8 @@
    843
   ],
   "avif": false,
-  "color": "#383838"
+  "color": "#383838",
+  "zoom": null
  },
  "catalog/indian-granites-titanium-silver-black": {
   "w": 480,
@@ -2307,7 +2524,8 @@
    480
   ],
   "avif": false,
-  "color": "#181818"
+  "color": "#181818",
+  "zoom": null
  },
  "catalog/indian-marbles-asian-grey": {
   "w": 2560,
@@ -2318,7 +2536,8 @@
    1200
   ],
   "avif": false,
-  "color": "#687868"
+  "color": "#687868",
+  "zoom": 2400
  },
  "catalog/indian-marbles-black-stripe": {
   "w": 2560,
@@ -2329,7 +2548,8 @@
    1200
   ],
   "avif": false,
-  "color": "#989898"
+  "color": "#989898",
+  "zoom": 2400
  },
  "catalog/indian-marbles-green-marble": {
   "w": 385,
@@ -2338,7 +2558,8 @@
    385
   ],
   "avif": false,
-  "color": "#c8c8b8"
+  "color": "#c8c8b8",
+  "zoom": null
  },
  "catalog/indian-marbles-indo-italian": {
   "w": 2560,
@@ -2349,7 +2570,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787868"
+  "color": "#787868",
+  "zoom": 2400
  },
  "catalog/indian-marbles-ita-gold": {
   "w": 2560,
@@ -2360,7 +2582,8 @@
    1200
   ],
   "avif": false,
-  "color": "#887848"
+  "color": "#887848",
+  "zoom": 2400
  },
  "catalog/indian-marbles-jaisalmer-yellow": {
   "w": 2560,
@@ -2371,7 +2594,8 @@
    1200
   ],
   "avif": false,
-  "color": "#887848"
+  "color": "#887848",
+  "zoom": 2400
  },
  "catalog/indian-marbles-katni": {
   "w": 2560,
@@ -2382,7 +2606,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787868"
+  "color": "#787868",
+  "zoom": 2400
  },
  "catalog/indian-marbles-pista-green": {
   "w": 2560,
@@ -2393,7 +2618,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787878"
+  "color": "#787878",
+  "zoom": 2400
  },
  "catalog/indian-marbles-rainforest-brown": {
   "w": 2560,
@@ -2404,7 +2630,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787878"
+  "color": "#787878",
+  "zoom": 2400
  },
  "catalog/indian-marbles-rainforest-gold": {
   "w": 2560,
@@ -2415,7 +2642,8 @@
    1200
   ],
   "avif": false,
-  "color": "#686848"
+  "color": "#686848",
+  "zoom": 2400
  },
  "catalog/indian-marbles-rainforest-gold-leather-finish": {
   "w": 2560,
@@ -2426,7 +2654,8 @@
    1200
   ],
   "avif": false,
-  "color": "#987858"
+  "color": "#987858",
+  "zoom": 2400
  },
  "catalog/indian-marbles-rainforest-green": {
   "w": 2560,
@@ -2437,7 +2666,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787868"
+  "color": "#787868",
+  "zoom": 2400
  },
  "catalog/indian-marbles-rainforest-green-leather-finish": {
   "w": 2560,
@@ -2448,7 +2678,8 @@
    1200
   ],
   "avif": false,
-  "color": "#585858"
+  "color": "#585858",
+  "zoom": 2400
  },
  "catalog/indian-marbles-red-rainforest": {
   "w": 1042,
@@ -2459,7 +2690,8 @@
    1042
   ],
   "avif": false,
-  "color": "#787878"
+  "color": "#787878",
+  "zoom": null
  },
  "catalog/indian-marbles-udaipur-green-marble-polished-tiles": {
   "w": 800,
@@ -2469,7 +2701,8 @@
    800
   ],
   "avif": false,
-  "color": "#285848"
+  "color": "#285848",
+  "zoom": null
  },
  "catalog/ittaca-collection-alboran-beige-endless": {
   "w": 501,
@@ -2479,7 +2712,8 @@
    501
   ],
   "avif": false,
-  "color": "#d8d8c8"
+  "color": "#d8d8c8",
+  "zoom": null
  },
  "catalog/ittaca-collection-arena-dune": {
   "w": 559,
@@ -2489,7 +2723,8 @@
    559
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/ittaca-collection-aston-grande-nova": {
   "w": 514,
@@ -2499,7 +2734,8 @@
    514
   ],
   "avif": false,
-  "color": "#686878"
+  "color": "#686878",
+  "zoom": null
  },
  "catalog/ittaca-collection-aurora-aqua-onyx": {
   "w": 610,
@@ -2509,7 +2745,8 @@
    610
   ],
   "avif": false,
-  "color": "#a8b8b8"
+  "color": "#a8b8b8",
+  "zoom": null
  },
  "catalog/ittaca-collection-aurora-pink-onyx": {
   "w": 591,
@@ -2519,7 +2756,8 @@
    591
   ],
   "avif": false,
-  "color": "#d8c8c8"
+  "color": "#d8c8c8",
+  "zoom": null
  },
  "catalog/ittaca-collection-bianco-oro": {
   "w": 505,
@@ -2529,7 +2767,8 @@
    505
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/ittaca-collection-bidasar-excel": {
   "w": 566,
@@ -2539,7 +2778,8 @@
    566
   ],
   "avif": false,
-  "color": "#586858"
+  "color": "#586858",
+  "zoom": null
  },
  "catalog/ittaca-collection-black-daytona": {
   "w": 501,
@@ -2549,7 +2789,8 @@
    501
   ],
   "avif": false,
-  "color": "#382828"
+  "color": "#382828",
+  "zoom": null
  },
  "catalog/ittaca-collection-black-onyx-beauty": {
   "w": 504,
@@ -2559,7 +2800,8 @@
    504
   ],
   "avif": false,
-  "color": "#080808"
+  "color": "#080808",
+  "zoom": null
  },
  "catalog/ittaca-collection-bluette-onyx-grey": {
   "w": 508,
@@ -2569,7 +2811,8 @@
    508
   ],
   "avif": false,
-  "color": "#d8d8d8"
+  "color": "#d8d8d8",
+  "zoom": null
  },
  "catalog/ittaca-collection-botanic-green": {
   "w": 600,
@@ -2579,7 +2822,8 @@
    600
   ],
   "avif": false,
-  "color": "#586848"
+  "color": "#586848",
+  "zoom": null
  },
  "catalog/ittaca-collection-breccia-fantasia": {
   "w": 605,
@@ -2589,7 +2833,8 @@
    605
   ],
   "avif": false,
-  "color": "#d8c8a8"
+  "color": "#d8c8a8",
+  "zoom": null
  },
  "catalog/ittaca-collection-bulgari-cream": {
   "w": 504,
@@ -2599,7 +2844,8 @@
    504
   ],
   "avif": false,
-  "color": "#f8e8e8"
+  "color": "#f8e8e8",
+  "zoom": null
  },
  "catalog/ittaca-collection-calacatta-labyrinth": {
   "w": 501,
@@ -2609,7 +2855,8 @@
    501
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/ittaca-collection-calacatta-michael": {
   "w": 514,
@@ -2619,7 +2866,8 @@
    514
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/ittaca-collection-calacatta-supreme": {
   "w": 518,
@@ -2629,7 +2877,8 @@
    518
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/ittaca-collection-cityscape-greige": {
   "w": 502,
@@ -2639,7 +2888,8 @@
    502
   ],
   "avif": false,
-  "color": "#b8b8a8"
+  "color": "#b8b8a8",
+  "zoom": null
  },
  "catalog/ittaca-collection-elizabeth-green": {
   "w": 638,
@@ -2649,7 +2899,8 @@
    638
   ],
   "avif": false,
-  "color": "#687868"
+  "color": "#687868",
+  "zoom": null
  },
  "catalog/ittaca-collection-fairy-art-decor-endless": {
   "w": 1299,
@@ -2660,7 +2911,8 @@
    1200
   ],
   "avif": false,
-  "color": "#f8f8e8"
+  "color": "#f8f8e8",
+  "zoom": 1299
  },
  "catalog/ittaca-collection-hordix-crema-decor": {
   "w": 565,
@@ -2670,7 +2922,8 @@
    565
   ],
   "avif": false,
-  "color": "#f8e8e8"
+  "color": "#f8e8e8",
+  "zoom": null
  },
  "catalog/ittaca-collection-jennifer-bianco-endless": {
   "w": 507,
@@ -2680,7 +2933,8 @@
    507
   ],
   "avif": false,
-  "color": "#f8f8e8"
+  "color": "#f8f8e8",
+  "zoom": null
  },
  "catalog/ittaca-collection-lilly-leaf-decor-endless": {
   "w": 655,
@@ -2690,7 +2944,8 @@
    655
   ],
   "avif": false,
-  "color": "#a8b898"
+  "color": "#a8b898",
+  "zoom": null
  },
  "catalog/ittaca-collection-miles-verde-decor": {
   "w": 572,
@@ -2700,7 +2955,8 @@
    572
   ],
   "avif": false,
-  "color": "#a8a8a8"
+  "color": "#a8a8a8",
+  "zoom": null
  },
  "catalog/ittaca-collection-patagonia": {
   "w": 615,
@@ -2710,7 +2966,8 @@
    615
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/ittaca-collection-pulpis-grey": {
   "w": 497,
@@ -2720,7 +2977,8 @@
    497
   ],
   "avif": false,
-  "color": "#a89898"
+  "color": "#a89898",
+  "zoom": null
  },
  "catalog/ittaca-collection-pulpis-grey-liner": {
   "w": 526,
@@ -2730,7 +2988,8 @@
    526
   ],
   "avif": false,
-  "color": "#c8c8b8"
+  "color": "#c8c8b8",
+  "zoom": null
  },
  "catalog/ittaca-collection-quabluette-onyx": {
   "w": 514,
@@ -2740,7 +2999,8 @@
    514
   ],
   "avif": false,
-  "color": "#b8c8c8"
+  "color": "#b8c8c8",
+  "zoom": null
  },
  "catalog/ittaca-collection-vendome-royal": {
   "w": 477,
@@ -2750,7 +3010,8 @@
    477
   ],
   "avif": false,
-  "color": "#281818"
+  "color": "#281818",
+  "zoom": null
  },
  "catalog/kota-stones-kadpa-black-mirror-polished": {
   "w": 602,
@@ -2760,7 +3021,8 @@
    602
   ],
   "avif": false,
-  "color": "#181818"
+  "color": "#181818",
+  "zoom": null
  },
  "catalog/kota-stones-kota-green-leather": {
   "w": 602,
@@ -2770,7 +3032,8 @@
    602
   ],
   "avif": false,
-  "color": "#98a898"
+  "color": "#98a898",
+  "zoom": null
  },
  "catalog/kota-stones-kota-honey-polished": {
   "w": 735,
@@ -2780,7 +3043,8 @@
    735
   ],
   "avif": false,
-  "color": "#887868"
+  "color": "#887868",
+  "zoom": null
  },
  "catalog/kota-stones-kota-honeydew-leathered": {
   "w": 602,
@@ -2790,7 +3054,8 @@
    602
   ],
   "avif": false,
-  "color": "#a89868"
+  "color": "#a89868",
+  "zoom": null
  },
  "catalog/kota-stones-kota-honeydew-polished": {
   "w": 602,
@@ -2800,7 +3065,8 @@
    602
   ],
   "avif": false,
-  "color": "#c8b888"
+  "color": "#c8b888",
+  "zoom": null
  },
  "catalog/kota-stones-kota-mirror-polished": {
   "w": 322,
@@ -2809,7 +3075,8 @@
    322
   ],
   "avif": false,
-  "color": "#888878"
+  "color": "#888878",
+  "zoom": null
  },
  "catalog/kota-stones-kota-natural-finish": {
   "w": 1790,
@@ -2820,7 +3087,8 @@
    1200
   ],
   "avif": false,
-  "color": "#888888"
+  "color": "#888888",
+  "zoom": 1790
  },
  "catalog/kota-stones-kota-stone-mirror-polished": {
   "w": 602,
@@ -2830,7 +3098,8 @@
    602
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/kota-stones-shabad-yellow-leather": {
   "w": 896,
@@ -2841,7 +3110,8 @@
    896
   ],
   "avif": false,
-  "color": "#c8b8a8"
+  "color": "#c8b8a8",
+  "zoom": null
  },
  "catalog/kota-stones-tandur-blue-mirror-polished": {
   "w": 602,
@@ -2851,7 +3121,8 @@
    602
   ],
   "avif": false,
-  "color": "#787888"
+  "color": "#787888",
+  "zoom": null
  },
  "catalog/kota-stones-tandur-blue-semi-polished": {
   "w": 602,
@@ -2861,7 +3132,8 @@
    602
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/kota-stones-tandur-grey-leathered": {
   "w": 602,
@@ -2871,7 +3143,8 @@
    602
   ],
   "avif": false,
-  "color": "#b8b8b8"
+  "color": "#b8b8b8",
+  "zoom": null
  },
  "catalog/milagro-collection-avocato": {
   "w": 1056,
@@ -2882,7 +3155,8 @@
    1056
   ],
   "avif": false,
-  "color": "#484848"
+  "color": "#484848",
+  "zoom": null
  },
  "catalog/milagro-collection-carrara-gold": {
   "w": 1020,
@@ -2893,7 +3167,8 @@
    1020
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/milagro-collection-dazzle-brown": {
   "w": 1353,
@@ -2904,7 +3179,8 @@
    1200
   ],
   "avif": false,
-  "color": "#786858"
+  "color": "#786858",
+  "zoom": 1353
  },
  "catalog/milagro-collection-exotic-stone": {
   "w": 942,
@@ -2915,7 +3191,8 @@
    942
   ],
   "avif": false,
-  "color": "#c8c8b8"
+  "color": "#c8c8b8",
+  "zoom": null
  },
  "catalog/milagro-collection-marquina-fusion": {
   "w": 823,
@@ -2926,7 +3203,8 @@
    823
   ],
   "avif": false,
-  "color": "#383838"
+  "color": "#383838",
+  "zoom": null
  },
  "catalog/milagro-collection-pietra-grey": {
   "w": 1011,
@@ -2937,7 +3215,8 @@
    1011
   ],
   "avif": false,
-  "color": "#a8a8a8"
+  "color": "#a8a8a8",
+  "zoom": null
  },
  "catalog/milagro-collection-travertino-gris": {
   "w": 942,
@@ -2948,7 +3227,8 @@
    942
   ],
   "avif": false,
-  "color": "#c8c8c8"
+  "color": "#c8c8c8",
+  "zoom": null
  },
  "catalog/mop-inlay-work-floor-medallions": {
   "w": 1600,
@@ -2959,7 +3239,8 @@
    1200
   ],
   "avif": false,
-  "color": "#d8d8d8"
+  "color": "#d8d8d8",
+  "zoom": 1600
  },
  "catalog/mop-inlay-work-mop-inlay-work": {
   "w": 431,
@@ -2969,7 +3250,8 @@
    431
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": null
  },
  "catalog/mop-inlay-work-mop-inlay-work-2": {
   "w": 739,
@@ -2979,7 +3261,8 @@
    739
   ],
   "avif": false,
-  "color": "#b8b8b8"
+  "color": "#b8b8b8",
+  "zoom": null
  },
  "catalog/mop-inlay-work-mop-inlay-work-3": {
   "w": 734,
@@ -2989,7 +3272,8 @@
    734
   ],
   "avif": false,
-  "color": "#989898"
+  "color": "#989898",
+  "zoom": null
  },
  "catalog/mop-inlay-work-mop-inlay-work-4": {
   "w": 597,
@@ -2999,7 +3283,8 @@
    597
   ],
   "avif": false,
-  "color": "#b8b8b8"
+  "color": "#b8b8b8",
+  "zoom": null
  },
  "catalog/mop-inlay-work-mop-inlay-work-5": {
   "w": 720,
@@ -3009,7 +3294,8 @@
    720
   ],
   "avif": false,
-  "color": "#a8a8a8"
+  "color": "#a8a8a8",
+  "zoom": null
  },
  "catalog/mop-inlay-work-mop-inlay-work-6": {
   "w": 774,
@@ -3019,7 +3305,8 @@
    774
   ],
   "avif": false,
-  "color": "#b8b8b8"
+  "color": "#b8b8b8",
+  "zoom": null
  },
  "catalog/mop-inlay-work-mop-inlay-work-7": {
   "w": 876,
@@ -3030,7 +3317,8 @@
    876
   ],
   "avif": false,
-  "color": "#888888"
+  "color": "#888888",
+  "zoom": null
  },
  "catalog/mop-inlay-work-mother-of-pearls": {
   "w": 687,
@@ -3040,7 +3328,8 @@
    687
   ],
   "avif": false,
-  "color": "#c8c8c8"
+  "color": "#c8c8c8",
+  "zoom": null
  },
  "catalog/mop-inlay-work-sand-stones-art": {
   "w": 1040,
@@ -3051,7 +3340,8 @@
    1040
   ],
   "avif": false,
-  "color": "#d8d8c8"
+  "color": "#d8d8c8",
+  "zoom": null
  },
  "catalog/murals-monuments-gold-lipi-on-stone": {
   "w": 1503,
@@ -3062,7 +3352,8 @@
    1200
   ],
   "avif": false,
-  "color": "#c8c8c8"
+  "color": "#c8c8c8",
+  "zoom": 1503
  },
  "catalog/murals-monuments-hand-curved-wall-art": {
   "w": 1302,
@@ -3073,7 +3364,8 @@
    1200
   ],
   "avif": false,
-  "color": "#887868"
+  "color": "#887868",
+  "zoom": 1302
  },
  "catalog/murals-monuments-hand-curved-wall-art-2": {
   "w": 1600,
@@ -3084,7 +3376,8 @@
    1200
   ],
   "avif": false,
-  "color": "#a89888"
+  "color": "#a89888",
+  "zoom": 1600
  },
  "catalog/murals-monuments-mop-inlay-work": {
   "w": 2537,
@@ -3095,7 +3388,8 @@
    1200
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": 2400
  },
  "catalog/murals-monuments-murals-and-monuments": {
   "w": 1595,
@@ -3106,7 +3400,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b8b8a8"
+  "color": "#b8b8a8",
+  "zoom": 1595
  },
  "catalog/murals-monuments-murals-and-monuments-2": {
   "w": 1793,
@@ -3117,7 +3412,8 @@
    1200
   ],
   "avif": false,
-  "color": "#887868"
+  "color": "#887868",
+  "zoom": 1793
  },
  "catalog/murals-monuments-murals-and-monuments-3": {
   "w": 2428,
@@ -3128,7 +3424,8 @@
    1200
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": 2400
  },
  "catalog/pebbles-pebbles": {
   "w": 2560,
@@ -3139,7 +3436,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b8b8a8"
+  "color": "#b8b8a8",
+  "zoom": 2400
  },
  "catalog/pebbles-pebbles-10": {
   "w": 2560,
@@ -3150,7 +3448,8 @@
    1200
   ],
   "avif": false,
-  "color": "#c8c8c8"
+  "color": "#c8c8c8",
+  "zoom": 2400
  },
  "catalog/pebbles-pebbles-11": {
   "w": 2560,
@@ -3161,7 +3460,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b8b8a8"
+  "color": "#b8b8a8",
+  "zoom": 2400
  },
  "catalog/pebbles-pebbles-12": {
   "w": 1180,
@@ -3172,7 +3472,8 @@
    1180
   ],
   "avif": false,
-  "color": "#383828"
+  "color": "#383828",
+  "zoom": null
  },
  "catalog/pebbles-pebbles-13": {
   "w": 1180,
@@ -3183,7 +3484,8 @@
    1180
   ],
   "avif": false,
-  "color": "#d8d8d8"
+  "color": "#d8d8d8",
+  "zoom": null
  },
  "catalog/pebbles-pebbles-14": {
   "w": 1180,
@@ -3194,7 +3496,8 @@
    1180
   ],
   "avif": false,
-  "color": "#d8d8d8"
+  "color": "#d8d8d8",
+  "zoom": null
  },
  "catalog/pebbles-pebbles-15": {
   "w": 2560,
@@ -3205,7 +3508,8 @@
    1200
   ],
   "avif": false,
-  "color": "#d8c8c8"
+  "color": "#d8c8c8",
+  "zoom": 2400
  },
  "catalog/pebbles-pebbles-16": {
   "w": 1180,
@@ -3216,7 +3520,8 @@
    1180
   ],
   "avif": false,
-  "color": "#e8d8d8"
+  "color": "#e8d8d8",
+  "zoom": null
  },
  "catalog/pebbles-pebbles-17": {
   "w": 1180,
@@ -3227,7 +3532,8 @@
    1180
   ],
   "avif": false,
-  "color": "#c8c8c8"
+  "color": "#c8c8c8",
+  "zoom": null
  },
  "catalog/pebbles-pebbles-18": {
   "w": 899,
@@ -3238,7 +3544,8 @@
    899
   ],
   "avif": false,
-  "color": "#080808"
+  "color": "#080808",
+  "zoom": null
  },
  "catalog/pebbles-pebbles-2": {
   "w": 1180,
@@ -3249,7 +3556,8 @@
    1180
   ],
   "avif": false,
-  "color": "#b8b8a8"
+  "color": "#b8b8a8",
+  "zoom": null
  },
  "catalog/pebbles-pebbles-3": {
   "w": 2560,
@@ -3260,7 +3568,8 @@
    1200
   ],
   "avif": false,
-  "color": "#c8d8d8"
+  "color": "#c8d8d8",
+  "zoom": 2400
  },
  "catalog/pebbles-pebbles-4": {
   "w": 1180,
@@ -3271,7 +3580,8 @@
    1180
   ],
   "avif": false,
-  "color": "#282828"
+  "color": "#282828",
+  "zoom": null
  },
  "catalog/pebbles-pebbles-5": {
   "w": 1180,
@@ -3282,7 +3592,8 @@
    1180
   ],
   "avif": false,
-  "color": "#e8e8d8"
+  "color": "#e8e8d8",
+  "zoom": null
  },
  "catalog/pebbles-pebbles-6": {
   "w": 2560,
@@ -3293,7 +3604,8 @@
    1200
   ],
   "avif": false,
-  "color": "#c8c8c8"
+  "color": "#c8c8c8",
+  "zoom": 2400
  },
  "catalog/pebbles-pebbles-7": {
   "w": 1180,
@@ -3304,7 +3616,8 @@
    1180
   ],
   "avif": false,
-  "color": "#484838"
+  "color": "#484838",
+  "zoom": null
  },
  "catalog/pebbles-pebbles-8": {
   "w": 1180,
@@ -3315,7 +3628,8 @@
    1180
   ],
   "avif": false,
-  "color": "#383828"
+  "color": "#383828",
+  "zoom": null
  },
  "catalog/pebbles-pebbles-9": {
   "w": 1180,
@@ -3326,7 +3640,8 @@
    1180
   ],
   "avif": false,
-  "color": "#484838"
+  "color": "#484838",
+  "zoom": null
  },
  "catalog/quartz-surfaces-alluring": {
   "w": 1048,
@@ -3337,7 +3652,8 @@
    1048
   ],
   "avif": false,
-  "color": "#e8e8d8"
+  "color": "#e8e8d8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-anthracite": {
   "w": 612,
@@ -3347,7 +3663,8 @@
    612
   ],
   "avif": false,
-  "color": "#b8b8b8"
+  "color": "#b8b8b8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-arctic-white": {
   "w": 700,
@@ -3357,7 +3674,8 @@
    700
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-ash-grey": {
   "w": 446,
@@ -3367,7 +3685,8 @@
    446
   ],
   "avif": false,
-  "color": "#988878"
+  "color": "#988878",
+  "zoom": null
  },
  "catalog/quartz-surfaces-beige-diamante": {
   "w": 452,
@@ -3377,7 +3696,8 @@
    452
   ],
   "avif": false,
-  "color": "#e8d8c8"
+  "color": "#e8d8c8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-bermingham": {
   "w": 424,
@@ -3387,7 +3707,8 @@
    424
   ],
   "avif": false,
-  "color": "#e8d8d8"
+  "color": "#e8d8d8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-bianco-carrara": {
   "w": 1080,
@@ -3398,7 +3719,8 @@
    1080
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-bianco-dessert": {
   "w": 1528,
@@ -3409,7 +3731,8 @@
    1200
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": 1528
  },
  "catalog/quartz-surfaces-bianco-diamante": {
   "w": 600,
@@ -3419,7 +3742,8 @@
    600
   ],
   "avif": false,
-  "color": "#c8c8c8"
+  "color": "#c8c8c8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-bianco-maple": {
   "w": 1125,
@@ -3430,7 +3754,8 @@
    1125
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-bianco-river": {
   "w": 1176,
@@ -3441,7 +3766,8 @@
    1176
   ],
   "avif": false,
-  "color": "#e8e8d8"
+  "color": "#e8e8d8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-bianco-sicilia": {
   "w": 600,
@@ -3451,7 +3777,8 @@
    600
   ],
   "avif": false,
-  "color": "#f8f8e8"
+  "color": "#f8f8e8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-bianco-superiore": {
   "w": 1089,
@@ -3462,7 +3789,8 @@
    1089
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-calacatta-imperial": {
   "w": 1062,
@@ -3473,7 +3801,8 @@
    1062
   ],
   "avif": false,
-  "color": "#f8e8e8"
+  "color": "#f8e8e8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-calacatta-rivolo": {
   "w": 428,
@@ -3483,7 +3812,8 @@
    428
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-calacatta-venezia": {
   "w": 1085,
@@ -3494,7 +3824,8 @@
    1085
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-cement": {
   "w": 447,
@@ -3504,7 +3835,8 @@
    447
   ],
   "avif": false,
-  "color": "#989898"
+  "color": "#989898",
+  "zoom": null
  },
  "catalog/quartz-surfaces-classic-beige": {
   "w": 592,
@@ -3514,7 +3846,8 @@
    592
   ],
   "avif": false,
-  "color": "#f8e8d8"
+  "color": "#f8e8d8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-classic-pearl": {
   "w": 1030,
@@ -3525,7 +3858,8 @@
    1030
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-coasta-beige": {
   "w": 1391,
@@ -3536,7 +3870,8 @@
    1200
   ],
   "avif": false,
-  "color": "#f8e8d8"
+  "color": "#f8e8d8",
+  "zoom": 1391
  },
  "catalog/quartz-surfaces-coasta-maple": {
   "w": 557,
@@ -3546,7 +3881,8 @@
    557
   ],
   "avif": false,
-  "color": "#f8e8d8"
+  "color": "#f8e8d8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-concrete": {
   "w": 1100,
@@ -3557,7 +3893,8 @@
    1100
   ],
   "avif": false,
-  "color": "#b8b8b8"
+  "color": "#b8b8b8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-crema-gold": {
   "w": 1104,
@@ -3568,7 +3905,8 @@
    1104
   ],
   "avif": false,
-  "color": "#c8c8b8"
+  "color": "#c8c8b8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-crema-verona": {
   "w": 1185,
@@ -3579,7 +3917,8 @@
    1185
   ],
   "avif": false,
-  "color": "#e8e8d8"
+  "color": "#e8e8d8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-dessert-brown": {
   "w": 436,
@@ -3589,7 +3928,8 @@
    436
   ],
   "avif": false,
-  "color": "#988878"
+  "color": "#988878",
+  "zoom": null
  },
  "catalog/quartz-surfaces-galaxy-agl": {
   "w": 480,
@@ -3599,7 +3939,8 @@
    480
   ],
   "avif": false,
-  "color": "#181818"
+  "color": "#181818",
+  "zoom": null
  },
  "catalog/quartz-surfaces-grey-maple": {
   "w": 700,
@@ -3609,7 +3950,8 @@
    700
   ],
   "avif": false,
-  "color": "#c8c8c8"
+  "color": "#c8c8c8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-grey-pearl": {
   "w": 1184,
@@ -3620,7 +3962,8 @@
    1184
   ],
   "avif": false,
-  "color": "#888888"
+  "color": "#888888",
+  "zoom": null
  },
  "catalog/quartz-surfaces-grigio-diamante": {
   "w": 1086,
@@ -3631,7 +3974,8 @@
    1086
   ],
   "avif": false,
-  "color": "#787878"
+  "color": "#787878",
+  "zoom": null
  },
  "catalog/quartz-surfaces-light-grey": {
   "w": 1491,
@@ -3642,7 +3986,8 @@
    1200
   ],
   "avif": false,
-  "color": "#989898"
+  "color": "#989898",
+  "zoom": 1491
  },
  "catalog/quartz-surfaces-metropolitan": {
   "w": 452,
@@ -3652,7 +3997,8 @@
    452
   ],
   "avif": false,
-  "color": "#383838"
+  "color": "#383838",
+  "zoom": null
  },
  "catalog/quartz-surfaces-nero-classic": {
   "w": 453,
@@ -3662,7 +4008,8 @@
    453
   ],
   "avif": false,
-  "color": "#181818"
+  "color": "#181818",
+  "zoom": null
  },
  "catalog/quartz-surfaces-nero-diamante": {
   "w": 441,
@@ -3672,7 +4019,8 @@
    441
   ],
   "avif": false,
-  "color": "#181818"
+  "color": "#181818",
+  "zoom": null
  },
  "catalog/quartz-surfaces-new-beige": {
   "w": 442,
@@ -3682,7 +4030,8 @@
    442
   ],
   "avif": false,
-  "color": "#e8d8c8"
+  "color": "#e8d8c8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-new-grey": {
   "w": 460,
@@ -3692,7 +4041,8 @@
    460
   ],
   "avif": false,
-  "color": "#b8b8b8"
+  "color": "#b8b8b8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-nisly": {
   "w": 1102,
@@ -3703,7 +4053,8 @@
    1102
   ],
   "avif": false,
-  "color": "#e8d8c8"
+  "color": "#e8d8c8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-noah": {
   "w": 1084,
@@ -3714,7 +4065,8 @@
    1084
   ],
   "avif": false,
-  "color": "#e8d8c8"
+  "color": "#e8d8c8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-picasso": {
   "w": 614,
@@ -3724,7 +4076,8 @@
    614
   ],
   "avif": false,
-  "color": "#989898"
+  "color": "#989898",
+  "zoom": null
  },
  "catalog/quartz-surfaces-pietra-grey": {
   "w": 413,
@@ -3734,7 +4087,8 @@
    413
   ],
   "avif": false,
-  "color": "#888878"
+  "color": "#888878",
+  "zoom": null
  },
  "catalog/quartz-surfaces-repen": {
   "w": 1100,
@@ -3745,7 +4099,8 @@
    1100
   ],
   "avif": false,
-  "color": "#b8a898"
+  "color": "#b8a898",
+  "zoom": null
  },
  "catalog/quartz-surfaces-sandy-diamante": {
   "w": 454,
@@ -3755,7 +4110,8 @@
    454
   ],
   "avif": false,
-  "color": "#d8c8a8"
+  "color": "#d8c8a8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-starry-black": {
   "w": 1599,
@@ -3766,7 +4122,8 @@
    1200
   ],
   "avif": false,
-  "color": "#080808"
+  "color": "#080808",
+  "zoom": 1599
  },
  "catalog/quartz-surfaces-starry-grey": {
   "w": 500,
@@ -3776,7 +4133,8 @@
    500
   ],
   "avif": false,
-  "color": "#585858"
+  "color": "#585858",
+  "zoom": null
  },
  "catalog/quartz-surfaces-toasted-almond": {
   "w": 458,
@@ -3786,7 +4144,8 @@
    458
   ],
   "avif": false,
-  "color": "#b8a888"
+  "color": "#b8a888",
+  "zoom": null
  },
  "catalog/quartz-surfaces-ush": {
   "w": 450,
@@ -3796,7 +4155,8 @@
    450
   ],
   "avif": false,
-  "color": "#584838"
+  "color": "#584838",
+  "zoom": null
  },
  "catalog/quartz-surfaces-vanilla": {
   "w": 440,
@@ -3806,7 +4166,8 @@
    440
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-venera": {
   "w": 1120,
@@ -3817,7 +4178,8 @@
    1120
   ],
   "avif": false,
-  "color": "#c8c8b8"
+  "color": "#c8c8b8",
+  "zoom": null
  },
  "catalog/quartz-surfaces-wizzard": {
   "w": 1088,
@@ -3828,7 +4190,8 @@
    1088
   ],
   "avif": false,
-  "color": "#181818"
+  "color": "#181818",
+  "zoom": null
  },
  "catalog/roof-flooring-tiles-cappuccino-flooring-tiles": {
   "w": 485,
@@ -3838,7 +4201,8 @@
    485
   ],
   "avif": false,
-  "color": "#884838"
+  "color": "#884838",
+  "zoom": null
  },
  "catalog/roof-flooring-tiles-chocolate-flooring-tiles": {
   "w": 1600,
@@ -3849,7 +4213,8 @@
    1200
   ],
   "avif": false,
-  "color": "#483828"
+  "color": "#483828",
+  "zoom": 1600
  },
  "catalog/roof-flooring-tiles-double-shade-flooring-tiles": {
   "w": 1600,
@@ -3860,7 +4225,8 @@
    1200
   ],
   "avif": false,
-  "color": "#884838"
+  "color": "#884838",
+  "zoom": 1600
  },
  "catalog/roof-flooring-tiles-grey-flooring-tiles": {
   "w": 444,
@@ -3870,7 +4236,8 @@
    444
   ],
   "avif": false,
-  "color": "#686858"
+  "color": "#686858",
+  "zoom": null
  },
  "catalog/roof-flooring-tiles-light-red-flooring-tiles": {
   "w": 1600,
@@ -3881,7 +4248,8 @@
    1200
   ],
   "avif": false,
-  "color": "#884838"
+  "color": "#884838",
+  "zoom": 1600
  },
  "catalog/roofing-tiles-clay-glossy-black": {
   "w": 1777,
@@ -3892,7 +4260,8 @@
    1200
   ],
   "avif": false,
-  "color": "#e8d8c8"
+  "color": "#e8d8c8",
+  "zoom": 1777
  },
  "catalog/roofing-tiles-clay-glossy-blue": {
   "w": 1838,
@@ -3903,7 +4272,8 @@
    1200
   ],
   "avif": false,
-  "color": "#e8d8c8"
+  "color": "#e8d8c8",
+  "zoom": 1838
  },
  "catalog/roofing-tiles-clay-glossy-deep-blue": {
   "w": 1080,
@@ -3914,7 +4284,8 @@
    1080
   ],
   "avif": false,
-  "color": "#e8d8c8"
+  "color": "#e8d8c8",
+  "zoom": null
  },
  "catalog/roofing-tiles-clay-glossy-glazed-red": {
   "w": 1868,
@@ -3925,7 +4296,8 @@
    1200
   ],
   "avif": false,
-  "color": "#d8d8c8"
+  "color": "#d8d8c8",
+  "zoom": 1868
  },
  "catalog/roofing-tiles-clay-glossy-purple": {
   "w": 1080,
@@ -3936,7 +4308,8 @@
    1080
   ],
   "avif": false,
-  "color": "#e8d8b8"
+  "color": "#e8d8b8",
+  "zoom": null
  },
  "catalog/roofing-tiles-clay-regular-antique": {
   "w": 1671,
@@ -3947,7 +4320,8 @@
    1200
   ],
   "avif": false,
-  "color": "#c8c8b8"
+  "color": "#c8c8b8",
+  "zoom": 1671
  },
  "catalog/roofing-tiles-clay-regular-red": {
   "w": 1749,
@@ -3958,7 +4332,8 @@
    1200
   ],
   "avif": false,
-  "color": "#c8c8b8"
+  "color": "#c8c8b8",
+  "zoom": 1749
  },
  "catalog/sand-stones-dholpur-beige": {
   "w": 1280,
@@ -3969,7 +4344,8 @@
    1200
   ],
   "avif": false,
-  "color": "#c8b8a8"
+  "color": "#c8b8a8",
+  "zoom": 1280
  },
  "catalog/sand-stones-dholpur-red": {
   "w": 1155,
@@ -3980,7 +4356,8 @@
    1155
   ],
   "avif": false,
-  "color": "#b86858"
+  "color": "#b86858",
+  "zoom": null
  },
  "catalog/sand-stones-flower-gold-marble-leathered": {
   "w": 980,
@@ -3991,7 +4368,8 @@
    980
   ],
   "avif": false,
-  "color": "#987858"
+  "color": "#987858",
+  "zoom": null
  },
  "catalog/sand-stones-ita-gold-marble-unpolished": {
   "w": 787,
@@ -4001,7 +4379,8 @@
    787
   ],
   "avif": false,
-  "color": "#986838"
+  "color": "#986838",
+  "zoom": null
  },
  "catalog/sand-stones-jaisalmer-marble-unpolished": {
   "w": 973,
@@ -4012,7 +4391,8 @@
    973
   ],
   "avif": false,
-  "color": "#d8a878"
+  "color": "#d8a878",
+  "zoom": null
  },
  "catalog/sand-stones-jaisalmer-yellow-marble-polished": {
   "w": 917,
@@ -4023,7 +4403,8 @@
    917
   ],
   "avif": false,
-  "color": "#986828"
+  "color": "#986828",
+  "zoom": null
  },
  "catalog/sand-stones-leather-finish-yellow": {
   "w": 1174,
@@ -4034,7 +4415,8 @@
    1174
   ],
   "avif": false,
-  "color": "#d8b878"
+  "color": "#d8b878",
+  "zoom": null
  },
  "catalog/sand-stones-rainbow-multi": {
   "w": 1216,
@@ -4045,7 +4427,8 @@
    1200
   ],
   "avif": false,
-  "color": "#c8a888"
+  "color": "#c8a888",
+  "zoom": 1216
  },
  "catalog/sand-stones-sand-stones": {
   "w": 414,
@@ -4055,7 +4438,8 @@
    414
   ],
   "avif": false,
-  "color": "#c89858"
+  "color": "#c89858",
+  "zoom": null
  },
  "catalog/sand-stones-sand-stones-2": {
   "w": 1237,
@@ -4066,7 +4450,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b89868"
+  "color": "#b89868",
+  "zoom": 1237
  },
  "catalog/sand-stones-sand-stones-3": {
   "w": 1155,
@@ -4077,7 +4462,8 @@
    1155
   ],
   "avif": false,
-  "color": "#c89838"
+  "color": "#c89838",
+  "zoom": null
  },
  "catalog/sand-stones-sand-stones-4": {
   "w": 1280,
@@ -4088,7 +4474,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b89868"
+  "color": "#b89868",
+  "zoom": 1280
  },
  "catalog/sand-stones-sand-stones-5": {
   "w": 1024,
@@ -4099,7 +4486,8 @@
    1024
   ],
   "avif": false,
-  "color": "#a86818"
+  "color": "#a86818",
+  "zoom": null
  },
  "catalog/sand-stones-sand-stones-6": {
   "w": 1645,
@@ -4110,7 +4498,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b87868"
+  "color": "#b87868",
+  "zoom": 1645
  },
  "catalog/sand-stones-yellow-fossil": {
   "w": 1094,
@@ -4121,7 +4510,8 @@
    1094
   ],
   "avif": false,
-  "color": "#c8a888"
+  "color": "#c8a888",
+  "zoom": null
  },
  "catalog/sand-stones-yellow-fossil-leathered": {
   "w": 1112,
@@ -4132,7 +4522,8 @@
    1112
   ],
   "avif": false,
-  "color": "#b89868"
+  "color": "#b89868",
+  "zoom": null
  },
  "catalog/sand-stones-yellow-teak": {
   "w": 1280,
@@ -4143,7 +4534,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b89868"
+  "color": "#b89868",
+  "zoom": 1280
  },
  "catalog/stone-collection-cristallo": {
   "w": 826,
@@ -4154,7 +4546,8 @@
    826
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": null
  },
  "catalog/stone-collection-diana": {
   "w": 782,
@@ -4164,7 +4557,8 @@
    782
   ],
   "avif": false,
-  "color": "#d8d8c8"
+  "color": "#d8d8c8",
+  "zoom": null
  },
  "catalog/stone-collection-glacier": {
   "w": 770,
@@ -4174,7 +4568,8 @@
    770
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": null
  },
  "catalog/stone-collection-lincoln": {
   "w": 686,
@@ -4184,7 +4579,8 @@
    686
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/stone-collection-michel-angelo": {
   "w": 654,
@@ -4194,7 +4590,8 @@
    654
   ],
   "avif": false,
-  "color": "#f8e8e8"
+  "color": "#f8e8e8",
+  "zoom": null
  },
  "catalog/stone-collection-moses-taupe": {
   "w": 739,
@@ -4204,7 +4601,8 @@
    739
   ],
   "avif": false,
-  "color": "#f8e8e8"
+  "color": "#f8e8e8",
+  "zoom": null
  },
  "catalog/stone-collection-polar-white": {
   "w": 1037,
@@ -4215,7 +4613,8 @@
    1037
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "catalog/stone-collection-rosalia": {
   "w": 856,
@@ -4226,7 +4625,8 @@
    856
   ],
   "avif": false,
-  "color": "#e8e8e8"
+  "color": "#e8e8e8",
+  "zoom": null
  },
  "catalog/stone-collection-sarran-colin-sage": {
   "w": 563,
@@ -4236,7 +4636,8 @@
    563
   ],
   "avif": false,
-  "color": "#d8d8d8"
+  "color": "#d8d8d8",
+  "zoom": null
  },
  "catalog/stone-collection-torano-beige": {
   "w": 768,
@@ -4246,7 +4647,8 @@
    768
   ],
   "avif": false,
-  "color": "#d8c8b8"
+  "color": "#d8c8b8",
+  "zoom": null
  },
  "catalog/stone-collection-travertine": {
   "w": 834,
@@ -4257,7 +4659,8 @@
    834
   ],
   "avif": false,
-  "color": "#e8d8c8"
+  "color": "#e8d8c8",
+  "zoom": null
  },
  "catalog/stone-collection-veneto-beige": {
   "w": 699,
@@ -4267,7 +4670,8 @@
    699
   ],
   "avif": false,
-  "color": "#e8d8b8"
+  "color": "#e8d8b8",
+  "zoom": null
  },
  "catalog/subway-tiles-beveled-edge-subway-tiles": {
   "w": 1280,
@@ -4278,7 +4682,8 @@
    1200
   ],
   "avif": false,
-  "color": "#282828"
+  "color": "#282828",
+  "zoom": 1280
  },
  "catalog/subway-tiles-classic-gloss-subway-tiles": {
   "w": 1024,
@@ -4289,7 +4694,8 @@
    1024
   ],
   "avif": false,
-  "color": "#e8d8d8"
+  "color": "#e8d8d8",
+  "zoom": null
  },
  "catalog/subway-tiles-custom-color-subway-tiles": {
   "w": 1024,
@@ -4300,7 +4706,8 @@
    1024
   ],
   "avif": false,
-  "color": "#b8e858"
+  "color": "#b8e858",
+  "zoom": null
  },
  "catalog/subway-tiles-decorative-pattern-subway-tiles": {
   "w": 1236,
@@ -4311,7 +4718,8 @@
    1200
   ],
   "avif": false,
-  "color": "#788888"
+  "color": "#788888",
+  "zoom": 1236
  },
  "catalog/subway-tiles-matte-finish-subway-tiles": {
   "w": 1216,
@@ -4322,7 +4730,8 @@
    1200
   ],
   "avif": false,
-  "color": "#686878"
+  "color": "#686878",
+  "zoom": 1216
  },
  "catalog/subway-tiles-textured-subway-tiles": {
   "w": 1024,
@@ -4333,7 +4742,8 @@
    1024
   ],
   "avif": false,
-  "color": "#586888"
+  "color": "#586888",
+  "zoom": null
  },
  "catalog/wall-claddings-wc-001": {
   "w": 500,
@@ -4343,7 +4753,8 @@
    500
   ],
   "avif": false,
-  "color": "#c8b8a8"
+  "color": "#c8b8a8",
+  "zoom": null
  },
  "catalog/wall-claddings-wc-002": {
   "w": 400,
@@ -4352,7 +4763,8 @@
    400
   ],
   "avif": false,
-  "color": "#d8d8d8"
+  "color": "#d8d8d8",
+  "zoom": null
  },
  "catalog/wall-claddings-wc-003": {
   "w": 500,
@@ -4362,7 +4774,8 @@
    500
   ],
   "avif": false,
-  "color": "#988878"
+  "color": "#988878",
+  "zoom": null
  },
  "catalog/wall-claddings-wc-004": {
   "w": 473,
@@ -4372,7 +4785,8 @@
    473
   ],
   "avif": false,
-  "color": "#686868"
+  "color": "#686868",
+  "zoom": null
  },
  "catalog/wall-claddings-wc-005": {
   "w": 500,
@@ -4382,7 +4796,8 @@
    500
   ],
   "avif": false,
-  "color": "#c8c8b8"
+  "color": "#c8c8b8",
+  "zoom": null
  },
  "catalog/wall-claddings-wc-006": {
   "w": 1200,
@@ -4393,7 +4808,8 @@
    1200
   ],
   "avif": false,
-  "color": "#080808"
+  "color": "#080808",
+  "zoom": null
  },
  "catalog/wall-claddings-wc-007": {
   "w": 1000,
@@ -4404,7 +4820,8 @@
    1000
   ],
   "avif": false,
-  "color": "#a89898"
+  "color": "#a89898",
+  "zoom": null
  },
  "catalog/wall-claddings-wc-008": {
   "w": 1313,
@@ -4415,7 +4832,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b8b8a8"
+  "color": "#b8b8a8",
+  "zoom": 1313
  },
  "catalog/wall-claddings-wc-009": {
   "w": 500,
@@ -4425,7 +4843,8 @@
    500
   ],
   "avif": false,
-  "color": "#887878"
+  "color": "#887878",
+  "zoom": null
  },
  "catalog/wall-claddings-wc-010": {
   "w": 2560,
@@ -4436,7 +4855,8 @@
    1200
   ],
   "avif": false,
-  "color": "#989888"
+  "color": "#989888",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-011": {
   "w": 2560,
@@ -4447,7 +4867,8 @@
    1200
   ],
   "avif": false,
-  "color": "#888878"
+  "color": "#888878",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-012": {
   "w": 2560,
@@ -4458,7 +4879,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b8a898"
+  "color": "#b8a898",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-013": {
   "w": 2560,
@@ -4469,7 +4891,8 @@
    1200
   ],
   "avif": false,
-  "color": "#a8a8a8"
+  "color": "#a8a8a8",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-014": {
   "w": 2560,
@@ -4480,7 +4903,8 @@
    1200
   ],
   "avif": false,
-  "color": "#989898"
+  "color": "#989898",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-015": {
   "w": 2560,
@@ -4491,7 +4915,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b8b8b8"
+  "color": "#b8b8b8",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-016": {
   "w": 2560,
@@ -4502,7 +4927,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b8b8a8"
+  "color": "#b8b8a8",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-017": {
   "w": 2560,
@@ -4513,7 +4939,8 @@
    1200
   ],
   "avif": false,
-  "color": "#989888"
+  "color": "#989888",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-018": {
   "w": 2560,
@@ -4524,7 +4951,8 @@
    1200
   ],
   "avif": false,
-  "color": "#484838"
+  "color": "#484838",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-019": {
   "w": 2560,
@@ -4535,7 +4963,8 @@
    1200
   ],
   "avif": false,
-  "color": "#484838"
+  "color": "#484838",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-020": {
   "w": 2560,
@@ -4546,7 +4975,8 @@
    1200
   ],
   "avif": false,
-  "color": "#686868"
+  "color": "#686868",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-021": {
   "w": 2560,
@@ -4557,7 +4987,8 @@
    1200
   ],
   "avif": false,
-  "color": "#686858"
+  "color": "#686858",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-022": {
   "w": 2560,
@@ -4568,7 +4999,8 @@
    1200
   ],
   "avif": false,
-  "color": "#a8a898"
+  "color": "#a8a898",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-023": {
   "w": 2560,
@@ -4579,7 +5011,8 @@
    1200
   ],
   "avif": false,
-  "color": "#282818"
+  "color": "#282818",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-024": {
   "w": 2560,
@@ -4590,7 +5023,8 @@
    1200
   ],
   "avif": false,
-  "color": "#282818"
+  "color": "#282818",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-025": {
   "w": 2560,
@@ -4601,7 +5035,8 @@
    1200
   ],
   "avif": false,
-  "color": "#989898"
+  "color": "#989898",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-026": {
   "w": 2560,
@@ -4612,7 +5047,8 @@
    1200
   ],
   "avif": false,
-  "color": "#a8a898"
+  "color": "#a8a898",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-027": {
   "w": 2560,
@@ -4623,7 +5059,8 @@
    1200
   ],
   "avif": false,
-  "color": "#484838"
+  "color": "#484838",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-028": {
   "w": 2560,
@@ -4634,7 +5071,8 @@
    1200
   ],
   "avif": false,
-  "color": "#686858"
+  "color": "#686858",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-029": {
   "w": 2560,
@@ -4645,7 +5083,8 @@
    1200
   ],
   "avif": false,
-  "color": "#989888"
+  "color": "#989888",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-030": {
   "w": 2560,
@@ -4656,7 +5095,8 @@
    1200
   ],
   "avif": false,
-  "color": "#989888"
+  "color": "#989888",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-031": {
   "w": 2560,
@@ -4667,7 +5107,8 @@
    1200
   ],
   "avif": false,
-  "color": "#989898"
+  "color": "#989898",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-032": {
   "w": 2560,
@@ -4678,7 +5119,8 @@
    1200
   ],
   "avif": false,
-  "color": "#a8a8a8"
+  "color": "#a8a8a8",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-033": {
   "w": 2560,
@@ -4689,7 +5131,8 @@
    1200
   ],
   "avif": false,
-  "color": "#988878"
+  "color": "#988878",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-034": {
   "w": 2560,
@@ -4700,7 +5143,8 @@
    1200
   ],
   "avif": false,
-  "color": "#787868"
+  "color": "#787868",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-035": {
   "w": 2560,
@@ -4711,7 +5155,8 @@
    1200
   ],
   "avif": false,
-  "color": "#987868"
+  "color": "#987868",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-036": {
   "w": 2560,
@@ -4722,7 +5167,8 @@
    1200
   ],
   "avif": false,
-  "color": "#484848"
+  "color": "#484848",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-037": {
   "w": 2560,
@@ -4733,7 +5179,8 @@
    1200
   ],
   "avif": false,
-  "color": "#b8b8b8"
+  "color": "#b8b8b8",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-038": {
   "w": 2560,
@@ -4744,7 +5191,8 @@
    1200
   ],
   "avif": false,
-  "color": "#a8a898"
+  "color": "#a8a898",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-039": {
   "w": 2560,
@@ -4755,7 +5203,8 @@
    1200
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-040": {
   "w": 2560,
@@ -4766,7 +5215,8 @@
    1200
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-041": {
   "w": 2560,
@@ -4777,7 +5227,8 @@
    1200
   ],
   "avif": false,
-  "color": "#a88878"
+  "color": "#a88878",
+  "zoom": 2400
  },
  "catalog/wall-claddings-wc-042": {
   "w": 499,
@@ -4787,7 +5238,8 @@
    499
   ],
   "avif": false,
-  "color": "#585858"
+  "color": "#585858",
+  "zoom": null
  },
  "catalog/wall-claddings-wc-043": {
   "w": 729,
@@ -4797,7 +5249,8 @@
    729
   ],
   "avif": false,
-  "color": "#989898"
+  "color": "#989898",
+  "zoom": null
  },
  "catalog/wall-claddings-wc-044": {
   "w": 902,
@@ -4808,7 +5261,8 @@
    902
   ],
   "avif": false,
-  "color": "#b8b8b8"
+  "color": "#b8b8b8",
+  "zoom": null
  },
  "catalog/wire-cut-bricks-architectural-finish-wire-cut-bricks": {
   "w": 387,
@@ -4817,7 +5271,8 @@
    387
   ],
   "avif": false,
-  "color": "#884828"
+  "color": "#884828",
+  "zoom": null
  },
  "catalog/wire-cut-bricks-custom-shade-wire-cut-units": {
   "w": 1344,
@@ -4828,7 +5283,8 @@
    1200
   ],
   "avif": false,
-  "color": "#a86858"
+  "color": "#a86858",
+  "zoom": 1344
  },
  "catalog/wire-cut-bricks-natural-tone-clay-bricks": {
   "w": 1294,
@@ -4839,7 +5295,8 @@
    1200
   ],
   "avif": false,
-  "color": "#a86858"
+  "color": "#a86858",
+  "zoom": 1294
  },
  "catalog/wire-cut-bricks-red-clay-wire-cut-bricks": {
   "w": 602,
@@ -4849,7 +5306,8 @@
    602
   ],
   "avif": false,
-  "color": "#b85828"
+  "color": "#b85828",
+  "zoom": null
  },
  "catalog/wire-cut-bricks-textured-wire-cut-bricks": {
   "w": 460,
@@ -4859,7 +5317,8 @@
    460
   ],
   "avif": false,
-  "color": "#f8f8f8"
+  "color": "#f8f8f8",
+  "zoom": null
  },
  "categories/acrylic-surfaces-overview": {
   "w": 602,

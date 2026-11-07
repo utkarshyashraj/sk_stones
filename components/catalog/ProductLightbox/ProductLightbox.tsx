@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useCallback, useEffect } from 'react';
 import { Icon } from '@/components/ui/Icon';
-import { Picture } from '@/components/ui/Picture';
+import { StoneMagnifier } from '@/components/catalog/StoneMagnifier/StoneMagnifier';
 import { useModalDialog } from '@/components/ui/useModalDialog';
 import { useShortlist } from '@/components/shortlist/shortlist-store';
 import { toShortlistItem } from '@/components/catalog/ProductCard/ProductCard';
@@ -36,12 +36,15 @@ export function ProductLightbox({ products, index, names, onClose, onNavigate }:
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
+      // Keys typed inside another dialog on top (the zoom viewer) belong to it.
+      const inDialog = e.target instanceof Element ? e.target.closest('dialog') : null;
+      if (inDialog && inDialog !== ref.current) return;
       if (e.key === 'ArrowRight') go(1);
       else if (e.key === 'ArrowLeft') go(-1);
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [open, go]);
+  }, [open, go, ref]);
 
   return (
     <dialog ref={ref} className={styles.dialog} aria-labelledby="lb-title" aria-describedby="lb-specs">
@@ -70,14 +73,17 @@ export function ProductLightbox({ products, index, names, onClose, onNavigate }:
 
 function SwipeCapture({ onSwipe }: { onSwipe: (d: number) => void }) {
   useEffect(() => {
-    let start: { x: number; y: number; t: number } | null = null;
+    let start: { x: number; y: number; t: number; el: HTMLElement } | null = null;
     const down = (e: TouchEvent) => {
       const t = e.touches[0];
       const target = e.target as HTMLElement;
-      if (t && target.closest('[data-swipe]')) start = { x: t.clientX, y: t.clientY, t: Date.now() };
+      if (t && target.closest('[data-swipe]'))
+        start = { x: t.clientX, y: t.clientY, t: Date.now(), el: target };
     };
     const up = (e: TouchEvent) => {
       const t = e.changedTouches[0];
+      // A long-press on the image drags the magnifier lens; that is not a swipe.
+      if (start?.el.closest('[data-lens-used]')) start = null;
       if (!start || !t) return;
       const dx = t.clientX - start.x;
       const dy = t.clientY - start.y;
@@ -115,13 +121,11 @@ function Detail({ product: p, names }: { product: ClientProduct; names: Record<s
     <div className={styles.layout}>
       <div className={styles.media} data-swipe>
         {p.img ? (
-          <Picture
+          <StoneMagnifier
             image={p.img}
-            alt={`${p.name} — ${collectionName}`}
+            alt={`${p.name}${p.finish ? `, ${p.finish} finish` : ''} — ${collectionName}`}
             sizes="(min-width: 1024px) 60vw, 100vw"
-            priority
-            preloadHint={false}
-            imgClassName={styles.img}
+            className={styles.magnifier}
           />
         ) : (
           <div className={styles.noPhoto}>

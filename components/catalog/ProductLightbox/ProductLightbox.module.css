@@ -28,11 +28,8 @@
   background: var(--bg);
   touch-action: pan-y;
 }
-.img {
-  width: 100%;
-  height: auto;
-  max-height: 60dvh;
-  object-fit: contain;
+.magnifier {
+  --mag-max-h: 60dvh;
 }
 .noPhoto {
   display: grid;
@@ -135,8 +132,9 @@
   .media {
     min-height: min(76dvh, 720px);
   }
-  .img {
-    max-height: min(76dvh, 720px);
+  /* Leave room above and below for the prev/next pill so it never covers the stone. */
+  .magnifier {
+    --mag-max-h: calc(min(76dvh, 720px) - 128px);
   }
   .info {
     overflow-y: auto;

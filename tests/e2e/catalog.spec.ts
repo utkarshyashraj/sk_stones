@@ -92,6 +92,43 @@ test.describe('product lightbox', () => {
     await expect(page.getByRole('button', { name: 'Quick view: Petals Pattern' })).toBeFocused();
   });
 
+  test('stone magnifier: hover lens, high-res on demand, keyboard zoom viewer', async ({
+    page,
+    isMobile,
+  }) => {
+    const zoomFile = /\/catalog\/imported-marbles-nero-portoro-2400\.webp$/; // not the site's marble backdrop
+    const requested: string[] = [];
+    page.on('request', (r) => requested.push(r.url()));
+    await page.goto('/imported-marbles#product=imported-marbles-nero-portoro');
+    const dialog = page.getByRole('dialog', { name: 'Nero Portoro' });
+    await expect(dialog.getByRole('heading', { level: 2 })).toHaveText('Nero Portoro');
+    expect(requested.some((u) => zoomFile.test(u))).toBe(false); // nothing heavy until someone inspects
+
+    if (!isMobile) {
+      const img = dialog.getByRole('img', { name: /Nero Portoro/ });
+      const box = (await img.boundingBox())!;
+      await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+      await page.mouse.move(box.x + box.width / 3, box.y + box.height / 3);
+      await expect.poll(() => requested.some((u) => zoomFile.test(u))).toBe(true);
+      await expect(dialog.locator('[data-on]')).toHaveCSS('opacity', '1');
+      await expect(dialog.getByText('Hover to inspect the stone')).toBeHidden();
+      await page.mouse.move(2, 2);
+      await expect(dialog.locator('[data-on]')).toHaveCount(0);
+    }
+
+    const zoomBtn = dialog.getByRole('button', { name: 'Zoom image' });
+    await zoomBtn.focus();
+    await page.keyboard.press('Enter');
+    const viewer = page.getByRole('dialog', { name: /zoomed view/ });
+    await expect(viewer).toBeVisible();
+    await expect(viewer.getByRole('button', { name: 'Close zoomed view' })).toBeFocused();
+    await page.keyboard.press('ArrowRight'); // pans the viewer; must not change the stone behind it
+    await page.keyboard.press('Escape');
+    await expect(viewer).toBeHidden();
+    await expect(dialog.getByRole('heading', { level: 2 })).toHaveText('Nero Portoro');
+    await expect(zoomBtn).toBeFocused();
+  });
+
   test('deep link opens the right product', async ({ page }) => {
     await page.goto('/kota-stones#product=kota-stones-kadpa-black-mirror-polished');
     await expect(page.getByRole('dialog').getByRole('heading', { level: 2 })).toHaveText(

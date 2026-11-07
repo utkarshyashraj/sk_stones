@@ -9,6 +9,8 @@ import { useEffect, useRef } from 'react';
 export function useModalDialog(open: boolean, onClose: () => void) {
   const ref = useRef<HTMLDialogElement>(null);
   const opener = useRef<Element | null>(null);
+  // Restore whatever was there before (a dialog opened from inside another dialog must not unlock the page).
+  const prevOverflow = useRef('');
   const onCloseRef = useRef(onClose);
   useEffect(() => {
     onCloseRef.current = onClose;
@@ -19,6 +21,7 @@ export function useModalDialog(open: boolean, onClose: () => void) {
     if (!dlg) return;
     if (open && !dlg.open) {
       opener.current = document.activeElement;
+      prevOverflow.current = document.documentElement.style.overflow;
       dlg.showModal();
       document.documentElement.style.overflow = 'hidden';
     } else if (!open && dlg.open) {
@@ -30,7 +33,7 @@ export function useModalDialog(open: boolean, onClose: () => void) {
     const dlg = ref.current;
     if (!dlg) return;
     const handleClose = () => {
-      document.documentElement.style.overflow = '';
+      document.documentElement.style.overflow = prevOverflow.current;
       onCloseRef.current();
       const el = opener.current as HTMLElement | null;
       if (el && typeof el.focus === 'function' && document.contains(el)) el.focus();

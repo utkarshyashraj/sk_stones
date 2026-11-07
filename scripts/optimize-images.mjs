@@ -1,5 +1,6 @@
 // Generates responsive, modern-format images for every job in content/generated/image-jobs.json.
-//   catalog/* -> WebP at 400/800/1200 px
+//   catalog/* -> WebP at 400/800/1200 px, plus one magnifier rendition (WebP, up to 2400 px) when the
+//               source is wider than 1200 px — loaded only when someone inspects the stone
 //   site/* and categories/* -> WebP + AVIF at 640/1280/1920 px
 // Never upscales. Writes intrinsic dimensions + dominant colour to content/generated/images.json
 // so components can reserve space (no layout shift). Incremental: existing outputs are reused.
@@ -19,7 +20,7 @@ const jobs = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/generated/image
 const prev = !force && fs.existsSync(META_FILE) ? JSON.parse(fs.readFileSync(META_FILE, 'utf8')) : {};
 
 const PROFILES = {
-  catalog: { widths: [400, 800, 1200], webp: 74, avif: null },
+  catalog: { widths: [400, 800, 1200], webp: 74, avif: null, zoom: { max: 2400, webp: 70 } },
   site: { widths: [480, 800, 1200, 1920], webp: 74, avif: 52 },
 };
 
@@ -41,7 +42,12 @@ async function run(job) {
       (w) => fs.existsSync(`${outBase}-${w}.webp`) && (!old.avif || fs.existsSync(`${outBase}-${w}.avif`)),
     )
   ) {
-    meta[job.key] = old;
+    // Renditions are current; only the magnifier file may be missing (added after the first run).
+    const zoom =
+      old.zoom === undefined || (old.zoom && !fs.existsSync(`${outBase}-${old.zoom}.webp`))
+        ? await makeZoom(src, outBase, old.w, profile)
+        : old.zoom;
+    meta[job.key] = profile.zoom ? { ...old, zoom } : old;
     reused++;
     return;
   }
@@ -68,9 +74,24 @@ async function run(job) {
     widths,
     avif: Boolean(profile.avif),
     color: `#${hex(dominant.r)}${hex(dominant.g)}${hex(dominant.b)}`,
+    ...(profile.zoom ? { zoom: await makeZoom(src, outBase, width, profile) } : {}),
   };
   done++;
   if (done % 50 === 0) console.log(`  ${done} processed…`);
+}
+
+/** Magnifier rendition: min(source, 2400) px. null when the largest normal rendition is already full size. */
+async function makeZoom(src, outBase, width, profile) {
+  if (!profile.zoom) return undefined;
+  const largest = profile.widths[profile.widths.length - 1];
+  if (width <= largest) return null;
+  const zw = Math.min(width, profile.zoom.max);
+  await sharp(src, { failOn: 'none' })
+    .rotate()
+    .resize({ width: zw, withoutEnlargement: true })
+    .webp({ quality: profile.zoom.webp, effort: 5 })
+    .toFile(`${outBase}-${zw}.webp`);
+  return zw;
 }
 
 const queue = [...jobs];

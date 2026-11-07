@@ -4,6 +4,8 @@ export interface ImageMeta {
   widths: number[];
   avif: boolean;
   color: string;
+  /** Width of the magnifier rendition (catalog only); null = the largest srcset width is full size. */
+  zoom?: number | null;
 }
 
 /** An optimised image reference: key -> /images/<key>-<width>.webp */
