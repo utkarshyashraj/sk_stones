@@ -2,10 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!-- This site is hosted on Netlify. Anyone can build and deploy a site
-     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=d4772256-9b0c-4023-884d-54bad2f890df
-     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://skstonesindia.com/stone-art-installations.html">
     <meta property="og:title" content="Stone Art Installations | S K Stones India">
     <meta property="og:description" content="Custom stone art and wall art installations — handcrafted masterpieces for interiors and exteriors. S K Stones India.">
@@ -20,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/mega-menu.css">
-    <link rel="stylesheet" href="css/mobile-nav.css"><style>
+    <link rel="stylesheet" href="css/mobile-nav.css?v=3"><style>
         :root {
             --gold: #c9a227;
             --gold-light: #d4af37;
@@ -94,7 +91,7 @@
         .section { padding: 100px 50px; }
         .section-dark { background: rgba(10,10,10,0.9); }
         .container { max-width: 1200px; margin: 0 auto; }
-        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header { text-align: center; margin-bottom: 40px; }
         .section-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 20px; }
         .section-header h2 span { color: var(--gold); }
         .section-header p { color: var(--gray); max-width: 700px; margin: 0 auto; line-height: 1.8; }
@@ -109,7 +106,7 @@
         .feature-card ul li { color: var(--gray); padding: 8px 0; padding-left: 25px; position: relative; }
         .feature-card ul li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); }
         
-        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 40px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 24px; }
         .gallery-item { border-radius: 15px; overflow: hidden; height: 300px; border: 2px solid rgba(255,255,255,0.1); transition: all 0.4s ease; }
         .gallery-item:hover { border-color: var(--gold); transform: translateY(-8px); box-shadow: 0 20px 50px rgba(201,162,39,0.2); }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
@@ -172,8 +169,9 @@
             .header { padding: 12px 16px; }
             .desktop-nav { display: none; }
             .hamburger { display: none !important; }
-            .hero, .section, .faq-section, .cta-section { padding-left: 20px; padding-right: 20px; }
-            .stats { padding: 40px 20px; }
+            .hero, .section, .faq-section, .cta-section { padding: 28px 16px; }
+            .hero.service-hero { padding: 0; }
+            .stats { padding: 20px 16px; }
             .gallery-grid { grid-template-columns: 1fr; }
             .features-grid { grid-template-columns: 1fr; }
             .footer { padding: 28px 16px 0; }
@@ -188,10 +186,10 @@
         .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; opacity: 0; visibility: hidden; transition: all 0.3s; }
         .overlay.active { opacity: 1; visibility: visible; }
     </style>
-    <link rel="stylesheet" href="css/marble-showroom.css">
+    <link rel="stylesheet" href="css/marble-showroom.css?v=5">
 
 </head>
-<body class="showroom-theme">
+<body class="showroom-theme page-service">
     <header class="header">
         <a aria-label='S K Stones India' class='brand-lockup' href='/'>
             <img class="brand-mark" src="images/shree-logo.png" alt="" width="40" height="80" decoding="async">
@@ -206,10 +204,9 @@
             <div class="nav-dropdown">
                 <span class="nav-link">Services <i class="fas fa-chevron-down"></i></span>
                 <div class="dropdown-menu">
-                    <a href='/installations'>Installations</a>
                     <a href='/landscaping'>Landscaping</a>
                     <a href='/flooring-executions'>Flooring Executions</a>
-                    <a href='/stone-art-installations'>Stone Art Installations</a>
+                    <a href='/stone-art-installations'>Elevations</a>
                 </div>
             </div>
             <div class="nav-dropdown mega-dropdown">
@@ -292,34 +289,26 @@
         <span class="close-nav" id="closeNav">&times;</span>
         <a href='/'>Home</a>
         <a href='/about'>About Us</a>
-        <a href='/installations'>Installations</a>
         <a href='/landscaping'>Landscaping</a>
         <a href='/flooring-executions'>Flooring Executions</a>
-        <a href='/stone-art-installations'>Stone Art Installations</a>
+        <a href='/stone-art-installations'>Elevations</a>
         <a href='/products'>Products</a>
         <a href='/projects'>Our Projects</a>
         <a href='/contact'>Contact Us</a>
     </nav>
-    <section class="hero service-hero">
+            <section class="hero service-hero">
         <div class="service-hero-top">
             <div class="service-hero-layout">
                 <div class="service-hero-inner">
-<h1 class="service-hero-title">
-                <span class="tone-gold">PRECISION-DRIVEN</span>
-                <span class="tone-light">STONE ART</span>
-                <span class="tone-gold">INSTALLATION</span>
-                <span class="tone-light">EXPERTISE</span>
-                </h1>
-                <div class="service-hero-side">
-                    <p class="service-hero-lead">We deliver custom stone art installations — feature walls, murals, and sculpted details — with careful planning, material harmony, and precise on-site craftsmanship.</p>
-                    <div class="hero-actions service-hero-actions">
-                        <a class='btn btn-primary' href='/contact'>Get a Quote</a>
-                        <a href="tel:+917022630994" class="btn btn-outline-light"><i class="fas fa-phone"></i> Call Now</a>
-                    </div>
-                </div>
+                    <h1 class="service-hero-title">
+                        <span class="tone-gold">PRECISION-DRIVEN</span>
+                        <span class="tone-light">STONE ART</span>
+                        <span class="tone-gold">INSTALLATION</span>
+                        <span class="tone-light">EXPERTISE</span>
+                    </h1>
                 </div>
                 <div class="service-hero-photo">
-                    <img src="images/stoneart-1.png" alt="Custom stone art installation" loading="eager">
+                    <img src="images/elevations-1.jpg" alt="Stone elevation cladding project" loading="eager">
                 </div>
             </div>
         </div>
@@ -328,19 +317,19 @@
     <section class="stats">
         <div class="stats-grid">
             <div class="stat-item">
-                <h3><span class="counter" data-target="15">0</span><span>+</span></h3>
+                <h3><span class="counter" data-target="12">0</span><span>+</span></h3>
                 <p>Years of Experience</p>
             </div>
             <div class="stat-item">
-                <h3><span class="counter" data-target="300">0</span><span>+</span></h3>
+                <h3><span class="counter" data-target="100">0</span><span>+</span></h3>
                 <p>Art Installations</p>
             </div>
             <div class="stat-item">
-                <h3><span class="counter" data-target="50">0</span><span>+</span></h3>
+                <h3><span class="counter" data-target="40">0</span><span>+</span></h3>
                 <p>Custom Designs</p>
             </div>
             <div class="stat-item">
-                <h3><span class="counter" data-target="99">0</span><span>%</span></h3>
+                <h3><span class="counter" data-target="95">0</span><span>%</span></h3>
                 <p>Client Satisfaction</p>
             </div>
         </div>
@@ -350,8 +339,8 @@
         <div class="container">
             <div class="section-header">
                 <h2>Built with <span>Artistic Layout</span> & Site Precision</h2>
-                <p>With specialized stone art execution expertise, our installations focus on accurate placement, visual balance, secure fixing methods, and controlled on-site handling throughout the process.</p>
             </div>
+            <p class="mobile-swipe-hint features-swipe-hint" aria-label="Swipe"><i class="fas fa-arrow-right"></i></p>
             <div class="features-grid">
                 <div class="feature-card">
                     <h3>SKILLED EXECUTION <span>TEAM</span></h3>
@@ -393,23 +382,23 @@
         <div class="container">
             <div class="section-header">
                 <h2>Our <span>Stone Art</span> Work</h2>
-                <p>Showcasing artistic stone installations including murals, fountains, water features, and decorative installations.</p>
             </div>
+            <p class="mobile-swipe-hint gallery-swipe-hint" aria-label="Swipe"><i class="fas fa-arrow-right"></i></p>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="images/stoneart-1.png" alt="Modern Courtyard Stone Paving Design">
+                    <img src="images/elevations-2.jpg" alt="Textured stone elevation wall cladding">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/stoneart-2.png" alt="Natural Stone Pathway with Boulder Walls">
+                    <img src="images/elevations-3.jpg" alt="Terracotta jaali elevation installation">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/stoneart-3.png" alt="Colorful Garden with Stone Edging">
+                    <img src="images/elevations-4.jpg" alt="Decorative terracotta elevation feature wall">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/stoneart-4.png" alt="Curved Stone Border Landscaping">
+                    <img src="images/elevations-5.jpg" alt="Stone mural elevation installation">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/stoneart-5.png" alt="Stone Retaining Wall with Flowers">
+                    <img src="images/elevations-6.jpg" alt="Completed stone art elevation feature wall">
                 </div>
             </div>
         </div>
@@ -419,7 +408,6 @@
         <div class="container">
             <div class="section-header">
                 <h2>Frequently Asked <span>Questions</span></h2>
-                <p>Get clarity on our stone art installation process, layout planning, fixing techniques, quality standards, and execution methods.</p>
             </div>
             <div class="faq-list">
                 <div class="faq-item">
@@ -470,47 +458,22 @@
             </div>
         </div>
     </section>
-    
-    <section class="cta-section reveal">
-        <div class="cta-content">
-            <h2>Let's Start Your <span>Stone Art</span> Installation Today</h2>
-            <p>Premium stone art installation services for homes, offices & commercial spaces.</p>
-            <div class="cta-actions">
-                <a class='btn btn-primary' href='/contact'>Contact Us Now</a>
-            </div>
-        </div>
-    </section>
-    
     <footer class="footer">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <a aria-label='S K Stones India' class='brand-lockup brand-lockup-footer' href='/'>
-            <img class="brand-mark" src="images/shree-logo.png" alt="" width="40" height="80" decoding="async">
-            <span class="brand-text">
-                        <span class="brand-name">S K <span class="brand-stones">Stones</span> India</span>
-                        <span class="brand-formerly">(formerly Shree Stones &amp; Services)</span>
-                    </span>
-                </a>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <a href='/'>Home</a>
-                <a href='/about'>About Us</a>
-                <a href='/products'>Products</a>
-                <a href='/contact'>Contact Us</a>
-            </div>
-            <div class="footer-col">
-                <h4>Services</h4>
-                <a href='/installations'>Installations</a>
-                <a href='/landscaping'>Landscaping</a>
-                <a href='/flooring-executions'>Flooring Executions</a>
-                <a href='/stone-art-installations'>Stone Art</a>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <p><i class="fas fa-phone" style="color: var(--gold); margin-right: 10px;"></i> +91 70226 30994</p>
-                <p><i class="fas fa-envelope" style="color: var(--gold); margin-right: 10px;"></i> info@skstonesindia.com</p>
-                <p><i class="fas fa-map-marker-alt" style="color: var(--gold); margin-right: 10px;"></i> Koramangala, Bengaluru</p>
+        <div class="footer-grid footer-grid-contact-only">
+            <div class="footer-contact-grid">
+                <div class="footer-contact-block">
+                    <h4>Contact</h4>
+                    <p><a href="tel:+917022630994"><i class="fas fa-phone"></i> +91 70226 30994</a></p>
+                    <p><a href="mailto:info@skstonesindia.com"><i class="fas fa-envelope"></i> info@skstonesindia.com</a></p>
+                </div>
+                <div class="footer-contact-block">
+                    <h4>Bangalore</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> <span>627-628, 15th Main, 80 Feet Rd, 5th Cross, Koramangala 4th Block, Bengaluru, Karnataka 560034</span></p>
+                </div>
+                <div class="footer-contact-block">
+                    <h4>Hyderabad</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> <span>ORR Service Rd, Vattinagulapally, Hyderabad, Telangana 500075</span></p>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -588,8 +551,9 @@
             backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
         }
     </script>
-    <script src="js/mobile-nav.js"></script>
+    <script src="js/mobile-nav.js?v=2"></script>
     <script src="js/mega-menu.js"></script>
     <script src="js/cta-reveal.js" defer></script>
+    <script src="js/product-lightbox.js"></script>
 </body>
 </html>

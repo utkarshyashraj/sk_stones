@@ -113,26 +113,6 @@ body.showroom-theme .header.scrolled .hamburger span {
     color: var(--gold);
 }
 
-.desktop-nav > a[href="contact.html"],
-.desktop-nav > a[href$="contact.html"] {
-    background: linear-gradient(135deg, var(--gold) 0%, #e6b800 100%);
-    color: var(--dark) !important;
-    border-radius: 50px;
-    font-weight: 600;
-    padding: 10px 22px !important;
-}
-
-.desktop-nav > a[href="contact.html"]:hover,
-.desktop-nav > a[href$="contact.html"]:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(201, 162, 39, 0.35);
-}
-
-.desktop-nav > a[href="contact.html"]::after,
-.desktop-nav > a[href$="contact.html"]::after {
-    display: none;
-}
-
 .nav-dropdown {
     position: relative;
 }

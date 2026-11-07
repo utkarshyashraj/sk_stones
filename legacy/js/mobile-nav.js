@@ -7,6 +7,7 @@
         about: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.25"/><path d="M5.5 19.5c1.6-3.2 4-4.75 6.5-4.75s4.9 1.55 6.5 4.75"/></svg>',
         products: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/><path d="M9 11v2"/><path d="M15 11v2"/></svg>',
         services: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3 17.7 9.3"/><path d="M5.5 14.5 15 5a3.5 3.5 0 0 1 4 4 3.5 3.5 0 0 1 0 4L9.5 18.5h-4v-4z"/></svg>',
+        projects: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="4.5" width="7" height="7" rx="1.2"/><rect x="3.5" y="12.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="12.5" width="7" height="7" rx="1.2"/></svg>',
         more: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.75" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.75" fill="currentColor" stroke="none"/><circle cx="19" cy="12" r="1.75" fill="currentColor" stroke="none"/></svg>'
     };
 
@@ -25,12 +26,12 @@
     ]);
 
     const SERVICE_PAGES = new Set([
-        'installations.html', 'landscaping.html', 'flooring-executions.html',
+        'landscaping.html', 'flooring-executions.html',
         'stone-art-installations.html'
     ]);
 
     const MORE_PAGES = new Set([
-        'projects.html', 'contact.html', 'thank-you.html'
+        'contact.html', 'thank-you.html'
     ]);
 
     function currentPage() {
@@ -39,11 +40,16 @@
 
     function activeTab() {
         const page = currentPage();
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('view') === 'more' && window.matchMedia(`(max-width: ${MOBILE_BP}px)`).matches) {
+            return 'more';
+        }
         if (page === 'index.html' || page === '' || page === '/') return 'home';
         if (page === 'about.html') return 'about';
         if (PRODUCT_PAGES.has(page)) return 'products';
         if (SERVICE_PAGES.has(page)) return 'services';
-        if (MORE_PAGES.has(page) || page.indexOf('case-study') === 0) return 'more';
+        if (page === 'projects.html' || page.indexOf('case-study') === 0) return 'projects';
+        if (MORE_PAGES.has(page)) return 'more';
         return '';
     }
 
@@ -57,10 +63,9 @@
             <details class="mobile-details">
                 <summary>Services</summary>
                 <div class="mobile-sub">
-                    <a href="installations.html">Installations</a>
                     <a href="landscaping.html">Landscaping</a>
                     <a href="flooring-executions.html">Flooring Executions</a>
-                    <a href="stone-art-installations.html">Stone Art Installations</a>
+                    <a href="stone-art-installations.html">Elevations</a>
                 </div>
             </details>
 
@@ -157,6 +162,7 @@
             ${link('about', 'About Us', 'about.html')}
             ${item('products', 'Products', 'aria-haspopup="dialog" aria-controls="mnavSheetProducts"')}
             ${item('services', 'Services', 'aria-haspopup="dialog" aria-controls="mnavSheetServices"')}
+            ${link('projects', 'Projects', 'projects.html')}
             ${item('more', 'More', 'aria-haspopup="dialog" aria-controls="mnavSheetMore"')}
         </nav>`;
     }
@@ -198,11 +204,9 @@
                     <button type="button" class="mnav-sheet-close" data-mnav-close aria-label="Close">&times;</button>
                 </div>
                 <div class="mnav-sheet-body">
-                    <a class="mnav-sheet-link" href="flooring-executions.html">Flooring</a>
-                    <a class="mnav-sheet-link" href="installations.html">Installation</a>
                     <a class="mnav-sheet-link" href="landscaping.html">Landscaping</a>
-                    <a class="mnav-sheet-link" href="stone-art-installations.html">Stone Art</a>
-                    <a class="mnav-sheet-link" href="contact.html">Consultation</a>
+                    <a class="mnav-sheet-link" href="flooring-executions.html">Flooring Executions</a>
+                    <a class="mnav-sheet-link" href="stone-art-installations.html">Elevations</a>
                 </div>
             </div>
 
@@ -214,9 +218,12 @@
                 </div>
                 <div class="mnav-sheet-body">
                     <div class="mnav-sheet-section">
-                        <a class="mnav-sheet-link" href="index.html#testimonials">Testimonials</a>
-                        <a class="mnav-sheet-link" href="index.html#faq">FAQ</a>
-                        <a class="mnav-sheet-link" href="projects.html">Projects</a>
+                        <p class="mnav-sheet-section-title">From the homepage</p>
+                        <a class="mnav-sheet-link" href="index.html?view=more#who-we-are">Who We Are</a>
+                        <a class="mnav-sheet-link" href="index.html?view=more#process">Our Process</a>
+                        <a class="mnav-sheet-link" href="index.html?view=more#trust">Excellence &amp; Trust</a>
+                        <a class="mnav-sheet-link" href="index.html?view=more#faq">FAQ</a>
+                        <a class="mnav-sheet-link" href="index.html?view=more#testimonials">Client Reviews</a>
                     </div>
                     <div class="mnav-sheet-section">
                         <p class="mnav-sheet-section-title">Connect</p>
@@ -306,7 +313,11 @@
     }
 
     function ensureBottomNav() {
-        if (document.getElementById('mobileBottomNav')) return;
+        // Always rebuild so nav updates (e.g. Projects tab) aren't stuck behind cache/DOM
+        const existingNav = document.getElementById('mobileBottomNav');
+        const existingRoot = document.getElementById('mnavSheetRoot');
+        if (existingNav) existingNav.remove();
+        if (existingRoot) existingRoot.remove();
 
         const wrap = document.createElement('div');
         wrap.innerHTML = bottomNavHTML() + sheetsHTML();
@@ -321,9 +332,10 @@
             btn.addEventListener('click', closeAllSheets);
         });
 
+        // Only Products / Services / More open sheets — Home, About, Projects navigate normally
         document.querySelectorAll('.mnav-item[data-mnav]').forEach((el) => {
             const key = el.getAttribute('data-mnav');
-            if (key === 'home' || key === 'about') return;
+            if (key !== 'products' && key !== 'services' && key !== 'more') return;
             el.addEventListener('click', (e) => {
                 e.preventDefault();
                 const open = document.getElementById(

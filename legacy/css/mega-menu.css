@@ -228,20 +228,6 @@
         justify-self: end;
     }
 
-    .header .desktop-nav > a[href="contact.html"],
-    .header .desktop-nav > a[href$="contact.html"] {
-        background: linear-gradient(135deg, #c9a227 0%, #e6b800 100%);
-        color: #1a1a1a !important;
-        border-radius: 50px;
-        font-weight: 600;
-        padding: 10px 22px !important;
-    }
-
-    .header .desktop-nav > a[href="contact.html"]::after,
-    .header .desktop-nav > a[href$="contact.html"]::after {
-        display: none !important;
-    }
-
     .header .header-contact-mobile,
     .header .hamburger {
         display: none !important;

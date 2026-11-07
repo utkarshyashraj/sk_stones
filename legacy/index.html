@@ -2,10 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!-- This site is hosted on Netlify. Anyone can build and deploy a site
-     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=d4772256-9b0c-4023-884d-54bad2f890df
-     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S K Stones India | Premium Natural Stones & Granite</title>
     <meta name="description" content="S K Stones India — premium granite, marble & natural stone supplier in Bengaluru since 2014. Supply, fabrication & installation for homes, hotels & commercial projects.">
     <meta name="keywords" content="marble supplier Bangalore, granite Bengaluru, stone cladding, flooring installation, S K Stones India">
@@ -17,7 +14,7 @@
     <meta property="og:url" content="https://skstonesindia.com/">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preload" as="image" href="images/marble-bg-mobile.jpg" type="image/jpeg" media="(max-width: 768px)">
-    <link rel="preload" as="image" href="images/marble-bg-light-2x.png" type="image/png" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="images/marble-bg-nero.jpg" type="image/jpeg" media="(min-width: 769px)">
     <link rel="preload" as="video" href="images/home-page-video-mobile.mp4" type="video/mp4" media="(max-width: 1024px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/site-extras.css">
     <link rel="stylesheet" href="css/mega-menu.css">
-    <link rel="stylesheet" href="css/mobile-nav.css">
+    <link rel="stylesheet" href="css/mobile-nav.css?v=3">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root { --gold: #C9A227; --gold-dark: #9b7b1e; --dark: #0a0a0a; --white: #ffffff; }
@@ -99,18 +96,6 @@
         .desktop-nav > a:hover::after,
         .desktop-nav > a.active::after { width: 55%; left: 22.5%; }
         .desktop-nav > a:hover, .desktop-nav > a.active { color: var(--gold); }
-        .desktop-nav > a[href="contact.html"] {
-            background: linear-gradient(135deg, var(--gold) 0%, #e6b800 100%);
-            color: var(--dark) !important;
-            border-radius: 50px;
-            font-weight: 600;
-            padding: 10px 22px !important;
-        }
-        .desktop-nav > a[href="contact.html"]:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(201,162,39,0.35);
-        }
-        .desktop-nav > a[href="contact.html"]::after { display: none; }
         .nav-dropdown { position: relative; }
         .nav-dropdown > .nav-link { display: flex; align-items: center; gap: 5px; cursor: pointer; }
         .nav-dropdown > .nav-link i { font-size: 0.7rem; transition: transform 0.3s; }
@@ -466,7 +451,13 @@
         }
         .process-section .section-header {
             margin-bottom: 56px;
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
         }
+        .process-section .section-header h2 { color: #f8f4ec; }
+        .process-section .section-header .section-label { color: rgba(248, 244, 236, 0.92); }
         .process-steps {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -613,10 +604,24 @@
         /* Services Slider Section */
         .services-slider-section { padding: 100px 20px; }
         .services-slider-container { max-width: 1300px; margin: 0 auto; position: relative; overflow: hidden; }
-        .services-slider-header { text-align: center; margin-bottom: 50px; }
-        .services-slider-header h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 20px; }
+        .services-slider-header {
+            text-align: center;
+            margin-bottom: 50px;
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+        .services-slider-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #f8f4ec;
+        }
         .services-slider-header h2 span { color: var(--gold); }
         .services-slider-header .underline { width: 100px; height: 3px; background: var(--gold); margin: 0 auto; }
+        .services-slider-header .section-label { color: rgba(248, 244, 236, 0.92); }
         .services-wrap {
             position: relative;
             max-width: 1320px;
@@ -662,7 +667,7 @@
         }
         .service-slide:hover { transform: translateY(-10px); border-color: var(--gold); box-shadow: 0 20px 50px rgba(201,162,39,0.15); }
         .service-slide-image { height: 350px; overflow: hidden; position: relative; background: rgba(26,26,26,0.8); flex-shrink: 0; }
-        .service-slide-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.5s; }
+        .service-slide-image img { width: 100%; height: 100%; object-position: center; transition: transform 0.5s; }
         .service-slide:hover .service-slide-image img { transform: scale(1.1); }
         .service-slide-content { padding: 30px; display: flex; flex-direction: column; flex: 1 1 auto; }
         .service-slide-content h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 2px; }
@@ -688,7 +693,18 @@
             position: relative;
         }
         .trust-container { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; }
-        .trust-section h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; text-align: center; margin-bottom: 60px; text-transform: uppercase; }
+        .trust-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+            color: #f8f4ec;
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
         .trust-section h2 span { color: var(--gold); }
         .trust-grid { display: grid; grid-template-columns: 300px 1fr 1fr; gap: 40px; align-items: center; }
         .trust-image { border-radius: 15px; overflow: hidden; border: 3px solid var(--gold); }
@@ -761,7 +777,7 @@
             font-size: 0.68rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: rgba(255,255,255,0.5);
+            color: rgba(40, 36, 30, 0.55);
             margin-bottom: 4px;
         }
         .trust-author-name {
@@ -775,7 +791,7 @@
         .trust-author-meta {
             display: block;
             font-size: 0.82rem;
-            color: rgba(255,255,255,0.72);
+            color: rgba(40, 36, 30, 0.72);
             margin-top: 3px;
             letter-spacing: 0.3px;
         }
@@ -873,6 +889,7 @@
             position: relative;
             border: 2px solid transparent;
             transition: all 0.4s ease;
+            cursor: zoom-in;
         }
         .gallery-item:hover { 
             border-color: var(--gold); 
@@ -1074,6 +1091,20 @@
             .footer-content > :nth-child(2) { grid-column: 1; }
             .footer-content > :nth-child(3) { grid-column: 2; }
             .footer-content > .social-links { grid-column: 1 / -1; justify-content: center; margin-top: 4px; gap: 8px; }
+            .footer-content.footer-content-contact-only {
+                grid-template-columns: 1fr !important;
+                justify-items: stretch;
+                text-align: left;
+                padding-bottom: 14px;
+            }
+            .footer-content.footer-content-contact-only > :first-child,
+            .footer-content.footer-content-contact-only > :nth-child(n) {
+                grid-column: 1 !important;
+            }
+            .footer-contact-grid {
+                grid-template-columns: 1fr !important;
+                gap: 18px !important;
+            }
             .footer h4 { margin-bottom: 6px; font-size: 0.95rem; }
             .footer li { margin-bottom: 3px; }
             .footer a { font-size: 0.8rem; }
@@ -1229,6 +1260,9 @@
                 height: 220px;
                 scroll-snap-align: start;
             }
+            .gallery-item img {
+                object-position: center 70%;
+            }
             .services-wrap, .testimonial-wrap { padding: 0 8px; }
             .services-wrap::after, .testimonial-wrap::after { display: none; }
             .testimonial-scroll-btn { display: none; }
@@ -1252,10 +1286,23 @@
             .scroll-indicator { display: none; }
         }
     </style>
-    <link rel="stylesheet" href="css/marble-showroom.css">
+    <link rel="stylesheet" href="css/marble-showroom.css?v=5">
     <script src="js/cta-reveal.js" defer></script>
+    <script>
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            var isMore = params.get('view') === 'more';
+            var isMobile = window.matchMedia('(max-width: 1024px)').matches;
+            if (isMore && isMobile) {
+                document.documentElement.classList.add('mobile-more-view');
+            } else if (isMore && !isMobile) {
+                var clean = window.location.pathname + (window.location.hash || '');
+                window.history.replaceState(null, '', clean);
+            }
+        })();
+    </script>
 </head>
-<body class="showroom-theme">
+<body class="showroom-theme page-home">
     <header class="header">
         <a aria-label='S K Stones India' class='brand-lockup' href='/'>
             <img class="brand-mark" src="images/shree-logo.png" alt="" width="40" height="80" decoding="async">
@@ -1270,10 +1317,9 @@
             <div class="nav-dropdown">
                 <span class="nav-link">Services <i class="fas fa-chevron-down"></i></span>
                 <div class="dropdown-menu">
-                    <a href='/installations'>Installations</a>
                     <a href='/landscaping'>Landscaping</a>
                     <a href='/flooring-executions'>Flooring Executions</a>
-                    <a href='/stone-art-installations'>Stone Art Installations</a>
+                    <a href='/stone-art-installations'>Elevations</a>
                 </div>
             </div>
                         <div class="nav-dropdown mega-dropdown">
@@ -1356,6 +1402,11 @@
     <div class="nav-overlay" id="navOverlay"></div>
     <nav class="mobile-nav" id="mobileNav" data-full-nav="true"></nav>
 
+    <div class="mobile-more-intro home-defer-mobile" id="mobileMoreIntro">
+        <h1>More from S K Stones</h1>
+        <p>Who we are, our process, trust, FAQs, and client reviews.</p>
+    </div>
+
     <!-- PREVIOUS HERO (restore if needed): cinematic "Elegance In Every Stone" panel
     <section class="hero">
         <div class="hero-bg">
@@ -1388,7 +1439,7 @@
                     <span class="hero-stat-label">Projects Delivered</span>
                 </div>
                 <div class="hero-stat">
-                    <span class="hero-stat-num">50+</span>
+                    <span class="hero-stat-num">25+</span>
                     <span class="hero-stat-label">Trusted Partners</span>
                 </div>
             </div>
@@ -1405,29 +1456,23 @@
     </section>
     -->
 
-    <section class="sk-manifesto sk-manifesto-hero" id="manifesto" aria-label="S K Stones identity">
-        <div class="sk-manifesto-inner">
-            <div class="sk-manifesto-panel sk-manifesto-logo">
-                <img src="images/sk-mark-transparent.png" alt="S K Stones India marble monogram">
-                <p class="manifesto-trust-pill">Trusted by Architects, Builders &amp; Developers</p>
-            </div>
+    <section class="sk-manifesto sk-manifesto-hero home-primary-mobile" id="manifesto" aria-label="S K Stones identity">
+        <div class="sk-manifesto-inner sk-manifesto-inner--copy-only">
             <div class="sk-manifesto-panel sk-manifesto-copy">
-                <p class="manifesto-eyebrow">S K Stones India</p>
-                <h1>
-                    <span class="manifesto-line">We Don't Just <span class="gold gold-shimmer">Supply.</span></span>
-                    <span class="manifesto-line">We Shape</span>
-                    <span class="manifesto-line"><span class="gold gold-shimmer">Experiences.</span></span>
-                </h1>
-                <p class="manifesto-lead">Where exceptional stones create extraordinary spaces.</p>
-                <div class="manifesto-actions">
-                    <a class='btn btn-primary' href='/products'>Explore Collection</a>
-                    <a class='btn manifesto-btn-ghost' href='/contact'>Get Quote</a>
+                <div class="manifesto-copy-inner">
+                    <p class="manifesto-eyebrow">S K Stones India</p>
+                    <h1>
+                        <span class="manifesto-line">Uncompromising <span class="gold gold-shimmer">Quality.</span></span>
+                        <span class="manifesto-line">Exceptional <span class="gold gold-shimmer">Surfaces.</span></span>
+                    </h1>
+                    <p class="manifesto-lead">Premium granite, marble &amp; natural stone — for homes, hotels &amp; commercial spaces.</p>
+                    <p class="manifesto-trust-pill"><span>Architects</span><span class="manifesto-trust-dot" aria-hidden="true"></span><span>Builders</span><span class="manifesto-trust-dot" aria-hidden="true"></span><span>Developers</span></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="marquee">
+    <div class="marquee home-primary-mobile">
         <div class="marquee-content">
             <span>Premium Granites & Marbles</span><span>★</span>
             <span>Architectural Masterpieces</span><span>★</span>
@@ -1461,7 +1506,7 @@
                     <p>This video takes you through how we source, cut, and prepare every slab — the same precision and care that goes into every residential and commercial project we deliver.</p>
                 </div>
             </div>
-            <div class="about-content">
+            <div class="about-content home-defer-mobile" id="who-we-are">
                 <span class="section-label">Who We Are</span>
                 <h2>Built On <span>Trust.</span> Proven By <span>Results.</span></h2>
                 <p>From selecting the perfect stone to flawless installation, we bring craftsmanship, consistency, and reliability to every project.</p>
@@ -1476,14 +1521,14 @@
     </section>
 
     <!-- Services Slider Section -->
-    <section class="services-slider-section reveal">
+    <section class="services-slider-section reveal home-primary-mobile">
         <div class="services-slider-container">
             <div class="services-slider-header">
                 <span class="section-label">What We Do</span>
                 <h2>Our <span>Services</span></h2>
                 <div class="underline"></div>
             </div>
-            <p class="mobile-swipe-hint">Swipe services <i class="fas fa-arrow-right"></i></p>
+            <p class="mobile-swipe-hint" aria-label="Swipe"><i class="fas fa-arrow-right"></i></p>
             <div class="services-wrap">
                 <button type="button" class="testimonial-scroll-btn left" id="servicesScrollLeft" aria-label="Scroll services left">
                     <i class="fas fa-chevron-left"></i>
@@ -1496,10 +1541,6 @@
                     <div class="service-slide-content">
                         <h3>Landscaping</h3>
                         <p>Beautiful stone landscaping designs enhancing outdoor spaces with strength, texture, and natural elegance.</p>
-                        <div class="service-slide-actions">
-                            <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
-                            <span class="wa-link" onclick="event.preventDefault();event.stopPropagation();window.open('https://wa.me/917022630994?text=Hi%2C%20I%27m%20interested%20in%20Landscaping%20services.','_blank')"><i class="fab fa-whatsapp"></i> Quote</span>
-                        </div>
                     </div>
                 </a>
                 <a class='service-slide' href='/stone-art-installations'>
@@ -1509,23 +1550,15 @@
                     <div class="service-slide-content">
                         <h3>Wall-Art</h3>
                         <p>Handcrafted stone-art masterpieces designed to deliver distinctive style and timeless beauty.</p>
-                        <div class="service-slide-actions">
-                            <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
-                            <span class="wa-link" onclick="event.preventDefault();event.stopPropagation();window.open('https://wa.me/917022630994?text=Hi%2C%20I%27m%20interested%20in%20Wall-Art%20stone%20services.','_blank')"><i class="fab fa-whatsapp"></i> Quote</span>
-                        </div>
                     </div>
                 </a>
                 <a class='service-slide' href='/stone-art-installations'>
                     <div class="service-slide-image">
-                        <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/11/stone-art.avif" alt="Stone Art">
+                        <img src="images/stone-art-service.jpg" alt="Stone Art">
                     </div>
                     <div class="service-slide-content">
                         <h3>Stone-Art</h3>
                         <p>Stone art pieces create striking focal points using natural stone textures and artistic expression for interior and exterior spaces.</p>
-                        <div class="service-slide-actions">
-                            <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
-                            <span class="wa-link" onclick="event.preventDefault();event.stopPropagation();window.open('https://wa.me/917022630994?text=Hi%2C%20I%27m%20interested%20in%20Stone-Art%20installations.','_blank')"><i class="fab fa-whatsapp"></i> Quote</span>
-                        </div>
                     </div>
                 </a>
                 <a class='service-slide' href='/installations'>
@@ -1535,10 +1568,6 @@
                     <div class="service-slide-content">
                         <h3>Installations</h3>
                         <p>Premium stone installations crafted with precision, durability, elegance, and long-lasting visual impact.</p>
-                        <div class="service-slide-actions">
-                            <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
-                            <span class="wa-link" onclick="event.preventDefault();event.stopPropagation();window.open('https://wa.me/917022630994?text=Hi%2C%20I%27m%20interested%20in%20Stone%20Installation%20services.','_blank')"><i class="fab fa-whatsapp"></i> Quote</span>
-                        </div>
                     </div>
                 </a>
                 <a class='service-slide' href='/flooring-executions'>
@@ -1548,10 +1577,6 @@
                     <div class="service-slide-content">
                         <h3>Floorings</h3>
                         <p>Precision stone flooring for homes, offices, and commercial spaces — uniform levels, seamless joints, and flawless polished finishes.</p>
-                        <div class="service-slide-actions">
-                            <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
-                            <span class="wa-link" onclick="event.preventDefault();event.stopPropagation();window.open('https://wa.me/917022630994?text=Hi%2C%20I%27m%20interested%20in%20Stone%20Flooring%20services.','_blank')"><i class="fab fa-whatsapp"></i> Quote</span>
-                        </div>
                     </div>
                 </a>
                 <a class='service-slide' href='/wall-claddings'>
@@ -1561,10 +1586,6 @@
                     <div class="service-slide-content">
                         <h3>Elevations</h3>
                         <p>Grand stone elevations and façade cladding that elevate architectural presence with texture, depth, and lasting curb appeal.</p>
-                        <div class="service-slide-actions">
-                            <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
-                            <span class="wa-link" onclick="event.preventDefault();event.stopPropagation();window.open('https://wa.me/917022630994?text=Hi%2C%20I%27m%20interested%20in%20Stone%20Elevation%20%2F%20Cladding.','_blank')"><i class="fab fa-whatsapp"></i> Quote</span>
-                        </div>
                     </div>
                 </a>
                 <a class='service-slide' href='/installations'>
@@ -1574,10 +1595,6 @@
                     <div class="service-slide-content">
                         <h3>Roofings</h3>
                         <p>Durable stone roofing and terrace solutions combining weather resistance, structural strength, and refined natural beauty.</p>
-                        <div class="service-slide-actions">
-                            <span class="learn-more">Learn More <i class="fas fa-arrow-right"></i></span>
-                            <span class="wa-link" onclick="event.preventDefault();event.stopPropagation();window.open('https://wa.me/917022630994?text=Hi%2C%20I%27m%20interested%20in%20Stone%20Roofing%20solutions.','_blank')"><i class="fab fa-whatsapp"></i> Quote</span>
-                        </div>
                     </div>
                 </a>
                 </div>
@@ -1588,13 +1605,13 @@
         </div>
     </section>
 
-    <section class="process-section reveal">
+    <section class="process-section reveal home-defer-mobile" id="process">
         <div class="section-header">
             <span class="section-label">Our Process</span>
             <h2>From Vision to <span>Masterpiece</span></h2>
             <div class="underline"></div>
         </div>
-        <p class="mobile-swipe-hint">Swipe our process <i class="fas fa-arrow-right"></i></p>
+        <p class="mobile-swipe-hint" aria-label="Swipe"><i class="fas fa-arrow-right"></i></p>
         <div class="process-steps">
             <div class="process-step" style="--step-delay: 0.05s">
                 <div class="process-step-num">01</div>
@@ -1620,19 +1637,19 @@
     </section>
 
     <!-- Built on Trust Section -->
-    <section class="trust-section reveal">
+    <section class="trust-section reveal home-defer-mobile" id="trust">
         <div class="trust-container">
             <h2>Built on <span>Trust.</span> Proven by <span>Results.</span></h2>
             <div class="trust-grid">
                 <div class="trust-image">
                     <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/stone-interior-eXiUxS-v-1.webp" alt="Interior">
                 </div>
-                <p class="mobile-swipe-hint">Swipe results <i class="fas fa-arrow-right"></i></p>
+                <p class="mobile-swipe-hint" aria-label="Swipe"><i class="fas fa-arrow-right"></i></p>
                 <div class="stats-grid">
                     <div class="stat-item"><div class="stat-number"><span class="counter" data-target="200">0</span><sup>+</sup></div><div class="stat-label">Projects Delivered</div></div>
-                    <div class="stat-item"><div class="stat-number"><span class="counter" data-target="99">0</span><sup>%</sup></div><div class="stat-label">Quality Assurance</div></div>
-                    <div class="stat-item"><div class="stat-number"><span class="counter" data-target="50">0</span><sup>+</sup></div><div class="stat-label">Trusted Partners</div></div>
-                    <div class="stat-item"><div class="stat-number"><span class="counter" data-target="4.9" data-decimal="true">0</span><sup>+</sup></div><div class="stat-label">Client Satisfaction</div></div>
+                    <div class="stat-item"><div class="stat-number"><span class="counter" data-target="95">0</span><sup>%</sup></div><div class="stat-label">Quality Assurance</div></div>
+                    <div class="stat-item"><div class="stat-number"><span class="counter" data-target="25">0</span><sup>+</sup></div><div class="stat-label">Trusted Partners</div></div>
+                    <div class="stat-item"><div class="stat-number"><span class="counter" data-target="4.8" data-decimal="true">0</span><sup>+</sup></div><div class="stat-label">Client Satisfaction</div></div>
                 </div>
                 <div class="trust-text">
                     <h3>EXCELLENCE . EXPERTISE . TRUST</h3>
@@ -1651,13 +1668,12 @@
     </section>
 
     <!-- Why Choose Section -->
-    <section class="why-section reveal">
+    <section class="why-section reveal home-primary-mobile">
         <div class="why-container">
             <div class="section-header">
                 <h2>Why <span>Architects</span> & <span>Builders</span> Choose S K Stones India?</h2>
-                <p>Our stone expertise, sourcing strength, and design-driven approach help homeowners, architects, and builders achieve flawless results. Every project gets premium materials, expert guidance, and unmatched craftsmanship from start to finish.</p>
             </div>
-            <p class="mobile-swipe-hint">Swipe to compare <i class="fas fa-arrow-right"></i></p>
+            <p class="mobile-swipe-hint" aria-label="Swipe"><i class="fas fa-arrow-right"></i></p>
             <div class="why-cards">
                 <div class="why-card">
                     <div class="why-card-image">
@@ -1670,7 +1686,7 @@
                 </div>
                 <div class="why-card">
                     <div class="why-card-image">
-                        <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/stone-2.webp" alt="Expert">
+                        <img src="images/why-expert-recommendations.jpg" alt="Expert">
                     </div>
                     <div class="why-card-content">
                         <h3>Expert Recommendations</h3>
@@ -1700,24 +1716,24 @@
     </section>
 
     <!-- Gallery -->
-    <section class="gallery-section" id="gallery">
+    <section class="gallery-section home-primary-mobile" id="gallery">
         <div class="section-header">
             <h2>See the <span>Craft</span></h2>
             <div class="underline"></div>
         </div>
-        <p class="mobile-swipe-hint">Swipe gallery <i class="fas fa-arrow-right"></i></p>
+        <p class="mobile-swipe-hint" aria-label="Swipe"><i class="fas fa-arrow-right"></i></p>
         <div class="gallery-grid">
-            <div class="gallery-item"><img src="images/stone-wall-art.png" alt="Gallery"></div>
-            <div class="gallery-item"><img src="images/circular-stone-pattern.png" alt="Gallery"></div>
-            <div class="gallery-item"><img src="images/project-ritz-carlton.png" alt="Gallery"></div>
-            <div class="gallery-item"><img src="images/project-airport-departures.png" alt="Gallery"></div>
-            <div class="gallery-item"><img src="images/project-luxury-lobby.png" alt="Gallery"></div>
-            <div class="gallery-item"><img src="images/project-aster-hospital.png" alt="Gallery"></div>
+            <div class="gallery-item"><img src="images/craft-stone-paving.jpg" alt="Stone paving installation in progress" loading="lazy"></div>
+            <div class="gallery-item"><img src="images/craft-staircase-wall.jpg" alt="Carved stone wall with staircase" loading="lazy"></div>
+            <div class="gallery-item"><img src="images/craft-sculptures.png" alt="Hand-carved stone sculpture pedestals" loading="lazy"></div>
+            <div class="gallery-item"><img src="images/project-airport-departures.png" alt="Airport departures stone facade" loading="lazy"></div>
+            <div class="gallery-item"><img src="images/project-luxury-lobby.png" alt="Luxury lobby stone flooring" loading="lazy"></div>
+            <div class="gallery-item"><img src="images/circular-stone-pattern.png" alt="Circular stone pattern courtyard" loading="lazy"></div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq-section reveal" id="faq">
+    <section class="faq-section reveal home-defer-mobile" id="faq">
         <div class="faq-container">
             <div class="section-header">
                 <span class="section-label">Got Questions?</span>
@@ -1738,16 +1754,16 @@
                     <div class="faq-answer"><p>Timelines depend on project size and stone type. Residential flooring typically takes 2–6 weeks; commercial and elevation projects may take 1–5 months. We provide a clear schedule after site assessment and stone selection.</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" type="button" aria-expanded="false">Do you work outside Bengaluru?<i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>Yes. While our showroom is in Koramangala, Bengaluru, we supply and execute projects across Karnataka and pan-India for architects, builders, and commercial clients.</p></div>
+                    <button class="faq-question" type="button" aria-expanded="false">Do you work outside Bangalore and Hyderabad?<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Yes. While our showroom is in Bengaluru and Hyderabad we supply and execute projects across pan-India for architects, builders, and commercial clients.</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" type="button" aria-expanded="false">Can I visit your showroom to see stones in person?<i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>Absolutely. Visit us at 627-628, 15th Main, 80 Feet Road, 5th Cross Rd, 4th Block, Bengaluru, Karnataka 560034. Walk in during business hours or call +91 70226 30994 to schedule a guided consultation with our stone experts.</p></div>
+                    <div class="faq-answer"><p>Absolutely. Walk in during business hours or call +91 70226 30994 to schedule a guided consultation with our stone experts.</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" type="button" aria-expanded="false">How do I get a quote for my project?<i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>Fill out our contact form with stone type, dimensions, and site location — or WhatsApp us directly. Our team responds within 24 hours with guidance and a tailored quote.</p></div>
+                    <div class="faq-answer"><p>Fill out our contact form with stone type, dimensions, and site location — or WhatsApp us directly. Our team responds within 6 hours with guidance and a tailored quote.</p></div>
                 </div>
             </div>
             <div class="faq-cta">
@@ -1758,7 +1774,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section reveal">
+    <section class="cta-section reveal home-primary-mobile">
         <div class="cta-content">
             <h2 class="cta-title">
                 <span class="cta-line cta-line-1">Transform Your Space With</span>
@@ -1773,15 +1789,15 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials-section" id="testimonials">
+    <section class="testimonials-section home-defer-mobile" id="testimonials">
         <div class="section-header">
             <h2>Client <span>Reviews</span></h2>
             <div class="underline"></div>
-            <a href="https://www.google.com/search?q=S+K+Stones+India+Bengaluru+reviews" target="_blank" rel="noopener" class="reviews-google-link">
+            <a href="https://www.google.com/maps?cid=6923478744549710589" target="_blank" rel="noopener" class="reviews-google-link">
                 <i class="fab fa-google"></i> Read More Reviews on Google
             </a>
         </div>
-        <p class="mobile-swipe-hint">Swipe reviews <i class="fas fa-arrow-right"></i></p>
+        <p class="mobile-swipe-hint" aria-label="Swipe"><i class="fas fa-arrow-right"></i></p>
         <div class="testimonial-wrap">
             <button type="button" class="testimonial-scroll-btn left" id="testScrollLeft" aria-label="Scroll reviews left">
                 <i class="fas fa-chevron-left"></i>
@@ -1825,38 +1841,22 @@
     </section>
 
     <footer class="footer">
-        <div class="footer-content">
-            <div>
-                <a aria-label='S K Stones India' class='brand-lockup brand-lockup-footer' href='/'>
-            <img class="brand-mark" src="images/shree-logo.png" alt="" width="40" height="80" decoding="async">
-            <span class="brand-text">
-                        <span class="brand-name">S K <span class="brand-stones">Stones</span> India</span>
-                        <span class="brand-formerly">(formerly Shree Stones &amp; Services)</span>
-                    </span>
-                </a>
-            </div>
-            <div>
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href='/'>Home</a></li>
-                    <li><a href='/about'>About Us</a></li>
-                    <li><a href='/products'>Products</a></li>
-                    <li><a href='/contact'>Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Contact</h4>
-                <ul>
-                    <li><a href="tel:+917022630994"><i class="fas fa-phone"></i> +91 70226 30994</a></li>
-                    <li><a href="mailto:info@skstonesindia.com"><i class="fas fa-envelope"></i> info@skstonesindia.com</a></li>
-                    <li><i class="fas fa-map-marker-alt"></i> Koramangala, Bengaluru</li>
-                </ul>
-            </div>
-            <div class="social-links">
-                    <a href="https://www.linkedin.com/in/shree-kumar-gandhi-8699533a6/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/917022630994" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="mailto:info@skstonesindia.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <div class="footer-content footer-content-contact-only">
+            <div class="footer-contact-grid">
+                <div class="footer-contact-block">
+                    <h4>Contact</h4>
+                    <p><a href="tel:+917022630994"><i class="fas fa-phone"></i> +91 70226 30994</a></p>
+                    <p><a href="mailto:info@skstonesindia.com"><i class="fas fa-envelope"></i> info@skstonesindia.com</a></p>
                 </div>
+                <div class="footer-contact-block">
+                    <h4>Bangalore</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> <span>627-628, 15th Main, 80 Feet Rd, 5th Cross, Koramangala 4th Block, Bengaluru, Karnataka 560034</span></p>
+                </div>
+                <div class="footer-contact-block">
+                    <h4>Hyderabad</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> <span>ORR Service Rd, Vattinagulapally, Hyderabad, Telangana 500075</span></p>
+                </div>
+            </div>
         </div>
         <div class="footer-bottom">© 2026 S K Stones India Pvt. Ltd. All Rights Reserved.</div>
     </footer>
@@ -2030,10 +2030,20 @@
             });
             backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
         }
+
+        if (document.documentElement.classList.contains('mobile-more-view') && window.location.hash) {
+            requestAnimationFrame(() => {
+                const target = document.querySelector(window.location.hash);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        }
     </script>
-    <script src="js/mobile-nav.js"></script>
+    <script src="js/mobile-nav.js?v=2"></script>
     <script src="js/faq-accordion.js"></script>
     <script src="js/seo-schema.js"></script>
     <script src="js/mega-menu.js"></script>
+    <script src="js/product-lightbox.js"></script>
 </body>
 </html>

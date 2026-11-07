@@ -94,7 +94,7 @@
 .product-hero-banner .page-hero-tagline {
     font-size: 0.72rem;
     font-weight: 600;
-    color: #c9a227;
+    color: #8a6a10;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     margin-bottom: 14px;
@@ -107,7 +107,7 @@
 
 .product-hero-banner .page-hero-tagline .highlight,
 .product-hero-banner h1 .highlight {
-    color: #c9a227;
+    color: #8a6a10;
 }
 
 .product-hero-banner:not(.product-hero-panel) h1 {
@@ -348,6 +348,21 @@
 .product-grid-section {
     padding: 80px 0;
     background: transparent;
+}
+
+/* Visible outline CTA on dark marble behind product grids */
+.product-grid-section a.btn.btn-outline,
+.product-grid-section a.btn.btn-outline-light {
+    color: #ffffff !important;
+    border: 2px solid rgba(255, 255, 255, 0.95) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+}
+
+.product-grid-section a.btn.btn-outline:hover,
+.product-grid-section a.btn.btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.22) !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
 }
 
 .product-grid-header {
@@ -950,7 +965,7 @@
 }
 
 .product-overview-content h2 .highlight {
-    color: #c9a227;
+    color: #8a6a10;
 }
 
 .product-overview-content h2::after {

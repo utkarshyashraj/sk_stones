@@ -2,10 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!-- This site is hosted on Netlify. Anyone can build and deploy a site
-     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=d4772256-9b0c-4023-884d-54bad2f890df
-     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Projects | S K Stones India</title>
     <meta name="description" content="Explore premium stone projects by S K Stones India — luxury hotels, villas, commercial lobbies, stone art and architectural cladding across India.">
     <link rel="canonical" href="https://skstonesindia.com/projects.html">
@@ -18,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/site-extras.css">
     <link rel="stylesheet" href="css/mega-menu.css">
-    <link rel="stylesheet" href="css/mobile-nav.css"><style>
+    <link rel="stylesheet" href="css/mobile-nav.css?v=3"><style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root { --gold: #C9A227; --dark: #0a0a0a; --white: #ffffff; }
         html { scroll-behavior: smooth; }
@@ -59,69 +56,154 @@
             opacity: 0.85;
         }
         
-        /* Projects Gallery */
-        .projects-section { padding: 80px 50px 100px; background: rgba(10,10,10,0.95); }
-        
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+        /* Projects — named project blocks */
+        .projects-section {
+            padding: 48px 50px 100px;
+            background: transparent;
             max-width: 1400px;
             margin: 0 auto;
         }
-        
+
+        .projects-section > .section-eyebrow {
+            display: none;
+        }
+
+        .project-block {
+            margin: 0 0 72px;
+            padding-bottom: 56px;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.18);
+        }
+
+        .project-block:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .project-block-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 22px;
+        }
+
+        .project-block-logo {
+            width: 72px;
+            height: 72px;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 14px;
+            padding: 10px;
+            border: 1px solid rgba(201, 162, 39, 0.28);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+            flex-shrink: 0;
+        }
+
+        .project-block-logo-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            color: #1a1a1a;
+            padding: 0;
+        }
+
+        .projects-section .project-block-title {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.55rem, 2.6vw, 2.2rem);
+            font-weight: 600;
+            color: #ffffff !important;
+            letter-spacing: 0.02em;
+            line-height: 1.2;
+        }
+
+        .projects-section .project-block-title span {
+            color: var(--gold) !important;
+        }
+
+        .projects-section .project-block-note {
+            margin: 4px 0 0;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.72) !important;
+        }
+
+        .project-block-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        @media (max-width: 1100px) {
+            .project-block-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         .project-item {
             position: relative;
             border-radius: 15px;
             overflow: hidden;
-            height: 300px;
+            height: 240px;
             cursor: pointer;
             border: 2px solid transparent;
             transition: all 0.4s ease;
+            background: #151515;
         }
         
         .project-item:hover {
             border-color: var(--gold);
-            transform: translateY(-10px);
-            box-shadow: 0 25px 60px rgba(212,175,55,0.25);
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(212,175,55,0.22);
         }
         
         .project-item img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
             transition: transform 0.6s ease;
+            display: block;
         }
 
-        .project-item.show-full {
-            background: #151515;
+        .project-item.placeholder {
+            border: 1px dashed rgba(201, 162, 39, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: default;
         }
 
-        /* Cheetah stone art — full relief sculpture */
-        .project-item.show-full img {
-            object-position: center 45%;
-            transform-origin: center center;
+        .project-item.placeholder:hover {
+            transform: none;
+            border-color: rgba(201, 162, 39, 0.45);
+            box-shadow: none;
         }
 
-        .project-item.show-full:hover img {
-            transform: scale(1.05);
+        .project-item.placeholder span {
+            color: rgba(248, 244, 236, 0.45);
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 12px;
         }
         
         .project-item:hover img {
-            transform: scale(1.15);
+            transform: scale(1.08);
         }
         
         .project-overlay {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.72), transparent 55%);
             opacity: 0;
             transition: opacity 0.4s ease;
             display: flex;
-            align-items: flex-end;
-            padding: 25px;
+            align-items: center;
+            justify-content: center;
         }
         
         .project-item:hover .project-overlay {
@@ -129,17 +211,14 @@
         }
         
         .project-overlay i {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             color: var(--gold);
-            transition: transform 0.4s ease;
+            transform: scale(0.85);
+            transition: transform 0.35s ease;
         }
         
         .project-item:hover .project-overlay i {
-            transform: translate(-50%, -50%) scale(1);
+            transform: scale(1);
         }
         
         /* Lightbox */
@@ -274,21 +353,38 @@
             .hero { padding: 150px 20px 80px; }
             .hero h1 { font-size: 2.5rem; }
             .projects-section { padding: 60px 20px; }
-            .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-            .project-item { height: 250px; }
-            .project-item.show-full { height: 300px; }
+            .projects-section { padding: 36px 20px 72px; }
+            .project-block { margin-bottom: 48px; padding-bottom: 40px; }
+            .project-block-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+            .project-item { height: 200px; }
+            .project-block-logo { width: 60px; height: 60px; }
             .footer { padding: 28px 16px 0; }
             .footer-content { grid-template-columns: 1fr; gap: 16px; padding-bottom: 16px; }
         }
         
         @media (max-width: 600px) {
-            .projects-grid { grid-template-columns: 1fr; }
-            .project-item { height: 280px; }
-            .project-item.show-full { height: 320px; }
-            .hero h1 { font-size: 2rem; }
+            .projects-section { padding: 28px 14px 80px; }
+            .project-block { margin-bottom: 40px; padding-bottom: 32px; }
+            .project-block-header { gap: 12px; margin-bottom: 14px; }
+            .project-block-title { font-size: 1.35rem; }
+            .project-block-logo { width: 52px; height: 52px; padding: 8px; }
+            .project-block-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                overflow: visible;
+                scroll-snap-type: none;
+            }
+            .project-item {
+                flex: none;
+                width: 100%;
+                height: 160px;
+                scroll-snap-align: unset;
+            }
+            .hero h1 { font-size: clamp(1.15rem, 5.2vw, 1.45rem); white-space: nowrap; line-height: 1.2; }
         }
     </style>
-    <link rel="stylesheet" href="css/marble-showroom.css">
+    <link rel="stylesheet" href="css/marble-showroom.css?v=5">
 
 </head>
 <body class="showroom-theme page-projects">
@@ -306,10 +402,9 @@
             <div class="nav-dropdown">
                 <span class="nav-link">Services <i class="fas fa-chevron-down"></i></span>
                 <div class="dropdown-menu">
-                    <a href='/installations'>Installations</a>
                     <a href='/landscaping'>Landscaping</a>
                     <a href='/flooring-executions'>Flooring Executions</a>
-                    <a href='/stone-art-installations'>Stone Art Installations</a>
+                    <a href='/stone-art-installations'>Elevations</a>
                 </div>
             </div>
                             <div class="nav-dropdown mega-dropdown">
@@ -395,110 +490,207 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="glass-text-panel hero-copy">
-            <h1>Our <span>Projects</span></h1>
-            <p>Featured case studies and our full project gallery — premium natural stones for homes, offices &amp; commercial spaces. Trusted by architects and builders across India.</p>
+            <h1>Our Happy <span>Clients</span></h1>
         </div>
     </section>
 
-    <!-- Featured Case Studies -->
-    <section class="case-studies-section" style="padding-top: 40px;">
-        <span class="section-eyebrow">Featured Case Studies</span>
-        <div class="case-studies-grid">
-            <a class='case-study-card' href='/case-study-ritz-carlton'>
-                <img src="images/project-ritz-carlton.png" alt="Luxury hotel stone elevation">
-                <div class="case-study-card-body">
-                    <span class="case-study-tag">Hospitality</span>
-                    <h3>Luxury Hotel Stone Elevation</h3>
-                    <p>Grand façade cladding with premium natural stone — 12,000+ sq. ft. delivered in 4 months.</p>
-                    <span class="case-study-link">Read Case Study <i class="fas fa-arrow-right"></i></span>
-                </div>
-            </a>
-            <a class='case-study-card' href='/case-study-luxury-villa'>
-                <img src="images/flooring-2.png" alt="Luxury villa marble flooring">
-                <div class="case-study-card-body">
-                    <span class="case-study-tag">Residential</span>
-                    <h3>Luxury Villa Marble Flooring</h3>
-                    <p>Book-matched Italian marble across 8,500 sq. ft. with mirror-polish finishing.</p>
-                    <span class="case-study-link">Read Case Study <i class="fas fa-arrow-right"></i></span>
-                </div>
-            </a>
-            <a class='case-study-card' href='/case-study-airport'>
-                <img src="images/project-airport-departures.png" alt="Airport commercial stone flooring">
-                <div class="case-study-card-body">
-                    <span class="case-study-tag">Commercial</span>
-                    <h3>Airport &amp; Commercial Lobby</h3>
-                    <p>High-traffic stone flooring at scale — durable, uniform, and built for 24/7 operations.</p>
-                    <span class="case-study-link">Read Case Study <i class="fas fa-arrow-right"></i></span>
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <!-- Projects Gallery -->
+    <!-- Projects — one named block per client, 5 image slots each -->
     <section class="projects-section">
-        <span class="section-eyebrow">Full Project Gallery</span>
-        <div class="projects-grid">
-            <div class="project-item" onclick="openLightbox(0)">
-                <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/1564natural-stone-wall-cladding-in-india-5.jpg" alt="Natural Stone Wall Cladding">
-                <div class="project-overlay">
-                    <i class="fas fa-search-plus"></i>
+        <article class="project-block" id="project-jw-marriott">
+            <header class="project-block-header">
+                <img class="project-block-logo" src="images/trusted/jw-marriott.png" alt="JW Marriott logo">
+                <div>
+                    <h2 class="project-block-title">JW <span>Marriott</span></h2>
+                    <p class="project-block-note">Hospitality stone &amp; landscape installations</p>
+                </div>
+            </header>
+            <div class="project-block-grid">
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/jw-marriott/jw-marriott-1.jpg" alt="JW Marriott pool and courtyard at dusk" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/jw-marriott/jw-marriott-2.jpg" alt="JW Marriott entrance" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/jw-marriott/jw-marriott-3.jpg" alt="JW Marriott stone walkway and cabanas" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/jw-marriott/jw-marriott-4.jpg" alt="JW Marriott landscaped courtyard with stone steps" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
                 </div>
             </div>
-            <div class="project-item" onclick="openLightbox(1)">
-                <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/Screenshot_20240123-122737.jpg" alt="Stone Project">
-                <div class="project-overlay">
-                    <i class="fas fa-search-plus"></i>
+        </article>
+
+        <article class="project-block" id="project-infosys">
+            <header class="project-block-header">
+                <img class="project-block-logo" src="images/trusted/infosys.png" alt="Infosys logo">
+                <div>
+                    <h2 class="project-block-title">Infosys</h2>
+                    <p class="project-block-note">Corporate campus stone &amp; cladding work</p>
+                </div>
+            </header>
+            <div class="project-block-grid">
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/infosys/infosys-1.jpg" alt="Infosys building exterior with stone cladding" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/infosys/infosys-2.jpg" alt="Infosys lobby reception with stone feature wall" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/infosys/infosys-3.jpg" alt="Infosys cafeteria interior" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/infosys/infosys-4.jpg" alt="Infosys campus with landscaped fountain" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
                 </div>
             </div>
-            <div class="project-item show-full" onclick="openLightbox(2)">
-                <img src="images/cheetah-stone-art.png" alt="Cheetah Stone Art">
-                <div class="project-overlay">
-                    <i class="fas fa-search-plus"></i>
+        </article>
+
+        <article class="project-block" id="project-aster">
+            <header class="project-block-header">
+                <img class="project-block-logo" src="images/trusted/aster.png" alt="Aster DM Healthcare logo">
+                <div>
+                    <h2 class="project-block-title">Aster <span>DM Healthcare</span></h2>
+                    <p class="project-block-note">Hospital &amp; healthcare facility stone work</p>
+                </div>
+            </header>
+            <div class="project-block-grid">
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/aster/aster-1.jpg" alt="Aster DM Healthcare reception" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/aster/aster-2.jpg" alt="Aster DM Healthcare building exterior" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/aster/aster-3.jpg" alt="Aster Aadhar Hospital building" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/aster/aster-4.jpg" alt="Aster DM Healthcare campus entrance" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
                 </div>
             </div>
-            <div class="project-item" onclick="openLightbox(3)">
-                <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/empty-hall-scaled.webp" alt="Hall Interior">
-                <div class="project-overlay">
-                    <i class="fas fa-search-plus"></i>
+        </article>
+
+        <article class="project-block" id="project-aig">
+            <header class="project-block-header">
+                <img class="project-block-logo" src="images/trusted/aig.png" alt="AIG Hospitals logo">
+                <div>
+                    <h2 class="project-block-title">AIG <span>Hospitals</span></h2>
+                    <p class="project-block-note">Hospital lobby flooring, cladding &amp; stone finishes</p>
+                </div>
+            </header>
+            <div class="project-block-grid">
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/aig/aig-1.jpg" alt="AIG Hospitals reception lobby" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/aig/aig-2.jpg" alt="AIG Hospitals marble lobby and reception" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/aig/aig-3.jpg" alt="AIG Hospitals outdoor stone walkway" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/aig/aig-4.jpg" alt="AIG Hospitals granite lobby interior" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
                 </div>
             </div>
-            <div class="project-item" onclick="openLightbox(4)">
-                <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/3d-rendering-modern-luxury-hotel-office-reception-lounge-hall-scaled.webp" alt="Luxury Hotel Reception">
-                <div class="project-overlay">
-                    <i class="fas fa-search-plus"></i>
+        </article>
+
+        <article class="project-block" id="project-indian-railways">
+            <header class="project-block-header">
+                <img class="project-block-logo" src="images/trusted/indian-railways.png" alt="Indian Railways logo">
+                <div>
+                    <h2 class="project-block-title">Indian <span>Railways</span></h2>
+                    <p class="project-block-note">Railway station flooring, cladding &amp; stonework</p>
+                </div>
+            </header>
+            <div class="project-block-grid">
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/indian-railways/indian-railways-1.jpg" alt="Indian Railways ticket counter stone flooring" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/indian-railways/indian-railways-2.jpg" alt="Indian Railways station concourse marble flooring and columns" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/indian-railways/indian-railways-3.jpg" alt="Railway Station stone wall cladding and carved panels" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/indian-railways/indian-railways-4.jpg" alt="Indian Railways departures hall stone cladding" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
                 </div>
             </div>
-            <div class="project-item" onclick="openLightbox(5)">
-                <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-25-at-4.35.07-PM.jpeg" alt="Commercial Project">
-                <div class="project-overlay">
-                    <i class="fas fa-search-plus"></i>
+        </article>
+
+        <article class="project-block" id="project-aai">
+            <header class="project-block-header">
+                <img class="project-block-logo" src="images/trusted/aai.png" alt="Airports Authority of India logo">
+                <div>
+                    <h2 class="project-block-title">Airports Authority of <span>India</span></h2>
+                    <p class="project-block-note">Airport terminal flooring, cladding &amp; stone art</p>
+                </div>
+            </header>
+            <div class="project-block-grid">
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/aai/aai-1.jpg" alt="Airport terminal marble flooring and stone wall cladding" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/aai/aai-2.jpg" alt="Airport concourse polished stone flooring" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/aai/aai-3.jpg" alt="Airport carved stone feature wall" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/aai/aai-4.jpg" alt="Airport corridor dark stone flooring and wall cladding" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
                 </div>
             </div>
-            <div class="project-item" onclick="openLightbox(6)">
-                <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-25-at-4.35.06-PM-2.jpeg" alt="Stone Installation">
-                <div class="project-overlay">
-                    <i class="fas fa-search-plus"></i>
+        </article>
+
+        <article class="project-block" id="project-cbse">
+            <header class="project-block-header">
+                <img class="project-block-logo" src="images/trusted/cbse.png" alt="CBSE logo">
+                <div>
+                    <h2 class="project-block-title">CBSE</h2>
+                    <p class="project-block-note">Institutional facade, flooring &amp; stone cladding</p>
+                </div>
+            </header>
+            <div class="project-block-grid">
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/cbse/cbse-1.jpg" alt="CBSE headquarters building with stone facade" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/cbse/cbse-2.jpg" alt="CBSE building entrance stone cladding" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/cbse/cbse-3.jpg" alt="CBSE entrance courtyard stone flooring and steps" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-item" onclick="openLightbox(this)">
+                    <img src="images/projects/cbse/cbse-4.jpg" alt="CBSE entrance lobby stone wall cladding" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
                 </div>
             </div>
-            <div class="project-item" onclick="openLightbox(7)">
-                <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-25-at-4.35.06-PM-1.jpeg" alt="Residential Project">
-                <div class="project-overlay">
-                    <i class="fas fa-search-plus"></i>
-                </div>
-            </div>
-            <div class="project-item" onclick="openLightbox(8)">
-                <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-25-at-4.35.06-PM.jpeg" alt="Architectural Stone Work">
-                <div class="project-overlay">
-                    <i class="fas fa-search-plus"></i>
-                </div>
-            </div>
-            <div class="project-item" onclick="openLightbox(9)">
-                <img src="images/project-aster-hospital.png" alt="Aster Hospital">
-                <div class="project-overlay">
-                    <i class="fas fa-search-plus"></i>
-                </div>
-            </div>
-        </div>
+        </article>
     </section>
 
     <!-- Lightbox -->
@@ -522,39 +714,22 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-about">
-                <a aria-label='S K Stones India' class='brand-lockup brand-lockup-footer' href='/'>
-                    <img class="brand-mark" src="images/shree-logo.png" alt="" width="40" height="80" decoding="async">
-                    <span class="brand-text">
-                        <span class="brand-name">S K <span class="brand-stones">Stones</span> India</span>
-                        <span class="brand-formerly">(formerly Shree Stones &amp; Services)</span>
-                    </span>
-                </a>
-            </div>
-            <div>
-                <h4>Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href='/'>Home</a></li>
-                    <li><a href='/about'>About Us</a></li>
-                    <li><a href='/products'>Products</a></li>
-                    <li><a href='/projects'>Our Projects</a></li>
-                    <li><a href='/contact'>Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Contact</h4>
-                <ul class="footer-links footer-contact">
-                    <li><i class="fas fa-phone"></i> +91 70226 30994</li>
-                    <li><i class="fas fa-envelope"></i> info@skstonesindia.com</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Koramangala, Bengaluru</li>
-                </ul>
-            </div>
-            <div class="social-links">
-                    <a href="https://www.linkedin.com/in/shree-kumar-gandhi-8699533a6/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/917022630994" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="mailto:info@skstonesindia.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <div class="footer-content footer-content-contact-only">
+            <div class="footer-contact-grid">
+                <div class="footer-contact-block">
+                    <h4>Contact</h4>
+                    <p><a href="tel:+917022630994"><i class="fas fa-phone"></i> +91 70226 30994</a></p>
+                    <p><a href="mailto:info@skstonesindia.com"><i class="fas fa-envelope"></i> info@skstonesindia.com</a></p>
                 </div>
+                <div class="footer-contact-block">
+                    <h4>Bangalore</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> <span>627-628, 15th Main, 80 Feet Rd, 5th Cross, Koramangala 4th Block, Bengaluru, Karnataka 560034</span></p>
+                </div>
+                <div class="footer-contact-block">
+                    <h4>Hyderabad</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> <span>ORR Service Rd, Vattinagulapally, Hyderabad, Telangana 500075</span></p>
+                </div>
+            </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 S K Stones India. All Rights Reserved.</p>
@@ -564,24 +739,24 @@
     <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
 
     <script>
-        // Lightbox
-        const images = [
-            'https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/1564natural-stone-wall-cladding-in-india-5.jpg',
-            'https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/Screenshot_20240123-122737.jpg',
-            'images/cheetah-stone-art.png',
-            'https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/empty-hall-scaled.webp',
-            'https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/3d-rendering-modern-luxury-hotel-office-reception-lounge-hall-scaled.webp',
-            'https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-25-at-4.35.07-PM.jpeg',
-            'https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-25-at-4.35.06-PM-2.jpeg',
-            'https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-25-at-4.35.06-PM-1.jpeg',
-            'https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-25-at-4.35.06-PM.jpeg',
-            'images/project-aster-hospital.png'
-        ];
+        // Lightbox — reads real photos from the page (skips placeholders)
+        let images = [];
         let currentIndex = 0;
 
-        function openLightbox(index) {
-            currentIndex = index;
-            document.getElementById('lightboxImg').src = images[index];
+        function collectImages() {
+            return Array.from(document.querySelectorAll('.project-item:not(.placeholder) img'))
+                .map((img) => img.getAttribute('src'))
+                .filter(Boolean);
+        }
+
+        function openLightbox(el) {
+            images = collectImages();
+            if (!images.length) return;
+            const img = el && el.querySelector ? el.querySelector('img') : null;
+            const src = img ? img.getAttribute('src') : null;
+            currentIndex = src ? images.indexOf(src) : 0;
+            if (currentIndex < 0) currentIndex = 0;
+            document.getElementById('lightboxImg').src = images[currentIndex];
             document.getElementById('lightbox').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
@@ -596,13 +771,13 @@
         });
 
         function changeSlide(direction) {
+            if (!images.length) return;
             currentIndex += direction;
             if (currentIndex < 0) currentIndex = images.length - 1;
             if (currentIndex >= images.length) currentIndex = 0;
             document.getElementById('lightboxImg').src = images[currentIndex];
         }
 
-        // Close lightbox on escape key
         document.addEventListener('keydown', (e) => {
             const lightbox = document.getElementById('lightbox');
             if (!lightbox.classList.contains('active')) return;
@@ -619,7 +794,7 @@
             backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
         }
     </script>
-    <script src="js/mobile-nav.js"></script>
+    <script src="js/mobile-nav.js?v=2"></script>
     <script src="js/seo-schema.js"></script>
     <script src="js/mega-menu.js"></script>
     <script src="js/cta-reveal.js" defer></script>

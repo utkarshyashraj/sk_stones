@@ -43,8 +43,8 @@ html {
 
 body {
     font-family: var(--font-body);
-    background-color: #f3f1ee;
-    background-image: url('../images/marble-bg-seamless.png');
+    background-color: #1a1a1a;
+    background-image: url('../images/marble-bg-nero.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1667,16 +1667,16 @@ section {
     min-height: 120px;
 }
 
-/* Footer — grey marble vein surface (header/footer only) */
+/* Footer — nero marble surface (header/footer only) */
 .footer {
     position: relative;
     background: linear-gradient(
-        rgba(212, 210, 206, 0.82),
-        rgba(204, 202, 198, 0.86)
-    ), url('../images/marble-bg-seamless.png') center 42% / cover no-repeat;
-    background-color: #d4d2ce;
+        rgba(18, 18, 18, 0.72),
+        rgba(22, 22, 22, 0.78)
+    ), url('../images/marble-bg-nero.jpg') center 42% / cover no-repeat;
+    background-color: #141414;
     padding: 40px 0 0;
-    border-top: 1px solid rgba(160, 158, 154, 0.35);
+    border-top: 1px solid rgba(201, 162, 39, 0.28);
     overflow: hidden;
 }
 
@@ -1791,7 +1791,7 @@ section {
 }
 
 .footer-bottom p {
-    color: var(--text-muted, #6b6b6b);
+    color: rgba(255, 255, 255, 0.65);
     font-size: 0.8rem;
 }
 

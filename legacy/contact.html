@@ -2,10 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!-- This site is hosted on Netlify. Anyone can build and deploy a site
-     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=d4772256-9b0c-4023-884d-54bad2f890df
-     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | S K Stones India - Get In Touch</title>
     <meta name="description" content="Contact S K Stones India for premium stone solutions. Visit our showroom in Koramangala, Bengaluru or call us at +91 70226 30994.">
     <link rel="canonical" href="https://skstonesindia.com/contact.html">
@@ -19,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/mega-menu.css">
-    <link rel="stylesheet" href="css/mobile-nav.css">
+    <link rel="stylesheet" href="css/mobile-nav.css?v=3">
     <link rel="stylesheet" href="css/site-extras.css"><style>
         :root {
             --gold: #c9a227;
@@ -67,65 +64,94 @@
             padding: 120px 50px 80px;
             min-height: 100vh;
         }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            max-width: 1400px;
-            margin: 0 auto;
-            align-items: start;
+        .contact-intro {
+            max-width: 1200px;
+            margin: 0 auto 36px;
+            text-align: center;
         }
-
-        .contact-left h1 {
+        .contact-intro h1 {
             font-family: 'Playfair Display', serif;
             font-size: clamp(2.4rem, 4.5vw, 3.6rem);
             font-weight: 700;
             text-transform: uppercase;
             line-height: 1.15;
-            margin-bottom: 20px;
-            color: #1a1a1a;
+            margin-bottom: 16px;
+            color: #f5f2eb;
         }
-        .contact-left h1 span { color: var(--gold); }
-        .contact-left > p {
+        .contact-intro h1 span { color: var(--gold); }
+        .contact-intro > p {
             font-size: 0.95rem;
             line-height: 1.8;
-            color: #4a4a4a;
-            max-width: 520px;
-            margin-bottom: 32px;
-            opacity: 1;
+            color: rgba(255, 255, 255, 0.82);
+            max-width: 640px;
+            margin: 0 auto;
         }
 
-        .contact-info-row {
+        .contact-cities {
             display: grid;
-            grid-template-columns: 1fr minmax(220px, 280px);
-            gap: 24px;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            max-width: 1200px;
+            margin: 0 auto;
             align-items: stretch;
-            margin-bottom: 28px;
         }
-        .contact-blocks { display: flex; flex-direction: column; gap: 14px; }
+        .contact-city-card {
+            background: rgba(255,255,255,0.94);
+            border: 1px solid rgba(201,162,39,0.35);
+            border-radius: 20px;
+            padding: 28px 28px 30px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+        }
+        .contact-city-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0 0 6px;
+        }
+        .contact-city-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 18px;
+        }
+        .contact-city-label i { font-size: 0.85rem; }
+
+        .contact-blocks { display: flex; flex-direction: column; gap: 12px; flex: 1; }
         .contact-block {
             display: flex;
             gap: 14px;
             align-items: flex-start;
-            padding: 14px 16px;
+            padding: 12px 14px;
             border-radius: 12px;
+            background: rgba(0,0,0,0.025);
         }
         .contact-icon {
-            width: 46px; height: 46px; background: var(--gold); border-radius: 8px;
+            width: 42px; height: 42px; background: var(--gold); border-radius: 8px;
             display: flex; align-items: center; justify-content: center; flex-shrink: 0;
         }
-        .contact-icon i { color: var(--dark); font-size: 17px; }
+        .contact-icon i { color: var(--dark); font-size: 16px; }
         .contact-block h4 {
-            font-size: 0.95rem;
+            font-size: 0.82rem;
             font-weight: 600;
             margin-bottom: 4px;
             color: #1a1a1a;
+            letter-spacing: 0.02em;
         }
         .contact-block p,
-        .contact-block a {
+        .contact-block a,
+        .contact-block span {
             color: #3a3a3a !important;
-            font-size: 0.88rem;
-            line-height: 1.55;
+            font-size: 0.875rem !important;
+            line-height: 1.55 !important;
+            font-weight: 400 !important;
             text-decoration: none;
             display: block;
             word-break: break-word;
@@ -136,20 +162,48 @@
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid rgba(201,162,39,0.35);
-            min-height: 100%;
-            height: auto;
-            align-self: stretch;
+            margin-top: 16px;
+            height: 180px;
         }
-        .contact-map iframe { width: 100%; height: 100%; min-height: 240px; border: 0; display: block; }
+        .contact-map iframe { width: 100%; height: 100%; border: 0; display: block; }
 
-        .follow-us { margin-top: 8px; }
+        .open-form-btn {
+            margin-top: 20px;
+            width: 100%;
+            padding: 14px 20px;
+            background: var(--gold);
+            color: var(--dark);
+            border: none;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .open-form-btn:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201,162,39,0.35);
+        }
+
+        .follow-us {
+            max-width: 1200px;
+            margin: 32px auto 0;
+            text-align: center;
+        }
         .follow-us p {
             font-size: 0.95rem;
             margin-bottom: 12px;
             color: #3a3a3a;
-            opacity: 1;
         }
-        .social-row { display: flex; gap: 12px; }
+        .social-row { display: flex; gap: 12px; justify-content: center; }
         .social-btn {
             width: 42px; height: 42px; border-radius: 8px; display: flex;
             align-items: center; justify-content: center; text-decoration: none;
@@ -160,20 +214,76 @@
         .social-btn.linkedin { background: #0A66C2; color: var(--white); }
         .social-btn.email { background: var(--gold); color: var(--dark); }
 
-        /* Form */
-        .contact-form-box {
-            background: rgba(255,255,255,0.92);
+        /* Form modal */
+        .contact-form-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 10050;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 16px;
+            background: rgba(0,0,0,0.72);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.25s ease, visibility 0.25s ease;
+        }
+        .contact-form-modal.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .contact-form-modal-dialog {
+            position: relative;
+            width: min(720px, 100%);
+            max-height: min(92vh, 900px);
+            overflow: auto;
+            background: #fff;
             border: 1px solid rgba(201,162,39,0.35);
             border-radius: 20px;
-            padding: 32px 32px 36px;
+            padding: 28px 28px 32px;
+            box-shadow: 0 24px 80px rgba(0,0,0,0.35);
+            transform: translateY(18px) scale(0.98);
+            transition: transform 0.28s ease;
+        }
+        .contact-form-modal.active .contact-form-modal-dialog {
+            transform: translateY(0) scale(1);
+        }
+        .contact-form-modal-close {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 42px;
+            height: 42px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.06);
+            color: #1a1a1a;
+            font-size: 1.5rem;
+            line-height: 1;
+            cursor: pointer;
+            z-index: 2;
+            transition: background 0.2s, color 0.2s;
+        }
+        .contact-form-modal-close:hover {
+            background: rgba(201,162,39,0.2);
+            color: #8a6a10;
         }
         .contact-form-box h2 {
             font-family: 'Playfair Display', serif;
             font-size: 1.6rem;
-            margin-bottom: 24px;
+            margin-bottom: 8px;
             font-weight: 600;
             color: #1a1a1a;
+            padding-right: 40px;
         }
+        .contact-form-location {
+            font-size: 0.82rem;
+            color: #5a5a5a;
+            margin-bottom: 18px;
+        }
+        .contact-form-location strong { color: var(--gold); }
 
         .form-row { display: grid; gap: 16px; margin-bottom: 16px; }
         .form-row.two-col { grid-template-columns: 1fr 1fr; }
@@ -226,6 +336,8 @@
         }
         .submit-btn:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(201,162,39,0.35); }
 
+        body.form-modal-open { overflow: hidden; }
+
         /* Footer */
         .footer { background: transparent; padding: 40px 40px 0; border-top: 1px solid rgba(201,162,39,0.28); }
         .footer-grid {
@@ -268,47 +380,37 @@
         .nav-overlay.active { opacity: 1; visibility: visible; }
 
         @media (max-width: 1100px) {
-            .contact-grid { grid-template-columns: 1fr; gap: 28px; max-width: 100%; }
-            .contact-info-row { grid-template-columns: 1fr; }
-            .contact-map { height: 240px; min-height: 240px; }
-            .contact-map iframe { min-height: 240px; }
+            .contact-cities { grid-template-columns: 1fr; gap: 20px; max-width: 640px; }
+            .contact-map { height: 200px; }
         }
         @media (max-width: 768px) {
             .header { padding: 12px 16px; }
             .desktop-nav, .header-cta { display: none; }
             .hamburger { display: none !important; }
             .contact-section { padding: 96px 16px 110px; }
-            .contact-left,
-            .contact-form-box,
-            .contact-grid,
-            .contact-info-row { max-width: 100%; width: 100%; box-sizing: border-box; }
-            .contact-left h1 { font-size: 2rem; margin-bottom: 14px; }
-            .contact-left > p { font-size: 0.88rem; line-height: 1.65; margin-bottom: 22px; }
+            .contact-intro h1 { font-size: 2rem; margin-bottom: 12px; }
+            .contact-intro > p { font-size: 0.88rem; line-height: 1.65; }
+            .contact-city-card { padding: 20px 16px 22px; border-radius: 14px; }
+            .contact-city-card h2 { font-size: 1.45rem; }
             .contact-blocks { gap: 10px; }
-            .contact-block { padding: 12px 12px; gap: 12px; max-width: 100%; }
-            .contact-icon { width: 42px; height: 42px; }
-            .contact-block h4 { font-size: 0.88rem; }
+            .contact-block { padding: 12px; gap: 12px; }
+            .contact-icon { width: 40px; height: 40px; }
+            .contact-block h4 { font-size: 0.8rem; }
             .contact-block p,
-            .contact-block a { font-size: 0.82rem; overflow-wrap: anywhere; word-break: break-word; }
-            .contact-map { height: 180px; min-height: 180px; width: 100%; }
-            .contact-map iframe { min-height: 180px; width: 100%; }
+            .contact-block a,
+            .contact-block span { font-size: 0.84rem !important; overflow-wrap: anywhere; word-break: break-word; }
+            .contact-map { height: 160px; }
+            .open-form-btn { padding: 13px 16px; font-size: 0.82rem; }
 
-            /* Compact form — phone */
-            .contact-form-box {
-                padding: 16px 14px 18px;
-                border-radius: 14px;
+            .contact-form-modal { padding: 12px; align-items: flex-end; }
+            .contact-form-modal-dialog {
+                padding: 20px 14px 18px;
+                border-radius: 16px 16px 0 0;
+                max-height: 90vh;
             }
-            .contact-form-box h2 {
-                font-size: 1.2rem;
-                margin-bottom: 12px;
-            }
-            .form-row {
-                gap: 8px;
-                margin-bottom: 8px;
-            }
-            .form-row.two-col {
-                grid-template-columns: 1fr 1fr;
-            }
+            .contact-form-box h2 { font-size: 1.25rem; }
+            .form-row { gap: 8px; margin-bottom: 8px; }
+            .form-row.two-col { grid-template-columns: 1fr 1fr; }
             .form-row.measure-row {
                 grid-template-columns: 1fr 64px;
                 gap: 8px;
@@ -326,9 +428,7 @@
                 white-space: nowrap;
                 border: 0;
             }
-            .form-group {
-                position: relative;
-            }
+            .form-group { position: relative; }
             .form-group input,
             .form-group select {
                 padding: 10px 11px;
@@ -350,7 +450,7 @@
             .floating-btns { display: none; }
         }
     </style>
-    <link rel="stylesheet" href="css/marble-showroom.css">
+    <link rel="stylesheet" href="css/marble-showroom.css?v=5">
 
 </head>
 <body class="showroom-theme">
@@ -368,10 +468,9 @@
             <div class="nav-dropdown">
                 <span class="nav-link">Services <i class="fas fa-chevron-down"></i></span>
                 <div class="dropdown-menu">
-                    <a href='/installations'>Installations</a>
                     <a href='/landscaping'>Landscaping</a>
                     <a href='/flooring-executions'>Flooring Executions</a>
-                    <a href='/stone-art-installations'>Stone Art Installations</a>
+                    <a href='/stone-art-installations'>Elevations</a>
                 </div>
             </div>
             <div class="nav-dropdown mega-dropdown">
@@ -455,167 +554,214 @@
     <nav class="mobile-nav" id="mobileNav" data-full-nav="true"></nav>
 
     <section class="contact-section">
-        <div class="contact-grid">
-            <!-- Left: Info -->
-            <div class="contact-left">
-                <h1>Get In<br><span>Touch</span></h1>
-                <p>Reach out for project discussions, product enquiries, or site consultations. Our team is available to assist you with timely and professional responses.</p>
+        <div class="contact-intro">
+            <h1>Get In <span>Touch</span></h1>
+            <p>Reach out for project discussions, product enquiries, or site consultations. Choose your nearest location — our team is ready to assist with timely, professional responses.</p>
+        </div>
 
-                <div class="contact-info-row">
-                    <div class="contact-blocks">
-                        <div class="contact-block">
-                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                            <div>
-                                <h4>Phone</h4>
-                                <a href="tel:+917022630994">+91 70226 30994</a>
-                            </div>
-                        </div>
-                        <div class="contact-block">
-                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <div>
-                                <h4>Email</h4>
-                                <a href="mailto:info@skstonesindia.com">info@skstonesindia.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-block">
-                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div>
-                                <h4>Address</h4>
-                                <p>627-628, 15th Main, 80 Feet Road, 5th Cross Rd, 4th Block, Bengaluru, Karnataka 560034</p>
-                            </div>
+        <div class="contact-cities">
+            <!-- Bangalore -->
+            <article class="contact-city-card" aria-labelledby="city-bangalore">
+                <p class="contact-city-label"><i class="fas fa-map-marker-alt"></i> Location</p>
+                <h2 id="city-bangalore">Bangalore</h2>
+                <div class="contact-blocks">
+                    <div class="contact-block">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+917022630994">+91 70226 30994</a>
                         </div>
                     </div>
-                    <div class="contact-map">
-                        <iframe
-                            src="https://www.google.com/maps?cid=6923478744549710589&hl=en&z=17&output=embed"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="S K Stones India Pvt Ltd — 627-628, 15th Main, 80 Feet Road, 5th Cross Rd, 4th Block, Bengaluru"></iframe>
+                    <div class="contact-block">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:info@skstonesindia.com">info@skstonesindia.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-block">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>627-628, 15th Main, 80 Feet Rd, 5th Cross, Koramangala 4th Block, Bengaluru, Karnataka 560034</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="follow-us">
-                    <p>Follow us:</p>
-                    <div class="social-row">
-                        <a href="https://www.linkedin.com/in/shree-kumar-gandhi-8699533a6/" class="social-btn linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://wa.me/917022630994" class="social-btn whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="mailto:info@skstonesindia.com" class="social-btn email" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    </div>
-                    <p class="map-link-wrap" style="margin-top:14px;">
-                        <a href="https://www.google.com/maps/place/S+K+STONES+INDIA+PVT+LTD/@12.9350616,77.6283894,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae150ee079f97f:0x6015233c6ada5afd!8m2!3d12.9350616!4d77.6283894!16s%2Fg%2F11y4103plf" target="_blank" rel="noopener noreferrer" style="color:#c9a227;font-size:0.85rem;font-weight:600;text-decoration:none;">Open in Google Maps →</a>
-                    </p>
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps?cid=6923478744549710589&hl=en&z=17&output=embed"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="S K Stones India — Bangalore showroom"></iframe>
                 </div>
-            </div>
+                <button type="button" class="open-form-btn" data-location="Bangalore" data-open-form>
+                    <i class="fas fa-file-alt"></i> Open Form
+                </button>
+            </article>
 
-            <!-- Right: Form -->
-            <div class="contact-form-box">
-                <h2>Get in touch</h2>
-                <div class="form-success-banner" id="formSuccessBanner">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Thank you! Your quote request was sent successfully. We'll respond within 24 hours.</span>
+            <!-- Hyderabad -->
+            <article class="contact-city-card" aria-labelledby="city-hyderabad">
+                <p class="contact-city-label"><i class="fas fa-map-marker-alt"></i> Location</p>
+                <h2 id="city-hyderabad">Hyderabad</h2>
+                <div class="contact-blocks">
+                    <div class="contact-block">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+917022630994">+91 70226 30994</a>
+                        </div>
+                    </div>
+                    <div class="contact-block">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:info@skstonesindia.com">info@skstonesindia.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-block">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>ORR Service Rd, Vattinagulapally, Hyderabad, Telangana 500075</p>
+                        </div>
+                    </div>
                 </div>
-                <form id="contactForm" action="https://formsubmit.co/info@skstonesindia.com" method="POST">
-                    <input type="hidden" name="_subject" value="Custom Quote Request - S K Stones India">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="text" name="_honey" style="display:none">
-                    <input type="hidden" name="_next" id="formNextUrl" value="">
-                    <div class="form-row two-col">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
-                        </div>
-                    </div>
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps?q=17.4125612,78.2894052&hl=en&z=17&output=embed"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="S K Stones India — Hyderabad location"></iframe>
+                </div>
+                <button type="button" class="open-form-btn" data-location="Hyderabad" data-open-form>
+                    <i class="fas fa-file-alt"></i> Open Form
+                </button>
+            </article>
+        </div>
 
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Email" required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="stoneType">Stone Type Interested</label>
-                            <select id="stoneType" name="stoneType" required>
-                                <option value="" disabled selected>Stone Type Interested</option>
-                                <option value="granites">Granites</option>
-                                <option value="marbles">Marbles</option>
-                                <option value="natural-stones">Natural Stones</option>
-                                <option value="engineered-surfaces">Engineered Surfaces</option>
-                                <option value="wall-claddings">Wall Claddings</option>
-                                <option value="tiles">Tiles</option>
-                                <option value="stone-art">Stone Art</option>
-                                <option value="landscaping">Landscaping</option>
-                                <option value="installations">Installations</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="siteLocation">Site Location And Address</label>
-                            <input type="text" id="siteLocation" name="siteLocation" placeholder="Site Location And Address">
-                        </div>
-                    </div>
-
-                    <div class="form-row two-col">
-                        <div class="form-group">
-                            <label for="quantity">Quantity</label>
-                            <input type="text" id="quantity" name="quantity" placeholder="Quantity">
-                        </div>
-                        <div class="form-group">
-                            <label for="colour">Colour</label>
-                            <input type="text" id="colour" name="colour" placeholder="Colour">
-                        </div>
-                    </div>
-
-                    <div class="form-row measure-row">
-                        <div class="form-group">
-                            <label class="measure-label" for="thickness">Thickness</label>
-                            <input type="text" id="thickness" name="thickness" placeholder="Thickness">
-                        </div>
-                        <div class="form-group unit">
-                            <label class="measure-label" for="thicknessUnit">&nbsp;</label>
-                            <select id="thicknessUnit" name="thicknessUnit">
-                                <option value="mm" selected>MM</option>
-                                <option value="cm">CM</option>
-                                <option value="inch">IN</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label class="measure-label" for="size">Size</label>
-                            <input type="text" id="size" name="size" placeholder="Size">
-                        </div>
-                        <div class="form-group unit">
-                            <label class="measure-label" for="sizeUnit">&nbsp;</label>
-                            <select id="sizeUnit" name="sizeUnit">
-                                <option value="mm" selected>MM</option>
-                                <option value="cm">CM</option>
-                                <option value="inch">IN</option>
-                                <option value="sqft">SQ FT</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="budget">Project Size / Budget (optional)</label>
-                            <input type="text" id="budget" name="budget" placeholder="Project Size / Budget (optional)">
-                        </div>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Get My Custom Quote</button>
-                </form>
+        <div class="follow-us">
+            <p>Follow us:</p>
+            <div class="social-row">
+                <a href="https://www.linkedin.com/in/shree-kumar-gandhi-8699533a6/" class="social-btn linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/917022630994" class="social-btn whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:info@skstonesindia.com" class="social-btn email" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </section>
+
+    <!-- Form modal -->
+    <div class="contact-form-modal" id="contactFormModal" role="dialog" aria-modal="true" aria-labelledby="contactFormTitle" hidden>
+        <div class="contact-form-modal-dialog contact-form-box">
+            <button type="button" class="contact-form-modal-close" id="contactFormClose" aria-label="Close form">&times;</button>
+            <h2 id="contactFormTitle">Get in touch</h2>
+            <p class="contact-form-location">Enquiry for: <strong id="formLocationLabel">Bangalore</strong></p>
+            <div class="form-success-banner" id="formSuccessBanner">
+                <i class="fas fa-check-circle"></i>
+                <span>Thank you! Your quote request was sent successfully. We'll respond within 24 hours.</span>
+            </div>
+            <form id="contactForm" action="https://formsubmit.co/info@skstonesindia.com" method="POST">
+                <input type="hidden" name="_subject" value="Custom Quote Request - S K Stones India">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_next" id="formNextUrl" value="">
+                <input type="hidden" name="preferredLocation" id="preferredLocation" value="Bangalore">
+                <div class="form-row two-col">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="stoneType">Stone Type Interested</label>
+                        <select id="stoneType" name="stoneType" required>
+                            <option value="" disabled selected>Stone Type Interested</option>
+                            <option value="granites">Granites</option>
+                            <option value="marbles">Marbles</option>
+                            <option value="natural-stones">Natural Stones</option>
+                            <option value="engineered-surfaces">Engineered Surfaces</option>
+                            <option value="wall-claddings">Wall Claddings</option>
+                            <option value="tiles">Tiles</option>
+                            <option value="stone-art">Stone Art</option>
+                            <option value="landscaping">Landscaping</option>
+                            <option value="installations">Installations</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="siteLocation">Site Location And Address</label>
+                        <input type="text" id="siteLocation" name="siteLocation" placeholder="Site Location And Address">
+                    </div>
+                </div>
+
+                <div class="form-row two-col">
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input type="text" id="quantity" name="quantity" placeholder="Quantity">
+                    </div>
+                    <div class="form-group">
+                        <label for="colour">Colour</label>
+                        <input type="text" id="colour" name="colour" placeholder="Colour">
+                    </div>
+                </div>
+
+                <div class="form-row measure-row">
+                    <div class="form-group">
+                        <label class="measure-label" for="thickness">Thickness</label>
+                        <input type="text" id="thickness" name="thickness" placeholder="Thickness">
+                    </div>
+                    <div class="form-group unit">
+                        <label class="measure-label" for="thicknessUnit">&nbsp;</label>
+                        <select id="thicknessUnit" name="thicknessUnit">
+                            <option value="mm" selected>MM</option>
+                            <option value="cm">CM</option>
+                            <option value="inch">IN</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="measure-label" for="size">Size</label>
+                        <input type="text" id="size" name="size" placeholder="Size">
+                    </div>
+                    <div class="form-group unit">
+                        <label class="measure-label" for="sizeUnit">&nbsp;</label>
+                        <select id="sizeUnit" name="sizeUnit">
+                            <option value="mm" selected>MM</option>
+                            <option value="cm">CM</option>
+                            <option value="inch">IN</option>
+                            <option value="sqft">SQ FT</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="budget">Project Size / Budget (optional)</label>
+                        <input type="text" id="budget" name="budget" placeholder="Project Size / Budget (optional)">
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Get My Custom Quote</button>
+            </form>
+        </div>
+    </div>
 
     <section class="faq-section" id="faq">
         <div class="faq-container">
@@ -640,36 +786,21 @@
     </section>
 
     <footer class="footer">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <a aria-label='S K Stones India' class='brand-lockup brand-lockup-footer' href='/'>
-            <img class="brand-mark" src="images/shree-logo.png" alt="" width="40" height="80" decoding="async">
-            <span class="brand-text">
-                        <span class="brand-name">S K <span class="brand-stones">Stones</span> India</span>
-                        <span class="brand-formerly">(formerly Shree Stones &amp; Services)</span>
-                    </span>
-                </a>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <a href='/'>Home</a>
-                <a href='/about'>About Us</a>
-                <a href='/products'>Products</a>
-                <a href='/projects'>Our Projects</a>
-                <a href='/contact'>Contact Us</a>
-            </div>
-            <div class="footer-col">
-                <h4>Services</h4>
-                <a href='/installations'>Installations</a>
-                <a href='/landscaping'>Landscaping</a>
-                <a href='/flooring-executions'>Flooring Executions</a>
-                <a href='/stone-art-installations'>Stone Art</a>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <p><i class="fas fa-phone" style="color: var(--gold); margin-right: 8px;"></i> +91 70226 30994</p>
-                <p><i class="fas fa-envelope" style="color: var(--gold); margin-right: 8px;"></i> info@skstonesindia.com</p>
-                <p><i class="fas fa-map-marker-alt" style="color: var(--gold); margin-right: 8px;"></i> Koramangala, Bengaluru</p>
+        <div class="footer-grid footer-grid-contact-only">
+            <div class="footer-contact-grid">
+                <div class="footer-contact-block">
+                    <h4>Contact</h4>
+                    <p><a href="tel:+917022630994"><i class="fas fa-phone"></i> +91 70226 30994</a></p>
+                    <p><a href="mailto:info@skstonesindia.com"><i class="fas fa-envelope"></i> info@skstonesindia.com</a></p>
+                </div>
+                <div class="footer-contact-block">
+                    <h4>Bangalore</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> <span>627-628, 15th Main, 80 Feet Rd, 5th Cross, Koramangala 4th Block, Bengaluru, Karnataka 560034</span></p>
+                </div>
+                <div class="footer-contact-block">
+                    <h4>Hyderabad</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> <span>ORR Service Rd, Vattinagulapally, Hyderabad, Telangana 500075</span></p>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -691,11 +822,48 @@
             formNext.value = window.location.origin + window.location.pathname.replace(/[^/]+$/, '') + 'thank-you.html';
         }
 
+        const modal = document.getElementById('contactFormModal');
+        const locationInput = document.getElementById('preferredLocation');
+        const locationLabel = document.getElementById('formLocationLabel');
+        const closeBtn = document.getElementById('contactFormClose');
+
+        function openContactForm(location) {
+            if (!modal) return;
+            const city = location || 'Bangalore';
+            if (locationInput) locationInput.value = city;
+            if (locationLabel) locationLabel.textContent = city;
+            modal.hidden = false;
+            requestAnimationFrame(() => modal.classList.add('active'));
+            document.body.classList.add('form-modal-open');
+            const firstField = modal.querySelector('#name');
+            if (firstField) setTimeout(() => firstField.focus(), 180);
+        }
+
+        function closeContactForm() {
+            if (!modal) return;
+            modal.classList.remove('active');
+            document.body.classList.remove('form-modal-open');
+            setTimeout(() => { modal.hidden = true; }, 250);
+        }
+
+        document.querySelectorAll('[data-open-form]').forEach((btn) => {
+            btn.addEventListener('click', () => openContactForm(btn.getAttribute('data-location')));
+        });
+
+        closeBtn?.addEventListener('click', closeContactForm);
+        modal?.addEventListener('click', (e) => {
+            if (e.target === modal) closeContactForm();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal?.classList.contains('active')) closeContactForm();
+        });
+
         if (new URLSearchParams(window.location.search).get('submitted') === '1') {
             document.getElementById('formSuccessBanner')?.classList.add('visible');
+            openContactForm('Bangalore');
         }
     </script>
-    <script src="js/mobile-nav.js"></script>
+    <script src="js/mobile-nav.js?v=2"></script>
     <script src="js/faq-accordion.js"></script>
     <script src="js/seo-schema.js"></script>
     <script src="js/mega-menu.js"></script>

@@ -1,54 +1,70 @@
-/* Fullscreen product image viewer + magnifier for product grid pages */
+/* Fullscreen image viewer for product grids and gallery grids */
 (function () {
     const MAG_SIZE = 180;
     const MAG_ZOOM = 2.6;
 
-    function initProductLightbox() {
-        const grid = document.querySelector('.product-grid');
-        if (!grid) return;
-
+    function collectFromProductGrid(grid) {
         const items = [...grid.querySelectorAll('.product-item')].filter((item) => item.querySelector('img'));
-        if (!items.length) return;
-
-        const products = items.map((item) => {
+        return items.map((item) => {
             const img = item.querySelector('img');
             const title = item.querySelector('h4');
             return {
+                el: item,
                 src: img.currentSrc || img.src,
                 alt: title ? title.textContent.trim() : img.alt || 'Product',
             };
         });
+    }
 
+    function collectFromGalleryGrid(grid) {
+        const items = [...grid.querySelectorAll('.gallery-item')].filter((item) => item.querySelector('img'));
+        return items.map((item, index) => {
+            const img = item.querySelector('img');
+            const caption = item.querySelector('h3, h4, figcaption, .gallery-caption');
+            const alt = (caption && caption.textContent.trim())
+                || (img.alt && img.alt !== 'Gallery' ? img.alt.trim() : '')
+                || `Gallery image ${index + 1}`;
+            return {
+                el: item,
+                src: img.currentSrc || img.src,
+                alt,
+            };
+        });
+    }
+
+    function createLightbox(entries, options) {
+        if (!entries.length) return;
+
+        const withMagnifier = options.magnifier !== false;
         const lightbox = document.createElement('div');
         lightbox.className = 'product-lightbox';
-        lightbox.id = 'productLightbox';
         lightbox.innerHTML = `
             <button type="button" class="product-lightbox-close" aria-label="Close">&times;</button>
-            <button type="button" class="product-lightbox-nav product-lightbox-prev" aria-label="Previous product">
+            <button type="button" class="product-lightbox-nav product-lightbox-prev" aria-label="Previous">
                 <i class="fas fa-chevron-left"></i>
             </button>
             <div class="product-lightbox-stage">
                 <div class="product-lightbox-frame">
-                    <img src="" alt="" id="productLightboxImg">
-                    <div class="product-magnifier" id="productMagnifier" aria-hidden="true"></div>
+                    <img src="" alt="" class="product-lightbox-img">
+                    ${withMagnifier ? '<div class="product-magnifier" aria-hidden="true"></div>' : ''}
                 </div>
             </div>
-            <button type="button" class="product-lightbox-nav product-lightbox-next" aria-label="Next product">
+            <button type="button" class="product-lightbox-nav product-lightbox-next" aria-label="Next">
                 <i class="fas fa-chevron-right"></i>
             </button>
             <div class="product-lightbox-meta">
-                <p class="product-lightbox-title" id="productLightboxTitle"></p>
-                <p class="product-lightbox-counter" id="productLightboxCounter"></p>
-                <p class="product-lightbox-hint" id="productLightboxHint">Hover or touch the image to magnify</p>
+                <p class="product-lightbox-title"></p>
+                <p class="product-lightbox-counter"></p>
+                ${withMagnifier ? '<p class="product-lightbox-hint">Hover or touch the image to magnify</p>' : ''}
             </div>
         `;
         document.body.appendChild(lightbox);
 
-        const imgEl = lightbox.querySelector('#productLightboxImg');
+        const imgEl = lightbox.querySelector('.product-lightbox-img');
         const frameEl = lightbox.querySelector('.product-lightbox-frame');
-        const lensEl = lightbox.querySelector('#productMagnifier');
-        const titleEl = lightbox.querySelector('#productLightboxTitle');
-        const counterEl = lightbox.querySelector('#productLightboxCounter');
+        const lensEl = lightbox.querySelector('.product-magnifier');
+        const titleEl = lightbox.querySelector('.product-lightbox-title');
+        const counterEl = lightbox.querySelector('.product-lightbox-counter');
         const closeBtn = lightbox.querySelector('.product-lightbox-close');
         const prevBtn = lightbox.querySelector('.product-lightbox-prev');
         const nextBtn = lightbox.querySelector('.product-lightbox-next');
@@ -64,12 +80,14 @@
         }
 
         function hideMagnifier() {
+            if (!lensEl) return;
             magnifying = false;
             lensEl.classList.remove('is-visible');
             frameEl.classList.remove('is-magnifying');
         }
 
         function showMagnifier(clientX, clientY) {
+            if (!lensEl) return;
             const rect = imgEl.getBoundingClientRect();
             if (!rect.width || !rect.height) {
                 hideMagnifier();
@@ -110,14 +128,14 @@
 
         function render(index) {
             hideMagnifier();
-            currentIndex = (index + products.length) % products.length;
-            const product = products[currentIndex];
-            imgEl.src = product.src;
-            imgEl.alt = product.alt;
-            titleEl.textContent = product.alt;
-            counterEl.textContent = `${currentIndex + 1} / ${products.length}`;
-            prevBtn.style.visibility = products.length > 1 ? 'visible' : 'hidden';
-            nextBtn.style.visibility = products.length > 1 ? 'visible' : 'hidden';
+            currentIndex = (index + entries.length) % entries.length;
+            const entry = entries[currentIndex];
+            imgEl.src = entry.src;
+            imgEl.alt = entry.alt;
+            titleEl.textContent = entry.alt;
+            counterEl.textContent = `${currentIndex + 1} / ${entries.length}`;
+            prevBtn.style.visibility = entries.length > 1 ? 'visible' : 'hidden';
+            nextBtn.style.visibility = entries.length > 1 ? 'visible' : 'hidden';
         }
 
         function open(index) {
@@ -131,7 +149,7 @@
             lightbox.classList.remove('active');
             document.body.style.overflow = '';
             imgEl.removeAttribute('src');
-            lensEl.style.backgroundImage = '';
+            if (lensEl) lensEl.style.backgroundImage = '';
         }
 
         function step(delta) {
@@ -139,14 +157,14 @@
             render(currentIndex + delta);
         }
 
-        items.forEach((item, index) => {
-            item.classList.add('product-item-clickable');
-            item.setAttribute('role', 'button');
-            item.setAttribute('tabindex', '0');
-            item.setAttribute('aria-label', `View ${products[index].alt} full screen`);
+        entries.forEach((entry, index) => {
+            entry.el.classList.add('product-item-clickable');
+            entry.el.setAttribute('role', 'button');
+            entry.el.setAttribute('tabindex', '0');
+            entry.el.setAttribute('aria-label', `View ${entry.alt} full screen`);
 
-            item.addEventListener('click', () => open(index));
-            item.addEventListener('keydown', (e) => {
+            entry.el.addEventListener('click', () => open(index));
+            entry.el.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
                     open(index);
@@ -168,48 +186,48 @@
             if (e.target === lightbox || e.target.classList.contains('product-lightbox-stage')) close();
         });
 
-        // Desktop magnifier
-        frameEl.addEventListener('mousemove', (e) => {
-            showMagnifier(e.clientX, e.clientY);
-        });
-        frameEl.addEventListener('mouseleave', hideMagnifier);
-        frameEl.addEventListener('mouseenter', (e) => {
-            showMagnifier(e.clientX, e.clientY);
-        });
+        if (withMagnifier && lensEl) {
+            frameEl.addEventListener('mousemove', (e) => {
+                showMagnifier(e.clientX, e.clientY);
+            });
+            frameEl.addEventListener('mouseleave', hideMagnifier);
+            frameEl.addEventListener('mouseenter', (e) => {
+                showMagnifier(e.clientX, e.clientY);
+            });
 
-        // Touch magnifier — press & drag on image
-        frameEl.addEventListener('touchstart', (e) => {
-            if (!e.changedTouches.length) return;
-            const t = e.changedTouches[0];
-            touchStartX = t.screenX;
-            touchStartY = t.screenY;
-            suppressSwipe = false;
-            const rect = imgEl.getBoundingClientRect();
-            if (
-                t.clientX >= rect.left && t.clientX <= rect.right &&
-                t.clientY >= rect.top && t.clientY <= rect.bottom
-            ) {
-                showMagnifier(t.clientX, t.clientY);
-            }
-        }, { passive: true });
+            frameEl.addEventListener('touchstart', (e) => {
+                if (!e.changedTouches.length) return;
+                const t = e.changedTouches[0];
+                touchStartX = t.screenX;
+                touchStartY = t.screenY;
+                suppressSwipe = false;
+                const rect = imgEl.getBoundingClientRect();
+                if (
+                    t.clientX >= rect.left && t.clientX <= rect.right &&
+                    t.clientY >= rect.top && t.clientY <= rect.bottom
+                ) {
+                    showMagnifier(t.clientX, t.clientY);
+                }
+            }, { passive: true });
 
-        frameEl.addEventListener('touchmove', (e) => {
-            if (!e.changedTouches.length) return;
-            const t = e.changedTouches[0];
-            const dx = Math.abs(t.screenX - touchStartX);
-            const dy = Math.abs(t.screenY - touchStartY);
-            if (dx > 12 || dy > 12) suppressSwipe = true;
-            if (magnifying || dy >= dx) {
-                if (e.cancelable) e.preventDefault();
-                showMagnifier(t.clientX, t.clientY);
-                suppressSwipe = true;
-            }
-        }, { passive: false });
+            frameEl.addEventListener('touchmove', (e) => {
+                if (!e.changedTouches.length) return;
+                const t = e.changedTouches[0];
+                const dx = Math.abs(t.screenX - touchStartX);
+                const dy = Math.abs(t.screenY - touchStartY);
+                if (dx > 12 || dy > 12) suppressSwipe = true;
+                if (magnifying || dy >= dx) {
+                    if (e.cancelable) e.preventDefault();
+                    showMagnifier(t.clientX, t.clientY);
+                    suppressSwipe = true;
+                }
+            }, { passive: false });
 
-        frameEl.addEventListener('touchend', () => {
-            hideMagnifier();
-        });
-        frameEl.addEventListener('touchcancel', hideMagnifier);
+            frameEl.addEventListener('touchend', () => {
+                hideMagnifier();
+            });
+            frameEl.addEventListener('touchcancel', hideMagnifier);
+        }
 
         lightbox.addEventListener('touchstart', (e) => {
             if (e.target.closest('.product-lightbox-frame')) return;
@@ -231,6 +249,16 @@
             if (e.key === 'Escape') close();
             if (e.key === 'ArrowLeft') step(-1);
             if (e.key === 'ArrowRight') step(1);
+        });
+    }
+
+    function initProductLightbox() {
+        document.querySelectorAll('.product-grid').forEach((grid) => {
+            createLightbox(collectFromProductGrid(grid), { magnifier: true });
+        });
+
+        document.querySelectorAll('.gallery-grid').forEach((grid) => {
+            createLightbox(collectFromGalleryGrid(grid), { magnifier: true });
         });
     }
 

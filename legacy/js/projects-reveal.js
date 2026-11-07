@@ -6,7 +6,7 @@
     if (!('IntersectionObserver' in window)) return;
 
     var items = document.querySelectorAll(
-        '.case-studies-section .section-eyebrow, .case-study-card, .projects-section .section-eyebrow, .project-item'
+        '.project-block-header, .project-item'
     );
 
     items.forEach(function (el, i) {

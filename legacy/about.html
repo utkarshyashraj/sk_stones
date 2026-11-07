@@ -2,10 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!-- This site is hosted on Netlify. Anyone can build and deploy a site
-     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=d4772256-9b0c-4023-884d-54bad2f890df
-     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="About S K Stones India — premium stone experts in Bengaluru since 2014. Meet our team, values, and craftsmanship behind 200+ projects.">
     <link rel="canonical" href="https://skstonesindia.com/about.html">
     <meta property="og:title" content="About Us | S K Stones India">
@@ -20,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/mega-menu.css">
-    <link rel="stylesheet" href="css/mobile-nav.css">
+    <link rel="stylesheet" href="css/mobile-nav.css?v=3">
     <link rel="stylesheet" href="css/site-extras.css"><style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root { --gold: #C9A227; --dark: #0a0a0a; --white: #ffffff; }
@@ -56,14 +53,14 @@
         
         /* About Hero Section */
         .about-hero { padding: 100px 50px 60px; background: var(--dark); }
-        .about-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1400px; margin: 0 auto; align-items: start; width: 100%; }
+        .about-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1400px; margin: 0 auto; align-items: stretch; width: 100%; }
         .about-hero-grid > *, .about-intro-grid > *, .about-hero-content, .about-intro-text { min-width: 0; max-width: 100%; }
-        .about-hero-content { align-self: start; }
-        .about-hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; text-transform: uppercase; line-height: 1.2; margin: 0 0 32px; overflow-wrap: break-word; word-wrap: break-word; }
+        .about-hero-content { align-self: center; height: auto; background: transparent !important; border: none !important; box-shadow: none !important; padding: 0 !important; }
+        .about-hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; text-transform: uppercase; line-height: 1.2; margin: 0; color: #f8f4ec; overflow-wrap: break-word; word-wrap: break-word; letter-spacing: 0.02em; }
         .about-hero-content h1 span { color: var(--gold); }
         .about-intro-grid { display: grid; grid-template-columns: 280px 1fr; gap: 30px; align-items: stretch; }
         .about-small-image { position: relative; overflow: hidden; border-radius: 15px; border: 3px solid var(--gold); display: flex; flex-direction: column; min-height: 100%; }
-        .about-small-image img { width: 100%; flex: 1; min-height: 300px; object-fit: cover; object-position: center 42%; display: block; border: none; border-radius: 0; }
+        .about-small-image img { width: 100%; flex: 1; min-height: 300px; object-fit: cover; object-position: center 35%; display: block; border: none; border-radius: 0; }
         .about-small-badge { position: absolute; bottom: 0; left: 0; right: 0; width: 100%; background: var(--gold); color: var(--dark); padding: 14px 12px; border-radius: 0; font-size: 0.82rem; font-weight: 600; text-align: center; line-height: 1.45; }
         .about-intro-text p { font-size: 1rem; line-height: 1.9; opacity: 0.9; margin-bottom: 20px; }
         .about-intro-text ul { list-style: none; margin: 25px 0; }
@@ -71,12 +68,8 @@
         .about-intro-text li i { color: var(--gold); }
         .btn { padding: 15px 40px; border: 2px solid var(--gold); background: transparent; color: var(--white); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; display: inline-block; transition: all 0.3s; border-radius: 50px; }
         .btn:hover { background: var(--gold); color: var(--dark); }
-        .about-hero-image { position: relative; border-radius: 20px; overflow: hidden; height: 100%; max-height: 580px; }
-        .about-hero-image img { width: 100%; height: 580px; object-fit: cover; object-position: center 30%; border-radius: 20px; display: block; }
-        .years-badge { position: absolute; bottom: 30px; right: 30px; background: rgba(10,10,10,0.9); padding: 25px 30px; border-radius: 15px; text-align: center; border: 1px solid rgba(201,162,39,0.3); }
-        .years-badge .number { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--gold); font-weight: 700; }
-        .years-badge .number sup { font-size: 1.5rem; }
-        .years-badge .label { font-size: 0.85rem; opacity: 0.8; }
+        .about-hero-image { position: relative; border-radius: 20px; overflow: hidden; height: clamp(520px, 58vh, 640px); min-height: 520px; max-height: none; align-self: stretch; }
+        .about-hero-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 45%; border-radius: 20px; display: block; }
         
         /* Marquee */
         .marquee { background: var(--gold); padding: 18px 0; overflow: hidden; }
@@ -84,11 +77,11 @@
         .marquee-content span { color: var(--dark); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 3px; padding: 0 40px; }
         
         /* Building Purpose Section */
-        .purpose-section { padding: 100px 50px; background: var(--dark); }
+        .purpose-section { padding: 64px 50px; background: var(--dark); }
         .purpose-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            column-gap: 60px;
+            column-gap: 48px;
             row-gap: 30px;
             max-width: 1400px;
             margin: 0 auto;
@@ -97,19 +90,20 @@
         .purpose-image {
             grid-column: 1;
             grid-row: 1;
-            align-self: stretch;
+            position: relative;
+            align-self: start;
             border-radius: 20px;
             overflow: hidden;
             min-height: 0;
-            display: flex;
+            width: 100%;
         }
         .purpose-image img {
+            position: absolute;
+            inset: 0;
             width: 100%;
             height: 100%;
-            min-height: 0;
-            flex: 1;
             object-fit: cover;
-            object-position: center 35%;
+            object-position: center 68%;
             display: block;
         }
         .purpose-feature-content {
@@ -117,14 +111,14 @@
             grid-row: 1;
             min-height: 0;
         }
-        .purpose-feature-content h2 { font-family: 'Playfair Display', serif; font-size: 2.8rem; text-transform: uppercase; line-height: 1.2; margin-bottom: 50px; }
+        .purpose-feature-content h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; text-transform: uppercase; line-height: 1.2; margin-bottom: 28px; }
         .purpose-feature-content h2 span { color: var(--gold); }
-        .purpose-cards { display: grid; gap: 30px; }
+        .purpose-cards { display: grid; gap: 16px; }
         .purpose-card { display: grid; grid-template-columns: 80px 1fr; gap: 20px; align-items: start; }
         .purpose-card-number { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 15px; }
         .purpose-card-number i { color: var(--gold); font-size: 1.5rem; }
-        .purpose-card-content h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 10px; }
-        .purpose-card-content p { font-size: 0.9rem; line-height: 1.8; opacity: 0.8; }
+        .purpose-card-content h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px; }
+        .purpose-card-content p { font-size: 0.9rem; line-height: 1.7; opacity: 0.8; }
         
         /* Why Choose Section */
         .why-section { padding: 100px 50px; background: var(--dark); }
@@ -133,6 +127,17 @@
         .section-header h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 20px; }
         .section-header h2 span { color: var(--gold); }
         .section-header p { opacity: 0.8; max-width: 700px; margin: 0 auto; line-height: 1.8; }
+        .why-section .section-header,
+        .team-section .section-header {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+        .why-section .section-header h2,
+        .team-section .section-header h2 { color: #f8f4ec; }
+        .why-section .section-header p,
+        .team-section .section-header p { color: rgba(248, 244, 236, 0.8); opacity: 1; }
         .why-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
         .why-card { background: linear-gradient(135deg, #1a1a1a, #0d0d0d); border-radius: 20px; padding: 40px 30px; text-align: center; border: 1px solid rgba(201,162,39,0.2); transition: all 0.3s; }
         .why-card:hover { border-color: var(--gold); transform: translateY(-10px); }
@@ -145,7 +150,7 @@
         .founder-section { padding: 100px 50px; background: linear-gradient(180deg, #111 0%, var(--dark) 100%); }
         .founder-grid {
             display: grid;
-            grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+            grid-template-columns: minmax(280px, 380px) minmax(0, 1fr);
             gap: 48px;
             max-width: 1200px;
             margin: 0 auto;
@@ -154,17 +159,22 @@
         .founder-image {
             position: relative;
             width: 100%;
+            aspect-ratio: 3 / 4;
+            max-height: 520px;
             border-radius: 20px;
             overflow: hidden;
             border: 3px solid var(--gold);
             align-self: center;
-            background: #f3f1ee;
+            background: #1a1a1a;
+            box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
         }
         .founder-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center center;
+            object-position: center 8%;
+            transform: scale(1.22);
+            transform-origin: center 18%;
             display: block;
             border-radius: 0;
             border: none;
@@ -262,20 +272,20 @@
         .team-photo img {
             width: 100%;
             height: 100%;
-            min-height: 560px;
+            min-height: 420px;
             display: block;
             object-fit: cover;
-            object-position: center 40%;
+            object-position: center center;
             border: none;
             border-radius: 0;
             box-shadow: none;
             transition: transform 0.6s ease;
         }
         @media (min-width: 1025px) {
-            .team-photo-frame { min-height: 540px; }
+            .team-photo-frame { min-height: 480px; }
             .team-photo img {
-                min-height: 540px;
-                object-position: 54% 40%;
+                min-height: 480px;
+                object-position: center center;
             }
         }
         .team-photo:hover img {
@@ -478,19 +488,28 @@
             .about-hero { padding: 90px 16px 50px; overflow: hidden; }
             .about-hero-grid, .founder-grid { grid-template-columns: 1fr; gap: 32px; }
             .purpose-grid { grid-template-columns: 1fr; row-gap: 32px; }
-            .purpose-image { grid-column: 1; grid-row: auto; align-self: auto; max-height: 360px; }
-            .purpose-image img { height: 100%; max-height: 360px; }
+            .purpose-image { grid-column: 1; grid-row: auto; align-self: auto; max-height: 280px; height: 280px; }
+            .purpose-image img { height: 100%; max-height: none; object-position: center 72%; }
             .purpose-feature-content { grid-column: 1; grid-row: auto; }
             .about-hero-content h1 { font-size: 2.1rem; margin-bottom: 24px; }
-            .about-hero-image { max-height: 420px; width: 100%; }
-            .about-hero-image img { height: 420px; object-position: center 25%; }
+            .about-hero-image { max-height: 300px; height: 300px; min-height: 300px; width: 100%; }
+            .about-hero-image img { position: absolute; inset: 0; height: 100%; object-position: center 45%; }
             .about-intro-grid { grid-template-columns: 1fr; gap: 24px; }
-            .about-small-image img { min-height: 250px; object-position: center 42%; }
+            .about-small-image img { min-height: 250px; object-position: center 35%; }
             .purpose-section, .why-section, .founder-section, .team-section { padding: 44px 16px; }
             .footer { padding: 24px 14px 0; }
             .footer-content { grid-template-columns: 1fr 1fr; gap: 12px 14px; padding-bottom: 12px; border-bottom: none; }
             .footer-content > :first-child { grid-column: 1 / -1; }
             .footer-content > .social-links { grid-column: 1 / -1; justify-content: center; margin-top: 4px; }
+            .footer-content.footer-content-contact-only {
+                grid-template-columns: 1fr !important;
+                justify-items: stretch;
+                text-align: left;
+            }
+            .footer-contact-grid {
+                grid-template-columns: 1fr !important;
+                gap: 18px !important;
+            }
             .why-cards {
                 display: flex;
                 flex-wrap: nowrap;
@@ -508,8 +527,8 @@
                 scroll-snap-align: start;
                 min-width: min(82vw, 300px);
             }
-            .purpose-image { max-height: 220px; }
-            .purpose-image img { max-height: 220px; }
+            .purpose-image { max-height: 220px; height: 220px; }
+            .purpose-image img { max-height: none; object-position: center 72%; }
             .purpose-feature-content {
                 max-width: 100%;
                 min-width: 0;
@@ -601,21 +620,32 @@
                 margin-bottom: 8px;
             }
             .founder-content p { font-size: 0.9rem; line-height: 1.65; margin-bottom: 12px; }
-            .founder-image img { max-height: 360px; object-fit: cover; width: 100%; }
+            .founder-image {
+                max-width: 300px;
+                margin: 0 auto;
+                max-height: 400px;
+            }
+            .founder-image img {
+                max-height: 400px;
+                object-fit: cover;
+                object-position: center 8%;
+                transform: scale(1.22);
+                transform-origin: center 18%;
+                width: 100%;
+            }
         }
         @media (max-width: 480px) {
             .about-hero { padding: 84px 14px 40px; }
             .about-hero-content h1 { font-size: 1.75rem; line-height: 1.3; }
-            .about-hero-image, .about-hero-image img { max-height: 320px; height: 320px; }
-            .years-badge { bottom: 14px; right: 14px; padding: 14px 16px; }
-            .years-badge .number { font-size: 2rem; }
-            .years-badge .label { font-size: 0.75rem; }
+            .about-hero-image { max-height: 240px; height: 240px; min-height: 240px; }
+            .about-hero-image img { position: absolute; inset: 0; height: 100%; object-position: center 45%; }
             .purpose-content h2, .section-header h2, .cta-section h2 { font-size: 1.45rem; }
             .team-photo-frame, .team-photo img { min-height: 240px; height: 260px; max-height: 280px; }
-            .purpose-image, .purpose-image img { max-height: 180px; }
+            .purpose-image { max-height: 180px; height: 180px; }
+            .purpose-image img { max-height: none; object-position: center 75%; }
         }
     </style>
-    <link rel="stylesheet" href="css/marble-showroom.css">
+    <link rel="stylesheet" href="css/marble-showroom.css?v=5">
 
 </head>
 <body class="showroom-theme">
@@ -633,10 +663,9 @@
             <div class="nav-dropdown">
                 <span class="nav-link">Services <i class="fas fa-chevron-down"></i></span>
                 <div class="dropdown-menu">
-                    <a href='/installations'>Installations</a>
                     <a href='/landscaping'>Landscaping</a>
                     <a href='/flooring-executions'>Flooring Executions</a>
-                    <a href='/stone-art-installations'>Stone Art Installations</a>
+                    <a href='/stone-art-installations'>Elevations</a>
                 </div>
             </div>
                         <div class="nav-dropdown mega-dropdown">
@@ -721,30 +750,10 @@
     <section class="about-hero">
         <div class="about-hero-grid">
             <div class="about-hero-content">
-                <h1><span>Premium</span> Stones For Every <span>Vision.</span> Every <span>Space.</span></h1>
-                <div class="about-intro-grid">
-                    <div class="about-small-image">
-                        <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/fluid-salon-moderno-con-pavimento-marmol-blanco-y-negro.webp" alt="Showroom">
-                        <div class="about-small-badge">We have delivered 200+ successful stone projects.</div>
-                    </div>
-                    <div class="about-intro-text">
-                        <p>S K Stones India (formerly Shree Stones & Services) blends craftsmanship, innovation, and precision engineering to deliver refined stone solutions tailored for residential, commercial, hospitality, and architectural environments with unwavering quality.</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Architectural stone solutions</li>
-                            <li><i class="fas fa-check"></i> Advanced fabrication technology</li>
-                            <li><i class="fas fa-check"></i> Authentic material sourcing</li>
-                            <li><i class="fas fa-check"></i> Client-centric delivery</li>
-                        </ul>
-                        <a class='btn' href='/contact'>Contact Us</a>
-                    </div>
-                </div>
+                <h1><span>Premium</span> Stones For Every <span>Vision,</span> Every <span>Space.</span></h1>
             </div>
             <div class="about-hero-image">
-                <img src="https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/04/STC.CNS-20210401-0183-F.webp" alt="Luxury Interior">
-                <div class="years-badge">
-                    <div class="number">12<sup>+</sup></div>
-                    <div class="label">Years of Experience</div>
-                </div>
+                <img src="images/about-hero-banner.jpg" alt="Luxury Interior">
             </div>
         </div>
     </section>
@@ -765,14 +774,18 @@
 
     <section class="trusted-section reveal" aria-label="Trusted by">
         <div class="trusted-inner">
-            <p class="trusted-label">Trusted By Architects, Builders &amp; Developers</p>
-            <p class="mobile-swipe-hint">Swipe to explore <i class="fas fa-arrow-right"></i></p>
-            <div class="trusted-logos">
-                <span class="trusted-badge"><i class="fas fa-hotel"></i> Luxury Hotels</span>
-                <span class="trusted-badge"><i class="fas fa-building"></i> Commercial Spaces</span>
-                <span class="trusted-badge"><i class="fas fa-home"></i> Premium Villas</span>
-                <span class="trusted-badge"><i class="fas fa-plane"></i> Airports &amp; Infrastructure</span>
-                <span class="trusted-badge"><i class="fas fa-hospital"></i> Healthcare</span>
+            <p class="trusted-label">Trusted By Leading Brands &amp; Institutions</p>
+        </div>
+        <div class="trusted-band">
+            <p class="mobile-swipe-hint" aria-label="Swipe"><i class="fas fa-arrow-right"></i></p>
+            <div class="trusted-logos trusted-logos--clients">
+                <div class="trusted-logo-card"><img src="images/trusted/jw-marriott.png" alt="JW Marriott" loading="lazy"></div>
+                <div class="trusted-logo-card"><img src="images/trusted/infosys.png" alt="Infosys" loading="lazy"></div>
+                <div class="trusted-logo-card"><img src="images/trusted/aster.png" alt="Aster DM Healthcare" loading="lazy"></div>
+                <div class="trusted-logo-card"><img src="images/trusted/brigade.png" alt="Brigade Group" loading="lazy"></div>
+                <div class="trusted-logo-card"><img src="images/trusted/indian-railways.png" alt="Indian Railways" loading="lazy"></div>
+                <div class="trusted-logo-card"><img src="images/trusted/aai.png" alt="Airports Authority of India" loading="lazy"></div>
+                <div class="trusted-logo-card"><img src="images/trusted/cbse.png" alt="CBSE" loading="lazy"></div>
             </div>
         </div>
     </section>
@@ -785,7 +798,7 @@
             </div>
             <div class="purpose-feature-content" id="purposeContent">
                 <h2>Building <span>Purpose</span> Through Continuous <span>Growth</span></h2>
-                <p class="mobile-swipe-hint purpose-swipe-hint">Swipe cards <i class="fas fa-arrow-right"></i></p>
+                <p class="mobile-swipe-hint purpose-swipe-hint" aria-label="Swipe"><i class="fas fa-arrow-right"></i></p>
                 <div class="purpose-cards">
                     <div class="purpose-card">
                         <div class="purpose-card-number">/01 <i class="fas fa-lightbulb"></i></div>
@@ -820,7 +833,7 @@
                 <h2>Why Choose <span>S K Stones India?</span></h2>
                 <p>Committed to quality, precision, and client satisfaction. Our expertise spans across residential, commercial, and architectural projects.</p>
             </div>
-            <p class="mobile-swipe-hint why-swipe-hint">Swipe reasons <i class="fas fa-arrow-right"></i></p>
+            <p class="mobile-swipe-hint why-swipe-hint" aria-label="Swipe"><i class="fas fa-arrow-right"></i></p>
             <div class="why-cards">
                 <div class="why-card">
                     <div class="why-card-icon"><i class="fas fa-award"></i></div>
@@ -845,7 +858,7 @@
     <section class="founder-section">
         <div class="founder-grid">
             <div class="founder-image" id="founderImage">
-                <img src="images/ceo-shree-kumar-gandhi.png" alt="Shree Kumar Gandhi">
+                <img src="images/ceo-shree-kumar-gandhi.png?v=2" alt="Shree Kumar Gandhi, Founder &amp; CEO" width="675" height="900" decoding="async">
             </div>
             <div class="founder-content" id="founderContent">
                 <h2>Shree Kumar Gandhi</h2>
@@ -861,19 +874,13 @@
     <section class="team-section" id="team">
         <div class="section-header">
             <h2>Our Expert <span>Team</span></h2>
-            <p>Our skilled designers, engineers, and craftsmen work together to deliver precise stone solutions.</p>
         </div>
-        <p class="team-order-note">
-            <i class="fas fa-arrows-left-right"></i>
-            Team members are listed <strong>from left to right</strong> as they appear in the group photo.
-        </p>
         <div class="team-layout">
             <div class="team-photo visible" id="teamPhoto">
                 <div class="team-photo-panel">
                     <div class="team-photo-frame">
-                        <img src="images/team-photo.png?v=5" alt="S K Stones India Team" width="912" height="768" decoding="async" fetchpriority="high">
+                        <img src="images/team-photo.jpg?v=6" alt="S K Stones India Team" width="1024" height="720" decoding="async" fetchpriority="high">
                     </div>
-                    <p class="team-photo-caption"><span>Left to right</span> in photo</p>
                 </div>
             </div>
             <div class="team-right">
@@ -931,38 +938,22 @@
     </section>
 
     <footer class="footer">
-        <div class="footer-content">
-            <div>
-                <a aria-label='S K Stones India' class='brand-lockup brand-lockup-footer' href='/'>
-            <img class="brand-mark" src="images/shree-logo.png" alt="" width="40" height="80" decoding="async">
-            <span class="brand-text">
-                        <span class="brand-name">S K <span class="brand-stones">Stones</span> India</span>
-                        <span class="brand-formerly">(formerly Shree Stones &amp; Services)</span>
-                    </span>
-                </a>
-            </div>
-            <div>
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href='/'>Home</a></li>
-                    <li><a href='/about'>About Us</a></li>
-                    <li><a href='/products'>Products</a></li>
-                    <li><a href='/contact'>Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Contact</h4>
-                <ul>
-                    <li><a href="tel:+917022630994"><i class="fas fa-phone"></i> +91 70226 30994</a></li>
-                    <li><a href="mailto:info@skstonesindia.com"><i class="fas fa-envelope"></i> info@skstonesindia.com</a></li>
-                    <li><i class="fas fa-map-marker-alt"></i> Koramangala, Bengaluru</li>
-                </ul>
-            </div>
-            <div class="social-links">
-                    <a href="https://www.linkedin.com/in/shree-kumar-gandhi-8699533a6/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/917022630994" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="mailto:info@skstonesindia.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <div class="footer-content footer-content-contact-only">
+            <div class="footer-contact-grid">
+                <div class="footer-contact-block">
+                    <h4>Contact</h4>
+                    <p><a href="tel:+917022630994"><i class="fas fa-phone"></i> +91 70226 30994</a></p>
+                    <p><a href="mailto:info@skstonesindia.com"><i class="fas fa-envelope"></i> info@skstonesindia.com</a></p>
                 </div>
+                <div class="footer-contact-block">
+                    <h4>Bangalore</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> <span>627-628, 15th Main, 80 Feet Rd, 5th Cross, Koramangala 4th Block, Bengaluru, Karnataka 560034</span></p>
+                </div>
+                <div class="footer-contact-block">
+                    <h4>Hyderabad</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> <span>ORR Service Rd, Vattinagulapally, Hyderabad, Telangana 500075</span></p>
+                </div>
+            </div>
         </div>
         <div class="footer-bottom">© 2026 S K Stones India Pvt. Ltd. All Rights Reserved.</div>
     </footer>
@@ -980,7 +971,9 @@
                 return;
             }
 
-            imageWrap.style.height = `${content.offsetHeight}px`;
+            // Match image height to the text panel so tops/bottoms align
+            const target = Math.round(content.getBoundingClientRect().height);
+            imageWrap.style.height = `${Math.max(320, target)}px`;
         };
 
         const syncFounderImageHeight = () => {
@@ -1005,6 +998,16 @@
             syncFounderImageHeight();
         });
         window.addEventListener('load', () => {
+            syncPurposeImageHeight();
+            syncFounderImageHeight();
+        });
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(() => {
+                syncPurposeImageHeight();
+                syncFounderImageHeight();
+            });
+        }
+        requestAnimationFrame(() => {
             syncPurposeImageHeight();
             syncFounderImageHeight();
         });
@@ -1071,7 +1074,7 @@
             backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
         }
     </script>
-    <script src="js/mobile-nav.js"></script>
+    <script src="js/mobile-nav.js?v=2"></script>
     <script src="js/mega-menu.js"></script>
     <script src="js/cta-reveal.js" defer></script>
 </body>
