@@ -18,6 +18,10 @@ for (const f of fs.readdirSync(LEGACY).filter((x) => x.endsWith('.html'))) {
     urls.add(m[0]);
 }
 
+// Plus staging-host images the app itself references (content/site-images.json).
+const siteImages = JSON.parse(fs.readFileSync(path.join(ROOT, 'content', 'site-images.json'), 'utf8')).images;
+for (const src of Object.values(siteImages)) if (src.includes(HOST)) urls.add(src);
+
 const localName = (url) => {
   const base = decodeURIComponent(url.split('/').pop())
     .toLowerCase()

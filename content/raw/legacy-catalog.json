@@ -97,7 +97,8 @@
         "alt": "Bali Onyx",
         "name": "Bali Onyx"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "brillo-collection",
@@ -162,7 +163,8 @@
         "alt": "Amazonite",
         "name": "Amazonite"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "clay-jally",
@@ -204,8 +206,8 @@
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Opal-clay-jali.jpg",
-        "alt": "Opal Clay  Jally",
-        "name": "Opal Clay  Jally"
+        "alt": "Opal Clay Jally",
+        "name": "Opal Clay Jally"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Lotus.jpg",
@@ -243,16 +245,17 @@
         "name": "Camp Clay Jally"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Arrow-clay-jali.jpg",
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Amber-clay-jali.jpg",
         "alt": "Arrow Clay Jally",
         "name": "Arrow Clay Jally"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Amber-clay-jali.jpg",
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/clayjall.png",
         "alt": "Amber Clay Jally",
         "name": "Amber Clay Jally"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "clay-products",
@@ -260,9 +263,9 @@
     "metaDescription": "Traditional clay products for elevation, roofing and architectural detailing.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
-      "h1": "Quick Links",
-      "h1Html": "Quick Links",
-      "description": "Traditional clay products for elevation, roofing and architectural detailing."
+      "h1": "Clay Products Collection",
+      "h1Html": "Clay <span class=\"highlight\">Products</span> Collection",
+      "description": "Discover clay jally panels, wire-cut bricks, elevation bricks, and roofing tiles crafted for ventilation, facade rhythm, and lasting architectural character."
     },
     "overview": null,
     "gridTitle": "Our Clay Products Collection",
@@ -365,32 +368,32 @@
         "name": "Custom Shade Wire Cut Units"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Eurocotto-light-red-wirecut-9.5×2.5.jpg",
+        "image": "images/products/bricks/eurocotto-light-red-wirecut.jpg",
         "alt": "Eurocotto Light Red Wirecut",
         "name": "Eurocotto Light Red Wirecut"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Eurocotto-grey-9.5×2.5.jpg",
+        "image": "images/products/bricks/eurocotto-grey.jpg",
         "alt": "Eurocotto Grey",
         "name": "Eurocotto Grey"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Eurocotto-chocolate-wirecut-9.5×2.5.jpg",
+        "image": "images/products/bricks/eurocotto-chocolate-wirecut.jpg",
         "alt": "Eurocotto Chocolate Wirecut",
         "name": "Eurocotto Chocolate Wirecut"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Eurocotto-cappuccino-9.5×2.5.jpg",
+        "image": "images/products/bricks/eurocotto-cappuccino.jpg",
         "alt": "Eurocotto Cappuccino",
         "name": "Eurocotto Cappuccino"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Eurocotto-antique-9.5×2.5.jpg",
+        "image": "images/products/bricks/eurocotto-antique.jpg",
         "alt": "Eurocotto Antique",
         "name": "Eurocotto Antique"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Bbc-choclate-9×3.jpg",
+        "image": "images/products/bricks/bbc-chocolate.jpg",
         "alt": "BBC Chocolate",
         "name": "BBC Chocolate"
       },
@@ -454,7 +457,8 @@
         "alt": "Cappuccino Flooring Tiles",
         "name": "Cappuccino Flooring Tiles"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "cnc-stone-work",
@@ -463,7 +467,7 @@
     "hero": {
       "tagline": "Crafting Timeless Spaces",
       "h1": "Defining Stone Art",
-      "h1Html": "Defining <span class=\"highlight\"> Stone</span>  Art",
+      "h1Html": "Defining <span class=\"highlight\"> Stone</span> Art",
       "description": "Stone art pieces are crafted to create visual focal points using natural stone forms, textures, and detailing that add character, depth, and artistic expression to interior and exterior architectural spaces."
     },
     "overview": {
@@ -471,78 +475,18 @@
       "html": "<p>Our skilled stone artisans curate stone art elements based on design intent, material suitability, scale proportion, and surface characteristics. Each piece is Hand Crafted, prepared, and supplied under precise workmanship.</p><p>Our stone art preparation process focuses on form accuracy, surface detailing precision, and material compatibility — ensuring artistic clarity.</p>"
     },
     "gridTitle": "Our Cnc Stone Work Collection",
-    "countLabel": "20 Varieties",
-    "itemCount": 20,
+    "countLabel": "6 Varieties",
+    "itemCount": 6,
     "items": [
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/WhatsApp-Image-2025-12-03-at-14.42.05_8b7b4579.jpg",
-        "alt": "Petal Leaves in mint sand stone",
-        "name": "Petal Leaves in mint sand stone"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/WhatsApp-Image-2025-12-03-at-14.39.19_f7448507.jpg",
-        "alt": "Design in Mint Sand Stone",
-        "name": "Design in Mint Sand Stone"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/WhatsApp-Image-2025-12-03-at-14.34.14_ec5cb411.jpg",
-        "alt": "Jalli Design in Sand Stone",
-        "name": "Jalli Design in Sand Stone"
-      },
-      {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/SAND-STONES-ART_compressed-1.webp",
-        "alt": "Design in Slate Stone tile 1X1",
-        "name": "Design in Slate Stone tile 1X1"
+        "alt": "Sand Stones Art",
+        "name": "Sand Stones Art"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/inlay-work.jpg",
-        "alt": "Inlay Work - Marble to Marble",
-        "name": "Inlay Work - Marble to Marble"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20210729-WA0023.jpg",
-        "alt": "CNC With Inlay Work On Slate Stone",
-        "name": "CNC With Inlay Work On Slate Stone"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20210729-WA0022-e1769759419107.jpg",
-        "alt": "CNC Work On Slate Stone",
-        "name": "CNC Work On Slate Stone"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20210729-WA0021-e1769759571128.jpg",
-        "alt": "CNC Work On Slate Stone",
-        "name": "CNC Work On Slate Stone"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20200615-WA0030-e1769759715642.jpg",
-        "alt": "Marble Inlay",
-        "name": "Marble Inlay"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20200225-WA0001.jpg",
-        "alt": "Brass Inlay in Indian White Marble",
-        "name": "Brass Inlay in Indian White Marble"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20190414-WA0007-Copy.jpg",
-        "alt": "CNC Work Done On Black Slate with Duco Paint",
-        "name": "CNC Work Done On Black Slate with Duco Paint"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20170225-WA0010-Copy.jpg",
-        "alt": "Marble Inlay",
-        "name": "Marble Inlay"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20170225-WA0009-Copy.jpg",
-        "alt": "Marble Inlay",
-        "name": "Marble Inlay"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20161221-WA0019-Copy.jpg",
-        "alt": "Marble Inlay",
-        "name": "Marble Inlay"
+        "alt": "Inlay Work",
+        "name": "Inlay Work"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Floor-medallions-2.jpg",
@@ -560,21 +504,12 @@
         "name": "Flower Pattern"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/cnc-work-coin-pattern_compressed-scaled.webp",
-        "alt": "Coin Pattern",
-        "name": "Coin Pattern"
-      },
-      {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/BRASS-INLAY-e1769760269200.jpg",
         "alt": "Brass Inlay",
         "name": "Brass Inlay"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/BRASS-INLAY-2-e1769760330470.jpg",
-        "alt": "Brass Inlay",
-        "name": "Brass Inlay"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "cobble-stones",
@@ -596,90 +531,91 @@
     "items": [
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142559_compressed-scaled.webp",
-        "alt": "Charcoal Grey Cobble",
-        "name": "Charcoal Grey Cobble"
+        "alt": "Cobble Stone 01",
+        "name": "Cobble Stone 01"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142554_compressed-scaled.webp",
-        "alt": "Jet Black Cobble",
-        "name": "Jet Black Cobble"
+        "alt": "Cobble Stone 02",
+        "name": "Cobble Stone 02"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142549_compressed-scaled.webp",
-        "alt": "Silver Grey Granite Cobble",
-        "name": "Silver Grey Granite Cobble"
+        "alt": "Cobble Stone 03",
+        "name": "Cobble Stone 03"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142540_compressed-scaled.webp",
-        "alt": "White Granite Cobble",
-        "name": "White Granite Cobble"
+        "alt": "Cobble Stone 04",
+        "name": "Cobble Stone 04"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142534-scaled.jpg",
-        "alt": "Dark Grey Tumbled Cobble",
-        "name": "Dark Grey Tumbled Cobble"
+        "alt": "Cobble Stone 05",
+        "name": "Cobble Stone 05"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142528_compressed-scaled.webp",
-        "alt": "Black Basalt Cobble",
-        "name": "Black Basalt Cobble"
+        "alt": "Cobble Stone 06",
+        "name": "Cobble Stone 06"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142450_compressed.jpg",
-        "alt": "Mixed Grey Cobble",
-        "name": "Mixed Grey Cobble"
+        "alt": "Cobble Stone 07",
+        "name": "Cobble Stone 07"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142444_compressed-scaled.webp",
-        "alt": "Speckled Granite Cobble",
-        "name": "Speckled Granite Cobble"
+        "alt": "Cobble Stone 08",
+        "name": "Cobble Stone 08"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142437_compressed-scaled.webp",
-        "alt": "Light Grey Cobble",
-        "name": "Light Grey Cobble"
+        "alt": "Cobble Stone 09",
+        "name": "Cobble Stone 09"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142423_compressed.jpg",
-        "alt": "Graphite Black Cobble",
-        "name": "Graphite Black Cobble"
+        "alt": "Cobble Stone 10",
+        "name": "Cobble Stone 10"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142414_compressed-scaled.webp",
-        "alt": "Granite Mix Cobble",
-        "name": "Granite Mix Cobble"
+        "alt": "Cobble Stone 11",
+        "name": "Cobble Stone 11"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142225_compressed.jpg",
-        "alt": "Smoke Grey Cobble",
-        "name": "Smoke Grey Cobble"
+        "alt": "Cobble Stone 12",
+        "name": "Cobble Stone 12"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142212_compressed-scaled.webp",
-        "alt": "Onyx Black Cobble",
-        "name": "Onyx Black Cobble"
+        "alt": "Cobble Stone 13",
+        "name": "Cobble Stone 13"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260106_192457_compressed-scaled.webp",
-        "alt": "River Grey Cobble",
-        "name": "River Grey Cobble"
+        "alt": "Cobble Stone 14",
+        "name": "Cobble Stone 14"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260106_192413_compressed-scaled.webp",
-        "alt": "Classic Black Cobble",
-        "name": "Classic Black Cobble"
+        "alt": "Cobble Stone 15",
+        "name": "Cobble Stone 15"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260106_192340_compressed-scaled.webp",
-        "alt": "Natural Grey Cobble",
-        "name": "Natural Grey Cobble"
+        "alt": "Cobble Stone 16",
+        "name": "Cobble Stone 16"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260106_192253_compressed-scaled.webp",
-        "alt": "Antique Grey Cobble",
-        "name": "Antique Grey Cobble"
+        "alt": "Cobble Stone 17",
+        "name": "Cobble Stone 17"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "concrete-blocks",
@@ -687,15 +623,47 @@
     "metaDescription": "Explore our concrete blocks collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
-      "h1": "CONCRETE BLOCK SYSTEMS",
-      "h1Html": "<span><span class=\"highlight\">CONCRETE BLOCK</span> SYSTEMS </span>",
+      "h1": "Concrete Block Systems",
+      "h1Html": "<span class=\"highlight\">Concrete Block</span> Systems",
       "description": "Concrete blocks provide structural stability load bearing strength and design flexibility making them suitable for walls partitions boundaries and architectural construction across residential commercial and industrial projects."
     },
     "overview": null,
     "gridTitle": "Our Concrete Blocks Collection",
-    "countLabel": "0 Varieties",
-    "itemCount": 0,
-    "items": []
+    "countLabel": "6 Varieties",
+    "itemCount": 6,
+    "items": [
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/1920x1080-2025-12-19T211518.375.jpg",
+        "alt": "Concrete Block 01",
+        "name": "Concrete Block 01"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/1920x1080-2025-12-19T211644.452.jpg",
+        "alt": "Concrete Block 02",
+        "name": "Concrete Block 02"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/1920x1080-2025-12-19T211612.457.jpg",
+        "alt": "Concrete Block 03",
+        "name": "Concrete Block 03"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/1920x1080-2025-12-19T211616.669.jpg",
+        "alt": "Concrete Block 04",
+        "name": "Concrete Block 04"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/1920x1080-2025-12-19T211628.651.jpg",
+        "alt": "Concrete Block 05",
+        "name": "Concrete Block 05"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/1920x1080-2025-12-19T211637.008.jpg",
+        "alt": "Concrete Block 06",
+        "name": "Concrete Block 06"
+      }
+    ],
+    "categoryCards": []
   },
   {
     "slug": "elevation-clay-bricks",
@@ -716,36 +684,37 @@
     "itemCount": 6,
     "items": [
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Eurocotto-light-red-wirecut-9.5×2.5.jpg",
+        "image": "images/products/bricks/eurocotto-light-red-wirecut.jpg",
         "alt": "Eurocotto Light Red Wirecut",
         "name": "Eurocotto Light Red Wirecut"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Eurocotto-grey-9.5×2.5.jpg",
+        "image": "images/products/bricks/eurocotto-grey.jpg",
         "alt": "Eurocotto Grey",
         "name": "Eurocotto Grey"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Eurocotto-chocolate-wirecut-9.5×2.5.jpg",
+        "image": "images/products/bricks/eurocotto-chocolate-wirecut.jpg",
         "alt": "Eurocotto Chocolate Wirecut",
         "name": "Eurocotto Chocolate Wirecut"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Eurocotto-cappuccino-9.5×2.5.jpg",
+        "image": "images/products/bricks/eurocotto-cappuccino.jpg",
         "alt": "Eurocotto Cappuccino",
         "name": "Eurocotto Cappuccino"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Eurocotto-antique-9.5×2.5.jpg",
+        "image": "images/products/bricks/eurocotto-antique.jpg",
         "alt": "Eurocotto Antique",
         "name": "Eurocotto Antique"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Bbc-choclate-9×3.jpg",
+        "image": "images/products/bricks/bbc-chocolate.jpg",
         "alt": "BBC Chocolate",
         "name": "BBC Chocolate"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "elezzo-collection",
@@ -795,7 +764,8 @@
         "alt": "Aiza Cinnamon",
         "name": "Aiza Cinnamon"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "endless-collection",
@@ -940,7 +910,8 @@
         "alt": "Abria Beige",
         "name": "Abria Beige"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "engineered-surfaces",
@@ -948,336 +919,42 @@
     "metaDescription": "Explore our engineered surfaces collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
-      "h1": "PRECISION ENGINEERED SURFACES",
-      "h1Html": "<span>PRECISION <span class=\"highlight\">ENGINEERED SURFACES</span> </span>",
+      "h1": "Precision Engineered Surfaces",
+      "h1Html": "Precision <span class=\"highlight\">Engineered</span> Surfaces",
       "description": "Engineered surfaces are manufactured to deliver uniform appearance controlled performance and consistent quality combining natural aggregates with advanced processing for modern architectural and interior applications."
     },
     "overview": null,
     "gridTitle": "Our Engineered Surfaces Collection",
-    "countLabel": "64 Varieties",
-    "itemCount": 64,
+    "countLabel": "5 Varieties",
+    "itemCount": 5,
     "items": [
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/ROOSEVELT-GRAY_compressed-scaled.webp",
-        "alt": "Roosevelt Gray",
-        "name": "Roosevelt Gray"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/IMG_20180224_135417-1.jpg",
+        "alt": "Engineered Surface 01",
+        "name": "Engineered Surface 01"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/ROOSEVELT-GRAY-QUARTZ_compressed-scaled.webp",
-        "alt": "Roosevelt Gray Quartz",
-        "name": "Roosevelt Gray Quartz"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/IMG_20180224_135506.jpg",
+        "alt": "Engineered Surface 02",
+        "name": "Engineered Surface 02"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RIVER-GOLD-QUARTZ_compressed-scaled.webp",
-        "alt": "River Gold Quartz",
-        "name": "River Gold Quartz"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/IMG_20180224_135501.jpg",
+        "alt": "Engineered Surface 03",
+        "name": "Engineered Surface 03"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RAPHAEL-PRIMO-QUARTZ_compressed-scaled.webp",
-        "alt": "Raphael Primo Quartz",
-        "name": "Raphael Primo Quartz"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/IMG_20180224_135457.jpg",
+        "alt": "Engineered Surface 04",
+        "name": "Engineered Surface 04"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/PLATINUM-SATUARIO_compressed-scaled.webp",
-        "alt": "Platinum Satuario",
-        "name": "Platinum Satuario"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/NAVIGLI-GRAY-QUARTZ_compressed-scaled.webp",
-        "alt": "Navigli Gray Quartz",
-        "name": "Navigli Gray Quartz"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/NAVIGLI-BROWN-QUARTZ_compressed-scaled.webp",
-        "alt": "Navigli Brown Quartz",
-        "name": "Navigli Brown Quartz"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/MATISSE-WHITE-QUARTZ_compressed-scaled.webp",
-        "alt": "Matisse White Quartz",
-        "name": "Matisse White Quartz"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/MATISSE-GOLD-QUARTZ_compressed-scaled.webp",
-        "alt": "Matisse Gold Quartz",
-        "name": "Matisse Gold Quartz"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/MARMO-BERNINI-GOLD-QUARTZ_compressed-scaled.webp",
-        "alt": "Marmo Bernini Gold Quartz",
-        "name": "Marmo Bernini Gold Quartz"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/HAMPTONS-BEIGE_compressed-scaled.webp",
-        "alt": "Hamptons Beige",
-        "name": "Hamptons Beige"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/GREEN-EXOTICA-QUARTZ_compressed-scaled.webp",
-        "alt": "Green Exotica Quartz",
-        "name": "Green Exotica Quartz"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/EMPIRE-GRAY_compressed-scaled.webp",
-        "alt": "Empire Gray",
-        "name": "Empire Gray"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/EMPIRE-GRAY-QUARTZ_compressed-scaled.webp",
-        "alt": "Empire Gray Quartz",
-        "name": "Empire Gray Quartz"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/BLUE-QUARTZITE-QUARTZ_compressed-scaled.webp",
-        "alt": "Blue Quartzite Quartz",
-        "name": "Blue Quartzite Quartz"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/BALI-ONYX_compressed-scaled.webp",
-        "alt": "Bali Onyx",
-        "name": "Bali Onyx"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/wizzard.jpg",
-        "alt": "Wizzard",
-        "name": "Wizzard"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/venera.jpg",
-        "alt": "Venera",
-        "name": "Venera"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/vanilla.jpg",
-        "alt": "Vanilla",
-        "name": "Vanilla"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/ush.jpg",
-        "alt": "Ush",
-        "name": "Ush"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/toasted-almond.jpg",
-        "alt": "Toasted Almond",
-        "name": "Toasted Almond"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/starry-grey.jpg",
-        "alt": "Starry Grey",
-        "name": "Starry Grey"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/starry-black.jpg",
-        "alt": "Starry Black",
-        "name": "Starry Black"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/sandy-diamante-.jpg",
-        "alt": "Sandy Diamante",
-        "name": "Sandy Diamante"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/repen.jpg",
-        "alt": "Repen",
-        "name": "Repen"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/pietra-grey.jpg",
-        "alt": "Pietra Grey",
-        "name": "Pietra Grey"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/picasso.jpg",
-        "alt": "Picasso",
-        "name": "Picasso"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/noah.jpg",
-        "alt": "Noah",
-        "name": "Noah"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/nisly-.jpg",
-        "alt": "Nisly",
-        "name": "Nisly"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/new-grey.jpg",
-        "alt": "New Grey",
-        "name": "New Grey"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/new-beige-.jpg",
-        "alt": "New Beige",
-        "name": "New Beige"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/nero-diamante-.jpg",
-        "alt": "Nero Diamante",
-        "name": "Nero Diamante"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/nero-classic-.jpg",
-        "alt": "Nero Classic",
-        "name": "Nero Classic"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/metropolitan.jpg",
-        "alt": "Metropolitan",
-        "name": "Metropolitan"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/light-grey-.jpg",
-        "alt": "Light Grey",
-        "name": "Light Grey"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/grigio-diamante-.jpg",
-        "alt": "Grigio Diamante",
-        "name": "Grigio Diamante"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/grey-pearl.jpg",
-        "alt": "Grey Pearl",
-        "name": "Grey Pearl"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/grey-maple.jpg",
-        "alt": "Grey Maple",
-        "name": "Grey Maple"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/galaxy-agl.jpg",
-        "alt": "Galaxy AGL",
-        "name": "Galaxy AGL"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/dessert-brown.jpg",
-        "alt": "Dessert Brown",
-        "name": "Dessert Brown"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/crema-verona.jpg",
-        "alt": "Crema Verona",
-        "name": "Crema Verona"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/crema-gold.jpg",
-        "alt": "Crema Gold",
-        "name": "Crema Gold"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/concrete.jpg",
-        "alt": "Concrete",
-        "name": "Concrete"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/coasta-maple.jpg",
-        "alt": "Coasta Maple",
-        "name": "Coasta Maple"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/coasta-beige.jpg",
-        "alt": "Coasta Beige",
-        "name": "Coasta Beige"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/classic-pearl.jpg",
-        "alt": "Classic Pearl",
-        "name": "Classic Pearl"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/classic-beige.jpg",
-        "alt": "Classic Beige",
-        "name": "Classic Beige"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/cement.jpg",
-        "alt": "Cement",
-        "name": "Cement"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/calacatta-rivolo.jpg",
-        "alt": "Calacatta Rivolo",
-        "name": "Calacatta Rivolo"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/calaatta-venezia.jpg",
-        "alt": "Calacatta Venezia",
-        "name": "Calacatta Venezia"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/calaatta-imprial.jpg",
-        "alt": "Calacatta Imperial",
-        "name": "Calacatta Imperial"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/bianco-superiore.jpg",
-        "alt": "Bianco Superiore",
-        "name": "Bianco Superiore"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/bianco-sicilia.jpg",
-        "alt": "Bianco Sicilia",
-        "name": "Bianco Sicilia"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/bianco-river.jpg",
-        "alt": "Bianco River",
-        "name": "Bianco River"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/bianco-maple.jpg",
-        "alt": "Bianco Maple",
-        "name": "Bianco Maple"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/bianco-diamante.jpg",
-        "alt": "Bianco Diamante",
-        "name": "Bianco Diamante"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/bianco-dessert.jpg",
-        "alt": "Bianco Dessert",
-        "name": "Bianco Dessert"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/bermingham.jpg",
-        "alt": "Bermingham",
-        "name": "Bermingham"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/beige-diamante.jpg",
-        "alt": "Beige Diamante",
-        "name": "Beige Diamante"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/bainco-carrara.jpg",
-        "alt": "Bianco Carrara",
-        "name": "Bianco Carrara"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/ash-grey.jpg",
-        "alt": "Ash Grey",
-        "name": "Ash Grey"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/artic-white-.jpg",
-        "alt": "Arctic White",
-        "name": "Arctic White"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/anthracite.jpg",
-        "alt": "Anthracite",
-        "name": "Anthracite"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/alluring.jpg",
-        "alt": "Alluring",
-        "name": "Alluring"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/IMG_20180224_135647.jpg",
+        "alt": "Engineered Surface 05",
+        "name": "Engineered Surface 05"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "feature-wall",
@@ -1294,8 +971,8 @@
       "html": "Our skilled stone artisans curate feature wall designs based on design intent, material suitability, scale, proportion, and surface characteristics. Each piece is thoughtfully conceptualized and crafted under controlled craftsmanship standards.\n\nThe preparation process focuses on:\n<ul>\n \t<li>Form accuracy\n</li>\n \t<li>Surface detailing precision\n</li>\n \t<li>Visual balance\n</li>\n \t<li>Material compatibility</li>\n \tEnsuring artistic clarity and long-term material integrity across residential, commercial, and hospitality environments.\n</ul>"
     },
     "gridTitle": "Our Feature Wall Collection",
-    "countLabel": "7 Varieties",
-    "itemCount": 7,
+    "countLabel": "5 Varieties",
+    "itemCount": 5,
     "items": [
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture18.png",
@@ -1321,18 +998,9 @@
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture17.png",
         "alt": "Feature Wall",
         "name": "Feature Wall"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture19.png",
-        "alt": "Feature Wall",
-        "name": "Feature Wall"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture23.png",
-        "alt": "Feature Wall",
-        "name": "Feature Wall"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "granites",
@@ -1349,255 +1017,251 @@
       "html": "<p>Our experienced stone specialists source granite slabs selected for density, grain structure, color stability, and Thickness consistency. Each slab is carefully curated, evaluated, and supplied under controlled material quality parameters.</p><p>Our granite handling process follows structured selection methods, surface calibration standards, and consistency benchmarks. Every batch undergoes detailed inspection and verification to ensure dependable performance across residential, commercial, and architectural applications.</p>"
     },
     "gridTitle": "Our Granites Collection",
-    "countLabel": "49 Varieties",
-    "itemCount": 49,
+    "countLabel": "48 Varieties",
+    "itemCount": 48,
     "items": [
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/titanium-silver-black.jpg",
-        "alt": "TITANIUM SILVER BLACK",
-        "name": "TITANIUM SILVER BLACK"
+        "alt": "Titanium Silver Black",
+        "name": "Titanium Silver Black"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/tiger-skin-e1769924116411.jpg",
-        "alt": "TIGER SKIN",
-        "name": "TIGER SKIN"
+        "alt": "Tiger Skin",
+        "name": "Tiger Skin"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Tan-brown-e1769924144783.jpg",
-        "alt": "TAN BROWN",
-        "name": "TAN BROWN"
+        "alt": "Tan Brown",
+        "name": "Tan Brown"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/TAN-BROWN-POLISH-e1769924175302.jpg",
-        "alt": "TAN BROWN POLISH",
-        "name": "TAN BROWN POLISH"
+        "alt": "Tan Brown Polish",
+        "name": "Tan Brown Polish"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Steel-gray-leather-polished_compressed-scaled.webp",
-        "alt": "STEEL GRAY LEATHER POLISHED",
-        "name": "STEEL GRAY LEATHER POLISHED"
+        "alt": "Steel Gray Leather Polished",
+        "name": "Steel Gray Leather Polished"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Sadarhalli_compressed-scaled-e1769924203658.webp",
-        "alt": "SADARHALLI",
-        "name": "SADARHALLI"
+        "image": "images/products/sadarhalli-granite.jpg",
+        "alt": "Sadarhalli Granite",
+        "name": "Sadarhalli"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/red-multicolor-e1769924240541.jpg",
-        "alt": "RED MULTICOLOR",
-        "name": "RED MULTICOLOR"
+        "alt": "Red Multicolor",
+        "name": "Red Multicolor"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/red-granite_compressed-scaled1.jpg",
-        "alt": "RED GRANITE",
-        "name": "RED GRANITE"
+        "alt": "Red Granite",
+        "name": "Red Granite"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/R-Narlay-Grey.jpg",
-        "alt": "R NARLAY GREY",
-        "name": "R NARLAY GREY"
+        "alt": "R Narlay Grey",
+        "name": "R Narlay Grey"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/R-Moon-White.jpg",
-        "alt": "R MOON WHITE",
-        "name": "R MOON WHITE"
+        "alt": "R Moon White",
+        "name": "R Moon White"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/prada-gold.jpg",
-        "alt": "PRADA GOLD",
-        "name": "PRADA GOLD"
+        "alt": "Prada Gold",
+        "name": "Prada Gold"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/pearl-black-e1769924477764.jpg",
-        "alt": "PEARL BLACK",
-        "name": "PEARL BLACK"
+        "alt": "Pearl Black",
+        "name": "Pearl Black"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/May-Flower.jpg",
-        "alt": "MAY FLOWER",
-        "name": "MAY FLOWER"
+        "alt": "May Flower",
+        "name": "May Flower"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/kashmir-white-e1769924517495.jpg",
-        "alt": "KASHMIR WHITE",
-        "name": "KASHMIR WHITE"
+        "alt": "Kashmir White",
+        "name": "Kashmir White"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/jubilee-brown_compressed-scaled1.jpg",
-        "alt": "JUBILEE BROWN",
-        "name": "JUBILEE BROWN"
+        "alt": "Jubilee Brown",
+        "name": "Jubilee Brown"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/ivory-fantasy_compressed-scaled.webp",
-        "alt": "IVORY FANTASY",
-        "name": "IVORY FANTASY"
+        "alt": "Ivory Fantasy",
+        "name": "Ivory Fantasy"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/himalayan-blue-granite-1-e1769924668280.jpg",
-        "alt": "HIMALAYAN BLUE GRANITE",
-        "name": "HIMALAYAN BLUE GRANITE"
+        "alt": "Himalayan Blue Granite",
+        "name": "Himalayan Blue Granite"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/gem-red.jpg",
-        "alt": "GEM RED",
-        "name": "GEM RED"
+        "alt": "Gem Red",
+        "name": "Gem Red"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/French-cream_compressed-scaled1.jpg",
-        "alt": "FRENCH CREAM",
-        "name": "FRENCH CREAM"
+        "alt": "French Cream",
+        "name": "French Cream"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/fish-gold-e1769924816558.jpg",
-        "alt": "FISH GOLD",
-        "name": "FISH GOLD"
+        "alt": "Fish Gold",
+        "name": "Fish Gold"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/dark-grey-.jpg",
-        "alt": "DARK GREY",
-        "name": "DARK GREY"
+        "alt": "Dark Grey",
+        "name": "Dark Grey"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/crystal-blue-e1769924857276.jpg",
-        "alt": "CRYSTAL BLUE",
-        "name": "CRYSTAL BLUE"
+        "alt": "Crystal Blue",
+        "name": "Crystal Blue"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/cotton-white_compressed-scaled1.jpg",
-        "alt": "COTTON WHITE",
-        "name": "COTTON WHITE"
+        "alt": "Cotton White",
+        "name": "Cotton White"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/copper-silk-.jpg",
-        "alt": "COPPER SILK",
-        "name": "COPPER SILK"
+        "alt": "Copper Silk",
+        "name": "Copper Silk"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/China-White.jpg",
-        "alt": "CHINA WHITE",
-        "name": "CHINA WHITE"
+        "image": "images/products/granites/china-white.jpg",
+        "alt": "China White",
+        "name": "China White"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/CHEEMA-PINK-e1769925019960.jpg",
-        "alt": "CHEEMA PINK",
-        "name": "CHEEMA PINK"
+        "alt": "Cheema Pink",
+        "name": "Cheema Pink"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/CARAMEL-BROWN-e1769925051654.jpg",
-        "alt": "CARAMEL BROWN",
-        "name": "CARAMEL BROWN"
+        "alt": "Caramel Brown",
+        "name": "Caramel Brown"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/blue-pearl-e1769925100745.jpg",
-        "alt": "BLUE PEARL",
-        "name": "BLUE PEARL"
+        "image": "images/products/granites/blue-pearl.jpg",
+        "alt": "Blue Pearl",
+        "name": "Blue Pearl"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Blue-Dunes.jpg",
-        "alt": "BLUE DUNES",
-        "name": "BLUE DUNES"
+        "alt": "Blue Dunes",
+        "name": "Blue Dunes"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Amba-White.jpg",
-        "alt": "AMBA WHITE",
-        "name": "AMBA WHITE"
+        "alt": "Amba White",
+        "name": "Amba White"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Alaska-White-.jpg",
-        "alt": "ALASKA WHITE",
-        "name": "ALASKA WHITE"
+        "alt": "Alaska White",
+        "name": "Alaska White"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/absolute-black--e1769747951974.jpg",
-        "alt": "ABSOLUTE BLACK",
-        "name": "ABSOLUTE BLACK"
+        "alt": "Absolute Black",
+        "name": "Absolute Black"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Multi-red-e1769748109924.jpg",
-        "alt": "MULTI RED",
-        "name": "MULTI RED"
+        "alt": "Multi Red",
+        "name": "Multi Red"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Misty-White_1.jpg",
-        "alt": "MISTY WHITE",
-        "name": "MISTY WHITE"
+        "alt": "Misty White",
+        "name": "Misty White"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Kashmere-White.jpg",
-        "alt": "KASHMERE WHITE",
-        "name": "KASHMERE WHITE"
+        "alt": "Kashmere White",
+        "name": "Kashmere White"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Jet-Black.jpg",
-        "alt": "JET BLACK",
-        "name": "JET BLACK"
+        "alt": "Jet Black",
+        "name": "Jet Black"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Imperial-White.jpg",
-        "alt": "IMPERIAL WHITE",
-        "name": "IMPERIAL WHITE"
+        "alt": "Imperial White",
+        "name": "Imperial White"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Imperial-Gold.jpg",
-        "alt": "IMPERIAL GOLD",
-        "name": "IMPERIAL GOLD"
+        "alt": "Imperial Gold",
+        "name": "Imperial Gold"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/French-White.jpg",
-        "alt": "FRENCH WHITE",
-        "name": "FRENCH WHITE"
+        "alt": "French White",
+        "name": "French White"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Crystal-Yellow.jpg",
-        "alt": "CRYSTAL YELLOW",
-        "name": "CRYSTAL YELLOW"
+        "alt": "Crystal Yellow",
+        "name": "Crystal Yellow"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Colonial-White.jpg",
-        "alt": "COLONIAL WHITE",
-        "name": "COLONIAL WHITE"
+        "alt": "Colonial White",
+        "name": "Colonial White"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Coffee-Brown.jpg",
-        "alt": "COFFEE BROWN",
-        "name": "COFFEE BROWN"
+        "alt": "Coffee Brown",
+        "name": "Coffee Brown"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Chima-Blue.jpg",
-        "alt": "CHIMA BLUE",
-        "name": "CHIMA BLUE"
+        "alt": "Chima Blue",
+        "name": "Chima Blue"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Black-Pearl.jpg",
-        "alt": "BLACK PEARL",
-        "name": "BLACK PEARL"
+        "alt": "Black Pearl",
+        "name": "Black Pearl"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Black-Galaxy.jpg",
-        "alt": "BLACK GALAXY",
-        "name": "BLACK GALAXY"
+        "alt": "Black Galaxy",
+        "name": "Black Galaxy"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Black-Forest.jpg",
-        "alt": "BLACK FOREST",
-        "name": "BLACK FOREST"
+        "image": "images/products/granites/black-forest.jpg",
+        "alt": "Black Forest",
+        "name": "Black Forest"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Alpine-White.jpg",
-        "alt": "ALPINE WHITE",
-        "name": "ALPINE WHITE"
+        "alt": "Alpine White",
+        "name": "Alpine White"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Alaska-Gold.jpg",
-        "alt": "ALASKA GOLD",
-        "name": "ALASKA GOLD"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Absolute-Black.jpg",
-        "alt": "ABSOLUTE BLACK",
-        "name": "ABSOLUTE BLACK"
+        "alt": "Alaska Gold",
+        "name": "Alaska Gold"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "imported-granites",
@@ -1614,8 +1278,8 @@
       "html": "<p>Our experienced stone specialists source imported granite slabs selected for density, grain structure, color stability, and surface integrity. Each slab is carefully curated, evaluated, and supplied under controlled material quality parameters.</p><p>Our granite handling process follows structured selection methods, surface calibration standards, and consistency benchmarks. Every batch undergoes detailed inspection and verification to ensure dependable performance across residential, commercial, and architectural applications.</p>"
     },
     "gridTitle": "Our Imported Granites Collection",
-    "countLabel": "12 Varieties",
-    "itemCount": 12,
+    "countLabel": "11 Varieties",
+    "itemCount": 11,
     "items": [
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/roma-imperiale_compressed-scaled.webp",
@@ -1653,47 +1317,27 @@
         "name": "Cygnus Granite"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/Picture5.jpg",
-        "alt": "Safari Blue",
-        "name": "Safari Blue"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Brown-silk_compressed-scaled.webp",
+        "alt": "Brown Silk",
+        "name": "Brown Silk"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/Picture6.jpg",
-        "alt": "Cheema Pink",
-        "name": "Cheema Pink"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/blue-van-gogh_compressed1.jpg",
+        "alt": "Blue Van Gogh",
+        "name": "Blue Van Gogh"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/Picture7-e1780462513752.jpg",
-        "alt": "SK blue",
-        "name": "SK blue"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/blue-roma_compressed.webp",
+        "alt": "Blue Roma",
+        "name": "Blue Roma"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/Picture8-e1780462691459.jpg",
-        "alt": "Kashmir white Granite",
-        "name": "Kashmir white Granite"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/Pict_whtr.jpg",
-        "alt": "Imperial White",
-        "name": "Imperial White"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/BLACK-FUSION_compressed-scaled.webp",
+        "alt": "Black Fusion",
+        "name": "Black Fusion"
       }
-    ]
-  },
-  {
-    "slug": "imported-marble-polished",
-    "title": "Imported Marble Polished | S K Stones India",
-    "metaDescription": "Explore our imported marble polished collection at S K Stones India.",
-    "hero": {
-      "tagline": "Crafting Timeless Spaces",
-      "h1": "CONTROLLED POLISHED MARBLE SURFACE REFINEMENT",
-      "h1Html": "<span>CONTROLLED <span class=\"highlight\">POLISHED MARBLE</span> SURFACE REFINEMENT</span>",
-      "description": "Imported polished marble is finished to achieve a high gloss surface that enhances colour richness vein clarity and reflective depth delivering a premium appearance for refined interior and architectural applications."
-    },
-    "overview": null,
-    "gridTitle": "Our Imported Marble Polished Collection",
-    "countLabel": "0 Varieties",
-    "itemCount": 0,
-    "items": []
+    ],
+    "categoryCards": []
   },
   {
     "slug": "imported-marbles",
@@ -1710,26 +1354,26 @@
       "html": "<p>Our expert stone specialists source imported marble slabs selected for color consistency, vein harmony, surface clarity, and overall aesthetic balance. Each slab is curated, processed, and supplied under defined quality parameters.</p><p>Our handling process follows structured sourcing, surface refinement, and finish consistency benchmarks. Every batch undergoes controlled inspection and verification to ensure dependable quality and long-lasting visual performance across interior environments.</p>"
     },
     "gridTitle": "Our Imported Marbles Collection",
-    "countLabel": "37 Varieties",
-    "itemCount": 37,
+    "countLabel": "36 Varieties",
+    "itemCount": 39,
     "items": [
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/TRAVERTINE-RAINBOW_compressed-1-scaled.webp",
+        "image": "images/products/imported-marbles/travertine-rainbow.jpg?v=2",
         "alt": "TRAVERTINE RAINBOW",
         "name": "TRAVERTINE RAINBOW"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/TRAVERTINE-GOLDEN_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/travertine-golden.jpg?v=2",
         "alt": "TRAVERTINE GOLDEN",
         "name": "TRAVERTINE GOLDEN"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/TRAVERTINE-BROWN_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/travertine-brown.jpg?v=2",
         "alt": "TRAVERTINE BROWN",
         "name": "TRAVERTINE BROWN"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/TRAVERTINE-BEIGE_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/travertine-beige.jpg?v=2",
         "alt": "TRAVERTINE BEIGE",
         "name": "TRAVERTINE BEIGE"
       },
@@ -1744,14 +1388,9 @@
         "name": "SPIDER BLACK"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/SIVER-PORTRO_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/siver-portro.jpg?v=2",
         "alt": "SIVER PORTRO",
         "name": "SIVER PORTRO"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/silver-travertine_compressed-scaled-e1769922611907.webp",
-        "alt": "SILVER TRAVERTINE",
-        "name": "SILVER TRAVERTINE"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/silver-martini_compressed-1-scaled.webp",
@@ -1759,7 +1398,7 @@
         "name": "SILVER MARTINI"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/SICILIA-PERLATO_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/sicilia-perlato.jpg?v=2",
         "alt": "SICILIA PERLATO",
         "name": "SICILIA PERLATO"
       },
@@ -1769,7 +1408,7 @@
         "name": "SATVARIO"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/ROSALIO_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/rosalio.jpg?v=2",
         "alt": "ROSALIO",
         "name": "ROSALIO"
       },
@@ -1779,7 +1418,7 @@
         "name": "ROSALIA MARBLE"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/ROMAN-SYLVIA_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/roman-sylvia.jpg?v=2",
         "alt": "ROMAN SYLVIA",
         "name": "ROMAN SYLVIA"
       },
@@ -1789,12 +1428,12 @@
         "name": "ROJO ALICANTE"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RED-LAVANTE-2_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/red-lavante.jpg?v=2",
         "alt": "RED LAVANTE",
         "name": "RED LAVANTE"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RED-CHEIGN_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/red-cheign.jpg?v=2",
         "alt": "RED CHEIGN",
         "name": "RED CHEIGN"
       },
@@ -1804,12 +1443,12 @@
         "name": "NERO PORTORO"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/LIGHT-EMPERADOR_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/light-emperador.jpg?v=2",
         "alt": "LIGHT EMPERADOR",
         "name": "LIGHT EMPERADOR"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IRISH-BROWN_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/irish-brown.jpg?v=2",
         "alt": "IRISH BROWN",
         "name": "IRISH BROWN"
       },
@@ -1819,12 +1458,12 @@
         "name": "HONEY ONYX"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/GREY-WILLIAM_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/grey-william.jpg?v=2",
         "alt": "GREY WILLIAM",
         "name": "GREY WILLIAM"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/GREY-MILANO_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/grey-milano.jpg?v=2",
         "alt": "GREY MILANO",
         "name": "GREY MILANO"
       },
@@ -1839,7 +1478,7 @@
         "name": "FUROR MARBLES"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/DYNA_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/dyna.jpg?v=2",
         "alt": "DYNA",
         "name": "DYNA"
       },
@@ -1849,17 +1488,17 @@
         "name": "DYNA BOOK MATCH PATTERN"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/DYNA-ABSTRACT_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/dyna-abstract.jpg?v=2",
         "alt": "DYNA ABSTRACT",
         "name": "DYNA ABSTRACT"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/DARK-EMPERADOR-3_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/dark-emperador.jpg?v=2",
         "alt": "DARK EMPERADOR",
         "name": "DARK EMPERADOR"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/D-MARTINO-CHIPS_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/d-martino-chips.jpg?v=2",
         "alt": "D MARTINO CHIPS",
         "name": "D MARTINO CHIPS"
       },
@@ -1869,7 +1508,7 @@
         "name": "CUCKOO RED MARBLE"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/CREMA-MARFIL_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/crema-marfil.jpg?v=2",
         "alt": "CREMA MARFIL",
         "name": "CREMA MARFIL"
       },
@@ -1884,53 +1523,37 @@
         "name": "CARAVAGGIO"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/BRACIA-BLUE_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/bracia-blue.jpg?v=2",
         "alt": "BRACIA BLUE",
         "name": "BRACIA BLUE"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/BRACIA-AURORA_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/bracia-aurora.jpg?v=2",
         "alt": "BRACIA AURORA",
         "name": "BRACIA AURORA"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/BOTOCHINO-CLASSIC_compressed-scaled.webp",
+        "image": "images/products/imported-marbles/botochino-classic.jpg?v=2",
         "alt": "BOTOCHINO CLASSIC",
         "name": "BOTOCHINO CLASSIC"
+      },
+      {
+        "image": "images/products/imported-marbles/black-rose.jpg?v=2",
+        "alt": "BLACK ROSE",
+        "name": "BLACK ROSE"
+      },
+      {
+        "image": "images/products/imported-marbles/golden-portro.jpg?v=2",
+        "alt": "GOLDEN PORTRO",
+        "name": "GOLDEN PORTRO"
+      },
+      {
+        "image": "images/products/imported-marbles/grey-pebbles.jpg?v=2",
+        "alt": "GREY PEBBLES",
+        "name": "GREY PEBBLES"
       }
-    ]
-  },
-  {
-    "slug": "indian-marble-polished-slabs",
-    "title": "Indian Marble Polished Slabs | S K Stones India",
-    "metaDescription": "Explore our indian marble polished slabs collection at S K Stones India.",
-    "hero": {
-      "tagline": "Crafting Timeless Spaces",
-      "h1": "CONTROLLED POLISHED MARBLE RANDOM SLABS",
-      "h1Html": "<span>CONTROLLED <span class=\"highlight\">POLISHED MARBLE</span> RANDOM SLABS</span>",
-      "description": "Indian marble polished random slabs are processed to achieve high surface gloss enhancing natural veining colour depth and reflective clarity suited for premium interior applications and statement spaces."
-    },
-    "overview": null,
-    "gridTitle": "Our Indian Marble Polished Slabs Collection",
-    "countLabel": "0 Varieties",
-    "itemCount": 0,
-    "items": []
-  },
-  {
-    "slug": "indian-marble-unpolished",
-    "title": "Indian Marble Unpolished | S K Stones India",
-    "metaDescription": "Explore our indian marble unpolished collection at S K Stones India.",
-    "hero": {
-      "tagline": "Crafting Timeless Spaces",
-      "h1": "CONTROLLED NATURAL MARBLE RAW SURFACE",
-      "h1Html": "<span>CONTROLLED <span class=\"highlight\">NATURAL MARBLE RAW</span> SURFACE </span>",
-      "description": "Indian marble unpolished finish retains its original stone character with a raw matte surface highlighting natural texture mineral patterns and earthy tones suitable for understated architectural and rustic interior applications."
-    },
-    "overview": null,
-    "gridTitle": "Our Indian Marble Unpolished Collection",
-    "countLabel": "0 Varieties",
-    "itemCount": 0,
-    "items": []
+    ],
+    "categoryCards": []
   },
   {
     "slug": "indian-marbles",
@@ -1956,76 +1579,77 @@
         "name": "Udaipur Green Marble Polished Tiles"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RED-RAINFOREST_compressed.webp",
+        "image": "images/products/indian-marbles/red-rainforest.jpg?v=2",
         "alt": "Red Rainforest",
         "name": "Red Rainforest"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RAINFOREST-GREEN_compressed-scaled.webp",
+        "image": "images/products/indian-marbles/rainforest-green.jpg?v=2",
         "alt": "Rainforest Green",
         "name": "Rainforest Green"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RAINFOREST-GOLD-LEATHER-FINISH_compressed-scaled.webp",
+        "image": "images/products/indian-marbles/rainforest-gold-leather-finish.jpg?v=2",
         "alt": "Rainforest Gold Leather Finish",
         "name": "Rainforest Gold Leather Finish"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RAINFOREST-BROWN_compressed-scaled.webp",
+        "image": "images/products/indian-marbles/rainforest-brown.jpg?v=2",
         "alt": "Rainforest Brown",
         "name": "Rainforest Brown"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RAIN-FOREST-GREEN-LEATHER-FINISH_compressed_compressed-scaled.webp",
+        "image": "images/products/indian-marbles/rainforest-green-leather-finish.jpg?v=2",
         "alt": "Rainforest Green Leather Finish",
         "name": "Rainforest Green Leather Finish"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RAIN-FOREST-GOLD_compressed-scaled.webp",
+        "image": "images/products/indian-marbles/rainforest-gold.jpg?v=2",
         "alt": "Rainforest Gold",
         "name": "Rainforest Gold"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/PISTA-GREEN_compressed-scaled.webp",
+        "image": "images/products/indian-marbles/pista-green.jpg",
         "alt": "Pista Green",
         "name": "Pista Green"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/KATANI_compressed-scaled.webp",
-        "alt": "Katni",
-        "name": "Katni"
+        "image": "images/products/indian-marbles/katni.jpg?v=2",
+        "alt": "Katani",
+        "name": "Katani"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/JAISALMER-YELLOW_compressed-scaled.webp",
+        "image": "images/products/indian-marbles/jaisalmer-yellow.jpg",
         "alt": "Jaisalmer Yellow",
         "name": "Jaisalmer Yellow"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/ITA-GOLD_compressed-scaled.webp",
+        "image": "images/products/indian-marbles/ita-gold.jpg?v=2",
         "alt": "Ita Gold",
         "name": "Ita Gold"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/INDO-ITALIAN_compressed-scaled.webp",
+        "image": "images/products/indian-marbles/indo-italian.jpg",
         "alt": "Indo Italian",
         "name": "Indo Italian"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/indian-white-onyx-marble-500x500-1-e1769686584537.jpg",
+        "image": "images/products/indian-marbles/green-marble.jpg?v=2",
         "alt": "Green Marble",
         "name": "Green Marble"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/indian-statuario_compressed-scaled.webp",
+        "image": "images/products/indian-marbles/black-stripe.jpg?v=2",
         "alt": "Black Stripe",
         "name": "Black Stripe"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/GREEN_compressed-scaled.webp",
+        "image": "images/products/indian-marbles/asian-grey.jpg?v=2",
         "alt": "Asian Grey",
         "name": "Asian Grey"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "ittaca-collection",
@@ -2185,7 +1809,8 @@
         "alt": "Alboran Beige Endless",
         "name": "Alboran Beige Endless"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "kota-stones",
@@ -2202,75 +1827,51 @@
       "html": "<p>Our experienced stone specialists source Lime Stones based on density, structural strength, surface finish quality, and weather resistance — ensuring suitability for high-performance flooring and long-term outdoor exposure.</p><p>Our handling process emphasizes:</p><ul><li>Accurate size grading </li><li>Surface consistency control </li><li>Shade grouping </li><li>Structured sorting </li><li>Reliable logistics management </li></ul><p>Ensuring Lime Stones retains its natural integrity and performs consistently across varied architectural applications.</p>"
     },
     "gridTitle": "Our Kota Stones Collection",
-    "countLabel": "13 Varieties",
-    "itemCount": 13,
+    "countLabel": "8 Varieties",
+    "itemCount": 8,
     "items": [
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture29.png",
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/SHABAD-YELLOW-LEATHER-e1778755930390.jpeg",
         "alt": "Shabad Yellow Leather",
         "name": "Shabad Yellow Leather"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/SHABAD-YELLOW-LEATHER-e1778755930390.jpeg",
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/KOTA-MIRROR-POLISHED-4X2-e1778756113489.jpeg",
         "alt": "Kota Mirror Polished",
         "name": "Kota Mirror Polished"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/KOTA-MIRROR-POLISHED-4X2-e1778756113489.jpeg",
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/KOTA-LEATHER-2X2.jpeg",
+        "alt": "Kota Leather",
+        "name": "Kota Leather"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/KOTA-HONEY-POLISHED-2X2.jpeg",
         "alt": "Kota Honey Polished",
         "name": "Kota Honey Polished"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/KOTA-HONEY-POLISHED-2X2.jpeg",
-        "alt": "Kota Natural Finish",
-        "name": "Kota Natural Finish"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/KOTA-HONEY-LEATHER.jpeg",
+        "alt": "Kota Honey Leather",
+        "name": "Kota Honey Leather"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/KOTA-HIGH-POLISH-2X2.jpeg",
+        "alt": "Kota High Polish",
+        "name": "Kota High Polish"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/green-leather-finish-kota-stone.jpg",
+        "alt": "Green Leather",
+        "name": "Green Leather"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/trashed-1770369180-IMG_20260107_144255_compressed.webp",
-        "alt": "Kota Honeydew Leathered",
-        "name": "Kota Honeydew Leathered"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture32.png",
-        "alt": "Kadpa Black Mirror Polished",
-        "name": "Kadpa Black Mirror Polished"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture33.png",
-        "alt": "Kota Honeydew Polished",
-        "name": "Kota Honeydew Polished"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture34.png",
-        "alt": "Tandur Blue Semi Polished",
-        "name": "Tandur Blue Semi Polished"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture35.png",
-        "alt": "Tandur Blue Mirror Polished",
-        "name": "Tandur Blue Mirror Polished"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture36.png",
-        "alt": "Tandur Grey Leathered",
-        "name": "Tandur Grey Leathered"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture37.png",
-        "alt": "Kota Stone Mirror Polished",
-        "name": "Kota Stone Mirror Polished"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture38.png",
-        "alt": "Kota Green Leather",
-        "name": "Kota Green Leather"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture39.png",
-        "alt": "Kadpa Black Leathere",
-        "name": "Kadpa Black Leathere"
+        "alt": "Kota Stones",
+        "name": "Kota Stones"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "marbles",
@@ -2278,274 +1879,27 @@
     "metaDescription": "Explore our marbles collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
-      "h1": "Quick Links",
-      "h1Html": "Quick Links",
-      "description": "Explore our marbles collection at S K Stones India."
+      "h1": "Premium Marbles Collection",
+      "h1Html": "Premium <span class=\"highlight\">Marbles</span> Collection",
+      "description": "Choose Indian or Imported marbles — each collection is curated for veining, finish quality, and architectural character across premium residential and commercial spaces."
     },
     "overview": null,
-    "gridTitle": "Our Marbles Collection",
-    "countLabel": "52 Varieties",
-    "itemCount": 52,
-    "items": [
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/udaipur-green-marble-polished-tiles.jpg",
-        "alt": "Udaipur Green Marble Polished Tiles",
-        "name": "Udaipur Green Marble Polished Tiles"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RED-RAINFOREST_compressed.webp",
-        "alt": "Red Rainforest",
-        "name": "Red Rainforest"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RAINFOREST-GREEN_compressed-scaled.webp",
-        "alt": "Rainforest Green",
-        "name": "Rainforest Green"
-      },
+    "gridTitle": "Choose a Marble Collection",
+    "countLabel": "2 Collections",
+    "itemCount": 0,
+    "items": [],
+    "categoryCards": [
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RAINFOREST-GOLD-LEATHER-FINISH_compressed-scaled.webp",
-        "alt": "Rainforest Gold Leather Finish",
-        "name": "Rainforest Gold Leather Finish"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RAINFOREST-BROWN_compressed-scaled.webp",
-        "alt": "Rainforest Brown",
-        "name": "Rainforest Brown"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RAIN-FOREST-GREEN-LEATHER-FINISH_compressed_compressed-scaled.webp",
-        "alt": "Rainforest Green Leather Finish",
-        "name": "Rainforest Green Leather Finish"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RAIN-FOREST-GOLD_compressed-scaled.webp",
-        "alt": "Rainforest Gold",
-        "name": "Rainforest Gold"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/PISTA-GREEN_compressed-scaled.webp",
-        "alt": "Pista Green",
-        "name": "Pista Green"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/KATANI_compressed-scaled.webp",
-        "alt": "Katni",
-        "name": "Katni"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/JAISALMER-YELLOW_compressed-scaled.webp",
-        "alt": "Jaisalmer Yellow",
-        "name": "Jaisalmer Yellow"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/ITA-GOLD_compressed-scaled.webp",
-        "alt": "Ita Gold",
-        "name": "Ita Gold"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/INDO-ITALIAN_compressed-scaled.webp",
-        "alt": "Indo Italian",
-        "name": "Indo Italian"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/indian-white-onyx-marble-500x500-1-e1769686584537.jpg",
-        "alt": "Green Marble",
-        "name": "Green Marble"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/indian-statuario_compressed-scaled.webp",
-        "alt": "Black Stripe",
-        "name": "Black Stripe"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/GREEN_compressed-scaled.webp",
-        "alt": "Asian Grey",
-        "name": "Asian Grey"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/TRAVERTINE-RAINBOW_compressed-1-scaled.webp",
-        "alt": "TRAVERTINE RAINBOW",
-        "name": "TRAVERTINE RAINBOW"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/TRAVERTINE-GOLDEN_compressed-scaled.webp",
-        "alt": "TRAVERTINE GOLDEN",
-        "name": "TRAVERTINE GOLDEN"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/TRAVERTINE-BROWN_compressed-scaled.webp",
-        "alt": "TRAVERTINE BROWN",
-        "name": "TRAVERTINE BROWN"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/TRAVERTINE-BEIGE_compressed-scaled.webp",
-        "alt": "TRAVERTINE BEIGE",
-        "name": "TRAVERTINE BEIGE"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/tiger-onex-marble.jpg",
-        "alt": "TIGER ONYX MARBLE",
-        "name": "TIGER ONYX MARBLE"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/spider-black_compressed-scaled.webp",
-        "alt": "SPIDER BLACK",
-        "name": "SPIDER BLACK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/SIVER-PORTRO_compressed-scaled.webp",
-        "alt": "SIVER PORTRO",
-        "name": "SIVER PORTRO"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/silver-travertine_compressed-scaled-e1769922611907.webp",
-        "alt": "SILVER TRAVERTINE",
-        "name": "SILVER TRAVERTINE"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/silver-martini_compressed-1-scaled.webp",
-        "alt": "SILVER MARTINI",
-        "name": "SILVER MARTINI"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/SICILIA-PERLATO_compressed-scaled.webp",
-        "alt": "SICILIA PERLATO",
-        "name": "SICILIA PERLATO"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/satvario--scaled.jpg",
-        "alt": "SATVARIO",
-        "name": "SATVARIO"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/ROSALIO_compressed-scaled.webp",
-        "alt": "ROSALIO",
-        "name": "ROSALIO"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/rosalia-marble_compressed-scaled.webp",
-        "alt": "ROSALIA MARBLE",
-        "name": "ROSALIA MARBLE"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/ROMAN-SYLVIA_compressed-scaled.webp",
-        "alt": "ROMAN SYLVIA",
-        "name": "ROMAN SYLVIA"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/rojo-alicante_compressed-scaled.webp",
-        "alt": "ROJO ALICANTE",
-        "name": "ROJO ALICANTE"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RED-LAVANTE-2_compressed-scaled.webp",
-        "alt": "RED LAVANTE",
-        "name": "RED LAVANTE"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RED-CHEIGN_compressed-scaled.webp",
-        "alt": "RED CHEIGN",
-        "name": "RED CHEIGN"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/nero-portoro_compressed-scaled.webp",
-        "alt": "NERO PORTORO",
-        "name": "NERO PORTORO"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/LIGHT-EMPERADOR_compressed-scaled.webp",
-        "alt": "LIGHT EMPERADOR",
-        "name": "LIGHT EMPERADOR"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IRISH-BROWN_compressed-scaled.webp",
-        "alt": "IRISH BROWN",
-        "name": "IRISH BROWN"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/honey-onex_compressed-scaled.webp",
-        "alt": "HONEY ONYX",
-        "name": "HONEY ONYX"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/GREY-WILLIAM_compressed-scaled.webp",
-        "alt": "GREY WILLIAM",
-        "name": "GREY WILLIAM"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/GREY-MILANO_compressed-scaled.webp",
-        "alt": "GREY MILANO",
-        "name": "GREY MILANO"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/gray-crema-marfil_compressed.webp",
-        "alt": "GRAY CREMA MARFIL",
-        "name": "GRAY CREMA MARFIL"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/furor-marbls_compressed-scaled.webp",
-        "alt": "FUROR MARBLES",
-        "name": "FUROR MARBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/DYNA_compressed-scaled.webp",
-        "alt": "DYNA",
-        "name": "DYNA"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/dyna-book-match-pattern_compressed-scaled.webp",
-        "alt": "DYNA BOOK MATCH PATTERN",
-        "name": "DYNA BOOK MATCH PATTERN"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/DYNA-ABSTRACT_compressed-scaled.webp",
-        "alt": "DYNA ABSTRACT",
-        "name": "DYNA ABSTRACT"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/DARK-EMPERADOR-3_compressed-scaled.webp",
-        "alt": "DARK EMPERADOR",
-        "name": "DARK EMPERADOR"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/D-MARTINO-CHIPS_compressed-scaled.webp",
-        "alt": "D MARTINO CHIPS",
-        "name": "D MARTINO CHIPS"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/cuckoo-red-marble_compressed-scaled.webp",
-        "alt": "CUCKOO RED MARBLE",
-        "name": "CUCKOO RED MARBLE"
+        "name": "Indian Marbles",
+        "description": "Leather-finish and classic Indian marbles — 15 varieties including Rainforest, Jaisalmer, Katni, and more.",
+        "href": "/indian-marbles"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/CREMA-MARFIL_compressed-scaled.webp",
-        "alt": "CREMA MARFIL",
-        "name": "CREMA MARFIL"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/champagne-onex_compressed-scaled.webp",
-        "alt": "CHAMPAGNE ONYX",
-        "name": "CHAMPAGNE ONYX"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/caravaggio_compressed-scaled.webp",
-        "alt": "CARAVAGGIO",
-        "name": "CARAVAGGIO"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/BRACIA-BLUE_compressed-scaled.webp",
-        "alt": "BRACIA BLUE",
-        "name": "BRACIA BLUE"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/BRACIA-AURORA_compressed-scaled.webp",
-        "alt": "BRACIA AURORA",
-        "name": "BRACIA AURORA"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/BOTOCHINO-CLASSIC_compressed-scaled.webp",
-        "alt": "BOTOCHINO CLASSIC",
-        "name": "BOTOCHINO CLASSIC"
+        "name": "Imported Marbles",
+        "description": "Premium imported marbles — 36 varieties including Travertine, Emperador, Statuario, and Onyx.",
+        "href": "/imported-marbles"
       }
     ]
   },
@@ -2602,7 +1956,8 @@
         "alt": "Avocato",
         "name": "Avocato"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "mop-inlay-work",
@@ -2611,7 +1966,7 @@
     "hero": {
       "tagline": "Crafting Timeless Spaces",
       "h1": "Elegant M o P Inlay",
-      "h1Html": "Elegant <span class=\"highlight\">M<span>o</span>P</span>  Inlay",
+      "h1Html": "Elegant <span class=\"highlight\">M<span>o</span>P</span> Inlay",
       "description": "Crafted with exquisite Mother-of-Pearl inlay, each piece reflects timeless artistry.The natural iridescence of the shell creates a luminous play of light and color.Meticulously embedded by skilled craftsmen for a refined, lasting finish.A statement of elegance that elevates the beauty of the product."
     },
     "overview": {
@@ -2619,60 +1974,31 @@
       "html": "<p>Our skilled artisans curate MoP inlay elements based on design intent, material suitability, scale proportion, and surface compatibility. Each piece is carefully planned, prepared, and executed under controlled craftsmanship standards.</p><p>Our preparation process focuses on form precision, shell cutting accuracy, surface detailing, structural bonding, and material compatibility — ensuring artistic clarity and reliable long-term performance across varied applications.</p>"
     },
     "gridTitle": "Our Mop Inlay Work Collection",
-    "countLabel": "10 Varieties",
-    "itemCount": 10,
+    "countLabel": "4 Varieties",
+    "itemCount": 4,
     "items": [
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/mother-of-pearls-e1769760782939.jpg",
-        "alt": "MOTHER OF PEARLS",
-        "name": "MOTHER OF PEARLS"
+        "alt": "Mother Of Pearls",
+        "name": "Mother Of Pearls"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20260105-WA0099.jpg",
-        "alt": "MOP INLAY WORK",
-        "name": "MOP INLAY WORK"
+        "alt": "Mop Inlay Work",
+        "name": "Mop Inlay Work"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20260105-WA0098.jpg",
-        "alt": "MOP INLAY WORK",
-        "name": "MOP INLAY WORK"
+        "alt": "Sand Stones Art",
+        "name": "Sand Stones Art"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20260105-WA0088.jpg",
-        "alt": "MOP INLAY WORK",
-        "name": "MOP INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20260105-WA0087-e1769761022862.jpg",
-        "alt": "MOP INLAY WORK",
-        "name": "MOP INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20260105-WA0084.jpg",
-        "alt": "MOP INLAY WORK",
-        "name": "MOP INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20260105-WA0082.jpg",
-        "alt": "MOP INLAY WORK",
-        "name": "MOP INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20180721-WA0041.jpg",
-        "alt": "SAND STONES ART",
-        "name": "SAND STONES ART"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20180721-WA0040.jpg",
-        "alt": "MOP INLAY WORK",
-        "name": "MOP INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Floor-medallions.jpg",
-        "alt": "FLOOR MEDALLIONS",
-        "name": "FLOOR MEDALLIONS"
+        "alt": "Floor Medallions",
+        "name": "Floor Medallions"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "murals-monuments",
@@ -2681,7 +2007,7 @@
     "hero": {
       "tagline": "Crafting Timeless Spaces",
       "h1": "Murals & Monuments",
-      "h1Html": "Murals  <span class=\"highlight\"> &amp; Monuments </span>",
+      "h1Html": "Murals <span class=\"highlight\"> &amp; Monuments </span>",
       "description": "Stone murals and monuments are crafted to create visual masterpieces using natural stone and intricate detailing that add character."
     },
     "overview": {
@@ -2689,45 +2015,31 @@
       "html": "<p>Our skilled stone artisans curate mural and monument creations based on design intent, material suitability, scale, proportion, and surface characteristics. Each piece is carefully conceptualized and crafted under controlled craftsmanship standards.</p><p>The preparation process focuses on:</p><ul><li>Form accuracy </li><li>Surface detailing precision </li><li>Structural balance </li><li>Material compatibility </li></ul><p>Ensuring artistic clarity and long-term material stability across architectural environments.</p>"
     },
     "gridTitle": "Our Murals Monuments Collection",
-    "countLabel": "7 Varieties",
-    "itemCount": 7,
+    "countLabel": "4 Varieties",
+    "itemCount": 4,
     "items": [
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/WhatsApp-Image-2025-12-03-at-14.16.17_ca7f91da.jpg",
-        "alt": "MURALS & MONUMENTS",
-        "name": "MURALS & MONUMENTS"
-      },
-      {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20251215_162623_compressed-scaled.webp",
-        "alt": "MURALS & MONUMENTS",
-        "name": "MURALS & MONUMENTS"
+        "alt": "Murals & Monuments",
+        "name": "Murals & Monuments"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20251202_142435_compressed-scaled.webp",
-        "alt": "MURALS & MONUMENTS",
-        "name": "MURALS & MONUMENTS"
+        "alt": "Hand Curved Wall Art",
+        "name": "Hand Curved Wall Art"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20251202_141633_compressed-scaled-e1769761703722.webp",
-        "alt": "MOP INLAY WORK",
-        "name": "MOP INLAY WORK"
+        "image": "images/products/gold-lipi-on-stone.jpg",
+        "alt": "Gold Lipi On Stone",
+        "name": "Gold Lipi On Stone"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/hand-curved-wall-art.jpg",
-        "alt": "HAND CURVED WALL ART",
-        "name": "HAND CURVED WALL ART"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/hand-curved-wall-art-2.jpg",
-        "alt": "HAND CURVED WALL ART",
-        "name": "HAND CURVED WALL ART"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Gold-Lipi-ON-STONE.jpg",
-        "alt": "GOLD LIPI ON STONE",
-        "name": "GOLD LIPI ON STONE"
+        "alt": "Mop Inlay Work",
+        "name": "Mop Inlay Work"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "natural-stones",
@@ -2735,341 +2047,42 @@
     "metaDescription": "Explore our natural stones collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
-      "h1": "AUTHENTIC NATURAL STONES",
-      "h1Html": "<span>AUTHENTIC <span class=\"highlight\">NATURAL STONES</span> </span>",
+      "h1": "Authentic Natural Stones",
+      "h1Html": "Authentic <span class=\"highlight\">Natural</span> Stones",
       "description": "Natural stones retain their original geological character offering unique textures colour variations and organic surface patterns that bring depth warmth and timeless appeal to architectural and interior spaces."
     },
     "overview": null,
     "gridTitle": "Our Natural Stones Collection",
-    "countLabel": "65 Varieties",
-    "itemCount": 65,
+    "countLabel": "5 Varieties",
+    "itemCount": 5,
     "items": [
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142559_compressed-scaled.webp",
-        "alt": "COBBLE STONES",
-        "name": "COBBLE STONES"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/FLOWER-GOLD-MARBLE-LEATHERED.jpeg",
+        "alt": "Flower Gold Marble Leathered",
+        "name": "Flower Gold Marble Leathered"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142554_compressed-scaled.webp",
-        "alt": "COBBLE STONES",
-        "name": "COBBLE STONES"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/sadarhalli-cobbles.jpg",
+        "alt": "sadarhalli cobbles",
+        "name": "sadarhalli cobbles"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142549_compressed-scaled.webp",
-        "alt": "COBBLE STONES",
-        "name": "COBBLE STONES"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/KOTA-LEATHER-2X2.jpeg",
+        "alt": "Kota Leather 2x2",
+        "name": "Kota Leather 2x2"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142540_compressed-scaled.webp",
-        "alt": "COBBLE STONES",
-        "name": "COBBLE STONES"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/Sadarhalli-cobbles-2.jpg",
+        "alt": "Sadarhalli cobbles",
+        "name": "Sadarhalli cobbles"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142534-scaled.jpg",
-        "alt": "COBBLE STONES",
-        "name": "COBBLE STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142528_compressed-scaled.webp",
-        "alt": "COBBLE STONES",
-        "name": "COBBLE STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142450_compressed.jpg",
-        "alt": "COBBLE STONES",
-        "name": "COBBLE STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142444_compressed-scaled.webp",
-        "alt": "COBBLE STONES",
-        "name": "COBBLE STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142437_compressed-scaled.webp",
-        "alt": "COBBLE STONES",
-        "name": "COBBLE STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142423_compressed.jpg",
-        "alt": "COBBLE STONES",
-        "name": "COBBLE STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142414_compressed-scaled.webp",
-        "alt": "COBBLE STONES",
-        "name": "COBBLE STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142225_compressed.jpg",
-        "alt": "COBBLE STONES",
-        "name": "COBBLE STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213142212_compressed-scaled.webp",
-        "alt": "COBBLE STONES",
-        "name": "COBBLE STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260106_192457_compressed-scaled.webp",
-        "alt": "COBBLE STONES",
-        "name": "COBBLE STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260106_192413_compressed-scaled.webp",
-        "alt": "COBBLE STONES",
-        "name": "COBBLE STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260106_192340_compressed-scaled.webp",
-        "alt": "COBBLE STONES",
-        "name": "COBBLE STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260106_192253_compressed-scaled.webp",
-        "alt": "COBBLE STONES",
-        "name": "COBBLE STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture29.png",
-        "alt": "Shabad Yellow Leather",
-        "name": "Shabad Yellow Leather"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/SHABAD-YELLOW-LEATHER-e1778755930390.jpeg",
-        "alt": "Kota Mirror Polished",
-        "name": "Kota Mirror Polished"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/KOTA-MIRROR-POLISHED-4X2-e1778756113489.jpeg",
-        "alt": "Kota Honey Polished",
-        "name": "Kota Honey Polished"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/KOTA-HONEY-POLISHED-2X2.jpeg",
-        "alt": "Kota Natural Finish",
-        "name": "Kota Natural Finish"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/trashed-1770369180-IMG_20260107_144255_compressed.webp",
-        "alt": "Kota Honeydew Leathered",
-        "name": "Kota Honeydew Leathered"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture32.png",
-        "alt": "Kadpa Black Mirror Polished",
-        "name": "Kadpa Black Mirror Polished"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture33.png",
-        "alt": "Kota Honeydew Polished",
-        "name": "Kota Honeydew Polished"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture34.png",
-        "alt": "Tandur Blue Semi Polished",
-        "name": "Tandur Blue Semi Polished"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture35.png",
-        "alt": "Tandur Blue Mirror Polished",
-        "name": "Tandur Blue Mirror Polished"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture36.png",
-        "alt": "Tandur Grey Leathered",
-        "name": "Tandur Grey Leathered"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture37.png",
-        "alt": "Kota Stone Mirror Polished",
-        "name": "Kota Stone Mirror Polished"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture38.png",
-        "alt": "Kota Green Leather",
-        "name": "Kota Green Leather"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture39.png",
-        "alt": "Kadpa Black Leathere",
-        "name": "Kadpa Black Leathere"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213133838_compressed-scaled.webp",
-        "alt": "PEBBLES",
-        "name": "PEBBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213133725_compressed-scaled.webp",
-        "alt": "PEBBLES",
-        "name": "PEBBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213133630_compressed-scaled.webp",
-        "alt": "PEBBLES",
-        "name": "PEBBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213133528_compressed-scaled.webp",
-        "alt": "PEBBLES",
-        "name": "PEBBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213133445_compressed-scaled.webp",
-        "alt": "PEBBLES",
-        "name": "PEBBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213133334_compressed-scaled.webp",
-        "alt": "PEBBLES",
-        "name": "PEBBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213133249_compressed-scaled.webp",
-        "alt": "PEBBLES",
-        "name": "PEBBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213133023_compressed-scaled.webp",
-        "alt": "PEBBLES",
-        "name": "PEBBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213132849-scaled.jpg",
-        "alt": "PEBBLES",
-        "name": "PEBBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213132749_compressed-scaled.webp",
-        "alt": "PEBBLES",
-        "name": "PEBBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213132643_compressed-scaled.webp",
-        "alt": "PEBBLES",
-        "name": "PEBBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213132434_compressed-scaled.webp",
-        "alt": "PEBBLES",
-        "name": "PEBBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213132302_compressed-scaled.webp",
-        "alt": "PEBBLES",
-        "name": "PEBBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213132156_compressed-scaled.webp",
-        "alt": "PEBBLES",
-        "name": "PEBBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213132029_compressed-scaled.webp",
-        "alt": "PEBBLES",
-        "name": "PEBBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213131936_compressed-scaled.webp",
-        "alt": "PEBBLES",
-        "name": "PEBBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213131718_compressed-scaled.webp",
-        "alt": "PEBBLES",
-        "name": "PEBBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20251216-WA0037.jpg",
-        "alt": "PEBBLES",
-        "name": "PEBBLES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/YELLOW-FOSSIL.jpeg",
-        "alt": "YELLOW FOSSIL",
-        "name": "YELLOW FOSSIL"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/YELLOW-FOSSIL-LEATHERED-e1769878856667.jpeg",
-        "alt": "YELLOW FOSSIL LEATHERED",
-        "name": "YELLOW FOSSIL LEATHERED"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/YELLO-TEAK_compressed.webp",
-        "alt": "YELLOW TEAK",
-        "name": "YELLOW TEAK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/WhatsApp-Image-2023-03-15-at-12_compressed.jpeg",
-        "alt": "SAND STONES",
-        "name": "SAND STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/WhatsApp-Image-2023-03-15-at-12.53.11-PM-e1769879856283.jpeg",
-        "alt": "SAND STONES",
-        "name": "SAND STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RAINBOW-MULTI_compressed.webp",
-        "alt": "RAINBOW MULTI",
-        "name": "RAINBOW MULTI"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/LEATHER-FINISH-YELLO_compressed.webp",
-        "alt": "LEATHER FINISH YELLOW",
-        "name": "LEATHER FINISH YELLOW"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/JAISALMER-YELLOW-MARBLE-POLISHED-e1769880058180.jpeg",
-        "alt": "JAISALMER YELLOW MARBLE POLISHED",
-        "name": "JAISALMER YELLOW MARBLE POLISHED"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/JAISALMER-MARBLE-UNPOLISHED-e1769880126794.jpeg",
-        "alt": "JAISALMER MARBLE UNPOLISHED",
-        "name": "JAISALMER MARBLE UNPOLISHED"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/ITA-GOLD-MARBLE-UNPOLISHED-e1769880194345.jpeg",
-        "alt": "ITA GOLD MARBLE UNPOLISHED",
-        "name": "ITA GOLD MARBLE UNPOLISHED"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260107_143733_compressed.webp",
-        "alt": "SAND STONES",
-        "name": "SAND STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260107_143701_compressed.webp",
-        "alt": "SAND STONES",
-        "name": "SAND STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260107_143513_compressed.webp",
-        "alt": "SAND STONES",
-        "name": "SAND STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260107_143010_compressed.webp",
-        "alt": "SAND STONES",
-        "name": "SAND STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/FLOWER-GOLD-MARBLE-LEATHERED-e1769880492104.jpeg",
-        "alt": "FLOWER GOLD MARBLE LEATHERED",
-        "name": "FLOWER GOLD MARBLE LEATHERED"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/DHOLPUR-RED_compressed.webp",
-        "alt": "DHOLPUR RED",
-        "name": "DHOLPUR RED"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/DHOLPUR-BEIGE_compressed.webp",
-        "alt": "DHOLPUR BEIGE",
-        "name": "DHOLPUR BEIGE"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/KOTA-HIGH-POLISH-2X2.jpeg",
+        "alt": "Kota High Polish 2x2",
+        "name": "Kota High Polish 2x2"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "pebbles",
@@ -3086,9 +2099,163 @@
       "html": "<p>Our experienced stone specialists source pebbles based on hardness, size consistency, surface smoothness, and weather resistance — ensuring suitability for landscaping, drainage solutions, decorative surfaces, and long-term outdoor performance.</p><p>Our handling process emphasizes:</p><ul><li>Precise size grading </li><li>Surface smoothness consistency </li><li>Controlled sorting </li><li>Shade grouping </li><li>Reliable logistics management </li></ul><p>Ensuring pebbles retain their natural integrity and maintain performance across diverse landscape and architectural applications.</p>"
     },
     "gridTitle": "Our Pebbles Collection",
-    "countLabel": "0 Varieties",
+    "countLabel": "16 Varieties",
+    "itemCount": 16,
+    "items": [
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213133838_compressed-scaled.webp",
+        "alt": "Mixed Pebbles",
+        "name": "Mixed Pebbles"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213133725_compressed-scaled.webp",
+        "alt": "Black Granite Granules",
+        "name": "Black Granite Granules"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213133630_compressed-scaled.webp",
+        "alt": "Yellow Onyx Pebbles",
+        "name": "Yellow Onyx Pebbles"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213133528_compressed-scaled.webp",
+        "alt": "Coloured Granules",
+        "name": "Coloured Granules"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213133445_compressed-scaled.webp",
+        "alt": "Polished River Pebbles",
+        "name": "Polished River Pebbles"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213133334_compressed-scaled.webp",
+        "alt": "Polished White Pebbles",
+        "name": "Polished White Pebbles"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213133249_compressed-scaled.webp",
+        "alt": "Beige Marble Granules",
+        "name": "Beige Marble Granules"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213133023_compressed-scaled.webp",
+        "alt": "White Marble Unpolished Granules",
+        "name": "White Marble Unpolished Granules"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213132849-scaled.jpg",
+        "alt": "Grey Granite Granules",
+        "name": "Grey Granite Granules"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213132749_compressed-scaled.webp",
+        "alt": "Red Granite Granules",
+        "name": "Red Granite Granules"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213132643_compressed-scaled.webp",
+        "alt": "White Unpolished Pebbles",
+        "name": "White Unpolished Pebbles"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213132434_compressed-scaled.webp",
+        "alt": "River Brown Pebbles",
+        "name": "River Brown Pebbles"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213132302_compressed-scaled.webp",
+        "alt": "Red Marble Polished Pebbles",
+        "name": "Red Marble Polished Pebbles"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213132156_compressed-scaled.webp",
+        "alt": "Green Onyx Pebbles",
+        "name": "Green Onyx Pebbles"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213132029_compressed-scaled.webp",
+        "alt": "Coloured Green Granules",
+        "name": "Coloured Green Granules"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG20251213131936_compressed-scaled.webp",
+        "alt": "Mixed River Pebbles",
+        "name": "Mixed River Pebbles"
+      }
+    ],
+    "categoryCards": []
+  },
+  {
+    "slug": "products",
+    "title": "Products | S K Stones India - Premium Natural Stones",
+    "metaDescription": "Explore our premium collection of granites, marbles, natural stones, engineered surfaces, and custom stone art.",
+    "hero": {
+      "tagline": "",
+      "h1": "Our Products",
+      "h1Html": "Our <span class=\"gold\">Products</span>",
+      "description": ""
+    },
+    "overview": null,
+    "gridTitle": "",
+    "countLabel": "",
     "itemCount": 0,
-    "items": []
+    "items": [],
+    "categoryCards": [
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/BLACK-STRIPE-1.jpg",
+        "name": "Marbles",
+        "description": "Premium marble stones offering elegance, durability, and timeless appeal, suitable for flooring, walls, counters, and luxury interior applications.",
+        "href": "/marbles"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/YELLOW-FOSSIL-LEATHERED-1.jpg",
+        "name": "Granites",
+        "description": "Hard wearing granite stones known for strength, weather resistance, and versatility, ideal for flooring, countertops, exteriors, and heavy traffic areas.",
+        "href": "/granites"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/IMG_20180224_135417-scaled.jpg",
+        "name": "Natural Stones",
+        "description": "Naturally sourced stones delivering organic textures, durability, and character, widely used for flooring, landscaping, cladding, and architectural detailing.",
+        "href": "/natural-stones"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/11/stone-art.avif",
+        "name": "Engineered Surfaces",
+        "description": "Manufactured stone surfaces combining strength, consistency, and design flexibility, suitable for countertops, commercial interiors, and modern architectural applications.",
+        "href": "/engineered-surfaces"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/WhatsApp-Image-2025-11-27-at-11.46.41_24d000c0-1.jpg",
+        "name": "Stone Art",
+        "description": "Artistic stone creations crafted for murals, fountains, water features, and decorative installations enhancing visual identity and architectural storytelling.",
+        "href": "/stone-art"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/760368_ac9dfc1eff6c4d51b9507de348c5e3c4mv2.avif",
+        "name": "Cobble Stones",
+        "description": "Durable cobble stones designed for pathways, driveways, and landscaping applications, offering natural grip, strength, and timeless outdoor aesthetics.",
+        "href": "/cobble-stones"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/760368_f44f5180aee14bd398fb18176eb0aae3mv2.avif",
+        "name": "Wall Claddings",
+        "description": "Stone cladding solutions providing texture, protection, and visual depth for interior and exterior walls across residential commercial projects.",
+        "href": "/wall-claddings"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/IMG_20180224_135417-scaled.jpg",
+        "name": "Concrete Blocks",
+        "description": "High strength concrete blocks suitable for structural and landscape use, offering uniformity, load bearing capacity, and long term durability.",
+        "href": "/concrete-blocks"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/VENETO-BEIGE_compressed.webp",
+        "name": "Tiles",
+        "description": "Vitrified and stone tiles designed for flooring and wall applications, delivering consistency, easy maintenance, and versatile design options.",
+        "href": "/tiles"
+      }
+    ]
   },
   {
     "slug": "quatrz-surfaces",
@@ -3220,8 +2387,8 @@
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/galaxy-agl.jpg",
-        "alt": "Galaxy AGL",
-        "name": "Galaxy AGL"
+        "alt": "Galaxy Agl",
+        "name": "Galaxy Agl"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/dessert-brown.jpg",
@@ -3335,8 +2502,8 @@
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/artic-white-.jpg",
-        "alt": "Arctic White",
-        "name": "Arctic White"
+        "alt": "Artic White",
+        "name": "Artic White"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/anthracite.jpg",
@@ -3348,7 +2515,8 @@
         "alt": "Alluring",
         "name": "Alluring"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "roof-flooring-tiles",
@@ -3393,7 +2561,8 @@
         "alt": "Cappuccino Flooring Tiles",
         "name": "Cappuccino Flooring Tiles"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "roofing-tiles-clay",
@@ -3448,7 +2617,8 @@
         "alt": "Glossy Blue",
         "name": "Glossy Blue"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "sand-stones",
@@ -3465,95 +2635,66 @@
       "html": "<p>Our experienced stone specialists source sandstones based on density, grain consistency, surface texture — ensuring suitability for cladding, paving, landscaping, and long-term outdoor performance.</p><p>Our handling process emphasizes:</p><ul><li>Accurate size grading</li><li>Surface stability control</li><li>Controlled sorting</li><li>Structured logistics management</li></ul><p>Ensuring sandstones maintain their natural integrity while delivering dependable durability across architectural and landscape applications. </p>"
     },
     "gridTitle": "Our Sand Stones Collection",
-    "countLabel": "17 Varieties",
-    "itemCount": 17,
+    "countLabel": "11 Varieties",
+    "itemCount": 11,
     "items": [
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/YELLOW-FOSSIL.jpeg",
-        "alt": "YELLOW FOSSIL",
-        "name": "YELLOW FOSSIL"
+        "alt": "Yellow Fossil",
+        "name": "Yellow Fossil"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/YELLOW-FOSSIL-LEATHERED-e1769878856667.jpeg",
-        "alt": "YELLOW FOSSIL LEATHERED",
-        "name": "YELLOW FOSSIL LEATHERED"
+        "alt": "Yellow Fossil Leathered",
+        "name": "Yellow Fossil Leathered"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/YELLO-TEAK_compressed.webp",
-        "alt": "YELLOW TEAK",
-        "name": "YELLOW TEAK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/WhatsApp-Image-2023-03-15-at-12_compressed.jpeg",
-        "alt": "SAND STONES",
-        "name": "SAND STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/WhatsApp-Image-2023-03-15-at-12.53.11-PM-e1769879856283.jpeg",
-        "alt": "SAND STONES",
-        "name": "SAND STONES"
+        "alt": "Yellow Teak",
+        "name": "Yellow Teak"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/RAINBOW-MULTI_compressed.webp",
-        "alt": "RAINBOW MULTI",
-        "name": "RAINBOW MULTI"
+        "alt": "Rainbow Multi",
+        "name": "Rainbow Multi"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/LEATHER-FINISH-YELLO_compressed.webp",
-        "alt": "LEATHER FINISH YELLOW",
-        "name": "LEATHER FINISH YELLOW"
+        "alt": "Leather Finish Yellow",
+        "name": "Leather Finish Yellow"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/JAISALMER-YELLOW-MARBLE-POLISHED-e1769880058180.jpeg",
-        "alt": "JAISALMER YELLOW MARBLE POLISHED",
-        "name": "JAISALMER YELLOW MARBLE POLISHED"
+        "alt": "Jaisalmer Yellow Marble Polished",
+        "name": "Jaisalmer Yellow Marble Polished"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/JAISALMER-MARBLE-UNPOLISHED-e1769880126794.jpeg",
-        "alt": "JAISALMER MARBLE UNPOLISHED",
-        "name": "JAISALMER MARBLE UNPOLISHED"
+        "alt": "Jaisalmer Marble Unpolished",
+        "name": "Jaisalmer Marble Unpolished"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/ITA-GOLD-MARBLE-UNPOLISHED-e1769880194345.jpeg",
-        "alt": "ITA GOLD MARBLE UNPOLISHED",
-        "name": "ITA GOLD MARBLE UNPOLISHED"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260107_143733_compressed.webp",
-        "alt": "SAND STONES",
-        "name": "SAND STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260107_143701_compressed.webp",
-        "alt": "SAND STONES",
-        "name": "SAND STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260107_143513_compressed.webp",
-        "alt": "SAND STONES",
-        "name": "SAND STONES"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260107_143010_compressed.webp",
-        "alt": "SAND STONES",
-        "name": "SAND STONES"
+        "alt": "Ita Gold Marble Unpolished",
+        "name": "Ita Gold Marble Unpolished"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/FLOWER-GOLD-MARBLE-LEATHERED-e1769880492104.jpeg",
-        "alt": "FLOWER GOLD MARBLE LEATHERED",
-        "name": "FLOWER GOLD MARBLE LEATHERED"
+        "alt": "Flower Gold Marble Leathered",
+        "name": "Flower Gold Marble Leathered"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/DHOLPUR-RED_compressed.webp",
-        "alt": "DHOLPUR RED",
-        "name": "DHOLPUR RED"
+        "alt": "Dholpur Red",
+        "name": "Dholpur Red"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/DHOLPUR-BEIGE_compressed.webp",
-        "alt": "DHOLPUR BEIGE",
-        "name": "DHOLPUR BEIGE"
+        "alt": "Dholpur Beige",
+        "name": "Dholpur Beige"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "stone-art",
@@ -3561,236 +2702,32 @@
     "metaDescription": "Explore our stone art collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
-      "h1": "CUSTOM STONE ART INSTALLATION",
-      "h1Html": "<span><span class=\"highlight\">CUSTOM STONE ART</span> INSTALLATION </span>",
+      "h1": "Custom Stone Art",
+      "h1Html": "<span class=\"highlight\">Custom Stone Art</span>",
       "description": "Stone art pieces are crafted to create visual focal points using natural stone forms textures and detailing that add character depth and artistic expression to interior and exterior architectural spaces."
     },
     "overview": null,
     "gridTitle": "Our Stone Art Collection",
-    "countLabel": "44 Varieties",
-    "itemCount": 44,
+    "countLabel": "3 Varieties",
+    "itemCount": 3,
     "items": [
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/WhatsApp-Image-2025-12-03-at-14.42.05_8b7b4579.jpg",
-        "alt": "CNC STONE WORK",
-        "name": "CNC STONE WORK"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/hand-curved-wall-art-2.jpg",
+        "alt": "hand curved wall art",
+        "name": "hand curved wall art"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/WhatsApp-Image-2025-12-03-at-14.39.19_f7448507.jpg",
-        "alt": "CNC STONE WORK",
-        "name": "CNC STONE WORK"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/hand-curved-wall-art.jpg",
+        "alt": "hand curved wall art",
+        "name": "hand curved wall art"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/WhatsApp-Image-2025-12-03-at-14.34.14_ec5cb411.jpg",
-        "alt": "CNC STONE WORK",
-        "name": "CNC STONE WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/SAND-STONES-ART_compressed-1.webp",
-        "alt": "SAND STONES ART",
-        "name": "SAND STONES ART"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/inlay-work.jpg",
-        "alt": "INLAY WORK",
-        "name": "INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20210729-WA0023.jpg",
-        "alt": "INLAY WORK",
-        "name": "INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20210729-WA0022-e1769759419107.jpg",
-        "alt": "INLAY WORK",
-        "name": "INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20210729-WA0021-e1769759571128.jpg",
-        "alt": "SAND STONES ART",
-        "name": "SAND STONES ART"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20200615-WA0030-e1769759715642.jpg",
-        "alt": "INLAY WORK",
-        "name": "INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20200225-WA0001.jpg",
-        "alt": "INLAY WORK",
-        "name": "INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20190414-WA0007-Copy.jpg",
-        "alt": "INLAY WORK",
-        "name": "INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20170225-WA0010-Copy.jpg",
-        "alt": "SAND STONES ART",
-        "name": "SAND STONES ART"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20170225-WA0009-Copy.jpg",
-        "alt": "INLAY WORK",
-        "name": "INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20161221-WA0019-Copy.jpg",
-        "alt": "INLAY WORK",
-        "name": "INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Floor-medallions-2.jpg",
-        "alt": "FLOOR MEDALLIONS",
-        "name": "FLOOR MEDALLIONS"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/COIN-PATTERN-CNC-WORK_compressed-scaled.webp",
-        "alt": "COIN PATTERN",
-        "name": "COIN PATTERN"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/cnc-work-flower-pattern_compressed-scaled.webp",
-        "alt": "FLOWER PATTERN",
-        "name": "FLOWER PATTERN"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/cnc-work-coin-pattern_compressed-scaled.webp",
-        "alt": "COIN PATTERN",
-        "name": "COIN PATTERN"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/BRASS-INLAY-e1769760269200.jpg",
-        "alt": "BRASS INLAY",
-        "name": "BRASS INLAY"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/BRASS-INLAY-2-e1769760330470.jpg",
-        "alt": "BRASS INLAY",
-        "name": "BRASS INLAY"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/mother-of-pearls-e1769760782939.jpg",
-        "alt": "MOTHER OF PEARLS",
-        "name": "MOTHER OF PEARLS"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20260105-WA0099.jpg",
-        "alt": "MOP INLAY WORK",
-        "name": "MOP INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20260105-WA0098.jpg",
-        "alt": "MOP INLAY WORK",
-        "name": "MOP INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20260105-WA0088.jpg",
-        "alt": "MOP INLAY WORK",
-        "name": "MOP INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20260105-WA0087-e1769761022862.jpg",
-        "alt": "MOP INLAY WORK",
-        "name": "MOP INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20260105-WA0084.jpg",
-        "alt": "MOP INLAY WORK",
-        "name": "MOP INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20260105-WA0082.jpg",
-        "alt": "MOP INLAY WORK",
-        "name": "MOP INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20180721-WA0041.jpg",
-        "alt": "SAND STONES ART",
-        "name": "SAND STONES ART"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20180721-WA0040.jpg",
-        "alt": "MOP INLAY WORK",
-        "name": "MOP INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Floor-medallions.jpg",
-        "alt": "FLOOR MEDALLIONS",
-        "name": "FLOOR MEDALLIONS"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/WhatsApp-Image-2025-12-03-at-14.16.17_ca7f91da.jpg",
-        "alt": "MURALS & MONUMENTS",
-        "name": "MURALS & MONUMENTS"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20251215_162623_compressed-scaled.webp",
-        "alt": "MURALS & MONUMENTS",
-        "name": "MURALS & MONUMENTS"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20251202_142435_compressed-scaled.webp",
-        "alt": "MURALS & MONUMENTS",
-        "name": "MURALS & MONUMENTS"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20251202_141633_compressed-scaled-e1769761703722.webp",
-        "alt": "MOP INLAY WORK",
-        "name": "MOP INLAY WORK"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/hand-curved-wall-art.jpg",
-        "alt": "HAND CURVED WALL ART",
-        "name": "HAND CURVED WALL ART"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/hand-curved-wall-art-2.jpg",
-        "alt": "HAND CURVED WALL ART",
-        "name": "HAND CURVED WALL ART"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/Gold-Lipi-ON-STONE.jpg",
-        "alt": "GOLD LIPI ON STONE",
-        "name": "GOLD LIPI ON STONE"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture18.png",
-        "alt": "Petals Pattern",
-        "name": "Petals Pattern"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/PATALS-PATTERN-.jpg",
-        "alt": "Leaf Pattern Wall Art",
-        "name": "Leaf Pattern Wall Art"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/LEAF-PATTERN-WALL-ART.jpg",
-        "alt": "Flawor Embossed Wall",
-        "name": "Flawor Embossed Wall"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/FLAWOR-EMBOSSED-WALL-.jpg",
-        "alt": "Wave Pattern Wall",
-        "name": "Wave Pattern Wall"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture17.png",
-        "alt": "Feature Wall",
-        "name": "Feature Wall"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture19.png",
-        "alt": "Feature Wall",
-        "name": "Feature Wall"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/05/Picture23.png",
-        "alt": "Feature Wall",
-        "name": "Feature Wall"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/Gold-LEAFING-ON-STONE.jpg",
+        "alt": "Gold LEAFING ON STONE",
+        "name": "Gold LEAFING ON STONE"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "stone-collection",
@@ -3870,7 +2807,8 @@
         "alt": "Cristallo",
         "name": "Cristallo"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "subway-tiles",
@@ -3920,7 +2858,8 @@
         "alt": "Custom Color Subway Tiles",
         "name": "Custom Color Subway Tiles"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "tiles",
@@ -3928,214 +2867,114 @@
     "metaDescription": "Vitrified and stone tile collections for flooring and walls.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
-      "h1": "AUTHENTIC TILE SURFACE",
-      "h1Html": "<span>AUTHENTIC <span class=\"highlight\">TILE SURFACE</span> </span>",
+      "h1": "Premium Tiles Collection",
+      "h1Html": "Premium <span class=\"highlight\">Tiles</span> Collection",
       "description": "Tiles offer versatile surface solutions combining durability design flexibility and easy maintenance making them suitable for floors walls and functional spaces across residential commercial and high traffic environments."
     },
     "overview": null,
     "gridTitle": "Our Tiles Collection",
-    "countLabel": "93 Varieties",
-    "itemCount": 93,
+    "countLabel": "88 Varieties",
+    "itemCount": 88,
     "items": [
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/STATUARIOBOOK-MATHCH_compressed.webp",
-        "alt": "Statuario Book Match",
-        "name": "Statuario Book Match"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260109_185338_compressed.webp",
+        "alt": "Subway Tiles",
+        "name": "Subway Tiles"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/STATUARIO-SILK_compressed.webp",
-        "alt": "Statuario Silk",
-        "name": "Statuario Silk"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/VENETO-BEIGE_compressed.webp",
+        "alt": "Veneto Beige",
+        "name": "Veneto Beige"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/SONATA-GREY_compressed.webp",
-        "alt": "Sonata Grey",
-        "name": "Sonata Grey"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/TRAVERTINE_compressed.webp",
+        "alt": "Travertine",
+        "name": "Travertine"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/ROSSO-ONYX_compressed.webp",
-        "alt": "Rosso Onyx",
-        "name": "Rosso Onyx"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/TORANO-BEIGE_compressed.webp",
+        "alt": "Torano Beige",
+        "name": "Torano Beige"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/PRIMAVERA_compressed.webp",
-        "alt": "Primavera",
-        "name": "Primavera"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/SARRAN-COLIN-SAGE_compressed.webp",
+        "alt": "Sarran Colin Sage",
+        "name": "Sarran Colin Sage"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/GOLDEN-STATUARIO_compressed.webp",
-        "alt": "Golden Statuario",
-        "name": "Golden Statuario"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/ROSALIA_compressed.webp",
+        "alt": "Rosalia",
+        "name": "Rosalia"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/FRENCH-GRAY_compressed.webp",
-        "alt": "French Gray",
-        "name": "French Gray"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/POLAR-WHITE_compressed.webp",
+        "alt": "Polar White",
+        "name": "Polar White"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/AVORIO-GRANITE_compressed.webp",
-        "alt": "Avorio Granite",
-        "name": "Avorio Granite"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/MOSES-TAUPE_compressed.webp",
+        "alt": "Moses Taupe",
+        "name": "Moses Taupe"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/AMAZONITE_compressed.webp",
-        "alt": "Amazonite",
-        "name": "Amazonite"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/MICHEL-ANGELO_compressed.webp",
+        "alt": "Michel Angelo",
+        "name": "Michel Angelo"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/TERREZO-WHITE_compressed.webp",
-        "alt": "Terrazzo White",
-        "name": "Terrazzo White"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/LINCOLN_compressed.webp",
+        "alt": "Lincoln",
+        "name": "Lincoln"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/TERREZO-GREY_compressed.webp",
-        "alt": "Terrazzo Grey",
-        "name": "Terrazzo Grey"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/GLACIER_compressed.webp",
+        "alt": "Glacier",
+        "name": "Glacier"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/PLATTO-BLACK-_compressed.webp",
-        "alt": "Platto Black",
-        "name": "Platto Black"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/DIANA_compressed.webp",
+        "alt": "Diana",
+        "name": "Diana"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/PIATTO-BURLY_compressed.webp",
-        "alt": "Piatto Burly",
-        "name": "Piatto Burly"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/CRISTALLO_compressed.webp",
+        "alt": "Cristallo",
+        "name": "Cristallo"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/GLITER-WHITE_compressed.webp",
-        "alt": "Glitter White",
-        "name": "Glitter White"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/TRAVERTINO-GRIS_compressed.webp",
+        "alt": "Travertino Gris",
+        "name": "Travertino Gris"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/AIZA-CINNAMON-scaled.jpg",
-        "alt": "Aiza Cinnamon",
-        "name": "Aiza Cinnamon"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/PIETRA-GREY-1_compressed.webp",
+        "alt": "Pietra Grey",
+        "name": "Pietra Grey"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/venzo-natural_compressed.webp",
-        "alt": "Venzo Natural",
-        "name": "Venzo Natural"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/MARQUINA-FUSION_compressed.webp",
+        "alt": "Marquina Fusion",
+        "name": "Marquina Fusion"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/unika-gold_compressed.webp",
-        "alt": "Unika Gold",
-        "name": "Unika Gold"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/EXOTIC-STONE_compressed.webp",
+        "alt": "Exotic Stone",
+        "name": "Exotic Stone"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/sorrento-blue_compressed.webp",
-        "alt": "Sorrento Blue",
-        "name": "Sorrento Blue"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/DAZZLE-BROWN_compressed.webp",
+        "alt": "Dazzle Brown",
+        "name": "Dazzle Brown"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/SHELTAR-BAIGE_compressed.webp",
-        "alt": "Sheltar Beige",
-        "name": "Sheltar Beige"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/CARRARA-GOLD_compressed.webp",
+        "alt": "Carrara Gold",
+        "name": "Carrara Gold"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/satvario-lasa.jpg",
-        "alt": "Statuario Lasa",
-        "name": "Statuario Lasa"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/ROYAL-ARMANI-BROWN_compressed.webp",
-        "alt": "Royal Armani Brown",
-        "name": "Royal Armani Brown"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/royal-armani-brown-light_compressed.webp",
-        "alt": "Royal Armani Brown Light",
-        "name": "Royal Armani Brown Light"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/RITZY-BIANO_compressed.webp",
-        "alt": "Ritzy Bianco",
-        "name": "Ritzy Bianco"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/NAPLES-WHITE_compressed.webp",
-        "alt": "Naples White",
-        "name": "Naples White"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/OLGA-BROWN_compressed.webp",
-        "alt": "Olga Brown",
-        "name": "Olga Brown"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/NUBA-NATURAL_compressed.webp",
-        "alt": "Nuba Natural",
-        "name": "Nuba Natural"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/NAYAR-PEACH_compressed.webp",
-        "alt": "Nayar Peach",
-        "name": "Nayar Peach"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/LUCIA-NATURAL-_compressed.webp",
-        "alt": "Lucia Natural",
-        "name": "Lucia Natural"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/LIZENT-BIANCO_compressed.webp",
-        "alt": "Lizent Bianco",
-        "name": "Lizent Bianco"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/LEMSA-LIGHT_compressed.webp",
-        "alt": "Lemsa Light",
-        "name": "Lemsa Light"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/kama-ocean_compressed.webp",
-        "alt": "Kama Ocean",
-        "name": "Kama Ocean"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/JAFFIRO-NATURAL_compressed.webp",
-        "alt": "Jaffiro Natural",
-        "name": "Jaffiro Natural"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/JAFFIRO-BEIGE_compressed.webp",
-        "alt": "Jaffiro Beige",
-        "name": "Jaffiro Beige"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/INFINITY-GOLD_compressed.webp",
-        "alt": "Infinity Gold",
-        "name": "Infinity Gold"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/ETERNITY-BEIGE_compressed.webp",
-        "alt": "Eternity Beige",
-        "name": "Eternity Beige"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/comoros-aqua_compressed-1.webp",
-        "alt": "Comoros Aqua",
-        "name": "Comoros Aqua"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/AVIRA-WHITE_compressed.webp",
-        "alt": "Avira White",
-        "name": "Avira White"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/aurelia-green_compressed.webp",
-        "alt": "Aurelia Green",
-        "name": "Aurelia Green"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/ARENADO-CREAM_compressed.webp",
-        "alt": "Arenado Cream",
-        "name": "Arenado Cream"
-      },
-      {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/ABRIA-BEIGE_compressed.webp",
-        "alt": "Abria Beige",
-        "name": "Abria Beige"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/AVOCATO_compressed.webp",
+        "alt": "Avocato",
+        "name": "Avocato"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/VENDOME-ROYAL_compressed.webp",
@@ -4189,18 +3028,18 @@
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/ELIZABATH-GREEN_compressed.webp",
-        "alt": "Elizabeth Green",
-        "name": "Elizabeth Green"
+        "alt": "Elizabath Green",
+        "name": "Elizabath Green"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/CITYSCAPE-GRIEGE_compressed-2.webp",
-        "alt": "Cityscape Greige",
-        "name": "Cityscape Greige"
+        "alt": "Cityscape Griege",
+        "name": "Cityscape Griege"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/CALACATTA-SUPRME_compressed.webp",
-        "alt": "Calacatta Supreme",
-        "name": "Calacatta Supreme"
+        "alt": "Calacatta Suprme",
+        "name": "Calacatta Suprme"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/CALACATTA-MICHAEL_compressed.webp",
@@ -4209,8 +3048,8 @@
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/CALACATTA-LAYBRINTH_compressed.webp",
-        "alt": "Calacatta Labyrinth",
-        "name": "Calacatta Labyrinth"
+        "alt": "Calacatta Laybrinth",
+        "name": "Calacatta Laybrinth"
       },
       {
         "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/BULGARI-CREAM_compressed.webp",
@@ -4278,131 +3117,207 @@
         "name": "Alboran Beige Endless"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/TRAVERTINO-GRIS_compressed.webp",
-        "alt": "Travertino Gris",
-        "name": "Travertino Gris"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/venzo-natural_compressed.webp",
+        "alt": "Venzo Natural",
+        "name": "Venzo Natural"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/PIETRA-GREY-1_compressed.webp",
-        "alt": "Pietra Grey",
-        "name": "Pietra Grey"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/unika-gold_compressed.webp",
+        "alt": "Unika Gold",
+        "name": "Unika Gold"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/MARQUINA-FUSION_compressed.webp",
-        "alt": "Marquina Fusion",
-        "name": "Marquina Fusion"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/sorrento-blue_compressed.webp",
+        "alt": "Sorrento Blue",
+        "name": "Sorrento Blue"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/EXOTIC-STONE_compressed.webp",
-        "alt": "Exotic Stone",
-        "name": "Exotic Stone"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/SHELTAR-BAIGE_compressed.webp",
+        "alt": "Sheltar Baige",
+        "name": "Sheltar Baige"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/DAZZLE-BROWN_compressed.webp",
-        "alt": "Dazzle Brown",
-        "name": "Dazzle Brown"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/satvario-lasa.jpg",
+        "alt": "Satvario Lasa",
+        "name": "Satvario Lasa"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/CARRARA-GOLD_compressed.webp",
-        "alt": "Carrara Gold",
-        "name": "Carrara Gold"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/ROYAL-ARMANI-BROWN_compressed.webp",
+        "alt": "Royal Armani Brown",
+        "name": "Royal Armani Brown"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/AVOCATO_compressed.webp",
-        "alt": "Avocato",
-        "name": "Avocato"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/royal-armani-brown-light_compressed.webp",
+        "alt": "Royal Armani Brown Light",
+        "name": "Royal Armani Brown Light"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/VENETO-BEIGE_compressed.webp",
-        "alt": "Veneto Beige",
-        "name": "Veneto Beige"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/RITZY-BIANO_compressed.webp",
+        "alt": "Ritzy Biano",
+        "name": "Ritzy Biano"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/TRAVERTINE_compressed.webp",
-        "alt": "Travertine",
-        "name": "Travertine"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/OLGA-BROWN_compressed.webp",
+        "alt": "Olga Brown",
+        "name": "Olga Brown"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/TORANO-BEIGE_compressed.webp",
-        "alt": "Torano Beige",
-        "name": "Torano Beige"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/NUBA-NATURAL_compressed.webp",
+        "alt": "Nuba Natural",
+        "name": "Nuba Natural"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/SARRAN-COLIN-SAGE_compressed.webp",
-        "alt": "Sarran Colin Sage",
-        "name": "Sarran Colin Sage"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/NAYAR-PEACH_compressed.webp",
+        "alt": "Nayar Peach",
+        "name": "Nayar Peach"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/ROSALIA_compressed.webp",
-        "alt": "Rosalia",
-        "name": "Rosalia"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/NAPLES-WHITE_compressed.webp",
+        "alt": "Naples White",
+        "name": "Naples White"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/POLAR-WHITE_compressed.webp",
-        "alt": "Polar White",
-        "name": "Polar White"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/LUCIA-NATURAL-_compressed.webp",
+        "alt": "Lucia Natural",
+        "name": "Lucia Natural"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/MOSES-TAUPE_compressed.webp",
-        "alt": "Moses Taupe",
-        "name": "Moses Taupe"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/LIZENT-BIANCO_compressed.webp",
+        "alt": "Lizent Bianco",
+        "name": "Lizent Bianco"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/MICHEL-ANGELO_compressed.webp",
-        "alt": "Michel Angelo",
-        "name": "Michel Angelo"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/LEMSA-LIGHT_compressed.webp",
+        "alt": "Lemsa Light",
+        "name": "Lemsa Light"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/LINCOLN_compressed.webp",
-        "alt": "Lincoln",
-        "name": "Lincoln"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/kama-ocean_compressed.webp",
+        "alt": "Kama Ocean",
+        "name": "Kama Ocean"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/GLACIER_compressed.webp",
-        "alt": "Glacier",
-        "name": "Glacier"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/JAFFIRO-NATURAL_compressed.webp",
+        "alt": "Jaffiro Natural",
+        "name": "Jaffiro Natural"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/DIANA_compressed.webp",
-        "alt": "Diana",
-        "name": "Diana"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/JAFFIRO-BEIGE_compressed.webp",
+        "alt": "Jaffiro Beige",
+        "name": "Jaffiro Beige"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/CRISTALLO_compressed.webp",
-        "alt": "Cristallo",
-        "name": "Cristallo"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/INFINITY-GOLD_compressed.webp",
+        "alt": "Infinity Gold",
+        "name": "Infinity Gold"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260109_184937_compressed.webp",
-        "alt": "Classic Gloss Subway Tiles",
-        "name": "Classic Gloss Subway Tiles"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/ETERNITY-BEIGE_compressed.webp",
+        "alt": "Eternity Beige",
+        "name": "Eternity Beige"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260109_185305_compressed.webp",
-        "alt": "Matte Finish Subway Tiles",
-        "name": "Matte Finish Subway Tiles"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/comoros-aqua_compressed-1.webp",
+        "alt": "Comoros Aqua",
+        "name": "Comoros Aqua"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260109_185239_compressed.webp",
-        "alt": "Beveled Edge Subway Tiles",
-        "name": "Beveled Edge Subway Tiles"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/AVIRA-WHITE_compressed.webp",
+        "alt": "Avira White",
+        "name": "Avira White"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260109_185202_compressed.webp",
-        "alt": "Textured Subway Tiles",
-        "name": "Textured Subway Tiles"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/aurelia-green_compressed.webp",
+        "alt": "Aurelia Green",
+        "name": "Aurelia Green"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/IMG_20260109_145044_compressed.webp",
-        "alt": "Decorative Pattern Subway Tiles",
-        "name": "Decorative Pattern Subway Tiles"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/ARENADO-CREAM_compressed.webp",
+        "alt": "Arenado Cream",
+        "name": "Arenado Cream"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/IMG_20260109_184534_compressed.webp",
-        "alt": "Custom Color Subway Tiles",
-        "name": "Custom Color Subway Tiles"
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/ABRIA-BEIGE_compressed.webp",
+        "alt": "Abria Beige",
+        "name": "Abria Beige"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/TERREZO-WHITE_compressed.webp",
+        "alt": "Terrezo White",
+        "name": "Terrezo White"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/TERREZO-GREY_compressed.webp",
+        "alt": "Terrezo Grey",
+        "name": "Terrezo Grey"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/PLATTO-BLACK-_compressed.webp",
+        "alt": "Platto Black",
+        "name": "Platto Black"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/PIATTO-BURLY_compressed.webp",
+        "alt": "Piatto Burly",
+        "name": "Piatto Burly"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/GLITER-WHITE_compressed.webp",
+        "alt": "Gliter White",
+        "name": "Gliter White"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/AIZA-CINNAMON-scaled.jpg",
+        "alt": "Aiza Cinnamon",
+        "name": "Aiza Cinnamon"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/STATUARIOBOOK-MATHCH_compressed.webp",
+        "alt": "Statuario Book Match",
+        "name": "Statuario Book Match"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/STATUARIO-SILK_compressed.webp",
+        "alt": "Statuario Silk",
+        "name": "Statuario Silk"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/SONATA-GREY_compressed.webp",
+        "alt": "Sonata Grey",
+        "name": "Sonata Grey"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/ROSSO-ONYX_compressed.webp",
+        "alt": "Rosso Onyx",
+        "name": "Rosso Onyx"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/PRIMAVERA_compressed.webp",
+        "alt": "Primavera",
+        "name": "Primavera"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/GOLDEN-STATUARIO_compressed.webp",
+        "alt": "Golden Statuario",
+        "name": "Golden Statuario"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/FRENCH-GRAY_compressed.webp",
+        "alt": "French Gray",
+        "name": "French Gray"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/AVORIO-GRANITE_compressed.webp",
+        "alt": "Avorio Granite",
+        "name": "Avorio Granite"
+      },
+      {
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/AMAZONITE_compressed.webp",
+        "alt": "Amazonite",
+        "name": "Amazonite"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "wall-claddings",
@@ -4642,7 +3557,8 @@
         "alt": "WC 044",
         "name": "WC 044"
       }
-    ]
+    ],
+    "categoryCards": []
   },
   {
     "slug": "wire-cut-bricks",
@@ -4663,30 +3579,31 @@
     "itemCount": 5,
     "items": [
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/06/ban1.png",
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/red-clay-bricks-507.jpg",
         "alt": "Red Clay Wire Cut Bricks",
         "name": "Red Clay Wire Cut Bricks"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/red-clay-bricks-507.jpg",
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20260105-WA0071.jpg",
         "alt": "Textured Wire Cut Bricks",
         "name": "Textured Wire Cut Bricks"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG-20260105-WA0071.jpg",
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260105_171723_compressed-scaled.webp",
         "alt": "Architectural Finish Wire Cut Bricks",
         "name": "Architectural Finish Wire Cut Bricks"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260105_171723_compressed-scaled.webp",
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260105_171700_compressed-scaled.webp",
         "alt": "Natural Tone Clay Bricks",
         "name": "Natural Tone Clay Bricks"
       },
       {
-        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260105_171700_compressed-scaled.webp",
+        "image": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/01/IMG_20260105_171553.jpg",
         "alt": "Custom Shade Wire Cut Units",
         "name": "Custom Shade Wire Cut Units"
       }
-    ]
+    ],
+    "categoryCards": []
   }
 ]

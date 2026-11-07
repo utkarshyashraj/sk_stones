@@ -66,10 +66,10 @@
       "sourceNote": "Origin from category name; hero copy mentions statement flooring"
     },
     {
-      "slug": "granites",
+      "slug": "granites-group",
       "name": "Granites",
       "parent": null,
-      "kind": "hub",
+      "kind": "group",
       "legacySource": null,
       "title": "Granites in Bengaluru | Indian & Imported Granite | S K Stones India",
       "description": "Indian and imported granites from S K Stones India: hard-wearing slabs for flooring, countertops, exteriors and heavy-traffic areas across Bengaluru.",
@@ -81,12 +81,12 @@
       "cardDescription": "Hard wearing granite stones known for strength, weather resistance, and versatility, ideal for flooring, countertops, exteriors, and heavy traffic areas.",
       "cardImageUrl": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/YELLOW-FOSSIL-LEATHERED-1.jpg",
       "applications": ["Flooring", "Countertops & Kitchens", "Facades & Elevations"],
-      "sourceNote": "Products hub card: 'ideal for flooring, countertops, exteriors'"
+      "sourceNote": "Nav grouping only: the reference has no Granites overview page (its /granites is Indian Granites)."
     },
     {
-      "slug": "indian-granites",
+      "slug": "granites",
       "name": "Indian Granites",
-      "parent": "granites",
+      "parent": "granites-group",
       "kind": "collection",
       "legacySource": "granites",
       "title": "Indian Granites | Flooring & Countertop Slabs | S K Stones India",
@@ -98,12 +98,12 @@
       },
       "origin": "India",
       "applications": ["Flooring", "Countertops & Kitchens", "Facades & Elevations"],
-      "sourceNote": "Legacy meta: 'for flooring, countertops and commercial spaces'. Formerly the /granites page."
+      "sourceNote": "Reference URL /granites (Indian Granites); /indian-granites redirects here."
     },
     {
       "slug": "imported-granites",
       "name": "Imported Granites",
-      "parent": "granites",
+      "parent": "granites-group",
       "kind": "collection",
       "legacySource": "imported-granites",
       "title": "Imported Granites & Quartzites | S K Stones India",
@@ -318,7 +318,7 @@
       "sourceNote": "Legacy meta: 'for kitchens and interiors'"
     },
     {
-      "slug": "quartz-surfaces",
+      "slug": "quatrz-surfaces",
       "name": "Quartz Surfaces",
       "parent": "engineered-surfaces",
       "kind": "collection",
@@ -332,7 +332,7 @@
         "description": "Available in a wide range of colors, textures, and finishes, quartz slabs combine the timeless beauty of natural stone with superior strength and consistency. Their stain-resistant and hygienic properties make them a perfect choice for both residential and high-traffic environments."
       },
       "applications": ["Countertops & Kitchens"],
-      "sourceNote": "Engineered surfaces hub card. URL corrected from /quatrz-surfaces (301 redirect)."
+      "sourceNote": "Reference URL keeps the legacy spelling /quatrz-surfaces; /quartz-surfaces redirects here."
     },
     {
       "slug": "wall-claddings",
@@ -583,7 +583,7 @@
       "slug": "concrete-blocks",
       "name": "Concrete Blocks",
       "parent": null,
-      "kind": "enquiry",
+      "kind": "collection",
       "legacySource": "concrete-blocks",
       "title": "Concrete Block Systems | S K Stones India",
       "description": "High-strength concrete blocks for walls, partitions, boundaries and landscape use, offering uniformity and load-bearing capacity. Enquire with S K Stones India.",
@@ -613,6 +613,15 @@
       "redirectTo": "indian-marbles",
       "reason": "Unlinked legacy page with 0 products"
     },
-    { "slug": "quatrz-surfaces", "redirectTo": "quartz-surfaces", "reason": "Typo in legacy URL" }
+    {
+      "slug": "quartz-surfaces",
+      "redirectTo": "quatrz-surfaces",
+      "reason": "Pre-port URL; the reference uses /quatrz-surfaces"
+    },
+    {
+      "slug": "indian-granites",
+      "redirectTo": "granites",
+      "reason": "Pre-port URL; the reference serves Indian Granites at /granites"
+    }
   ]
 }

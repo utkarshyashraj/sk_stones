@@ -113,6 +113,16 @@ function deriveAttributes(name) {
 // ---------- image jobs ----------
 const jobs = new Map(); // key -> { key, kind, source, recoveredFrom }
 function addJob(key, url, kind) {
+  if (!/^https?:/.test(url)) {
+    // Served by the reference site itself; snapshotted into legacy/ by snapshot-reference.mjs.
+    const source = `legacy/${decodeURIComponent(url.replace(/^\//, '').replace(/[?#].*$/, ''))}`;
+    if (!fs.existsSync(path.join(ROOT, source))) {
+      fail(`reference image missing on disk: ${source}`);
+      return null;
+    }
+    jobs.set(key, { key, kind, source, url, recoveredFrom: null });
+    return key;
+  }
   const m = byUrl.get(url);
   if (!m || !m.file) {
     fail(`no downloaded file for ${url}`);
@@ -172,26 +182,26 @@ function pushProduct(cat, name, imageUrl, legacyName, legacyIndex, sourcePage) {
   });
 }
 
-const HUBS = new Set(categories.filter((c) => c.kind === 'hub').map((c) => c.slug));
-for (const cat of categories) {
-  if (cat.kind !== 'collection' || HUBS.has(cat.slug)) continue;
-  const fix = corrections.relabel[cat.slug];
-  let items;
-  let sourcePage = cat.legacySource;
-  if (cat.slug === 'pebbles') {
-    // Legacy /pebbles listed nothing; its 18 photos only existed on the Natural Stones hub (label "PEBBLES").
-    const hub = legacyPage('natural-stones');
-    items = hub.items.filter((i) => i.name.toUpperCase() === 'PEBBLES');
-    sourcePage = 'natural-stones';
-  } else {
-    const page = legacyPage(cat.legacySource);
-    if (!page) {
-      fail(`legacy page missing for ${cat.slug}`);
-      continue;
-    }
-    items = page.items;
+// Every reference page lists its own products, in reference order. A photo that appears on several
+// pages (a collection and its hub) is one product, owned by the first page that lists it (collections
+// are processed before hubs); hub-only photos become products of the hub.
+const PAGE_KINDS = new Set(['collection', 'hub']);
+const byImage = new Map(); // image url -> product id
+const pageProducts = {}; // category slug -> product ids in reference order
+const ordered = [
+  ...categories.filter((c) => c.kind === 'collection'),
+  ...categories.filter((c) => c.kind === 'hub'),
+];
+for (const cat of ordered) {
+  if (!cat.legacySource) continue;
+  const page = legacyPage(cat.legacySource);
+  if (!page) {
+    fail(`reference page missing for ${cat.slug}`);
+    continue;
   }
-  items.forEach((it, idx) => {
+  const fix = corrections.relabel[cat.slug];
+  const list = (pageProducts[cat.slug] = []);
+  page.items.forEach((it, idx) => {
     const file = decodeURIComponent(it.image.split('/').pop());
     if (fix?.notProducts) {
       const np = Object.keys(fix.notProducts).find((k) => file.includes(k));
@@ -200,16 +210,22 @@ for (const cat of categories) {
         return;
       }
     }
-    let name = it.name;
-    if (fix?.byImage) {
-      const k = Object.keys(fix.byImage).find((key) => file.includes(key));
-      if (!k) fail(`${cat.slug}: no correction mapping for image ${file}`);
-      else name = fix.byImage[k];
+    if (byImage.has(it.image)) {
+      if (!list.includes(byImage.get(it.image))) list.push(byImage.get(it.image));
+      return;
     }
-    pushProduct(cat, normaliseName(name), it.image, it.name, idx, sourcePage);
+    let name = it.name;
+    const k = fix?.byImage && Object.keys(fix.byImage).find((key) => file.includes(key));
+    if (k) name = fix.byImage[k]; // verified correction; otherwise the reference label stands
+    pushProduct(cat, normaliseName(name), it.image, it.name, idx, cat.legacySource);
+    const id = products.at(-1).id;
+    byImage.set(it.image, id);
+    list.push(id);
   });
-  for (const add of fix?.addWithoutImage ?? [])
-    pushProduct(cat, normaliseName(add.name), null, null, null, sourcePage);
+  for (const add of fix?.addWithoutImage ?? []) {
+    pushProduct(cat, normaliseName(add.name), null, null, null, cat.legacySource);
+    list.push(products.at(-1).id);
+  }
 }
 
 // ---------- category records for the app ----------
@@ -261,13 +277,24 @@ const outCategories = categories.map((c, order) => {
   delete rest.cardImageUrl;
   delete rest.sourceNote;
   const legacySource = c.legacySource;
+  const ids = pageProducts[c.slug] ?? [];
   return {
     ...rest,
     order,
     legacySource,
-    overview,
-    cardImage,
-    productCount: inScope.length,
+    hasPage: PAGE_KINDS.has(c.kind) && Boolean(page),
+    // Reference page copy, verbatim (title, meta, hero, grid heading).
+    refPage: page
+      ? {
+          title: page.title,
+          metaDescription: page.metaDescription,
+          hero: page.hero,
+          gridTitle: page.gridTitle,
+          countLabel: page.countLabel,
+        }
+      : null,
+    productIds: ids,
+    productCount: ids.length,
     children: categories.filter((k) => k.parent === c.slug).map((k) => k.slug),
   };
 });
@@ -289,18 +316,36 @@ for (const [key, src] of Object.entries(siteImages.images)) {
 }
 
 // ---------- checks ----------
-const leafImageUrls = new Set(
-  legacy.filter((p) => !HUBS.has(p.slug)).flatMap((p) => p.items.map((i) => i.image)),
+const pageImages = new Set(
+  categories
+    .filter((c) => PAGE_KINDS.has(c.kind) && c.legacySource)
+    .flatMap((c) => legacyPage(c.legacySource)?.items.map((i) => i.image) ?? []),
 );
-const hubOnly = legacy
-  .filter((p) => HUBS.has(p.slug))
-  .flatMap((p) => p.items.map((i) => i.image))
-  .filter((u) => !leafImageUrls.has(u));
-const unaccounted = [...new Set([...leafImageUrls, ...hubOnly])].filter(
+const unaccounted = [...pageImages].filter(
   (u) => !usedImageUrls.has(u) && !Object.values(notProductImages).includes(u),
 );
 if (unaccounted.length)
-  fail(`legacy product images not mapped to any product: ${unaccounted.length}\n${unaccounted.join('\n')}`);
+  fail(
+    `reference product images not mapped to any product: ${unaccounted.length}\n${unaccounted.join('\n')}`,
+  );
+
+// ---------- overview pages that list collection cards (Marbles hub, Products) ----------
+const cardPages = {};
+for (const page of legacy.filter((p) => p.categoryCards?.length)) {
+  cardPages[page.slug] = {
+    title: page.title,
+    metaDescription: page.metaDescription,
+    hero: page.hero,
+    gridTitle: page.gridTitle,
+    countLabel: page.countLabel,
+    cards: page.categoryCards.map((card, i) => ({
+      name: card.name,
+      description: card.description,
+      href: card.href,
+      image: addJob(`cards/${page.slug}-${i + 1}`, card.image, 'site'),
+    })),
+  };
+}
 
 const generated = {
   $comment: 'GENERATED by scripts/build-catalog.mjs — do not edit by hand.',
@@ -308,6 +353,7 @@ const generated = {
   retiredLegacyPages,
   categories: outCategories,
   products,
+  cardPages,
 };
 fs.mkdirSync(path.join(ROOT, 'content', 'generated'), { recursive: true });
 fs.writeFileSync(path.join(ROOT, 'content/generated/catalog.json'), JSON.stringify(generated, null, 1));
@@ -318,5 +364,5 @@ fs.writeFileSync(
 
 const withImg = products.filter((p) => p.image).length;
 console.log(
-  `categories=${outCategories.length} products=${products.length} (with image ${withImg}, without ${products.length - withImg}) image jobs=${jobs.size} legacy product images accounted=${leafImageUrls.size + hubOnly.length - unaccounted.length}/${leafImageUrls.size + hubOnly.length}`,
+  `categories=${outCategories.length} products=${products.length} (with image ${withImg}, without ${products.length - withImg}) image jobs=${jobs.size} reference product photos accounted=${pageImages.size - unaccounted.length}/${pageImages.size}`,
 );

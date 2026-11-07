@@ -20,12 +20,7 @@
       "notProducts": {
         "Picture29": "Lifestyle photo of a limestone-paved courtyard (not a single product). Used as the category card image."
       },
-      "addWithoutImage": [
-        {
-          "name": "Kadpa Black Leather",
-          "reason": "Label existed in legacy list (as 'Kadpa Black Leathere') but its photo was never uploaded; the slot showed the courtyard photo. Needs a product photo from the business."
-        }
-      ]
+      "removed": "Pre-port \"Kadpa Black Leather\" (a label with no photo) dropped: the reference Kota page does not list it."
     },
     "feature-wall": {
       "evidence": "Labels for the first four slots were rotated one position. Filenames PATALS-PATTERN, LEAF-PATTERN-WALL-ART and FLAWOR-EMBOSSED-WALL each carried the next slot's label; visual review shows Picture23 is the wave-relief wall and Picture18 is a feather/leaf panel installation with no specific legacy label.",
@@ -38,13 +33,46 @@
         "Picture17": "Feature Wall",
         "Picture19": "Feature Wall"
       }
+    },
+    "cobble-stones": {
+      "evidence": "The reference renamed these to \"Cobble Stone 01–17\"; the same 17 photos (identical filenames) carried these descriptive names on the previous approved version of the site. Kept per the 2026-11-07 decision (reference list, keep earlier names/fixes).",
+      "byImage": {
+        "IMG20251213142559": "Charcoal Grey Cobble",
+        "IMG20251213142554": "Jet Black Cobble",
+        "IMG20251213142549": "Silver Grey Granite Cobble",
+        "IMG20251213142540": "White Granite Cobble",
+        "IMG20251213142534": "Dark Grey Tumbled Cobble",
+        "IMG20251213142528": "Black Basalt Cobble",
+        "IMG20251213142450": "Mixed Grey Cobble",
+        "IMG20251213142444": "Speckled Granite Cobble",
+        "IMG20251213142437": "Light Grey Cobble",
+        "IMG20251213142423": "Graphite Black Cobble",
+        "IMG20251213142414": "Granite Mix Cobble",
+        "IMG20251213142225": "Smoke Grey Cobble",
+        "IMG20251213142212": "Onyx Black Cobble",
+        "IMG_20260106_192457": "River Grey Cobble",
+        "IMG_20260106_192413": "Classic Black Cobble",
+        "IMG_20260106_192340": "Natural Grey Cobble",
+        "IMG_20260106_192253": "Antique Grey Cobble"
+      }
     }
   },
   "nameFixes": {
     "$comment": "Case-insensitive whole-word regex -> replacement on product names; unambiguous typos only. (Repeated whitespace is collapsed separately.)",
     "\\bLeathere\\b": "Leather",
     "\\bFlawor\\b": "Flower",
-    "\\bSiver\\b": "Silver"
+    "\\bSiver\\b": "Silver",
+    "\bKatani\b": "Katni",
+    "\bArtic\b": "Arctic",
+    "\bElizabath\b": "Elizabeth",
+    "\bGriege\b": "Greige",
+    "\bSuprme\b": "Supreme",
+    "\bLaybrinth\b": "Labyrinth",
+    "\bBaige\b": "Beige",
+    "\bSatvario\b": "Statuario",
+    "\bBiano\b": "Bianco",
+    "\bTerrezo\b": "Terrazzo",
+    "\bGliter\b": "Glitter"
   },
   "imageRecovered": {
     "$comment": "Legacy URLs that returned HTTP 404 on the staging host; the unedited WordPress original was recovered (see content/raw/image-manifest.json 'recoveredFrom').",
@@ -110,5 +138,6 @@
       "items": [],
       "issue": "18 pebble photos existed only on the Natural Stones hub, all labelled 'PEBBLES'. Individual variety names are unknown."
     }
-  ]
+  ],
+  "$relabelFallback": "Images with no byImage entry keep the reference page label (the reference is the approved source)."
 }

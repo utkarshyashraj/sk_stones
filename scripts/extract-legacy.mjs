@@ -29,7 +29,8 @@ for (const file of fs
   .filter((f) => f.endsWith('.html'))
   .sort()) {
   const html = fs.readFileSync(path.join(LEGACY, file), 'utf8');
-  if (!html.includes('class="product-grid"')) continue;
+  // Product pages (a product grid) and overview pages that list collection cards (Marbles, Products).
+  if (!html.includes('class="product-grid"') && !html.includes('class="category-card"')) continue;
   const slug = file.replace(/\.html$/, '');
   const hero = (html.match(/<section class="page-hero[\s\S]*?<\/section>/) || [''])[0];
   const overview = (html.match(/<section class="product-overview-section">[\s\S]*?<\/section>/) || [''])[0];
@@ -39,6 +40,11 @@ for (const file of fs
     ),
   ].map((m) => ({ image: m[1], alt: decode(m[2]), name: decode(m[3]).trim() }));
   const itemCount = (html.match(/class="product-item"/g) || []).length;
+  const categoryCards = [
+    ...html.matchAll(
+      /<div class="category-card">[\s\S]*?<img src="([^"]+)" alt="([^"]*)"[\s\S]*?<h3>([\s\S]*?)<\/h3>\s*(?:<p>([\s\S]*?)<\/p>)?[\s\S]*?class='category-link' href='([^']+)'/g,
+    ),
+  ].map((m) => ({ image: m[1], name: text(m[3]), description: text(m[4] || ''), href: m[5] }));
   pages.push({
     slug,
     title: decode(pick(/<title>([^<]*)<\/title>/, html) || ''),
@@ -59,6 +65,7 @@ for (const file of fs
     countLabel: text(pick(/<p class="product-count">([\s\S]*?)<\/p>/, html) || ''),
     itemCount,
     items,
+    categoryCards,
   });
 }
 
