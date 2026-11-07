@@ -37,6 +37,26 @@
    "slug": "indian-granites",
    "redirectTo": "granites",
    "reason": "Pre-port URL; the reference serves Indian Granites at /granites"
+  },
+  {
+   "slug": "case-study-airport",
+   "redirectTo": "projects",
+   "reason": "Retired 2026-11 (reference port): the approved site has no case-study pages; its projects live on /projects"
+  },
+  {
+   "slug": "case-study-luxury-villa",
+   "redirectTo": "projects",
+   "reason": "Retired 2026-11 (reference port): the approved site has no case-study pages; its projects live on /projects"
+  },
+  {
+   "slug": "case-study-ritz-carlton",
+   "redirectTo": "projects",
+   "reason": "Retired 2026-11 (reference port): the approved site has no case-study pages; its projects live on /projects"
+  },
+  {
+   "slug": "search",
+   "redirectTo": "products",
+   "reason": "Retired 2026-11 (reference port): the approved site has no search page; /products lists every collection"
   }
  ],
  "categories": [
@@ -60,12 +80,15 @@
    ],
    "order": 0,
    "legacySource": "marbles",
+   "overview": null,
+   "cardImage": "categories/marbles",
    "hasPage": true,
    "refPage": {
     "title": "Marbles | S K Stones India",
     "metaDescription": "Explore our marbles collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Premium Marbles Collection",
      "h1Html": "Premium <span class=\"highlight\">Marbles</span> Collection",
      "description": "Choose Indian or Imported marbles — each collection is curated for veining, finish quality, and architectural character across premium residential and commercial spaces."
@@ -100,12 +123,23 @@
    ],
    "order": 1,
    "legacySource": "indian-marbles",
+   "overview": {
+    "paragraphs": [
+     "Our experienced stone specialists deliver precisely processed Indian leather finish marble surfaces that enhance natural grain depth, tactile softness, and visual character. Each slab is carefully selected, finished, and supplied under strict quality control standards.",
+     "Our marble processing approach follows defined finishing techniques, surface consistency control measures, and visual uniformity standards. Every batch undergoes structured inspection, material evaluation, and finish verification to ensure reliable, long-lasting interior performance."
+    ],
+    "bullets": [],
+    "image": "categories/indian-marbles-overview",
+    "html": "<p>Our experienced stone specialists deliver precisely processed Indian leather finish marble surfaces that enhance natural grain depth, tactile softness, and visual character. Each slab is carefully selected, finished, and supplied under strict quality control standards.</p><p> </p><p>Our marble processing approach follows defined finishing techniques, surface consistency control measures, and visual uniformity standards. Every batch undergoes structured inspection, material evaluation, and finish verification to ensure reliable, long-lasting interior performance.</p>"
+   },
+   "cardImage": "categories/indian-marbles-overview",
    "hasPage": true,
    "refPage": {
     "title": "Indian Marbles | S K Stones India",
     "metaDescription": "Premium Indian marble collection with leather finish, polished and classic varieties.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Exquisite Indian Marble",
      "h1Html": "<span class=\"highlight\">Exquisite</span> Indian <span class=\"highlight\">Marble</span>",
      "description": "Indian leather finish marble is processed to create a soft, textured surface that enhances natural patterns, reduces glare, and provides a refined tactile feel — making it ideal for premium residential and commercial applications."
@@ -122,7 +156,7 @@
     "indian-marbles-rainforest-green-leather-finish",
     "indian-marbles-rainforest-gold",
     "indian-marbles-pista-green",
-    "indian-marbles-katani",
+    "indian-marbles-katni",
     "indian-marbles-jaisalmer-yellow",
     "indian-marbles-ita-gold",
     "indian-marbles-indo-italian",
@@ -153,12 +187,23 @@
    ],
    "order": 2,
    "legacySource": "imported-marbles",
+   "overview": {
+    "paragraphs": [
+     "Our expert stone specialists source imported marble slabs selected for color consistency, vein harmony, surface clarity, and overall aesthetic balance. Each slab is curated, processed, and supplied under defined quality parameters.",
+     "Our handling process follows structured sourcing, surface refinement, and finish consistency benchmarks. Every batch undergoes controlled inspection and verification to ensure dependable quality and long-lasting visual performance across interior environments."
+    ],
+    "bullets": [],
+    "image": "categories/imported-marbles-overview",
+    "html": "<p>Our expert stone specialists source imported marble slabs selected for color consistency, vein harmony, surface clarity, and overall aesthetic balance. Each slab is curated, processed, and supplied under defined quality parameters.</p><p>Our handling process follows structured sourcing, surface refinement, and finish consistency benchmarks. Every batch undergoes controlled inspection and verification to ensure dependable quality and long-lasting visual performance across interior environments.</p>"
+   },
+   "cardImage": "categories/imported-marbles-overview",
    "hasPage": true,
    "refPage": {
     "title": "Imported Marbles | S K Stones India",
     "metaDescription": "Luxury imported marbles with golden shades, travertine, onyx and polished finishes.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "World-Class Marble Collection",
      "h1Html": "World-Class <span class=\"highlight\">Marble</span> Collection",
      "description": "Imported marble features warm tones, refined veining, and rich color depth — delivering a luxurious visual presence suited for premium interiors, statement flooring, and elegant architectural applications."
@@ -176,7 +221,7 @@
     "imported-marbles-silver-portro",
     "imported-marbles-silver-martini",
     "imported-marbles-sicilia-perlato",
-    "imported-marbles-satvario",
+    "imported-marbles-statuario",
     "imported-marbles-rosalio",
     "imported-marbles-rosalia-marble",
     "imported-marbles-roman-sylvia",
@@ -230,6 +275,8 @@
    ],
    "order": 3,
    "legacySource": null,
+   "overview": null,
+   "cardImage": "categories/granites-group",
    "hasPage": false,
    "refPage": null,
    "productIds": [],
@@ -259,12 +306,23 @@
    ],
    "order": 4,
    "legacySource": "granites",
+   "overview": {
+    "paragraphs": [
+     "Our experienced stone specialists source granite slabs selected for density, grain structure, color stability, and Thickness consistency. Each slab is carefully curated, evaluated, and supplied under controlled material quality parameters.",
+     "Our granite handling process follows structured selection methods, surface calibration standards, and consistency benchmarks. Every batch undergoes detailed inspection and verification to ensure dependable performance across residential, commercial, and architectural applications."
+    ],
+    "bullets": [],
+    "image": "categories/granites-overview",
+    "html": "<p>Our experienced stone specialists source granite slabs selected for density, grain structure, color stability, and Thickness consistency. Each slab is carefully curated, evaluated, and supplied under controlled material quality parameters.</p><p>Our granite handling process follows structured selection methods, surface calibration standards, and consistency benchmarks. Every batch undergoes detailed inspection and verification to ensure dependable performance across residential, commercial, and architectural applications.</p>"
+   },
+   "cardImage": "categories/granites-overview",
    "hasPage": true,
    "refPage": {
     "title": "Granites | S K Stones India",
     "metaDescription": "Hard wearing Indian granite stones for flooring, countertops and commercial spaces.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Exquisite Indian Granites",
      "h1Html": "Exquisite <span class=\"highlight\">Indian</span> Granites",
      "description": "Our experienced stone specialists source granite slabs selected for density, grain structure, color stability, and Thickness consistency. Each slab is carefully curated, evaluated, and supplied under controlled material quality parameters."
@@ -344,12 +402,23 @@
    ],
    "order": 5,
    "legacySource": "imported-granites",
+   "overview": {
+    "paragraphs": [
+     "Our experienced stone specialists source imported granite slabs selected for density, grain structure, color stability, and surface integrity. Each slab is carefully curated, evaluated, and supplied under controlled material quality parameters.",
+     "Our granite handling process follows structured selection methods, surface calibration standards, and consistency benchmarks. Every batch undergoes detailed inspection and verification to ensure dependable performance across residential, commercial, and architectural applications."
+    ],
+    "bullets": [],
+    "image": "categories/imported-granites-overview",
+    "html": "<p>Our experienced stone specialists source imported granite slabs selected for density, grain structure, color stability, and surface integrity. Each slab is carefully curated, evaluated, and supplied under controlled material quality parameters.</p><p>Our granite handling process follows structured selection methods, surface calibration standards, and consistency benchmarks. Every batch undergoes detailed inspection and verification to ensure dependable performance across residential, commercial, and architectural applications.</p>"
+   },
+   "cardImage": "categories/imported-granites-overview",
    "hasPage": true,
    "refPage": {
     "title": "Imported Granites | S K Stones India",
     "metaDescription": "Imported granite and quartzite varieties for premium projects.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "World-Class Granites Collection",
      "h1Html": "World-Class <span class=\"highlight\">Granites</span> Collection",
      "description": "Imported granites are processed to deliver high structural strength, dense composition, and consistent surface performance — making them ideal for heavy-use interiors that demand durability and long-term functional reliability."
@@ -391,12 +460,15 @@
    ],
    "order": 6,
    "legacySource": "stone-art",
+   "overview": null,
+   "cardImage": "categories/stone-art",
    "hasPage": true,
    "refPage": {
     "title": "Stone Art | S K Stones India",
     "metaDescription": "Explore our stone art collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Custom Stone Art",
      "h1Html": "<span class=\"highlight\">Custom Stone Art</span>",
      "description": "Stone art pieces are crafted to create visual focal points using natural stone forms textures and detailing that add character depth and artistic expression to interior and exterior architectural spaces."
@@ -434,12 +506,23 @@
    ],
    "order": 7,
    "legacySource": "cnc-stone-work",
+   "overview": {
+    "paragraphs": [
+     "Our skilled stone artisans curate stone art elements based on design intent, material suitability, scale proportion, and surface characteristics. Each piece is Hand Crafted, prepared, and supplied under precise workmanship.",
+     "Our stone art preparation process focuses on form accuracy, surface detailing precision, and material compatibility — ensuring artistic clarity."
+    ],
+    "bullets": [],
+    "image": "categories/cnc-stone-work-overview",
+    "html": "<p>Our skilled stone artisans curate stone art elements based on design intent, material suitability, scale proportion, and surface characteristics. Each piece is Hand Crafted, prepared, and supplied under precise workmanship.</p><p>Our stone art preparation process focuses on form accuracy, surface detailing precision, and material compatibility — ensuring artistic clarity.</p>"
+   },
+   "cardImage": "categories/cnc-stone-work-overview",
    "hasPage": true,
    "refPage": {
     "title": "Cnc Stone Work | S K Stones India",
     "metaDescription": "Explore our cnc stone work collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Defining Stone Art",
      "h1Html": "Defining <span class=\"highlight\"> Stone</span> Art",
      "description": "Stone art pieces are crafted to create visual focal points using natural stone forms, textures, and detailing that add character, depth, and artistic expression to interior and exterior architectural spaces."
@@ -475,12 +558,23 @@
    ],
    "order": 8,
    "legacySource": "mop-inlay-work",
+   "overview": {
+    "paragraphs": [
+     "Our skilled artisans curate MoP inlay elements based on design intent, material suitability, scale proportion, and surface compatibility. Each piece is carefully planned, prepared, and executed under controlled craftsmanship standards.",
+     "Our preparation process focuses on form precision, shell cutting accuracy, surface detailing, structural bonding, and material compatibility — ensuring artistic clarity and reliable long-term performance across varied applications."
+    ],
+    "bullets": [],
+    "image": "categories/mop-inlay-work-overview",
+    "html": "<p>Our skilled artisans curate MoP inlay elements based on design intent, material suitability, scale proportion, and surface compatibility. Each piece is carefully planned, prepared, and executed under controlled craftsmanship standards.</p><p>Our preparation process focuses on form precision, shell cutting accuracy, surface detailing, structural bonding, and material compatibility — ensuring artistic clarity and reliable long-term performance across varied applications.</p>"
+   },
+   "cardImage": "categories/mop-inlay-work-overview",
    "hasPage": true,
    "refPage": {
     "title": "Mop Inlay Work | S K Stones India",
     "metaDescription": "Explore our mop inlay work collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Elegant M o P Inlay",
      "h1Html": "Elegant <span class=\"highlight\">M<span>o</span>P</span> Inlay",
      "description": "Crafted with exquisite Mother-of-Pearl inlay, each piece reflects timeless artistry.The natural iridescence of the shell creates a luminous play of light and color.Meticulously embedded by skilled craftsmen for a refined, lasting finish.A statement of elegance that elevates the beauty of the product."
@@ -514,12 +608,29 @@
    ],
    "order": 9,
    "legacySource": "murals-monuments",
+   "overview": {
+    "paragraphs": [
+     "Our skilled stone artisans curate mural and monument creations based on design intent, material suitability, scale, proportion, and surface characteristics. Each piece is carefully conceptualized and crafted under controlled craftsmanship standards.",
+     "The preparation process focuses on:",
+     "Ensuring artistic clarity and long-term material stability across architectural environments."
+    ],
+    "bullets": [
+     "Form accuracy",
+     "Surface detailing precision",
+     "Structural balance",
+     "Material compatibility"
+    ],
+    "image": "categories/murals-monuments-overview",
+    "html": "<p>Our skilled stone artisans curate mural and monument creations based on design intent, material suitability, scale, proportion, and surface characteristics. Each piece is carefully conceptualized and crafted under controlled craftsmanship standards.</p><p>The preparation process focuses on:</p><ul><li>Form accuracy </li><li>Surface detailing precision </li><li>Structural balance </li><li>Material compatibility </li></ul><p>Ensuring artistic clarity and long-term material stability across architectural environments.</p>"
+   },
+   "cardImage": "categories/murals-monuments-overview",
    "hasPage": true,
    "refPage": {
     "title": "Murals Monuments | S K Stones India",
     "metaDescription": "Explore our murals monuments collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Murals & Monuments",
      "h1Html": "Murals <span class=\"highlight\"> &amp; Monuments </span>",
      "description": "Stone murals and monuments are crafted to create visual masterpieces using natural stone and intricate detailing that add character."
@@ -554,12 +665,25 @@
    ],
    "order": 10,
    "legacySource": "feature-wall",
+   "overview": {
+    "paragraphs": [],
+    "bullets": [
+     "Form accuracy",
+     "Surface detailing precision",
+     "Visual balance",
+     "Material compatibility"
+    ],
+    "image": "categories/feature-wall-overview",
+    "html": "Our skilled stone artisans curate feature wall designs based on design intent, material suitability, scale, proportion, and surface characteristics. Each piece is thoughtfully conceptualized and crafted under controlled craftsmanship standards.\n\nThe preparation process focuses on:\n<ul>\n \t<li>Form accuracy\n</li>\n \t<li>Surface detailing precision\n</li>\n \t<li>Visual balance\n</li>\n \t<li>Material compatibility</li>\n \tEnsuring artistic clarity and long-term material integrity across residential, commercial, and hospitality environments.\n</ul>"
+   },
+   "cardImage": "categories/feature-wall-overview",
    "hasPage": true,
    "refPage": {
     "title": "Feature Wall | S K Stones India",
     "metaDescription": "Explore our feature wall collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Feature Walls",
      "h1Html": "Feature <span class=\"highlight\">Walls</span>",
      "description": "Feature walls are crafted to create striking visuals using natural stone forms, textures, and refined detailing. These artistic compositions add character, depth, and architectural expression to interior and exterior spaces."
@@ -598,12 +722,15 @@
    ],
    "order": 11,
    "legacySource": "natural-stones",
+   "overview": null,
+   "cardImage": "categories/natural-stones",
    "hasPage": true,
    "refPage": {
     "title": "Natural Stones | S K Stones India",
     "metaDescription": "Explore our natural stones collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Authentic Natural Stones",
      "h1Html": "Authentic <span class=\"highlight\">Natural</span> Stones",
      "description": "Natural stones retain their original geological character offering unique textures colour variations and organic surface patterns that bring depth warmth and timeless appeal to architectural and interior spaces."
@@ -645,12 +772,29 @@
    ],
    "order": 12,
    "legacySource": "cobble-stones",
+   "overview": {
+    "paragraphs": [
+     "Our experienced stone specialists source cobble stones based on hardness, size consistency, surface texture, and weather resistance — ensuring suitability for demanding outdoor environments and long-term exposure.",
+     "Our handling process emphasizes:",
+     "Ensuring cobble stones retain their natural integrity and perform reliably across varied landscape and architectural applications."
+    ],
+    "bullets": [
+     "Size grading accuracy",
+     "Surface stability",
+     "Controlled sorting",
+     "Careful logistics"
+    ],
+    "image": "categories/cobble-stones-overview",
+    "html": "<p>Our experienced stone specialists source cobble stones based on hardness, size consistency, surface texture, and weather resistance — ensuring suitability for demanding outdoor environments and long-term exposure.</p><p>Our handling process emphasizes:</p><ul><li>Size grading accuracy </li><li>Surface stability </li><li>Controlled sorting </li><li>Careful logistics </li></ul><p>Ensuring cobble stones retain their natural integrity and perform reliably across varied landscape and architectural applications.</p>"
+   },
+   "cardImage": "categories/cobble-stones",
    "hasPage": true,
    "refPage": {
     "title": "Cobble Stones | S K Stones India",
     "metaDescription": "Explore our cobble stones collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Authentic Natural Cobble Stones",
      "h1Html": "Authentic <span class=\"highlight\">Natural</span> Cobble Stones",
      "description": "Cobble stones offer rugged texture, natural strength, and timeless visual appeal — making them ideal for pathways, driveways, landscapes, courtyards, and outdoor architectural surfaces that require strength , durability and character."
@@ -698,12 +842,30 @@
    ],
    "order": 13,
    "legacySource": "kota-stones",
+   "overview": {
+    "paragraphs": [
+     "Our experienced stone specialists source Lime Stones based on density, structural strength, surface finish quality, and weather resistance — ensuring suitability for high-performance flooring and long-term outdoor exposure.",
+     "Our handling process emphasizes:",
+     "Ensuring Lime Stones retains its natural integrity and performs consistently across varied architectural applications."
+    ],
+    "bullets": [
+     "Accurate size grading",
+     "Surface consistency control",
+     "Shade grouping",
+     "Structured sorting",
+     "Reliable logistics management"
+    ],
+    "image": "categories/kota-stones-overview",
+    "html": "<p>Our experienced stone specialists source Lime Stones based on density, structural strength, surface finish quality, and weather resistance — ensuring suitability for high-performance flooring and long-term outdoor exposure.</p><p>Our handling process emphasizes:</p><ul><li>Accurate size grading </li><li>Surface consistency control </li><li>Shade grouping </li><li>Structured sorting </li><li>Reliable logistics management </li></ul><p>Ensuring Lime Stones retains its natural integrity and performs consistently across varied architectural applications.</p>"
+   },
+   "cardImage": "categories/kota-stones-overview",
    "hasPage": true,
    "refPage": {
     "title": "Kota Stones | S K Stones India",
     "metaDescription": "Explore our kota stones collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Authentic Natural Limestone",
      "h1Html": "Authentic <span class=\"highlight\">Natural</span> Limestone",
      "description": "Lime stones offers variety of finishes & different colours with natural elegance making them ideal for various spaces such as pathways, courtyards, restaurants & other architectural spaces that require earthy feel and timeless beauty"
@@ -743,12 +905,30 @@
    ],
    "order": 14,
    "legacySource": "pebbles",
+   "overview": {
+    "paragraphs": [
+     "Our experienced stone specialists source pebbles based on hardness, size consistency, surface smoothness, and weather resistance — ensuring suitability for landscaping, drainage solutions, decorative surfaces, and long-term outdoor performance.",
+     "Our handling process emphasizes:",
+     "Ensuring pebbles retain their natural integrity and maintain performance across diverse landscape and architectural applications."
+    ],
+    "bullets": [
+     "Precise size grading",
+     "Surface smoothness consistency",
+     "Controlled sorting",
+     "Shade grouping",
+     "Reliable logistics management"
+    ],
+    "image": "categories/pebbles-overview",
+    "html": "<p>Our experienced stone specialists source pebbles based on hardness, size consistency, surface smoothness, and weather resistance — ensuring suitability for landscaping, drainage solutions, decorative surfaces, and long-term outdoor performance.</p><p>Our handling process emphasizes:</p><ul><li>Precise size grading </li><li>Surface smoothness consistency </li><li>Controlled sorting </li><li>Shade grouping </li><li>Reliable logistics management </li></ul><p>Ensuring pebbles retain their natural integrity and maintain performance across diverse landscape and architectural applications.</p>"
+   },
+   "cardImage": "categories/pebbles-overview",
    "hasPage": true,
    "refPage": {
     "title": "Pebbles | S K Stones India",
     "metaDescription": "Explore our pebbles collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Authentic Earth Pebbles",
      "h1Html": "Authentic <span class=\"highlight\">Earth</span> Pebbles",
      "description": "Pebbles offer a naturally smooth texture, excellent durability, and organic visual appeal — making them ideal for landscaping, garden pathways, decorative surfaces, water features, and outdoor spaces that require both strength and aesthetic charm."
@@ -798,12 +978,29 @@
    ],
    "order": 15,
    "legacySource": "sand-stones",
+   "overview": {
+    "paragraphs": [
+     "Our experienced stone specialists source sandstones based on density, grain consistency, surface texture — ensuring suitability for cladding, paving, landscaping, and long-term outdoor performance.",
+     "Our handling process emphasizes:",
+     "Ensuring sandstones maintain their natural integrity while delivering dependable durability across architectural and landscape applications."
+    ],
+    "bullets": [
+     "Accurate size grading",
+     "Surface stability control",
+     "Controlled sorting",
+     "Structured logistics management"
+    ],
+    "image": "categories/sand-stones-overview",
+    "html": "<p>Our experienced stone specialists source sandstones based on density, grain consistency, surface texture — ensuring suitability for cladding, paving, landscaping, and long-term outdoor performance.</p><p>Our handling process emphasizes:</p><ul><li>Accurate size grading</li><li>Surface stability control</li><li>Controlled sorting</li><li>Structured logistics management</li></ul><p>Ensuring sandstones maintain their natural integrity while delivering dependable durability across architectural and landscape applications. </p>"
+   },
+   "cardImage": "categories/sand-stones-overview",
    "hasPage": true,
    "refPage": {
     "title": "Sand Stones | S K Stones India",
     "metaDescription": "Explore our sand stones collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Indian Sandstones Timeless Beauty",
      "h1Html": "Indian <span class=\"highlight\">Sandstones</span> Timeless Beauty",
      "description": "Sandstone combines natural texture, durability, and warm earthy tones, making it a versatile choice for wall cladding, paving, flooring, landscaping, and architectural applications where both strength and timeless aesthetics are essential."
@@ -845,12 +1042,15 @@
    ],
    "order": 16,
    "legacySource": "engineered-surfaces",
+   "overview": null,
+   "cardImage": "catalog/acrylic-surfaces-roosevelt-gray",
    "hasPage": true,
    "refPage": {
     "title": "Engineered Surfaces | S K Stones India",
     "metaDescription": "Explore our engineered surfaces collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Precision Engineered Surfaces",
      "h1Html": "Precision <span class=\"highlight\">Engineered</span> Surfaces",
      "description": "Engineered surfaces are manufactured to deliver uniform appearance controlled performance and consistent quality combining natural aggregates with advanced processing for modern architectural and interior applications."
@@ -888,12 +1088,30 @@
    ],
    "order": 17,
    "legacySource": "acrylic-surfaces",
+   "overview": {
+    "paragraphs": [
+     "Our specialized material experts curate acrylic surfaces based on composition integrity, structural strength, color consistency, finish quality, and suitability for both functional and aesthetic requirements across residential, commercial, and high-usage spaces.",
+     "The preparation process emphasizes:",
+     "Ensuring reliable quality and refined visual appeal across diverse architectural environments."
+    ],
+    "bullets": [
+     "Dimensional accuracy",
+     "Surface uniformity",
+     "Structural stability",
+     "Finish consistency",
+     "Predictable performance standards"
+    ],
+    "image": "categories/acrylic-surfaces-overview",
+    "html": "<p>Our specialized material experts curate acrylic surfaces based on composition integrity, structural strength, color consistency, finish quality, and suitability for both functional and aesthetic requirements across residential, commercial, and high-usage spaces.</p><p>The preparation process emphasizes:</p><ul><li>Dimensional accuracy </li><li>Surface uniformity </li><li>Structural stability </li><li>Finish consistency </li><li>Predictable performance standards </li></ul><p>Ensuring reliable quality and refined visual appeal across diverse architectural environments.</p>"
+   },
+   "cardImage": "categories/acrylic-surfaces-overview",
    "hasPage": true,
    "refPage": {
     "title": "Acrylic Surfaces | S K Stones India",
     "metaDescription": "Modern acrylic engineered surfaces for kitchens and interiors.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Precision Acrylic Surfaces",
      "h1Html": "Precision <span class=\"highlight\">Acrylic</span> Surfaces",
      "description": "Acrylic surfaces are manufactured to deliver a uniform appearance, controlled performance, and consistent quality — combining high-grade resins with advanced processing technologies for modern architectural and interior applications."
@@ -942,12 +1160,30 @@
    ],
    "order": 18,
    "legacySource": "quatrz-surfaces",
+   "overview": {
+    "paragraphs": [
+     "Our specialized material experts curate quartz surfaces based on durability, engineered composition quality, surface consistency, stain resistance, finish precision, and suitability for both functional and aesthetic applications across residential, commercial, and high-traffic environments.",
+     "The preparation process emphasizes:",
+     "Ensuring reliable quality and refined visual appeal across diverse architectural environments."
+    ],
+    "bullets": [
+     "Dimensional accuracy",
+     "Surface uniformity",
+     "Structural stability",
+     "Finish consistency",
+     "Predictable performance standards"
+    ],
+    "image": "categories/quatrz-surfaces-overview",
+    "html": "<p>Our specialized material experts curate quartz surfaces based on durability, engineered composition quality, surface consistency, stain resistance, finish precision, and suitability for both functional and aesthetic applications across residential, commercial, and high-traffic environments.</p><p>The preparation process emphasizes:</p><ul><li>Dimensional accuracy </li><li>Surface uniformity </li><li>Structural stability </li><li>Finish consistency </li><li>Predictable performance standards </li></ul><p>Ensuring reliable quality and refined visual appeal across diverse architectural environments.</p>"
+   },
+   "cardImage": "categories/quatrz-surfaces-overview",
    "hasPage": true,
    "refPage": {
     "title": "Quatrz Surfaces | S K Stones India",
     "metaDescription": "Quartz engineered surfaces — durable and low maintenance.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "LUXURY QUARTZ COLLECTION",
      "h1Html": "LUXURY <span class=\"highlight\">QUARTZ</span> COLLECTION",
      "description": "Available in a wide range of colors, textures, and finishes, quartz slabs combine the timeless beauty of natural stone with superior strength and consistency. Their stain-resistant and hygienic properties make them a perfect choice for both residential and high-traffic environments."
@@ -1001,7 +1237,7 @@
     "quatrz-surfaces-beige-diamante",
     "quatrz-surfaces-bianco-carrara",
     "quatrz-surfaces-ash-grey",
-    "quatrz-surfaces-artic-white",
+    "quatrz-surfaces-arctic-white",
     "quatrz-surfaces-anthracite",
     "quatrz-surfaces-alluring"
    ],
@@ -1027,12 +1263,30 @@
    ],
    "order": 19,
    "legacySource": "wall-claddings",
+   "overview": {
+    "paragraphs": [
+     "Our experienced stone specialists curate wall cladding materials based on application height, exposure conditions, material weight, surface texture, and design intent — ensuring suitability for both interior and exterior architectural surfaces as per requirement.",
+     "The preparation process emphasizes:",
+     "Ensuring clean finishes, structural suitability, and long-term material stability."
+    ],
+    "bullets": [
+     "Dimensional calibration",
+     "Surface consistency",
+     "Finish uniformity",
+     "Panel alignment planning",
+     "Material compatibility"
+    ],
+    "image": "categories/wall-claddings-overview",
+    "html": "<p>Our experienced stone specialists curate wall cladding materials based on application height, exposure conditions, material weight, surface texture, and design intent — ensuring suitability for both interior and exterior architectural surfaces as per requirement.</p><p>The preparation process emphasizes:</p><ul><li>Dimensional calibration </li><li>Surface consistency </li><li>Finish uniformity </li><li>Panel alignment planning </li><li>Material compatibility</li></ul><p>Ensuring clean finishes, structural suitability, and long-term material stability.</p>"
+   },
+   "cardImage": "categories/wall-claddings",
    "hasPage": true,
    "refPage": {
     "title": "Wall Claddings | S K Stones India",
     "metaDescription": "Stone cladding solutions for interior and exterior walls.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Stone Cladding Collection",
      "h1Html": "Stone <span class=\"highlight\">Cladding</span> Collection",
      "description": "Wall claddings enhance vertical surfaces by adding texture, depth, and material character while offering refined visual definition across residential, commercial, and architectural environments."
@@ -1108,12 +1362,15 @@
    ],
    "order": 20,
    "legacySource": "tiles",
+   "overview": null,
+   "cardImage": "categories/tiles",
    "hasPage": true,
    "refPage": {
     "title": "Tiles | S K Stones India",
     "metaDescription": "Vitrified and stone tile collections for flooring and walls.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Premium Tiles Collection",
      "h1Html": "Premium <span class=\"highlight\">Tiles</span> Collection",
      "description": "Tiles offer versatile surface solutions combining durability design flexibility and easy maintenance making them suitable for floors walls and functional spaces across residential commercial and high traffic environments."
@@ -1240,12 +1497,30 @@
    ],
    "order": 21,
    "legacySource": "brillo-collection",
+   "overview": {
+    "paragraphs": [
+     "The Brillo Collection is curated to deliver balanced aesthetics and dependable surface performance. Each tile is evaluated for finish precision, dimensional consistency, structural strength, and design versatility — ensuring suitability across varied architectural applications.",
+     "Material preparation emphasizes:",
+     "Ensuring refined appearance and long-term reliability."
+    ],
+    "bullets": [
+     "Tile grading accuracy",
+     "Dimensional calibration",
+     "Surface finish inspection",
+     "Shade consistency",
+     "Controlled handling standards"
+    ],
+    "image": "categories/brillo-collection-overview",
+    "html": "<p>The Brillo Collection is curated to deliver balanced aesthetics and dependable surface performance. Each tile is evaluated for finish precision, dimensional consistency, structural strength, and design versatility — ensuring suitability across varied architectural applications.</p><p>Material preparation emphasizes:</p><ul><li>Tile grading accuracy</li><li>Dimensional calibration</li><li>Surface finish inspection</li><li>Shade consistency </li><li>Controlled handling standards</li></ul><p>Ensuring refined appearance and long-term reliability.</p>"
+   },
+   "cardImage": "categories/brillo-collection-overview",
    "hasPage": true,
    "refPage": {
     "title": "Brillo Collection | S K Stones India",
     "metaDescription": "Explore our brillo collection collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Brillo Collection",
      "h1Html": "Brillo <span class=\"highlight\">Collection</span>",
      "description": "The Brillo Collection offers refined surface solutions that combine durability, contemporary design expression, and low maintenance performance — making it ideal for floors, walls, and high-usage interior environments across residential and commercial spaces."
@@ -1285,12 +1560,30 @@
    ],
    "order": 22,
    "legacySource": "elezzo-collection",
+   "overview": {
+    "paragraphs": [
+     "The Elezzo Collection is curated to deliver balanced design expression and dependable surface performance. Each tile is evaluated for finish precision, dimensional consistency, structural strength, and visual appeal — ensuring versatility across varied architectural applications.",
+     "Material preparation emphasizes:",
+     "Ensuring refined presentation and long-term reliability."
+    ],
+    "bullets": [
+     "Tile grading accuracy",
+     "Dimensional calibration",
+     "Surface finish inspection",
+     "Shade consistency",
+     "Controlled handling standards"
+    ],
+    "image": "categories/elezzo-collection-overview",
+    "html": "<p>The Elezzo Collection is curated to deliver balanced design expression and dependable surface performance. Each tile is evaluated for finish precision, dimensional consistency, structural strength, and visual appeal — ensuring versatility across varied architectural applications.</p><p>Material preparation emphasizes:</p><ul><li>Tile grading accuracy </li><li>Dimensional calibration </li><li>Surface finish inspection </li><li>Shade consistency </li><li>Controlled handling standards<br /><br /></li></ul><p>Ensuring refined presentation and long-term reliability.</p>"
+   },
+   "cardImage": "categories/elezzo-collection-overview",
    "hasPage": true,
    "refPage": {
     "title": "Elezzo Collection | S K Stones India",
     "metaDescription": "Explore our elezzo collection collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Elezzo Collection",
      "h1Html": "Elezzo <span class=\"highlight\">Collection</span>",
      "description": "The Elezzo Collection presents refined surface solutions that combine durability, contemporary aesthetics, and easy maintenance — making it suitable for floors, walls, and functional spaces across residential, commercial, and high-traffic environments."
@@ -1327,12 +1620,30 @@
    ],
    "order": 23,
    "legacySource": "endless-collection",
+   "overview": {
+    "paragraphs": [
+     "The Endless Collection is curated to deliver refined aesthetics and dependable performance. Each tile is evaluated for finish precision, dimensional consistency, structural strength, and visual harmony — ensuring adaptability across diverse architectural applications.",
+     "Material preparation emphasizes:",
+     "Ensuring visual continuity and long-term reliability."
+    ],
+    "bullets": [
+     "Tile grading accuracy",
+     "Dimensional calibration",
+     "Surface finish inspection",
+     "Shade consistency",
+     "Controlled handling standards"
+    ],
+    "image": "categories/endless-collection-overview",
+    "html": "<p>The Endless Collection is curated to deliver refined aesthetics and dependable performance. Each tile is evaluated for finish precision, dimensional consistency, structural strength, and visual harmony — ensuring adaptability across diverse architectural applications.</p><p>Material preparation emphasizes:</p><ul><li>Tile grading accuracy</li><li>Dimensional calibration</li><li>Surface finish inspection</li><li>Shade consistency</li><li>Controlled handling standards</li></ul><p>Ensuring visual continuity and long-term reliability.</p>"
+   },
+   "cardImage": "categories/endless-collection-overview",
    "hasPage": true,
    "refPage": {
     "title": "Endless Collection | S K Stones India",
     "metaDescription": "Explore our endless collection collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Endless Tile Collection",
      "h1Html": "Endless <span class=\"highlight\">Tile</span> Collection",
      "description": "The Endless Tile Collection presents versatile surface solutions that combine durability, contemporary design flexibility, and easy maintenance — making it ideal for floors, walls, and high-traffic interior spaces across residential and commercial environments."
@@ -1388,12 +1699,30 @@
    ],
    "order": 24,
    "legacySource": "ittaca-collection",
+   "overview": {
+    "paragraphs": [
+     "The Ittaca Collection is curated to offer balanced aesthetics and dependable surface performance. Each tile is evaluated for finish precision, dimensional consistency, structural strength, and visual harmony — ensuring adaptability across diverse architectural applications.",
+     "Material preparation emphasizes:",
+     "Ensuring cohesive presentation and long-term reliability."
+    ],
+    "bullets": [
+     "Tile grading accuracy",
+     "Dimensional calibration",
+     "Surface finish inspection",
+     "Shade consistency",
+     "Controlled handling standards"
+    ],
+    "image": "categories/ittaca-collection-overview",
+    "html": "<p>The Ittaca Collection is curated to offer balanced aesthetics and dependable surface performance. Each tile is evaluated for finish precision, dimensional consistency, structural strength, and visual harmony — ensuring adaptability across diverse architectural applications.</p><p>Material preparation emphasizes:</p><ul><li>Tile grading accuracy </li><li>Dimensional calibration </li><li>Surface finish inspection </li><li>Shade consistency </li><li>Controlled handling standards </li></ul><p>Ensuring cohesive presentation and long-term reliability.</p>"
+   },
+   "cardImage": "categories/ittaca-collection-overview",
    "hasPage": true,
    "refPage": {
     "title": "Ittaca Collection | S K Stones India",
     "metaDescription": "Explore our ittaca collection collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Ittaca Collection",
      "h1Html": "Ittaca <span class=\"highlight\">Collection</span>",
      "description": "The Ittaca Collection delivers versatile surface solutions that combine durability, refined design expression and easy maintenance — making it ideal for floors, walls, and functional spaces across residential, commercial, and high-traffic environments."
@@ -1452,12 +1781,30 @@
    ],
    "order": 25,
    "legacySource": "milagro-collection",
+   "overview": {
+    "paragraphs": [
+     "The Milagro Collection is curated based on finish type, slip resistance, size accuracy, strength rating, and overall design intent — ensuring suitability across a wide range of interior and exterior surface applications.",
+     "Material preparation emphasizes:",
+     "Ensuring cohesive presentation and long-term performance reliability."
+    ],
+    "bullets": [
+     "Tile grading precision",
+     "Dimensional consistency",
+     "Surface finish inspection",
+     "Shade calibration",
+     "Controlled handling standards"
+    ],
+    "image": "categories/milagro-collection-overview",
+    "html": "<p>The Milagro Collection is curated based on finish type, slip resistance, size accuracy, strength rating, and overall design intent — ensuring suitability across a wide range of interior and exterior surface applications.</p><p>Material preparation emphasizes:</p><ul><li>Tile grading precision </li><li>Dimensional consistency </li><li>Surface finish inspection </li><li>Shade calibration </li><li>Controlled handling standards </li></ul><p>Ensuring cohesive presentation and long-term performance reliability.</p>"
+   },
+   "cardImage": "categories/milagro-collection-overview",
    "hasPage": true,
    "refPage": {
     "title": "Milagro Collection | S K Stones India",
     "metaDescription": "Explore our milagro collection collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Milagro Collection",
      "h1Html": "Milagro <span class=\"highlight\">Collection</span>",
      "description": "The Milagro Collection delivers refined surface solutions that combine durability, contemporary design expression, and easy maintenance — making it ideal for floors, walls, and functional spaces across residential, commercial, and high-traffic environments."
@@ -1495,12 +1842,30 @@
    ],
    "order": 26,
    "legacySource": "stone-collection",
+   "overview": {
+    "paragraphs": [
+     "The Stone Collection is curated based on finish type, slip resistance, size accuracy, structural strength, and overall design intent — ensuring suitability across a wide range of interior and exterior surface applications.",
+     "Material preparation emphasizes:",
+     "Ensuring visual harmony and long-term material reliability."
+    ],
+    "bullets": [
+     "Tile grading precision",
+     "Dimensional consistency",
+     "Surface finish inspection",
+     "Shade calibration",
+     "Controlled handling standards"
+    ],
+    "image": "categories/stone-collection-overview",
+    "html": "<p>The Stone Collection is curated based on finish type, slip resistance, size accuracy, structural strength, and overall design intent — ensuring suitability across a wide range of interior and exterior surface applications.</p><p>Material preparation emphasizes:</p><ul><li>Tile grading precision </li><li>Dimensional consistency </li><li>Surface finish inspection </li><li>Shade calibration </li><li>Controlled handling standards </li></ul><p>Ensuring visual harmony and long-term material reliability.</p>"
+   },
+   "cardImage": "categories/stone-collection-overview",
    "hasPage": true,
    "refPage": {
     "title": "Stone Collection | S K Stones India",
     "metaDescription": "Explore our stone collection collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Stone Collection",
      "h1Html": "Stone <span class=\"highlight\">Collection</span>",
      "description": "The Stone Collection delivers versatile surface solutions that combine durability, natural character, and refined design flexibility — making it ideal for floors, walls, and functional spaces across residential, commercial, and high-traffic environments."
@@ -1544,12 +1909,30 @@
    ],
    "order": 27,
    "legacySource": "subway-tiles",
+   "overview": {
+    "paragraphs": [
+     "The Subway Tiles Collection is curated based on finish type, slip resistance, dimensional accuracy, strength rating, and overall design intent — ensuring versatility across a wide range of interior and exterior surface applications.",
+     "Material preparation emphasizes:",
+     "Ensuring uniform presentation and dependable long-term performance."
+    ],
+    "bullets": [
+     "Tile grading precision",
+     "Dimensional consistency",
+     "Surface finish inspection",
+     "Shade calibration",
+     "Controlled handling standards"
+    ],
+    "image": "categories/subway-tiles-overview",
+    "html": "<p>The Subway Tiles Collection is curated based on finish type, slip resistance, dimensional accuracy, strength rating, and overall design intent — ensuring versatility across a wide range of interior and exterior surface applications.</p><p>Material preparation emphasizes:</p><ul><li>Tile grading precision </li><li>Dimensional consistency </li><li>Surface finish inspection </li><li>Shade calibration<br /></li><li>Controlled handling standards </li></ul><p>Ensuring uniform presentation and dependable long-term performance.</p>"
+   },
+   "cardImage": "categories/subway-tiles-overview",
    "hasPage": true,
    "refPage": {
     "title": "Subway Tiles | S K Stones India",
     "metaDescription": "Explore our subway tiles collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Subway Tiles Collection",
      "h1Html": "Subway <span class=\"highlight\">Tiles</span> Collection",
      "description": "The Subway Tiles Collection delivers timeless surface solutions that combine durability, clean design lines, and easy maintenance — making it ideal for walls, feature areas, kitchens, bathrooms, and functional spaces across residential and commercial environments."
@@ -1587,12 +1970,15 @@
    ],
    "order": 28,
    "legacySource": "clay-products",
+   "overview": null,
+   "cardImage": "catalog/clay-jally-zebra-clay-jally",
    "hasPage": true,
    "refPage": {
     "title": "Clay Products | S K Stones India",
     "metaDescription": "Traditional clay products for elevation, roofing and architectural detailing.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Clay Products Collection",
      "h1Html": "Clay <span class=\"highlight\">Products</span> Collection",
      "description": "Discover clay jally panels, wire-cut bricks, elevation bricks, and roofing tiles crafted for ventilation, facade rhythm, and lasting architectural character."
@@ -1666,12 +2052,30 @@
    ],
    "order": 29,
    "legacySource": "clay-jally",
+   "overview": {
+    "paragraphs": [
+     "Clay Jally elements are curated based on material strength, pattern precision, dimensional consistency, and environmental suitability — ensuring durability and refined architectural appeal.",
+     "Material preparation emphasizes:",
+     "Ensuring dependable performance and timeless aesthetic value."
+    ],
+    "bullets": [
+     "Pattern accuracy",
+     "Dimensional calibration",
+     "Surface finish consistency",
+     "Structural integrity",
+     "Controlled handling standards"
+    ],
+    "image": "categories/clay-jally-overview",
+    "html": "<p>Clay Jally elements are curated based on material strength, pattern precision, dimensional consistency, and environmental suitability — ensuring durability and refined architectural appeal.</p><p>Material preparation emphasizes:</p><ul><li>Pattern accuracy </li><li>Dimensional calibration </li><li>Surface finish consistency </li><li>Structural integrity </li><li>Controlled handling standards </li></ul><p>Ensuring dependable performance and timeless aesthetic value.</p>"
+   },
+   "cardImage": "categories/clay-jally-overview",
    "hasPage": true,
    "refPage": {
     "title": "Clay Jally | S K Stones India",
     "metaDescription": "Explore our clay jally collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Clay Jally Panels",
      "h1Html": "Clay <span class=\"highlight\">Jally</span> Panels",
      "description": "Clay Jally panels combine traditional craftsmanship with architectural functionality — offering ventilation, filtered light, privacy, and decorative patterning for both interior and exterior applications."
@@ -1716,12 +2120,30 @@
    ],
    "order": 30,
    "legacySource": "wire-cut-bricks",
+   "overview": {
+    "paragraphs": [
+     "Material specialists curate wire cut bricks based on firing quality, dimensional accuracy, density, strength rating, and surface character — ensuring dependable performance and refined visual consistency.",
+     "Material preparation emphasizes:",
+     "Ensuring bricks are supplied with predictable performance and architectural reliability."
+    ],
+    "bullets": [
+     "Size calibration",
+     "Dimensional tolerance control",
+     "Surface uniformity inspection",
+     "Batch consistency verification",
+     "Controlled handling standards"
+    ],
+    "image": "categories/wire-cut-bricks-overview",
+    "html": "<p>Material specialists curate wire cut bricks based on firing quality, dimensional accuracy, density, strength rating, and surface character — ensuring dependable performance and refined visual consistency.</p><p>Material preparation emphasizes:</p><ul><li>Size calibration </li><li>Dimensional tolerance control </li><li>Surface uniformity inspection </li><li>Batch consistency verification </li><li>Controlled handling standards </li></ul><p>Ensuring bricks are supplied with predictable performance and architectural reliability.</p>"
+   },
+   "cardImage": "categories/wire-cut-bricks-overview",
    "hasPage": true,
    "refPage": {
     "title": "Wire Cut Bricks | S K Stones India",
     "metaDescription": "Explore our wire cut bricks collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Wire Cut Bricks",
      "h1Html": "Wire <span class=\"highlight\">Cut</span> Bricks",
      "description": "Wire cut bricks deliver clean linear aesthetics, dimensional precision, and consistent surface texture — making them ideal for architectural facades, partitions, ventilated walls, and contemporary design applications."
@@ -1756,12 +2178,30 @@
    ],
    "order": 31,
    "legacySource": "elevation-clay-bricks",
+   "overview": {
+    "paragraphs": [
+     "Material specialists curate elevation clay bricks based on firing quality, dimensional precision, strength rating, and surface texture — ensuring dependable performance and consistent architectural appeal.",
+     "Material preparation emphasizes:",
+     "Ensuring reliable supply and long-term material stability."
+    ],
+    "bullets": [
+     "Unit calibration",
+     "Dimensional tolerance control",
+     "Surface finish inspection",
+     "Pattern compatibility evaluation",
+     "Controlled handling standards"
+    ],
+    "image": "categories/elevation-clay-bricks-overview",
+    "html": "<p>Material specialists curate elevation clay bricks based on firing quality, dimensional precision, strength rating, and surface texture — ensuring dependable performance and consistent architectural appeal.</p><p>Material preparation emphasizes:</p><ul><li>Unit calibration </li><li>Dimensional tolerance control </li><li>Surface finish inspection </li><li>Pattern compatibility evaluation </li><li>Controlled handling standards </li></ul><p>Ensuring reliable supply and long-term material stability.</p>"
+   },
+   "cardImage": "categories/elevation-clay-bricks-overview",
    "hasPage": true,
    "refPage": {
     "title": "Elevation Clay Bricks | S K Stones India",
     "metaDescription": "Explore our elevation clay bricks collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Elevation Clay Bricks",
      "h1Html": "Elevation <span class=\"highlight\">Clay</span> Bricks",
      "description": "Elevation clay bricks combine texture, structural integrity, and visual rhythm — creating durable facade surfaces that enhance architectural character across residential and commercial environments."
@@ -1797,12 +2237,30 @@
    ],
    "order": 32,
    "legacySource": "roofing-tiles-clay",
+   "overview": {
+    "paragraphs": [
+     "Roofing tiles are carefully curated based on firing quality, dimensional precision, strength rating, water resistance, and surface finish — ensuring long-term durability and consistent aesthetic appeal.",
+     "Material preparation emphasizes:",
+     "Ensuring reliable supply and structural performance."
+    ],
+    "bullets": [
+     "Tile calibration",
+     "Dimensional tolerance control",
+     "Surface quality inspection",
+     "Shade consistency verification",
+     "Controlled handling standards"
+    ],
+    "image": "categories/roofing-tiles-clay-overview",
+    "html": "<p>Roofing tiles are carefully curated based on firing quality, dimensional precision, strength rating, water resistance, and surface finish — ensuring long-term durability and consistent aesthetic appeal.</p><p>Material preparation emphasizes:</p><ul><li>Tile calibration </li><li>Dimensional tolerance control </li><li>Surface quality inspection </li><li>Shade consistency verification </li><li>Controlled handling standards </li></ul><p>Ensuring reliable supply and structural performance.</p>"
+   },
+   "cardImage": "categories/roofing-tiles-clay-overview",
    "hasPage": true,
    "refPage": {
     "title": "Roofing Tiles Clay | S K Stones India",
     "metaDescription": "Explore our roofing tiles clay collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Roofing Tiles",
      "h1Html": "Roofing <span class=\"highlight\">Tiles</span>",
      "description": "Roofing tiles combine durability, weather resistance, and visual rhythm — creating protective roof surfaces that enhance shelter, thermal performance, and architectural character across residential and commercial buildings."
@@ -1840,12 +2298,30 @@
    ],
    "order": 33,
    "legacySource": "roof-flooring-tiles",
+   "overview": {
+    "paragraphs": [
+     "Roof flooring tiles are curated based on strength rating, water resistance, slip resistance, dimensional accuracy, and surface durability — ensuring reliable performance in exposed and high-usage environments.",
+     "Material preparation emphasizes:",
+     "Ensuring dependable supply and long-term performance."
+    ],
+    "bullets": [
+     "Dimensional calibration",
+     "Surface finish inspection",
+     "Water absorption evaluation",
+     "Shade consistency control",
+     "Structured handling standards"
+    ],
+    "image": "categories/roof-flooring-tiles-overview",
+    "html": "<p>Roof flooring tiles are curated based on strength rating, water resistance, slip resistance, dimensional accuracy, and surface durability — ensuring reliable performance in exposed and high-usage environments.</p><p>Material preparation emphasizes:</p><ul><li>Dimensional calibration </li><li>Surface finish inspection </li><li>Water absorption evaluation </li><li>Shade consistency control </li><li>Structured handling standards </li></ul><p>Ensuring dependable supply and long-term performance.</p>"
+   },
+   "cardImage": "categories/roof-flooring-tiles-overview",
    "hasPage": true,
    "refPage": {
     "title": "Roof Flooring Tiles | S K Stones India",
     "metaDescription": "Explore our roof flooring tiles collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Roof Flooring Tiles",
      "h1Html": "Roof <span class=\"highlight\">Flooring</span> Tiles",
      "description": "Roof flooring tiles offer durable, weather-resistant surface solutions designed for terraces, open roofs, balconies, and exposed horizontal spaces — combining strength, slip resistance, and architectural consistency."
@@ -1882,12 +2358,15 @@
    ],
    "order": 34,
    "legacySource": "concrete-blocks",
+   "overview": null,
+   "cardImage": "catalog/concrete-blocks-concrete-block-01",
    "hasPage": true,
    "refPage": {
     "title": "Concrete Blocks | S K Stones India",
     "metaDescription": "Explore our concrete blocks collection at S K Stones India.",
     "hero": {
      "tagline": "Crafting Timeless Spaces",
+     "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
      "h1": "Concrete Block Systems",
      "h1Html": "<span class=\"highlight\">Concrete Block</span> Systems",
      "description": "Concrete blocks provide structural stability load bearing strength and design flexibility making them suitable for walls partitions boundaries and architectural construction across residential commercial and industrial projects."
@@ -2111,12 +2590,12 @@
    }
   },
   {
-   "id": "indian-marbles-katani",
-   "name": "Katani",
+   "id": "indian-marbles-katni",
+   "name": "Katni",
    "category": "marbles",
    "subcategory": "indian-marbles",
    "collection": "indian-marbles",
-   "image": "catalog/indian-marbles-katani",
+   "image": "catalog/indian-marbles-katni",
    "colours": [],
    "finish": null,
    "applications": [
@@ -2516,12 +2995,12 @@
    }
   },
   {
-   "id": "imported-marbles-satvario",
-   "name": "Satvario",
+   "id": "imported-marbles-statuario",
+   "name": "Statuario",
    "category": "marbles",
    "subcategory": "imported-marbles",
    "collection": "imported-marbles",
-   "image": "catalog/imported-marbles-satvario",
+   "image": "catalog/imported-marbles-statuario",
    "colours": [],
    "finish": null,
    "applications": [
@@ -2531,7 +3010,9 @@
    ],
    "origin": "Imported",
    "size": null,
-   "tags": [],
+   "tags": [
+    "Statuario"
+   ],
    "legacy": {
     "page": "imported-marbles",
     "index": 9,
@@ -7806,12 +8287,12 @@
    }
   },
   {
-   "id": "quatrz-surfaces-artic-white",
-   "name": "Artic White",
+   "id": "quatrz-surfaces-arctic-white",
+   "name": "Arctic White",
    "category": "engineered-surfaces",
    "subcategory": "quatrz-surfaces",
    "collection": "quatrz-surfaces",
-   "image": "catalog/quatrz-surfaces-artic-white",
+   "image": "catalog/quatrz-surfaces-arctic-white",
    "colours": [
     "White"
    ],
@@ -12370,6 +12851,7 @@
    "metaDescription": "Explore our marbles collection at S K Stones India.",
    "hero": {
     "tagline": "Crafting Timeless Spaces",
+    "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
     "h1": "Premium Marbles Collection",
     "h1Html": "Premium <span class=\"highlight\">Marbles</span> Collection",
     "description": "Choose Indian or Imported marbles — each collection is curated for veining, finish quality, and architectural character across premium residential and commercial spaces."
@@ -12396,6 +12878,7 @@
    "metaDescription": "Explore our premium collection of granites, marbles, natural stones, engineered surfaces, and custom stone art.",
    "hero": {
     "tagline": "",
+    "taglineHtml": "",
     "h1": "Our Products",
     "h1Html": "Our <span class=\"gold\">Products</span>",
     "description": ""

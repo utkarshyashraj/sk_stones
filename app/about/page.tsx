@@ -1,152 +1,207 @@
-import { CTA } from '@/components/marketing/CTA/CTA';
-import { PageHero } from '@/components/marketing/PageHero/PageHero';
-import { Picture } from '@/components/ui/Picture';
-import { about, companyStats } from '@/content/pages';
+import Link from 'next/link';
+import { AboutEnhance } from '@/components/ref/AboutEnhance';
+import { Enhance } from '@/components/ref/Enhance';
+import { Fa } from '@/components/ref/Fa';
+import { RefImg } from '@/components/ref/RefImg';
+import { RefShell } from '@/components/ref/RefShell';
+import {
+  aboutMarquee,
+  founderParagraphs,
+  purposeCards,
+  team,
+  trustedLogos,
+  whyChoose,
+} from '@/content/ref/about';
 import { getSiteImage } from '@/lib/images';
-import { buildMetadata } from '@/lib/seo';
-import styles from './about.module.css';
+import { pageMetadata } from '@/lib/ref-seo';
+import '@/styles/ref/about.css';
 
-export const metadata = buildMetadata({
-  title: 'About Us | S K Stones India (formerly Shree Stones & Services)',
-  description:
-    'Meet S K Stones India: 12+ years and 200+ stone projects for hotels, villas, airports and healthcare. Founder Shree Kumar Gandhi and our Bengaluru team.',
-  path: '/about',
-  image: getSiteImage('team-photo'),
-});
+export const metadata = pageMetadata('about', '/about');
+
+const SwipeHint = ({ className = '' }: { className?: string }) => (
+  <p className={`mobile-swipe-hint${className ? ` ${className}` : ''}`} aria-hidden="true">
+    <Fa name="arrow-right" />
+  </p>
+);
 
 export default function AboutPage() {
-  const [quote, ...story] = about.founder.paragraphs;
-  const figures = companyStats.filter((s) => !s.value.includes('/'));
   return (
-    <>
-      <PageHero
-        crumbs={[
-          { name: 'Home', href: '/' },
-          { name: 'About Us', href: '/about' },
-        ]}
-        title={
-          <>
-            {about.hero.heading} <span className="accent">{about.hero.headingAccent}</span>
-          </>
-        }
-        lead={<p>{about.hero.lead}</p>}
-        aside={{ image: getSiteImage('about-showroom'), alt: 'Marble flooring in a modern interior' }}
-      >
-        <ul className={`dash-list ${styles.points}`}>
-          {about.hero.points.map((p) => (
-            <li key={p}>{p}</li>
-          ))}
-        </ul>
-      </PageHero>
-
-      {/* Company story: editorial split — purpose, figures, sectors */}
-      <section className="section veil-text" aria-labelledby="purpose-title">
-        <div className={`container ${styles.split}`}>
-          <div className={styles.media}>
-            <Picture
-              image={getSiteImage('project-luxury-lobby')}
-              alt="Corporate lobby with stone flooring by S K Stones India"
-              sizes="(min-width: 1024px) 40vw, 100vw"
-              imgClassName={styles.img}
-            />
+    <RefShell bundle="about" nav="about" tab="about">
+      <Enhance />
+      <AboutEnhance />
+      <section className="about-hero">
+        <div className="about-hero-grid">
+          <div className="about-hero-content">
+            <h1>
+              <span>Premium</span> Stones For Every <span>Vision,</span> Every <span>Space.</span>
+            </h1>
           </div>
-          <div>
-            <h2 id="purpose-title" className="rule">
-              Building purpose through continuous growth
-            </h2>
-            <ol className={styles.purpose}>
-              {about.purpose.map((p, i) => (
-                <li key={p.title}>
-                  <span className={styles.num} aria-hidden="true">
-                    0{i + 1}
-                  </span>
-                  <div>
-                    <h3>{p.title}</h3>
-                    <p>{p.text}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-            <dl className={styles.figures}>
-              {figures.map((f) => (
-                <div key={f.label}>
-                  <dt>{f.label}</dt>
-                  <dd>{f.value}</dd>
-                </div>
-              ))}
-            </dl>
-            <p className={styles.sectorsLabel}>Trusted by architects, builders &amp; developers across</p>
-            <ul className={styles.sectors}>
-              {about.sectors.map((s) => (
-                <li key={s}>{s}</li>
-              ))}
-            </ul>
+          <div className="about-hero-image">
+            <RefImg
+              src="images/about-hero-banner.jpg"
+              alt="Luxury Interior"
+              sizes="(min-width: 1025px) 50vw, 100vw"
+              priority
+            />
           </div>
         </div>
       </section>
 
-      {/* Founder: dedicated profile */}
-      <section className="section" aria-labelledby="founder-title">
-        <div className={`container ${styles.founder}`}>
-          <div className={styles.founderMedia}>
-            <Picture
-              image={getSiteImage('ceo-shree-kumar-gandhi')}
-              alt="Shree Kumar Gandhi, Founder and CEO"
-              sizes="(min-width: 1024px) 30vw, 80vw"
-              imgClassName={styles.img}
+      <div className="marquee" aria-hidden="true">
+        <div className="marquee-content">
+          {aboutMarquee.flatMap((m, i) => [<span key={`m${i}`}>{m}</span>, <span key={`s${i}`}>★</span>])}
+        </div>
+      </div>
+
+      <section className="trusted-section reveal" aria-label="Trusted by">
+        <div className="trusted-inner">
+          <p className="trusted-label">Trusted By Leading Brands &amp; Institutions</p>
+        </div>
+        <div className="trusted-band">
+          <SwipeHint />
+          <div className="trusted-logos trusted-logos--clients">
+            {trustedLogos.map((l) => (
+              <div key={l.alt} className="trusted-logo-card">
+                <RefImg src={l.image} alt={l.alt} sizes="160px" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="purpose-section">
+        <div className="purpose-grid">
+          <div className="purpose-image" id="purposeImage">
+            <RefImg
+              src="images/project-luxury-lobby.png"
+              alt="Corporate Lobby"
+              sizes="(min-width: 1025px) 50vw, 100vw"
             />
           </div>
-          <div className={styles.founderBody}>
-            <h2 id="founder-title">{about.founder.name}</h2>
-            <p className={styles.role}>{about.founder.role}</p>
-            <blockquote className={styles.pull}>
-              <p>{quote}</p>
-            </blockquote>
-            <div className={`prose ${styles.founderText}`}>
-              {story.map((p) => (
-                <p key={p}>{p}</p>
+          <div className="purpose-feature-content" id="purposeContent">
+            <h2>
+              Building <span>Purpose</span> Through Continuous <span>Growth</span>
+            </h2>
+            <SwipeHint className="purpose-swipe-hint" />
+            <div className="purpose-cards">
+              {purposeCards.map((c, i) => (
+                <div key={c.title} className="purpose-card">
+                  <div className="purpose-card-number">
+                    /0{i + 1} <Fa name={c.icon} />
+                  </div>
+                  <div className="purpose-card-content">
+                    <h3>{c.title}</h3>
+                    <p>{c.text}</p>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Team */}
-      <section className="section veil-text" aria-labelledby="team-title">
-        <div className="container">
-          <div className="section-head">
-            <h2 id="team-title">Our expert team</h2>
+      <section className="why-section">
+        <div className="why-container">
+          <div className="section-header">
+            <h2>
+              Why Choose <span>S K Stones India?</span>
+            </h2>
             <p>
-              Our skilled designers, engineers, and craftsmen work together to deliver precise stone
-              solutions.
+              Committed to quality, precision, and client satisfaction. Our expertise spans across
+              residential, commercial, and architectural projects.
             </p>
           </div>
-          <figure className={styles.team}>
-            <Picture
-              image={getSiteImage('team-photo')}
-              alt="The S K Stones India team"
-              sizes="(min-width: 1024px) 60vw, 100vw"
-              imgClassName={styles.img}
-            />
-            <figcaption>
-              <p className={styles.teamNote}>Left to right in the photo:</p>
-              <ol className={styles.teamList}>
-                {about.team.map((m) => (
-                  <li key={m.name}>
-                    <strong>{m.name}</strong>
-                    <span>{m.role}</span>
-                  </li>
-                ))}
-              </ol>
-            </figcaption>
-          </figure>
+          <SwipeHint className="why-swipe-hint" />
+          <div className="why-cards">
+            {whyChoose.map((c) => (
+              <div key={c.title} className="why-card">
+                <div className="why-card-icon">
+                  <Fa name={c.icon} />
+                </div>
+                <h3>{c.title}</h3>
+                <p>{c.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      <CTA
-        heading="Transform your space with premium stone craftsmanship"
-        text="Premium natural stones for homes, offices & commercial spaces. Trusted by architects and builders across India."
-      />
-    </>
+      <section className="founder-section">
+        <div className="founder-grid">
+          <div className="founder-image" id="founderImage">
+            <RefImg
+              src="images/ceo-shree-kumar-gandhi.png?v=2"
+              alt="Shree Kumar Gandhi, Founder & CEO"
+              sizes="(min-width: 1025px) 40vw, 90vw"
+            />
+          </div>
+          <div className="founder-content" id="founderContent">
+            <h2>Shree Kumar Gandhi</h2>
+            <p className="designation">Founder &amp; CEO, S K Stones India Pvt. Ltd.</p>
+            {founderParagraphs.map((p) => (
+              <p key={p.slice(0, 24)}>{p}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="team-section" id="team">
+        <div className="section-header">
+          <h2>
+            Our Expert <span>Team</span>
+          </h2>
+        </div>
+        <div className="team-layout">
+          <div className="team-photo visible" id="teamPhoto">
+            <div className="team-photo-panel">
+              <div className="team-photo-frame">
+                {/* The client's own 7-person team photo (the reference's shows 6; the list below has 7). */}
+                <RefImg
+                  image={getSiteImage('team-photo')}
+                  alt="S K Stones India Team"
+                  sizes="(min-width: 1025px) 50vw, 100vw"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="team-right">
+            <div className="team-grid">
+              <div className="team-founder" id="teamFounder" data-delay="0">
+                <span className="team-num">01</span>
+                <span className="team-badge">
+                  <Fa name="crown" /> Founder
+                </span>
+                <h4>Shree Kumar Gandhi</h4>
+                <p>Founder &amp; CEO</p>
+              </div>
+              {team.map((m, i) => (
+                <div key={m.name} className="team-card" data-delay={120 + i * 100}>
+                  <span className="team-num">0{i + 2}</span>
+                  <h4>{m.name}</h4>
+                  <p>{m.role}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="cta-section reveal">
+        <div className="cta-content">
+          <h2>
+            Transform Your Space With Premium <span className="cta-gold">Stone Craftsmanship</span>
+          </h2>
+          <p>
+            Premium natural stones for homes, offices &amp; commercial spaces. Trusted by architects and
+            builders across India.
+          </p>
+          <div className="cta-actions">
+            <Link className="btn btn-primary" href="/contact">
+              Get Started Today
+            </Link>
+          </div>
+        </div>
+      </section>
+    </RefShell>
   );
 }

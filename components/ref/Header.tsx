@@ -85,16 +85,22 @@ export function Header({ active, startScrolled = false }: { active: NavKey; star
             {productsMenu.map((g) =>
               g.items ? (
                 <div key={g.label} className={`mega-item has-sub${openGroup === g.label ? ' open' : ''}`}>
+                  {/* An <a> as on the reference (its CSS targets it), but a real button: no fake "#" link. */}
                   <a
-                    href="#"
                     className="mega-parent"
                     role="button"
+                    tabIndex={0}
                     aria-haspopup="true"
                     aria-expanded={openGroup === g.label}
-                    onClick={(e) => {
+                    onClick={() => {
                       // Parents only open their flyout; on touch widths a tap toggles it.
-                      e.preventDefault();
                       if (window.innerWidth <= 1024) setOpenGroup((o) => (o === g.label ? null : g.label));
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        setOpenGroup((o) => (o === g.label ? null : g.label));
+                      }
                     }}
                   >
                     {g.label} <Fa name="chevron-right" className="sub-arrow" />

@@ -5,6 +5,7 @@
     "metaDescription": "Modern acrylic engineered surfaces for kitchens and interiors.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Precision Acrylic Surfaces",
       "h1Html": "Precision <span class=\"highlight\">Acrylic</span> Surfaces",
       "description": "Acrylic surfaces are manufactured to deliver a uniform appearance, controlled performance, and consistent quality — combining high-grade resins with advanced processing technologies for modern architectural and interior applications."
@@ -106,6 +107,7 @@
     "metaDescription": "Explore our brillo collection collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Brillo Collection",
       "h1Html": "Brillo <span class=\"highlight\">Collection</span>",
       "description": "The Brillo Collection offers refined surface solutions that combine durability, contemporary design expression, and low maintenance performance — making it ideal for floors, walls, and high-usage interior environments across residential and commercial spaces."
@@ -172,6 +174,7 @@
     "metaDescription": "Explore our clay jally collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Clay Jally Panels",
       "h1Html": "Clay <span class=\"highlight\">Jally</span> Panels",
       "description": "Clay Jally panels combine traditional craftsmanship with architectural functionality — offering ventilation, filtered light, privacy, and decorative patterning for both interior and exterior applications."
@@ -263,6 +266,7 @@
     "metaDescription": "Traditional clay products for elevation, roofing and architectural detailing.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Clay Products Collection",
       "h1Html": "Clay <span class=\"highlight\">Products</span> Collection",
       "description": "Discover clay jally panels, wire-cut bricks, elevation bricks, and roofing tiles crafted for ventilation, facade rhythm, and lasting architectural character."
@@ -466,6 +470,7 @@
     "metaDescription": "Explore our cnc stone work collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Defining Stone Art",
       "h1Html": "Defining <span class=\"highlight\"> Stone</span> Art",
       "description": "Stone art pieces are crafted to create visual focal points using natural stone forms, textures, and detailing that add character, depth, and artistic expression to interior and exterior architectural spaces."
@@ -517,6 +522,7 @@
     "metaDescription": "Explore our cobble stones collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Authentic Natural Cobble Stones",
       "h1Html": "Authentic <span class=\"highlight\">Natural</span> Cobble Stones",
       "description": "Cobble stones offer rugged texture, natural strength, and timeless visual appeal — making them ideal for pathways, driveways, landscapes, courtyards, and outdoor architectural surfaces that require strength , durability and character."
@@ -623,6 +629,7 @@
     "metaDescription": "Explore our concrete blocks collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Concrete Block Systems",
       "h1Html": "<span class=\"highlight\">Concrete Block</span> Systems",
       "description": "Concrete blocks provide structural stability load bearing strength and design flexibility making them suitable for walls partitions boundaries and architectural construction across residential commercial and industrial projects."
@@ -671,6 +678,7 @@
     "metaDescription": "Explore our elevation clay bricks collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Elevation Clay Bricks",
       "h1Html": "Elevation <span class=\"highlight\">Clay</span> Bricks",
       "description": "Elevation clay bricks combine texture, structural integrity, and visual rhythm — creating durable facade surfaces that enhance architectural character across residential and commercial environments."
@@ -722,6 +730,7 @@
     "metaDescription": "Explore our elezzo collection collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Elezzo Collection",
       "h1Html": "Elezzo <span class=\"highlight\">Collection</span>",
       "description": "The Elezzo Collection presents refined surface solutions that combine durability, contemporary aesthetics, and easy maintenance — making it suitable for floors, walls, and functional spaces across residential, commercial, and high-traffic environments."
@@ -773,6 +782,7 @@
     "metaDescription": "Explore our endless collection collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Endless Tile Collection",
       "h1Html": "Endless <span class=\"highlight\">Tile</span> Collection",
       "description": "The Endless Tile Collection presents versatile surface solutions that combine durability, contemporary design flexibility, and easy maintenance — making it ideal for floors, walls, and high-traffic interior spaces across residential and commercial environments."
@@ -919,6 +929,7 @@
     "metaDescription": "Explore our engineered surfaces collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Precision Engineered Surfaces",
       "h1Html": "Precision <span class=\"highlight\">Engineered</span> Surfaces",
       "description": "Engineered surfaces are manufactured to deliver uniform appearance controlled performance and consistent quality combining natural aggregates with advanced processing for modern architectural and interior applications."
@@ -962,6 +973,7 @@
     "metaDescription": "Explore our feature wall collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Feature Walls",
       "h1Html": "Feature <span class=\"highlight\">Walls</span>",
       "description": "Feature walls are crafted to create striking visuals using natural stone forms, textures, and refined detailing. These artistic compositions add character, depth, and architectural expression to interior and exterior spaces."
@@ -1008,6 +1020,7 @@
     "metaDescription": "Hard wearing Indian granite stones for flooring, countertops and commercial spaces.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Exquisite Indian Granites",
       "h1Html": "Exquisite <span class=\"highlight\">Indian</span> Granites",
       "description": "Our experienced stone specialists source granite slabs selected for density, grain structure, color stability, and Thickness consistency. Each slab is carefully curated, evaluated, and supplied under controlled material quality parameters."
@@ -1269,6 +1282,7 @@
     "metaDescription": "Imported granite and quartzite varieties for premium projects.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "World-Class Granites Collection",
       "h1Html": "World-Class <span class=\"highlight\">Granites</span> Collection",
       "description": "Imported granites are processed to deliver high structural strength, dense composition, and consistent surface performance — making them ideal for heavy-use interiors that demand durability and long-term functional reliability."
@@ -1345,6 +1359,7 @@
     "metaDescription": "Luxury imported marbles with golden shades, travertine, onyx and polished finishes.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "World-Class Marble Collection",
       "h1Html": "World-Class <span class=\"highlight\">Marble</span> Collection",
       "description": "Imported marble features warm tones, refined veining, and rich color depth — delivering a luxurious visual presence suited for premium interiors, statement flooring, and elegant architectural applications."
@@ -1561,6 +1576,7 @@
     "metaDescription": "Premium Indian marble collection with leather finish, polished and classic varieties.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Exquisite Indian Marble",
       "h1Html": "<span class=\"highlight\">Exquisite</span> Indian <span class=\"highlight\">Marble</span>",
       "description": "Indian leather finish marble is processed to create a soft, textured surface that enhances natural patterns, reduces glare, and provides a refined tactile feel — making it ideal for premium residential and commercial applications."
@@ -1657,6 +1673,7 @@
     "metaDescription": "Explore our ittaca collection collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Ittaca Collection",
       "h1Html": "Ittaca <span class=\"highlight\">Collection</span>",
       "description": "The Ittaca Collection delivers versatile surface solutions that combine durability, refined design expression and easy maintenance — making it ideal for floors, walls, and functional spaces across residential, commercial, and high-traffic environments."
@@ -1818,6 +1835,7 @@
     "metaDescription": "Explore our kota stones collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Authentic Natural Limestone",
       "h1Html": "Authentic <span class=\"highlight\">Natural</span> Limestone",
       "description": "Lime stones offers variety of finishes & different colours with natural elegance making them ideal for various spaces such as pathways, courtyards, restaurants & other architectural spaces that require earthy feel and timeless beauty"
@@ -1879,6 +1897,7 @@
     "metaDescription": "Explore our marbles collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Premium Marbles Collection",
       "h1Html": "Premium <span class=\"highlight\">Marbles</span> Collection",
       "description": "Choose Indian or Imported marbles — each collection is curated for veining, finish quality, and architectural character across premium residential and commercial spaces."
@@ -1909,6 +1928,7 @@
     "metaDescription": "Explore our milagro collection collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Milagro Collection",
       "h1Html": "Milagro <span class=\"highlight\">Collection</span>",
       "description": "The Milagro Collection delivers refined surface solutions that combine durability, contemporary design expression, and easy maintenance — making it ideal for floors, walls, and functional spaces across residential, commercial, and high-traffic environments."
@@ -1965,6 +1985,7 @@
     "metaDescription": "Explore our mop inlay work collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Elegant M o P Inlay",
       "h1Html": "Elegant <span class=\"highlight\">M<span>o</span>P</span> Inlay",
       "description": "Crafted with exquisite Mother-of-Pearl inlay, each piece reflects timeless artistry.The natural iridescence of the shell creates a luminous play of light and color.Meticulously embedded by skilled craftsmen for a refined, lasting finish.A statement of elegance that elevates the beauty of the product."
@@ -2006,6 +2027,7 @@
     "metaDescription": "Explore our murals monuments collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Murals & Monuments",
       "h1Html": "Murals <span class=\"highlight\"> &amp; Monuments </span>",
       "description": "Stone murals and monuments are crafted to create visual masterpieces using natural stone and intricate detailing that add character."
@@ -2047,6 +2069,7 @@
     "metaDescription": "Explore our natural stones collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Authentic Natural Stones",
       "h1Html": "Authentic <span class=\"highlight\">Natural</span> Stones",
       "description": "Natural stones retain their original geological character offering unique textures colour variations and organic surface patterns that bring depth warmth and timeless appeal to architectural and interior spaces."
@@ -2090,6 +2113,7 @@
     "metaDescription": "Explore our pebbles collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Authentic Earth Pebbles",
       "h1Html": "Authentic <span class=\"highlight\">Earth</span> Pebbles",
       "description": "Pebbles offer a naturally smooth texture, excellent durability, and organic visual appeal — making them ideal for landscaping, garden pathways, decorative surfaces, water features, and outdoor spaces that require both strength and aesthetic charm."
@@ -2191,6 +2215,7 @@
     "metaDescription": "Explore our premium collection of granites, marbles, natural stones, engineered surfaces, and custom stone art.",
     "hero": {
       "tagline": "",
+      "taglineHtml": "",
       "h1": "Our Products",
       "h1Html": "Our <span class=\"gold\">Products</span>",
       "description": ""
@@ -2263,6 +2288,7 @@
     "metaDescription": "Quartz engineered surfaces — durable and low maintenance.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "LUXURY QUARTZ COLLECTION",
       "h1Html": "LUXURY <span class=\"highlight\">QUARTZ</span> COLLECTION",
       "description": "Available in a wide range of colors, textures, and finishes, quartz slabs combine the timeless beauty of natural stone with superior strength and consistency. Their stain-resistant and hygienic properties make them a perfect choice for both residential and high-traffic environments."
@@ -2524,6 +2550,7 @@
     "metaDescription": "Explore our roof flooring tiles collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Roof Flooring Tiles",
       "h1Html": "Roof <span class=\"highlight\">Flooring</span> Tiles",
       "description": "Roof flooring tiles offer durable, weather-resistant surface solutions designed for terraces, open roofs, balconies, and exposed horizontal spaces — combining strength, slip resistance, and architectural consistency."
@@ -2570,6 +2597,7 @@
     "metaDescription": "Explore our roofing tiles clay collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Roofing Tiles",
       "h1Html": "Roofing <span class=\"highlight\">Tiles</span>",
       "description": "Roofing tiles combine durability, weather resistance, and visual rhythm — creating protective roof surfaces that enhance shelter, thermal performance, and architectural character across residential and commercial buildings."
@@ -2626,6 +2654,7 @@
     "metaDescription": "Explore our sand stones collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Indian Sandstones Timeless Beauty",
       "h1Html": "Indian <span class=\"highlight\">Sandstones</span> Timeless Beauty",
       "description": "Sandstone combines natural texture, durability, and warm earthy tones, making it a versatile choice for wall cladding, paving, flooring, landscaping, and architectural applications where both strength and timeless aesthetics are essential."
@@ -2702,6 +2731,7 @@
     "metaDescription": "Explore our stone art collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Custom Stone Art",
       "h1Html": "<span class=\"highlight\">Custom Stone Art</span>",
       "description": "Stone art pieces are crafted to create visual focal points using natural stone forms textures and detailing that add character depth and artistic expression to interior and exterior architectural spaces."
@@ -2735,6 +2765,7 @@
     "metaDescription": "Explore our stone collection collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Stone Collection",
       "h1Html": "Stone <span class=\"highlight\">Collection</span>",
       "description": "The Stone Collection delivers versatile surface solutions that combine durability, natural character, and refined design flexibility — making it ideal for floors, walls, and functional spaces across residential, commercial, and high-traffic environments."
@@ -2816,6 +2847,7 @@
     "metaDescription": "Explore our subway tiles collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Subway Tiles Collection",
       "h1Html": "Subway <span class=\"highlight\">Tiles</span> Collection",
       "description": "The Subway Tiles Collection delivers timeless surface solutions that combine durability, clean design lines, and easy maintenance — making it ideal for walls, feature areas, kitchens, bathrooms, and functional spaces across residential and commercial environments."
@@ -2867,6 +2899,7 @@
     "metaDescription": "Vitrified and stone tile collections for flooring and walls.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Premium Tiles Collection",
       "h1Html": "Premium <span class=\"highlight\">Tiles</span> Collection",
       "description": "Tiles offer versatile surface solutions combining durability design flexibility and easy maintenance making them suitable for floors walls and functional spaces across residential commercial and high traffic environments."
@@ -3325,6 +3358,7 @@
     "metaDescription": "Stone cladding solutions for interior and exterior walls.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Stone Cladding Collection",
       "h1Html": "Stone <span class=\"highlight\">Cladding</span> Collection",
       "description": "Wall claddings enhance vertical surfaces by adding texture, depth, and material character while offering refined visual definition across residential, commercial, and architectural environments."
@@ -3566,6 +3600,7 @@
     "metaDescription": "Explore our wire cut bricks collection at S K Stones India.",
     "hero": {
       "tagline": "Crafting Timeless Spaces",
+      "taglineHtml": "Crafting <span class=\"highlight\">Timeless</span> Spaces",
       "h1": "Wire Cut Bricks",
       "h1Html": "Wire <span class=\"highlight\">Cut</span> Bricks",
       "description": "Wire cut bricks deliver clean linear aesthetics, dimensional precision, and consistent surface texture — making them ideal for architectural facades, partitions, ventilated walls, and contemporary design applications."

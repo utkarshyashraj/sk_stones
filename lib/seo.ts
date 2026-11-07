@@ -1,80 +1,30 @@
-import type { Metadata } from 'next';
+import refImages from '@/content/ref-images.json';
 import { imageUrl, pickWidth } from './image-url';
-import { absoluteUrl, site, SITE_ORIGIN, SITE_URL } from './site';
-import type { Crumb, ImageRef } from './types';
+import { getImage } from './images';
+import { CANONICAL_ORIGIN } from './ref-seo';
+import { site, SITE_ORIGIN } from './site';
 
-interface PageSeo {
-  title: string;
-  description: string;
-  path: string;
-  image?: ImageRef | null;
-  noindex?: boolean;
-  type?: 'website' | 'article';
-}
+/** Serialise JSON-LD for a <script type="application/ld+json"> (escapes `<` so it cannot close the tag). */
+export const jsonLdScript = (data: unknown) => ({ __html: JSON.stringify(data).replace(/</g, '\u003c') });
 
-// Absolute URLs: a relative one would be resolved against the host root, dropping any base path.
-const DEFAULT_OG = {
-  url: absoluteUrl('/images/site/project-ritz-carlton-1024.webp'),
-  width: 1024,
-  height: 672,
-};
-
-export function ogImage(image?: ImageRef | null) {
-  if (!image) return DEFAULT_OG;
-  const w = pickWidth(image, 1200);
-  return {
-    url: `${SITE_ORIGIN}${imageUrl(image.key, w)}`,
-    width: w,
-    height: Math.round((image.h / image.w) * w),
-  };
-}
-
-export function buildMetadata({
-  title,
-  description,
-  path,
-  image,
-  noindex,
-  type = 'website',
-}: PageSeo): Metadata {
-  const og = ogImage(image);
-  return {
-    title: { absolute: title },
-    description,
-    alternates: { canonical: path },
-    robots: noindex ? { index: false, follow: true } : { index: true, follow: true },
-    openGraph: {
-      type,
-      url: path,
-      title,
-      description,
-      siteName: site.name,
-      locale: 'en_IN',
-      images: [{ url: og.url, width: og.width, height: og.height, alt: title }],
-    },
-    twitter: { card: 'summary_large_image', title, description, images: [og.url] },
-  };
-}
-
-// ---------- JSON-LD ----------
-export const jsonLdScript = (data: object) => ({ __html: JSON.stringify(data).replace(/</g, '\\u003c') });
-
+/**
+ * LocalBusiness structured data, as the reference site's js/seo-schema.js declares it — rendered at build time
+ * instead of injected by script. The image points at the self-hosted copy of the same photo.
+ */
 export function localBusinessLd() {
+  const img = getImage((refImages.images as Record<string, string>)['images/project-luxury-lobby.png']!);
   return {
     '@context': 'https://schema.org',
-    '@type': 'HomeAndConstructionBusiness',
-    '@id': `${SITE_URL}/#business`,
+    '@type': 'LocalBusiness',
     name: site.name,
-    legalName: site.legalName,
     alternateName: site.formerName,
     description:
       'Premium natural stone supplier, fabricator and installer in Bengaluru. Granites, marbles, cladding, flooring and custom stone art since 2014.',
-    url: SITE_URL,
-    telephone: site.phone.e164,
+    url: CANONICAL_ORIGIN,
+    telephone: '+91-70226-30994',
     email: site.email,
-    image: DEFAULT_OG.url,
-    logo: absoluteUrl('/images/site/sk-mark-transparent-480.webp'),
-    foundingDate: String(site.foundedYear),
+    image: `${SITE_ORIGIN}${imageUrl(img.key, pickWidth(img, 1200))}`,
+    priceRange: '₹₹₹',
     address: {
       '@type': 'PostalAddress',
       streetAddress: site.address.street,
@@ -90,63 +40,10 @@ export function localBusinessLd() {
       opens: site.hours.opens,
       closes: site.hours.closes,
     },
-    hasMap: site.maps.place,
-    sameAs: [site.maps.place, site.linkedin],
+    sameAs: [
+      'https://wa.me/917022630994',
+      'https://www.google.com/maps/place/S+K+STONES+INDIA+PVT+LTD/@12.9350616,77.6283894,17z',
+    ],
     areaServed: site.areaServed,
-    knowsAbout: ['Granite', 'Marble', 'Natural stone', 'Stone cladding', 'Stone flooring', 'Stone art'],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: site.phone.e164,
-      contactType: 'sales',
-      areaServed: 'IN',
-      availableLanguage: ['en', 'hi', 'kn'],
-    },
-    slogan: site.tagline,
-  };
-}
-
-export function breadcrumbLd(crumbs: Crumb[]) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: crumbs.map((c, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      name: c.name,
-      item: absoluteUrl(c.href),
-    })),
-  };
-}
-
-/**
- * Category pages list their stones as an ItemList. Products carry no price, availability or
- * reviews on this site, so schema.org Product (which Google expects with offers/reviews) is
- * intentionally not used — see docs/AUDIT-REPORT.md.
- */
-export function itemListLd(name: string, path: string, items: { name: string; image: ImageRef | null }[]) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name,
-    url: absoluteUrl(path),
-    numberOfItems: items.length,
-    itemListElement: items.map((it, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      name: it.name,
-      ...(it.image ? { image: `${SITE_ORIGIN}${imageUrl(it.image.key, pickWidth(it.image, 800))}` } : {}),
-    })),
-  };
-}
-
-export function faqLd(items: { q: string; a: string }[]) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: items.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
   };
 }

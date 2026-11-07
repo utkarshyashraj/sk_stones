@@ -260,7 +260,8 @@ const outCategories = categories.map((c, order) => {
     const image = page.overview.image
       ? addJob(`categories/${c.slug}-overview`, page.overview.image, 'site')
       : null;
-    overview = { paragraphs, bullets, image };
+    // `html`: the reference overview markup verbatim (only <p>, <ul>, <li>, <strong>, <br> occur).
+    overview = { paragraphs, bullets, image, html };
   }
   // card image: explicit legacy hub image > lifestyle image > first product photo
   let cardImage = null;
@@ -282,6 +283,8 @@ const outCategories = categories.map((c, order) => {
     ...rest,
     order,
     legacySource,
+    overview,
+    cardImage,
     hasPage: PAGE_KINDS.has(c.kind) && Boolean(page),
     // Reference page copy, verbatim (title, meta, hero, grid heading).
     refPage: page

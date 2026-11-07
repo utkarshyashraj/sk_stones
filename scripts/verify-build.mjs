@@ -9,7 +9,7 @@ import path from 'node:path';
 const ROOT = path.resolve(import.meta.dirname, '..');
 const OUT = path.join(ROOT, 'out');
 const SITE = 'https://skstonesindia.com';
-const NOINDEX = new Set(['/search', '/thank-you', '/404', '/_not-found']);
+const NOINDEX = new Set(['/thank-you', '/404', '/_not-found']);
 const problems = [];
 const warn = (m) => problems.push(m);
 
@@ -67,7 +67,9 @@ for (const name of htmlFiles) {
   } else if (!robotsMeta.includes('noindex') && route !== '/_not-found' && route !== '/404')
     warn(`${route}: utility page should be noindex`);
 
-  const h1s = (html.match(/<h1[\s>]/g) || []).length;
+  // The homepage's phone "More" view has its own heading, shown only when the hero (and its h1) is hidden.
+  const h1s = (html.replace(/<div class="mobile-more-intro[\s\S]*?<\/div>/, '').match(/<h1[\s>]/g) || [])
+    .length;
   if (h1s !== 1) warn(`${route}: ${h1s} <h1> elements`);
   if (html.includes('hostingersite.com')) warn(`${route}: references staging host`);
   if (/href="#"/.test(html)) warn(`${route}: contains href="#"`);
@@ -81,8 +83,7 @@ for (const name of htmlFiles) {
       warn(`${route}: invalid JSON-LD`);
     }
   }
-  if (!isUtility && !html.includes('"HomeAndConstructionBusiness"'))
-    warn(`${route}: LocalBusiness JSON-LD missing`);
+  if (!isUtility && !html.includes('"LocalBusiness"')) warn(`${route}: LocalBusiness JSON-LD missing`);
 
   for (const m of html.matchAll(/<a\b[^>]*href="([^"]+)"/g)) {
     const href = m[1].replace(/&amp;/g, '&');
@@ -123,17 +124,22 @@ for (const line of redirects.split('\n')) {
   if (!fileFor(m[2])) warn(`redirect ${m[1]} -> ${m[2]} targets a missing page`);
 }
 
-// ---- catalog index ----
-const catalog = JSON.parse(fs.readFileSync(path.join(OUT, 'data/catalog.json'), 'utf8'));
+// ---- catalogue images: every product's renditions exist in the export ----
+const catalog = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/generated/catalog.json'), 'utf8'));
+const imageMeta = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/generated/images.json'), 'utf8'));
 for (const p of catalog.products) {
-  if (!p.img) continue;
-  for (const w of p.img.widths)
-    if (!fs.existsSync(path.join(OUT, 'images', `${p.img.key}-${w}.webp`)))
-      warn(`catalog image missing: ${p.img.key}-${w}`);
+  const meta = p.image && (imageMeta.images ?? imageMeta)[p.image];
+  if (!meta) {
+    warn(`product without image metadata: ${p.id}`);
+    continue;
+  }
+  for (const w of meta.widths)
+    if (!fs.existsSync(path.join(OUT, 'images', `${p.image}-${w}.webp`)))
+      warn(`catalog image missing: ${p.image}-${w}`);
 }
 
 console.log(
-  `verify-build: ${htmlFiles.length} pages, ${sitemapRoutes.length} sitemap URLs, ${links} internal links, ${images} <img>, ${jsonLdBlocks} JSON-LD blocks, ${redirectCount} redirects, ${catalog.products.length} indexed products`,
+  `verify-build: ${htmlFiles.length} pages, ${sitemapRoutes.length} sitemap URLs, ${links} internal links, ${images} <img>, ${jsonLdBlocks} JSON-LD blocks, ${redirectCount} redirects, ${catalog.products.length} catalogue products`,
 );
 if (problems.length) {
   console.error(`\n${problems.length} problem(s):\n- ${[...new Set(problems)].join('\n- ')}`);

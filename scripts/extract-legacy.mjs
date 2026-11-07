@@ -51,6 +51,7 @@ for (const file of fs
     metaDescription: decode(pick(/<meta name="description" content="([^"]*)"/, html) || ''),
     hero: {
       tagline: text(pick(/<p class="page-hero-tagline">([\s\S]*?)<\/p>/, hero) || ''),
+      taglineHtml: (pick(/<p class="page-hero-tagline">([\s\S]*?)<\/p>/, hero) || '').trim(),
       h1: text(pick(/<h1[^>]*>([\s\S]*?)<\/h1>/, hero) || ''),
       h1Html: (pick(/<h1[^>]*>([\s\S]*?)<\/h1>/, hero) || '').trim(),
       description: text(pick(/<p class="page-hero-description">([\s\S]*?)<\/p>/, hero) || ''),

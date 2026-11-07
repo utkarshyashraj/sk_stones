@@ -6,6 +6,7 @@ import { mobileMoreSheet, mobileProductsSheet, servicesMenu, type NavLink } from
 import { withBase } from '@/lib/base-path';
 import { site, telHref, whatsappHref } from '@/lib/site';
 import { Fa } from './Fa';
+import { useClientValue } from './useClient';
 
 export type TabKey = 'home' | 'about' | 'products' | 'services' | 'projects' | 'more' | null;
 type Sheet = 'products' | 'services' | 'more';
@@ -67,16 +68,15 @@ const svg = (k: Exclude<TabKey, null>) => (
  */
 export function MobileBottomNav({ active }: { active: TabKey }) {
   const [open, setOpen] = useState<Sheet | null>(null);
-  const [tab, setTab] = useState<TabKey>(active);
-  const sheetRef = useRef<HTMLDivElement>(null);
-
   // The homepage's "More" view (?view=more on phones) highlights the More tab, as on the reference.
-  useEffect(() => {
-    const more =
+  const moreView = useClientValue(
+    () =>
       new URLSearchParams(window.location.search).get('view') === 'more' &&
-      window.matchMedia('(max-width: 1024px)').matches;
-    if (more) setTab('more');
-  }, []);
+      window.matchMedia('(max-width: 1024px)').matches,
+    false,
+  );
+  const tab: TabKey = moreView ? 'more' : active;
+  const sheetRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!open) return;

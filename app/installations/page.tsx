@@ -1,7 +1,9 @@
-import { ServicePageView, serviceMetadata } from '@/components/templates/ServicePageView';
+import { ServicePageTemplate } from '@/components/ref/ServicePageTemplate';
+import { pageMetadata } from '@/lib/ref-seo';
+import '@/styles/ref/installations.css';
 
-export const metadata = serviceMetadata('installations');
+export const metadata = pageMetadata('installations', '/installations');
 
 export default function Page() {
-  return <ServicePageView slug="installations" />;
+  return <ServicePageTemplate slug="installations" />;
 }

@@ -1,107 +1,68 @@
 import Link from 'next/link';
-import { Collections } from '@/components/marketing/Collections/Collections';
-import { CTA } from '@/components/marketing/CTA/CTA';
-import { PageHero } from '@/components/marketing/PageHero/PageHero';
-import { Icon } from '@/components/ui/Icon';
-import { allProducts, childCategories, imageOrNull, topLevelCategories } from '@/lib/catalog';
-import { buildMetadata } from '@/lib/seo';
-import styles from './products.module.css';
+import { Fa } from '@/components/ref/Fa';
+import { RefImg } from '@/components/ref/RefImg';
+import { RefShell } from '@/components/ref/RefShell';
+import { cardPage, imageOf } from '@/lib/ref-catalog';
+import { pageMetadata } from '@/lib/ref-seo';
+import '@/styles/ref/product.css';
 
-export const metadata = buildMetadata({
-  title: 'All Products | Granites, Marbles, Natural Stones & More | S K Stones India',
-  description:
-    'Explore 460+ stones from S K Stones India: marbles, granites, natural stones, quartz and acrylic surfaces, wall claddings, tiles, clay products and stone art.',
-  path: '/products',
-});
+export const metadata = pageMetadata('products', '/products');
 
+/** Reference "Our Products" overview: hero panel + one card per collection ("Know More"). */
 export default function ProductsPage() {
-  const categories = topLevelCategories();
-  const total = allProducts().length;
+  const cards = cardPage('products')!.cards;
   return (
-    <>
-      <PageHero
-        crumbs={[
-          { name: 'Home', href: '/' },
-          { name: 'Products', href: '/products' },
-        ]}
-        title={
-          <>
-            Our <span className="accent">products</span>
-          </>
-        }
-        lead={
-          <p>
-            We offer a curated range of premium marbles, granites, natural stones, engineered surfaces, stone
-            art, and cladding solutions selected for quality, durability, and design versatility.
-          </p>
-        }
-        actions={
-          <>
-            <Link href="/search" className="btn btn--primary">
-              <Icon name="search" /> Search all {total} stones
-            </Link>
-            <Link href="/contact#quote" className="btn btn--outline">
-              Get in touch
-            </Link>
-          </>
-        }
-      />
-      <section className="section veil-text" aria-labelledby="cats-title">
-        <div className="container">
-          <div className="section-head">
-            <h2 id="cats-title">Shop by category</h2>
+    <RefShell bundle="product" nav="products" tab="products" footer="container-grid" headerScrolled>
+      <section className="page-hero product-hero-panel">
+        <div className="product-hero-top">
+          <div className="page-hero-content product-hero-panel-inner">
+            <span className="page-badge">Our Collection</span>
+            <h1>
+              Our <span className="gold">Products</span>
+            </h1>
             <p>
-              Nine categories and {categories.reduce((n, c) => n + childCategories(c.slug).length, 0)}{' '}
-              collections. Every stone can be viewed up close, shortlisted and enquired about.
+              We offer a curated range of premium marbles, granites, natural stones, engineered surfaces,
+              stone art, and cladding solutions selected for quality, durability, and design versatility.
             </p>
+            <div className="page-hero-actions">
+              <a href="#products" className="btn btn-primary">
+                Explore Collection
+              </a>
+              <Link className="btn btn-outline-light" href="/contact">
+                Get In Touch
+              </Link>
+            </div>
           </div>
-          <Collections
-            headingLevel={3}
-            items={categories.map((c) => ({
-              href: `/${c.slug}`,
-              name: c.name,
-              description: c.cardDescription,
-              count: c.productCount,
-              image: imageOrNull(c.cardImage),
-            }))}
-          />
         </div>
       </section>
-      <section className="section section--tint" aria-labelledby="index-title">
+      <section className="products-page" id="products">
         <div className="container">
-          <div className="section-head">
-            <h2 id="index-title">All collections at a glance</h2>
-          </div>
-          <div className={styles.index}>
-            {categories.map((c) => (
-              <div key={c.slug} className={styles.group}>
-                <h3>
-                  <Link href={`/${c.slug}`}>{c.name}</Link>
-                </h3>
-                {childCategories(c.slug).length ? (
-                  <ul>
-                    {childCategories(c.slug).map((k) => (
-                      <li key={k.slug}>
-                        <Link href={`/${k.slug}`}>
-                          {k.name} <span>({k.productCount})</span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className={styles.single}>
-                    {c.productCount ? `${c.productCount} varieties` : 'Supplied to order'}
-                  </p>
-                )}
-              </div>
-            ))}
+          <div className="products-categories">
+            {cards.map((c) => {
+              const img = imageOf(c.image);
+              return (
+                <div key={c.href} className="category-card">
+                  <div className="category-image">
+                    {img ? <RefImg image={img} alt={c.name} sizes="(min-width: 1025px) 33vw, 90vw" /> : null}
+                    <div className="category-overlay">
+                      <Link className="btn btn-primary" href={c.href}>
+                        Know More
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="category-info">
+                    <h3>{c.name}</h3>
+                    <p>{c.description}</p>
+                    <Link className="category-link" href={c.href}>
+                      Know More <Fa name="arrow-right" />
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
-      <CTA
-        heading="Not sure which stone suits your space?"
-        text="Tell us about your project and our specialists will shortlist the right materials for you."
-      />
-    </>
+    </RefShell>
   );
 }

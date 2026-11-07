@@ -3,8 +3,9 @@ import { Enhance } from '@/components/ref/Enhance';
 import { FAQAccordion } from '@/components/ref/FAQAccordion';
 import { Fa } from '@/components/ref/Fa';
 import { HomeVideo } from '@/components/ref/HomeVideo';
+import { Lightbox } from '@/components/ref/Lightbox';
 import { MoreView } from '@/components/ref/MoreView';
-import { RefImg } from '@/components/ref/RefImg';
+import { RefImg, refImage } from '@/components/ref/RefImg';
 import { RefShell } from '@/components/ref/RefShell';
 import { SectionHeading } from '@/components/ref/SectionHeading';
 import { ServiceCard } from '@/components/ref/ServiceCard';
@@ -21,6 +22,7 @@ import {
   whoWeAre,
   whyCards,
 } from '@/content/ref/home';
+import { fullAndZoom } from '@/lib/ref-catalog';
 import { pageMetadata } from '@/lib/ref-seo';
 import { site } from '@/lib/site';
 import '@/styles/ref/home.css';
@@ -295,6 +297,14 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+        <Lightbox
+          grid=".gallery-grid"
+          item=".gallery-item"
+          items={gallery.map((g) => {
+            const { full, zoom } = fullAndZoom(refImage(g.image));
+            return { src: full, zoom, alt: g.alt };
+          })}
+        />
       </section>
 
       {/* 9. FAQ */}

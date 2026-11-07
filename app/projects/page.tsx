@@ -1,71 +1,77 @@
-import { CaseStudies } from '@/components/marketing/CaseStudies/CaseStudies';
-import { CTA } from '@/components/marketing/CTA/CTA';
-import { Gallery } from '@/components/marketing/Gallery/Gallery';
-import { PageHero } from '@/components/marketing/PageHero/PageHero';
-import { caseStudies, projectGallery } from '@/content/pages';
-import { getSiteImage } from '@/lib/images';
-import { buildMetadata } from '@/lib/seo';
+import Link from 'next/link';
+import { Enhance } from '@/components/ref/Enhance';
+import { Fa } from '@/components/ref/Fa';
+import { ProjectsLightbox } from '@/components/ref/ProjectsLightbox';
+import { RefImg, refImage } from '@/components/ref/RefImg';
+import { RefShell } from '@/components/ref/RefShell';
+import { projectBlocks } from '@/content/ref/projects';
+import { fullAndZoom } from '@/lib/ref-catalog';
+import { pageMetadata } from '@/lib/ref-seo';
+import '@/styles/ref/projects.css';
 
-export const metadata = buildMetadata({
-  title: 'Our Projects & Case Studies | S K Stones India',
-  description:
-    'Stone projects by S K Stones India: luxury hotel façade cladding, villa marble flooring, airport and hospital lobbies, wall cladding and custom stone art.',
-  path: '/projects',
-  image: getSiteImage('project-ritz-carlton'),
-});
+export const metadata = pageMetadata('projects', '/projects');
 
 export default function ProjectsPage() {
   return (
-    <>
-      <PageHero
-        crumbs={[
-          { name: 'Home', href: '/' },
-          { name: 'Projects', href: '/projects' },
-        ]}
-        title={
-          <>
-            Our <span className="accent">projects</span>
-          </>
-        }
-        lead={
-          <p>
-            Featured case studies and our full project gallery — premium natural stones for homes, offices &
-            commercial spaces. Trusted by architects and builders across India.
-          </p>
-        }
-        background={getSiteImage('gallery-hotel-reception')}
+    <RefShell
+      bundle="projects"
+      bodyClass="showroom-theme page-projects"
+      nav="projects"
+      tab="projects"
+      footer="content-p"
+    >
+      <Enhance />
+      <ProjectsLightbox
+        images={projectBlocks.flatMap((b) =>
+          b.images.map((img) => ({ src: fullAndZoom(refImage(img.src)).full, alt: img.alt })),
+        )}
       />
-      <section className="section section--dark" aria-labelledby="cases-title">
-        <div className="container">
-          <div className="section-head">
-            <h2 id="cases-title">How we deliver at scale</h2>
-          </div>
-          <CaseStudies
-            items={caseStudies.map((c) => ({
-              href: `/${c.slug}`,
-              sector: c.sector,
-              title: c.cardTitle,
-              text: c.cardText,
-              image: getSiteImage(c.images[0]!.key),
-            }))}
-          />
+      <section className="hero">
+        <div className="glass-text-panel hero-copy">
+          <h1>
+            Our Happy <span>Clients</span>
+          </h1>
         </div>
       </section>
-      <section className="section veil-mid" aria-labelledby="gallery-title">
-        <div className="container">
-          <div className="section-head">
-            <h2 id="gallery-title">See the craft</h2>
+
+      <section className="projects-section">
+        {projectBlocks.map((b) => (
+          <article key={b.id} className="project-block" id={b.id}>
+            <header className="project-block-header">
+              <RefImg className="project-block-logo" src={b.logo} alt={b.logoAlt} sizes="120px" />
+              <div>
+                {/* Reference title markup: the second word(s) in a gold <span>. */}
+                <h2 className="project-block-title" dangerouslySetInnerHTML={{ __html: b.titleHtml }} />
+                <p className="project-block-note">{b.note}</p>
+              </div>
+            </header>
+            <div className="project-block-grid">
+              {b.images.map((img) => (
+                <div key={img.src} className="project-item">
+                  <RefImg src={img.src} alt={img.alt} sizes="(min-width: 1025px) 25vw, 50vw" />
+                  <div className="project-overlay">
+                    <Fa name="search-plus" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </article>
+        ))}
+      </section>
+
+      <section className="cta-section reveal">
+        <div className="cta-content">
+          <h2>
+            Ready to Start Your <span>Project?</span>
+          </h2>
+          <p>Let us help you transform your space with premium stone craftsmanship.</p>
+          <div className="cta-actions">
+            <Link className="btn btn-primary" href="/contact">
+              Get Started Today
+            </Link>
           </div>
-          <Gallery
-            label="Project gallery"
-            images={projectGallery.map((g) => ({ image: getSiteImage(g.key), alt: g.alt }))}
-          />
         </div>
       </section>
-      <CTA
-        heading="Ready to start your project?"
-        text="Let us help you transform your space with premium stone craftsmanship."
-      />
-    </>
+    </RefShell>
   );
 }

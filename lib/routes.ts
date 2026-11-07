@@ -1,5 +1,6 @@
-import { caseStudies, services } from '@/content/pages';
-import { allCategories, retiredLegacyPages } from './catalog';
+import catalog from '@/content/generated/catalog.json';
+import { servicePages } from '@/content/ref/services';
+import { productPageSlugs } from './ref-catalog';
 
 export interface RouteInfo {
   path: string;
@@ -15,25 +16,24 @@ export function indexableRoutes(): RouteInfo[] {
     { path: '/contact', priority: 0.9, changeFrequency: 'monthly' },
     { path: '/about', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/projects', priority: 0.8, changeFrequency: 'monthly' },
-    ...services.map((s) => ({ path: `/${s.slug}`, priority: 0.8, changeFrequency: 'monthly' as const })),
-    ...caseStudies.map((c) => ({ path: `/${c.slug}`, priority: 0.6, changeFrequency: 'monthly' as const })),
-    ...allCategories().map((c) => ({
-      path: `/${c.slug}`,
-      priority: c.parent ? 0.7 : 0.8,
+    ...Object.keys(servicePages).map((s) => ({
+      path: `/${s}`,
+      priority: 0.8,
       changeFrequency: 'monthly' as const,
     })),
+    ...productPageSlugs().map((s) => ({ path: `/${s}`, priority: 0.7, changeFrequency: 'monthly' as const })),
   ];
 }
 
 /** Public but intentionally not indexed. */
-export const noindexRoutes = ['/search', '/thank-you'];
+export const noindexRoutes = ['/thank-you'];
 
 /**
- * 301 redirects for URLs that changed. Legacy `.html` URLs are redirected to their pretty form,
- * plus renamed/retired pages (e.g. /quatrz-surfaces -> /quartz-surfaces).
+ * 301 redirects for URLs that changed: legacy `.html` URLs to their pretty form, plus renamed/retired
+ * pages (e.g. /quartz-surfaces -> /quatrz-surfaces, /case-study-* -> /projects).
  */
 export function legacyRedirects(legacyHtmlPages: string[]): { from: string; to: string }[] {
-  const retired = new Map(retiredLegacyPages().map((r) => [r.slug, `/${r.redirectTo}`]));
+  const retired = new Map(catalog.retiredLegacyPages.map((r) => [r.slug, `/${r.redirectTo}`]));
   const out: { from: string; to: string }[] = [];
   for (const [slug, to] of retired) out.push({ from: `/${slug}`, to });
   for (const page of legacyHtmlPages) {

@@ -6,7 +6,7 @@ import { Fa } from './Fa';
  * show only the copyright bar. The wrapper markup differs slightly between reference page types and the
  * page stylesheets target those exact classes, so the variant picks the matching structure.
  */
-export type FooterVariant = 'content' | 'grid' | 'container-grid' | 'bottom-only';
+export type FooterVariant = 'content' | 'content-p' | 'grid' | 'container-grid' | 'bottom-only';
 
 export function Footer({ variant }: { variant: FooterVariant }) {
   const bottom = (
@@ -21,7 +21,7 @@ export function Footer({ variant }: { variant: FooterVariant }) {
   const grid = (
     <div
       className={
-        variant === 'content'
+        variant === 'content' || variant === 'content-p'
           ? 'footer-content footer-content-contact-only'
           : 'footer-grid footer-grid-contact-only'
       }

@@ -1,7 +1,9 @@
-import { ServicePageView, serviceMetadata } from '@/components/templates/ServicePageView';
+import { ServicePageTemplate } from '@/components/ref/ServicePageTemplate';
+import { pageMetadata } from '@/lib/ref-seo';
+import '@/styles/ref/landscaping.css';
 
-export const metadata = serviceMetadata('landscaping');
+export const metadata = pageMetadata('landscaping', '/landscaping');
 
 export default function Page() {
-  return <ServicePageView slug="landscaping" />;
+  return <ServicePageTemplate slug="landscaping" />;
 }

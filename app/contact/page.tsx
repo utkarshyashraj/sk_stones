@@ -1,106 +1,141 @@
-import { QuoteForm } from '@/components/forms/QuoteForm/QuoteForm';
-import { FAQ } from '@/components/marketing/FAQ/FAQ';
-import { PageHero } from '@/components/marketing/PageHero/PageHero';
-import { Icon } from '@/components/ui/Icon';
-import { contactFaqs } from '@/content/pages';
-import { buildMetadata } from '@/lib/seo';
-import { fullAddress, site, telHref, whatsappHref } from '@/lib/site';
-import styles from './contact.module.css';
+import { ContactFormModal } from '@/components/ref/ContactFormModal';
+import { FAQAccordion } from '@/components/ref/FAQAccordion';
+import { Fa } from '@/components/ref/Fa';
+import { RefShell } from '@/components/ref/RefShell';
+import { pageMetadata } from '@/lib/ref-seo';
+import { site, telHref, whatsappHref } from '@/lib/site';
+import '@/styles/ref/contact.css';
 
-export const metadata = buildMetadata({
-  title: 'Contact Us & Get a Quote | S K Stones India, Koramangala, Bengaluru',
-  description:
-    'Request a free stone quote or visit our Koramangala showroom. Call or WhatsApp +91 70226 30994, email info@skstonesindia.com. We reply within 24 hours.',
-  path: '/contact',
-});
+export const metadata = pageMetadata('contact', '/contact');
+
+const quickAnswers = [
+  {
+    q: 'How quickly will I receive a quote?',
+    a: 'We typically respond within 24 hours on business days. For urgent projects, call or WhatsApp us directly at +91 70226 30994.',
+  },
+  {
+    q: 'What details should I include in my enquiry?',
+    a: 'Stone type, approximate quantity or area (sq. ft.), site location, thickness/size requirements, and whether you need supply only or full installation.',
+  },
+  {
+    q: 'Can I schedule a showroom visit?',
+    a: 'Yes — walk in during business hours or mention your preferred date in the form. Our Koramangala showroom has live stone samples across granites, marbles, and claddings.',
+  },
+];
 
 export default function ContactPage() {
   return (
-    <>
-      <PageHero
-        crumbs={[
-          { name: 'Home', href: '/' },
-          { name: 'Contact Us', href: '/contact' },
-        ]}
-        title={
-          <>
-            Get in <span className="accent">touch</span>
-          </>
-        }
-        lead={
+    <RefShell bundle="contact" nav="contact" tab="more" footer="grid">
+      <section className="contact-section">
+        <div className="contact-intro">
+          <h1>
+            Get In <span>Touch</span>
+          </h1>
           <p>
-            Reach out for project discussions, product enquiries, or site consultations. Our team is available
-            to assist you with timely and professional responses.
+            Reach out for project discussions, product enquiries, or site consultations. Choose your nearest
+            location — our team is ready to assist with timely, professional responses.
           </p>
-        }
-      />
-      <section className="section veil-text" aria-label="Contact details and quote form">
-        <div className={`container ${styles.layout}`}>
-          <div className={styles.info}>
-            <ul className={styles.cards}>
-              <li>
-                <div>
-                  <h2>Phone</h2>
-                  <a href={telHref}>{site.phone.display}</a>
+        </div>
+        <div className="contact-cities">
+          {site.offices.map((o) => {
+            const id = `city-${o.city.toLowerCase()}`;
+            return (
+              <article key={o.city} className="contact-city-card" aria-labelledby={id}>
+                <p className="contact-city-label">
+                  <Fa name="map-marker-alt" /> Location
+                </p>
+                <h2 id={id}>{o.city}</h2>
+                <div className="contact-blocks">
+                  <div className="contact-block">
+                    <div className="contact-icon">
+                      <Fa name="phone" />
+                    </div>
+                    <div>
+                      <h4>Phone</h4>
+                      <a href={telHref}>{site.phone.display}</a>
+                    </div>
+                  </div>
+                  <div className="contact-block">
+                    <div className="contact-icon">
+                      <Fa name="envelope" />
+                    </div>
+                    <div>
+                      <h4>Email</h4>
+                      <a href={`mailto:${site.email}`}>{site.email}</a>
+                    </div>
+                  </div>
+                  <div className="contact-block">
+                    <div className="contact-icon">
+                      <Fa name="map-marker-alt" />
+                    </div>
+                    <div>
+                      <h4>Address</h4>
+                      <p>{o.address}</p>
+                    </div>
+                  </div>
                 </div>
-              </li>
-              <li>
-                <div>
-                  <h2>WhatsApp</h2>
-                  <a
-                    href={whatsappHref('Hi S K Stones India, I have an enquiry.')}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Chat with us
-                  </a>
+                <div className="contact-map">
+                  <iframe
+                    src={o.mapEmbed}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={o.mapTitle}
+                  />
                 </div>
-              </li>
-              <li className={styles.wide}>
-                <div>
-                  <h2>Email</h2>
-                  <a href={`mailto:${site.email}`}>{site.email}</a>
-                </div>
-              </li>
-              <li className={styles.wide}>
-                <div>
-                  <h2>Showroom hours</h2>
-                  <p>{site.hours.label}</p>
-                </div>
-              </li>
-              <li className={styles.wide}>
-                <div>
-                  <h2>Showroom address</h2>
-                  <p>{fullAddress}</p>
-                  <a href={site.maps.place} target="_blank" rel="noopener noreferrer" className="link-arrow">
-                    Open in Google Maps <Icon name="external" />
-                  </a>
-                </div>
-              </li>
-            </ul>
-            <div className={styles.map}>
-              <iframe
-                title="Map showing the S K Stones India showroom in Koramangala, Bengaluru"
-                src={site.maps.embed}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                allowFullScreen
-              />
-            </div>
-          </div>
-          <div id="quote" className={styles.formCol}>
-            <QuoteForm />
+                <button type="button" className="open-form-btn" data-location={o.city} data-open-form="">
+                  <Fa name="file-alt" /> Open Form
+                </button>
+              </article>
+            );
+          })}
+        </div>
+        <div className="follow-us">
+          <p>Follow us:</p>
+          <div className="social-row">
+            <a
+              href={site.linkedin}
+              className="social-btn linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <Fa name="linkedin-in" />
+            </a>
+            <a
+              href={whatsappHref()}
+              className="social-btn whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <Fa name="whatsapp" />
+            </a>
+            <a href={`mailto:${site.email}`} className="social-btn email" aria-label="Email">
+              <Fa name="envelope" />
+            </a>
           </div>
         </div>
       </section>
-      <section className="section section--tint" aria-labelledby="faq-title">
-        <div className="container">
-          <div className="section-head">
-            <h2 id="faq-title">Quick answers</h2>
+      <ContactFormModal />
+
+      <section className="faq-section" id="faq">
+        <div className="faq-container">
+          <div className="section-header">
+            <h2
+              style={{
+                fontFamily: 'var(--font-playfair), serif',
+                fontSize: '2rem',
+                textTransform: 'uppercase',
+                marginBottom: 12,
+              }}
+            >
+              Quick <span style={{ color: 'var(--gold)' }}>Answers</span>
+            </h2>
           </div>
-          <FAQ items={contactFaqs} />
+          <FAQAccordion items={quickAnswers} />
         </div>
       </section>
-    </>
+    </RefShell>
   );
 }

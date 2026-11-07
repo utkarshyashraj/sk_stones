@@ -1,0 +1,140 @@
+import Link from 'next/link';
+import { cardPage, fullAndZoom, imageOf, productsOf, type RefCategory } from '@/lib/ref-catalog';
+import { Fa } from './Fa';
+import { Lightbox } from './Lightbox';
+import { RefImg } from './RefImg';
+import { RefShell } from './RefShell';
+
+/**
+ * The reference's shared product-page layout, driven entirely by catalogue data: hero panel, product
+ * overview (collection pages), then either the product grid (with the fullscreen viewer + magnifier) or,
+ * for the Marbles overview, the collection cards. One template for every product, hub and collection route.
+ */
+export function ProductPageTemplate({ category }: { category: RefCategory }) {
+  const page = category.refPage!;
+  const products = productsOf(category);
+  const cards = cardPage(category.slug);
+  const overviewImg = imageOf(category.overview?.image ?? null);
+  return (
+    <RefShell
+      bundle="product"
+      nav="products"
+      tab="products"
+      footer="bottom-only"
+      headerScrolled
+      backToTop={false}
+    >
+      <section className="page-hero product-hero-banner product-hero-panel">
+        <div className="product-hero-top">
+          <div className="page-hero-content product-hero-panel-inner">
+            <p className="page-hero-tagline" dangerouslySetInnerHTML={{ __html: page.hero.taglineHtml }} />
+            <h1 dangerouslySetInnerHTML={{ __html: page.hero.h1Html }} />
+            <p className="page-hero-description">{page.hero.description}</p>
+            <div className="page-hero-actions">
+              <a href="#product-grid" className="btn btn-primary">
+                {cards ? 'Explore Collections' : 'Explore Our Collection'}
+              </a>
+              <Link className="btn btn-outline-light" href="/contact">
+                Get In Touch
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {category.overview ? (
+        <section className="product-overview-section">
+          <div className="container">
+            <div className="product-overview-grid">
+              {overviewImg ? (
+                <div className="product-overview-image">
+                  <RefImg
+                    image={overviewImg}
+                    alt="Product Overview"
+                    sizes="(min-width: 1025px) 520px, 90vw"
+                  />
+                </div>
+              ) : null}
+              <div className="product-overview-content">
+                <h2>
+                  Product <span className="highlight">Overview</span>
+                </h2>
+                {/* Reference copy, verbatim; only <p>, <ul>, <li>, <br> occur (built from the snapshot). */}
+                <div
+                  className="product-overview-text"
+                  dangerouslySetInnerHTML={{ __html: category.overview.html }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      <section className="product-grid-section" id="product-grid">
+        <div className="container">
+          <div className="product-grid-header">
+            <h2>{page.gridTitle}</h2>
+            <p className="product-count">{page.countLabel}</p>
+          </div>
+          {cards ? (
+            <div className="products-categories" style={{ maxWidth: 900, margin: '0 auto' }}>
+              {cards.cards.map((c) => {
+                const img = imageOf(c.image);
+                return (
+                  <div key={c.href} className="category-card">
+                    <div className="category-image">
+                      {img ? (
+                        <RefImg image={img} alt={c.name} sizes="(min-width: 1025px) 440px, 90vw" />
+                      ) : null}
+                      <div className="category-overlay">
+                        <Link className="btn btn-primary" href={c.href}>
+                          View Collection
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="category-info">
+                      <h3>{c.name}</h3>
+                      <p>{c.description}</p>
+                      <Link className="category-link" href={c.href}>
+                        View Collection <Fa name="arrow-right" />
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="product-grid">
+              {products.map((p) => {
+                const img = imageOf(p.image);
+                return (
+                  <div key={p.id} className="product-item">
+                    <div className="product-item-image">
+                      {img ? (
+                        <RefImg image={img} alt={p.name} sizes="(min-width: 1025px) 280px, 45vw" />
+                      ) : null}
+                    </div>
+                    <div className="product-item-info">
+                      <h4>{p.name}</h4>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      </section>
+      {cards ? null : (
+        <Lightbox
+          grid=".product-grid"
+          item=".product-item"
+          items={products.map((p) => {
+            const img = imageOf(p.image)!;
+            const { full, zoom } = fullAndZoom(img);
+            return { src: full, zoom, alt: p.name };
+          })}
+        />
+      )}
+    </RefShell>
+  );
+}

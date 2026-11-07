@@ -110,6 +110,29 @@ await Promise.all(Array.from({ length: 4 }, worker));
 
 const sorted = Object.fromEntries(Object.entries(meta).sort(([a], [b]) => a.localeCompare(b)));
 fs.writeFileSync(META_FILE, JSON.stringify(sorted, null, 1));
+
+// Remove renditions no current image owns (retired products, pages or designs), so public/ only ships
+// files the site references. A file belongs to key K when it is K-<width>.<ext>.
+const owned = new Set(Object.keys(sorted));
+let pruned = 0;
+const prune = (dir) => {
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, e.name);
+    if (e.isDirectory()) {
+      prune(p);
+      if (!fs.readdirSync(p).length) fs.rmdirSync(p);
+      continue;
+    }
+    const rel = path.relative(OUT, p).split(path.sep).join('/');
+    const key = rel.replace(/-\d+\.(webp|avif)$/, '');
+    if (key === rel || !owned.has(key)) {
+      fs.unlinkSync(p);
+      pruned++;
+    }
+  }
+};
+prune(OUT);
+if (pruned) console.log(`images: removed ${pruned} unreferenced files`);
 let bytes = 0;
 const walk = (d) =>
   fs
