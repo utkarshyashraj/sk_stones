@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import { cardPage, fullAndZoom, imageOf, productsOf, type RefCategory } from '@/lib/ref-catalog';
+import { stoneItem } from '@/lib/lightbox-items';
+import { cardPage, imageOf, productsOf, type RefCategory } from '@/lib/ref-catalog';
 import { Fa } from './Fa';
-import { Lightbox } from './Lightbox';
+import { LightboxData } from './LightboxData';
 import { RefImg } from './RefImg';
 import { RefShell } from './RefShell';
 
@@ -108,12 +109,29 @@ export function ProductPageTemplate({ category }: { category: RefCategory }) {
               {products.map((p) => {
                 const img = imageOf(p.image);
                 return (
-                  <div key={p.id} className="product-item">
-                    <div className="product-item-image">
+                  <div key={p.id} className="product-item product-item-clickable" data-sk-id={p.id}>
+                    <div
+                      className="product-item-image"
+                      role="button"
+                      tabIndex={0}
+                      data-sk-click=""
+                      aria-label={`View ${p.name} full screen`}
+                    >
                       {img ? (
                         <RefImg image={img} alt={p.name} sizes="(min-width: 1025px) 280px, 45vw" />
                       ) : null}
                     </div>
+                    <button
+                      type="button"
+                      className="sk-save"
+                      data-save-id={p.id}
+                      data-save-name={p.name}
+                      data-sk-click=""
+                      aria-pressed="false"
+                      aria-label={`Save ${p.name}`}
+                    >
+                      <Fa name="bookmark" />
+                    </button>
                     <div className="product-item-info">
                       <h4>{p.name}</h4>
                     </div>
@@ -125,15 +143,7 @@ export function ProductPageTemplate({ category }: { category: RefCategory }) {
         </div>
       </section>
       {cards ? null : (
-        <Lightbox
-          grid=".product-grid"
-          item=".product-item"
-          items={products.map((p) => {
-            const img = imageOf(p.image)!;
-            const { full, zoom } = fullAndZoom(img);
-            return { src: full, zoom, alt: p.name };
-          })}
-        />
+        <LightboxData grid=".product-grid" item=".product-item" items={products.map(stoneItem)} />
       )}
     </RefShell>
   );

@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { Fa } from '@/components/ref/Fa';
+import { ClearSavedOffer } from '@/components/ref/features/ClearSavedOffer';
+import '@/styles/ref/features.css';
 import { pageMetadata } from '@/lib/ref-seo';
 import { telHref, whatsappHref } from '@/lib/site';
 import '@/styles/ref/thank-you.css';
@@ -37,6 +39,7 @@ export default function ThankYouPage() {
             <Fa name="phone" /> Call Now
           </a>
         </div>
+        <ClearSavedOffer />
         <p className="wa-note">
           Prefer WhatsApp?{' '}
           <a href={whatsappHref()} target="_blank" rel="noopener noreferrer">

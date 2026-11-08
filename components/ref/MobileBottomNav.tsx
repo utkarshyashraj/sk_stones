@@ -6,6 +6,7 @@ import { mobileMoreSheet, mobileProductsSheet, servicesMenu, type NavLink } from
 import { withBase } from '@/lib/base-path';
 import { site, telHref, whatsappHref } from '@/lib/site';
 import { Fa } from './Fa';
+import { lockOverlay } from './overlay-lock';
 import { useClientValue } from './useClient';
 
 export type TabKey = 'home' | 'about' | 'products' | 'services' | 'projects' | 'more' | null;
@@ -80,16 +81,14 @@ export function MobileBottomNav({ active }: { active: TabKey }) {
 
   useEffect(() => {
     if (!open) return;
-    const root = document.documentElement;
-    const prev = root.style.overflow;
-    root.style.overflow = 'hidden';
+    const unlock = lockOverlay();
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(null);
     const onResize = () => window.innerWidth > 1024 && setOpen(null);
     document.addEventListener('keydown', onKey);
     window.addEventListener('resize', onResize);
     sheetRef.current?.querySelector<HTMLElement>('.mnav-sheet-close')?.focus();
     return () => {
-      root.style.overflow = prev;
+      unlock();
       document.removeEventListener('keydown', onKey);
       window.removeEventListener('resize', onResize);
     };
@@ -106,6 +105,11 @@ export function MobileBottomNav({ active }: { active: TabKey }) {
     >
       {svg(key)}
       <span>{label}</span>
+      {key === 'more' ? (
+        <span className="sk-tab-badge" data-sk-saved-count="" data-count="0" aria-hidden="true">
+          0
+        </span>
+      ) : null}
     </button>
   );
   const link = (key: 'home' | 'about' | 'projects', label: string, href: string) => (
@@ -162,6 +166,19 @@ export function MobileBottomNav({ active }: { active: TabKey }) {
           'more',
           'More',
           <>
+            <button
+              type="button"
+              className="mnav-sheet-link sk-sheet-saved"
+              data-sk-open="saved"
+              data-sk-click=""
+              onClick={() => setOpen(null)}
+            >
+              Saved stones (
+              <span data-sk-saved-count="" data-count="0">
+                0
+              </span>
+              )
+            </button>
             <div className="mnav-sheet-section">
               <p className="mnav-sheet-section-title">From the homepage</p>
               {/* Full page loads (as on the reference): the homepage reads ?view=more on load. */}

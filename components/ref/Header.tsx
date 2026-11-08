@@ -127,6 +127,20 @@ export function Header({ active, startScrolled = false }: { active: NavKey; star
         <Link className={cls('contact')} href="/contact">
           Contact Us
         </Link>
+        <span className="sk-nav-tools">
+          <button
+            type="button"
+            className="sk-header-icon sk-header-saved"
+            data-sk-open="saved"
+            data-sk-click=""
+            aria-label="Saved stones"
+          >
+            <Fa name="bookmark" />
+            <span className="sk-count" data-sk-saved-count="" data-count="0" aria-hidden="true">
+              0
+            </span>
+          </button>
+        </span>
       </nav>
       <a href={telHref} className="header-cta">
         <Fa name="phone" /> Call Us Now

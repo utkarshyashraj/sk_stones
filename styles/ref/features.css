@@ -1,0 +1,562 @@
+/*
+ * Hand-written styles for the features added on top of the reference design: saved list, search, filters,
+ * stone details, calculator, guide, recently viewed. Unlike styles/ref/<page>.css (generated from the
+ * reference — never edit those), this file is maintained by hand. It reuses the reference's own look:
+ * gold #C9A227 accents, frosted cream glass cards with a thin gold border, Playfair Display headings,
+ * Poppins text, and the bottom-sheet / pill shapes of the mobile navigation.
+ * Every rule is scoped to the page wrapper ([data-ref-root]) with zero added specificity.
+ */
+:where([data-ref-root]) {
+  --sk-gold: #c9a227;
+  --sk-gold-deep: #9b7b1e;
+  --sk-gold-grad: linear-gradient(135deg, #c9a227 0%, #e6c04a 100%);
+  --sk-ink: #1f1d1a;
+  --sk-ink-2: #5b564d;
+  --sk-glass: rgba(255, 255, 255, 0.96);
+  --sk-border: rgba(201, 162, 39, 0.32);
+  --sk-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+  --sk-radius: 16px;
+  --sk-nav-h: 72px; /* the reference mobile bottom bar */
+  --sk-font-head: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  --sk-font-body: var(--font-poppins), 'Poppins', system-ui, sans-serif;
+}
+
+/* ---------- shared bits ---------- */
+:where([data-ref-root]) .sk-muted {
+  color: var(--sk-ink-2);
+  font-size: 0.85rem;
+}
+:where([data-ref-root]) .sk-center {
+  text-align: center;
+  padding: 24px 0;
+}
+:where([data-ref-root]) .sk-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid var(--sk-border);
+  background: #fff;
+  color: var(--sk-ink);
+  font: 600 0.9rem/1.2 var(--sk-font-body);
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+:where([data-ref-root]) .sk-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(201, 162, 39, 0.25);
+}
+:where([data-ref-root]) .sk-btn--gold {
+  background: var(--sk-gold-grad);
+  border-color: transparent;
+  color: #1a1612;
+}
+:where([data-ref-root]) .sk-btn--ghost.is-saved {
+  border-color: var(--sk-gold);
+  background: rgba(201, 162, 39, 0.12);
+}
+:where([data-ref-root]) .sk-btn--wa {
+  background: #25d366;
+  border-color: transparent;
+  color: #fff;
+}
+:where([data-ref-root]) .sk-btn--block {
+  width: 100%;
+}
+:where([data-ref-root]) .sk-btn[aria-disabled='true'],
+:where([data-ref-root]) .sk-btn:disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+:where([data-ref-root]) .sk-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 6px;
+  border: 0;
+  background: none;
+  color: var(--sk-gold-deep);
+  font: 600 0.85rem/1 var(--sk-font-body);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+:where([data-ref-root]) .sk-icon-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--sk-ink);
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+:where([data-ref-root]) .sk-icon-btn:hover {
+  background: rgba(201, 162, 39, 0.12);
+}
+:where([data-ref-root])
+  :is(.sk-btn, .sk-link-btn, .sk-icon-btn, .sk-save, .sk-header-icon, .sk-saved-pill):focus-visible {
+  outline: 2px solid var(--sk-gold);
+  outline-offset: 2px;
+}
+
+/* ---------- header (desktop) and bottom bar ---------- */
+:where([data-ref-root]) .sk-nav-tools {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 10px;
+}
+:where([data-ref-root]) .sk-header-icon {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+:where([data-ref-root]) .sk-header-icon:hover {
+  background: rgba(201, 162, 39, 0.18);
+  color: var(--sk-gold);
+}
+:where([data-ref-root]) .sk-count,
+:where([data-ref-root]) .sk-tab-badge {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: var(--sk-gold);
+  color: #1a1612;
+  font: 700 0.68rem/18px var(--sk-font-body);
+  text-align: center;
+}
+:where([data-ref-root]) .sk-tab-badge {
+  top: 2px;
+  right: calc(50% - 22px);
+}
+:where([data-ref-root]) :is(.sk-count, .sk-tab-badge)[data-count='0'] {
+  visibility: hidden;
+}
+:where([data-ref-root]) .mnav-item {
+  position: relative;
+}
+:where([data-ref-root]) .sk-sheet-saved {
+  width: calc(100% - 8px);
+  border: 0;
+  background: rgba(201, 162, 39, 0.1);
+  font-family: var(--sk-font-body);
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+:where([data-ref-root]) .sk-sheet-saved span {
+  margin: 0;
+}
+
+/* ---------- product card: Save toggle ---------- */
+:where([data-ref-root]) .product-item {
+  position: relative;
+}
+:where([data-ref-root]) .sk-save {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--sk-border);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--sk-ink);
+  font-size: 1.05rem;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+:where([data-ref-root]) .sk-save:hover {
+  transform: scale(1.06);
+}
+:where([data-ref-root]) .sk-save.is-saved {
+  background: var(--sk-gold);
+  border-color: var(--sk-gold);
+  color: #1a1612;
+}
+:where([data-ref-root]) .sk-save.is-saved path {
+  fill: currentColor;
+}
+
+/* ---------- saved list panel (desktop side panel, phone bottom sheet) ---------- */
+:where([data-ref-root]) .sk-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10500;
+  background: rgba(0, 0, 0, 0.45);
+}
+:where([data-ref-root]) .sk-panel {
+  position: fixed;
+  z-index: 10501;
+  display: flex;
+  flex-direction: column;
+  background: var(--sk-glass);
+  backdrop-filter: blur(24px) saturate(1.15);
+  color: var(--sk-ink);
+  font-family: var(--sk-font-body);
+  box-shadow: var(--sk-shadow);
+}
+@media (min-width: 1025px) {
+  :where([data-ref-root]) .sk-panel {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(440px, 100vw);
+    border-left: 1px solid var(--sk-border);
+    animation: sk-slide-in 0.28s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  :where([data-ref-root]) .sk-panel-handle {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  :where([data-ref-root]) .sk-panel {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: min(86vh, 720px);
+    border-radius: 24px 24px 0 0;
+    border-top: 1px solid rgba(180, 180, 180, 0.35);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    animation: sk-sheet-up 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+}
+:where([data-ref-root]) .sk-panel-handle {
+  width: 42px;
+  height: 5px;
+  margin: 10px auto 0;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.18);
+}
+:where([data-ref-root]) .sk-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px 10px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+:where([data-ref-root]) .sk-panel-head h2 {
+  margin: 0;
+  font: 600 1.35rem/1.2 var(--sk-font-head);
+  color: var(--sk-ink);
+}
+:where([data-ref-root]) .sk-panel-body {
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 8px 12px;
+}
+:where([data-ref-root]) .sk-panel-foot {
+  display: grid;
+  gap: 10px;
+  padding: 14px 16px 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+:where([data-ref-root]) .sk-btn-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+:where([data-ref-root]) .sk-btn-row > .sk-btn {
+  padding-inline: 10px;
+  font-size: 0.82rem;
+}
+:where([data-ref-root]) .sk-btn-row--quiet {
+  display: flex;
+  justify-content: space-between;
+}
+:where([data-ref-root]) .sk-empty {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 28px 12px;
+  text-align: center;
+}
+:where([data-ref-root]) .sk-empty p {
+  margin: 0;
+}
+:where([data-ref-root]) .sk-empty--page {
+  padding: 48px 12px;
+  color: #fff;
+}
+:where([data-ref-root]) .sk-saved-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+:where([data-ref-root]) .sk-saved-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 44px;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 6px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+:where([data-ref-root]) .sk-saved-row img,
+:where([data-ref-root]) .sk-thumb-empty {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #ece6da;
+  border: 1px solid var(--sk-border);
+}
+:where([data-ref-root]) .sk-saved-text {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+:where([data-ref-root]) .sk-saved-text a {
+  color: var(--sk-ink);
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+:where([data-ref-root]) .sk-saved-text a:hover {
+  color: var(--sk-gold-deep);
+  text-decoration: underline;
+}
+
+/* ---------- floating "Saved (N)" pill: phones and tablets only ---------- */
+:where([data-ref-root]) .sk-saved-pill {
+  display: none;
+}
+@media (max-width: 1024px) {
+  :where([data-ref-root]) .sk-saved-pill {
+    position: fixed;
+    left: 50%;
+    bottom: calc(var(--sk-nav-h) + 14px + env(safe-area-inset-bottom, 0px));
+    z-index: 1150;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 10px 18px;
+    transform: translateX(-50%);
+    border: 1px solid rgba(201, 162, 39, 0.55);
+    border-radius: 50px;
+    background: rgba(20, 18, 15, 0.92);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font: 600 0.88rem/1 var(--sk-font-body);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    animation: sk-pop 0.25s ease;
+  }
+  :where([data-ref-root]) .sk-saved-pill i {
+    color: var(--sk-gold);
+  }
+  :where([data-ref-root][data-sk-overlay]) .sk-saved-pill {
+    display: none;
+  }
+}
+
+/* ---------- toasts ---------- */
+:where([data-ref-root]) .sk-toast-region {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 10600;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100vw - 32px);
+}
+@media (max-width: 1024px) {
+  :where([data-ref-root]) .sk-toast-region {
+    bottom: calc(var(--sk-nav-h) + 72px + env(safe-area-inset-bottom, 0px));
+  }
+}
+:where([data-ref-root]) .sk-toast {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 6px 6px 16px;
+  border: 1px solid rgba(201, 162, 39, 0.5);
+  border-radius: 14px;
+  background: rgba(20, 18, 15, 0.95);
+  color: #fff;
+  font: 500 0.88rem/1.35 var(--sk-font-body);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  animation: sk-rise 0.22s ease;
+}
+:where([data-ref-root]) .sk-toast-action {
+  min-height: 40px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--sk-gold);
+  font: 700 0.85rem/1 var(--sk-font-body);
+  cursor: pointer;
+}
+:where([data-ref-root]) .sk-toast-close {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* ---------- viewer caption ---------- */
+:where([data-ref-root]) .sk-lightbox--stone {
+  padding-bottom: 200px;
+}
+:where([data-ref-root]) .sk-lightbox .sk-lb-panel {
+  pointer-events: auto;
+}
+:where([data-ref-root][data-sk-overlay]) .sk-toast-region {
+  top: 18px;
+  bottom: auto;
+}
+:where([data-ref-root]) .sk-lb-collection {
+  margin: 2px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font: 500 0.85rem/1.3 var(--sk-font-body);
+}
+:where([data-ref-root]) .sk-lb-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 12px 0 6px;
+}
+:where([data-ref-root]) .sk-lb-actions .sk-btn--ghost {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(201, 162, 39, 0.6);
+  color: #fff;
+}
+:where([data-ref-root]) .sk-lb-actions .sk-btn--ghost.is-saved {
+  background: rgba(201, 162, 39, 0.28);
+}
+:where([data-ref-root]) .sk-lb-actions .sk-btn--ghost.is-saved path {
+  fill: currentColor;
+}
+
+/* ---------- quote form additions ---------- */
+:where([data-ref-root]) .sk-field-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+:where([data-ref-root]) .sk-field-help {
+  margin: 6px 0 0;
+  color: var(--sk-ink-2);
+  font-size: 0.8rem;
+}
+:where([data-ref-root]) .sk-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+:where([data-ref-root]) .sk-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 2px 2px 12px;
+  border: 1px solid var(--sk-border);
+  border-radius: 50px;
+  background: rgba(201, 162, 39, 0.1);
+  font-size: 0.85rem;
+}
+:where([data-ref-root]) .sk-chip button {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--sk-ink-2);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+:where([data-ref-root]) .sk-request-label {
+  color: var(--sk-gold-deep);
+}
+
+/* ---------- shared list page, thank-you ---------- */
+:where([data-ref-root]) .sk-shared-actions {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  margin: 0 0 28px;
+}
+:where([data-ref-root]) .sk-shared-actions .sk-muted {
+  color: rgba(255, 255, 255, 0.8);
+}
+:where([data-ref-root]) .sk-shared-item {
+  text-decoration: none;
+  color: inherit;
+}
+:where([data-ref-root]) .sk-shared-item .sk-muted {
+  margin: 4px 0 0;
+}
+:where([data-ref-root]) .sk-clear-offer {
+  margin-top: 12px;
+}
+
+@keyframes sk-slide-in {
+  from {
+    transform: translateX(100%);
+  }
+}
+@keyframes sk-sheet-up {
+  from {
+    transform: translateY(100%);
+  }
+}
+@keyframes sk-pop {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 8px);
+  }
+}
+@keyframes sk-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :where([data-ref-root]) :is(.sk-panel, .sk-saved-pill, .sk-toast, .sk-btn, .sk-save) {
+    animation: none !important;
+    transition: none !important;
+  }
+}

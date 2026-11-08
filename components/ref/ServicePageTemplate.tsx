@@ -1,8 +1,8 @@
 import { servicePages, type ServiceSlug } from '@/content/ref/services';
-import { fullAndZoom } from '@/lib/ref-catalog';
+import { galleryItem } from '@/lib/lightbox-items';
 import { Enhance } from './Enhance';
 import { Fa } from './Fa';
-import { Lightbox } from './Lightbox';
+import { LightboxData } from './LightboxData';
 import { RefImg, refImage } from './RefImg';
 import { RefShell } from './RefShell';
 import { ServiceFAQ } from './ServiceFAQ';
@@ -87,19 +87,23 @@ export function ServicePageTemplate({ slug }: { slug: ServiceSlug }) {
           </p>
           <div className="gallery-grid">
             {p.gallery.map((g) => (
-              <div key={g.image} className="gallery-item">
+              <div
+                key={g.image}
+                className="gallery-item"
+                role="button"
+                tabIndex={0}
+                data-sk-click=""
+                aria-label={`View photo: ${g.alt}`}
+              >
                 <RefImg src={g.image} alt={g.alt} sizes="(min-width: 1025px) 33vw, 80vw" />
               </div>
             ))}
           </div>
         </div>
-        <Lightbox
+        <LightboxData
           grid=".gallery-grid"
           item=".gallery-item"
-          items={p.gallery.map((g) => {
-            const { full, zoom } = fullAndZoom(refImage(g.image));
-            return { src: full, zoom, alt: g.alt };
-          })}
+          items={p.gallery.map((g) => galleryItem(refImage(g.image), g.alt))}
         />
       </section>
 

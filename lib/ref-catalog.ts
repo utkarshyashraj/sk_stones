@@ -32,6 +32,21 @@ export interface RefProduct {
   id: string;
   name: string;
   image: string | null;
+  collection: string;
+  category: string;
+  colours: string[];
+  finishes: string[];
+  applications: string[];
+  origin: string | null;
+  thicknessesMm: number[];
+  formats: string[];
+  synonyms: string[];
+  usedInProjects: string[];
+  /** where each value came from: business (confirmed), guess (from the name) or category */
+  sources: Record<
+    'colours' | 'finishes' | 'applications' | 'origin',
+    'business' | 'guess' | 'category' | null
+  >;
 }
 export interface CardPage {
   title: string;
@@ -49,6 +64,16 @@ const cardPages = (catalog as unknown as { cardPages: Record<string, CardPage> }
 export const productPageSlugs = () => categories.filter((c) => c.hasPage).map((c) => c.slug);
 export const getRefCategory = (slug: string) => categories.find((c) => c.slug === slug && c.hasPage);
 export const productsOf = (c: RefCategory) => c.productIds.map((id) => products.get(id)!).filter(Boolean);
+export const productById = (id: string) => products.get(id);
+export const allRefProducts = () => [...products.values()];
+export const categoryName = (slug: string) => categories.find((c) => c.slug === slug)?.name ?? slug;
+/** Share of stones with business-confirmed values per field, and the unlock threshold (0.8). */
+export const attributeCoverage = () =>
+  (
+    catalog as unknown as {
+      attributeCoverage: { threshold: number; fields: Record<string, { share: number }> };
+    }
+  ).attributeCoverage;
 export const cardPage = (slug: string): CardPage | undefined => cardPages[slug];
 
 /** URLs the lightbox uses: the on-screen file and a larger one for the magnifier lens. */

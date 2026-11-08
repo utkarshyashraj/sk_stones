@@ -38,7 +38,7 @@ test.describe('product pages (one data-driven template)', () => {
     await expect(box.locator('.product-lightbox-counter')).toHaveText('8 / 8');
     await page.keyboard.press('Escape');
     await expect(page.locator('.product-lightbox.active')).toHaveCount(0);
-    await expect(first).toBeFocused();
+    await expect(first.locator('.product-item-image')).toBeFocused(); // the card's keyboard target
   });
 
   test('magnifier lens follows the pointer (desktop)', async ({ page, isMobile }) => {

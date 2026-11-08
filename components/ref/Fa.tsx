@@ -57,6 +57,18 @@ const G: Record<string, Glyph> = {
     evenOdd: true,
   },
   spinner: { d: 'M12 3a9 9 0 1 0 9 9', stroke: true },
+  search: { d: 'M10.5 18a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15zM21 21l-5.2-5.2', stroke: true },
+  bookmark: { d: 'M6.5 3.5h11v17l-5.5-3.8-5.5 3.8z', stroke: true },
+  'bookmark-solid': { d: 'M5.5 2.5h13v19.5l-6.5-4.5-6.5 4.5z' },
+  share: { d: 'M16 6l-4-4-4 4M12 2v13M5 11v9h14v-9', stroke: true },
+  trash: { d: 'M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3', stroke: true },
+  calculator: {
+    d: 'M6 2.5h12a1.5 1.5 0 0 1 1.5 1.5v16a1.5 1.5 0 0 1-1.5 1.5H6A1.5 1.5 0 0 1 4.5 20V4A1.5 1.5 0 0 1 6 2.5zM8 6.5h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 19h.01M12 19h4',
+    stroke: true,
+  },
+  sliders: { d: 'M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M14 4v4M8 10v4M16 16v4', stroke: true },
+  clock: { d: 'M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19zM12 7v5l3 2', stroke: true },
+  times: { d: 'M6 6l12 12M18 6 6 18', stroke: true },
   google: {
     d: 'M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.4zM12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22zM6.4 14a6 6 0 0 1 0-3.9V7.5H3.1a10 10 0 0 0 0 9zM12 6c1.5 0 2.8.5 3.8 1.5l2.9-2.9A10 10 0 0 0 3.1 7.5L6.4 10C7.2 7.7 9.4 6 12 6z',
   },

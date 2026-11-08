@@ -3,7 +3,7 @@ import { Enhance } from '@/components/ref/Enhance';
 import { FAQAccordion } from '@/components/ref/FAQAccordion';
 import { Fa } from '@/components/ref/Fa';
 import { HomeVideo } from '@/components/ref/HomeVideo';
-import { Lightbox } from '@/components/ref/Lightbox';
+import { LightboxData } from '@/components/ref/LightboxData';
 import { MoreView } from '@/components/ref/MoreView';
 import { RefImg, refImage } from '@/components/ref/RefImg';
 import { RefShell } from '@/components/ref/RefShell';
@@ -22,7 +22,7 @@ import {
   whoWeAre,
   whyCards,
 } from '@/content/ref/home';
-import { fullAndZoom } from '@/lib/ref-catalog';
+import { galleryItem } from '@/lib/lightbox-items';
 import { pageMetadata } from '@/lib/ref-seo';
 import { site } from '@/lib/site';
 import '@/styles/ref/home.css';
@@ -292,18 +292,22 @@ export default function HomePage() {
         <SwipeHint />
         <div className="gallery-grid">
           {gallery.map((g) => (
-            <div key={g.image} className="gallery-item">
+            <div
+              key={g.image}
+              className="gallery-item"
+              role="button"
+              tabIndex={0}
+              data-sk-click=""
+              aria-label={`View photo: ${g.alt}`}
+            >
               <RefImg src={g.image} alt={g.alt} sizes="(min-width: 1025px) 400px, 80vw" />
             </div>
           ))}
         </div>
-        <Lightbox
+        <LightboxData
           grid=".gallery-grid"
           item=".gallery-item"
-          items={gallery.map((g) => {
-            const { full, zoom } = fullAndZoom(refImage(g.image));
-            return { src: full, zoom, alt: g.alt };
-          })}
+          items={gallery.map((g) => galleryItem(refImage(g.image), g.alt))}
         />
       </section>
 

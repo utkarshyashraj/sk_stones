@@ -2,9 +2,13 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
+import { parseRequest, REQUEST_LABEL, stonesLine, stoneTypeFor, subjectFor } from '@/lib/quote-prefill';
 import { absoluteUrl, site } from '@/lib/site';
 import { Fa } from './Fa';
-import { usePortalRoot, useSearchFlag } from './useClient';
+import { collectionName, stonesById, useIndex } from './features/index-client';
+import { useSaved } from './features/shortlist-store';
+import { lockOverlay } from './overlay-lock';
+import { useClientValue, usePortalRoot, useSearchFlag } from './useClient';
 
 const STONE_TYPES: [string, string][] = [
   ['granites', 'Granites'],
@@ -25,16 +29,26 @@ const STONE_TYPES: [string, string][] = [
  * required), then posted to FormSubmit, which emails info@skstonesindia.com and redirects to /thank-you.
  * Escape, ✕ or a click outside closes it; focus moves to the first field and returns to the opener.
  * /contact?submitted=1 reopens it with the success banner, as on the reference.
+ *
+ * It also opens itself, prefilled, from the rest of the site: `?saved=1` (the saved list), `?stone=<id>`
+ * ("Enquire about this stone") and `&request=visit|samples`. The chosen stones show as removable chips and
+ * are posted as one readable line plus their ids, so the email names every stone.
  */
 export function ContactFormModal() {
   const [picked, setPicked] = useState<string | null>(null); // city chosen with "Open Form"
   const [shown, setShown] = useState(false); // drives the CSS fade (class "active")
   const [dismissed, setDismissed] = useState(false);
+  const [preselect, setPreselect] = useState('');
   const success = useSearchFlag('submitted', '1'); // FormSubmit sends people back with ?submitted=1
   const root = usePortalRoot();
   const opener = useRef<HTMLElement | null>(null);
   const modal = useRef<HTMLDivElement>(null);
-  const autoOpen = success && !dismissed;
+  const params = useClientValue(() => window.location.search, '');
+  const q = new URLSearchParams(params);
+  const request = parseRequest(q.get('request'));
+  const singleStone = q.get('stone');
+  const fromSaved = q.get('saved') === '1';
+  const autoOpen = (success || fromSaved || Boolean(singleStone)) && !dismissed;
   const location = picked ?? (autoOpen ? 'Bangalore' : null);
 
   const open = useCallback((city: string, from?: HTMLElement) => {
@@ -63,16 +77,14 @@ export function ContactFormModal() {
     if (!location) return;
     const r = document.querySelector('[data-ref-root]');
     r?.classList.add('form-modal-open');
-    const html = document.documentElement;
-    const prev = html.style.overflow;
-    html.style.overflow = 'hidden';
+    const unlock = lockOverlay();
     const t = window.setTimeout(() => modal.current?.querySelector<HTMLInputElement>('#name')?.focus(), 180);
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') close();
       if (e.key === 'Tab' && modal.current) {
         const f = [
           ...modal.current.querySelectorAll<HTMLElement>(
-            'button, input:not([type=hidden]):not([name=_honey]), select',
+            'a[href], button, input:not([type=hidden]):not([name=_honey]), select',
           ),
         ];
         const i = f.indexOf(document.activeElement as HTMLElement);
@@ -86,7 +98,7 @@ export function ContactFormModal() {
     return () => {
       window.clearTimeout(t);
       r?.classList.remove('form-modal-open');
-      html.style.overflow = prev;
+      unlock();
       document.removeEventListener('keydown', onKey);
     };
   }, [location, close]);
@@ -116,6 +128,12 @@ export function ContactFormModal() {
         <h2 id="contactFormTitle">Get in touch</h2>
         <p className="contact-form-location">
           Enquiry for: <strong id="formLocationLabel">{location ?? 'Bangalore'}</strong>
+          {request !== 'quote' ? (
+            <>
+              {' · '}
+              <strong className="sk-request-label">{REQUEST_LABEL[request]}</strong>
+            </>
+          ) : null}
         </p>
         <div
           className={`form-success-banner${success ? ' visible' : ''}`}
@@ -128,7 +146,8 @@ export function ContactFormModal() {
           </span>
         </div>
         <form id="contactForm" action={site.form.action} method="POST">
-          <input type="hidden" name="_subject" value="Custom Quote Request - S K Stones India" />
+          <input type="hidden" name="_subject" value={subjectFor(request)} />
+          <input type="hidden" name="request" value={REQUEST_LABEL[request]} />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
           <input
@@ -169,10 +188,14 @@ export function ContactFormModal() {
               <input type="email" id="email" name="email" placeholder="Email" autoComplete="email" required />
             </div>
           </div>
+          <StonesField
+            ids={singleStone ? [singleStone] : fromSaved ? undefined : []}
+            onStoneType={setPreselect}
+          />
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="stoneType">Stone Type Interested</label>
-              <select id="stoneType" name="stoneType" required defaultValue="">
+              <select key={preselect} id="stoneType" name="stoneType" required defaultValue={preselect}>
                 <option value="" disabled>
                   Stone Type Interested
                 </option>
@@ -253,5 +276,59 @@ export function ContactFormModal() {
       </div>
     </div>,
     root,
+  );
+}
+
+/**
+ * "Stones" field: chips for the stones this enquiry is about — the saved list (`ids` undefined) or the given
+ * ids — each removable. Posts a readable `stones` line and a `products` id list. Reports the stone type to
+ * preselect when all chosen stones share one.
+ */
+function StonesField({ ids, onStoneType }: { ids?: string[]; onStoneType: (t: string) => void }) {
+  const saved = useSaved();
+  const wanted = ids ?? saved.map((e) => e.id);
+  const [removed, setRemoved] = useState<string[]>([]);
+  const chosenIds = wanted.filter((id) => !removed.includes(id));
+  const { index, error } = useIndex(wanted.length > 0);
+  const stones = index ? stonesById(index, chosenIds) : [];
+  const named = index ? stones.map((s) => ({ name: s.n, collection: collectionName(index, s.c) })) : [];
+  const type = stoneTypeFor(stones.map((s) => s.k));
+  useEffect(() => {
+    if (type) onStoneType(type);
+  }, [type, onStoneType]);
+  return (
+    <div className="form-row">
+      <div className="form-group sk-stones-field">
+        <span className="sk-field-label" id="sk-stones-label">
+          Stones
+        </span>
+        {chosenIds.length ? (
+          <ul className="sk-chips" aria-labelledby="sk-stones-label">
+            {(index
+              ? stones.map((s) => ({ id: s.id, label: s.n }))
+              : chosenIds.map((id) => ({ id, label: id }))
+            ).map((c) => (
+              <li key={c.id} className="sk-chip">
+                <span>{c.label}</span>
+                <button
+                  type="button"
+                  aria-label={`Remove ${c.label} from this enquiry`}
+                  onClick={() => setRemoved((r) => [...r, c.id])}
+                >
+                  ×
+                </button>
+              </li>
+            ))}
+          </ul>
+        ) : null}
+        <p className="sk-field-help">
+          Shortlisted stones are added automatically.
+          {!chosenIds.length ? ' Save stones with the bookmark on any product page.' : ''}
+          {error && !index && chosenIds.length ? ' (Stone names will be sent as codes.)' : ''}
+        </p>
+        <input type="hidden" name="stones" value={index ? stonesLine(named) : chosenIds.join('; ')} />
+        <input type="hidden" name="products" value={chosenIds.join(', ')} />
+      </div>
+    </div>
   );
 }

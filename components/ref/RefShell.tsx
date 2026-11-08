@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react';
+import '@/styles/ref/features.css';
 import { BackToTop } from './BackToTop';
+import { FeatureBoot } from './features/FeatureBoot';
 import { Footer, type FooterVariant } from './Footer';
 import { Header, type NavKey } from './Header';
 import { MobileBottomNav, type TabKey } from './MobileBottomNav';
@@ -35,6 +37,7 @@ export function RefShell({
       {footer ? <Footer variant={footer} /> : null}
       {backToTop ? <BackToTop /> : null}
       <MobileBottomNav active={tab} />
+      <FeatureBoot />
     </div>
   );
 }
