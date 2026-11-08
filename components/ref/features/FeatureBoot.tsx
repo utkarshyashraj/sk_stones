@@ -1,12 +1,12 @@
 'use client';
 
-import dynamic from 'next/dynamic';
-import { useEffect, useState } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import { FEATURE_EVENT, type FeatureRequest } from './bus';
 
 // Everything interactive that is not needed for first paint (saved list, search, filters, lightbox,
 // calculator, guide) lives in this one lazily loaded bundle, so pages ship no extra JavaScript up front.
-const FeatureRoot = dynamic(() => import('./FeatureRoot'), { ssr: false });
+// React.lazy (already part of React) rather than next/dynamic, whose loader would add to every page.
+const FeatureRoot = lazy(() => import('./FeatureRoot'));
 
 /** Requests and clicks that arrive before the bundle has loaded, replayed by FeatureRoot. */
 export interface BootQueue {
@@ -74,5 +74,9 @@ export function FeatureBoot() {
       document.removeEventListener('keydown', onKey, true);
     };
   }, []);
-  return ready ? <FeatureRoot /> : null;
+  return ready ? (
+    <Suspense fallback={null}>
+      <FeatureRoot />
+    </Suspense>
+  ) : null;
 }

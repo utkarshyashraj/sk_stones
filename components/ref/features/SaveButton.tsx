@@ -1,6 +1,6 @@
 'use client';
 
-import { Fa } from '../Fa';
+import { Icon } from './Icon';
 import { toggleSaved } from './saved-actions';
 import { useSaved } from './shortlist-store';
 
@@ -28,7 +28,7 @@ export function SaveButton({
         toggleSaved(id, name, where);
       }}
     >
-      <Fa name={saved ? 'bookmark-solid' : 'bookmark'} /> {saved ? 'Saved' : 'Save'}
+      <Icon name={saved ? 'bookmark-solid' : 'bookmark'} /> {saved ? 'Saved' : 'Save'}
     </button>
   );
 }

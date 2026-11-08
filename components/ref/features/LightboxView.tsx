@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useRef, type ReactNode } from 'react';
-import { Fa } from '../Fa';
+import { Icon } from './Icon';
 import { lockOverlay } from '../overlay-lock';
 
 const MAG_ZOOM = 2.6;
@@ -169,7 +169,7 @@ export function LightboxView({
           onStep(-1);
         }}
       >
-        <Fa name="chevron-left" />
+        <Icon name="chevron-left" />
       </button>
       <div className="product-lightbox-stage">
         <div
@@ -205,7 +205,7 @@ export function LightboxView({
           onStep(1);
         }}
       >
-        <Fa name="chevron-right" />
+        <Icon name="chevron-right" />
       </button>
       {panel}
     </div>

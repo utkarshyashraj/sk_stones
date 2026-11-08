@@ -1,6 +1,6 @@
 'use client';
 
-import { Fa } from '../Fa';
+import { Icon } from './Icon';
 import { openFeature } from './bus';
 import { useSaved } from './shortlist-store';
 
@@ -13,7 +13,7 @@ export function SavedPill() {
   if (!n) return null;
   return (
     <button type="button" className="sk-saved-pill" onClick={() => openFeature('saved')}>
-      <Fa name="bookmark-solid" /> Saved ({n})
+      <Icon name="bookmark-solid" /> Saved ({n})
     </button>
   );
 }

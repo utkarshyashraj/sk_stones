@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import { track } from '@/lib/analytics';
-import { Fa } from '../Fa';
+import { Icon } from './Icon';
 import { collectionName, stoneHref, stonesById, stoneThumb, useIndex } from './index-client';
 import { savedFormHref, savedWhatsappHref, shareUrl } from './saved-links';
 import { pruneUnknown, savedStore, useSaved } from './shortlist-store';
@@ -78,7 +78,7 @@ export function SavedPanel({ onClose }: { onClose: () => void }) {
             Saved stones <span className="sk-muted">({saved.length})</span>
           </h2>
           <button type="button" className="sk-icon-btn" aria-label="Close saved list" onClick={onClose}>
-            <Fa name="times" />
+            <Icon name="times" />
           </button>
         </div>
         <div className="sk-panel-body">
@@ -130,7 +130,7 @@ export function SavedPanel({ onClose }: { onClose: () => void }) {
                         showToast(`Removed ${s.n}`, { label: 'Undo', run: () => savedStore.set(before) });
                       }}
                     >
-                      <Fa name="trash" />
+                      <Icon name="trash" />
                     </button>
                   </li>
                 );
@@ -162,7 +162,7 @@ export function SavedPanel({ onClose }: { onClose: () => void }) {
                   else track('list_sent', { channel: 'whatsapp', count: ids.length });
                 }}
               >
-                <Fa name="whatsapp" /> Send on WhatsApp
+                <Icon name="whatsapp" /> Send on WhatsApp
               </a>
               <Link
                 className="sk-btn sk-btn--ghost"
@@ -177,10 +177,10 @@ export function SavedPanel({ onClose }: { onClose: () => void }) {
             </div>
             <div className="sk-btn-row sk-btn-row--quiet">
               <button type="button" className="sk-link-btn" onClick={share}>
-                <Fa name="share" /> Share list
+                <Icon name="share" /> Share list
               </button>
               <button type="button" className="sk-link-btn" onClick={clear}>
-                <Fa name="trash" /> Clear list
+                <Icon name="trash" /> Clear list
               </button>
             </div>
           </div>

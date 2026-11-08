@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { parseIds } from '@/lib/shared-ids';
-import { Fa } from '../Fa';
+import { Icon } from './Icon';
 import { useClientValue } from '../useClient';
 import { collectionName, stoneHref, stonesById, stoneThumb, useIndex } from './index-client';
 import { saveAll } from './saved-actions';
@@ -51,7 +51,7 @@ export function SharedList() {
             showToast(n ? `Saved ${n} ${n === 1 ? 'stone' : 'stones'} to your list` : 'Already in your list');
           }}
         >
-          <Fa name="bookmark" /> {allSaved ? 'All saved' : `Save all ${stones.length}`}
+          <Icon name="bookmark" /> {allSaved ? 'All saved' : `Save all ${stones.length}`}
         </button>
         {missing ? (
           <p className="sk-muted">
