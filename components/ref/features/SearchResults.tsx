@@ -3,10 +3,20 @@
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import { track } from '@/lib/analytics';
+import { fromIndexStones } from '@/lib/filter-stones';
+import {
+  applyFilters,
+  FACETS,
+  paramsFromState,
+  sortStones,
+  stateFromParams,
+  visibleFacets,
+  type FilterState,
+} from '@/lib/filters';
 import { closestCollection, search } from '@/lib/search';
-import type { IndexStone } from '@/lib/search-index';
 import { whatsappHref } from '@/lib/site';
 import { useClientValue } from '../useClient';
+import { FilterPanel } from './FilterPanel';
 import { Icon } from './Icon';
 import { collectionName, loadIndex, stoneLightboxItem, stoneThumb, useIndex } from './index-client';
 import { rememberSearch } from './recent-searches';
@@ -15,29 +25,52 @@ import { SaveIconButton } from './SaveButton';
 const readSearch = () => window.location.search;
 
 /**
- * /search: every stone matching ?q= (and ?application= from search suggestions), in the same product grid,
+ * /search: every stone matching ?q=, narrowed by the same data-driven filters as product pages (and
+ * ?application= from search suggestions and the guided chooser), in the same product grid,
  * with Save toggles and the fullscreen viewer. The query can be refined in place (the URL follows, without
  * new history entries). Empty and no-result states point onward; a failed index load offers a retry.
  */
-export function SearchResults({ children }: { children?: (stones: IndexStone[]) => React.ReactNode }) {
+export function SearchResults() {
   const initial = useClientValue(readSearch, '');
-  const params = new URLSearchParams(initial);
+  const params = useMemo(() => new URLSearchParams(initial), [initial]);
   const [q, setQ] = useState<string | null>(null);
   const query = q ?? params.get('q') ?? '';
-  const application = params.get('application');
   const { index, error } = useIndex();
 
-  const stones = useMemo(() => {
+  const filterParams = FACETS.some((f) => params.has(f.key));
+  const base = useMemo(() => {
     if (!index) return [];
-    let list =
-      query.trim().length >= 2
-        ? search(index, query).stones.map((h) => h.item)
-        : application
-          ? index.stones
-          : [];
-    if (application) list = list.filter((s) => s.app.includes(application));
-    return list;
-  }, [index, query, application]);
+    return query.trim().length >= 2
+      ? search(index, query).stones.map((h) => h.item)
+      : filterParams
+        ? index.stones
+        : [];
+  }, [index, query, filterParams]);
+  const fstones = useMemo(() => (index ? fromIndexStones(index, base) : []), [index, base]);
+  const keys = useMemo(
+    () => (index ? visibleFacets(fstones, index.coverage.fields, index.coverage.threshold) : []),
+    [index, fstones],
+  );
+  const [fstate, setFstate] = useState<FilterState | null>(null);
+  const parsed = useMemo(() => stateFromParams(params, fstones, keys, 'within'), [params, fstones, keys]);
+  const state = fstate ?? parsed.state;
+  const stones = useMemo(() => {
+    const byId = new Map(base.map((s) => [s.id, s]));
+    return sortStones(applyFilters(fstones, state), state.sort).map((f) => byId.get(f.id)!);
+  }, [base, fstones, state]);
+
+  // Filters follow the URL (the search query itself is kept as it is), also after a history pop.
+  useEffect(() => {
+    if (!fstate) return;
+    const write = () => {
+      const p = paramsFromState(fstate, new URLSearchParams(window.location.search), null);
+      const qs = p.toString();
+      history.replaceState(history.state, '', `${window.location.pathname}${qs ? `?${qs}` : ''}`);
+    };
+    write();
+    window.addEventListener('popstate', write);
+    return () => window.removeEventListener('popstate', write);
+  }, [fstate]);
 
   useEffect(() => {
     if (q === null) return;
@@ -66,8 +99,8 @@ export function SearchResults({ children }: { children?: (stones: IndexStone[]) 
     index && query.trim().length >= 2 && !stones.length ? closestCollection(index, query) : null;
   const heading = query.trim()
     ? `“${query.trim()}”`
-    : application
-      ? `Stones for ${application.toLowerCase()}`
+    : state.selected.application?.length === 1
+      ? `Stones for ${state.selected.application[0]!.toLowerCase()}`
       : 'Search our stones';
 
   return (
@@ -99,7 +132,6 @@ export function SearchResults({ children }: { children?: (stones: IndexStone[]) 
         <h2>{heading}</h2>
         <p className="product-count" aria-live="polite">
           {index ? `${stones.length} ${stones.length === 1 ? 'stone' : 'stones'}` : error ? '' : 'Loading…'}
-          {application && query.trim() ? ` · ${application}` : ''}
         </p>
       </div>
 
@@ -119,7 +151,7 @@ export function SearchResults({ children }: { children?: (stones: IndexStone[]) 
             </Link>
           </div>
         </div>
-      ) : !index ? null : !query.trim() && !application ? (
+      ) : !index ? null : !query.trim() && !filterParams ? (
         <div className="sk-empty sk-empty--page">
           <p>Type a stone name, colour, finish or use — for example “black granite” or “travertine”.</p>
         </div>
@@ -148,7 +180,16 @@ export function SearchResults({ children }: { children?: (stones: IndexStone[]) 
         </div>
       ) : (
         <>
-          {children ? children(stones) : null}
+          <FilterPanel
+            stones={fstones}
+            keys={keys}
+            state={state}
+            onChange={setFstate}
+            label="these results"
+            resultCount={stones.length}
+            showSearch={false}
+            notice={!fstate && parsed.dropped ? 'Some filters no longer apply.' : null}
+          />
           <div className="product-grid sk-search-grid">
             {stones.map((s) => {
               const thumb = stoneThumb(s);

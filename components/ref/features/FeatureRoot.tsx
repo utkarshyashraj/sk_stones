@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { FEATURE_EVENT, type FeatureRequest } from './bus';
 import { loadIndex } from './index-client';
+import { FilterController } from './FilterController';
 import { LightboxController } from './LightboxController';
 import { SavedController } from './SavedController';
 import { SavedPanel } from './SavedPanel';
@@ -48,6 +49,7 @@ export default function FeatureRoot() {
     <>
       <SavedController />
       <LightboxController />
+      <FilterController />
       <SavedPill />
       {open?.name === 'saved' ? <SavedPanel onClose={close} /> : null}
       {open?.name === 'search' ? <SearchOverlay onClose={close} initial={open.detail?.q ?? ''} /> : null}

@@ -12,6 +12,8 @@ const FeatureRoot = lazy(() => import('./FeatureRoot'));
 export interface BootQueue {
   requests: FeatureRequest[];
   clicks: Element[];
+  /** a filter chip or the Filters button clicked on the server-rendered bar before the live one existed */
+  filter?: { chip?: string; sheet?: boolean };
 }
 declare global {
   interface Window {
@@ -50,6 +52,15 @@ export function FeatureBoot() {
       go();
     };
     const onClick = (e: MouseEvent) => {
+      const pre = (e.target as Element | null)?.closest?.<HTMLElement>(
+        '[data-sk-skeleton] [data-sk-chip], [data-sk-skeleton] [data-sk-sheet]',
+      );
+      if (pre && !pre.closest('[hidden]')) {
+        // The static bar is still showing: the live one opens this when it takes over.
+        q.filter = pre.dataset.skChip ? { chip: pre.dataset.skChip } : { sheet: true };
+        go();
+        return;
+      }
       if (window.__skReady) return;
       const el = (e.target as Element | null)?.closest?.('[data-sk-click]');
       if (!el) return;

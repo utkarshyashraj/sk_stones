@@ -1,7 +1,10 @@
 import Link from 'next/link';
+import { fromLightboxItems } from '@/lib/filter-stones';
+import { emptyState, MIN_STONES_FOR_FILTERS, visibleFacets } from '@/lib/filters';
 import { stoneItem } from '@/lib/lightbox-items';
-import { cardPage, imageOf, productsOf, type RefCategory } from '@/lib/ref-catalog';
+import { attributeCoverage, cardPage, imageOf, productsOf, type RefCategory } from '@/lib/ref-catalog';
 import { Fa } from './Fa';
+import { FilterBarView } from './FilterBarView';
 import { LightboxData } from './LightboxData';
 import { RefImg } from './RefImg';
 import { RefShell } from './RefShell';
@@ -16,6 +19,21 @@ export function ProductPageTemplate({ category }: { category: RefCategory }) {
   const products = productsOf(category);
   const cards = cardPage(category.slug);
   const overviewImg = imageOf(category.overview?.image ?? null);
+  // Filter bar: only on grids of 8+ stones, offering the facets this page's data supports.
+  const filterStones = cards ? [] : fromLightboxItems(products.map(stoneItem));
+  const cov = attributeCoverage();
+  const filters =
+    filterStones.length >= MIN_STONES_FOR_FILTERS
+      ? {
+          keys: visibleFacets(
+            filterStones,
+            Object.fromEntries(Object.entries(cov.fields).map(([k, v]) => [k, v.share])),
+            cov.threshold,
+          ),
+          label: category.name,
+          countLabel: page.countLabel,
+        }
+      : null;
   return (
     <RefShell
       bundle="product"
@@ -105,40 +123,63 @@ export function ProductPageTemplate({ category }: { category: RefCategory }) {
               })}
             </div>
           ) : (
-            <div className="product-grid">
-              {products.map((p) => {
-                const img = imageOf(p.image);
-                return (
-                  <div key={p.id} className="product-item product-item-clickable" data-sk-id={p.id}>
-                    <div
-                      className="product-item-image"
-                      role="button"
-                      tabIndex={0}
-                      data-sk-click=""
-                      aria-label={`View ${p.name} full screen`}
-                    >
-                      {img ? (
-                        <RefImg image={img} alt={p.name} sizes="(min-width: 1025px) 280px, 45vw" />
-                      ) : null}
-                    </div>
-                    <button
-                      type="button"
-                      className="sk-save"
-                      data-save-id={p.id}
-                      data-save-name={p.name}
-                      data-sk-click=""
-                      aria-pressed="false"
-                      aria-label={`Save ${p.name}`}
-                    >
-                      <Fa name="bookmark" />
-                    </button>
-                    <div className="product-item-info">
-                      <h4>{p.name}</h4>
-                    </div>
+            <>
+              {filters ? (
+                <div className="sk-filter-host">
+                  <div id="sk-filter-skeleton" data-sk-skeleton="">
+                    <FilterBarView keys={filters.keys} state={emptyState()} label={filters.label} />
                   </div>
-                );
-              })}
-            </div>
+                  <div id="sk-filter-mount" data-config={JSON.stringify(filters)} />
+                </div>
+              ) : null}
+              <div className="product-grid">
+                {products.map((p) => {
+                  const img = imageOf(p.image);
+                  return (
+                    <div key={p.id} className="product-item product-item-clickable" data-sk-id={p.id}>
+                      <div
+                        className="product-item-image"
+                        role="button"
+                        tabIndex={0}
+                        data-sk-click=""
+                        aria-label={`View ${p.name} full screen`}
+                      >
+                        {img ? (
+                          <RefImg image={img} alt={p.name} sizes="(min-width: 1025px) 280px, 45vw" />
+                        ) : null}
+                      </div>
+                      <button
+                        type="button"
+                        className="sk-save"
+                        data-save-id={p.id}
+                        data-save-name={p.name}
+                        data-sk-click=""
+                        aria-pressed="false"
+                        aria-label={`Save ${p.name}`}
+                      >
+                        <Fa name="bookmark" />
+                      </button>
+                      <div className="product-item-info">
+                        <h4>{p.name}</h4>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              {filters ? (
+                <div id="sk-filter-empty" className="sk-filter-empty" hidden>
+                  <p>No stones match these filters.</p>
+                  <div className="sk-btn-row">
+                    <button type="button" className="sk-btn sk-btn--gold" data-sk-filter-clear="">
+                      Clear filters
+                    </button>
+                    <Link className="sk-btn sk-btn--ghost" href="/contact">
+                      Ask us for this stone
+                    </Link>
+                  </div>
+                </div>
+              ) : null}
+            </>
           )}
         </div>
       </section>
