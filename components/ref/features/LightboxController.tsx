@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { LightboxGroup, LightboxItem } from '@/lib/lightbox-items';
 import { LightboxView } from './LightboxView';
+import { recentStore } from './recent-store';
 import { StonePanel } from './StonePanel';
 
 interface OpenState {
@@ -135,9 +136,10 @@ export function LightboxController() {
   const group = open ? groups[open.group] : undefined;
   const item: LightboxItem | undefined = open && group ? group.items[open.list[open.pos]!] : undefined;
 
-  // Keep the address in step for product photos, so the open stone can be shared.
+  // Keep the address in step for product photos, so the open stone can be shared; remember it as viewed.
   useEffect(() => {
     if (!item?.id) return;
+    recentStore.add(item.id);
     const base = window.location.pathname + window.location.search;
     history.replaceState(history.state, '', `${base}#stone=${item.id}`);
   }, [item?.id]);

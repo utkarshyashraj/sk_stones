@@ -76,3 +76,17 @@ export function stonesById(index: SearchIndex, ids: string[]): IndexStone[] {
   const map = new Map(index.stones.map((s) => [s.id, s]));
   return ids.map((id) => map.get(id)).filter((s): s is IndexStone => Boolean(s));
 }
+
+/**
+ * A stone link on its own collection page: Next's router changes the hash without a `hashchange`, so the
+ * viewer wouldn't open. Set the hash directly instead; returns true when it handled the click.
+ */
+export function openStoneHere(href: string): boolean {
+  const [path, hash] = href.split('#');
+  if (!hash) return false;
+  const here = window.location.pathname.replace(/\/$/, '') === withBase(path!).replace(/\/$/, '');
+  if (!here) return false;
+  if (window.location.hash === `#${hash}`) window.dispatchEvent(new HashChangeEvent('hashchange'));
+  else window.location.hash = hash;
+  return true;
+}

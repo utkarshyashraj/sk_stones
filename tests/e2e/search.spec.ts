@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { hydrated } from './ready';
 
 test.describe('search', () => {
   test('keyboard: "/" opens, typing suggests, arrows move, Enter opens the stone, Escape closes', async ({
@@ -7,6 +8,7 @@ test.describe('search', () => {
   }) => {
     test.skip(isMobile, 'keyboard shortcut is a desktop affordance');
     await page.goto('/');
+    await hydrated(page);
     await page.keyboard.press('/');
     const dlg = page.getByRole('dialog', { name: 'Search stones' });
     const input = dlg.getByRole('combobox');
@@ -22,6 +24,7 @@ test.describe('search', () => {
 
     await page.keyboard.press('/');
     await page.keyboard.type('tiger skin');
+    await expect(dlg.getByRole('option').first()).toContainText('Tiger Skin');
     await page.keyboard.press('ArrowDown');
     await page.keyboard.press('Enter');
     await expect(page).toHaveURL(/\/granites\/?#stone=granites-tiger-skin/);

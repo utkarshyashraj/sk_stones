@@ -72,6 +72,9 @@ export function StonePanel({
               Enquire about this stone
             </Link>
           </div>
+          <Link className="sk-lb-sample" href={`/contact?stone=${item.id}&request=samples`} prefetch={false}>
+            Request a sample
+          </Link>
           {hasMore ? (
             <button
               type="button"

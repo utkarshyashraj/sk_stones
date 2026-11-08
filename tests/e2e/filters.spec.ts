@@ -1,4 +1,5 @@
 import { expect, test, type Page } from '@playwright/test';
+import { featuresReady } from './ready';
 
 const pickCollection = async (page: Page, isMobile: boolean, name: string) => {
   if (isMobile) {
@@ -24,6 +25,7 @@ test.describe('filters', () => {
     isMobile,
   }) => {
     await page.goto('/tiles');
+    await featuresReady(page);
     await expect(visibleCards(page)).toHaveCount(88);
     await pickCollection(page, isMobile, 'Brillo Collection');
     await expect(page).toHaveURL(/\?collection=brillo-collection/);
@@ -45,6 +47,7 @@ test.describe('filters', () => {
   test('counts never dead-end: other collections show their own totals', async ({ page, isMobile }) => {
     test.skip(isMobile, 'popover counts (desktop); the sheet shows the same numbers');
     await page.goto('/tiles?q=calacatta');
+    await featuresReady(page);
     await page.getByRole('button', { name: /^Collection/ }).click();
     const pop = page.locator('.sk-popover');
     await expect(pop.getByRole('checkbox', { name: /Ittaca Collection/ })).toBeEnabled();
@@ -53,6 +56,7 @@ test.describe('filters', () => {
 
   test('search within, sort, clear all, empty state', async ({ page }) => {
     await page.goto('/granites');
+    await featuresReady(page);
     await page.getByRole('searchbox', { name: 'Search within Indian Granites' }).fill('black');
     await expect(visibleCards(page)).toHaveCount(7);
     await page.getByRole('combobox', { name: 'Sort stones' }).selectOption('name-asc');
@@ -66,6 +70,7 @@ test.describe('filters', () => {
 
   test('the viewer steps only through visible stones', async ({ page }) => {
     await page.goto('/granites?q=black');
+    await featuresReady(page);
     await expect(visibleCards(page)).toHaveCount(7);
     await visibleCards(page).first().locator('.product-item-image').click();
     const box = page.locator('.product-lightbox.active');
@@ -76,6 +81,7 @@ test.describe('filters', () => {
 
   test('unknown values in a shared link are ignored with a notice', async ({ page }) => {
     await page.goto('/tiles?collection=brillo-collection,no-such-collection&colour=Purple');
+    await featuresReady(page);
     await expect(page.getByText('Some filters no longer apply.')).toBeVisible();
     await expect(visibleCards(page)).toHaveCount(9);
   });

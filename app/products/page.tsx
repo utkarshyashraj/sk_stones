@@ -61,6 +61,7 @@ export default function ProductsPage() {
               );
             })}
           </div>
+          <div id="sk-recent-products" data-sk-recent="" />
         </div>
       </section>
     </RefShell>

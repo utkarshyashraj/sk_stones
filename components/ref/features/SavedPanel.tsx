@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import { track } from '@/lib/analytics';
+import { openFeature } from './bus';
 import { Icon } from './Icon';
 import { collectionName, stoneHref, stonesById, stoneThumb, useIndex } from './index-client';
 import { savedFormHref, savedWhatsappHref, shareUrl } from './saved-links';
@@ -12,7 +13,8 @@ import { useDialog } from './useDialog';
 
 /**
  * The saved list: a side panel on desktop, a bottom sheet on phones. Lists every saved stone (photo,
- * name, collection, Remove) and sends the list on: quote form, WhatsApp, showroom visit, a shareable link.
+ * name, collection, Remove) and sends the list on: quote form, WhatsApp, showroom visit, sample request, a shareable link; opens the
+ * area calculator.
  * Clearing can be undone. Stones no longer in the catalogue are dropped with a notice.
  */
 export function SavedPanel({ onClose }: { onClose: () => void }) {
@@ -174,6 +176,25 @@ export function SavedPanel({ onClose }: { onClose: () => void }) {
               >
                 Plan a showroom visit
               </Link>
+            </div>
+            <div className="sk-btn-row">
+              <Link
+                className="sk-btn sk-btn--ghost"
+                href={savedFormHref('samples')}
+                onClick={() => {
+                  track('list_sent', { channel: 'samples', count: ids.length });
+                  onClose();
+                }}
+              >
+                Request samples
+              </Link>
+              <button
+                type="button"
+                className="sk-btn sk-btn--ghost"
+                onClick={() => openFeature('calculator', { saved: '1' })}
+              >
+                <Icon name="calculator" /> Calculate area
+              </button>
             </div>
             <div className="sk-btn-row sk-btn-row--quiet">
               <button type="button" className="sk-link-btn" onClick={share}>

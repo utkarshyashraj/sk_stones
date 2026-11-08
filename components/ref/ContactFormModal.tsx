@@ -5,6 +5,7 @@ import { createPortal } from 'react-dom';
 import { parseRequest, REQUEST_LABEL, stonesLine, stoneTypeFor, subjectFor } from '@/lib/quote-prefill';
 import { absoluteUrl, site } from '@/lib/site';
 import { Fa } from './Fa';
+import { Icon } from './features/Icon';
 import { collectionName, stonesById, useIndex } from './features/index-client';
 import { useSaved } from './features/shortlist-store';
 import { lockOverlay } from './overlay-lock';
@@ -32,7 +33,8 @@ const STONE_TYPES: [string, string][] = [
  *
  * It also opens itself, prefilled, from the rest of the site: `?saved=1` (the saved list), `?stone=<id>`
  * ("Enquire about this stone") and `&request=visit|samples`. The chosen stones show as removable chips and
- * are posted as one readable line plus their ids, so the email names every stone.
+ * are posted as one readable line plus their ids, so the email names every stone. `?qty=` (from the area
+ * calculator) prefills Quantity and sets the unit to square feet.
  */
 export function ContactFormModal() {
   const [picked, setPicked] = useState<string | null>(null); // city chosen with "Open Form"
@@ -49,7 +51,9 @@ export function ContactFormModal() {
   const singleStone = q.get('stone');
   const fromSaved = q.get('saved') === '1';
   const ask = (q.get('ask') ?? '').trim().slice(0, 120); // from a search with no results
-  const autoOpen = (success || fromSaved || Boolean(singleStone) || Boolean(ask)) && !dismissed;
+  const qty = (q.get('qty') ?? '').trim().slice(0, 80); // from the area calculator
+  const autoOpen =
+    (success || fromSaved || Boolean(singleStone) || Boolean(ask) || Boolean(qty)) && !dismissed;
   const location = picked ?? (autoOpen ? 'Bangalore' : null);
 
   const open = useCallback((city: string, from?: HTMLElement) => {
@@ -81,6 +85,8 @@ export function ContactFormModal() {
     const unlock = lockOverlay();
     const t = window.setTimeout(() => modal.current?.querySelector<HTMLInputElement>('#name')?.focus(), 180);
     const onKey = (e: KeyboardEvent) => {
+      // A dialog opened over the form (the calculator) handles its own keys.
+      if (!modal.current?.contains(document.activeElement)) return;
       if (e.key === 'Escape') close();
       if (e.key === 'Tab' && modal.current) {
         const f = [
@@ -230,7 +236,23 @@ export function ContactFormModal() {
           <div className="form-row two-col">
             <div className="form-group">
               <label htmlFor="quantity">Quantity</label>
-              <input type="text" id="quantity" name="quantity" placeholder="Quantity" />
+              <input
+                key={qty}
+                type="text"
+                id="quantity"
+                name="quantity"
+                placeholder="Quantity"
+                defaultValue={qty}
+              />
+              <button
+                type="button"
+                className="sk-calc-link"
+                data-sk-open="calculator"
+                data-sk-detail="to=form"
+                data-sk-click=""
+              >
+                <Icon name="calculator" /> Not sure? Calculate
+              </button>
             </div>
             <div className="form-group">
               <label htmlFor="colour">Colour</label>
@@ -264,7 +286,12 @@ export function ContactFormModal() {
               <label className="measure-label" htmlFor="sizeUnit">
                 <span className="sr-only">Size unit</span>&nbsp;
               </label>
-              <select id="sizeUnit" name="sizeUnit" defaultValue="mm">
+              <select
+                key={qty ? 'sqft' : 'mm'}
+                id="sizeUnit"
+                name="sizeUnit"
+                defaultValue={qty ? 'sqft' : 'mm'}
+              >
                 <option value="mm">MM</option>
                 <option value="cm">CM</option>
                 <option value="inch">IN</option>

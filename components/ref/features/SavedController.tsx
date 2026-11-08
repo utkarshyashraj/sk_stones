@@ -42,7 +42,8 @@ export function SavedController() {
       const opener = t?.closest?.<HTMLElement>('[data-sk-open]');
       if (opener) {
         e.preventDefault();
-        openFeature(opener.dataset.skOpen as FeatureName);
+        const detail = Object.fromEntries(new URLSearchParams(opener.dataset.skDetail ?? ''));
+        openFeature(opener.dataset.skOpen as FeatureName, detail);
       }
     };
     document.addEventListener('click', onClick);

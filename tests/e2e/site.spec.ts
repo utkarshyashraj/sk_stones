@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { hydrated } from './ready';
 
 test.describe('homepage (reference port)', () => {
   test('sections in reference order, header CTA and footer details', async ({ page, isMobile }) => {
@@ -42,6 +43,7 @@ test.describe('homepage (reference port)', () => {
     await page.goto('/');
     const first = page.locator('#trust .counter').first();
     await expect(first).toHaveText('0');
+    await hydrated(page); // the observer that starts the count attaches on hydration
     await first.scrollIntoViewIfNeeded();
     await expect(first).toHaveText('200', { timeout: 5000 });
     await expect(page.locator('#trust .counter').nth(3)).toHaveText('4.8');
@@ -61,6 +63,7 @@ test.describe('homepage (reference port)', () => {
   test('services slider arrows scroll the cards', async ({ page, isMobile }) => {
     test.skip(isMobile, 'arrows are hidden on phones (swipe)');
     await page.goto('/');
+    await hydrated(page); // the arrows' handlers attach on hydration
     const slider = page.locator('#servicesSlider');
     await slider.scrollIntoViewIfNeeded();
     const before = await slider.evaluate((e) => e.scrollLeft);

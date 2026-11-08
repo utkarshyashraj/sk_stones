@@ -179,8 +179,20 @@ export function ProductPageTemplate({ category }: { category: RefCategory }) {
                   </div>
                 </div>
               ) : null}
+              <div className="sk-helpers">
+                <p>Not sure how much stone you need?</p>
+                <button
+                  type="button"
+                  className="sk-btn sk-btn--ghost"
+                  data-sk-open="calculator"
+                  data-sk-click=""
+                >
+                  Calculate area
+                </button>
+              </div>
             </>
           )}
+          <div id="sk-recent-product" data-sk-recent="" />
         </div>
       </section>
       {cards ? null : (

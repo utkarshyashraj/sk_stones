@@ -188,12 +188,26 @@ export function MobileBottomNav({ active }: { active: TabKey }) {
               data-sk-click=""
               onClick={() => setOpen(null)}
             >
-              Saved stones (
-              <span data-sk-saved-count="" data-count="0">
-                0
+              <span>
+                Saved stones (
+                <span data-sk-saved-count="" data-count="0">
+                  0
+                </span>
+                )
               </span>
-              )
             </button>
+            {/* One-tap contact, near the top of the sheet (no extra floating bar). */}
+            <div className="sk-quick">
+              <a href={telHref}>
+                <Fa name="phone" /> Call
+              </a>
+              <a href={whatsappHref()} target="_blank" rel="noopener noreferrer">
+                <Fa name="whatsapp" /> WhatsApp
+              </a>
+              <Link href="/contact" onClick={() => setOpen(null)}>
+                <Fa name="file-alt" /> Quote
+              </Link>
+            </div>
             <div className="mnav-sheet-section">
               <p className="mnav-sheet-section-title">From the homepage</p>
               {/* Full page loads (as on the reference): the homepage reads ?view=more on load. */}

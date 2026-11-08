@@ -1,10 +1,12 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { Calculator } from './Calculator';
 import { FEATURE_EVENT, type FeatureRequest } from './bus';
 import { loadIndex } from './index-client';
 import { FilterController } from './FilterController';
 import { LightboxController } from './LightboxController';
+import { RecentStrips } from './RecentStrip';
 import { SavedController } from './SavedController';
 import { SavedPanel } from './SavedPanel';
 import { SavedPill } from './SavedPill';
@@ -51,8 +53,10 @@ export default function FeatureRoot() {
       <LightboxController />
       <FilterController />
       <SavedPill />
+      <RecentStrips />
       {open?.name === 'saved' ? <SavedPanel onClose={close} /> : null}
       {open?.name === 'search' ? <SearchOverlay onClose={close} initial={open.detail?.q ?? ''} /> : null}
+      {open?.name === 'calculator' ? <Calculator onClose={close} detail={open.detail} /> : null}
       <Toaster />
     </>
   );

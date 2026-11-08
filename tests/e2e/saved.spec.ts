@@ -1,4 +1,5 @@
 import { expect, test, type Page } from '@playwright/test';
+import { featuresReady } from './ready';
 
 const openSavedList = async (page: Page, isMobile: boolean) => {
   if (isMobile) await page.locator('.sk-saved-pill').click();
@@ -22,6 +23,7 @@ test.describe('saved list', () => {
     await page.locator('.sk-save[data-save-name="Tiger Skin"]').click();
 
     await page.reload();
+    await featuresReady(page); // saved state is applied by the lazy bundle
     await expect(page.locator('.sk-save[data-save-name="Tan Brown"]')).toHaveAttribute(
       'aria-pressed',
       'true',
