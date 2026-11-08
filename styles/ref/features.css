@@ -439,6 +439,151 @@
 :where([data-ref-root]) .sk-lightbox .sk-lb-panel {
   pointer-events: auto;
 }
+:where([data-ref-root]) .sk-lb-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 0;
+  background: transparent;
+  color: var(--sk-gold);
+  font: 600 0.85rem/1 var(--sk-font-body);
+  cursor: pointer;
+}
+:where([data-ref-root]) .sk-lb-toggle i {
+  transition: transform 0.2s ease;
+}
+:where([data-ref-root]) .sk-lb-panel.is-open .sk-lb-toggle i {
+  transform: rotate(180deg);
+}
+:where([data-ref-root]) .sk-lb-more {
+  display: none;
+  text-align: left;
+}
+:where([data-ref-root]) .sk-lb-panel.is-open .sk-lb-more {
+  display: block;
+}
+:where([data-ref-root]) .sk-lb-details {
+  display: grid;
+  gap: 8px;
+  margin: 8px 0 14px;
+  color: #fff;
+  font: 400 0.88rem/1.4 var(--sk-font-body);
+}
+:where([data-ref-root]) .sk-lb-details > div {
+  display: grid;
+  grid-template-columns: 7.5em 1fr;
+  gap: 10px;
+}
+:where([data-ref-root]) .sk-lb-details dt {
+  color: rgba(255, 255, 255, 0.6);
+}
+:where([data-ref-root]) .sk-lb-details dd {
+  margin: 0;
+}
+:where([data-ref-root]) .sk-lb-details a {
+  color: var(--sk-gold);
+}
+:where([data-ref-root]) .sk-lb-related-title {
+  margin: 4px 0 8px;
+  color: rgba(255, 255, 255, 0.72);
+  font: 600 0.78rem/1.2 var(--sk-font-body);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+:where([data-ref-root]) .sk-lb-related ul {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0 0 6px;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  overscroll-behavior-x: contain;
+}
+:where([data-ref-root]) .sk-lb-related li {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+:where([data-ref-root]) .sk-lb-related button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 76px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  font: 500 0.72rem/1.2 var(--sk-font-body);
+  text-align: center;
+  cursor: pointer;
+}
+:where([data-ref-root]) .sk-lb-related img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border: 1px solid rgba(201, 162, 39, 0.4);
+  border-radius: 8px;
+}
+:where([data-ref-root]) .sk-lb-related button:hover img,
+:where([data-ref-root]) .sk-lb-related button:focus-visible img {
+  border-color: var(--sk-gold);
+}
+:where([data-ref-root]) .sk-lb-related span {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+/* Phones: the details fold out over the bottom of the photo, on a solid backdrop, and scroll inside. */
+@media (max-width: 899.98px) {
+  :where([data-ref-root]) .sk-lb-panel.is-open {
+    z-index: 3; /* above the prev/next arrows */
+    max-height: 70vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: rgba(12, 12, 12, 0.96);
+  }
+}
+/* Desktop: a fixed column on the right; details always shown, the toggle goes away. */
+@media (min-width: 900px) {
+  :where([data-ref-root]) .sk-lightbox--stone {
+    padding: 64px 372px 64px 72px;
+  }
+  :where([data-ref-root]) .sk-lightbox--stone .product-lightbox-next {
+    right: 360px;
+  }
+  :where([data-ref-root]) .sk-lightbox--stone .sk-lb-panel {
+    left: auto;
+    top: 0;
+    width: 340px;
+    padding: 84px 24px 24px;
+    overflow-y: auto;
+    text-align: left;
+    background: rgba(18, 18, 18, 0.98);
+    border-left: 1px solid rgba(201, 162, 39, 0.2);
+  }
+  :where([data-ref-root]) .sk-lightbox--stone .sk-lb-actions {
+    justify-content: flex-start;
+  }
+  :where([data-ref-root]) .sk-lightbox--stone .sk-lb-toggle {
+    display: none;
+  }
+  :where([data-ref-root]) .sk-lightbox--stone .sk-lb-more {
+    display: block;
+  }
+  :where([data-ref-root]) .sk-lightbox--stone .sk-lb-related ul {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :where([data-ref-root]) .sk-lb-toggle i {
+    transition: none;
+  }
+}
 :where([data-ref-root][data-sk-overlay]) .sk-toast-region {
   top: 18px;
   bottom: auto;

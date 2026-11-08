@@ -24,6 +24,13 @@ const itemEls = (g: LightboxGroup) => [...document.querySelectorAll<HTMLElement>
 const visible = (el: HTMLElement) => !el.hidden && !el.closest('[hidden]');
 export const DEEP_LINK = /^#(?:stone|product)=([\w-]+)/;
 
+/** Up to six other stones from the same collection, starting with the ones after this stone (wrapping). */
+export function relatedTo(items: LightboxItem[], item: LightboxItem, max = 6): LightboxItem[] {
+  const at = items.indexOf(item);
+  const ordered = [...items.slice(at + 1), ...items.slice(0, Math.max(at, 0))];
+  return ordered.filter((it) => it.id && it.c === item.c && it.id !== item.id).slice(0, max);
+}
+
 /**
  * Opens the fullscreen viewer from any grid published with <LightboxData>: a click anywhere on an item
  * (except its Save button), or Enter/Space on its focusable part. Steps only through items currently
@@ -174,7 +181,7 @@ export function LightboxController() {
           item={item}
           pos={open.pos}
           total={open.list.length}
-          related={group.items.filter((it) => it.id && it.c === item.c && it.id !== item.id)}
+          related={relatedTo(group.items, item)}
           onJump={jump}
         />
       }
