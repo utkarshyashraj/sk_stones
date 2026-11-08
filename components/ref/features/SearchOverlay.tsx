@@ -149,6 +149,8 @@ export function SearchOverlay({ onClose, initial = '' }: { onClose: () => void; 
         <div className="sk-search-bar">
           <Icon name="search" />
           <input
+            // Focus on mount, so keys typed right after "/" land here (useDialog's focus comes a frame later).
+            autoFocus
             data-autofocus=""
             type="search"
             role="combobox"

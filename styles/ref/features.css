@@ -672,6 +672,7 @@
 }
 :where([data-ref-root]) .sk-shared-item .sk-muted {
   margin: 4px 0 0;
+  color: rgba(255, 255, 255, 0.7); /* on the dark card footer */
 }
 :where([data-ref-root]) .sk-clear-offer {
   margin-top: 12px;

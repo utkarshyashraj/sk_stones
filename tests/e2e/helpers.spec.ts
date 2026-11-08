@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { featuresReady } from './ready';
 
 test.describe('conversion helpers', () => {
   test('calculator from the quote form fills Quantity and the unit', async ({ page }) => {
@@ -44,8 +45,12 @@ test.describe('conversion helpers', () => {
     await page.keyboard.press('ArrowRight');
     await expect(title).not.toHaveText('Tan Brown');
     const second = await title.textContent();
+    await expect
+      .poll(() => page.evaluate(() => JSON.parse(localStorage.getItem('sk-recent-v1') ?? '[]').length))
+      .toBe(2);
     await page.keyboard.press('Escape');
     await page.goto('/products');
+    await featuresReady(page);
     const strip = page.getByRole('region', { name: 'Recently viewed' });
     await expect(strip.getByRole('link')).toHaveCount(2);
     await expect(strip.getByRole('link').first()).toHaveText(second!);

@@ -23,6 +23,7 @@ test.describe('search', () => {
     await expect(dlg).toBeHidden();
 
     await page.keyboard.press('/');
+    await expect(input).toBeFocused();
     await page.keyboard.type('tiger skin');
     await expect(dlg.getByRole('option').first()).toContainText('Tiger Skin');
     await page.keyboard.press('ArrowDown');
