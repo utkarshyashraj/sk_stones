@@ -10,3 +10,7 @@ reports/
 playwright-report/
 test-results/
 package-lock.json
+# generated from the reference CSS (scripts/build-ref-styles.mjs); features.css is hand-written
+styles/ref/*.css
+!styles/ref/features.css
+docs/*.csv

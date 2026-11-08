@@ -5,3 +5,5 @@
 *.webp binary
 *.mp4 binary
 *.ico binary
+# Excel and Google Sheets expect Windows line endings in the stone-attributes sheet
+docs/*.csv text eol=crlf
