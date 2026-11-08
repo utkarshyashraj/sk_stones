@@ -85,27 +85,17 @@
   "needsBusinessVerification": [
     {
       "category": "indian-marbles",
-      "items": [
-        "Green Marble",
-        "Black Stripe",
-        "Asian Grey"
-      ],
+      "items": ["Green Marble", "Black Stripe", "Asian Grey"],
       "issue": "Filenames (indian-white-onyx, indian-statuario, GREEN) do not match labels; 'Asian Grey' shows a clearly green stone. Possibly shifted; left unchanged pending confirmation."
     },
     {
       "category": "roof-flooring-tiles",
-      "items": [
-        "Cappuccino Flooring Tiles"
-      ],
+      "items": ["Cappuccino Flooring Tiles"],
       "issue": "Image filename is BURGUNDY-1.jpg."
     },
     {
       "category": "acrylic-surfaces",
-      "items": [
-        "Roosevelt Gray Quartz",
-        "River Gold Quartz",
-        "Blue Quartzite Quartz"
-      ],
+      "items": ["Roosevelt Gray Quartz", "River Gold Quartz", "Blue Quartzite Quartz"],
       "issue": "Items on the Acrylic page are named '... Quartz'; confirm whether they are acrylic or quartz products."
     },
     {
@@ -120,32 +110,22 @@
     },
     {
       "category": "mop-inlay-work",
-      "items": [
-        "Sand Stones Art"
-      ],
+      "items": ["Sand Stones Art"],
       "issue": "Item labelled as sandstone art inside the Mother-of-Pearl collection."
     },
     {
       "category": "murals-monuments",
-      "items": [
-        "MOP Inlay Work"
-      ],
+      "items": ["MOP Inlay Work"],
       "issue": "MOP item inside Murals & Monuments."
     },
     {
       "category": "cnc-stone-work",
-      "items": [
-        "Design in Slate Stone Tile 1X1"
-      ],
+      "items": ["Design in Slate Stone Tile 1X1"],
       "issue": "Image filename is SAND-STONES-ART; stone-art hub labelled it 'Sand Stones Art'."
     },
     {
       "category": "imported-marbles",
-      "items": [
-        "Satvario",
-        "Silver Portro",
-        "Botochino Classic"
-      ],
+      "items": ["Satvario", "Silver Portro", "Botochino Classic"],
       "issue": "Possible misspellings (Statuario? Portoro? Botticino?) — not changed without confirmation."
     },
     {

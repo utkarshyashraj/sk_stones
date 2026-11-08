@@ -21,27 +21,27 @@ The ported site (branch `reference-port`, Next.js 16 static export) has no searc
 
 **Routes (46 pages)**
 
-| Route | Source | Notes |
-| --- | --- | --- |
-| `/` | `app/page.tsx` | 11 reference sections; phones hide five of them unless `?view=more` |
-| `/[slug]` (34 product, hub and collection pages) | `app/[slug]/page.tsx` → `components/ref/ProductPageTemplate.tsx` | Hero, overview, product grid, fullscreen lightbox with magnifier |
-| `/products` | `app/products/page.tsx` | 9 collection cards |
-| `/landscaping`, `/flooring-executions`, `/stone-art-installations`, `/installations` | `components/ref/ServicePageTemplate.tsx` | Data in `content/ref/services.ts` |
-| `/about`, `/projects`, `/contact`, `/thank-you`, 404 | `app/*/page.tsx` | Projects data in `content/ref/projects.ts` (7 clients, 28 photos) |
+| Route                                                                                | Source                                                           | Notes                                                               |
+| ------------------------------------------------------------------------------------ | ---------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `/`                                                                                  | `app/page.tsx`                                                   | 11 reference sections; phones hide five of them unless `?view=more` |
+| `/[slug]` (34 product, hub and collection pages)                                     | `app/[slug]/page.tsx` → `components/ref/ProductPageTemplate.tsx` | Hero, overview, product grid, fullscreen lightbox with magnifier    |
+| `/products`                                                                          | `app/products/page.tsx`                                          | 9 collection cards                                                  |
+| `/landscaping`, `/flooring-executions`, `/stone-art-installations`, `/installations` | `components/ref/ServicePageTemplate.tsx`                         | Data in `content/ref/services.ts`                                   |
+| `/about`, `/projects`, `/contact`, `/thank-you`, 404                                 | `app/*/page.tsx`                                                 | Projects data in `content/ref/projects.ts` (7 clients, 28 photos)   |
 
 **Key components** (all in `components/ref/`): `RefShell` (page frame), `Header` (desktop mega-menu, no search icon), `MobileBottomNav` (Home, About, Products, Services, Projects, More), `Lightbox`, `ContactFormModal`, `FAQAccordion`, `RefImg`, `Fa` (icons). Each page's styles are generated from the reference CSS into `styles/ref/<page>.css` and scoped to a wrapper class.
 
 **Stone data.** `content/generated/catalog.json` (built by `scripts/build-catalog.mjs`) holds 444 products and 35 categories; `lib/ref-catalog.ts` reads it. Fields per stone:
 
-| Field | Filled | Where it comes from |
-| --- | --- | --- |
-| `id`, `name`, `collection`, `category`, `subcategory`, `image` | 100% | Reference product pages + verified corrections |
-| `applications` | 100% | Copied from the category, so every stone in a category has the same list |
-| `colours` | 55% | Guessed from words in the name (e.g. "Black", "Crema") |
-| `origin` | 28% | Category level: India or Imported |
-| `tags` | 14% | Name words (Onyx, Travertine, Statuario…) |
-| `finish` | 8% | Name words (Polished, Leather…) |
-| `size` | 0% | Never present in names |
+| Field                                                          | Filled | Where it comes from                                                      |
+| -------------------------------------------------------------- | ------ | ------------------------------------------------------------------------ |
+| `id`, `name`, `collection`, `category`, `subcategory`, `image` | 100%   | Reference product pages + verified corrections                           |
+| `applications`                                                 | 100%   | Copied from the category, so every stone in a category has the same list |
+| `colours`                                                      | 55%    | Guessed from words in the name (e.g. "Black", "Crema")                   |
+| `origin`                                                       | 28%    | Category level: India or Imported                                        |
+| `tags`                                                         | 14%    | Name words (Onyx, Travertine, Statuario…)                                |
+| `finish`                                                       | 8%     | Name words (Polished, Leather…)                                          |
+| `size`                                                         | 0%     | Never present in names                                                   |
 
 **State.** No global store. Client state is local to components (open sheet, lightbox index, FAQ item). `components/ref/useClient.ts` reads browser-only values. The URL carries only `?view=more` (home) and `?submitted=1` (contact).
 
@@ -53,14 +53,14 @@ The ported site (branch `reference-port`, Next.js 16 static export) has no searc
 
 All three features shipped together in the pre-port build and are recoverable from git at commit `aee7b6d`. Their logic is sound and can be reused nearly as is; their UI was built for the old design and cannot.
 
-|  | Search | Filters | Shortlist |
-| --- | --- | --- | --- |
-| Files | `components/catalog/ProductSearch/SearchDialog.tsx`, `catalog-index.ts`, `search-store.ts`; `app/search/page.tsx`; `app/data/catalog.json/route.ts` | `lib/search.ts`, `components/catalog/CatalogFilters/`, `components/catalog/ProductGrid/` | `components/shortlist/shortlist-store.ts`, `ShortlistDrawer.tsx`; hooks in `ProductCard`, `ProductLightbox`, header, bottom bar, `QuoteForm` |
-| Data flow | Header button opened a `<dialog>`; on first open it fetched `/data/catalog.json` (a build-time static file of every product), then matched in memory | Category pages got their products from the server; filtering, counts and sorting ran in the browser | `useSyncExternalStore` over a module cache backed by localStorage; a separate open/closed signal for the drawer |
-| UI | Modal: input, top 8 results with thumbnails, "press Enter for all"; full results page `/search` with the filter grid | Desktop sidebar, mobile "Filters" drawer; facets Category, Collection, Colour, Finish, Application, Origin with live counts; sort A–Z/Z–A; "Clear filters"; empty state | Bookmark toggle on cards and in the lightbox; counter badge in header and bottom bar; drawer listing saved stones with remove, clear, "Enquire about these", "Send list on WhatsApp" |
-| Persistence | None needed | None (lived in the URL) | localStorage `sk-shortlist-v1` (id, name, collection, thumbnail), max 30, synced across tabs; in-memory fallback in private mode |
-| URL | `/search?q=` | `?q=&colour=&finish=&sort=` (comma lists), updated with `history.replaceState`; `#product=<id>` opened the lightbox | `/contact?from=shortlist#quote` prefilled the form |
-| Matching | Every typed word must start a word in the stone's text (name, collection, colours, finish, applications, origin, tags); accents stripped, gray→grey | Facet counts computed against all other active filters, so options never dead-end | n/a |
+|             | Search                                                                                                                                               | Filters                                                                                                                                                                 | Shortlist                                                                                                                                                                            |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Files       | `components/catalog/ProductSearch/SearchDialog.tsx`, `catalog-index.ts`, `search-store.ts`; `app/search/page.tsx`; `app/data/catalog.json/route.ts`  | `lib/search.ts`, `components/catalog/CatalogFilters/`, `components/catalog/ProductGrid/`                                                                                | `components/shortlist/shortlist-store.ts`, `ShortlistDrawer.tsx`; hooks in `ProductCard`, `ProductLightbox`, header, bottom bar, `QuoteForm`                                         |
+| Data flow   | Header button opened a `<dialog>`; on first open it fetched `/data/catalog.json` (a build-time static file of every product), then matched in memory | Category pages got their products from the server; filtering, counts and sorting ran in the browser                                                                     | `useSyncExternalStore` over a module cache backed by localStorage; a separate open/closed signal for the drawer                                                                      |
+| UI          | Modal: input, top 8 results with thumbnails, "press Enter for all"; full results page `/search` with the filter grid                                 | Desktop sidebar, mobile "Filters" drawer; facets Category, Collection, Colour, Finish, Application, Origin with live counts; sort A–Z/Z–A; "Clear filters"; empty state | Bookmark toggle on cards and in the lightbox; counter badge in header and bottom bar; drawer listing saved stones with remove, clear, "Enquire about these", "Send list on WhatsApp" |
+| Persistence | None needed                                                                                                                                          | None (lived in the URL)                                                                                                                                                 | localStorage `sk-shortlist-v1` (id, name, collection, thumbnail), max 30, synced across tabs; in-memory fallback in private mode                                                     |
+| URL         | `/search?q=`                                                                                                                                         | `?q=&colour=&finish=&sort=` (comma lists), updated with `history.replaceState`; `#product=<id>` opened the lightbox                                                     | `/contact?from=shortlist#quote` prefilled the form                                                                                                                                   |
+| Matching    | Every typed word must start a word in the stone's text (name, collection, colours, finish, applications, origin, tags); accents stripped, gray→grey  | Facet counts computed against all other active filters, so options never dead-end                                                                                       | n/a                                                                                                                                                                                  |
 
 **What worked well**
 
@@ -82,18 +82,18 @@ All three features shipped together in the pre-port build and are recoverable fr
 
 Good filters need attributes recorded per stone by the business, not guessed from names. Today only collection and category are reliable. Each gap below is a question only the business can answer; no value will be invented.
 
-| Attribute | Today | Question for the business | Unlocks |
-| --- | --- | --- | --- |
-| Colour family | Guessed for 55% from names; e.g. none of the 17 cobbles or most tiles have one | Can someone tag each stone with 1–2 colour families from a fixed list (White, Beige, Grey, Black, Brown, Gold, Green, Blue, Red, Multi)? | Colour filter, "black granite" style searches |
-| Finish | 8% (from names) | Which finishes is each stone offered in (polished, honed, leather, flamed, unpolished…)? One stone may have several | Finish filter |
-| Application | 100%, but per category | Which uses suit each individual stone (e.g. which granites are recommended outdoors)? | Trustworthy application filter |
-| Origin | 28%, India or Imported only | Country or region of origin per stone, where known? | Origin filter, search by origin |
-| Thickness | None | Available thicknesses per stone (mm)? | Thickness filter; prefill the quote form |
-| Slab or tile size | None | Formats per stone (slab, tile sizes)? | Size filter |
-| Availability | None | Should the site show availability at all? If yes, who updates it and how often? | "In stock" filter or badge |
-| Price band | None | Is any price indication allowed on the site? | Budget filter (only if approved) |
-| Synonyms | None | Common customer names for stones (e.g. trade names, local names)? | Search finds what people actually type |
-| Projects ↔ stones | None | Which stones were used in each of the 7 projects on `/projects`? | "Used in" links from search and stones |
+| Attribute         | Today                                                                          | Question for the business                                                                                                                | Unlocks                                       |
+| ----------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| Colour family     | Guessed for 55% from names; e.g. none of the 17 cobbles or most tiles have one | Can someone tag each stone with 1–2 colour families from a fixed list (White, Beige, Grey, Black, Brown, Gold, Green, Blue, Red, Multi)? | Colour filter, "black granite" style searches |
+| Finish            | 8% (from names)                                                                | Which finishes is each stone offered in (polished, honed, leather, flamed, unpolished…)? One stone may have several                      | Finish filter                                 |
+| Application       | 100%, but per category                                                         | Which uses suit each individual stone (e.g. which granites are recommended outdoors)?                                                    | Trustworthy application filter                |
+| Origin            | 28%, India or Imported only                                                    | Country or region of origin per stone, where known?                                                                                      | Origin filter, search by origin               |
+| Thickness         | None                                                                           | Available thicknesses per stone (mm)?                                                                                                    | Thickness filter; prefill the quote form      |
+| Slab or tile size | None                                                                           | Formats per stone (slab, tile sizes)?                                                                                                    | Size filter                                   |
+| Availability      | None                                                                           | Should the site show availability at all? If yes, who updates it and how often?                                                          | "In stock" filter or badge                    |
+| Price band        | None                                                                           | Is any price indication allowed on the site?                                                                                             | Budget filter (only if approved)              |
+| Synonyms          | None                                                                           | Common customer names for stones (e.g. trade names, local names)?                                                                        | Search finds what people actually type        |
+| Projects ↔ stones | None                                                                           | Which stones were used in each of the 7 projects on `/projects`?                                                                         | "Used in" links from search and stones        |
 
 Recommended data home: a new hand-edited `content/stone-attributes.json` (or a spreadsheet exported to it), keyed by stone id and merged in `scripts/build-catalog.mjs`, like `content/catalog-corrections.json` today. Until a field reaches about 80% coverage, its filter stays hidden.
 
@@ -158,14 +158,14 @@ Filters sit above each product grid and on `/search`, narrow the grid instantly,
 3. **Phone.** A single "Filters (2)" button opens a bottom sheet in the same style as the existing Products, Services and More sheets in `MobileBottomNav.tsx`. Each facet is a group of checkboxes with counts, and the sheet has a sticky "Show 12 stones" button.
 4. **Facets, phased by data:**
 
-| Facet | Show when | Why |
-| --- | --- | --- |
-| Search within this page | Now | Uses names; no data needed |
-| Collection (on hub pages such as Tiles or Natural Stones, and `/search`) | Now | Reliable today |
-| Colour family | After the business tags colours | Name guesses cover 55% and miss many dark stones |
-| Finish | After the business supplies finishes | 8% today |
-| Application | After per-stone uses are supplied | Per-category today, so it filters nothing within a page |
-| Origin, Thickness, Size, Availability | Only if the business supplies them | Not recorded today |
+| Facet                                                                    | Show when                            | Why                                                     |
+| ------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------- |
+| Search within this page                                                  | Now                                  | Uses names; no data needed                              |
+| Collection (on hub pages such as Tiles or Natural Stones, and `/search`) | Now                                  | Reliable today                                          |
+| Colour family                                                            | After the business tags colours      | Name guesses cover 55% and miss many dark stones        |
+| Finish                                                                   | After the business supplies finishes | 8% today                                                |
+| Application                                                              | After per-stone uses are supplied    | Per-category today, so it filters nothing within a page |
+| Origin, Thickness, Size, Availability                                    | Only if the business supplies them   | Not recorded today                                      |
 
 5. **Counts.** Every option shows how many stones it leaves, computed against the other active filters (the old `facetCounts` logic). Options that would leave zero are disabled, not hidden, so the layout stays still.
 6. **Sort.** Reference order (default, as the business arranged it), Name A–Z, Name Z–A.
@@ -260,9 +260,11 @@ Each phase ships on its own; facets beyond the first set unlock one at a time as
 - [ ] **Phase 1 · Save and quote (about 4 days).**
 
   A stone saved on a product page or in the lightbox shows in the list on another page and after a reload. "Get a quote for these" opens the form with every saved stone listed, and the FormSubmit email shows them. The WhatsApp message lists the stones with links. The More-tab badge and header count are correct at 375 px and 1280 px.
+
 - [ ] **Phase 2 · Search (about 5 days).**
 
   "travertne", "calacata", "black granite" and "quartz" each return sensible results in under 50 ms after the index loads. A stone result opens its lightbox directly. `/search` works and is noindex. Keyboard-only and screen-reader runs pass. First-load size of product pages is unchanged.
+
 - [ ] **Phase 3 · Filters (about 3 days, then per new data field).**
 
   Filtered URLs survive reload and sharing. Counts never offer a dead end. The lightbox steps only through visible stones. Each new facet ships only once its attribute covers about 80% of stones.

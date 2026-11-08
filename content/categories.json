@@ -28,11 +28,7 @@
       },
       "cardDescription": "Premium marble stones offering elegance, durability, and timeless appeal, suitable for flooring, walls, counters, and luxury interior applications.",
       "cardImageUrl": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/BLACK-STRIPE-1.jpg",
-      "applications": [
-        "Flooring",
-        "Wall Cladding",
-        "Countertops & Kitchens"
-      ],
+      "applications": ["Flooring", "Wall Cladding", "Countertops & Kitchens"],
       "sourceNote": "Products hub card: 'suitable for flooring, walls, counters'"
     },
     {
@@ -49,11 +45,7 @@
         "description": "Indian leather finish marble is processed to create a soft, textured surface that enhances natural patterns, reduces glare, and provides a refined tactile feel — making it ideal for premium residential and commercial applications."
       },
       "origin": "India",
-      "applications": [
-        "Flooring",
-        "Wall Cladding",
-        "Countertops & Kitchens"
-      ],
+      "applications": ["Flooring", "Wall Cladding", "Countertops & Kitchens"],
       "sourceNote": "Origin from category name; applications inherited from Marbles hub copy"
     },
     {
@@ -70,11 +62,7 @@
         "description": "Imported marble features warm tones, refined veining, and rich color depth — delivering a luxurious visual presence suited for premium interiors, statement flooring, and elegant architectural applications."
       },
       "origin": "Imported",
-      "applications": [
-        "Flooring",
-        "Wall Cladding",
-        "Countertops & Kitchens"
-      ],
+      "applications": ["Flooring", "Wall Cladding", "Countertops & Kitchens"],
       "sourceNote": "Origin from category name; hero copy mentions statement flooring"
     },
     {
@@ -92,11 +80,7 @@
       },
       "cardDescription": "Hard wearing granite stones known for strength, weather resistance, and versatility, ideal for flooring, countertops, exteriors, and heavy traffic areas.",
       "cardImageUrl": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/YELLOW-FOSSIL-LEATHERED-1.jpg",
-      "applications": [
-        "Flooring",
-        "Countertops & Kitchens",
-        "Facades & Elevations"
-      ],
+      "applications": ["Flooring", "Countertops & Kitchens", "Facades & Elevations"],
       "sourceNote": "Nav grouping only: the reference has no Granites overview page (its /granites is Indian Granites)."
     },
     {
@@ -113,11 +97,7 @@
         "description": "Our experienced stone specialists source granite slabs selected for density, grain structure, color stability, and thickness consistency. Each slab is carefully curated, evaluated, and supplied under controlled material quality parameters."
       },
       "origin": "India",
-      "applications": [
-        "Flooring",
-        "Countertops & Kitchens",
-        "Facades & Elevations"
-      ],
+      "applications": ["Flooring", "Countertops & Kitchens", "Facades & Elevations"],
       "sourceNote": "Reference URL /granites (Indian Granites); /indian-granites redirects here."
     },
     {
@@ -134,10 +114,7 @@
         "description": "Imported granites are processed to deliver high structural strength, dense composition, and consistent surface performance — making them ideal for heavy-use interiors that demand durability and long-term functional reliability."
       },
       "origin": "Imported",
-      "applications": [
-        "Flooring",
-        "Countertops & Kitchens"
-      ],
+      "applications": ["Flooring", "Countertops & Kitchens"],
       "sourceNote": "Origin from category name; granite hub copy"
     },
     {
@@ -155,9 +132,7 @@
       },
       "cardDescription": "Artistic stone creations crafted for murals, fountains, water features, and decorative installations enhancing visual identity and architectural storytelling.",
       "cardImageUrl": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/WhatsApp-Image-2025-11-27-at-11.46.41_24d000c0-1.jpg",
-      "applications": [
-        "Decorative & Art"
-      ],
+      "applications": ["Decorative & Art"],
       "sourceNote": "Products hub card"
     },
     {
@@ -173,9 +148,7 @@
         "heading": "CNC Stone Work & Inlay",
         "description": "Stone art pieces are crafted to create visual focal points using natural stone forms, textures, and detailing that add character, depth, and artistic expression to interior and exterior architectural spaces."
       },
-      "applications": [
-        "Decorative & Art"
-      ],
+      "applications": ["Decorative & Art"],
       "sourceNote": "Stone art copy"
     },
     {
@@ -191,9 +164,7 @@
         "heading": "Mother-of-Pearl Inlay",
         "description": "Crafted with exquisite Mother-of-Pearl inlay, each piece reflects timeless artistry. The natural iridescence of the shell creates a luminous play of light and color. Meticulously embedded by skilled craftsmen for a refined, lasting finish."
       },
-      "applications": [
-        "Decorative & Art"
-      ],
+      "applications": ["Decorative & Art"],
       "sourceNote": "Stone art copy"
     },
     {
@@ -209,9 +180,7 @@
         "heading": "Murals & Monuments",
         "description": "Stone murals and monuments are crafted to create visual masterpieces using natural stone and intricate detailing that add character."
       },
-      "applications": [
-        "Decorative & Art"
-      ],
+      "applications": ["Decorative & Art"],
       "sourceNote": "Stone art copy"
     },
     {
@@ -227,10 +196,7 @@
         "heading": "Feature Walls",
         "description": "Feature walls are crafted to create striking visuals using natural stone forms, textures, and refined detailing. These artistic compositions add character, depth, and architectural expression to interior and exterior spaces."
       },
-      "applications": [
-        "Decorative & Art",
-        "Wall Cladding"
-      ],
+      "applications": ["Decorative & Art", "Wall Cladding"],
       "sourceNote": "Feature wall copy"
     },
     {
@@ -248,12 +214,7 @@
       },
       "cardDescription": "Naturally sourced stones delivering organic textures, durability, and character, widely used for flooring, landscaping, cladding, and architectural detailing.",
       "cardImageUrl": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/IMG_20180224_135417-scaled.jpg",
-      "applications": [
-        "Flooring",
-        "Landscaping",
-        "Wall Cladding",
-        "Paving & Pathways"
-      ],
+      "applications": ["Flooring", "Landscaping", "Wall Cladding", "Paving & Pathways"],
       "sourceNote": "Products hub card"
     },
     {
@@ -271,10 +232,7 @@
       },
       "cardDescription": "Durable cobble stones designed for pathways, driveways, and landscaping applications, offering natural grip, strength, and timeless outdoor aesthetics.",
       "cardImageUrl": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/760368_ac9dfc1eff6c4d51b9507de348c5e3c4mv2.avif",
-      "applications": [
-        "Paving & Pathways",
-        "Landscaping"
-      ],
+      "applications": ["Paving & Pathways", "Landscaping"],
       "sourceNote": "Hero copy: pathways, driveways, landscapes, courtyards"
     },
     {
@@ -290,10 +248,7 @@
         "heading": "Kota Stone & Natural Limestones",
         "description": "Limestones offer a variety of finishes and colours with natural elegance, making them ideal for pathways, courtyards, restaurants and other architectural spaces that require an earthy feel and timeless beauty."
       },
-      "applications": [
-        "Paving & Pathways",
-        "Flooring"
-      ],
+      "applications": ["Paving & Pathways", "Flooring"],
       "sourceNote": "Hero copy: pathways, courtyards; overview: high-performance flooring. Naming unified (nav said 'Lime Stones', page said 'Kota Stones')."
     },
     {
@@ -309,11 +264,7 @@
         "heading": "Authentic Earth Pebbles",
         "description": "Pebbles offer a naturally smooth texture, excellent durability, and organic visual appeal — making them ideal for landscaping, garden pathways, decorative surfaces, water features, and outdoor spaces that require both strength and aesthetic charm."
       },
-      "applications": [
-        "Landscaping",
-        "Paving & Pathways",
-        "Decorative & Art"
-      ],
+      "applications": ["Landscaping", "Paving & Pathways", "Decorative & Art"],
       "sourceNote": "Hero copy"
     },
     {
@@ -330,12 +281,7 @@
         "description": "Sandstone combines natural texture, durability, and warm earthy tones, making it a versatile choice for wall cladding, paving, flooring, landscaping, and architectural applications where both strength and timeless aesthetics are essential."
       },
       "origin": "India",
-      "applications": [
-        "Wall Cladding",
-        "Paving & Pathways",
-        "Flooring",
-        "Landscaping"
-      ],
+      "applications": ["Wall Cladding", "Paving & Pathways", "Flooring", "Landscaping"],
       "sourceNote": "Legacy h1 'Indian Sandstones'; hero copy lists applications"
     },
     {
@@ -352,9 +298,7 @@
         "description": "Engineered surfaces are manufactured to deliver uniform appearance, controlled performance and consistent quality, combining natural aggregates with advanced processing for modern architectural and interior applications."
       },
       "cardDescription": "Manufactured stone surfaces combining strength, consistency, and design flexibility, suitable for countertops, commercial interiors, and modern architectural applications.",
-      "applications": [
-        "Countertops & Kitchens"
-      ],
+      "applications": ["Countertops & Kitchens"],
       "sourceNote": "Products hub card: 'suitable for countertops, commercial interiors'"
     },
     {
@@ -370,9 +314,7 @@
         "heading": "Precision Acrylic Surfaces",
         "description": "Acrylic surfaces are manufactured to deliver a uniform appearance, controlled performance, and consistent quality — combining high-grade resins with advanced processing technologies for modern architectural and interior applications."
       },
-      "applications": [
-        "Countertops & Kitchens"
-      ],
+      "applications": ["Countertops & Kitchens"],
       "sourceNote": "Legacy meta: 'for kitchens and interiors'"
     },
     {
@@ -381,9 +323,7 @@
       "parent": "engineered-surfaces",
       "kind": "collection",
       "legacySource": "quatrz-surfaces",
-      "legacySlugs": [
-        "quatrz-surfaces"
-      ],
+      "legacySlugs": ["quatrz-surfaces"],
       "title": "Quartz Surfaces & Slabs | Stain-Resistant Countertops | S K Stones India",
       "description": "Luxury quartz slabs in a wide range of colours and finishes: stain-resistant, hygienic and durable for residential and high-traffic spaces.",
       "hero": {
@@ -391,9 +331,7 @@
         "heading": "Luxury Quartz Collection",
         "description": "Available in a wide range of colors, textures, and finishes, quartz slabs combine the timeless beauty of natural stone with superior strength and consistency. Their stain-resistant and hygienic properties make them a perfect choice for both residential and high-traffic environments."
       },
-      "applications": [
-        "Countertops & Kitchens"
-      ],
+      "applications": ["Countertops & Kitchens"],
       "sourceNote": "Reference URL keeps the legacy spelling /quatrz-surfaces; /quartz-surfaces redirects here."
     },
     {
@@ -411,10 +349,7 @@
       },
       "cardDescription": "Stone cladding solutions providing texture, protection, and visual depth for interior and exterior walls across residential and commercial projects.",
       "cardImageUrl": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2025/12/760368_f44f5180aee14bd398fb18176eb0aae3mv2.avif",
-      "applications": [
-        "Wall Cladding",
-        "Facades & Elevations"
-      ],
+      "applications": ["Wall Cladding", "Facades & Elevations"],
       "sourceNote": "Overview: interior and exterior architectural surfaces"
     },
     {
@@ -432,10 +367,7 @@
       },
       "cardDescription": "Vitrified and stone tile collections for flooring and walls, combining durability, design flexibility and easy maintenance.",
       "cardImageUrl": "https://tan-beaver-239605.hostingersite.com/wp-content/uploads/2026/02/VENETO-BEIGE_compressed.webp",
-      "applications": [
-        "Flooring",
-        "Wall Cladding"
-      ],
+      "applications": ["Flooring", "Wall Cladding"],
       "sourceNote": "Hero copy: floors, walls"
     },
     {
@@ -451,10 +383,7 @@
         "heading": "Brillo Collection",
         "description": "The Brillo Collection offers refined surface solutions that combine durability, contemporary design expression, and low maintenance performance — making it ideal for floors, walls, and high-usage interior environments across residential and commercial spaces."
       },
-      "applications": [
-        "Flooring",
-        "Wall Cladding"
-      ],
+      "applications": ["Flooring", "Wall Cladding"],
       "sourceNote": "Hero copy"
     },
     {
@@ -470,10 +399,7 @@
         "heading": "Elezzo Collection",
         "description": "The Elezzo Collection presents refined surface solutions that combine durability, contemporary aesthetics, and easy maintenance — making it suitable for floors, walls, and functional spaces across residential, commercial, and high-traffic environments."
       },
-      "applications": [
-        "Flooring",
-        "Wall Cladding"
-      ],
+      "applications": ["Flooring", "Wall Cladding"],
       "sourceNote": "Hero copy"
     },
     {
@@ -489,10 +415,7 @@
         "heading": "Endless Tile Collection",
         "description": "The Endless Tile Collection presents versatile surface solutions that combine durability, contemporary design flexibility, and easy maintenance — making it ideal for floors, walls, and high-traffic interior spaces across residential and commercial environments."
       },
-      "applications": [
-        "Flooring",
-        "Wall Cladding"
-      ],
+      "applications": ["Flooring", "Wall Cladding"],
       "sourceNote": "Hero copy"
     },
     {
@@ -508,10 +431,7 @@
         "heading": "Ittaca Collection",
         "description": "The Ittaca Collection delivers versatile surface solutions that combine durability, refined design expression and easy maintenance — making it ideal for floors, walls, and functional spaces across residential, commercial, and high-traffic environments."
       },
-      "applications": [
-        "Flooring",
-        "Wall Cladding"
-      ],
+      "applications": ["Flooring", "Wall Cladding"],
       "sourceNote": "Hero copy"
     },
     {
@@ -527,10 +447,7 @@
         "heading": "Milagro Collection",
         "description": "The Milagro Collection delivers refined surface solutions that combine durability, contemporary design expression, and easy maintenance — making it ideal for floors, walls, and functional spaces across residential, commercial, and high-traffic environments."
       },
-      "applications": [
-        "Flooring",
-        "Wall Cladding"
-      ],
+      "applications": ["Flooring", "Wall Cladding"],
       "sourceNote": "Hero copy"
     },
     {
@@ -546,10 +463,7 @@
         "heading": "Stone Collection",
         "description": "The Stone Collection delivers versatile surface solutions that combine durability, natural character, and refined design flexibility — making it ideal for floors, walls, and functional spaces across residential, commercial, and high-traffic environments."
       },
-      "applications": [
-        "Flooring",
-        "Wall Cladding"
-      ],
+      "applications": ["Flooring", "Wall Cladding"],
       "sourceNote": "Hero copy"
     },
     {
@@ -565,11 +479,7 @@
         "heading": "Subway Tiles Collection",
         "description": "The Subway Tiles Collection delivers timeless surface solutions that combine durability, clean design lines, and easy maintenance — making it ideal for walls, feature areas, kitchens, bathrooms, and functional spaces across residential and commercial environments."
       },
-      "applications": [
-        "Wall Cladding",
-        "Countertops & Kitchens",
-        "Bathrooms"
-      ],
+      "applications": ["Wall Cladding", "Countertops & Kitchens", "Bathrooms"],
       "sourceNote": "Hero copy: walls, kitchens, bathrooms"
     },
     {
@@ -586,10 +496,7 @@
         "description": "Traditional clay products for elevation, roofing and architectural detailing."
       },
       "cardDescription": "Traditional clay products for elevation, roofing and architectural detailing.",
-      "applications": [
-        "Facades & Elevations",
-        "Roofing & Terraces"
-      ],
+      "applications": ["Facades & Elevations", "Roofing & Terraces"],
       "sourceNote": "Legacy meta"
     },
     {
@@ -605,10 +512,7 @@
         "heading": "Clay Jally Panels",
         "description": "Clay Jally panels combine traditional craftsmanship with architectural functionality — offering ventilation, filtered light, privacy, and decorative patterning for both interior and exterior applications."
       },
-      "applications": [
-        "Facades & Elevations",
-        "Decorative & Art"
-      ],
+      "applications": ["Facades & Elevations", "Decorative & Art"],
       "sourceNote": "Hero copy"
     },
     {
@@ -624,10 +528,7 @@
         "heading": "Wire Cut Bricks",
         "description": "Wire cut bricks deliver clean linear aesthetics, dimensional precision, and consistent surface texture — making them ideal for architectural facades, partitions, ventilated walls, and contemporary design applications."
       },
-      "applications": [
-        "Facades & Elevations",
-        "Walls & Partitions"
-      ],
+      "applications": ["Facades & Elevations", "Walls & Partitions"],
       "sourceNote": "Hero copy"
     },
     {
@@ -643,9 +544,7 @@
         "heading": "Elevation Clay Bricks",
         "description": "Elevation clay bricks combine texture, structural integrity, and visual rhythm — creating durable facade surfaces that enhance architectural character across residential and commercial environments."
       },
-      "applications": [
-        "Facades & Elevations"
-      ],
+      "applications": ["Facades & Elevations"],
       "sourceNote": "Hero copy"
     },
     {
@@ -661,9 +560,7 @@
         "heading": "Clay Roofing Tiles",
         "description": "Roofing tiles combine durability, weather resistance, and visual rhythm — creating protective roof surfaces that enhance shelter, thermal performance, and architectural character across residential and commercial buildings."
       },
-      "applications": [
-        "Roofing & Terraces"
-      ],
+      "applications": ["Roofing & Terraces"],
       "sourceNote": "Hero copy"
     },
     {
@@ -679,10 +576,7 @@
         "heading": "Roof Flooring Tiles",
         "description": "Roof flooring tiles offer durable, weather-resistant surface solutions designed for terraces, open roofs, balconies, and exposed horizontal spaces — combining strength, slip resistance, and architectural consistency."
       },
-      "applications": [
-        "Roofing & Terraces",
-        "Flooring"
-      ],
+      "applications": ["Roofing & Terraces", "Flooring"],
       "sourceNote": "Hero copy"
     },
     {
@@ -699,10 +593,7 @@
         "description": "Concrete blocks provide structural stability, load-bearing strength and design flexibility, making them suitable for walls, partitions, boundaries and architectural construction across residential, commercial and industrial projects."
       },
       "cardDescription": "High strength concrete blocks suitable for structural and landscape use, offering uniformity, load bearing capacity, and long term durability.",
-      "applications": [
-        "Walls & Partitions",
-        "Landscaping"
-      ],
+      "applications": ["Walls & Partitions", "Landscaping"],
       "sourceNote": "Products hub card. Legacy page listed 0 products; no product photography exists."
     }
   ],
