@@ -155,9 +155,9 @@ export default function AboutPage() {
           <div className="team-photo visible" id="teamPhoto">
             <div className="team-photo-panel">
               <div className="team-photo-frame">
-                {/* The client's own 7-person team photo (the reference's shows 6; the list below has 7). */}
+                {/* The reference design's team photo (skstone.netlify.app/about). */}
                 <RefImg
-                  image={getSiteImage('team-photo')}
+                  image={getSiteImage('ref-team-photo')}
                   alt="S K Stones India Team"
                   sizes="(min-width: 1025px) 50vw, 100vw"
                 />
