@@ -31,13 +31,33 @@ export const DEEP_LINK = /^#(?:stone|product)=([\w-]+)/;
  * the pre-port #product= open the viewer on load or when the hash changes.
  */
 export function LightboxController() {
-  const [groups] = useState(readGroups);
+  const [groups, setGroups] = useState<LightboxGroup[]>([]);
+  // Event handlers read the latest grids from here (a click replayed right after mount can arrive before
+  // the first re-render); when still empty they read the DOM directly.
+  const groupsRef = useRef<LightboxGroup[]>([]);
+  const current = useCallback(() => {
+    if (!groupsRef.current.length) groupsRef.current = readGroups();
+    return groupsRef.current;
+  }, []);
+  useEffect(() => {
+    groupsRef.current = groups;
+  }, [groups]);
+  // Read the page's grids once it is in the DOM (after a client-side navigation this component can render
+  // before the new page has committed), and again whenever a client-rendered grid (search results) asks.
+  useEffect(() => {
+    const read = () => setGroups(readGroups());
+    queueMicrotask(read);
+    window.addEventListener('sk:lightbox-refresh', read);
+    return () => window.removeEventListener('sk:lightbox-refresh', read);
+  }, []);
   const [open, setOpen] = useState<OpenState | null>(null);
   const opener = useRef<HTMLElement | null>(null);
 
   const openAt = useCallback(
     (gi: number, idx: number, from?: HTMLElement) => {
-      const g = groups[gi];
+      const all = current();
+      if (all !== groups) setGroups(all);
+      const g = all[gi];
       if (!g) return;
       const els = itemEls(g);
       let list = els.map((el, i) => (visible(el) ? i : -1)).filter((i) => i >= 0 && i < g.items.length);
@@ -45,7 +65,7 @@ export function LightboxController() {
       opener.current = from ?? els.at(idx) ?? null;
       setOpen({ group: gi, list, pos: list.indexOf(idx) });
     },
-    [groups],
+    [groups, current],
   );
 
   // Delegated opening from the server-rendered grids.
@@ -53,8 +73,9 @@ export function LightboxController() {
     const find = (target: EventTarget | null) => {
       const t = target as Element | null;
       if (!t?.closest || t.closest('[data-save-id], a, button:not([data-sk-click])')) return null;
-      for (let gi = 0; gi < groups.length; gi++) {
-        const g = groups[gi]!;
+      const all = current();
+      for (let gi = 0; gi < all.length; gi++) {
+        const g = all[gi]!;
         const el = t.closest<HTMLElement>(`${g.grid} ${g.item}`);
         if (el) return { gi, idx: itemEls(g).indexOf(el), el };
       }
@@ -80,7 +101,7 @@ export function LightboxController() {
       document.removeEventListener('click', onClick);
       document.removeEventListener('keydown', onKey);
     };
-  }, [groups, openAt]);
+  }, [current, openAt]);
 
   // Deep links: #stone=<id> (new) and #product=<id> (pre-port links).
   useEffect(() => {

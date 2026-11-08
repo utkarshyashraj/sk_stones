@@ -15,8 +15,8 @@ export interface IndexStone {
   /** collection slug (the page that owns the stone) and category slug */
   c: string;
   k: string;
-  /** thumbnail: image key + width, or null */
-  img: [string, number] | null;
+  /** image key + widths: thumbnail, full view, magnifier (null when no zoom file) — or null */
+  img: [string, number, number, number | null] | null;
   /** colours and finishes for matching (business values, else name guesses) */
   col: string[];
   fin: string[];
@@ -85,7 +85,7 @@ export function buildSearchIndex(): SearchIndex {
         n: p.name,
         c: p.collection,
         k: p.category,
-        img: img ? [img.key, pickWidth(img, 400)] : null,
+        img: img ? [img.key, pickWidth(img, 400), pickWidth(img, 1200), img.zoom ?? null] : null,
         col: p.colours,
         fin: p.finishes,
         colB: p.sources.colours === 'business' ? p.colours : [],

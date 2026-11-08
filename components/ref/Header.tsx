@@ -130,9 +130,20 @@ export function Header({ active, startScrolled = false }: { active: NavKey; star
         <span className="sk-nav-tools">
           <button
             type="button"
+            className="sk-header-icon"
+            data-sk-open="search"
+            data-sk-click=""
+            data-sk-prefetch=""
+            aria-label="Search stones (press /)"
+          >
+            <Fa name="search" />
+          </button>
+          <button
+            type="button"
             className="sk-header-icon sk-header-saved"
             data-sk-open="saved"
             data-sk-click=""
+            data-sk-prefetch=""
             aria-label="Saved stones"
           >
             <Fa name="bookmark" />
@@ -145,6 +156,15 @@ export function Header({ active, startScrolled = false }: { active: NavKey; star
       <a href={telHref} className="header-cta">
         <Fa name="phone" /> Call Us Now
       </a>
+      <button
+        type="button"
+        className="sk-header-icon sk-search-mobile"
+        data-sk-open="search"
+        data-sk-click=""
+        aria-label="Search stones"
+      >
+        <Fa name="search" />
+      </button>
       <Link className="header-contact-mobile" href="/contact">
         Contact Us
       </Link>

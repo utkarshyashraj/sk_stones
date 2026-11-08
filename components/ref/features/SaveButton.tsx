@@ -32,3 +32,22 @@ export function SaveButton({
     </button>
   );
 }
+
+/** Icon-only Save toggle in the product-card corner, for grids rendered in the browser (search results). */
+export function SaveIconButton({ id, name, where }: { id: string; name: string; where: string }) {
+  const saved = useSaved().some((e) => e.id === id);
+  return (
+    <button
+      type="button"
+      className={`sk-save${saved ? ' is-saved' : ''}`}
+      aria-pressed={saved}
+      aria-label={saved ? `Saved: ${name}. Remove from saved list` : `Save ${name}`}
+      onClick={(e) => {
+        e.stopPropagation();
+        toggleSaved(id, name, where);
+      }}
+    >
+      <Icon name="bookmark" />
+    </button>
+  );
+}

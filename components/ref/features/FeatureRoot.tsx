@@ -2,10 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import { FEATURE_EVENT, type FeatureRequest } from './bus';
+import { loadIndex } from './index-client';
 import { LightboxController } from './LightboxController';
 import { SavedController } from './SavedController';
 import { SavedPanel } from './SavedPanel';
 import { SavedPill } from './SavedPill';
+import { SearchOverlay } from './SearchOverlay';
 import { Toaster } from './Toaster';
 
 /**
@@ -28,7 +30,17 @@ export default function FeatureRoot() {
       for (const el of q?.clicks ?? []) if (el.isConnected) (el as HTMLElement).click();
       if (q) q.requests = q.clicks = [];
     });
-    return () => window.removeEventListener(FEATURE_EVENT, onRequest);
+    // Hovering or focusing the search / saved icons starts loading the index, so it is ready on click.
+    const prefetch = (e: Event) => {
+      if ((e.target as Element | null)?.closest?.('[data-sk-prefetch]')) void loadIndex().catch(() => {});
+    };
+    document.addEventListener('pointerover', prefetch, { passive: true });
+    document.addEventListener('focusin', prefetch);
+    return () => {
+      window.removeEventListener(FEATURE_EVENT, onRequest);
+      document.removeEventListener('pointerover', prefetch);
+      document.removeEventListener('focusin', prefetch);
+    };
   }, []);
 
   const close = () => setOpen(null);
@@ -38,6 +50,7 @@ export default function FeatureRoot() {
       <LightboxController />
       <SavedPill />
       {open?.name === 'saved' ? <SavedPanel onClose={close} /> : null}
+      {open?.name === 'search' ? <SearchOverlay onClose={close} initial={open.detail?.q ?? ''} /> : null}
       <Toaster />
     </>
   );

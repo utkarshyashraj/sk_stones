@@ -9,7 +9,7 @@ import path from 'node:path';
 const ROOT = path.resolve(import.meta.dirname, '..');
 const OUT = path.join(ROOT, 'out');
 const SITE = 'https://skstonesindia.com';
-const NOINDEX = new Set(['/thank-you', '/404', '/_not-found']);
+const NOINDEX = new Set(['/thank-you', '/search', '/saved', '/404', '/_not-found']);
 const problems = [];
 const warn = (m) => problems.push(m);
 

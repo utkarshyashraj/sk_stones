@@ -160,7 +160,22 @@ export function MobileBottomNav({ active }: { active: TabKey }) {
           hidden={!open}
           onClick={() => setOpen(null)}
         />
-        {sheet('products', 'Products', links(mobileProductsSheet))}
+        {sheet(
+          'products',
+          'Products',
+          <>
+            <button
+              type="button"
+              className="sk-sheet-search"
+              data-sk-open="search"
+              data-sk-click=""
+              onClick={() => setOpen(null)}
+            >
+              <Fa name="search" /> Search stones…
+            </button>
+            {links(mobileProductsSheet)}
+          </>,
+        )}
         {sheet('services', 'Services', links(servicesMenu))}
         {sheet(
           'more',

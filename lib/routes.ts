@@ -26,7 +26,7 @@ export function indexableRoutes(): RouteInfo[] {
 }
 
 /** Public but intentionally not indexed. */
-export const noindexRoutes = ['/thank-you'];
+export const noindexRoutes = ['/thank-you', '/search', '/saved'];
 
 /**
  * 301 redirects for URLs that changed: legacy `.html` URLs to their pretty form, plus renamed/retired

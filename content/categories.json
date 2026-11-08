@@ -746,11 +746,6 @@
       "slug": "case-study-ritz-carlton",
       "redirectTo": "projects",
       "reason": "Retired 2026-11 (reference port): the approved site has no case-study pages; its projects live on /projects"
-    },
-    {
-      "slug": "search",
-      "redirectTo": "products",
-      "reason": "Retired 2026-11 (reference port): the approved site has no search page; /products lists every collection"
     }
   ]
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { openFeature } from './bus';
+import { openFeature, type FeatureName } from './bus';
 import { toggleSaved } from './saved-actions';
 import { useSaved } from './shortlist-store';
 
@@ -9,7 +9,7 @@ import { useSaved } from './shortlist-store';
  * Brings the server-rendered saved-list controls to life without re-rendering the page:
  *  - every Save toggle (`[data-save-id]`, on product cards) reflects and changes the list;
  *  - every count (`[data-sk-saved-count]`: header bookmark, More tab badge, More sheet entry) shows it;
- *  - `[data-sk-open="saved"]` controls open the saved list.
+ *  - `[data-sk-open="<feature>"]` controls (header icons, sheet entries) open that feature.
  */
 export function SavedController() {
   const saved = useSaved();
@@ -39,9 +39,10 @@ export function SavedController() {
         toggleSaved(save.dataset.saveId!, save.dataset.saveName ?? 'stone', save.dataset.saveWhere ?? 'card');
         return;
       }
-      if (t?.closest?.('[data-sk-open="saved"]')) {
+      const opener = t?.closest?.<HTMLElement>('[data-sk-open]');
+      if (opener) {
         e.preventDefault();
-        openFeature('saved');
+        openFeature(opener.dataset.skOpen as FeatureName);
       }
     };
     document.addEventListener('click', onClick);

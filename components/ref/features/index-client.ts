@@ -56,6 +56,19 @@ export function useIndex(load = true): State {
 // ---------- helpers over index stones ----------
 export const stoneHref = (s: Pick<IndexStone, 'id' | 'c'>) => `/${s.c}#stone=${s.id}`;
 export const stoneThumb = (s: Pick<IndexStone, 'img'>) => (s.img ? imageUrl(s.img[0], s.img[1]) : null);
+/** Viewer item for a stone from the index (used where the page has no server-published grid). */
+export function stoneLightboxItem(index: SearchIndex, s: IndexStone) {
+  const [key, thumb, full, zoom] = s.img ?? ['', 0, 0, null];
+  return {
+    id: s.id,
+    alt: s.n,
+    c: s.c,
+    cn: collectionName(index, s.c),
+    src: s.img ? imageUrl(key, full) : '',
+    zoom: s.img ? imageUrl(key, zoom ?? full) : '',
+    thumb: s.img ? imageUrl(key, thumb) : undefined,
+  };
+}
 export function collectionName(index: SearchIndex, slug: string) {
   return index.collections.find((c) => c.s === slug)?.n ?? slug;
 }

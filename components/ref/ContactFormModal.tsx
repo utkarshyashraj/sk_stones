@@ -48,7 +48,8 @@ export function ContactFormModal() {
   const request = parseRequest(q.get('request'));
   const singleStone = q.get('stone');
   const fromSaved = q.get('saved') === '1';
-  const autoOpen = (success || fromSaved || Boolean(singleStone)) && !dismissed;
+  const ask = (q.get('ask') ?? '').trim().slice(0, 120); // from a search with no results
+  const autoOpen = (success || fromSaved || Boolean(singleStone) || Boolean(ask)) && !dismissed;
   const location = picked ?? (autoOpen ? 'Bangalore' : null);
 
   const open = useCallback((city: string, from?: HTMLElement) => {
@@ -192,6 +193,14 @@ export function ContactFormModal() {
             ids={singleStone ? [singleStone] : fromSaved ? undefined : []}
             onStoneType={setPreselect}
           />
+          {ask ? (
+            <div className="form-row">
+              <p className="sk-field-help sk-asking">
+                Asking about: <strong>{ask}</strong>
+              </p>
+              <input type="hidden" name="lookingFor" value={ask} />
+            </div>
+          ) : null}
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="stoneType">Stone Type Interested</label>

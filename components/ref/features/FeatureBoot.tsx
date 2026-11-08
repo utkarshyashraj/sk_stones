@@ -27,11 +27,23 @@ declare global {
  * the visitor does is lost.
  */
 export function FeatureBoot() {
-  const [ready, setReady] = useState(false);
+  // After a client-side navigation the bundle is already loaded: mount straight away.
+  const [ready, setReady] = useState(() => typeof window !== 'undefined' && Boolean(window.__skReady));
   useEffect(() => {
     const q: BootQueue = (window.__skQueue ??= { requests: [], clicks: [] });
     const go = () => setReady(true);
     const onIntent = () => go();
+    const onHover = (e: Event) => {
+      if ((e.target as Element | null)?.closest?.('[data-sk-prefetch]')) go();
+    };
+    // "/" opens search from anywhere (not while typing), before or after the bundle has loaded.
+    const onSlash = (e: KeyboardEvent) => {
+      if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+      if ((e.target as Element | null)?.closest?.('input, textarea, select, [contenteditable="true"]'))
+        return;
+      e.preventDefault();
+      window.dispatchEvent(new CustomEvent<FeatureRequest>(FEATURE_EVENT, { detail: { name: 'search' } }));
+    };
     const onRequest = (e: Event) => {
       if (window.__skReady) return;
       q.requests.push((e as CustomEvent<FeatureRequest>).detail);
@@ -62,6 +74,8 @@ export function FeatureBoot() {
     window.addEventListener('keydown', onIntent, opts);
     window.addEventListener('focusin', onIntent, opts);
     window.addEventListener(FEATURE_EVENT, onRequest);
+    document.addEventListener('pointerover', onHover, { passive: true });
+    document.addEventListener('keydown', onSlash);
     document.addEventListener('click', onClick, true);
     document.addEventListener('keydown', onKey, true);
     return () => {
@@ -70,6 +84,8 @@ export function FeatureBoot() {
       window.removeEventListener('keydown', onIntent);
       window.removeEventListener('focusin', onIntent);
       window.removeEventListener(FEATURE_EVENT, onRequest);
+      document.removeEventListener('pointerover', onHover);
+      document.removeEventListener('keydown', onSlash);
       document.removeEventListener('click', onClick, true);
       document.removeEventListener('keydown', onKey, true);
     };

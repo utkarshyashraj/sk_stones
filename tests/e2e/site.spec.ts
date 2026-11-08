@@ -110,7 +110,6 @@ test.describe('navigation', () => {
   test('retired and legacy URLs redirect; unknown URLs get the 404 page', async ({ page }) => {
     const cases: [string, string][] = [
       ['/case-study-airport', '/projects'],
-      ['/search', '/products'],
       ['/indian-granites', '/granites'],
       ['/quartz-surfaces', '/quatrz-surfaces'],
       ['/about.html', '/about'],

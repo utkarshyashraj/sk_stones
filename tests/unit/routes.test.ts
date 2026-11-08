@@ -19,7 +19,7 @@ describe('routes', () => {
     expect(r.get('/indian-granites')).toBe('/granites');
     expect(r.get('/case-study-ritz-carlton')).toBe('/projects');
     expect(r.get('/case-study-ritz-carlton.html')).toBe('/projects');
-    expect(r.get('/search')).toBe('/products');
+    expect(r.has('/search')).toBe(false); // a real (noindex) page again
     expect(r.get('/index.html')).toBe('/');
     expect(r.get('/kota-stones.html')).toBe('/kota-stones');
     const indexable = new Set([...indexableRoutes().map((x) => x.path), ...noindexRoutes]);
