@@ -85,7 +85,9 @@ export function FilterPanel({
     setPop(null);
   };
 
-  // Close the desktop popover on outside click, Escape or scroll.
+  // Close the desktop popover on outside click, Escape or scroll. Only a real scroll closes it: a scroll
+  // event still in flight from bringing the chip into view (smooth scrolling, a slow device) would
+  // otherwise close the popover the moment it opens.
   const popRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!pop) return;
@@ -94,7 +96,8 @@ export function FilterPanel({
       if (!popRef.current?.contains(t) && !t.closest('.sk-chip-btn')) setPop(null);
     };
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setPop(null);
-    const onScroll = () => setPop(null);
+    const startY = window.scrollY;
+    const onScroll = () => Math.abs(window.scrollY - startY) > 48 && setPop(null);
     document.addEventListener('pointerdown', onDown);
     document.addEventListener('keydown', onKey);
     window.addEventListener('scroll', onScroll, { passive: true });

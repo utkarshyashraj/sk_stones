@@ -86,7 +86,6 @@ export function ContactFormModal() {
     const r = document.querySelector('[data-ref-root]');
     r?.classList.add('form-modal-open');
     const unlock = lockOverlay();
-    const t = window.setTimeout(() => modal.current?.querySelector<HTMLInputElement>('#name')?.focus(), 180);
     const onKey = (e: KeyboardEvent) => {
       // A dialog opened over the form (the calculator) handles its own keys.
       if (!modal.current?.contains(document.activeElement)) return;
@@ -106,18 +105,26 @@ export function ContactFormModal() {
     };
     document.addEventListener('keydown', onKey);
     return () => {
-      window.clearTimeout(t);
       r?.classList.remove('form-modal-open');
       unlock();
       document.removeEventListener('keydown', onKey);
     };
   }, [location, close]);
 
+  // Move focus into the form once it is visible (it is visibility: hidden until "active" is applied on the
+  // next frame, and a hidden field can't take focus). 180ms lets the open animation settle first.
+  const active = Boolean(location) && (shown || (autoOpen && !picked));
+  useEffect(() => {
+    if (!active) return;
+    const t = window.setTimeout(() => modal.current?.querySelector<HTMLInputElement>('#name')?.focus(), 180);
+    return () => window.clearTimeout(t);
+  }, [active]);
+
   if (!root) return null;
   return createPortal(
     <div
       ref={modal}
-      className={`contact-form-modal${shown || (autoOpen && !picked) ? ' active' : ''}`}
+      className={`contact-form-modal${active ? ' active' : ''}`}
       id="contactFormModal"
       role="dialog"
       aria-modal="true"
