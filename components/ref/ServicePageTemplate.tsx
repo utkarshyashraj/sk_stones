@@ -1,7 +1,9 @@
 import { servicePages, type ServiceSlug } from '@/content/ref/services';
 import { galleryItem } from '@/lib/lightbox-items';
 import { Enhance } from './Enhance';
+import { faqPageLd } from '@/lib/seo';
 import { Fa } from './Fa';
+import { JsonLd } from './JsonLd';
 import { LightboxData } from './LightboxData';
 import { RefImg, refImage } from './RefImg';
 import { RefShell } from './RefShell';
@@ -17,6 +19,7 @@ export function ServicePageTemplate({ slug }: { slug: ServiceSlug }) {
   const p = servicePages[slug];
   return (
     <RefShell bundle={slug} bodyClass={p.bodyClass} nav={null} tab="services" footer="grid">
+      {p.faqs.length ? <JsonLd data={faqPageLd(p.faqs)} /> : null}
       <Enhance />
       <section className="hero service-hero">
         <div className="service-hero-top">

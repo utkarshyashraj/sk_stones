@@ -5,7 +5,7 @@ import { CANONICAL_ORIGIN } from './ref-seo';
 import { site, SITE_ORIGIN } from './site';
 
 /** Serialise JSON-LD for a <script type="application/ld+json"> (escapes `<` so it cannot close the tag). */
-export const jsonLdScript = (data: unknown) => ({ __html: JSON.stringify(data).replace(/</g, '\u003c') });
+export const jsonLdScript = (data: unknown) => ({ __html: JSON.stringify(data).replace(/</g, '\\u003c') });
 
 /**
  * LocalBusiness structured data, as the reference site's js/seo-schema.js declares it — rendered at build time
@@ -45,5 +45,32 @@ export function localBusinessLd() {
       'https://www.google.com/maps/place/S+K+STONES+INDIA+PVT+LTD/@12.9350616,77.6283894,17z',
     ],
     areaServed: site.areaServed,
+  };
+}
+
+/** FAQPage for a page that shows these questions and answers (the FAQ accordion). */
+export function faqPageLd(items: readonly { q: string; a: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((it) => ({
+      '@type': 'Question',
+      name: it.q,
+      acceptedAnswer: { '@type': 'Answer', text: it.a },
+    })),
+  };
+}
+
+/** BreadcrumbList from site paths (e.g. Home › Products › Marbles › Indian Marbles). */
+export function breadcrumbLd(crumbs: { name: string; path: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.name,
+      item: `${CANONICAL_ORIGIN}${c.path === '/' ? '/' : c.path}`,
+    })),
   };
 }

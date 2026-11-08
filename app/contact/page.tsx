@@ -1,8 +1,10 @@
 import { ContactFormModal } from '@/components/ref/ContactFormModal';
 import { FAQAccordion } from '@/components/ref/FAQAccordion';
 import { Fa } from '@/components/ref/Fa';
+import { JsonLd } from '@/components/ref/JsonLd';
 import { RefShell } from '@/components/ref/RefShell';
 import { pageMetadata } from '@/lib/ref-seo';
+import { faqPageLd, localBusinessLd } from '@/lib/seo';
 import { site, telHref, whatsappHref } from '@/lib/site';
 import '@/styles/ref/contact.css';
 
@@ -26,6 +28,8 @@ const quickAnswers = [
 export default function ContactPage() {
   return (
     <RefShell bundle="contact" nav="contact" tab="more" footer="grid">
+      <JsonLd data={localBusinessLd()} />
+      <JsonLd data={faqPageLd(quickAnswers)} />
       <section className="contact-section">
         <div className="contact-intro">
           <h1>

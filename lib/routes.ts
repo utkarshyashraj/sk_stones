@@ -1,5 +1,6 @@
 import catalog from '@/content/generated/catalog.json';
 import { servicePages } from '@/content/ref/services';
+import { CARE_GUIDES_ENABLED, careGuides } from '@/content/care-guides';
 import { productPageSlugs } from './ref-catalog';
 
 export interface RouteInfo {
@@ -22,6 +23,14 @@ export function indexableRoutes(): RouteInfo[] {
       changeFrequency: 'monthly' as const,
     })),
     ...productPageSlugs().map((s) => ({ path: `/${s}`, priority: 0.7, changeFrequency: 'monthly' as const })),
+    // Hidden until the business has reviewed them (NEXT_PUBLIC_SHOW_CARE_GUIDES=1).
+    ...(CARE_GUIDES_ENABLED
+      ? careGuides.map((g) => ({
+          path: `/care/${g.slug}`,
+          priority: 0.5,
+          changeFrequency: 'monthly' as const,
+        }))
+      : []),
   ];
 }
 

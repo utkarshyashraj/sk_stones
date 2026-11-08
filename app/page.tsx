@@ -3,6 +3,7 @@ import { Enhance } from '@/components/ref/Enhance';
 import { FAQAccordion } from '@/components/ref/FAQAccordion';
 import { Fa } from '@/components/ref/Fa';
 import { HomeVideo } from '@/components/ref/HomeVideo';
+import { JsonLd } from '@/components/ref/JsonLd';
 import { LightboxData } from '@/components/ref/LightboxData';
 import { MoreView } from '@/components/ref/MoreView';
 import { RefImg, refImage } from '@/components/ref/RefImg';
@@ -24,6 +25,7 @@ import {
 } from '@/content/ref/home';
 import { galleryItem } from '@/lib/lightbox-items';
 import { pageMetadata } from '@/lib/ref-seo';
+import { faqPageLd, localBusinessLd } from '@/lib/seo';
 import { site } from '@/lib/site';
 import '@/styles/ref/home.css';
 
@@ -55,6 +57,8 @@ const SwipeHint = () => (
 export default function HomePage() {
   return (
     <RefShell bundle="home" bodyClass="showroom-theme page-home" nav="home" tab="home">
+      <JsonLd data={localBusinessLd()} />
+      <JsonLd data={faqPageLd(faqs)} />
       <MoreView />
       <Enhance sliders={SLIDERS} />
 

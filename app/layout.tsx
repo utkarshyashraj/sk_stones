@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Playfair_Display, Poppins } from 'next/font/google';
 import { withBase } from '@/lib/base-path';
-import { jsonLdScript, localBusinessLd } from '@/lib/seo';
 import { site, SITE_URL } from '@/lib/site';
 import '@/styles/base.css';
 
@@ -46,7 +45,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to main content
         </a>
         {children}
-        <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(localBusinessLd())} />
       </body>
     </html>
   );

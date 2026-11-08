@@ -10,6 +10,11 @@ const ROOT = path.resolve(import.meta.dirname, '..');
 const OUT = path.join(ROOT, 'out');
 const SITE = 'https://skstonesindia.com';
 const NOINDEX = new Set(['/thank-you', '/search', '/saved', '/404', '/_not-found']);
+const PRODUCT_ROUTES = new Set(
+  JSON.parse(fs.readFileSync(path.join(ROOT, 'content/generated/catalog.json'), 'utf8'))
+    .categories.filter((c) => c.hasPage)
+    .map((c) => `/${c.slug}`),
+);
 const problems = [];
 const warn = (m) => problems.push(m);
 
@@ -83,7 +88,12 @@ for (const name of htmlFiles) {
       warn(`${route}: invalid JSON-LD`);
     }
   }
-  if (!isUtility && !html.includes('"LocalBusiness"')) warn(`${route}: LocalBusiness JSON-LD missing`);
+  // LocalBusiness on the homepage and contact page; BreadcrumbList on every product page.
+  const wantsBusiness = route === '/' || route === '/contact';
+  if (wantsBusiness !== html.includes('"LocalBusiness"'))
+    warn(`${route}: LocalBusiness JSON-LD ${wantsBusiness ? 'missing' : 'not expected here'}`);
+  if (PRODUCT_ROUTES.has(route) && !html.includes('"BreadcrumbList"'))
+    warn(`${route}: BreadcrumbList JSON-LD missing`);
 
   for (const m of html.matchAll(/<a\b[^>]*href="([^"]+)"/g)) {
     const href = m[1].replace(/&amp;/g, '&');

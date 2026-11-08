@@ -5,7 +5,7 @@ import { ProjectsLightbox } from '@/components/ref/ProjectsLightbox';
 import { RefImg, refImage } from '@/components/ref/RefImg';
 import { RefShell } from '@/components/ref/RefShell';
 import { projectBlocks } from '@/content/ref/projects';
-import { fullAndZoom } from '@/lib/ref-catalog';
+import { allRefProducts, fullAndZoom } from '@/lib/ref-catalog';
 import { pageMetadata } from '@/lib/ref-seo';
 import '@/styles/ref/projects.css';
 
@@ -55,6 +55,7 @@ export default function ProjectsPage() {
                 </div>
               ))}
             </div>
+            <StonesUsed projectId={b.id} />
           </article>
         ))}
       </section>
@@ -73,5 +74,28 @@ export default function ProjectsPage() {
         </div>
       </section>
     </RefShell>
+  );
+}
+
+/**
+ * "Stones used" on a project: the stones whose business-confirmed `used_in_projects` names it
+ * (content/stone-attributes.json). Rendered only when there is at least one.
+ */
+function StonesUsed({ projectId }: { projectId: string }) {
+  const stones = allRefProducts().filter((p) => p.usedInProjects.includes(projectId));
+  if (!stones.length) return null;
+  return (
+    <div className="sk-stones-used">
+      <h3>Stones used</h3>
+      <ul>
+        {stones.map((s) => (
+          <li key={s.id}>
+            <Link href={`/${s.collection}#stone=${s.id}`} prefetch={false}>
+              {s.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

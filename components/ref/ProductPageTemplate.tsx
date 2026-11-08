@@ -2,9 +2,20 @@ import Link from 'next/link';
 import { fromLightboxItems } from '@/lib/filter-stones';
 import { emptyState, MIN_STONES_FOR_FILTERS, visibleFacets } from '@/lib/filters';
 import { stoneItem } from '@/lib/lightbox-items';
-import { attributeCoverage, cardPage, imageOf, productsOf, type RefCategory } from '@/lib/ref-catalog';
+import {
+  attributeCoverage,
+  cardPage,
+  categoryTrail,
+  imageOf,
+  productsOf,
+  type RefCategory,
+} from '@/lib/ref-catalog';
 import { Fa } from './Fa';
 import { FilterBarView } from './FilterBarView';
+import { careGuideFor } from '@/content/care-guides';
+import { stoneTypeFor } from '@/lib/quote-prefill';
+import { breadcrumbLd } from '@/lib/seo';
+import { JsonLd } from './JsonLd';
 import { LightboxData } from './LightboxData';
 import { RefImg } from './RefImg';
 import { RefShell } from './RefShell';
@@ -17,6 +28,7 @@ import { RefShell } from './RefShell';
 export function ProductPageTemplate({ category }: { category: RefCategory }) {
   const page = category.refPage!;
   const products = productsOf(category);
+  const care = careGuideFor(stoneTypeFor(products.map((p) => p.category)));
   const cards = cardPage(category.slug);
   const overviewImg = imageOf(category.overview?.image ?? null);
   // Filter bar: only on grids of 8+ stones, offering the facets this page's data supports.
@@ -43,6 +55,7 @@ export function ProductPageTemplate({ category }: { category: RefCategory }) {
       headerScrolled
       backToTop={false}
     >
+      <JsonLd data={breadcrumbLd(categoryTrail(category))} />
       <section className="page-hero product-hero-banner product-hero-panel">
         <div className="product-hero-top">
           <div className="page-hero-content product-hero-panel-inner">
@@ -192,6 +205,11 @@ export function ProductPageTemplate({ category }: { category: RefCategory }) {
               </div>
             </>
           )}
+          {care ? (
+            <p className="sk-care-link">
+              <Link href={`/care/${care.slug}`}>{care.title} — cleaning and upkeep tips</Link>
+            </p>
+          ) : null}
           <div id="sk-recent-product" data-sk-recent="" />
         </div>
       </section>

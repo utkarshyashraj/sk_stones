@@ -66,6 +66,20 @@ export const getRefCategory = (slug: string) => categories.find((c) => c.slug ==
 export const productsOf = (c: RefCategory) => c.productIds.map((id) => products.get(id)!).filter(Boolean);
 export const productById = (id: string) => products.get(id);
 export const allRefProducts = () => [...products.values()];
+/** Breadcrumb trail for a product page: Home › Products › parent pages › this page. */
+export function categoryTrail(c: RefCategory): { name: string; path: string }[] {
+  const chain: RefCategory[] = [];
+  for (let cur: RefCategory | undefined = c; cur;) {
+    chain.unshift(cur);
+    const parent: string | null | undefined = (cur as RefCategory & { parent?: string | null }).parent;
+    cur = parent ? categories.find((x) => x.slug === parent && x.hasPage) : undefined;
+  }
+  return [
+    { name: 'Home', path: '/' },
+    { name: 'Products', path: '/products' },
+    ...chain.filter((x) => x.slug !== 'products').map((x) => ({ name: x.name, path: `/${x.slug}` })),
+  ];
+}
 export const categoryName = (slug: string) => categories.find((c) => c.slug === slug)?.name ?? slug;
 /** Share of stones with business-confirmed values per field, and the unlock threshold (0.8). */
 export const attributeCoverage = () =>
