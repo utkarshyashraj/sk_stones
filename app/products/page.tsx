@@ -61,6 +61,18 @@ export default function ProductsPage() {
               );
             })}
           </div>
+          <div className="sk-helpers">
+            <p>Not sure which stone suits your project?</p>
+            <button
+              type="button"
+              className="sk-btn sk-btn--gold"
+              data-sk-open="guide"
+              data-sk-click=""
+              data-sk-prefetch=""
+            >
+              Help me choose
+            </button>
+          </div>
           <div id="sk-recent-products" data-sk-recent="" />
         </div>
       </section>

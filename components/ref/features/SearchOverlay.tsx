@@ -7,6 +7,7 @@ import { track } from '@/lib/analytics';
 import { withBase } from '@/lib/base-path';
 import { closestCollection, search } from '@/lib/search';
 import { whatsappHref } from '@/lib/site';
+import { openFeature } from './bus';
 import { Icon } from './Icon';
 import { collectionName, stoneHref, stoneThumb, useIndex } from './index-client';
 import { clearRecentSearches, rememberSearch, useRecentSearches } from './recent-searches';
@@ -209,6 +210,12 @@ export function SearchOverlay({ onClose, initial = '' }: { onClose: () => void; 
                     </Link>
                   ))}
                 </div>
+              </section>
+              <section className="sk-search-section sk-search-guide">
+                <p>Not sure what you need?</p>
+                <button type="button" className="sk-btn sk-btn--ghost" onClick={() => openFeature('guide')}>
+                  Help me choose
+                </button>
               </section>
             </>
           ) : error && !index ? (

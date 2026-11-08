@@ -5,6 +5,7 @@ import { Calculator } from './Calculator';
 import { FEATURE_EVENT, type FeatureRequest } from './bus';
 import { loadIndex } from './index-client';
 import { FilterController } from './FilterController';
+import { Guide } from './Guide';
 import { LightboxController } from './LightboxController';
 import { RecentStrips } from './RecentStrip';
 import { SavedController } from './SavedController';
@@ -56,6 +57,7 @@ export default function FeatureRoot() {
       <RecentStrips />
       {open?.name === 'saved' ? <SavedPanel onClose={close} /> : null}
       {open?.name === 'search' ? <SearchOverlay onClose={close} initial={open.detail?.q ?? ''} /> : null}
+      {open?.name === 'guide' ? <Guide onClose={close} /> : null}
       {open?.name === 'calculator' ? <Calculator onClose={close} detail={open.detail} /> : null}
       <Toaster />
     </>

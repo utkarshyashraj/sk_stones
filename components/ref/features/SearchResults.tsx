@@ -20,7 +20,12 @@ import { FilterPanel } from './FilterPanel';
 import { Icon } from './Icon';
 import { collectionName, loadIndex, stoneLightboxItem, stoneThumb, useIndex } from './index-client';
 import { rememberSearch } from './recent-searches';
+import { saveAll } from './saved-actions';
 import { SaveIconButton } from './SaveButton';
+import { MAX_SAVED, useSaved } from './shortlist-store';
+import { showToast } from './toast-store';
+import { openFeature } from './bus';
+import { STEP_LABEL, type StepKey } from '@/lib/guide';
 
 const readSearch = () => window.location.search;
 
@@ -97,11 +102,15 @@ export function SearchResults() {
 
   const closest =
     index && query.trim().length >= 2 && !stones.length ? closestCollection(index, query) : null;
+  const place = params.get('for')?.slice(0, 40);
+  const fromGuide = params.get('guide') === '1';
   const heading = query.trim()
     ? `“${query.trim()}”`
-    : state.selected.application?.length === 1
-      ? `Stones for ${state.selected.application[0]!.toLowerCase()}`
-      : 'Search our stones';
+    : place
+      ? `Stones for ${place.toLowerCase()}`
+      : state.selected.application?.length === 1
+        ? `Stones for ${state.selected.application[0]!.toLowerCase()}`
+        : 'Search our stones';
 
   return (
     <div className="sk-results">
@@ -180,6 +189,9 @@ export function SearchResults() {
         </div>
       ) : (
         <>
+          {fromGuide ? (
+            <GuideBar ids={stones.map((s) => s.id)} place={place} broadened={params.get('broadened')} />
+          ) : null}
           <FilterPanel
             stones={fstones}
             keys={keys}
@@ -227,6 +239,63 @@ export function SearchResults() {
           />
         </>
       )}
+    </div>
+  );
+}
+
+/**
+ * Under results reached through "Help me choose": what was left out to find matches, "Save all" and
+ * "Get a quote for these" (the quote form lists the stones; above 30 it names the request instead).
+ */
+function GuideBar({ ids, place, broadened }: { ids: string[]; place?: string; broadened: string | null }) {
+  const saved = useSaved();
+  const allSaved = ids.every((id) => saved.some((e) => e.id === id));
+  const room = MAX_SAVED - saved.filter((e) => !ids.includes(e.id)).length;
+  const fits = ids.length <= MAX_SAVED;
+  const left = (broadened ?? '')
+    .split(',')
+    .filter((k): k is StepKey => k in STEP_LABEL)
+    .map((k) => STEP_LABEL[k]);
+  const quoteHref = fits
+    ? `/contact?stones=${ids.map(encodeURIComponent).join(',')}`
+    : `/contact?ask=${encodeURIComponent(place ? `Stones for ${place.toLowerCase()}` : 'Help choosing a stone')}`;
+  return (
+    <div className="sk-guide-bar">
+      {left.length ? (
+        <p className="sk-filter-notice" role="status">
+          Nothing matched everything you picked, so these ignore {left.join(' and ')}.
+        </p>
+      ) : null}
+      <div className="sk-guide-actions">
+        <button
+          type="button"
+          className="sk-btn sk-btn--ghost"
+          disabled={allSaved || !fits || room < ids.length}
+          onClick={() => {
+            const n = saveAll(ids);
+            showToast(
+              n ? `Saved ${n} ${n === 1 ? 'stone' : 'stones'} to your list` : 'Already in your list',
+              {
+                label: 'View list',
+                run: () => openFeature('saved'),
+              },
+            );
+          }}
+        >
+          <Icon name="bookmark" /> {allSaved ? 'All saved' : `Save all ${ids.length}`}
+        </button>
+        <Link className="sk-btn sk-btn--gold" href={quoteHref} prefetch={false}>
+          Get a quote for these
+        </Link>
+        <button type="button" className="sk-link-btn" onClick={() => openFeature('guide')}>
+          Start again
+        </button>
+      </div>
+      {!fits ? (
+        <p className="sk-muted">Narrow these down with the filters to save them all (up to {MAX_SAVED}).</p>
+      ) : !allSaved && room < ids.length ? (
+        <p className="sk-muted">Your saved list holds up to {MAX_SAVED} stones.</p>
+      ) : null}
     </div>
   );
 }

@@ -49,11 +49,14 @@ export function ContactFormModal() {
   const q = new URLSearchParams(params);
   const request = parseRequest(q.get('request'));
   const singleStone = q.get('stone');
+  // ?stones=a,b (the guided chooser's "Get a quote for these"), at most 30
+  const listed = (q.get('stones') ?? '').split(',').filter(Boolean).slice(0, 30);
   const fromSaved = q.get('saved') === '1';
   const ask = (q.get('ask') ?? '').trim().slice(0, 120); // from a search with no results
   const qty = (q.get('qty') ?? '').trim().slice(0, 80); // from the area calculator
   const autoOpen =
-    (success || fromSaved || Boolean(singleStone) || Boolean(ask) || Boolean(qty)) && !dismissed;
+    (success || fromSaved || Boolean(singleStone) || listed.length > 0 || Boolean(ask) || Boolean(qty)) &&
+    !dismissed;
   const location = picked ?? (autoOpen ? 'Bangalore' : null);
 
   const open = useCallback((city: string, from?: HTMLElement) => {
@@ -196,7 +199,7 @@ export function ContactFormModal() {
             </div>
           </div>
           <StonesField
-            ids={singleStone ? [singleStone] : fromSaved ? undefined : []}
+            ids={singleStone ? [singleStone] : listed.length ? listed : fromSaved ? undefined : []}
             onStoneType={setPreselect}
           />
           {ask ? (
